@@ -1,6 +1,9 @@
+import './globals.css'
+
 import { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import './globals.css'
+
+import { ThemeProvider } from '@/components/theme-provider'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -33,7 +36,13 @@ type Props = {
 export default function RootLayout({ children }: Props) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <div className="relative flex min-h-screen flex-col">
+            <div className="flex-1">{children}</div>
+          </div>
+        </ThemeProvider>
+      </body>
     </html>
   )
 }
