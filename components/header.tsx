@@ -1,11 +1,11 @@
 import Link from 'next/link'
 
-import { Icons } from '@/components/icons'
+import { GithubIcon } from '@/components/github-icon'
 import { Nav } from '@/components/nav'
 import { ModeToggle } from '@/components/theme-toggle'
 import { buttonVariants } from '@/components/ui/button'
-import { cn } from '@/lib/utils'
 import { Container } from '@/components/ui/container'
+import { cn } from '@/lib/utils'
 
 export function Header() {
   return (
@@ -28,7 +28,7 @@ export function Header() {
                   'w-9 px-0'
                 )}
               >
-                <Icons.gitHub className="h-5 w-5" />
+                <GithubIcon className="h-5 w-5" />
                 <span className="sr-only">GitHub</span>
               </div>
             </Link>
