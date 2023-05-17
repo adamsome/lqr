@@ -1,17 +1,9 @@
 import { Column } from '@tanstack/react-table'
-import {
-  ArrowDown,
-  ArrowUp,
-  ArrowUpDown,
-  ChevronsUpDown,
-  SortAsc,
-  SortDesc,
-} from 'lucide-react'
+import { ArrowDown, ArrowUp } from 'lucide-react'
 
-import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 
-interface Props<TData, TValue> extends React.HTMLAttributes<HTMLDivElement> {
+type Props<TData, TValue> = React.HTMLAttributes<HTMLDivElement> & {
   children: React.ReactNode
   column: Column<TData, TValue>
   right?: boolean
