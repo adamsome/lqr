@@ -12,8 +12,11 @@ import {
   getSortedRowModel,
   useReactTable,
 } from '@tanstack/react-table'
+import { useState } from 'react'
 
-import { Button } from '@/components/ui/button'
+import { DataTablePagination } from '@/components/ui/data-table-pagination'
+import { DataTableViewOptions } from '@/components/ui/data-table-view-options'
+import { Input } from '@/components/ui/input'
 import {
   Table,
   TableBody,
@@ -22,18 +25,8 @@ import {
   TableHeader,
   TableRow,
 } from '@/components/ui/table'
-import { useState } from 'react'
-import { Input } from '@/components/ui/input'
-import {
-  DropdownMenu,
-  DropdownMenuCheckboxItem,
-  DropdownMenuContent,
-  DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu'
-import { DataTablePagination } from '@/components/ui/data-table-pagination'
-import { DataTableViewOptions } from '@/components/ui/data-table-view-options'
 
-interface Props<TData, TValue> {
+type Props<TData, TValue> = {
   columns: ColumnDef<TData, TValue>[]
   data: TData[]
 }
@@ -66,14 +59,15 @@ export function DataTable<TData, TValue>({
     },
   })
 
+  const rowCount = table.getRowModel().rows.length
   return (
     <div className="flex flex-col gap-4">
       <div className="flex items-center">
         <Input
-          placeholder="Filter emails..."
-          value={(table.getColumn('email')?.getFilterValue() as string) ?? ''}
+          placeholder="Filter names..."
+          value={(table.getColumn('name')?.getFilterValue() as string) ?? ''}
           onChange={(event) =>
-            table.getColumn('email')?.setFilterValue(event.target.value)
+            table.getColumn('name')?.setFilterValue(event.target.value)
           }
           className="max-w-sm"
         />
@@ -115,19 +109,22 @@ export function DataTable<TData, TValue>({
                 </TableRow>
               ))
             ) : (
-              <TableRow>
-                <TableCell
-                  colSpan={columns.length}
-                  className="h-24 text-center"
-                >
-                  No results.
-                </TableCell>
-              </TableRow>
+              <Empty columnCount={columns.length} />
             )}
           </TableBody>
         </Table>
       </div>
       <DataTablePagination table={table} />
     </div>
+  )
+}
+
+function Empty({ columnCount }: { columnCount: number }) {
+  return (
+    <TableRow>
+      <TableCell colSpan={columnCount} className="h-24 text-center">
+        No results.
+      </TableCell>
+    </TableRow>
   )
 }

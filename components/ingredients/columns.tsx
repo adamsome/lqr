@@ -14,17 +14,9 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu'
+import { Ingredient } from '@/lib/ingredient'
 
-// This type is used to define the shape of our data.
-// You can use a Zod schema here if you want.
-export type Payment = {
-  id: string
-  amount: number
-  status: 'pending' | 'processing' | 'success' | 'failed'
-  email: string
-}
-
-export const columns: ColumnDef<Payment>[] = [
+export const columns: ColumnDef<Ingredient>[] = [
   {
     id: 'select',
     header: ({ table }) => (
@@ -45,33 +37,22 @@ export const columns: ColumnDef<Payment>[] = [
     enableHiding: false,
   },
   {
-    accessorKey: 'status',
+    accessorKey: 'name',
     header: ({ column }) => (
-      <DataTableColumnHeader column={column}>Status</DataTableColumnHeader>
+      <DataTableColumnHeader column={column}>Name</DataTableColumnHeader>
     ),
   },
   {
-    accessorKey: 'email',
+    accessorKey: 'category',
     header: ({ column }) => (
-      <DataTableColumnHeader column={column}>Email</DataTableColumnHeader>
+      <DataTableColumnHeader column={column}>Category</DataTableColumnHeader>
     ),
   },
   {
-    accessorKey: 'amount',
+    accessorKey: 'origin',
     header: ({ column }) => (
-      <DataTableColumnHeader column={column} right>
-        Amount
-      </DataTableColumnHeader>
+      <DataTableColumnHeader column={column}>Origin</DataTableColumnHeader>
     ),
-    cell: ({ row }) => {
-      const amount = parseFloat(row.getValue('amount'))
-      const formatted = new Intl.NumberFormat('en-US', {
-        style: 'currency',
-        currency: 'USD',
-      }).format(amount)
-
-      return <div className="pr-5 text-right font-medium">{formatted}</div>
-    },
   },
   {
     id: 'actions',
