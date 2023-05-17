@@ -1,0 +1,1733 @@
+[
+  {
+    "id": "acid_champagne",
+    "name": "Champagne",
+    "category": "acid"
+  },
+  {
+    "id": "acid_citric",
+    "name": "Citric",
+    "category": "acid"
+  },
+  {
+    "id": "acid_lactic",
+    "name": "Lactic",
+    "category": "acid"
+  },
+  {
+    "id": "acid_lime",
+    "name": "Lime",
+    "category": "acid"
+  },
+  {
+    "id": "acid_malic",
+    "name": "Malic",
+    "category": "acid"
+  },
+  {
+    "id": "acid_phosphate",
+    "name": "Phosphate",
+    "category": "acid"
+  },
+  {
+    "id": "brine_carrot",
+    "name": "Carrot",
+    "category": "brine"
+  },
+  {
+    "id": "brine_cucumber",
+    "name": "Cucumber",
+    "category": "brine"
+  },
+  {
+    "id": "brine_japanese",
+    "name": "Japanese",
+    "category": "brine"
+  },
+  {
+    "id": "brine_radish",
+    "name": "Radish",
+    "category": "brine"
+  },
+  {
+    "id": "brine_tomato",
+    "name": "Tomato",
+    "category": "brine"
+  },
+  {
+    "id": "cheese_mascarpone",
+    "name": "Mascarpone",
+    "category": "cheese"
+  },
+  {
+    "id": "chocolate_dark",
+    "name": "Dark",
+    "category": "chocolate"
+  },
+  {
+    "id": "cider_apple",
+    "name": "Apple",
+    "category": "cider"
+  },
+  {
+    "id": "cider_pear",
+    "name": "Pear",
+    "category": "cider"
+  },
+  {
+    "id": "coffee_coldbrew",
+    "name": "Cold brew",
+    "category": "coffee"
+  },
+  {
+    "id": "coffee_hot",
+    "name": "Hot",
+    "category": "coffee"
+  },
+  {
+    "id": "cordial_apple",
+    "name": "Apple",
+    "category": "cordial"
+  },
+  {
+    "id": "cordial_citrus",
+    "name": "Citrus",
+    "category": "cordial"
+  },
+  {
+    "id": "cordial_grapefruit",
+    "name": "Grapefruit",
+    "category": "cordial"
+  },
+  {
+    "id": "cordial_lime",
+    "name": "Lime",
+    "category": "cordial"
+  },
+  {
+    "id": "cordial_pineapple",
+    "name": "Pineapple",
+    "category": "cordial"
+  },
+  {
+    "id": "cordial_tamarind",
+    "name": "Tamarind",
+    "category": "cordial"
+  },
+  {
+    "id": "cream_coconut",
+    "name": "Coconut",
+    "category": "cream"
+  },
+  {
+    "id": "cream_heavy",
+    "name": "Heavy",
+    "category": "cream"
+  },
+  {
+    "id": "cream_sweetvermouth",
+    "name": "Sweet Vermouth",
+    "category": "cream"
+  },
+  {
+    "id": "egg_aquafaba",
+    "name": "Aquafaba",
+    "category": "egg"
+  },
+  {
+    "id": "egg_white",
+    "name": "White",
+    "category": "egg"
+  },
+  {
+    "id": "egg_yolk",
+    "name": "Yolk",
+    "category": "egg"
+  },
+  {
+    "id": "extract_almond",
+    "name": "Almond",
+    "category": "extract"
+  },
+  {
+    "id": "extract_birch",
+    "name": "Birch",
+    "category": "extract"
+  },
+  {
+    "id": "extract_cola",
+    "name": "Cola",
+    "category": "extract"
+  },
+  {
+    "id": "extract_eucalyptus",
+    "name": "Eucalyptus",
+    "category": "extract"
+  },
+  {
+    "id": "extract_lemongrass",
+    "name": "Lemongrass",
+    "category": "extract"
+  },
+  {
+    "id": "extract_rootbeer",
+    "name": "Root beer",
+    "category": "extract"
+  },
+  {
+    "id": "extract_vanilla",
+    "name": "Vanilla",
+    "category": "extract"
+  },
+  {
+    "id": "flower_edible",
+    "name": "Edible",
+    "category": "flower"
+  },
+  {
+    "id": "flower_orchid",
+    "name": "Orchid",
+    "category": "flower"
+  },
+  {
+    "id": "flower_viola",
+    "name": "Viola",
+    "category": "flower"
+  },
+  {
+    "id": "fruit_apple",
+    "name": "Apple",
+    "category": "fruit"
+  },
+  {
+    "id": "fruit_banana",
+    "name": "Banana",
+    "category": "fruit"
+  },
+  {
+    "id": "fruit_blackberry",
+    "name": "Blackberry",
+    "category": "fruit"
+  },
+  {
+    "id": "fruit_blueberry",
+    "name": "Blueberry",
+    "category": "fruit"
+  },
+  {
+    "id": "fruit_cherry",
+    "name": "Cherry",
+    "category": "fruit"
+  },
+  {
+    "id": "fruit_coconut",
+    "name": "Coconut",
+    "category": "fruit"
+  },
+  {
+    "id": "fruit_coffeebean",
+    "name": "Coffee bean",
+    "category": "fruit"
+  },
+  {
+    "id": "fruit_cucumber",
+    "name": "Cucumber",
+    "category": "fruit"
+  },
+  {
+    "id": "fruit_grapefruit",
+    "name": "Grapefruit",
+    "category": "fruit"
+  },
+  {
+    "id": "fruit_kiwi",
+    "name": "Kiwi",
+    "category": "fruit"
+  },
+  {
+    "id": "fruit_lemon",
+    "name": "Lemon",
+    "category": "fruit"
+  },
+  {
+    "id": "fruit_lime",
+    "name": "Lime",
+    "category": "fruit"
+  },
+  {
+    "id": "fruit_olive",
+    "name": "Olive",
+    "category": "fruit"
+  },
+  {
+    "id": "fruit_orange",
+    "name": "Orange",
+    "category": "fruit"
+  },
+  {
+    "id": "fruit_papaya",
+    "name": "Papaya",
+    "category": "fruit"
+  },
+  {
+    "id": "fruit_pear",
+    "name": "Pear",
+    "category": "fruit"
+  },
+  {
+    "id": "fruit_raspberry",
+    "name": "Raspberry",
+    "category": "fruit"
+  },
+  {
+    "id": "fruit_strawberry",
+    "name": "Strawberry",
+    "category": "fruit"
+  },
+  {
+    "id": "fruit_umeboshi",
+    "name": "Umeboshi",
+    "category": "fruit"
+  },
+  {
+    "id": "jelly_pepper",
+    "name": "Pepper",
+    "category": "jelly"
+  },
+  {
+    "id": "juice_bellpepper",
+    "name": "Bell pepper",
+    "category": "juice"
+  },
+  {
+    "id": "juice_cantaloupe",
+    "name": "Cantaloupe",
+    "category": "juice"
+  },
+  {
+    "id": "juice_carrot",
+    "name": "Carrot",
+    "category": "juice"
+  },
+  {
+    "id": "juice_celery",
+    "name": "Celery",
+    "category": "juice"
+  },
+  {
+    "id": "juice_cucumber",
+    "name": "Cucumber",
+    "category": "juice"
+  },
+  {
+    "id": "juice_grapefruit",
+    "name": "Grapefruit",
+    "category": "juice"
+  },
+  {
+    "id": "juice_lemon",
+    "name": "Lemon",
+    "category": "juice"
+  },
+  {
+    "id": "juice_lime",
+    "name": "Lime",
+    "category": "juice"
+  },
+  {
+    "id": "juice_orange",
+    "name": "Orange",
+    "category": "juice"
+  },
+  {
+    "id": "juice_pineapple",
+    "name": "Pineapple",
+    "category": "juice"
+  },
+  {
+    "id": "juice_tomato",
+    "name": "Tomato",
+    "category": "juice"
+  },
+  {
+    "id": "juice_verjus",
+    "name": "Verjus",
+    "category": "juice"
+  },
+  {
+    "id": "juice_yuzu",
+    "name": "Yuzu",
+    "category": "juice"
+  },
+  {
+    "id": "leaf_banana",
+    "name": "Banana",
+    "category": "leaf"
+  },
+  {
+    "id": "milk_coconut",
+    "name": "Coconut",
+    "category": "milk"
+  },
+  {
+    "id": "milk_condensed",
+    "name": "Condensed",
+    "category": "milk"
+  },
+  {
+    "id": "milk_whole",
+    "name": "Whole",
+    "category": "milk"
+  },
+  {
+    "id": "nut_peanut",
+    "name": "Peanut",
+    "category": "nut"
+  },
+  {
+    "id": "nut_pistachio",
+    "name": "Pistachio",
+    "category": "nut"
+  },
+  {
+    "id": "oil_olive",
+    "name": "Olive",
+    "category": "oil"
+  },
+  {
+    "id": "puree_guava",
+    "name": "Guava",
+    "category": "puree"
+  },
+  {
+    "id": "puree_kalamansi",
+    "name": "Kalamansi",
+    "category": "puree"
+  },
+  {
+    "id": "puree_kiwi",
+    "name": "Kiwi",
+    "category": "puree"
+  },
+  {
+    "id": "puree_mango",
+    "name": "Mango",
+    "category": "puree"
+  },
+  {
+    "id": "puree_papaya",
+    "name": "Papaya",
+    "category": "puree"
+  },
+  {
+    "id": "puree_passionfruit",
+    "name": "Passion fruit",
+    "category": "puree"
+  },
+  {
+    "id": "shrub_habanero",
+    "name": "Habanero",
+    "category": "shrub"
+  },
+  {
+    "id": "shrub_hibiscus",
+    "name": "Hibiscus",
+    "category": "shrub"
+  },
+  {
+    "id": "soda_club",
+    "name": "Club",
+    "category": "soda"
+  },
+  {
+    "id": "soda_ginger",
+    "name": "Ginger",
+    "category": "soda"
+  },
+  {
+    "id": "soda_gingerbeer",
+    "name": "Ginger beer",
+    "category": "soda"
+  },
+  {
+    "id": "soda_grapefruit",
+    "name": "Grapefruit",
+    "category": "soda"
+  },
+  {
+    "id": "soda_guava",
+    "name": "Guava",
+    "category": "soda"
+  },
+  {
+    "id": "soda_tonic",
+    "name": "Tonic",
+    "category": "soda"
+  },
+  {
+    "id": "spice_allspice",
+    "name": "Allspice",
+    "category": "spice"
+  },
+  {
+    "id": "spice_aniseseed",
+    "name": "Anise seed",
+    "category": "spice"
+  },
+  {
+    "id": "spice_basil",
+    "name": "Basil",
+    "category": "spice"
+  },
+  {
+    "id": "spice_bay",
+    "name": "Bay",
+    "category": "spice"
+  },
+  {
+    "id": "spice_blackpeppercorn",
+    "name": "Black peppercorn",
+    "category": "spice"
+  },
+  {
+    "id": "spice_cinnamon",
+    "name": "Cinnamon",
+    "category": "spice"
+  },
+  {
+    "id": "spice_cloves",
+    "name": "Cloves",
+    "category": "spice"
+  },
+  {
+    "id": "spice_coriander",
+    "name": "Coriander",
+    "category": "spice"
+  },
+  {
+    "id": "spice_curry",
+    "name": "Curry",
+    "category": "spice"
+  },
+  {
+    "id": "spice_fennel",
+    "name": "Fennel",
+    "category": "spice"
+  },
+  {
+    "id": "spice_ginger",
+    "name": "Ginger",
+    "category": "spice"
+  },
+  {
+    "id": "spice_markutlime",
+    "name": "Markut lime",
+    "category": "spice"
+  },
+  {
+    "id": "spice_mint",
+    "name": "Mint",
+    "category": "spice"
+  },
+  {
+    "id": "spice_nutmeg",
+    "name": "Nutmeg",
+    "category": "spice"
+  },
+  {
+    "id": "spice_rosemary",
+    "name": "Rosemary",
+    "category": "spice"
+  },
+  {
+    "id": "spice_salt",
+    "name": "Salt",
+    "category": "spice"
+  },
+  {
+    "id": "spice_shiso",
+    "name": "Shiso",
+    "category": "spice"
+  },
+  {
+    "id": "spice_staranise",
+    "name": "Star anise",
+    "category": "spice"
+  },
+  {
+    "id": "spice_vanillabean",
+    "name": "Vanilla bean",
+    "category": "spice"
+  },
+  {
+    "id": "sugar_brown",
+    "name": "Brown",
+    "category": "sugar"
+  },
+  {
+    "id": "sugar_demerara",
+    "name": "Demerara",
+    "category": "sugar"
+  },
+  {
+    "id": "sugar_molasses",
+    "name": "Molasses",
+    "category": "sugar"
+  },
+  {
+    "id": "sugar_white",
+    "name": "White",
+    "category": "sugar"
+  },
+  {
+    "id": "syrup_agave",
+    "name": "Agave",
+    "category": "syrup"
+  },
+  {
+    "id": "syrup_almond",
+    "name": "Almond",
+    "category": "syrup"
+  },
+  {
+    "id": "syrup_bayleaf",
+    "name": "Bay leaf",
+    "category": "syrup"
+  },
+  {
+    "id": "syrup_blackberry",
+    "name": "Blackberry",
+    "category": "syrup"
+  },
+  {
+    "id": "syrup_cane",
+    "name": "Cane",
+    "category": "syrup"
+  },
+  {
+    "id": "syrup_celery",
+    "name": "Celery",
+    "category": "syrup"
+  },
+  {
+    "id": "syrup_chocolate",
+    "name": "Chocolate",
+    "category": "syrup"
+  },
+  {
+    "id": "syrup_cinnamon",
+    "name": "Cinnamon",
+    "category": "syrup"
+  },
+  {
+    "id": "syrup_coffey",
+    "name": "Coffey",
+    "category": "syrup"
+  },
+  {
+    "id": "syrup_curry",
+    "name": "Curry",
+    "category": "syrup"
+  },
+  {
+    "id": "syrup_demerara",
+    "name": "Demerara",
+    "category": "syrup"
+  },
+  {
+    "id": "syrup_genadine",
+    "name": "Genadine",
+    "category": "syrup"
+  },
+  {
+    "id": "syrup_ginger",
+    "name": "Ginger",
+    "category": "syrup"
+  },
+  {
+    "id": "syrup_guava",
+    "name": "Guava",
+    "category": "syrup"
+  },
+  {
+    "id": "syrup_honey",
+    "name": "Honey",
+    "category": "syrup"
+  },
+  {
+    "id": "syrup_jerk",
+    "name": "Jerk",
+    "category": "syrup"
+  },
+  {
+    "id": "syrup_kiwi",
+    "name": "Kiwi",
+    "category": "syrup"
+  },
+  {
+    "id": "syrup_lihingmui",
+    "name": "Li hing mui",
+    "category": "syrup"
+  },
+  {
+    "id": "syrup_maple",
+    "name": "Maple",
+    "category": "syrup"
+  },
+  {
+    "id": "syrup_milk",
+    "name": "Milk",
+    "category": "syrup"
+  },
+  {
+    "id": "syrup_molasses",
+    "name": "Molasses",
+    "category": "syrup"
+  },
+  {
+    "id": "syrup_orgeat",
+    "name": "Orgeat",
+    "category": "syrup"
+  },
+  {
+    "id": "syrup_pandan",
+    "name": "Pandan",
+    "category": "syrup"
+  },
+  {
+    "id": "syrup_papaya",
+    "name": "Papaya",
+    "category": "syrup"
+  },
+  {
+    "id": "syrup_passionfruit",
+    "name": "Passion fruit",
+    "category": "syrup"
+  },
+  {
+    "id": "syrup_pineapple",
+    "name": "Pineapple",
+    "category": "syrup"
+  },
+  {
+    "id": "syrup_poppyseed",
+    "name": "Poppy seed",
+    "category": "syrup"
+  },
+  {
+    "id": "syrup_port",
+    "name": "Port",
+    "category": "syrup"
+  },
+  {
+    "id": "syrup_raspberry",
+    "name": "Raspberry",
+    "category": "syrup"
+  },
+  {
+    "id": "syrup_sarsaparilla",
+    "name": "Sarsaparilla",
+    "category": "syrup"
+  },
+  {
+    "id": "syrup_simple",
+    "name": "Simple",
+    "category": "syrup"
+  },
+  {
+    "id": "syrup_strawberry",
+    "name": "Strawberry",
+    "category": "syrup"
+  },
+  {
+    "id": "syrup_tonic",
+    "name": "Tonic",
+    "category": "syrup"
+  },
+  {
+    "id": "syrup_turbinado",
+    "name": "Turbinado",
+    "category": "syrup"
+  },
+  {
+    "id": "syrup_vanilla",
+    "name": "Vanilla",
+    "category": "syrup"
+  },
+  {
+    "id": "syrup_verjus",
+    "name": "Verjus",
+    "category": "syrup"
+  },
+  {
+    "id": "syrup_watermelon",
+    "name": "Watermelon",
+    "category": "syrup"
+  },
+  {
+    "id": "syrup_wine",
+    "name": "Wine",
+    "category": "syrup"
+  },
+  {
+    "id": "syrup_yogurt",
+    "name": "Yogurt",
+    "category": "syrup"
+  },
+  {
+    "id": "tea_black",
+    "name": "Black",
+    "category": "tea"
+  },
+  {
+    "id": "tea_chamomile",
+    "name": "Chamomile",
+    "category": "tea"
+  },
+  {
+    "id": "tea_green",
+    "name": "Green",
+    "category": "tea"
+  },
+  {
+    "id": "vegetable_rhubarb",
+    "name": "Rhubarb",
+    "category": "vegetable"
+  },
+  {
+    "id": "water_coconut",
+    "name": "Coconut",
+    "category": "water"
+  },
+  {
+    "id": "water_flat",
+    "name": "Flat",
+    "category": "water"
+  },
+  {
+    "id": "water_orangeflower",
+    "name": "Orange flower",
+    "category": "water"
+  },
+  {
+    "id": "water_rose",
+    "name": "Rose",
+    "category": "water"
+  },
+  {
+    "id": "agave_mezcal",
+    "name": "Mezcal",
+    "category": "agave"
+  },
+  {
+    "id": "agave_tequila",
+    "name": "Tequila",
+    "category": "agave",
+    "hasChildren": true
+  },
+  {
+    "id": "agave_tequila_anejo",
+    "name": "Anejo",
+    "category": "agave",
+    "parent": "agave_tequila"
+  },
+  {
+    "id": "agave_tequila_blanco",
+    "name": "Blanco",
+    "category": "agave",
+    "parent": "agave_tequila"
+  },
+  {
+    "id": "agave_tequila_reposado",
+    "name": "Reposado",
+    "category": "agave",
+    "parent": "agave_tequila"
+  },
+  {
+    "id": "beer_gose",
+    "name": "Gose",
+    "category": "beer"
+  },
+  {
+    "id": "beer_grapefruit",
+    "name": "Grapefruit",
+    "category": "beer"
+  },
+  {
+    "id": "beer_ipa",
+    "name": "IPA",
+    "category": "beer"
+  },
+  {
+    "id": "beer_pilsner",
+    "name": "Pilsner",
+    "category": "beer"
+  },
+  {
+    "id": "bitters_allspice",
+    "name": "Allspice",
+    "category": "bitters"
+  },
+  {
+    "id": "bitters_aromatic",
+    "name": "Aromatic",
+    "category": "bitters"
+  },
+  {
+    "id": "bitters_barrelaged",
+    "name": "Barrel-aged",
+    "category": "bitters"
+  },
+  {
+    "id": "bitters_blackstrap",
+    "name": "Black strap",
+    "category": "bitters"
+  },
+  {
+    "id": "bitters_cardamom",
+    "name": "Cardamom",
+    "category": "bitters"
+  },
+  {
+    "id": "bitters_celery",
+    "name": "Celery",
+    "category": "bitters"
+  },
+  {
+    "id": "bitters_chocolate",
+    "name": "Chocolate",
+    "category": "bitters"
+  },
+  {
+    "id": "bitters_coffey",
+    "name": "Coffey",
+    "category": "bitters"
+  },
+  {
+    "id": "bitters_creole",
+    "name": "Creole",
+    "category": "bitters"
+  },
+  {
+    "id": "bitters_curry",
+    "name": "Curry",
+    "category": "bitters"
+  },
+  {
+    "id": "bitters_grapefruit",
+    "name": "Grapefruit",
+    "category": "bitters"
+  },
+  {
+    "id": "bitters_herbstura",
+    "name": "Herbstura",
+    "category": "bitters"
+  },
+  {
+    "id": "bitters_jerk",
+    "name": "Jerk",
+    "category": "bitters"
+  },
+  {
+    "id": "bitters_lavender",
+    "name": "Lavender",
+    "category": "bitters"
+  },
+  {
+    "id": "bitters_mole",
+    "name": "Mole",
+    "category": "bitters"
+  },
+  {
+    "id": "bitters_moroccan",
+    "name": "Moroccan",
+    "category": "bitters"
+  },
+  {
+    "id": "bitters_orange",
+    "name": "Orange",
+    "category": "bitters"
+  },
+  {
+    "id": "bitters_peach",
+    "name": "Peach",
+    "category": "bitters"
+  },
+  {
+    "id": "bitters_thai",
+    "name": "Thai",
+    "category": "bitters"
+  },
+  {
+    "id": "bitters_tiki",
+    "name": "Tiki",
+    "category": "bitters"
+  },
+  {
+    "id": "cane_bataviaarrack",
+    "name": "Batavia arrack",
+    "category": "cane"
+  },
+  {
+    "id": "cane_cachaca",
+    "name": "Cachaça",
+    "category": "cane"
+  },
+  {
+    "id": "cane_rum",
+    "name": "Rum",
+    "category": "cane"
+  },
+  {
+    "id": "cane_swedishpunsch",
+    "name": "Swedish punsch",
+    "category": "cane"
+  },
+  {
+    "id": "fortifiedwine_ambrevermouth",
+    "name": "Ambré vermouth",
+    "category": "fortifiedwine"
+  },
+  {
+    "id": "fortifiedwine_aperitif",
+    "name": "Apéritif",
+    "category": "fortifiedwine"
+  },
+  {
+    "id": "fortifiedwine_blancvermouth",
+    "name": "Blanc Vermouth",
+    "category": "fortifiedwine"
+  },
+  {
+    "id": "fortifiedwine_dryvermouth",
+    "name": "Dry Vermouth",
+    "category": "fortifiedwine"
+  },
+  {
+    "id": "fortifiedwine_madeira",
+    "name": "Madeira",
+    "category": "fortifiedwine"
+  },
+  {
+    "id": "fortifiedwine_mistelle",
+    "name": "Mistelle",
+    "category": "fortifiedwine"
+  },
+  {
+    "id": "fortifiedwine_port",
+    "name": "Port",
+    "category": "fortifiedwine"
+  },
+  {
+    "id": "fortifiedwine_sherry",
+    "name": "Sherry",
+    "category": "fortifiedwine",
+    "hasChildren": true
+  },
+  {
+    "id": "fortifiedwine_sherry_amontillado",
+    "name": "Amontillado",
+    "category": "fortifiedwine",
+    "parent": "fortifiedwine_sherry"
+  },
+  {
+    "id": "fortifiedwine_sherry_cream",
+    "name": "Cream",
+    "category": "fortifiedwine",
+    "parent": "fortifiedwine_sherry"
+  },
+  {
+    "id": "fortifiedwine_sherry_eastindia",
+    "name": "East India",
+    "category": "fortifiedwine",
+    "parent": "fortifiedwine_sherry"
+  },
+  {
+    "id": "fortifiedwine_sherry_fino",
+    "name": "Fino",
+    "category": "fortifiedwine",
+    "parent": "fortifiedwine_sherry"
+  },
+  {
+    "id": "fortifiedwine_sherry_manzanilla",
+    "name": "Manzanilla",
+    "category": "fortifiedwine",
+    "parent": "fortifiedwine_sherry"
+  },
+  {
+    "id": "fortifiedwine_sherry_oloroso",
+    "name": "Oloroso",
+    "category": "fortifiedwine",
+    "parent": "fortifiedwine_sherry"
+  },
+  {
+    "id": "fortifiedwine_sherry_palecream",
+    "name": "Pale cream",
+    "category": "fortifiedwine",
+    "parent": "fortifiedwine_sherry"
+  },
+  {
+    "id": "fortifiedwine_sherry_palocartado",
+    "name": "Palo cartado",
+    "category": "fortifiedwine",
+    "parent": "fortifiedwine_sherry"
+  },
+  {
+    "id": "fortifiedwine_sherry_pedroximenez",
+    "name": "Pedro Ximénez",
+    "category": "fortifiedwine",
+    "parent": "fortifiedwine_sherry"
+  },
+  {
+    "id": "fortifiedwine_sweetvermouth",
+    "name": "Sweet Vermouth",
+    "category": "fortifiedwine"
+  },
+  {
+    "id": "brandy_apple",
+    "name": "Apple",
+    "category": "brandy"
+  },
+  {
+    "id": "brandy_apricot",
+    "name": "Apricot",
+    "category": "brandy"
+  },
+  {
+    "id": "brandy_basil",
+    "name": "Basil",
+    "category": "brandy"
+  },
+  {
+    "id": "brandy_carrot",
+    "name": "Carrot",
+    "category": "brandy"
+  },
+  {
+    "id": "brandy_cherry",
+    "name": "Cherry",
+    "category": "brandy"
+  },
+  {
+    "id": "brandy_douglasfir",
+    "name": "Douglas fir",
+    "category": "brandy"
+  },
+  {
+    "id": "brandy_grape",
+    "name": "Grape",
+    "category": "brandy",
+    "hasChildren": true
+  },
+  {
+    "id": "brandy_grape_armagnac",
+    "name": "Armagnac",
+    "category": "brandy",
+    "parent": "brandy_grape"
+  },
+  {
+    "id": "brandy_grape_cognac",
+    "name": "Cognac",
+    "category": "brandy",
+    "parent": "brandy_grape"
+  },
+  {
+    "id": "brandy_grape_american",
+    "name": "American",
+    "category": "brandy",
+    "parent": "brandy_grape"
+  },
+  {
+    "id": "brandy_grape_spanish",
+    "name": "Spanish",
+    "category": "brandy",
+    "parent": "brandy_grape"
+  },
+  {
+    "id": "brandy_grape_eaudevie",
+    "name": "Eau-de-vie",
+    "category": "brandy",
+    "parent": "brandy_grape"
+  },
+  {
+    "id": "brandy_grape_grappa",
+    "name": "Grappa",
+    "category": "brandy",
+    "parent": "brandy_grape"
+  },
+  {
+    "id": "brandy_grape_pisco",
+    "name": "Pisco",
+    "category": "brandy",
+    "parent": "brandy_grape"
+  },
+  {
+    "id": "brandy_hazelnut",
+    "name": "Hazelnut",
+    "category": "brandy"
+  },
+  {
+    "id": "brandy_mango",
+    "name": "Mango",
+    "category": "brandy"
+  },
+  {
+    "id": "brandy_peach",
+    "name": "Peach",
+    "category": "brandy"
+  },
+  {
+    "id": "brandy_pear",
+    "name": "Pear",
+    "category": "brandy"
+  },
+  {
+    "id": "brandy_plum",
+    "name": "Plum",
+    "category": "brandy"
+  },
+  {
+    "id": "brandy_raspberry",
+    "name": "Raspberry",
+    "category": "brandy"
+  },
+  {
+    "id": "brandy_shiso",
+    "name": "Shiso",
+    "category": "brandy"
+  },
+  {
+    "id": "brandy_tomato",
+    "name": "Tomato",
+    "category": "brandy"
+  },
+  {
+    "id": "brandy_vanilla",
+    "name": "Vanilla",
+    "category": "brandy"
+  },
+  {
+    "id": "grain_aquavit",
+    "name": "Aquavit",
+    "category": "grain"
+  },
+  {
+    "id": "grain_gin",
+    "name": "Gin",
+    "category": "grain",
+    "hasChildren": true
+  },
+  {
+    "id": "grain_gin_contemporary",
+    "name": "Contemporary",
+    "category": "grain",
+    "parent": "grain_gin"
+  },
+  {
+    "id": "grain_gin_genever",
+    "name": "Genever",
+    "category": "grain",
+    "parent": "grain_gin"
+  },
+  {
+    "id": "grain_gin_londondry",
+    "name": "London dry",
+    "category": "grain",
+    "parent": "grain_gin"
+  },
+  {
+    "id": "grain_gin_oldtom",
+    "name": "Old Tom",
+    "category": "grain",
+    "parent": "grain_gin"
+  },
+  {
+    "id": "grain_gin_plymouth",
+    "name": "Plymouth",
+    "category": "grain",
+    "parent": "grain_gin"
+  },
+  {
+    "id": "grain_gin_sloe",
+    "name": "Sloe",
+    "category": "grain",
+    "parent": "grain_gin"
+  },
+  {
+    "id": "grain_shochu",
+    "name": "Shochu",
+    "category": "grain"
+  },
+  {
+    "id": "grain_vodka",
+    "name": "Vodka",
+    "category": "grain"
+  },
+  {
+    "id": "grain_whiskey",
+    "name": "Whiskey",
+    "category": "grain",
+    "hasChildren": true
+  },
+  {
+    "id": "grain_whiskey_bourbon",
+    "name": "Bourbon",
+    "category": "grain",
+    "parent": "grain_whiskey"
+  },
+  {
+    "id": "grain_whiskey_irish",
+    "name": "Irish",
+    "category": "grain",
+    "parent": "grain_whiskey"
+  },
+  {
+    "id": "grain_whiskey_japanese",
+    "name": "Japanese",
+    "category": "grain",
+    "parent": "grain_whiskey"
+  },
+  {
+    "id": "grain_whiskey_rye",
+    "name": "Rye",
+    "category": "grain",
+    "parent": "grain_whiskey"
+  },
+  {
+    "id": "grain_whiskey_scotch",
+    "name": "Scotch",
+    "category": "grain",
+    "parent": "grain_whiskey",
+    "hasChildren": true
+  },
+  {
+    "id": "grain_whiskey_scotch_blended",
+    "name": "Blended",
+    "category": "grain",
+    "parent": "grain_whiskey_scotch"
+  },
+  {
+    "id": "grain_whiskey_scotch_campbeltown",
+    "name": "Campbeltown",
+    "category": "grain",
+    "parent": "grain_whiskey_scotch"
+  },
+  {
+    "id": "grain_whiskey_scotch_highlands",
+    "name": "Highlands",
+    "category": "grain",
+    "parent": "grain_whiskey_scotch"
+  },
+  {
+    "id": "grain_whiskey_scotch_islay",
+    "name": "Islay",
+    "category": "grain",
+    "parent": "grain_whiskey_scotch"
+  },
+  {
+    "id": "grain_whiskey_scotch_speyside",
+    "name": "Speyside",
+    "category": "grain",
+    "parent": "grain_whiskey_scotch"
+  },
+  {
+    "id": "liqueur_absinthe",
+    "name": "Absinthe",
+    "category": "liqueur"
+  },
+  {
+    "id": "liqueur_allspice",
+    "name": "Allspice",
+    "category": "liqueur"
+  },
+  {
+    "id": "liqueur_aloe",
+    "name": "Aloe",
+    "category": "liqueur"
+  },
+  {
+    "id": "liqueur_amaretto",
+    "name": "Amaretto",
+    "category": "liqueur"
+  },
+  {
+    "id": "liqueur_amaro",
+    "name": "Amaro",
+    "category": "liqueur",
+    "hasChildren": true
+  },
+  {
+    "id": "liqueur_amaro_alpine",
+    "name": "Alpine",
+    "category": "liqueur",
+    "parent": "liqueur_amaro"
+  },
+  {
+    "id": "liqueur_amaro_aperitivo",
+    "name": "Aperitivo",
+    "category": "liqueur",
+    "parent": "liqueur_amaro"
+  },
+  {
+    "id": "liqueur_amaro_carciofo",
+    "name": "Carciofo",
+    "category": "liqueur",
+    "parent": "liqueur_amaro"
+  },
+  {
+    "id": "liqueur_amaro_dense",
+    "name": "Dense",
+    "category": "liqueur",
+    "parent": "liqueur_amaro"
+  },
+  {
+    "id": "liqueur_amaro_fernet",
+    "name": "Fernet",
+    "category": "liqueur",
+    "parent": "liqueur_amaro"
+  },
+  {
+    "id": "liqueur_amaro_light",
+    "name": "Light",
+    "category": "liqueur",
+    "parent": "liqueur_amaro"
+  },
+  {
+    "id": "liqueur_amaro_medium",
+    "name": "Medium",
+    "category": "liqueur",
+    "parent": "liqueur_amaro"
+  },
+  {
+    "id": "liqueur_amaro_rabarbaro",
+    "name": "Rabarbaro",
+    "category": "liqueur",
+    "parent": "liqueur_amaro"
+  },
+  {
+    "id": "liqueur_anchochile",
+    "name": "Ancho chile",
+    "category": "liqueur"
+  },
+  {
+    "id": "liqueur_apricot",
+    "name": "Apricot",
+    "category": "liqueur"
+  },
+  {
+    "id": "liqueur_banana",
+    "name": "Banana",
+    "category": "liqueur"
+  },
+  {
+    "id": "liqueur_basil",
+    "name": "Basil",
+    "category": "liqueur"
+  },
+  {
+    "id": "liqueur_bergamot",
+    "name": "Bergamot",
+    "category": "liqueur"
+  },
+  {
+    "id": "liqueur_biscotti",
+    "name": "Biscotti",
+    "category": "liqueur"
+  },
+  {
+    "id": "liqueur_cherryheering",
+    "name": "Cherry heering",
+    "category": "liqueur"
+  },
+  {
+    "id": "liqueur_cherry",
+    "name": "Cherry",
+    "category": "liqueur"
+  },
+  {
+    "id": "liqueur_coconut",
+    "name": "Coconut",
+    "category": "liqueur"
+  },
+  {
+    "id": "liqueur_coffeebean",
+    "name": "Coffee bean",
+    "category": "liqueur"
+  },
+  {
+    "id": "liqueur_cranberry",
+    "name": "Cranberry",
+    "category": "liqueur"
+  },
+  {
+    "id": "liqueur_cremedecacao",
+    "name": "Crème de cacao",
+    "category": "liqueur"
+  },
+  {
+    "id": "liqueur_cremedecassis",
+    "name": "Crème de cassis",
+    "category": "liqueur"
+  },
+  {
+    "id": "liqueur_cremedementhe",
+    "name": "Crème de menthe",
+    "category": "liqueur"
+  },
+  {
+    "id": "liqueur_cremedeviolette",
+    "name": "Crème de violette",
+    "category": "liqueur"
+  },
+  {
+    "id": "liqueur_elderflower",
+    "name": "Elderflower",
+    "category": "liqueur"
+  },
+  {
+    "id": "liqueur_falernum",
+    "name": "Falernum",
+    "category": "liqueur"
+  },
+  {
+    "id": "liqueur_fennel",
+    "name": "Fennel",
+    "category": "liqueur"
+  },
+  {
+    "id": "liqueur_fir",
+    "name": "Fir",
+    "category": "liqueur"
+  },
+  {
+    "id": "liqueur_grapefruit",
+    "name": "Grapefruit",
+    "category": "liqueur"
+  },
+  {
+    "id": "liqueur_habanero",
+    "name": "Habanero",
+    "category": "liqueur"
+  },
+  {
+    "id": "liqueur_herbal",
+    "name": "Herbal",
+    "category": "liqueur"
+  },
+  {
+    "id": "liqueur_hibiscus",
+    "name": "Hibiscus",
+    "category": "liqueur"
+  },
+  {
+    "id": "liqueur_kummel",
+    "name": "Kummel",
+    "category": "liqueur"
+  },
+  {
+    "id": "liqueur_lychee",
+    "name": "Lychee",
+    "category": "liqueur"
+  },
+  {
+    "id": "liqueur_macadamia",
+    "name": "Macadamia",
+    "category": "liqueur"
+  },
+  {
+    "id": "liqueur_mandarine",
+    "name": "Mandarine",
+    "category": "liqueur"
+  },
+  {
+    "id": "liqueur_maraschino",
+    "name": "Maraschino",
+    "category": "liqueur"
+  },
+  {
+    "id": "liqueur_orange",
+    "name": "Orange",
+    "category": "liqueur"
+  },
+  {
+    "id": "liqueur_passionfruit",
+    "name": "Passion fruit",
+    "category": "liqueur"
+  },
+  {
+    "id": "liqueur_peach",
+    "name": "Peach",
+    "category": "liqueur"
+  },
+  {
+    "id": "liqueur_pear",
+    "name": "Pear",
+    "category": "liqueur"
+  },
+  {
+    "id": "liqueur_pine",
+    "name": "Pine",
+    "category": "liqueur"
+  },
+  {
+    "id": "liqueur_pineapple",
+    "name": "Pineapple",
+    "category": "liqueur"
+  },
+  {
+    "id": "liqueur_raspberry",
+    "name": "Raspberry",
+    "category": "liqueur"
+  },
+  {
+    "id": "liqueur_rhubarb",
+    "name": "Rhubarb",
+    "category": "liqueur"
+  },
+  {
+    "id": "liqueur_rich",
+    "name": "Rich",
+    "category": "liqueur"
+  },
+  {
+    "id": "liqueur_rosemary",
+    "name": "Rosemary",
+    "category": "liqueur"
+  },
+  {
+    "id": "liqueur_sourapple",
+    "name": "Sour apple",
+    "category": "liqueur"
+  },
+  {
+    "id": "liqueur_strawberry",
+    "name": "Strawberry",
+    "category": "liqueur"
+  },
+  {
+    "id": "liqueur_thyme",
+    "name": "Thyme",
+    "category": "liqueur"
+  },
+  {
+    "id": "liqueur_vanilla",
+    "name": "Vanilla",
+    "category": "liqueur"
+  },
+  {
+    "id": "liqueur_walnut",
+    "name": "Walnut",
+    "category": "liqueur"
+  },
+  {
+    "id": "liqueur_yuzu",
+    "name": "Yuzu",
+    "category": "liqueur"
+  },
+  {
+    "id": "wine_plum",
+    "name": "Plum",
+    "category": "wine"
+  },
+  {
+    "id": "wine_red",
+    "name": "Red",
+    "category": "wine",
+    "hasChildren": true
+  },
+  {
+    "id": "wine_red_lambrusco",
+    "name": "Lambrusco",
+    "category": "wine",
+    "parent": "wine_red"
+  },
+  {
+    "id": "wine_red_malbec",
+    "name": "Malbec",
+    "category": "wine",
+    "parent": "wine_red"
+  },
+  {
+    "id": "wine_red_rancio",
+    "name": "Rancio",
+    "category": "wine",
+    "parent": "wine_red"
+  },
+  {
+    "id": "wine_red_syrah",
+    "name": "Syrah",
+    "category": "wine",
+    "parent": "wine_red"
+  },
+  {
+    "id": "wine_sake",
+    "name": "Sake",
+    "category": "wine",
+    "hasChildren": true
+  },
+  {
+    "id": "wine_sake_aged",
+    "name": "Aged",
+    "category": "wine",
+    "parent": "wine_sake"
+  },
+  {
+    "id": "wine_sake_junmai",
+    "name": "Junmai",
+    "category": "wine",
+    "parent": "wine_sake"
+  },
+  {
+    "id": "wine_sake_nigori",
+    "name": "Nigori",
+    "category": "wine",
+    "parent": "wine_sake"
+  },
+  {
+    "id": "wine_sake_sparkling",
+    "name": "Sparkling",
+    "category": "wine",
+    "parent": "wine_sake"
+  },
+  {
+    "id": "wine_sake_yuzu",
+    "name": "Yuzu",
+    "category": "wine",
+    "parent": "wine_sake"
+  },
+  {
+    "id": "wine_sparkling",
+    "name": "Sparkling",
+    "category": "wine"
+  },
+  {
+    "id": "wine_sweet",
+    "name": "Sweet",
+    "category": "wine",
+    "hasChildren": true
+  },
+  {
+    "id": "wine_sweet_moscatel",
+    "name": "Moscatel",
+    "category": "wine",
+    "parent": "wine_sweet"
+  },
+  {
+    "id": "wine_sweet_sauternes",
+    "name": "Sauternes",
+    "category": "wine",
+    "parent": "wine_sweet"
+  },
+  {
+    "id": "wine_white",
+    "name": "White",
+    "category": "wine",
+    "hasChildren": true
+  },
+  {
+    "id": "wine_white_riesling",
+    "name": "Riesling",
+    "category": "wine",
+    "parent": "wine_white"
+  }
+]

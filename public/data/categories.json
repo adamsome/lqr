@@ -1,0 +1,146 @@
+[
+  {
+    "type": "acid",
+    "name": "Acid"
+  },
+  {
+    "type": "brine",
+    "name": "Brine"
+  },
+  {
+    "type": "cheese",
+    "name": "Cheese"
+  },
+  {
+    "type": "chocolate",
+    "name": "Chocolate"
+  },
+  {
+    "type": "cider",
+    "name": "Cider"
+  },
+  {
+    "type": "coffee",
+    "name": "Coffee"
+  },
+  {
+    "type": "cordial",
+    "name": "Cordial"
+  },
+  {
+    "type": "cream",
+    "name": "Cream"
+  },
+  {
+    "type": "egg",
+    "name": "Egg"
+  },
+  {
+    "type": "extract",
+    "name": "Extract"
+  },
+  {
+    "type": "flower",
+    "name": "Flower"
+  },
+  {
+    "type": "fruit",
+    "name": "Fruit"
+  },
+  {
+    "type": "jelly",
+    "name": "Jelly"
+  },
+  {
+    "type": "juice",
+    "name": "Juice"
+  },
+  {
+    "type": "leaf",
+    "name": "Leaf"
+  },
+  {
+    "type": "milk",
+    "name": "Milk"
+  },
+  {
+    "type": "nut",
+    "name": "Nut"
+  },
+  {
+    "type": "oil",
+    "name": "Oil"
+  },
+  {
+    "type": "puree",
+    "name": "Purée"
+  },
+  {
+    "type": "shrub",
+    "name": "Shrub"
+  },
+  {
+    "type": "soda",
+    "name": "Soda"
+  },
+  {
+    "type": "spice",
+    "name": "Spice"
+  },
+  {
+    "type": "sugar",
+    "name": "Sugar"
+  },
+  {
+    "type": "syrup",
+    "name": "Syrup"
+  },
+  {
+    "type": "tea",
+    "name": "Tea"
+  },
+  {
+    "type": "vegetable",
+    "name": "Vegetable"
+  },
+  {
+    "type": "water",
+    "name": "Water"
+  },
+  {
+    "type": "agave",
+    "name": "Agave"
+  },
+  {
+    "type": "beer",
+    "name": "Beer"
+  },
+  {
+    "type": "bitters",
+    "name": "Bitters"
+  },
+  {
+    "type": "cane",
+    "name": "Cane"
+  },
+  {
+    "type": "fortifiedwine",
+    "name": "Fortified wine"
+  },
+  {
+    "type": "brandy",
+    "name": "Brandy"
+  },
+  {
+    "type": "grain",
+    "name": "Grain"
+  },
+  {
+    "type": "liqueur",
+    "name": "Liqueur"
+  },
+  {
+    "type": "wine",
+    "name": "Wine"
+  }
+]
