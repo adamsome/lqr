@@ -3,6 +3,7 @@
 import { ColumnDef } from '@tanstack/react-table'
 import { MoreHorizontal } from 'lucide-react'
 
+import { IngredientCategoryCell } from '@/components/ingredients/ingredient-category-cell'
 import { Button } from '@/components/ui/button'
 import { Checkbox } from '@/components/ui/checkbox'
 import { DataTableColumnHeader } from '@/components/ui/data-table-column-header'
@@ -14,6 +15,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu'
+import { AgingDefs, ProductionMethodDefs } from '@/lib/consts'
 import { Ingredient } from '@/lib/ingredient'
 
 export const columns: ColumnDef<Ingredient>[] = [
@@ -43,9 +45,33 @@ export const columns: ColumnDef<Ingredient>[] = [
     ),
   },
   {
-    accessorKey: 'category',
+    accessorKey: 'ancestors',
+    // accessorFn: (row) => getIngredientAncestorText(row),
     header: ({ column }) => (
       <DataTableColumnHeader column={column}>Category</DataTableColumnHeader>
+    ),
+    cell: ({ row }) => <IngredientCategoryCell ingredient={row.original} />,
+    filterFn: (row, columnID, value) => {
+      const x = row.getValue('ancestors')
+      console.log('x', x, value)
+      return true
+    },
+  },
+  {
+    accessorKey: 'productionMethod',
+    accessorFn: (row) =>
+      row.productionMethod
+        ? ProductionMethodDefs[row.productionMethod].name
+        : '',
+    header: ({ column }) => (
+      <DataTableColumnHeader column={column}>Method</DataTableColumnHeader>
+    ),
+  },
+  {
+    accessorKey: 'aging',
+    accessorFn: (row) => (row.aging ? AgingDefs[row.aging].name : ''),
+    header: ({ column }) => (
+      <DataTableColumnHeader column={column}>Aging</DataTableColumnHeader>
     ),
   },
   {

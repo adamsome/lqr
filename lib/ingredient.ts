@@ -1,6 +1,6 @@
 import { Aging, IngredientCategory, ProductionMethod } from '@/lib/consts'
 
-export type Ingredient = {
+export type IngredientDef = {
   id: string
   ordinal?: number
   name: string
@@ -13,4 +13,8 @@ export type Ingredient = {
   stock?: number
   buyPriority?: number
   references?: string[]
+}
+
+export type Ingredient = IngredientDef & {
+  ancestors: IngredientDef[]
 }

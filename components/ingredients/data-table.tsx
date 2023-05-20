@@ -12,7 +12,7 @@ import {
   getSortedRowModel,
   useReactTable,
 } from '@tanstack/react-table'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 import { DataTablePagination } from '@/components/ui/data-table-pagination'
 import { DataTableViewOptions } from '@/components/ui/data-table-view-options'
@@ -57,9 +57,13 @@ export function DataTable<TData, TValue>({
       columnVisibility,
       rowSelection,
     },
+    initialState: {
+      pagination: {
+        pageSize: 50,
+      },
+    },
   })
 
-  const rowCount = table.getRowModel().rows.length
   return (
     <div className="flex flex-col gap-4">
       <div className="flex items-center">
