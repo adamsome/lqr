@@ -60,7 +60,7 @@
     "ordinal": 1040,
     "name": "Bimini",
     "category": "grain",
-    "parent": "grain_gin_comtemporary",
+    "parent": "grain_gin_contemporary",
     "productionMethod": "column",
     "aging": "none",
     "origin": "USA",
@@ -86,7 +86,7 @@
     "ordinal": 1060,
     "name": "Monkey 47",
     "category": "grain",
-    "parent": "grain_gin_comtemporary",
+    "parent": "grain_gin_contemporary",
     "productionMethod": "column",
     "aging": "none",
     "origin": "Germany",
@@ -99,7 +99,7 @@
     "ordinal": 1070,
     "name": "St. George Dry Rye",
     "category": "grain",
-    "parent": "grain_gin_comtemporary",
+    "parent": "grain_gin_contemporary",
     "productionMethod": "column",
     "aging": "none",
     "origin": "USA",
@@ -113,7 +113,7 @@
     "ordinal": 1080,
     "name": "St. George Terroir",
     "category": "grain",
-    "parent": "grain_gin_comtemporary",
+    "parent": "grain_gin_contemporary",
     "productionMethod": "column",
     "aging": "none",
     "origin": "USA",
@@ -127,7 +127,7 @@
     "ordinal": 1090,
     "name": "Four Pillars Navy Strength",
     "category": "grain",
-    "parent": "grain_gin_comtemporary",
+    "parent": "grain_gin_contemporary",
     "productionMethod": "column",
     "aging": "none",
     "origin": "Australia",
@@ -1996,7 +1996,6 @@
     "category": "cane",
     "parent": "cane_rum",
     "productionMethod": "pot",
-    "aging": "na",
     "origin": "Jamaica"
   },
   {
@@ -2006,7 +2005,6 @@
     "category": "cane",
     "parent": "cane_rum",
     "productionMethod": "blended",
-    "aging": "na",
     "origin": "Jamaica"
   },
   {
@@ -2016,7 +2014,6 @@
     "category": "cane",
     "parent": "cane_rum",
     "productionMethod": "blended",
-    "aging": "na",
     "origin": "US Virgin Islands",
     "references": [
       "D+C: Codex",
@@ -2030,7 +2027,6 @@
     "category": "cane",
     "parent": "cane_rum",
     "productionMethod": "blended",
-    "aging": "na",
     "origin": "Regional Blend",
     "references": [
       "D+C: Codex",
@@ -2044,7 +2040,6 @@
     "category": "cane",
     "parent": "cane_rum",
     "productionMethod": "blended",
-    "aging": "na",
     "origin": "Guyana"
   },
   {
@@ -2054,7 +2049,6 @@
     "category": "cane",
     "parent": "cane_rum",
     "productionMethod": "blended",
-    "aging": "na",
     "origin": "Jamaica"
   },
   {
@@ -2064,7 +2058,6 @@
     "category": "cane",
     "parent": "cane_rum",
     "productionMethod": "blended",
-    "aging": "na",
     "origin": "Guyana"
   },
   {
@@ -2074,7 +2067,6 @@
     "category": "cane",
     "parent": "cane_rum",
     "productionMethod": "blended",
-    "aging": "na",
     "origin": "Venezuela"
   },
   {
@@ -2084,7 +2076,6 @@
     "category": "cane",
     "parent": "cane_rum",
     "productionMethod": "blended",
-    "aging": "na",
     "origin": "Jamaica"
   },
   {
@@ -2094,7 +2085,6 @@
     "category": "cane",
     "parent": "cane_rum",
     "productionMethod": "blended",
-    "aging": "na",
     "origin": "Jamaica"
   },
   {
@@ -2104,7 +2094,6 @@
     "category": "cane",
     "parent": "cane_rum",
     "productionMethod": "blended",
-    "aging": "na",
     "origin": "Guyana"
   },
   {
@@ -2114,7 +2103,6 @@
     "category": "cane",
     "parent": "cane_rum",
     "productionMethod": "blended",
-    "aging": "na",
     "origin": "Guyana",
     "references": [
       "Suderman"
@@ -2127,7 +2115,6 @@
     "category": "cane",
     "parent": "cane_rum",
     "productionMethod": "blended",
-    "aging": "na",
     "origin": "Guyana"
   },
   {
@@ -2137,7 +2124,6 @@
     "category": "cane",
     "parent": "cane_rum",
     "productionMethod": "blended",
-    "aging": "na",
     "origin": "Regional Blend",
     "references": [
       "D+C: Codex"
@@ -3024,7 +3010,6 @@
     "name": "Reisetbauer carrot eau-de-vie",
     "category": "brandy",
     "parent": "brandy_grape_eaudevie",
-    "productionMethod": "na",
     "aging": "none",
     "origin": "Austria",
     "references": [
@@ -3037,7 +3022,6 @@
     "name": "Rhine Hall mango brandy",
     "category": "brandy",
     "parent": "brandy_grape_american",
-    "productionMethod": "na",
     "aging": "none",
     "origin": "USA",
     "originTerritory": "Illinois",
@@ -3051,7 +3035,6 @@
     "name": "Clear Creek Blue Plum brandy",
     "category": "brandy",
     "parent": "brandy_grape_american",
-    "productionMethod": "na",
     "aging": "none",
     "origin": "USA",
     "originTerritory": "Oregon",
@@ -3065,7 +3048,6 @@
     "name": "Clear Creek Douglas Fir eau-de-vie",
     "category": "brandy",
     "parent": "brandy_grape_eaudevie",
-    "productionMethod": "na",
     "aging": "none",
     "origin": "USA",
     "originTerritory": "Oregon",
@@ -3079,7 +3061,6 @@
     "name": "St. George Aqua Perfecta basil eau-de-vie",
     "category": "brandy",
     "parent": "brandy_grape_eaudevie",
-    "productionMethod": "na",
     "aging": "none",
     "origin": "USA",
     "originTerritory": "California",
@@ -3093,7 +3074,6 @@
     "name": "Cobrafire eau-de-vie de raisin",
     "category": "brandy",
     "parent": "brandy_grape_eaudevie",
-    "productionMethod": "na",
     "aging": "none",
     "origin": "France",
     "references": [
@@ -3106,7 +3086,6 @@
     "name": "Cyril Zangs 00 apple cide eau-de-vie",
     "category": "brandy",
     "parent": "brandy_apple",
-    "productionMethod": "na",
     "aging": "none",
     "origin": "France",
     "references": [
@@ -3119,7 +3098,6 @@
     "name": "Clear Creek pear brandy",
     "category": "brandy",
     "parent": "brandy_grape_american",
-    "productionMethod": "na",
     "aging": "none",
     "origin": "USA",
     "originTerritory": "Oregon",
@@ -3134,7 +3112,6 @@
     "name": "Capurro Acholado pisco",
     "category": "brandy",
     "parent": "brandy_grape_pisco",
-    "productionMethod": "na",
     "aging": "none",
     "origin": "Peru",
     "references": [
@@ -3148,7 +3125,6 @@
     "name": "St. George framboise eau-de-vie",
     "category": "brandy",
     "parent": "brandy_grape_eaudevie",
-    "productionMethod": "na",
     "aging": "none",
     "origin": "USA",
     "originTerritory": "California",
@@ -3162,8 +3138,6 @@
     "name": "Aperol",
     "category": "liqueur",
     "parent": "liqueur_amaro_aperitivo",
-    "productionMethod": "na",
-    "aging": "na",
     "origin": "Italy",
     "references": [
       "D+C: WH",
@@ -3176,8 +3150,6 @@
     "name": "Campari",
     "category": "liqueur",
     "parent": "liqueur_amaro_aperitivo",
-    "productionMethod": "na",
-    "aging": "na",
     "origin": "Italy",
     "references": [
       "D+C: WH",
@@ -3190,8 +3162,6 @@
     "name": "Suze",
     "category": "liqueur",
     "parent": "liqueur_amaro_aperitivo",
-    "productionMethod": "na",
-    "aging": "na",
     "origin": "Italy",
     "references": [
       "D+C: WH",
@@ -3204,8 +3174,6 @@
     "name": "Amaro Meletti",
     "category": "liqueur",
     "parent": "liqueur_amaro_light",
-    "productionMethod": "na",
-    "aging": "na",
     "origin": "Italy",
     "references": [
       "D+C: WH",
@@ -3218,8 +3186,6 @@
     "name": "Amaro Montenegro",
     "category": "liqueur",
     "parent": "liqueur_amaro_light",
-    "productionMethod": "na",
-    "aging": "na",
     "origin": "Italy",
     "references": [
       "D+C: WH",
@@ -3232,8 +3198,6 @@
     "name": "Amaro Nonino Quintessentia",
     "category": "liqueur",
     "parent": "liqueur_amaro_light",
-    "productionMethod": "na",
-    "aging": "na",
     "origin": "Italy",
     "references": [
       "D+C: WH",
@@ -3246,8 +3210,6 @@
     "name": "Lo-Fi gentian amaro",
     "category": "liqueur",
     "parent": "liqueur_amaro_light",
-    "productionMethod": "na",
-    "aging": "na",
     "origin": "Italy",
     "references": [
       "D+C: WH"
@@ -3259,8 +3221,6 @@
     "name": "Amaro Averna",
     "category": "liqueur",
     "parent": "liqueur_amaro_medium",
-    "productionMethod": "na",
-    "aging": "na",
     "origin": "Italy",
     "references": [
       "D+C: WH",
@@ -3273,8 +3233,6 @@
     "name": "Amaro CioCiaro",
     "category": "liqueur",
     "parent": "liqueur_amaro_medium",
-    "productionMethod": "na",
-    "aging": "na",
     "origin": "Italy",
     "references": [
       "D+C: WH",
@@ -3287,8 +3245,6 @@
     "name": "Bigallet China-China Amer",
     "category": "liqueur",
     "parent": "liqueur_amaro_medium",
-    "productionMethod": "na",
-    "aging": "na",
     "origin": "Italy",
     "references": [
       "D+C: WH",
@@ -3301,8 +3257,6 @@
     "name": "Cynar",
     "category": "liqueur",
     "parent": "liqueur_amaro_carciofo",
-    "productionMethod": "na",
-    "aging": "na",
     "origin": "Italy",
     "references": [
       "D+C: WH",
@@ -3315,8 +3269,6 @@
     "name": "Ramazzotti",
     "category": "liqueur",
     "parent": "liqueur_amaro_medium",
-    "productionMethod": "na",
-    "aging": "na",
     "origin": "Italy",
     "references": [
       "D+C: WH",
@@ -3329,8 +3281,6 @@
     "name": "Cappelletti Pasubio vino amaro",
     "category": "liqueur",
     "parent": "liqueur_amaro_medium",
-    "productionMethod": "na",
-    "aging": "na",
     "origin": "Italy",
     "references": [
       "D+C: WH"
@@ -3342,8 +3292,6 @@
     "name": "Amaro di Angostura",
     "category": "liqueur",
     "parent": "liqueur_amaro_medium",
-    "productionMethod": "na",
-    "aging": "na",
     "origin": "Italy",
     "references": [
       "D+C: WH"
@@ -3354,9 +3302,7 @@
     "ordinal": 3910,
     "name": "Braulio amaro",
     "category": "liqueur",
-    "parent": "amaro_mediumamaro_alpine",
-    "productionMethod": "na",
-    "aging": "na",
+    "parent": "liqueur_amaro_alpine",
     "origin": "Italy",
     "references": [
       "D+C: WH"
@@ -3368,8 +3314,6 @@
     "name": "Amaro Nardini",
     "category": "liqueur",
     "parent": "liqueur_amaro_medium",
-    "productionMethod": "na",
-    "aging": "na",
     "origin": "Italy",
     "references": [
       "D+C: WH"
@@ -3381,8 +3325,6 @@
     "name": "Fernet Vittone",
     "category": "liqueur",
     "parent": "liqueur_amaro_fernet",
-    "productionMethod": "na",
-    "aging": "na",
     "origin": "Italy"
   },
   {
@@ -3391,8 +3333,6 @@
     "name": "Fernet-Branca",
     "category": "liqueur",
     "parent": "liqueur_amaro_fernet",
-    "productionMethod": "na",
-    "aging": "na",
     "origin": "Italy",
     "references": [
       "D+C: WH",
@@ -3405,8 +3345,6 @@
     "name": "Luxardo Amaro Albano",
     "category": "liqueur",
     "parent": "liqueur_amaro_dense",
-    "productionMethod": "na",
-    "aging": "na",
     "origin": "Italy",
     "references": [
       "D+C: WH",
@@ -3419,8 +3357,6 @@
     "name": "Capalleti Amaro Sfumato",
     "category": "liqueur",
     "parent": "liqueur_amaro_rabarbaro",
-    "productionMethod": "na",
-    "aging": "na",
     "origin": "Italy",
     "references": [
       "D+C: WH"
@@ -3432,8 +3368,6 @@
     "name": "Zucca",
     "category": "liqueur",
     "parent": "liqueur_amaro_rabarbaro",
-    "productionMethod": "na",
-    "aging": "na",
     "origin": "Italy",
     "references": [
       "D+C: WH"
@@ -3445,8 +3379,6 @@
     "name": "Fernet-Vallet",
     "category": "liqueur",
     "parent": "liqueur_amaro_dense",
-    "productionMethod": "na",
-    "aging": "na",
     "origin": "Italy",
     "references": [
       "D+C: WH"
@@ -3458,8 +3390,6 @@
     "name": "Chareau California Aloe Liqueur",
     "category": "liqueur",
     "parent": "liqueur_herbal",
-    "productionMethod": "na",
-    "aging": "na",
     "origin": "USA",
     "originTerritory": "California",
     "references": [
@@ -3473,8 +3403,6 @@
     "name": "Sapins",
     "category": "liqueur",
     "parent": "liqueur_herbal",
-    "productionMethod": "na",
-    "aging": "na",
     "origin": "Switzerland",
     "references": [
       "D+C: WH"
@@ -3486,8 +3414,6 @@
     "name": "Benedictine",
     "category": "liqueur",
     "parent": "liqueur_herbal",
-    "productionMethod": "na",
-    "aging": "na",
     "origin": "France",
     "references": [
       "D+C: WH",
@@ -3500,8 +3426,6 @@
     "name": "Yellow Chartreuse",
     "category": "liqueur",
     "parent": "liqueur_herbal",
-    "productionMethod": "na",
-    "aging": "na",
     "origin": "France",
     "references": [
       "D+C: WH",
@@ -3514,8 +3438,6 @@
     "name": "Strega",
     "category": "liqueur",
     "parent": "liqueur_herbal",
-    "productionMethod": "na",
-    "aging": "na",
     "origin": "France",
     "references": [
       "D+C: WH",
@@ -3528,8 +3450,6 @@
     "name": "Galliano L'Authentico",
     "category": "liqueur",
     "parent": "liqueur_herbal",
-    "productionMethod": "na",
-    "aging": "na",
     "origin": "Italy",
     "references": [
       "D+C: WH",
@@ -3542,8 +3462,6 @@
     "name": "Green Chartreuse",
     "category": "liqueur",
     "parent": "liqueur_herbal",
-    "productionMethod": "na",
-    "aging": "na",
     "origin": "France",
     "references": [
       "D+C: WH",
@@ -3556,8 +3474,6 @@
     "name": "St-Germain Elderflower Liqueur",
     "category": "liqueur",
     "parent": "liqueur_herbal",
-    "productionMethod": "na",
-    "aging": "na",
     "origin": "France",
     "references": [
       "D+C: WH",
@@ -3570,8 +3486,6 @@
     "name": "Bigallet Thyme Liqueur",
     "category": "liqueur",
     "parent": "liqueur_herbal",
-    "productionMethod": "na",
-    "aging": "na",
     "origin": "France",
     "references": [
       "D+C: WH"
@@ -3583,8 +3497,6 @@
     "name": "St. Elizabeth Allspice Dram",
     "category": "liqueur",
     "parent": "liqueur_herbal",
-    "productionMethod": "na",
-    "aging": "na",
     "origin": "Jamaica",
     "references": [
       "Cove"
@@ -3596,8 +3508,6 @@
     "name": "Velvet Falernum",
     "category": "liqueur",
     "parent": "liqueur_herbal",
-    "productionMethod": "na",
-    "aging": "na",
     "origin": "Barbados",
     "references": [
       "Cove"
@@ -3609,8 +3519,6 @@
     "name": "Kübler Absinthe Superieure",
     "category": "liqueur",
     "parent": "liqueur_herbal",
-    "productionMethod": "na",
-    "aging": "na",
     "origin": "Switzerland"
   },
   {
@@ -3619,8 +3527,6 @@
     "name": "Giffard Menthe-Pastille",
     "category": "liqueur",
     "parent": "liqueur_cremedementhe",
-    "productionMethod": "na",
-    "aging": "na",
     "origin": "France",
     "references": [
       "D+C: WH",
@@ -3633,8 +3539,6 @@
     "name": "Tempus Fugit Creme de Menthe",
     "category": "liqueur",
     "parent": "liqueur_cremedementhe",
-    "productionMethod": "na",
-    "aging": "na",
     "origin": "USA",
     "originTerritory": "California",
     "references": [
@@ -3648,8 +3552,6 @@
     "name": "Giffard Crème de Violette",
     "category": "liqueur",
     "parent": "liqueur_cremedeviolette",
-    "productionMethod": "na",
-    "aging": "na",
     "origin": "France",
     "references": [
       "D+C: Codex"
@@ -3661,8 +3563,6 @@
     "name": "Rothman & Winter Crème de Violette",
     "category": "liqueur",
     "parent": "liqueur_cremedeviolette",
-    "productionMethod": "na",
-    "aging": "na",
     "origin": "Austria"
   },
   {
@@ -3671,8 +3571,6 @@
     "name": "Umenoyado Yuzu Shu Liqueur",
     "category": "liqueur",
     "parent": "liqueur_yuzu",
-    "productionMethod": "na",
-    "aging": "na",
     "origin": "France",
     "references": [
       "D+C: WH"
@@ -3684,8 +3582,6 @@
     "name": "Giffard Crème de Pamplemousse Rose",
     "category": "liqueur",
     "parent": "liqueur_grapefruit",
-    "productionMethod": "na",
-    "aging": "na",
     "origin": "France",
     "references": [
       "D+C: WH",
@@ -3698,8 +3594,6 @@
     "name": "Lejay Crème de Cassis de Dijon",
     "category": "liqueur",
     "parent": "liqueur_cremedecassis",
-    "productionMethod": "na",
-    "aging": "na",
     "origin": "France",
     "references": [
       "D+C: WH"
@@ -3711,8 +3605,6 @@
     "name": "Mathilde Poire Pear Liqueur",
     "category": "liqueur",
     "parent": "liqueur_pear",
-    "productionMethod": "na",
-    "aging": "na",
     "origin": "France",
     "references": [
       "D+C: WH",
@@ -3725,8 +3617,6 @@
     "name": "Leopold Bros. New York Sour Apple Liqueur",
     "category": "liqueur",
     "parent": "liqueur_sourapple",
-    "productionMethod": "na",
-    "aging": "na",
     "origin": "USA",
     "originTerritory": "Colorado",
     "references": [
@@ -3739,8 +3629,6 @@
     "name": "Massenez Crème de Pêche peach liqueur",
     "category": "liqueur",
     "parent": "liqueur_peach",
-    "productionMethod": "na",
-    "aging": "na",
     "origin": "France",
     "references": [
       "D+C: WH",
@@ -3753,8 +3641,6 @@
     "name": "St George Spiced Pear Liqueur",
     "category": "liqueur",
     "parent": "liqueur_pear",
-    "productionMethod": "na",
-    "aging": "na",
     "origin": "USA",
     "originTerritory": "California",
     "references": [
@@ -3767,8 +3653,6 @@
     "name": "Giffard Rhubarb Liqueur",
     "category": "liqueur",
     "parent": "liqueur_rhubarb",
-    "productionMethod": "na",
-    "aging": "na",
     "origin": "France",
     "references": [
       "D+C: WH"
@@ -3780,8 +3664,6 @@
     "name": "Rothman & Winter Orchard Cherry Liqueur",
     "category": "liqueur",
     "parent": "liqueur_cherry",
-    "productionMethod": "na",
-    "aging": "na",
     "origin": "Austria",
     "references": [
       "D+C: WH"
@@ -3793,8 +3675,6 @@
     "name": "Giffard Banane du Brésil",
     "category": "liqueur",
     "parent": "liqueur_banana",
-    "productionMethod": "na",
-    "aging": "na",
     "origin": "France",
     "references": [
       "D+C: WH"
@@ -3806,8 +3686,6 @@
     "name": "Giffard Abricot du Roussillon",
     "category": "liqueur",
     "parent": "liqueur_apricot",
-    "productionMethod": "na",
-    "aging": "na",
     "origin": "France",
     "references": [
       "D+C: WH",
@@ -3820,8 +3698,6 @@
     "name": "Kalani Ron de Coco coconut liqueur",
     "category": "liqueur",
     "parent": "liqueur_coconut",
-    "productionMethod": "na",
-    "aging": "na",
     "origin": "Mexico",
     "references": [
       "D+C: WH"
@@ -3833,8 +3709,6 @@
     "name": "Luxardo Maraschino Liqueur",
     "category": "liqueur",
     "parent": "liqueur_maraschino",
-    "productionMethod": "na",
-    "aging": "na",
     "origin": "Italy",
     "references": [
       "D+C: WH",
@@ -3847,8 +3721,6 @@
     "name": "Cointreau",
     "category": "liqueur",
     "parent": "liqueur_orange",
-    "productionMethod": "na",
-    "aging": "na",
     "origin": "France",
     "references": [
       "D+C: WH",
@@ -3861,8 +3733,6 @@
     "name": "Grand Marinier",
     "category": "liqueur",
     "parent": "liqueur_orange",
-    "productionMethod": "na",
-    "aging": "na",
     "origin": "France",
     "references": [
       "D+C: WH",
@@ -3875,8 +3745,6 @@
     "name": "Pierre Ferrand Dry Curaçao",
     "category": "liqueur",
     "parent": "liqueur_orange",
-    "productionMethod": "na",
-    "aging": "na",
     "origin": "France",
     "references": [
       "D+C: WH"
@@ -3888,8 +3756,6 @@
     "name": "Marie Brizard White Creme de Cacao",
     "category": "liqueur",
     "parent": "liqueur_cremedecacao",
-    "productionMethod": "na",
-    "aging": "na",
     "origin": "France",
     "references": [
       "D+C: WH"
@@ -3901,8 +3767,6 @@
     "name": "Giffard White Crème de Cacao",
     "category": "liqueur",
     "parent": "liqueur_cremedecacao",
-    "productionMethod": "na",
-    "aging": "na",
     "origin": "France",
     "references": [
       "D+C: WH",
@@ -3915,8 +3779,6 @@
     "name": "Don Ciccio & Figli Finocchietto Fennel Liqueur",
     "category": "liqueur",
     "parent": "liqueur_rich",
-    "productionMethod": "na",
-    "aging": "na",
     "origin": "Italy",
     "references": [
       "D+C: WH"
@@ -3928,8 +3790,6 @@
     "name": "Ancho Reyes Ancho Chile Liqueur",
     "category": "liqueur",
     "parent": "liqueur_rich",
-    "productionMethod": "na",
-    "aging": "na",
     "origin": "Mexico",
     "references": [
       "D+C: WH"
@@ -3941,8 +3801,6 @@
     "name": "Ancho Reyes Ancho Verde Liqueur",
     "category": "liqueur",
     "parent": "liqueur_rich",
-    "productionMethod": "na",
-    "aging": "na",
     "origin": "Mexico",
     "references": [
       "D+C: WH"
@@ -3954,8 +3812,6 @@
     "name": "Trader Vic's Macadamia Nut Liqueur",
     "category": "liqueur",
     "parent": "liqueur_rich",
-    "productionMethod": "na",
-    "aging": "na",
     "origin": "USA",
     "originTerritory": "California",
     "references": [
@@ -3968,8 +3824,6 @@
     "name": "Galliano Ristretto",
     "category": "liqueur",
     "parent": "liqueur_rich",
-    "productionMethod": "na",
-    "aging": "na",
     "origin": "Italy",
     "references": [
       "D+C: WH",
@@ -3982,8 +3836,6 @@
     "name": "Nux Alpina Walnut Liqueur",
     "category": "liqueur",
     "parent": "liqueur_rich",
-    "productionMethod": "na",
-    "aging": "na",
     "origin": "Austria",
     "references": [
       "D+C: WH"
@@ -3995,8 +3847,6 @@
     "name": "Dolin Rouge",
     "category": "fortifiedwine",
     "parent": "fortifiedwine_sweetvermouth",
-    "productionMethod": "na",
-    "aging": "na",
     "origin": "France",
     "references": [
       "D+C: WH",
@@ -4009,8 +3859,6 @@
     "name": "Punt e Mes",
     "category": "fortifiedwine",
     "parent": "fortifiedwine_sweetvermouth",
-    "productionMethod": "na",
-    "aging": "na",
     "origin": "Italy",
     "references": [
       "D+C: WH"
@@ -4022,8 +3870,6 @@
     "name": "Cocchi Vermouth di Torino",
     "category": "fortifiedwine",
     "parent": "fortifiedwine_sweetvermouth",
-    "productionMethod": "na",
-    "aging": "na",
     "origin": "Italy",
     "references": [
       "D+C: WH"
@@ -4035,8 +3881,6 @@
     "name": "Carpano Antica Formula",
     "category": "fortifiedwine",
     "parent": "fortifiedwine_sweetvermouth",
-    "productionMethod": "na",
-    "aging": "na",
     "origin": "Italy",
     "references": [
       "D+C: WH",
@@ -4049,8 +3893,6 @@
     "name": "Dolin Dry",
     "category": "fortifiedwine",
     "parent": "fortifiedwine_dryvermouth",
-    "productionMethod": "na",
-    "aging": "na",
     "origin": "France",
     "references": [
       "D+C: WH",
@@ -4063,8 +3905,6 @@
     "name": "Noilly Prat Extra Dry",
     "category": "fortifiedwine",
     "parent": "fortifiedwine_dryvermouth",
-    "productionMethod": "na",
-    "aging": "na",
     "origin": "France",
     "references": [
       "D+C: WH",
@@ -4077,8 +3917,6 @@
     "name": "La Quintinye Vermouth Royal Blanc",
     "category": "fortifiedwine",
     "parent": "fortifiedwine_blancvermouth",
-    "productionMethod": "na",
-    "aging": "na",
     "origin": "France",
     "references": [
       "D+C: WH",
@@ -4091,8 +3929,6 @@
     "name": "Dolin Blanc",
     "category": "fortifiedwine",
     "parent": "fortifiedwine_blancvermouth",
-    "productionMethod": "na",
-    "aging": "na",
     "origin": "France",
     "references": [
       "D+C: WH",
@@ -4105,8 +3941,6 @@
     "name": "Bonal Gentiane-Quina",
     "category": "fortifiedwine",
     "parent": "fortifiedwine_aperitif",
-    "productionMethod": "na",
-    "aging": "na",
     "origin": "France",
     "references": [
       "D+C: WH",
@@ -4119,8 +3953,6 @@
     "name": "Lillet Rose",
     "category": "fortifiedwine",
     "parent": "fortifiedwine_aperitif",
-    "productionMethod": "na",
-    "aging": "na",
     "origin": "France",
     "references": [
       "D+C: WH",
@@ -4133,8 +3965,6 @@
     "name": "Lillet Blanc",
     "category": "fortifiedwine",
     "parent": "fortifiedwine_aperitif",
-    "productionMethod": "na",
-    "aging": "na",
     "origin": "France",
     "references": [
       "D+C: WH",
@@ -4147,8 +3977,6 @@
     "name": "Cocchi Americano Bianco",
     "category": "fortifiedwine",
     "parent": "fortifiedwine_aperitif",
-    "productionMethod": "na",
-    "aging": "na",
     "origin": "Italy",
     "references": [
       "D+C: WH",
@@ -4161,8 +3989,6 @@
     "name": "Byrhh",
     "category": "fortifiedwine",
     "parent": "fortifiedwine_aperitif",
-    "productionMethod": "na",
-    "aging": "na",
     "origin": "France",
     "references": [
       "D+C: WH"
@@ -4174,8 +4000,6 @@
     "name": "Rainwater Madeira",
     "category": "fortifiedwine",
     "parent": "fortifiedwine_madeira",
-    "productionMethod": "na",
-    "aging": "na",
     "origin": "Portugal",
     "references": [
       "D+C: WH",
@@ -4188,8 +4012,6 @@
     "name": "Rare Wine Co. Savannah Verdelho",
     "category": "fortifiedwine",
     "parent": "fortifiedwine_madeira",
-    "productionMethod": "na",
-    "aging": "na",
     "origin": "Portugal",
     "references": [
       "D+C: WH"
@@ -4201,8 +4023,6 @@
     "name": "H&H Generoso Doce 5-year",
     "category": "fortifiedwine",
     "parent": "fortifiedwine_madeira",
-    "productionMethod": "na",
-    "aging": "na",
     "origin": "Portugal",
     "references": [
       "D+C: WH"
@@ -4214,8 +4034,6 @@
     "name": "Gonzalez Byass Tio Pepe",
     "category": "fortifiedwine",
     "parent": "fortifiedwine_sherry_fino",
-    "productionMethod": "na",
-    "aging": "na",
     "origin": "Spain",
     "references": [
       "D+C: WH",
@@ -4228,8 +4046,6 @@
     "name": "Lustau Jarana",
     "category": "fortifiedwine",
     "parent": "fortifiedwine_sherry_fino",
-    "productionMethod": "na",
-    "aging": "na",
     "origin": "Spain",
     "references": [
       "D+C: WH",
@@ -4242,8 +4058,6 @@
     "name": "Hidalgo La Gitana",
     "category": "fortifiedwine",
     "parent": "fortifiedwine_sherry_manzanilla",
-    "productionMethod": "na",
-    "aging": "na",
     "origin": "Spain",
     "references": [
       "D+C: WH",
@@ -4256,8 +4070,6 @@
     "name": "Equipo Navazos I Think Manzanilla En Rama",
     "category": "fortifiedwine",
     "parent": "fortifiedwine_sherry_manzanilla",
-    "productionMethod": "na",
-    "aging": "na",
     "origin": "Spain",
     "references": [
       "D+C: WH"
@@ -4269,8 +4081,6 @@
     "name": "Lustau Los Arcos",
     "category": "fortifiedwine",
     "parent": "fortifiedwine_sherry_amontillado",
-    "productionMethod": "na",
-    "aging": "na",
     "origin": "Spain",
     "references": [
       "D+C: WH",
@@ -4283,8 +4093,6 @@
     "name": "Palo Cortado Lustau Peninsula",
     "category": "fortifiedwine",
     "parent": "fortifiedwine_sherry_amontillado",
-    "productionMethod": "na",
-    "aging": "na",
     "origin": "Spain",
     "references": [
       "D+C: WH",
@@ -4297,8 +4105,6 @@
     "name": "Barbadillo Principe de Barbadillo",
     "category": "fortifiedwine",
     "parent": "fortifiedwine_sherry_amontillado",
-    "productionMethod": "na",
-    "aging": "na",
     "origin": "Spain",
     "references": [
       "D+C: WH",
@@ -4311,8 +4117,6 @@
     "name": "Valdespino Palo Cortado Viejo",
     "category": "fortifiedwine",
     "parent": "fortifiedwine_sherry_amontillado",
-    "productionMethod": "na",
-    "aging": "na",
     "origin": "Spain",
     "references": [
       "D+C: WH"
@@ -4324,8 +4128,6 @@
     "name": "Gonzalez Byass Apostoles Palo Cortado",
     "category": "fortifiedwine",
     "parent": "fortifiedwine_sherry_amontillado",
-    "productionMethod": "na",
-    "aging": "na",
     "origin": "Spain",
     "references": [
       "D+C: WH"
@@ -4337,8 +4139,6 @@
     "name": "Gonzales Byass Nectar",
     "category": "fortifiedwine",
     "parent": "fortifiedwine_sherry_oloroso",
-    "productionMethod": "na",
-    "aging": "na",
     "origin": "Spain",
     "references": [
       "D+C: WH"
@@ -4350,8 +4150,6 @@
     "name": "Hidalgo Gobernador",
     "category": "fortifiedwine",
     "parent": "fortifiedwine_sherry_oloroso",
-    "productionMethod": "na",
-    "aging": "na",
     "origin": "Spain",
     "references": [
       "D+C: WH"
@@ -4363,8 +4161,6 @@
     "name": "Gonzalez Byass Matusalem Oloroso",
     "category": "fortifiedwine",
     "parent": "fortifiedwine_sherry_oloroso",
-    "productionMethod": "na",
-    "aging": "na",
     "origin": "Spain",
     "references": [
       "D+C: WH",
@@ -4377,8 +4173,6 @@
     "name": "Gutiérrez Colosia Oloroso",
     "category": "fortifiedwine",
     "parent": "fortifiedwine_sherry_oloroso",
-    "productionMethod": "na",
-    "aging": "na",
     "origin": "Spain",
     "references": [
       "D+C: WH",
@@ -4391,8 +4185,6 @@
     "name": "Williams & Humbert Dry Sack",
     "category": "fortifiedwine",
     "parent": "fortifiedwine_sherry_cream",
-    "productionMethod": "na",
-    "aging": "na",
     "origin": "Spain",
     "references": [
       "D+C: WH",
@@ -4405,8 +4197,6 @@
     "name": "Lustau East India Solera",
     "category": "fortifiedwine",
     "parent": "fortifiedwine_sherry_cream",
-    "productionMethod": "na",
-    "aging": "na",
     "origin": "Spain",
     "references": [
       "D+C: WH",

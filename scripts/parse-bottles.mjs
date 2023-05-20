@@ -14,7 +14,7 @@ const categoryIDMap = {
 }
 const ingredientIDMap = {
   gin_plymouthgin: 'grain_gin_plymouth',
-  gin_moderngin: 'grain_gin_comtemporary',
+  gin_moderngin: 'grain_gin_contemporary',
   gin_londondrygin: 'grain_gin_londondry',
   rum_jamaicanrum: 'cane_rum',
   rum_englishrum: 'cane_rum',
@@ -37,7 +37,7 @@ const ingredientIDMap = {
   brandy_spanishbrandy: 'brandy_grape_spanish',
   brandy_pisco: 'brandy_grape_pisco',
   amaro_mediumamaro_carciofo: 'liqueur_amaro_carciofo',
-  amaro_mediumamaro_alpine: 'amaro_mediumamaro_alpine',
+  amaro_mediumamaro_alpine: 'liqueur_amaro_alpine',
   amaro_denseamaro_fernet: 'liqueur_amaro_fernet',
   amaro_denseamaro_rabarbaro: 'liqueur_amaro_rabarbaro',
   amaro_apertivo: 'liqueur_amaro_aperitivo',
@@ -103,10 +103,8 @@ export function parseBottles() {
 
       let productionMethodType = slugify(productionMethod)
       productionMethodType = productionMethodType.replace('still', '')
-      if (
-        !productionMethodDict[productionMethodType] &&
-        productionMethodType !== 'na'
-      ) {
+      if (productionMethodType === 'na') productionMethodType = undefined
+      if (productionMethodType && !productionMethodDict[productionMethodType]) {
         productionMethodDict[productionMethodType] = {
           type: productionMethodType,
           name: productionMethod,
@@ -114,11 +112,12 @@ export function parseBottles() {
       }
 
       let agingType = slugify(aging)
-      if (agingType === 'unaged') agingType = 'none'
-      if (agingType === 'lightlyaged') agingType = 'light'
-      if (agingType === 'aged') agingType = 'medium'
-      if (agingType === 'longaged') agingType = 'long'
-      if (!agingDict[agingType] && agingType !== 'na') {
+      if (agingType === 'na') agingType = undefined
+      else if (agingType === 'unaged') agingType = 'none'
+      else if (agingType === 'lightlyaged') agingType = 'light'
+      else if (agingType === 'aged') agingType = 'medium'
+      else if (agingType === 'longaged') agingType = 'long'
+      if (agingType && !agingDict[agingType]) {
         agingDict[agingType] = {
           type: agingType,
           name: aging,
