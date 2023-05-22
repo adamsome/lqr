@@ -1,146 +1,155 @@
 [
   {
-    "type": "acid",
+    "id": "acid",
     "name": "Acid"
   },
   {
-    "type": "brine",
+    "id": "brine",
     "name": "Brine"
   },
   {
-    "type": "cheese",
+    "id": "cheese",
     "name": "Cheese"
   },
   {
-    "type": "chocolate",
+    "id": "chocolate",
     "name": "Chocolate"
   },
   {
-    "type": "cider",
+    "id": "cider",
     "name": "Cider"
   },
   {
-    "type": "coffee",
+    "id": "coffee",
     "name": "Coffee"
   },
   {
-    "type": "cordial",
+    "id": "cordial",
     "name": "Cordial"
   },
   {
-    "type": "cream",
+    "id": "cream",
     "name": "Cream"
   },
   {
-    "type": "egg",
+    "id": "egg",
     "name": "Egg"
   },
   {
-    "type": "extract",
+    "id": "extract",
     "name": "Extract"
   },
   {
-    "type": "flower",
+    "id": "flower",
     "name": "Flower"
   },
   {
-    "type": "fruit",
+    "id": "fruit",
     "name": "Fruit"
   },
   {
-    "type": "jelly",
+    "id": "jelly",
     "name": "Jelly"
   },
   {
-    "type": "juice",
+    "id": "juice",
     "name": "Juice"
   },
   {
-    "type": "leaf",
+    "id": "leaf",
     "name": "Leaf"
   },
   {
-    "type": "milk",
+    "id": "milk",
     "name": "Milk"
   },
   {
-    "type": "nut",
+    "id": "nut",
     "name": "Nut"
   },
   {
-    "type": "oil",
+    "id": "oil",
     "name": "Oil"
   },
   {
-    "type": "puree",
+    "id": "puree",
     "name": "Purée"
   },
   {
-    "type": "shrub",
+    "id": "shrub",
     "name": "Shrub"
   },
   {
-    "type": "soda",
+    "id": "soda",
     "name": "Soda"
   },
   {
-    "type": "spice",
+    "id": "spice",
     "name": "Spice"
   },
   {
-    "type": "sugar",
+    "id": "sugar",
     "name": "Sugar"
   },
   {
-    "type": "syrup",
+    "id": "syrup",
     "name": "Syrup"
   },
   {
-    "type": "tea",
+    "id": "tea",
     "name": "Tea"
   },
   {
-    "type": "vegetable",
+    "id": "vegetable",
     "name": "Vegetable"
   },
   {
-    "type": "water",
+    "id": "water",
     "name": "Water"
   },
   {
-    "type": "agave",
-    "name": "Agave"
+    "id": "agave",
+    "name": "Agave",
+    "type": "spirit"
   },
   {
-    "type": "beer",
-    "name": "Beer"
+    "id": "beer",
+    "name": "Beer",
+    "type": "beerWine"
   },
   {
-    "type": "bitters",
-    "name": "Bitters"
+    "id": "bitters",
+    "name": "Bitters",
+    "type": "bitters"
   },
   {
-    "type": "cane",
-    "name": "Cane"
+    "id": "cane",
+    "name": "Cane",
+    "type": "spirit"
   },
   {
-    "type": "fortifiedwine",
-    "name": "Fortified wine"
+    "id": "fortifiedwine",
+    "name": "Fortified wine",
+    "type": "spirit"
   },
   {
-    "type": "brandy",
-    "name": "Brandy"
+    "id": "brandy",
+    "name": "Brandy",
+    "type": "spirit"
   },
   {
-    "type": "grain",
-    "name": "Grain"
+    "id": "grain",
+    "name": "Grain",
+    "type": "spirit"
   },
   {
-    "type": "liqueur",
-    "name": "Liqueur"
+    "id": "liqueur",
+    "name": "Liqueur",
+    "type": "spirit"
   },
   {
-    "type": "wine",
-    "name": "Wine"
+    "id": "wine",
+    "name": "Wine",
+    "type": "beerWine"
   }
 ]

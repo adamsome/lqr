@@ -44,6 +44,9 @@ module.exports = {
         md: 'calc(var(--radius) - 2px)',
         sm: 'calc(var(--radius) - 4px)',
       },
+      spacing: {
+        18: '4.5rem',
+      },
     },
   },
   plugins: [require('tailwindcss-animate')],

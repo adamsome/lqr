@@ -3,7 +3,8 @@
 import { ColumnDef } from '@tanstack/react-table'
 import { MoreHorizontal } from 'lucide-react'
 
-import { IngredientCategoryCell } from '@/components/ingredients/ingredient-category-cell'
+import { CategoryCell } from '@/components/ingredients/category-cell'
+import { CategoryFilter } from '@/components/ingredients/category-filter'
 import { Button } from '@/components/ui/button'
 import { Checkbox } from '@/components/ui/checkbox'
 import { DataTableColumnHeader } from '@/components/ui/data-table-column-header'
@@ -15,8 +16,10 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu'
-import { AgingDefs, ProductionMethodDefs } from '@/lib/consts'
-import { Ingredient } from '@/lib/ingredient'
+import { AGING_DICT, PRODUCTION_METHOD_DICT } from '@/lib/consts'
+import { getIngredientAncestorText } from '@/lib/get-ingredient-ancestor-text'
+import { Ingredient } from '@/lib/types'
+import { getHierarchicalFilterItem } from '@/lib/hierarchical-filter'
 
 export const columns: ColumnDef<Ingredient>[] = [
   {
@@ -46,22 +49,31 @@ export const columns: ColumnDef<Ingredient>[] = [
   },
   {
     accessorKey: 'ancestors',
-    // accessorFn: (row) => getIngredientAncestorText(row),
+    accessorFn: (row) => getIngredientAncestorText(row),
     header: ({ column }) => (
-      <DataTableColumnHeader column={column}>Category</DataTableColumnHeader>
+      <DataTableColumnHeader
+        column={column}
+        filter={<CategoryFilter column={column} />}
+      >
+        Category
+      </DataTableColumnHeader>
     ),
-    cell: ({ row }) => <IngredientCategoryCell ingredient={row.original} />,
-    filterFn: (row, columnID, value) => {
-      const x = row.getValue('ancestors')
-      console.log('x', x, value)
-      return true
+    cell: ({ row }) => <CategoryCell ingredient={row.original} />,
+    filterFn: (row, _, value, add) => {
+      // console.log('fval', value)
+      if (!value) return true
+      const { ancestors, category } = row.original
+      const path = [category as string].concat(ancestors.map((a) => a.id))
+      const item = getHierarchicalFilterItem(value, path)
+      // console.log('x', path, item)
+      return item?.checked === true
     },
   },
   {
     accessorKey: 'productionMethod',
     accessorFn: (row) =>
       row.productionMethod
-        ? ProductionMethodDefs[row.productionMethod].name
+        ? PRODUCTION_METHOD_DICT[row.productionMethod].name
         : '',
     header: ({ column }) => (
       <DataTableColumnHeader column={column}>Method</DataTableColumnHeader>
@@ -69,7 +81,7 @@ export const columns: ColumnDef<Ingredient>[] = [
   },
   {
     accessorKey: 'aging',
-    accessorFn: (row) => (row.aging ? AgingDefs[row.aging].name : ''),
+    accessorFn: (row) => (row.aging ? AGING_DICT[row.aging].name : ''),
     header: ({ column }) => (
       <DataTableColumnHeader column={column}>Aging</DataTableColumnHeader>
     ),

@@ -18,13 +18,35 @@ export function parseCategories() {
 
   const categoryDict = {}
   const ingredientDict = {}
+  const tree = {
+    id: 'all',
+    checked: true,
+    childIDs: [],
+    children: {},
+  }
 
   categories.forEach((i) => {
     const [supertype, category, name1, name2, name3] = i
     if (!category || !name1) return
     const categoryType = slugify(category)
+    let type = supertype
+    if (category === 'Beer' || category === 'Wine') type = 'beerWine'
+    else if (category === 'Bitters') type = 'bitters'
+    else if (type === 'Spirit') type = 'spirit'
+    else type = undefined
     if (!categoryDict[categoryType]) {
-      categoryDict[categoryType] = { type: categoryType, name: category }
+      categoryDict[categoryType] = {
+        id: categoryType,
+        name: category,
+        type,
+      }
+      tree.childIDs.push(categoryType)
+      tree.children[categoryType] = {
+        id: categoryType,
+        checked: true,
+        childIDs: [],
+        children: {},
+      }
     }
     const id1 = `${categoryType}_${slugify(name1)}`
     if (!ingredientDict[id1]) {
@@ -32,6 +54,13 @@ export function parseCategories() {
         id: id1,
         name: name1,
         category: categoryType,
+      }
+      tree.children[categoryType].childIDs.push(id1)
+      tree.children[categoryType].children[id1] = {
+        id: id1,
+        checked: true,
+        childIDs: [],
+        children: {},
       }
     }
     if (name2) {
@@ -44,6 +73,14 @@ export function parseCategories() {
           parent: id1,
         }
         ingredientDict[id1].hasChildren = true
+        const tree1 = tree.children[categoryType].children[id1]
+        tree1.childIDs.push(id2)
+        tree1.children[id2] = {
+          id: id2,
+          checked: true,
+          childIDs: [],
+          children: {},
+        }
       }
       if (name3) {
         const id3 = `${id2}_${slugify(name3)}`
@@ -55,14 +92,21 @@ export function parseCategories() {
             parent: id2,
           }
           ingredientDict[id2].hasChildren = true
+          const tree1 = tree.children[categoryType].children[id1]
+          const tree2 = tree1.children[id2]
+          tree2.childIDs.push(id3)
+          tree2.children[id3] = {
+            id: id3,
+            checked: true,
+            childIDs: [],
+            children: {},
+          }
         }
       }
     }
   })
 
-  const categoryList = Object.keys(categoryDict).map(
-    (type) => categoryDict[type]
-  )
+  const categoryList = Object.keys(categoryDict).map((id) => categoryDict[id])
   const ingredientList = Object.keys(ingredientDict).map(
     (id) => ingredientDict[id]
   )
@@ -77,22 +121,33 @@ export function parseCategories() {
     JSON.stringify(ingredientList, null, 2),
     { encoding: 'utf8' }
   )
+  writeFileSync(
+    join(dir, '../public/data/category-filter.json'),
+    JSON.stringify(tree, null, 2),
+    { encoding: 'utf8' }
+  )
 
-  const ingredientCategories = categoryList.map((c) => `  | '${c.type}'`)
-  const ingredientCategoryDefs = categoryList.map(
-    (c) => `  ${c.type}: { name: '${c.name}' },`
+  const ingredientCategories = categoryList.map((c) => `  | '${c.id}'`)
+  const ingredientCategoryDefs = categoryList.map((c) =>
+    c.type
+      ? `  ${c.id}: { name: '${c.name}', type: '${c.type}' },`
+      : `  ${c.id}: { name: '${c.name}' },`
   )
   let consts = []
   consts.push(`// Auto-generated: Do not modify.`)
   consts.push(``)
-  consts.push(`import { HasName } from '@/lib/types'`)
+  consts.push(`type HasName = {`)
+  consts.push(`  name: string`)
+  consts.push(`}`)
   consts.push(``)
-  consts.push(`export type IngredientCategory =`)
+  consts.push(`type CategoryDef = HasName & {`)
+  consts.push(`  type?: 'spirit' | 'beerWine' | 'bitters'`)
+  consts.push(`}`)
+  consts.push(``)
+  consts.push(`export type Category =`)
   consts.push(...ingredientCategories)
   consts.push(``)
-  consts.push(
-    `export const IngredientCategoryDefs: Record<IngredientCategory, HasName> = {`
-  )
+  consts.push(`export const CATEGORY_DICT: Record<Category, CategoryDef> = {`)
   consts.push(...ingredientCategoryDefs)
   consts.push(`}`)
   consts.push(``)

@@ -1,9 +1,9 @@
-import { IngredientCategory, IngredientCategoryDefs } from '@/lib/consts'
-import { Ingredient } from '@/lib/ingredient'
-import { Fragment } from 'react'
+import { Category, CATEGORY_DICT } from '@/lib/consts'
+import { Ingredient } from '@/lib/types'
 import { cn } from '@/lib/utils'
+import { Fragment } from 'react'
 
-const DIM: Partial<Record<IngredientCategory, boolean>> = {
+const DIM: Partial<Record<Category, boolean>> = {
   agave: true,
   cane: true,
   fortifiedwine: true,
@@ -31,7 +31,7 @@ type Props = {
   ingredient: Ingredient
 }
 
-export function IngredientCategoryCell({ ingredient }: Props) {
+export function CategoryCell({ ingredient }: Props) {
   const { category, ancestors } = ingredient
   const onlyIndex = ancestors.findLastIndex((a) => ONLY[a.id])
   return (
@@ -41,7 +41,7 @@ export function IngredientCategoryCell({ ingredient }: Props) {
           'text-muted-foreground': onlyIndex >= 0 || DIM[category],
         })}
       >
-        {IngredientCategoryDefs[category].name}
+        {CATEGORY_DICT[category].name}
       </span>
       <span>{', '}</span>
       {ancestors.map((ancestor, i) => (

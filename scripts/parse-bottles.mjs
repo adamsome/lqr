@@ -59,7 +59,7 @@ export function parseBottles() {
   const categoriesJson = readFileSync(categoriesJsonPath, 'utf-8')
   const categories = JSON.parse(categoriesJson)
   const categoryDict = categories.reduce((acc, it) => {
-    acc[it.type] = it
+    acc[it.id] = it
     return acc
   }, {})
 
@@ -127,7 +127,7 @@ export function parseBottles() {
       const id = slugify(name, { replaceWith: '_' })
       const categoryType = slugify(bottleType)
       const category =
-        categoryDict[categoryType]?.type ?? categoryIDMap[categoryType]
+        categoryDict[categoryType]?.id ?? categoryIDMap[categoryType]
 
       if (!category) console.log(`No category '${categoryType}' for '${id}'`)
 
@@ -224,7 +224,7 @@ export function parseBottles() {
   // consts.push(...productionMethodList.map((p) => `  | '${p.type}'`))
   consts.push(``)
   consts.push(
-    `export const ProductionMethodDefs: Record<ProductionMethod, HasName> = {`
+    `export const PRODUCTION_METHOD_DICT: Record<ProductionMethod, HasName> = {`
   )
   consts.push(...productionMethodDefs)
   consts.push(`}`)
@@ -238,7 +238,7 @@ export function parseBottles() {
   )
   // consts.push(...agingList.map((a) => `  | '${a.type}'`))
   consts.push(``)
-  consts.push(`export const AgingDefs: Record<Aging, HasName> = {`)
+  consts.push(`export const AGING_DICT: Record<Aging, HasName> = {`)
   consts.push(...agingDefs)
   consts.push(`}`)
   consts.push(``)

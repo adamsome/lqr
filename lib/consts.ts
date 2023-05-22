@@ -1,8 +1,14 @@
 // Auto-generated: Do not modify.
 
-import { HasName } from '@/lib/types'
+type HasName = {
+  name: string
+}
 
-export type IngredientCategory =
+type CategoryDef = HasName & {
+  type?: 'spirit' | 'beerWine' | 'bitters'
+}
+
+export type Category =
   | 'acid'
   | 'brine'
   | 'cheese'
@@ -40,7 +46,7 @@ export type IngredientCategory =
   | 'liqueur'
   | 'wine'
 
-export const IngredientCategoryDefs: Record<IngredientCategory, HasName> = {
+export const CATEGORY_DICT: Record<Category, CategoryDef> = {
   acid: { name: 'Acid' },
   brine: { name: 'Brine' },
   cheese: { name: 'Cheese' },
@@ -68,20 +74,20 @@ export const IngredientCategoryDefs: Record<IngredientCategory, HasName> = {
   tea: { name: 'Tea' },
   vegetable: { name: 'Vegetable' },
   water: { name: 'Water' },
-  agave: { name: 'Agave' },
-  beer: { name: 'Beer' },
-  bitters: { name: 'Bitters' },
-  cane: { name: 'Cane' },
-  fortifiedwine: { name: 'Fortified wine' },
-  brandy: { name: 'Brandy' },
-  grain: { name: 'Grain' },
-  liqueur: { name: 'Liqueur' },
-  wine: { name: 'Wine' },
+  agave: { name: 'Agave', type: 'spirit' },
+  beer: { name: 'Beer', type: 'beerWine' },
+  bitters: { name: 'Bitters', type: 'bitters' },
+  cane: { name: 'Cane', type: 'spirit' },
+  fortifiedwine: { name: 'Fortified wine', type: 'spirit' },
+  brandy: { name: 'Brandy', type: 'spirit' },
+  grain: { name: 'Grain', type: 'spirit' },
+  liqueur: { name: 'Liqueur', type: 'spirit' },
+  wine: { name: 'Wine', type: 'beerWine' },
 }
 
 export type ProductionMethod = 'column' | 'pot' | 'blended' | 'coffey'
 
-export const ProductionMethodDefs: Record<ProductionMethod, HasName> = {
+export const PRODUCTION_METHOD_DICT: Record<ProductionMethod, HasName> = {
   column: { name: 'Column Still' },
   pot: { name: 'Pot Still' },
   blended: { name: 'Blended' },
@@ -90,7 +96,7 @@ export const ProductionMethodDefs: Record<ProductionMethod, HasName> = {
 
 export type Aging = 'none' | 'light' | 'medium' | 'long'
 
-export const AgingDefs: Record<Aging, HasName> = {
+export const AGING_DICT: Record<Aging, HasName> = {
   none: { name: 'Unaged' },
   light: { name: 'Lightly Aged' },
   medium: { name: 'Aged' },
