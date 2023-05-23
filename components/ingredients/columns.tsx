@@ -1,21 +1,13 @@
 'use client'
 
 import { ColumnDef } from '@tanstack/react-table'
-import { MoreHorizontal } from 'lucide-react'
 
+import { ActionCell } from '@/components/ingredients/action-cell'
 import { CategoryCell } from '@/components/ingredients/category-cell'
 import { CategoryFilter } from '@/components/ingredients/category-filter'
+import { StockCell } from '@/components/ingredients/stock-cell'
 import { StockIcon } from '@/components/ingredients/stock-icon'
-import { Button } from '@/components/ui/button'
 import { DataTableColumnHeader } from '@/components/ui/data-table-column-header'
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu'
 import { AGING_DICT, PRODUCTION_METHOD_DICT } from '@/lib/consts'
 import { getIngredientAncestorText } from '@/lib/get-ingredient-ancestor-text'
 import { getHierarchicalFilterItem } from '@/lib/hierarchical-filter'
@@ -30,7 +22,9 @@ export const columns: ColumnDef<Ingredient>[] = [
         <StockIcon header />
       </DataTableColumnHeader>
     ),
-    cell: ({ row }) => <StockIcon stock={row.getValue('stock')} />,
+    cell: ({ row }) => (
+      <StockCell ingredientID={row.original.id} stock={row.getValue('stock')} />
+    ),
   },
   {
     accessorKey: 'name',
@@ -51,12 +45,10 @@ export const columns: ColumnDef<Ingredient>[] = [
     ),
     cell: ({ row }) => <CategoryCell ingredient={row.original} />,
     filterFn: (row, _, value, add) => {
-      // console.log('fval', value)
       if (!value) return true
       const { ancestors, category } = row.original
       const path = [category as string].concat(ancestors.map((a) => a.id))
       const item = getHierarchicalFilterItem(value, path)
-      // console.log('x', path, item)
       return item?.checked === true
     },
   },
@@ -85,31 +77,6 @@ export const columns: ColumnDef<Ingredient>[] = [
   },
   {
     id: 'actions',
-    cell: ({ row }) => {
-      const payment = row.original
-      return (
-        <div className="flex w-full justify-end">
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <Button variant="ghost" className="h-8 w-8 p-0">
-                <span className="sr-only">Open menu</span>
-                <MoreHorizontal className="h-4 w-4" />
-              </Button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent align="end">
-              <DropdownMenuLabel>Actions</DropdownMenuLabel>
-              <DropdownMenuItem
-                onClick={() => navigator.clipboard.writeText(payment.id)}
-              >
-                Copy payment ID
-              </DropdownMenuItem>
-              <DropdownMenuSeparator />
-              <DropdownMenuItem>View customer</DropdownMenuItem>
-              <DropdownMenuItem>View payment details</DropdownMenuItem>
-            </DropdownMenuContent>
-          </DropdownMenu>
-        </div>
-      )
-    },
+    cell: ({ row }) => <ActionCell ingredient={row.original} />,
   },
 ]

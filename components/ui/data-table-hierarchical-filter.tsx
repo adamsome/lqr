@@ -29,7 +29,6 @@ export function DataTableHierarchicalFilter<TData>({
 }: Props<TData>) {
   const value = column.getFilterValue() as HierarchicalFilter
   const filter = value ?? defaultValue
-  console.log('filter', value, defaultValue)
 
   function handleCheckedChange(path: string[], checked: CheckedState) {
     column.setFilterValue(
