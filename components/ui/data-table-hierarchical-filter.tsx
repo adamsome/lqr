@@ -14,7 +14,7 @@ import {
   HierarchicalFilter,
   updateHierarchicalFilter,
 } from '@/lib/hierarchical-filter'
-import { cn } from '@/lib/utils'
+import { cn } from '@/lib/util/cn'
 
 type Props<TData> = {
   column: Column<TData, unknown>

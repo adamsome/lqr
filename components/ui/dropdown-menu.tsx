@@ -9,7 +9,7 @@ import {
   forwardRef,
 } from 'react'
 
-import { cn } from '@/lib/utils'
+import { cn } from '@/lib/util/cn'
 
 const DropdownMenu = DropdownMenuPrimitive.Root
 const DropdownMenuTrigger = DropdownMenuPrimitive.Trigger

@@ -5,7 +5,7 @@ import { Nav } from '@/components/nav'
 import { ModeToggle } from '@/components/theme-toggle'
 import { buttonVariants } from '@/components/ui/button'
 import { Container } from '@/components/ui/container'
-import { cn } from '@/lib/utils'
+import { cn } from '@/lib/util/cn'
 
 export function Header() {
   return (
