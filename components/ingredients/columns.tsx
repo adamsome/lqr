@@ -5,8 +5,8 @@ import { MoreHorizontal } from 'lucide-react'
 
 import { CategoryCell } from '@/components/ingredients/category-cell'
 import { CategoryFilter } from '@/components/ingredients/category-filter'
+import { StockIcon } from '@/components/ingredients/stock-icon'
 import { Button } from '@/components/ui/button'
-import { Checkbox } from '@/components/ui/checkbox'
 import { DataTableColumnHeader } from '@/components/ui/data-table-column-header'
 import {
   DropdownMenu,
@@ -18,28 +18,19 @@ import {
 } from '@/components/ui/dropdown-menu'
 import { AGING_DICT, PRODUCTION_METHOD_DICT } from '@/lib/consts'
 import { getIngredientAncestorText } from '@/lib/get-ingredient-ancestor-text'
-import { Ingredient } from '@/lib/types'
 import { getHierarchicalFilterItem } from '@/lib/hierarchical-filter'
+import { Ingredient } from '@/lib/types'
 
 export const columns: ColumnDef<Ingredient>[] = [
   {
-    id: 'select',
-    header: ({ table }) => (
-      <Checkbox
-        checked={table.getIsAllPageRowsSelected()}
-        onCheckedChange={(value) => table.toggleAllPageRowsSelected(!!value)}
-        aria-label="Select all"
-      />
+    accessorKey: 'stock',
+    accessorFn: (row) => row.stock ?? -1,
+    header: ({ column }) => (
+      <DataTableColumnHeader column={column}>
+        <StockIcon header />
+      </DataTableColumnHeader>
     ),
-    cell: ({ row }) => (
-      <Checkbox
-        checked={row.getIsSelected()}
-        onCheckedChange={(value) => row.toggleSelected(!!value)}
-        aria-label="Select row"
-      />
-    ),
-    enableSorting: false,
-    enableHiding: false,
+    cell: ({ row }) => <StockIcon stock={row.getValue('stock')} />,
   },
   {
     accessorKey: 'name',
