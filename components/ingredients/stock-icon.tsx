@@ -27,7 +27,7 @@ export function StockIcon({ stock = -1, header, fetching, onClick }: Props) {
   const low = state === 'low'
 
   function handleClick() {
-    onClick?.(getNextStock(stock))
+    !fetching && onClick?.(getNextStock(stock))
   }
 
   return (
@@ -37,6 +37,7 @@ export function StockIcon({ stock = -1, header, fetching, onClick }: Props) {
         '-mr-2 hover:bg-transparent': header,
         'animate-pulse': fetching,
       })}
+      disabled={fetching}
       onClick={handleClick}
     >
       <span className="sr-only">Change stock</span>
