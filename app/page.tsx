@@ -1,4 +1,6 @@
+import { promises as fs } from 'fs'
 import { OptionalId, OptionalUnlessRequiredId, WithId } from 'mongodb'
+import path from 'path'
 
 import {
   CategoryMeta,
@@ -13,29 +15,55 @@ import { connectToDatabase } from '@/lib/mongodb'
 import { createIngredientParser } from '@/lib/parse-ingredients'
 import { Ingredient, IngredientDef, User } from '@/lib/types'
 
-import baseIngredientsJson from '@/public/data/base-ingredients.json'
-import categoryFilterJson from '@/public/data/category-filter.json'
-import ingredientsJson from '@/public/data/ingredients.json'
+async function readData(dataPath: string) {
+  const data = await fs.readFile(path.join(process.cwd(), dataPath))
+  return data.toString()
+}
 
-async function getData(): Promise<
-  CategoryMeta & { ingredients: Ingredient[] }
+async function getBaseIngredients(): Promise<IngredientDef[]> {
+  return JSON.parse(await readData('public/data/base-ingredients.json'))
+}
+
+async function getIngredients(): Promise<IngredientDef[]> {
+  return JSON.parse(await readData('public/data/ingredients.json'))
+}
+
+async function getCategoryFilter(): Promise<HierarchicalFilter> {
+  return JSON.parse(await readData('public/data/category-filter.json'))
+}
+
+async function getUserIngredients(): Promise<
+  Record<string, Partial<IngredientDef>>
 > {
   const { db } = await connectToDatabase()
   const user = await db
     .collection<OptionalUnlessRequiredId<User>>('user')
     .findOne({ username: 'adamb' })
   if (user) {
-    delete (user as OptionalId<WithId<any>>)._id
+    delete (user as OptionalId<WithId<User>>)._id
   }
+  return user?.ingredients ?? {}
+}
+
+async function getData(): Promise<
+  CategoryMeta & { ingredients: Ingredient[] }
+> {
+  const [baseIngredients, ingredients, categoryFilter, userIngredients] =
+    await Promise.all([
+      getBaseIngredients(),
+      getIngredients(),
+      getCategoryFilter(),
+      getUserIngredients(),
+    ])
 
   const [baseIngredientDict, parseIngredient] = createIngredientParser(
-    baseIngredientsJson as IngredientDef[],
-    user?.ingredients ?? {}
+    baseIngredients,
+    userIngredients
   )
-  const ingredients = ingredientsJson as IngredientDef[]
+
   return {
     baseIngredientDict,
-    categoryFilter: categoryFilterJson as HierarchicalFilter,
+    categoryFilter,
     ingredients: ingredients.map(parseIngredient),
   }
 }

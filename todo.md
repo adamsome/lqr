@@ -1,6 +1,9 @@
 # TODO
 
-- Stock
+- Vercel
+- Recipes
+- Clerk
+- Stock filter
 - Buy priority
 - Rum categorization
 - Recipes
