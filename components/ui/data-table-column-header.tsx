@@ -2,20 +2,36 @@ import { Column } from '@tanstack/react-table'
 import { ArrowDown, ArrowUp } from 'lucide-react'
 import { HTMLAttributes, ReactNode } from 'react'
 
-import { cn } from '@/lib/util/cn'
+import {
+  TooltipContent,
+  Tooltip as TooltipRoot,
+  TooltipTrigger,
+} from '@/components/ui/tooltip'
+import { cn } from '@/lib/utils'
 
-type Props<TData, TValue> = HTMLAttributes<HTMLDivElement> & {
+type WrapperProps = {
   children: ReactNode
-  filter?: ReactNode
-  column: Column<TData, TValue>
   right?: boolean
 }
+
+type TooltipProps = {
+  children: ReactNode
+  tooltip?: ReactNode
+}
+
+type Props<TData, TValue> = HTMLAttributes<HTMLDivElement> &
+  WrapperProps &
+  TooltipProps & {
+    filter?: ReactNode
+    column: Column<TData, TValue>
+  }
 
 export function DataTableColumnHeader<TData, TValue>({
   children,
   className,
   filter,
   column,
+  tooltip,
   right,
 }: Props<TData, TValue>) {
   if (!column.getCanSort()) {
@@ -23,23 +39,47 @@ export function DataTableColumnHeader<TData, TValue>({
   }
 
   return (
+    <Wrapper right={right}>
+      <Tooltip tooltip={tooltip}>
+        <div
+          className="flex items-center gap-1"
+          onClick={() => column.toggleSorting(column.getIsSorted() === 'asc')}
+        >
+          {children}
+          {column.getIsSorted() === 'desc' ? (
+            <ArrowDown className="h-4 w-4" />
+          ) : column.getIsSorted() === 'asc' ? (
+            <ArrowUp className="h-4 w-4" />
+          ) : null}
+        </div>
+      </Tooltip>
+      {filter}
+    </Wrapper>
+  )
+}
+
+function Wrapper({ children, right }: WrapperProps) {
+  return (
     <div
-      className={cn('flex cursor-pointer items-center gap-1', {
+      className={cn('flex cursor-pointer items-center gap-2', {
         'justify-end': right,
       })}
     >
-      <div
-        className="flex cursor-pointer items-center gap-1"
-        onClick={() => column.toggleSorting(column.getIsSorted() === 'asc')}
-      >
-        {children}
-        {column.getIsSorted() === 'desc' ? (
-          <ArrowDown className="h-4 w-4" />
-        ) : column.getIsSorted() === 'asc' ? (
-          <ArrowUp className="h-4 w-4" />
-        ) : null}
-      </div>
-      {filter}
+      {children}
     </div>
+  )
+}
+
+export function Tooltip<TData, TValue>({ children, tooltip }: TooltipProps) {
+  if (!tooltip) {
+    return <>{children}</>
+  }
+  return (
+    <TooltipRoot>
+      <TooltipTrigger asChild>{children}</TooltipTrigger>
+      <TooltipContent>
+        <p>{tooltip}</p>
+      </TooltipContent>
+    </TooltipRoot>
   )
 }

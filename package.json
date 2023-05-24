@@ -20,6 +20,7 @@
     "@radix-ui/react-select": "^1.2.1",
     "@radix-ui/react-separator": "^1.0.2",
     "@radix-ui/react-slot": "^1.0.1",
+    "@radix-ui/react-tooltip": "^1.0.5",
     "@tanstack/react-table": "^8.9.1",
     "@types/node": "20.1.4",
     "@types/ramda": "^0.29.1",

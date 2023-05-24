@@ -4,9 +4,10 @@ import { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 
 import { Header } from '@/components/header'
-import { ThemeProvider } from '@/components/theme-provider'
-import { cn } from '@/lib/utils'
 import { TailwindIndicator } from '@/components/tailwind-indicator'
+import { ThemeProvider } from '@/components/theme-provider'
+import { TooltipProvider } from '@/components/ui/tooltip'
+import { cn } from '@/lib/utils'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -46,10 +47,12 @@ export default function RootLayout({ children }: Props) {
         )}
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <div className="relative flex min-h-screen flex-col">
-            <Header />
-            <div className="flex-1">{children}</div>
-          </div>
+          <TooltipProvider>
+            <div className="relative flex min-h-screen flex-col">
+              <Header />
+              <div className="flex-1">{children}</div>
+            </div>
+          </TooltipProvider>
           <TailwindIndicator />
         </ThemeProvider>
       </body>
