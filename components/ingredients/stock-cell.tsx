@@ -1,9 +1,7 @@
 'use client'
 
-import { StockIcon } from '@/components/ingredients/stock-icon'
+import { StockIconButton } from '@/components/ingredients/stock-icon-button'
 import { useRefresh } from '@/hooks/use-refresh'
-import { useRouter } from 'next/navigation'
-import { useEffect, useState } from 'react'
 
 type Props = {
   ingredientID: string
@@ -24,5 +22,7 @@ export function StockCell({ ingredientID, stock = -1 }: Props) {
     refresh()
   }
 
-  return <StockIcon stock={stock} fetching={fetching} onClick={handleClick} />
+  return (
+    <StockIconButton stock={stock} fetching={fetching} onClick={handleClick} />
+  )
 }

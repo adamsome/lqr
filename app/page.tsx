@@ -14,6 +14,7 @@ import { HierarchicalFilter } from '@/lib/hierarchical-filter'
 import { connectToDatabase } from '@/lib/mongodb'
 import { createIngredientParser } from '@/lib/parse-ingredients'
 import { Ingredient, IngredientDef, User } from '@/lib/types'
+import { Toolbar } from '@/components/ingredients/toolbar'
 
 async function readData(dataPath: string) {
   const data = await fs.readFile(path.join(process.cwd(), dataPath))
@@ -75,7 +76,7 @@ export default async function IndexPage() {
       <Container className="relative py-8">
         <section className="flex flex-col gap-4">
           <H1>Stock</H1>
-          <DataTable columns={columns} data={ingredients} />
+          <DataTable columns={columns} data={ingredients} Toolbar={Toolbar} />
         </section>
       </Container>
     </CategoryMetaProvider>

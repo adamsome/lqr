@@ -16,6 +16,7 @@ import {
 import { AGING_DICT, PRODUCTION_METHOD_DICT } from '@/lib/consts'
 import { getIngredientAncestorText } from '@/lib/get-ingredient-ancestor-text'
 import { hierarchicalFilterFn } from '@/lib/hierarchical-filter'
+import { getStockState } from '@/lib/stock'
 import { Ingredient } from '@/lib/types'
 
 function createFacetColumn<T, K extends keyof T & string>(
@@ -49,13 +50,17 @@ export const columns: Column<Ingredient>[] = [
     accessorKey: 'stock',
     accessorFn: (row) => row.stock ?? -1,
     header: ({ column }) => (
-      <DataTableColumnHeader column={column}>
-        <StockIcon header />
+      <DataTableColumnHeader column={column} tooltip="In Stock">
+        <div className="-mr-2 flex h-8 w-8 items-center justify-center">
+          <StockIcon header />
+        </div>
       </DataTableColumnHeader>
     ),
     cell: ({ row }) => (
       <StockCell ingredientID={row.original.id} stock={row.getValue('stock')} />
     ),
+    filterFn: (row, id, value) =>
+      value.includes(getStockState(row.getValue(id))),
   },
   {
     accessorKey: 'name',
