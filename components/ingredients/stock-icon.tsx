@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button'
-import { cn } from '@/lib/util/cn'
+import { cn } from '@/lib/utils'
 
 type Props = {
   stock?: number

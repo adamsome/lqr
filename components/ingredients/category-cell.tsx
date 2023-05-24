@@ -1,7 +1,8 @@
+import { Fragment } from 'react'
+
 import { Category, CATEGORY_DICT } from '@/lib/consts'
 import { Ingredient } from '@/lib/types'
-import { cn } from '@/lib/util/cn'
-import { Fragment } from 'react'
+import { cn } from '@/lib/utils'
 
 const DIM: Partial<Record<Category, boolean>> = {
   agave: true,

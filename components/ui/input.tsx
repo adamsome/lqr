@@ -1,6 +1,6 @@
 import { forwardRef } from 'react'
 
-import { cn } from '@/lib/util/cn'
+import { cn } from '@/lib/utils'
 
 export type Props = React.InputHTMLAttributes<HTMLInputElement>
 

@@ -70,6 +70,22 @@ export const columns: ColumnDef<Ingredient>[] = [
     ),
   },
   {
+    accessorKey: 'black',
+    accessorFn: (row) => (row.black ? 'Black' : ''),
+    header: ({ column }) => (
+      <DataTableColumnHeader column={column}>Black</DataTableColumnHeader>
+    ),
+  },
+  {
+    accessorKey: 'overproof',
+    accessorFn: (row) => (row.overproof ? 'OP' : ''),
+    header: ({ column }) => (
+      <DataTableColumnHeader column={column} title="Overproof">
+        OP
+      </DataTableColumnHeader>
+    ),
+  },
+  {
     accessorKey: 'origin',
     header: ({ column }) => (
       <DataTableColumnHeader column={column}>Origin</DataTableColumnHeader>

@@ -9,14 +9,13 @@ import { Container } from '@/components/ui/container'
 import { DataTable } from '@/components/ui/data-table'
 import { H1 } from '@/components/ui/h1'
 import { HierarchicalFilter } from '@/lib/hierarchical-filter'
+import { connectToDatabase } from '@/lib/mongodb'
 import { createIngredientParser } from '@/lib/parse-ingredients'
 import { Ingredient, IngredientDef, User } from '@/lib/types'
-import { connectToDatabase } from '@/lib/util/mongodb'
 
 import baseIngredientsJson from '@/public/data/base-ingredients.json'
 import categoryFilterJson from '@/public/data/category-filter.json'
 import ingredientsJson from '@/public/data/ingredients.json'
-import userIngredientsJson from '@/public/data/user-ingredients.json'
 
 async function getData(): Promise<
   CategoryMeta & { ingredients: Ingredient[] }

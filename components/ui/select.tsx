@@ -2,9 +2,9 @@
 
 import * as SelectPrimitive from '@radix-ui/react-select'
 import { Check, ChevronDown } from 'lucide-react'
-
-import { cn } from '@/lib/util/cn'
 import { ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react'
+
+import { cn } from '@/lib/utils'
 
 const Select = SelectPrimitive.Root
 

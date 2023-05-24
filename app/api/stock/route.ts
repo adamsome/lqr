@@ -1,5 +1,5 @@
+import { connectToDatabase } from '@/lib/mongodb'
 import { User } from '@/lib/types'
-import { connectToDatabase } from '@/lib/util/mongodb'
 import { OptionalUnlessRequiredId } from 'mongodb'
 import { NextRequest, NextResponse } from 'next/server'
 
