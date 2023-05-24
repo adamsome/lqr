@@ -5,9 +5,8 @@ import { NextRequest, NextResponse } from 'next/server'
 
 export async function PUT(req: NextRequest) {
   const { ingredientID, stock } = await req.json()
-  console.log('put', ingredientID, stock)
   const { db } = await connectToDatabase()
-  const user = await db
+  await db
     .collection<OptionalUnlessRequiredId<User>>('user')
     .updateOne(
       { username: 'adamb' },

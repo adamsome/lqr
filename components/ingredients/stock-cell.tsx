@@ -14,7 +14,6 @@ export function StockCell({ ingredientID, stock = -1 }: Props) {
   const { refresh, fetching } = useRefresh(stock)
 
   async function handleClick(stockToSet: number) {
-    console.log('click', ingredientID, stock)
     await fetch('/api/stock', {
       method: 'PUT',
       body: JSON.stringify({
