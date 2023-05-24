@@ -40,7 +40,11 @@ function createFacetColumn<T, K extends keyof T & string>(
   }
 }
 
-export const columns: ColumnDef<Ingredient>[] = [
+type Column<T> = ColumnDef<T> & {
+  className?: string
+}
+
+export const columns: Column<Ingredient>[] = [
   {
     accessorKey: 'stock',
     accessorFn: (row) => row.stock ?? -1,
@@ -98,5 +102,6 @@ export const columns: ColumnDef<Ingredient>[] = [
   {
     id: 'actions',
     cell: ({ row }) => <ActionCell ingredient={row.original} />,
+    className: 'pr-1',
   },
 ]

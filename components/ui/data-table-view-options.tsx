@@ -2,13 +2,14 @@
 
 import { DropdownMenuTrigger } from '@radix-ui/react-dropdown-menu'
 import { Table } from '@tanstack/react-table'
-import { SlidersHorizontal } from 'lucide-react'
+import { MoreHorizontal } from 'lucide-react'
 
 import { Button } from '@/components/ui/button'
 import {
   DropdownMenu,
   DropdownMenuCheckboxItem,
   DropdownMenuContent,
+  DropdownMenuItem,
   DropdownMenuLabel,
   DropdownMenuSeparator,
 } from '@/components/ui/dropdown-menu'
@@ -18,16 +19,20 @@ type Props<TData> = {
 }
 
 export function DataTableViewOptions<TData>({ table }: Props<TData>) {
+  function handleResetAll() {
+    table.resetColumnFilters()
+    table.resetGlobalFilter()
+    table.resetSorting()
+  }
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button
           variant="outline"
           size="sm"
-          className="ml-auto hidden h-8 lg:flex"
+          className="ml-auto hidden h-10 lg:flex"
         >
-          <SlidersHorizontal className="mr-2 h-4 w-4" />
-          View
+          <MoreHorizontal className="h-4 w-4" />
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end" className="w-[150px]">
@@ -51,6 +56,8 @@ export function DataTableViewOptions<TData>({ table }: Props<TData>) {
               </DropdownMenuCheckboxItem>
             )
           })}
+        <DropdownMenuSeparator />
+        <DropdownMenuItem onClick={handleResetAll}>Reset All</DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
   )
