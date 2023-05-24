@@ -1,4 +1,5 @@
 import { CheckedState } from '@radix-ui/react-checkbox'
+import { FilterFn, Row } from '@tanstack/react-table'
 import { curry } from 'ramda'
 
 export interface HierarchicalFilter {
@@ -19,6 +20,15 @@ export const updateHierarchicalFilter = curry(
     updateAncestors(root, path)
   }
 )
+
+export const hierarchicalFilterFn =
+  <TData>(pathFn: (row: Row<TData>) => string[]): FilterFn<TData> =>
+  (row, _, filterValue) => {
+    if (!filterValue) return true
+    const path = pathFn(row)
+    const item = getHierarchicalFilterItem(filterValue, path)
+    return item?.checked === true
+  }
 
 function setChecked(checked: CheckedState, item?: HierarchicalFilter) {
   if (!item) return

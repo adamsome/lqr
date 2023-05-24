@@ -1,5 +1,4 @@
 import { Aging, Category, ProductionMethod } from '@/lib/consts'
-import { CheckedState } from '@radix-ui/react-checkbox'
 
 export interface IngredientDef {
   id: string
@@ -9,6 +8,8 @@ export interface IngredientDef {
   parent?: string
   productionMethod?: ProductionMethod
   aging?: Aging
+  black?: boolean
+  overproof?: boolean
   origin?: string
   originTerritory?: string
   stock?: number

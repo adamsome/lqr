@@ -40,7 +40,11 @@ export function DataTableHierarchicalFilter<TData>({
 
   return (
     <Popover modal={true}>
-      <PopoverTrigger className="m-[calc(-1*theme(spacing.1))] p-1">
+      <PopoverTrigger
+        className={cn('m-[calc(-1*theme(spacing.1))] p-1', {
+          'text-accent-foreground': value,
+        })}
+      >
         <ListFilter size={16} />
       </PopoverTrigger>
       <PopoverContent

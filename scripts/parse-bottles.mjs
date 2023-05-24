@@ -188,6 +188,10 @@ export function parseBottles() {
         parent,
         productionMethod: productionMethodType,
         aging: agingType,
+        black: String(style).toLowerCase().includes('black') ? true : undefined,
+        overproof: String(substyle).toLowerCase().includes('overproof')
+          ? true
+          : undefined,
         origin: originParts[1] ?? originParts[0],
         originTerritory: originParts[1] ? originParts[0] : undefined,
         references: references ? references.split(', ') : undefined,

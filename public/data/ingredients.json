@@ -1996,6 +1996,7 @@
     "category": "cane",
     "parent": "cane_rum",
     "productionMethod": "pot",
+    "black": true,
     "origin": "Jamaica"
   },
   {
@@ -2005,6 +2006,7 @@
     "category": "cane",
     "parent": "cane_rum",
     "productionMethod": "blended",
+    "black": true,
     "origin": "Jamaica"
   },
   {
@@ -2014,6 +2016,7 @@
     "category": "cane",
     "parent": "cane_rum",
     "productionMethod": "blended",
+    "black": true,
     "origin": "US Virgin Islands",
     "references": [
       "D+C: Codex",
@@ -2027,6 +2030,7 @@
     "category": "cane",
     "parent": "cane_rum",
     "productionMethod": "blended",
+    "black": true,
     "origin": "Regional Blend",
     "references": [
       "D+C: Codex",
@@ -2040,6 +2044,7 @@
     "category": "cane",
     "parent": "cane_rum",
     "productionMethod": "blended",
+    "black": true,
     "origin": "Guyana"
   },
   {
@@ -2049,6 +2054,7 @@
     "category": "cane",
     "parent": "cane_rum",
     "productionMethod": "blended",
+    "black": true,
     "origin": "Jamaica"
   },
   {
@@ -2058,6 +2064,7 @@
     "category": "cane",
     "parent": "cane_rum",
     "productionMethod": "blended",
+    "black": true,
     "origin": "Guyana"
   },
   {
@@ -2067,6 +2074,7 @@
     "category": "cane",
     "parent": "cane_rum",
     "productionMethod": "blended",
+    "black": true,
     "origin": "Venezuela"
   },
   {
@@ -2076,6 +2084,7 @@
     "category": "cane",
     "parent": "cane_rum",
     "productionMethod": "blended",
+    "black": true,
     "origin": "Jamaica"
   },
   {
@@ -2085,6 +2094,7 @@
     "category": "cane",
     "parent": "cane_rum",
     "productionMethod": "blended",
+    "black": true,
     "origin": "Jamaica"
   },
   {
@@ -2094,6 +2104,7 @@
     "category": "cane",
     "parent": "cane_rum",
     "productionMethod": "blended",
+    "black": true,
     "origin": "Guyana"
   },
   {
@@ -2103,6 +2114,8 @@
     "category": "cane",
     "parent": "cane_rum",
     "productionMethod": "blended",
+    "black": true,
+    "overproof": true,
     "origin": "Guyana",
     "references": [
       "Suderman"
@@ -2115,6 +2128,8 @@
     "category": "cane",
     "parent": "cane_rum",
     "productionMethod": "blended",
+    "black": true,
+    "overproof": true,
     "origin": "Guyana"
   },
   {
@@ -2124,6 +2139,8 @@
     "category": "cane",
     "parent": "cane_rum",
     "productionMethod": "blended",
+    "black": true,
+    "overproof": true,
     "origin": "Regional Blend",
     "references": [
       "D+C: Codex"
