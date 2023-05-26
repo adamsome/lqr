@@ -20,7 +20,7 @@ export function parseCategories() {
   const ingredientDict = {}
   const tree = {
     id: 'all',
-    checked: true,
+    checked: false,
     childIDs: [],
     children: {},
   }
@@ -43,7 +43,7 @@ export function parseCategories() {
       tree.childIDs.push(categoryType)
       tree.children[categoryType] = {
         id: categoryType,
-        checked: true,
+        checked: false,
         childIDs: [],
         children: {},
       }
@@ -58,7 +58,7 @@ export function parseCategories() {
       tree.children[categoryType].childIDs.push(id1)
       tree.children[categoryType].children[id1] = {
         id: id1,
-        checked: true,
+        checked: false,
         childIDs: [],
         children: {},
       }
@@ -77,7 +77,7 @@ export function parseCategories() {
         tree1.childIDs.push(id2)
         tree1.children[id2] = {
           id: id2,
-          checked: true,
+          checked: false,
           childIDs: [],
           children: {},
         }
@@ -97,7 +97,7 @@ export function parseCategories() {
           tree2.childIDs.push(id3)
           tree2.children[id3] = {
             id: id3,
-            checked: true,
+            checked: false,
             childIDs: [],
             children: {},
           }

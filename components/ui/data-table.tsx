@@ -29,20 +29,29 @@ import {
   TableRow,
 } from '@/components/ui/table'
 
+export type DataTableToolbarProps<TData> = {
+  table: TableType<TData>
+  hideColumns?: string[]
+}
+
 type Props<TData, TValue> = {
   columns: ColumnDef<TData, TValue>[]
   data: TData[]
-  Toolbar?: (props: { table: TableType<TData> }) => JSX.Element | null
+  hideColumns?: string[]
+  Toolbar?: (props: DataTableToolbarProps<TData>) => JSX.Element | null
 }
 
 export function DataTable<TData, TValue>({
   columns,
   data,
+  hideColumns = [],
   Toolbar,
 }: Props<TData, TValue>) {
   const [sorting, setSorting] = useState<SortingState>([])
   const [columnFilters, setColumnFilters] = useState<ColumnFiltersState>([])
-  const [columnVisibility, setColumnVisibility] = useState<VisibilityState>({})
+  const [columnVisibility, setColumnVisibility] = useState<VisibilityState>(
+    hideColumns.reduce((acc, id) => ({ ...acc, [id]: false }), {})
+  )
   const [rowSelection, setRowSelection] = useState({})
 
   const table = useReactTable({
@@ -74,7 +83,7 @@ export function DataTable<TData, TValue>({
 
   return (
     <div className="flex flex-col gap-4">
-      {Toolbar && <Toolbar table={table} />}
+      {Toolbar && <Toolbar table={table} hideColumns={hideColumns} />}
       <div className="rounded-md border">
         <Table>
           <TableHeader>

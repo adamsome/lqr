@@ -1,18 +1,23 @@
 'use client'
 
-import { Table } from '@tanstack/react-table'
 import { X } from 'lucide-react'
+import { useCallback, useMemo } from 'react'
 
+import { useCategoryMeta } from '@/components/category-meta-provider'
 import { StockIcon as BaseStockIcon } from '@/components/ingredients/stock-icon'
 import { Button } from '@/components/ui/button'
+import { DataTableToolbarProps } from '@/components/ui/data-table'
 import { DataTableColumnFilterInput } from '@/components/ui/data-table-column-filter-input'
 import {
-  DataTableFacetedFilter,
+  DataTableFacetFilterButton,
   DataTableFacetedFilterItem,
-} from '@/components/ui/data-table-faceted-filter'
+} from '@/components/ui/data-table-facet-filter-button'
+import { DataTableHierarchicalFacetFilterButton } from '@/components/ui/data-table-hierarchical-facet-filter-button'
 import { DataTableViewOptions } from '@/components/ui/data-table-view-options'
-import { Ingredient } from '@/lib/types'
+import { CATEGORY_DICT, Category } from '@/lib/consts'
+import { HierarchicalFilter } from '@/lib/hierarchical-filter'
 import { StockState, getStockState } from '@/lib/stock'
+import { Ingredient } from '@/lib/types'
 
 function StockIcon(props: { stock: StockState }) {
   return (
@@ -38,11 +43,43 @@ function transformStockFacets(facets: Map<any, number>) {
   return result
 }
 
-type Props = {
-  table: Table<Ingredient>
+function transformCategoryFacets(facets: Map<any, number>) {
+  const result = new Map<string, number>()
+  facets.forEach((count, rawIDs) => {
+    const ids = String(rawIDs).split('|')
+    ids.forEach((id) => {
+      const curr = result.get(id) ?? 0
+      result.set(id, curr + count)
+    })
+  })
+  return result
 }
 
-export function Toolbar({ table }: Props) {
+type Props = DataTableToolbarProps<Ingredient>
+
+export function Toolbar({ table, hideColumns }: Props) {
+  const { baseIngredientDict, categoryFilter: root } = useCategoryMeta()
+
+  const categoryRoot = useMemo(() => {
+    const childIDs = root.childIDs.filter(
+      (id) => CATEGORY_DICT[id as Category].type === 'spirit'
+    )
+    const children = childIDs.reduce((acc, id) => {
+      acc[id] = root.children[id]
+      return acc
+    }, {} as HierarchicalFilter['children'])
+    return { ...root, childIDs, children }
+  }, [root])
+
+  const getName = useCallback(
+    (path: string[]) => {
+      if (path.length > 1)
+        return baseIngredientDict[path[path.length - 1]]?.name
+      if (path.length === 1) return CATEGORY_DICT[path[0] as Category].name
+    },
+    [baseIngredientDict]
+  )
+
   const isFiltered =
     table.getPreFilteredRowModel().rows.length >
     table.getFilteredRowModel().rows.length
@@ -56,14 +93,21 @@ export function Toolbar({ table }: Props) {
           table={table}
         />
         {table.getColumn('stock') && (
-          <DataTableFacetedFilter
+          <DataTableFacetFilterButton
             column={table.getColumn('stock')}
             title="In Stock"
             icon={<StockIcon stock="full" />}
-            options={stock}
+            items={stock}
             transformFacetsFn={transformStockFacets}
           />
         )}
+        <DataTableHierarchicalFacetFilterButton
+          column={table.getColumn('ancestors')}
+          title="Category"
+          root={categoryRoot}
+          getName={getName}
+          transformFacetsFn={transformCategoryFacets}
+        />
         {isFiltered && (
           <Button
             variant="ghost"
@@ -75,7 +119,7 @@ export function Toolbar({ table }: Props) {
           </Button>
         )}
       </div>
-      <DataTableViewOptions table={table} />
+      <DataTableViewOptions table={table} hideColumns={hideColumns} />
     </div>
   )
 }

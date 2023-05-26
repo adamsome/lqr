@@ -1,6 +1,6 @@
 {
   "id": "all",
-  "checked": true,
+  "checked": false,
   "childIDs": [
     "acid",
     "brine",
@@ -42,7 +42,7 @@
   "children": {
     "acid": {
       "id": "acid",
-      "checked": true,
+      "checked": false,
       "childIDs": [
         "acid_champagne",
         "acid_citric",
@@ -54,37 +54,37 @@
       "children": {
         "acid_champagne": {
           "id": "acid_champagne",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "acid_citric": {
           "id": "acid_citric",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "acid_lactic": {
           "id": "acid_lactic",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "acid_lime": {
           "id": "acid_lime",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "acid_malic": {
           "id": "acid_malic",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "acid_phosphate": {
           "id": "acid_phosphate",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         }
@@ -92,7 +92,7 @@
     },
     "brine": {
       "id": "brine",
-      "checked": true,
+      "checked": false,
       "childIDs": [
         "brine_carrot",
         "brine_cucumber",
@@ -103,31 +103,31 @@
       "children": {
         "brine_carrot": {
           "id": "brine_carrot",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "brine_cucumber": {
           "id": "brine_cucumber",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "brine_japanese": {
           "id": "brine_japanese",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "brine_radish": {
           "id": "brine_radish",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "brine_tomato": {
           "id": "brine_tomato",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         }
@@ -135,14 +135,14 @@
     },
     "cheese": {
       "id": "cheese",
-      "checked": true,
+      "checked": false,
       "childIDs": [
         "cheese_mascarpone"
       ],
       "children": {
         "cheese_mascarpone": {
           "id": "cheese_mascarpone",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         }
@@ -150,14 +150,14 @@
     },
     "chocolate": {
       "id": "chocolate",
-      "checked": true,
+      "checked": false,
       "childIDs": [
         "chocolate_dark"
       ],
       "children": {
         "chocolate_dark": {
           "id": "chocolate_dark",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         }
@@ -165,7 +165,7 @@
     },
     "cider": {
       "id": "cider",
-      "checked": true,
+      "checked": false,
       "childIDs": [
         "cider_apple",
         "cider_pear"
@@ -173,13 +173,13 @@
       "children": {
         "cider_apple": {
           "id": "cider_apple",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "cider_pear": {
           "id": "cider_pear",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         }
@@ -187,7 +187,7 @@
     },
     "coffee": {
       "id": "coffee",
-      "checked": true,
+      "checked": false,
       "childIDs": [
         "coffee_coldbrew",
         "coffee_hot"
@@ -195,13 +195,13 @@
       "children": {
         "coffee_coldbrew": {
           "id": "coffee_coldbrew",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "coffee_hot": {
           "id": "coffee_hot",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         }
@@ -209,7 +209,7 @@
     },
     "cordial": {
       "id": "cordial",
-      "checked": true,
+      "checked": false,
       "childIDs": [
         "cordial_apple",
         "cordial_citrus",
@@ -221,37 +221,37 @@
       "children": {
         "cordial_apple": {
           "id": "cordial_apple",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "cordial_citrus": {
           "id": "cordial_citrus",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "cordial_grapefruit": {
           "id": "cordial_grapefruit",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "cordial_lime": {
           "id": "cordial_lime",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "cordial_pineapple": {
           "id": "cordial_pineapple",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "cordial_tamarind": {
           "id": "cordial_tamarind",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         }
@@ -259,7 +259,7 @@
     },
     "cream": {
       "id": "cream",
-      "checked": true,
+      "checked": false,
       "childIDs": [
         "cream_coconut",
         "cream_heavy",
@@ -268,19 +268,19 @@
       "children": {
         "cream_coconut": {
           "id": "cream_coconut",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "cream_heavy": {
           "id": "cream_heavy",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "cream_sweetvermouth": {
           "id": "cream_sweetvermouth",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         }
@@ -288,7 +288,7 @@
     },
     "egg": {
       "id": "egg",
-      "checked": true,
+      "checked": false,
       "childIDs": [
         "egg_aquafaba",
         "egg_white",
@@ -297,19 +297,19 @@
       "children": {
         "egg_aquafaba": {
           "id": "egg_aquafaba",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "egg_white": {
           "id": "egg_white",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "egg_yolk": {
           "id": "egg_yolk",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         }
@@ -317,7 +317,7 @@
     },
     "extract": {
       "id": "extract",
-      "checked": true,
+      "checked": false,
       "childIDs": [
         "extract_almond",
         "extract_birch",
@@ -330,43 +330,43 @@
       "children": {
         "extract_almond": {
           "id": "extract_almond",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "extract_birch": {
           "id": "extract_birch",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "extract_cola": {
           "id": "extract_cola",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "extract_eucalyptus": {
           "id": "extract_eucalyptus",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "extract_lemongrass": {
           "id": "extract_lemongrass",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "extract_rootbeer": {
           "id": "extract_rootbeer",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "extract_vanilla": {
           "id": "extract_vanilla",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         }
@@ -374,7 +374,7 @@
     },
     "flower": {
       "id": "flower",
-      "checked": true,
+      "checked": false,
       "childIDs": [
         "flower_edible",
         "flower_orchid",
@@ -383,19 +383,19 @@
       "children": {
         "flower_edible": {
           "id": "flower_edible",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "flower_orchid": {
           "id": "flower_orchid",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "flower_viola": {
           "id": "flower_viola",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         }
@@ -403,7 +403,7 @@
     },
     "fruit": {
       "id": "fruit",
-      "checked": true,
+      "checked": false,
       "childIDs": [
         "fruit_apple",
         "fruit_banana",
@@ -428,115 +428,115 @@
       "children": {
         "fruit_apple": {
           "id": "fruit_apple",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "fruit_banana": {
           "id": "fruit_banana",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "fruit_blackberry": {
           "id": "fruit_blackberry",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "fruit_blueberry": {
           "id": "fruit_blueberry",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "fruit_cherry": {
           "id": "fruit_cherry",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "fruit_coconut": {
           "id": "fruit_coconut",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "fruit_coffeebean": {
           "id": "fruit_coffeebean",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "fruit_cucumber": {
           "id": "fruit_cucumber",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "fruit_grapefruit": {
           "id": "fruit_grapefruit",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "fruit_kiwi": {
           "id": "fruit_kiwi",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "fruit_lemon": {
           "id": "fruit_lemon",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "fruit_lime": {
           "id": "fruit_lime",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "fruit_olive": {
           "id": "fruit_olive",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "fruit_orange": {
           "id": "fruit_orange",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "fruit_papaya": {
           "id": "fruit_papaya",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "fruit_pear": {
           "id": "fruit_pear",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "fruit_raspberry": {
           "id": "fruit_raspberry",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "fruit_strawberry": {
           "id": "fruit_strawberry",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "fruit_umeboshi": {
           "id": "fruit_umeboshi",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         }
@@ -544,14 +544,14 @@
     },
     "jelly": {
       "id": "jelly",
-      "checked": true,
+      "checked": false,
       "childIDs": [
         "jelly_pepper"
       ],
       "children": {
         "jelly_pepper": {
           "id": "jelly_pepper",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         }
@@ -559,7 +559,7 @@
     },
     "juice": {
       "id": "juice",
-      "checked": true,
+      "checked": false,
       "childIDs": [
         "juice_bellpepper",
         "juice_cantaloupe",
@@ -578,79 +578,79 @@
       "children": {
         "juice_bellpepper": {
           "id": "juice_bellpepper",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "juice_cantaloupe": {
           "id": "juice_cantaloupe",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "juice_carrot": {
           "id": "juice_carrot",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "juice_celery": {
           "id": "juice_celery",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "juice_cucumber": {
           "id": "juice_cucumber",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "juice_grapefruit": {
           "id": "juice_grapefruit",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "juice_lemon": {
           "id": "juice_lemon",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "juice_lime": {
           "id": "juice_lime",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "juice_orange": {
           "id": "juice_orange",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "juice_pineapple": {
           "id": "juice_pineapple",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "juice_tomato": {
           "id": "juice_tomato",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "juice_verjus": {
           "id": "juice_verjus",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "juice_yuzu": {
           "id": "juice_yuzu",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         }
@@ -658,14 +658,14 @@
     },
     "leaf": {
       "id": "leaf",
-      "checked": true,
+      "checked": false,
       "childIDs": [
         "leaf_banana"
       ],
       "children": {
         "leaf_banana": {
           "id": "leaf_banana",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         }
@@ -673,7 +673,7 @@
     },
     "milk": {
       "id": "milk",
-      "checked": true,
+      "checked": false,
       "childIDs": [
         "milk_coconut",
         "milk_condensed",
@@ -682,19 +682,19 @@
       "children": {
         "milk_coconut": {
           "id": "milk_coconut",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "milk_condensed": {
           "id": "milk_condensed",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "milk_whole": {
           "id": "milk_whole",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         }
@@ -702,7 +702,7 @@
     },
     "nut": {
       "id": "nut",
-      "checked": true,
+      "checked": false,
       "childIDs": [
         "nut_peanut",
         "nut_pistachio"
@@ -710,13 +710,13 @@
       "children": {
         "nut_peanut": {
           "id": "nut_peanut",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "nut_pistachio": {
           "id": "nut_pistachio",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         }
@@ -724,14 +724,14 @@
     },
     "oil": {
       "id": "oil",
-      "checked": true,
+      "checked": false,
       "childIDs": [
         "oil_olive"
       ],
       "children": {
         "oil_olive": {
           "id": "oil_olive",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         }
@@ -739,7 +739,7 @@
     },
     "puree": {
       "id": "puree",
-      "checked": true,
+      "checked": false,
       "childIDs": [
         "puree_guava",
         "puree_kalamansi",
@@ -751,37 +751,37 @@
       "children": {
         "puree_guava": {
           "id": "puree_guava",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "puree_kalamansi": {
           "id": "puree_kalamansi",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "puree_kiwi": {
           "id": "puree_kiwi",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "puree_mango": {
           "id": "puree_mango",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "puree_papaya": {
           "id": "puree_papaya",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "puree_passionfruit": {
           "id": "puree_passionfruit",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         }
@@ -789,7 +789,7 @@
     },
     "shrub": {
       "id": "shrub",
-      "checked": true,
+      "checked": false,
       "childIDs": [
         "shrub_habanero",
         "shrub_hibiscus"
@@ -797,13 +797,13 @@
       "children": {
         "shrub_habanero": {
           "id": "shrub_habanero",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "shrub_hibiscus": {
           "id": "shrub_hibiscus",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         }
@@ -811,7 +811,7 @@
     },
     "soda": {
       "id": "soda",
-      "checked": true,
+      "checked": false,
       "childIDs": [
         "soda_club",
         "soda_ginger",
@@ -823,37 +823,37 @@
       "children": {
         "soda_club": {
           "id": "soda_club",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "soda_ginger": {
           "id": "soda_ginger",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "soda_gingerbeer": {
           "id": "soda_gingerbeer",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "soda_grapefruit": {
           "id": "soda_grapefruit",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "soda_guava": {
           "id": "soda_guava",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "soda_tonic": {
           "id": "soda_tonic",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         }
@@ -861,7 +861,7 @@
     },
     "spice": {
       "id": "spice",
-      "checked": true,
+      "checked": false,
       "childIDs": [
         "spice_allspice",
         "spice_aniseseed",
@@ -886,115 +886,115 @@
       "children": {
         "spice_allspice": {
           "id": "spice_allspice",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "spice_aniseseed": {
           "id": "spice_aniseseed",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "spice_basil": {
           "id": "spice_basil",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "spice_bay": {
           "id": "spice_bay",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "spice_blackpeppercorn": {
           "id": "spice_blackpeppercorn",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "spice_cinnamon": {
           "id": "spice_cinnamon",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "spice_cloves": {
           "id": "spice_cloves",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "spice_coriander": {
           "id": "spice_coriander",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "spice_curry": {
           "id": "spice_curry",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "spice_fennel": {
           "id": "spice_fennel",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "spice_ginger": {
           "id": "spice_ginger",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "spice_markutlime": {
           "id": "spice_markutlime",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "spice_mint": {
           "id": "spice_mint",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "spice_nutmeg": {
           "id": "spice_nutmeg",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "spice_rosemary": {
           "id": "spice_rosemary",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "spice_salt": {
           "id": "spice_salt",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "spice_shiso": {
           "id": "spice_shiso",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "spice_staranise": {
           "id": "spice_staranise",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "spice_vanillabean": {
           "id": "spice_vanillabean",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         }
@@ -1002,7 +1002,7 @@
     },
     "sugar": {
       "id": "sugar",
-      "checked": true,
+      "checked": false,
       "childIDs": [
         "sugar_brown",
         "sugar_demerara",
@@ -1012,25 +1012,25 @@
       "children": {
         "sugar_brown": {
           "id": "sugar_brown",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "sugar_demerara": {
           "id": "sugar_demerara",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "sugar_molasses": {
           "id": "sugar_molasses",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "sugar_white": {
           "id": "sugar_white",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         }
@@ -1038,7 +1038,7 @@
     },
     "syrup": {
       "id": "syrup",
-      "checked": true,
+      "checked": false,
       "childIDs": [
         "syrup_agave",
         "syrup_almond",
@@ -1083,235 +1083,235 @@
       "children": {
         "syrup_agave": {
           "id": "syrup_agave",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "syrup_almond": {
           "id": "syrup_almond",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "syrup_bayleaf": {
           "id": "syrup_bayleaf",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "syrup_blackberry": {
           "id": "syrup_blackberry",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "syrup_cane": {
           "id": "syrup_cane",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "syrup_celery": {
           "id": "syrup_celery",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "syrup_chocolate": {
           "id": "syrup_chocolate",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "syrup_cinnamon": {
           "id": "syrup_cinnamon",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "syrup_coffey": {
           "id": "syrup_coffey",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "syrup_curry": {
           "id": "syrup_curry",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "syrup_demerara": {
           "id": "syrup_demerara",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "syrup_genadine": {
           "id": "syrup_genadine",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "syrup_ginger": {
           "id": "syrup_ginger",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "syrup_guava": {
           "id": "syrup_guava",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "syrup_honey": {
           "id": "syrup_honey",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "syrup_jerk": {
           "id": "syrup_jerk",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "syrup_kiwi": {
           "id": "syrup_kiwi",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "syrup_lihingmui": {
           "id": "syrup_lihingmui",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "syrup_maple": {
           "id": "syrup_maple",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "syrup_milk": {
           "id": "syrup_milk",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "syrup_molasses": {
           "id": "syrup_molasses",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "syrup_orgeat": {
           "id": "syrup_orgeat",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "syrup_pandan": {
           "id": "syrup_pandan",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "syrup_papaya": {
           "id": "syrup_papaya",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "syrup_passionfruit": {
           "id": "syrup_passionfruit",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "syrup_pineapple": {
           "id": "syrup_pineapple",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "syrup_poppyseed": {
           "id": "syrup_poppyseed",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "syrup_port": {
           "id": "syrup_port",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "syrup_raspberry": {
           "id": "syrup_raspberry",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "syrup_sarsaparilla": {
           "id": "syrup_sarsaparilla",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "syrup_simple": {
           "id": "syrup_simple",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "syrup_strawberry": {
           "id": "syrup_strawberry",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "syrup_tonic": {
           "id": "syrup_tonic",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "syrup_turbinado": {
           "id": "syrup_turbinado",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "syrup_vanilla": {
           "id": "syrup_vanilla",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "syrup_verjus": {
           "id": "syrup_verjus",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "syrup_watermelon": {
           "id": "syrup_watermelon",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "syrup_wine": {
           "id": "syrup_wine",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "syrup_yogurt": {
           "id": "syrup_yogurt",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         }
@@ -1319,7 +1319,7 @@
     },
     "tea": {
       "id": "tea",
-      "checked": true,
+      "checked": false,
       "childIDs": [
         "tea_black",
         "tea_chamomile",
@@ -1328,19 +1328,19 @@
       "children": {
         "tea_black": {
           "id": "tea_black",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "tea_chamomile": {
           "id": "tea_chamomile",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "tea_green": {
           "id": "tea_green",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         }
@@ -1348,14 +1348,14 @@
     },
     "vegetable": {
       "id": "vegetable",
-      "checked": true,
+      "checked": false,
       "childIDs": [
         "vegetable_rhubarb"
       ],
       "children": {
         "vegetable_rhubarb": {
           "id": "vegetable_rhubarb",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         }
@@ -1363,7 +1363,7 @@
     },
     "water": {
       "id": "water",
-      "checked": true,
+      "checked": false,
       "childIDs": [
         "water_coconut",
         "water_flat",
@@ -1373,25 +1373,25 @@
       "children": {
         "water_coconut": {
           "id": "water_coconut",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "water_flat": {
           "id": "water_flat",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "water_orangeflower": {
           "id": "water_orangeflower",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "water_rose": {
           "id": "water_rose",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         }
@@ -1399,7 +1399,7 @@
     },
     "agave": {
       "id": "agave",
-      "checked": true,
+      "checked": false,
       "childIDs": [
         "agave_mezcal",
         "agave_tequila"
@@ -1407,13 +1407,13 @@
       "children": {
         "agave_mezcal": {
           "id": "agave_mezcal",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "agave_tequila": {
           "id": "agave_tequila",
-          "checked": true,
+          "checked": false,
           "childIDs": [
             "agave_tequila_anejo",
             "agave_tequila_blanco",
@@ -1422,19 +1422,19 @@
           "children": {
             "agave_tequila_anejo": {
               "id": "agave_tequila_anejo",
-              "checked": true,
+              "checked": false,
               "childIDs": [],
               "children": {}
             },
             "agave_tequila_blanco": {
               "id": "agave_tequila_blanco",
-              "checked": true,
+              "checked": false,
               "childIDs": [],
               "children": {}
             },
             "agave_tequila_reposado": {
               "id": "agave_tequila_reposado",
-              "checked": true,
+              "checked": false,
               "childIDs": [],
               "children": {}
             }
@@ -1444,7 +1444,7 @@
     },
     "beer": {
       "id": "beer",
-      "checked": true,
+      "checked": false,
       "childIDs": [
         "beer_gose",
         "beer_grapefruit",
@@ -1454,25 +1454,25 @@
       "children": {
         "beer_gose": {
           "id": "beer_gose",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "beer_grapefruit": {
           "id": "beer_grapefruit",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "beer_ipa": {
           "id": "beer_ipa",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "beer_pilsner": {
           "id": "beer_pilsner",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         }
@@ -1480,7 +1480,7 @@
     },
     "bitters": {
       "id": "bitters",
-      "checked": true,
+      "checked": false,
       "childIDs": [
         "bitters_allspice",
         "bitters_aromatic",
@@ -1506,121 +1506,121 @@
       "children": {
         "bitters_allspice": {
           "id": "bitters_allspice",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "bitters_aromatic": {
           "id": "bitters_aromatic",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "bitters_barrelaged": {
           "id": "bitters_barrelaged",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "bitters_blackstrap": {
           "id": "bitters_blackstrap",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "bitters_cardamom": {
           "id": "bitters_cardamom",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "bitters_celery": {
           "id": "bitters_celery",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "bitters_chocolate": {
           "id": "bitters_chocolate",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "bitters_coffey": {
           "id": "bitters_coffey",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "bitters_creole": {
           "id": "bitters_creole",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "bitters_curry": {
           "id": "bitters_curry",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "bitters_grapefruit": {
           "id": "bitters_grapefruit",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "bitters_herbstura": {
           "id": "bitters_herbstura",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "bitters_jerk": {
           "id": "bitters_jerk",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "bitters_lavender": {
           "id": "bitters_lavender",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "bitters_mole": {
           "id": "bitters_mole",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "bitters_moroccan": {
           "id": "bitters_moroccan",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "bitters_orange": {
           "id": "bitters_orange",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "bitters_peach": {
           "id": "bitters_peach",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "bitters_thai": {
           "id": "bitters_thai",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "bitters_tiki": {
           "id": "bitters_tiki",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         }
@@ -1628,7 +1628,7 @@
     },
     "cane": {
       "id": "cane",
-      "checked": true,
+      "checked": false,
       "childIDs": [
         "cane_bataviaarrack",
         "cane_cachaca",
@@ -1638,25 +1638,25 @@
       "children": {
         "cane_bataviaarrack": {
           "id": "cane_bataviaarrack",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "cane_cachaca": {
           "id": "cane_cachaca",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "cane_rum": {
           "id": "cane_rum",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "cane_swedishpunsch": {
           "id": "cane_swedishpunsch",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         }
@@ -1664,7 +1664,7 @@
     },
     "fortifiedwine": {
       "id": "fortifiedwine",
-      "checked": true,
+      "checked": false,
       "childIDs": [
         "fortifiedwine_ambrevermouth",
         "fortifiedwine_aperitif",
@@ -1679,49 +1679,49 @@
       "children": {
         "fortifiedwine_ambrevermouth": {
           "id": "fortifiedwine_ambrevermouth",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "fortifiedwine_aperitif": {
           "id": "fortifiedwine_aperitif",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "fortifiedwine_blancvermouth": {
           "id": "fortifiedwine_blancvermouth",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "fortifiedwine_dryvermouth": {
           "id": "fortifiedwine_dryvermouth",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "fortifiedwine_madeira": {
           "id": "fortifiedwine_madeira",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "fortifiedwine_mistelle": {
           "id": "fortifiedwine_mistelle",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "fortifiedwine_port": {
           "id": "fortifiedwine_port",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "fortifiedwine_sherry": {
           "id": "fortifiedwine_sherry",
-          "checked": true,
+          "checked": false,
           "childIDs": [
             "fortifiedwine_sherry_amontillado",
             "fortifiedwine_sherry_cream",
@@ -1736,55 +1736,55 @@
           "children": {
             "fortifiedwine_sherry_amontillado": {
               "id": "fortifiedwine_sherry_amontillado",
-              "checked": true,
+              "checked": false,
               "childIDs": [],
               "children": {}
             },
             "fortifiedwine_sherry_cream": {
               "id": "fortifiedwine_sherry_cream",
-              "checked": true,
+              "checked": false,
               "childIDs": [],
               "children": {}
             },
             "fortifiedwine_sherry_eastindia": {
               "id": "fortifiedwine_sherry_eastindia",
-              "checked": true,
+              "checked": false,
               "childIDs": [],
               "children": {}
             },
             "fortifiedwine_sherry_fino": {
               "id": "fortifiedwine_sherry_fino",
-              "checked": true,
+              "checked": false,
               "childIDs": [],
               "children": {}
             },
             "fortifiedwine_sherry_manzanilla": {
               "id": "fortifiedwine_sherry_manzanilla",
-              "checked": true,
+              "checked": false,
               "childIDs": [],
               "children": {}
             },
             "fortifiedwine_sherry_oloroso": {
               "id": "fortifiedwine_sherry_oloroso",
-              "checked": true,
+              "checked": false,
               "childIDs": [],
               "children": {}
             },
             "fortifiedwine_sherry_palecream": {
               "id": "fortifiedwine_sherry_palecream",
-              "checked": true,
+              "checked": false,
               "childIDs": [],
               "children": {}
             },
             "fortifiedwine_sherry_palocartado": {
               "id": "fortifiedwine_sherry_palocartado",
-              "checked": true,
+              "checked": false,
               "childIDs": [],
               "children": {}
             },
             "fortifiedwine_sherry_pedroximenez": {
               "id": "fortifiedwine_sherry_pedroximenez",
-              "checked": true,
+              "checked": false,
               "childIDs": [],
               "children": {}
             }
@@ -1792,7 +1792,7 @@
         },
         "fortifiedwine_sweetvermouth": {
           "id": "fortifiedwine_sweetvermouth",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         }
@@ -1800,7 +1800,7 @@
     },
     "brandy": {
       "id": "brandy",
-      "checked": true,
+      "checked": false,
       "childIDs": [
         "brandy_apple",
         "brandy_apricot",
@@ -1822,43 +1822,43 @@
       "children": {
         "brandy_apple": {
           "id": "brandy_apple",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "brandy_apricot": {
           "id": "brandy_apricot",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "brandy_basil": {
           "id": "brandy_basil",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "brandy_carrot": {
           "id": "brandy_carrot",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "brandy_cherry": {
           "id": "brandy_cherry",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "brandy_douglasfir": {
           "id": "brandy_douglasfir",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "brandy_grape": {
           "id": "brandy_grape",
-          "checked": true,
+          "checked": false,
           "childIDs": [
             "brandy_grape_armagnac",
             "brandy_grape_cognac",
@@ -1871,43 +1871,43 @@
           "children": {
             "brandy_grape_armagnac": {
               "id": "brandy_grape_armagnac",
-              "checked": true,
+              "checked": false,
               "childIDs": [],
               "children": {}
             },
             "brandy_grape_cognac": {
               "id": "brandy_grape_cognac",
-              "checked": true,
+              "checked": false,
               "childIDs": [],
               "children": {}
             },
             "brandy_grape_american": {
               "id": "brandy_grape_american",
-              "checked": true,
+              "checked": false,
               "childIDs": [],
               "children": {}
             },
             "brandy_grape_spanish": {
               "id": "brandy_grape_spanish",
-              "checked": true,
+              "checked": false,
               "childIDs": [],
               "children": {}
             },
             "brandy_grape_eaudevie": {
               "id": "brandy_grape_eaudevie",
-              "checked": true,
+              "checked": false,
               "childIDs": [],
               "children": {}
             },
             "brandy_grape_grappa": {
               "id": "brandy_grape_grappa",
-              "checked": true,
+              "checked": false,
               "childIDs": [],
               "children": {}
             },
             "brandy_grape_pisco": {
               "id": "brandy_grape_pisco",
-              "checked": true,
+              "checked": false,
               "childIDs": [],
               "children": {}
             }
@@ -1915,55 +1915,55 @@
         },
         "brandy_hazelnut": {
           "id": "brandy_hazelnut",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "brandy_mango": {
           "id": "brandy_mango",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "brandy_peach": {
           "id": "brandy_peach",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "brandy_pear": {
           "id": "brandy_pear",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "brandy_plum": {
           "id": "brandy_plum",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "brandy_raspberry": {
           "id": "brandy_raspberry",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "brandy_shiso": {
           "id": "brandy_shiso",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "brandy_tomato": {
           "id": "brandy_tomato",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "brandy_vanilla": {
           "id": "brandy_vanilla",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         }
@@ -1971,7 +1971,7 @@
     },
     "grain": {
       "id": "grain",
-      "checked": true,
+      "checked": false,
       "childIDs": [
         "grain_aquavit",
         "grain_gin",
@@ -1982,13 +1982,13 @@
       "children": {
         "grain_aquavit": {
           "id": "grain_aquavit",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "grain_gin": {
           "id": "grain_gin",
-          "checked": true,
+          "checked": false,
           "childIDs": [
             "grain_gin_contemporary",
             "grain_gin_genever",
@@ -2000,37 +2000,37 @@
           "children": {
             "grain_gin_contemporary": {
               "id": "grain_gin_contemporary",
-              "checked": true,
+              "checked": false,
               "childIDs": [],
               "children": {}
             },
             "grain_gin_genever": {
               "id": "grain_gin_genever",
-              "checked": true,
+              "checked": false,
               "childIDs": [],
               "children": {}
             },
             "grain_gin_londondry": {
               "id": "grain_gin_londondry",
-              "checked": true,
+              "checked": false,
               "childIDs": [],
               "children": {}
             },
             "grain_gin_oldtom": {
               "id": "grain_gin_oldtom",
-              "checked": true,
+              "checked": false,
               "childIDs": [],
               "children": {}
             },
             "grain_gin_plymouth": {
               "id": "grain_gin_plymouth",
-              "checked": true,
+              "checked": false,
               "childIDs": [],
               "children": {}
             },
             "grain_gin_sloe": {
               "id": "grain_gin_sloe",
-              "checked": true,
+              "checked": false,
               "childIDs": [],
               "children": {}
             }
@@ -2038,19 +2038,19 @@
         },
         "grain_shochu": {
           "id": "grain_shochu",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "grain_vodka": {
           "id": "grain_vodka",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "grain_whiskey": {
           "id": "grain_whiskey",
-          "checked": true,
+          "checked": false,
           "childIDs": [
             "grain_whiskey_bourbon",
             "grain_whiskey_irish",
@@ -2061,31 +2061,31 @@
           "children": {
             "grain_whiskey_bourbon": {
               "id": "grain_whiskey_bourbon",
-              "checked": true,
+              "checked": false,
               "childIDs": [],
               "children": {}
             },
             "grain_whiskey_irish": {
               "id": "grain_whiskey_irish",
-              "checked": true,
+              "checked": false,
               "childIDs": [],
               "children": {}
             },
             "grain_whiskey_japanese": {
               "id": "grain_whiskey_japanese",
-              "checked": true,
+              "checked": false,
               "childIDs": [],
               "children": {}
             },
             "grain_whiskey_rye": {
               "id": "grain_whiskey_rye",
-              "checked": true,
+              "checked": false,
               "childIDs": [],
               "children": {}
             },
             "grain_whiskey_scotch": {
               "id": "grain_whiskey_scotch",
-              "checked": true,
+              "checked": false,
               "childIDs": [
                 "grain_whiskey_scotch_blended",
                 "grain_whiskey_scotch_campbeltown",
@@ -2096,31 +2096,31 @@
               "children": {
                 "grain_whiskey_scotch_blended": {
                   "id": "grain_whiskey_scotch_blended",
-                  "checked": true,
+                  "checked": false,
                   "childIDs": [],
                   "children": {}
                 },
                 "grain_whiskey_scotch_campbeltown": {
                   "id": "grain_whiskey_scotch_campbeltown",
-                  "checked": true,
+                  "checked": false,
                   "childIDs": [],
                   "children": {}
                 },
                 "grain_whiskey_scotch_highlands": {
                   "id": "grain_whiskey_scotch_highlands",
-                  "checked": true,
+                  "checked": false,
                   "childIDs": [],
                   "children": {}
                 },
                 "grain_whiskey_scotch_islay": {
                   "id": "grain_whiskey_scotch_islay",
-                  "checked": true,
+                  "checked": false,
                   "childIDs": [],
                   "children": {}
                 },
                 "grain_whiskey_scotch_speyside": {
                   "id": "grain_whiskey_scotch_speyside",
-                  "checked": true,
+                  "checked": false,
                   "childIDs": [],
                   "children": {}
                 }
@@ -2132,7 +2132,7 @@
     },
     "liqueur": {
       "id": "liqueur",
-      "checked": true,
+      "checked": false,
       "childIDs": [
         "liqueur_absinthe",
         "liqueur_allspice",
@@ -2187,31 +2187,31 @@
       "children": {
         "liqueur_absinthe": {
           "id": "liqueur_absinthe",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "liqueur_allspice": {
           "id": "liqueur_allspice",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "liqueur_aloe": {
           "id": "liqueur_aloe",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "liqueur_amaretto": {
           "id": "liqueur_amaretto",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "liqueur_amaro": {
           "id": "liqueur_amaro",
-          "checked": true,
+          "checked": false,
           "childIDs": [
             "liqueur_amaro_alpine",
             "liqueur_amaro_aperitivo",
@@ -2225,49 +2225,49 @@
           "children": {
             "liqueur_amaro_alpine": {
               "id": "liqueur_amaro_alpine",
-              "checked": true,
+              "checked": false,
               "childIDs": [],
               "children": {}
             },
             "liqueur_amaro_aperitivo": {
               "id": "liqueur_amaro_aperitivo",
-              "checked": true,
+              "checked": false,
               "childIDs": [],
               "children": {}
             },
             "liqueur_amaro_carciofo": {
               "id": "liqueur_amaro_carciofo",
-              "checked": true,
+              "checked": false,
               "childIDs": [],
               "children": {}
             },
             "liqueur_amaro_dense": {
               "id": "liqueur_amaro_dense",
-              "checked": true,
+              "checked": false,
               "childIDs": [],
               "children": {}
             },
             "liqueur_amaro_fernet": {
               "id": "liqueur_amaro_fernet",
-              "checked": true,
+              "checked": false,
               "childIDs": [],
               "children": {}
             },
             "liqueur_amaro_light": {
               "id": "liqueur_amaro_light",
-              "checked": true,
+              "checked": false,
               "childIDs": [],
               "children": {}
             },
             "liqueur_amaro_medium": {
               "id": "liqueur_amaro_medium",
-              "checked": true,
+              "checked": false,
               "childIDs": [],
               "children": {}
             },
             "liqueur_amaro_rabarbaro": {
               "id": "liqueur_amaro_rabarbaro",
-              "checked": true,
+              "checked": false,
               "childIDs": [],
               "children": {}
             }
@@ -2275,265 +2275,265 @@
         },
         "liqueur_anchochile": {
           "id": "liqueur_anchochile",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "liqueur_apricot": {
           "id": "liqueur_apricot",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "liqueur_banana": {
           "id": "liqueur_banana",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "liqueur_basil": {
           "id": "liqueur_basil",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "liqueur_bergamot": {
           "id": "liqueur_bergamot",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "liqueur_biscotti": {
           "id": "liqueur_biscotti",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "liqueur_cherryheering": {
           "id": "liqueur_cherryheering",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "liqueur_cherry": {
           "id": "liqueur_cherry",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "liqueur_coconut": {
           "id": "liqueur_coconut",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "liqueur_coffeebean": {
           "id": "liqueur_coffeebean",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "liqueur_cranberry": {
           "id": "liqueur_cranberry",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "liqueur_cremedecacao": {
           "id": "liqueur_cremedecacao",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "liqueur_cremedecassis": {
           "id": "liqueur_cremedecassis",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "liqueur_cremedementhe": {
           "id": "liqueur_cremedementhe",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "liqueur_cremedeviolette": {
           "id": "liqueur_cremedeviolette",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "liqueur_elderflower": {
           "id": "liqueur_elderflower",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "liqueur_falernum": {
           "id": "liqueur_falernum",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "liqueur_fennel": {
           "id": "liqueur_fennel",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "liqueur_fir": {
           "id": "liqueur_fir",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "liqueur_grapefruit": {
           "id": "liqueur_grapefruit",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "liqueur_habanero": {
           "id": "liqueur_habanero",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "liqueur_herbal": {
           "id": "liqueur_herbal",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "liqueur_hibiscus": {
           "id": "liqueur_hibiscus",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "liqueur_kummel": {
           "id": "liqueur_kummel",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "liqueur_lychee": {
           "id": "liqueur_lychee",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "liqueur_macadamia": {
           "id": "liqueur_macadamia",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "liqueur_mandarine": {
           "id": "liqueur_mandarine",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "liqueur_maraschino": {
           "id": "liqueur_maraschino",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "liqueur_orange": {
           "id": "liqueur_orange",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "liqueur_passionfruit": {
           "id": "liqueur_passionfruit",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "liqueur_peach": {
           "id": "liqueur_peach",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "liqueur_pear": {
           "id": "liqueur_pear",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "liqueur_pine": {
           "id": "liqueur_pine",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "liqueur_pineapple": {
           "id": "liqueur_pineapple",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "liqueur_raspberry": {
           "id": "liqueur_raspberry",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "liqueur_rhubarb": {
           "id": "liqueur_rhubarb",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "liqueur_rich": {
           "id": "liqueur_rich",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "liqueur_rosemary": {
           "id": "liqueur_rosemary",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "liqueur_sourapple": {
           "id": "liqueur_sourapple",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "liqueur_strawberry": {
           "id": "liqueur_strawberry",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "liqueur_thyme": {
           "id": "liqueur_thyme",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "liqueur_vanilla": {
           "id": "liqueur_vanilla",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "liqueur_walnut": {
           "id": "liqueur_walnut",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "liqueur_yuzu": {
           "id": "liqueur_yuzu",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         }
@@ -2541,7 +2541,7 @@
     },
     "wine": {
       "id": "wine",
-      "checked": true,
+      "checked": false,
       "childIDs": [
         "wine_plum",
         "wine_red",
@@ -2553,13 +2553,13 @@
       "children": {
         "wine_plum": {
           "id": "wine_plum",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "wine_red": {
           "id": "wine_red",
-          "checked": true,
+          "checked": false,
           "childIDs": [
             "wine_red_lambrusco",
             "wine_red_malbec",
@@ -2569,25 +2569,25 @@
           "children": {
             "wine_red_lambrusco": {
               "id": "wine_red_lambrusco",
-              "checked": true,
+              "checked": false,
               "childIDs": [],
               "children": {}
             },
             "wine_red_malbec": {
               "id": "wine_red_malbec",
-              "checked": true,
+              "checked": false,
               "childIDs": [],
               "children": {}
             },
             "wine_red_rancio": {
               "id": "wine_red_rancio",
-              "checked": true,
+              "checked": false,
               "childIDs": [],
               "children": {}
             },
             "wine_red_syrah": {
               "id": "wine_red_syrah",
-              "checked": true,
+              "checked": false,
               "childIDs": [],
               "children": {}
             }
@@ -2595,7 +2595,7 @@
         },
         "wine_sake": {
           "id": "wine_sake",
-          "checked": true,
+          "checked": false,
           "childIDs": [
             "wine_sake_aged",
             "wine_sake_junmai",
@@ -2606,31 +2606,31 @@
           "children": {
             "wine_sake_aged": {
               "id": "wine_sake_aged",
-              "checked": true,
+              "checked": false,
               "childIDs": [],
               "children": {}
             },
             "wine_sake_junmai": {
               "id": "wine_sake_junmai",
-              "checked": true,
+              "checked": false,
               "childIDs": [],
               "children": {}
             },
             "wine_sake_nigori": {
               "id": "wine_sake_nigori",
-              "checked": true,
+              "checked": false,
               "childIDs": [],
               "children": {}
             },
             "wine_sake_sparkling": {
               "id": "wine_sake_sparkling",
-              "checked": true,
+              "checked": false,
               "childIDs": [],
               "children": {}
             },
             "wine_sake_yuzu": {
               "id": "wine_sake_yuzu",
-              "checked": true,
+              "checked": false,
               "childIDs": [],
               "children": {}
             }
@@ -2638,13 +2638,13 @@
         },
         "wine_sparkling": {
           "id": "wine_sparkling",
-          "checked": true,
+          "checked": false,
           "childIDs": [],
           "children": {}
         },
         "wine_sweet": {
           "id": "wine_sweet",
-          "checked": true,
+          "checked": false,
           "childIDs": [
             "wine_sweet_moscatel",
             "wine_sweet_sauternes"
@@ -2652,13 +2652,13 @@
           "children": {
             "wine_sweet_moscatel": {
               "id": "wine_sweet_moscatel",
-              "checked": true,
+              "checked": false,
               "childIDs": [],
               "children": {}
             },
             "wine_sweet_sauternes": {
               "id": "wine_sweet_sauternes",
-              "checked": true,
+              "checked": false,
               "childIDs": [],
               "children": {}
             }
@@ -2666,14 +2666,14 @@
         },
         "wine_white": {
           "id": "wine_white",
-          "checked": true,
+          "checked": false,
           "childIDs": [
             "wine_white_riesling"
           ],
           "children": {
             "wine_white_riesling": {
               "id": "wine_white_riesling",
-              "checked": true,
+              "checked": false,
               "childIDs": [],
               "children": {}
             }

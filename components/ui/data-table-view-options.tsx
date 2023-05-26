@@ -13,12 +13,14 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
 } from '@/components/ui/dropdown-menu'
+import { DataTableToolbarProps } from '@/components/ui/data-table'
 
-type Props<TData> = {
-  table: Table<TData>
-}
+type Props<TData> = DataTableToolbarProps<TData>
 
-export function DataTableViewOptions<TData>({ table }: Props<TData>) {
+export function DataTableViewOptions<TData>({
+  table,
+  hideColumns,
+}: Props<TData>) {
   function handleResetAll() {
     table.resetColumnFilters()
     table.resetGlobalFilter()
@@ -42,7 +44,9 @@ export function DataTableViewOptions<TData>({ table }: Props<TData>) {
           .getAllColumns()
           .filter(
             (column) =>
-              typeof column.accessorFn !== 'undefined' && column.getCanHide()
+              !hideColumns?.includes(column.id) &&
+              typeof column.accessorFn !== 'undefined' &&
+              column.getCanHide()
           )
           .map((column) => {
             return (

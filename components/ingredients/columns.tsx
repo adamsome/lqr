@@ -14,7 +14,6 @@ import {
   createFacetFilterFn,
 } from '@/components/ui/data-table-facet-filter'
 import { AGING_DICT, PRODUCTION_METHOD_DICT } from '@/lib/consts'
-import { getIngredientAncestorText } from '@/lib/get-ingredient-ancestor-text'
 import { hierarchicalFilterFn } from '@/lib/hierarchical-filter'
 import { getStockState } from '@/lib/stock'
 import { Ingredient } from '@/lib/types'
@@ -70,7 +69,8 @@ export const columns: Column<Ingredient>[] = [
   },
   {
     accessorKey: 'ancestors',
-    accessorFn: (row) => getIngredientAncestorText(row),
+    accessorFn: (row) =>
+      [row.category, ...row.ancestors.map((a) => a.id)].join('|'),
     header: ({ column }) => (
       <DataTableColumnHeader
         column={column}

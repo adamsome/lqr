@@ -32,15 +32,15 @@ interface DataTableFacetedFilter<TData, TValue> {
   column?: Column<TData, TValue>
   title?: string
   icon?: ReactNode
-  options: DataTableFacetedFilterItem[]
+  items: DataTableFacetedFilterItem[]
   transformFacetsFn?: (facets: Map<any, number>) => Map<any, number>
 }
 
-export function DataTableFacetedFilter<TData, TValue>({
+export function DataTableFacetFilterButton<TData, TValue>({
   column,
   title,
   icon,
-  options,
+  items,
   transformFacetsFn,
 }: DataTableFacetedFilter<TData, TValue>) {
   const rawFacets = column?.getFacetedUniqueValues()
@@ -49,8 +49,7 @@ export function DataTableFacetedFilter<TData, TValue>({
     return transformFacetsFn(rawFacets)
   }, [rawFacets, transformFacetsFn])
 
-  console.log('facets', rawFacets, facets)
-  const selectedValues = new Set(column?.getFilterValue() as string[])
+  const selected = new Set(column?.getFilterValue() as string[])
 
   return (
     <Popover>
@@ -58,33 +57,33 @@ export function DataTableFacetedFilter<TData, TValue>({
         <Button variant="outline" size="sm" className="h-8 border">
           {icon}
           {title}
-          {selectedValues?.size > 0 && (
+          {selected?.size > 0 && (
             <>
               <Separator orientation="vertical" className="mx-2 h-4" />
               <Badge
                 variant="secondary"
                 className="rounded-sm px-1 font-normal lg:hidden"
               >
-                {selectedValues.size}
+                {selected.size}
               </Badge>
               <div className="hidden space-x-1 lg:flex">
-                {selectedValues.size > 2 ? (
+                {selected.size > 2 ? (
                   <Badge
                     variant="secondary"
                     className="rounded-sm px-1 font-normal"
                   >
-                    {selectedValues.size} selected
+                    {selected.size} selected
                   </Badge>
                 ) : (
-                  options
-                    .filter((option) => selectedValues.has(option.value))
-                    .map((option) => (
+                  items
+                    .filter((item) => selected.has(item.value))
+                    .map((item) => (
                       <Badge
                         variant="secondary"
-                        key={option.value}
+                        key={item.value}
                         className="rounded-sm px-1 font-normal"
                       >
-                        {option.label}
+                        {item.label}
                       </Badge>
                     ))
                 )}
@@ -99,48 +98,17 @@ export function DataTableFacetedFilter<TData, TValue>({
           <CommandList>
             <CommandEmpty>No results found.</CommandEmpty>
             <CommandGroup>
-              {options.map((option) => {
-                const isSelected = selectedValues.has(option.value)
-                return (
-                  <CommandItem
-                    key={option.value}
-                    onSelect={() => {
-                      if (isSelected) {
-                        selectedValues.delete(option.value)
-                      } else {
-                        selectedValues.add(option.value)
-                      }
-                      const filterValues = Array.from(selectedValues)
-                      column?.setFilterValue(
-                        filterValues.length ? filterValues : undefined
-                      )
-                    }}
-                  >
-                    <div
-                      className={cn(
-                        'mr-2 flex h-4 w-4 items-center justify-center rounded-sm border border-primary',
-                        isSelected
-                          ? 'bg-primary text-primary-foreground'
-                          : 'opacity-50 [&_svg]:invisible'
-                      )}
-                    >
-                      <Check className={cn('h-4 w-4')} />
-                    </div>
-                    {option.Icon && (
-                      <option.Icon className="mr-2 h-4 w-4 text-muted-foreground" />
-                    )}
-                    {option.icon}
-                    <span>{option.label}</span>
-                    {facets?.get(option.value) && (
-                      <span className="ml-auto flex h-4 w-4 items-center justify-center font-mono text-xs">
-                        {facets.get(option.value)}
-                      </span>
-                    )}
-                  </CommandItem>
-                )
-              })}
+              {items.map((item) => (
+                <Item
+                  key={item.value}
+                  item={item}
+                  column={column}
+                  selected={selected}
+                  facets={facets}
+                />
+              ))}
             </CommandGroup>
-            {selectedValues.size > 0 && (
+            {selected.size > 0 && (
               <>
                 <CommandSeparator />
                 <CommandGroup>
@@ -157,5 +125,53 @@ export function DataTableFacetedFilter<TData, TValue>({
         </Command>
       </PopoverContent>
     </Popover>
+  )
+}
+
+type ItemProps = {
+  item: DataTableFacetedFilterItem
+  column?: Column<any, any>
+  selected: Set<string>
+  facets?: Map<any, number>
+}
+
+function Item({ item, column, selected, facets }: ItemProps) {
+  const isSelected = selected.has(item.value)
+  const count = facets?.get(item.value)
+  if (!count) return null
+  return (
+    <CommandItem
+      key={item.value}
+      onSelect={() => {
+        if (isSelected) {
+          selected.delete(item.value)
+        } else {
+          selected.add(item.value)
+        }
+        const filterValues = Array.from(selected)
+        column?.setFilterValue(filterValues.length ? filterValues : undefined)
+      }}
+    >
+      <div
+        className={cn(
+          'mr-2 flex h-4 w-4 items-center justify-center rounded-sm border border-primary',
+          isSelected
+            ? 'bg-primary text-primary-foreground'
+            : 'opacity-50 [&_svg]:invisible'
+        )}
+      >
+        <Check className={cn('h-4 w-4')} />
+      </div>
+      {item.Icon && (
+        <item.Icon className="mr-2 h-4 w-4 text-muted-foreground" />
+      )}
+      {item.icon}
+      <span>{item.label}</span>
+      {count && (
+        <span className="ml-auto flex h-4 w-4 items-center justify-center font-mono text-xs">
+          {count}
+        </span>
+      )}
+    </CommandItem>
   )
 }

@@ -30,6 +30,11 @@ export const hierarchicalFilterFn =
     return item?.checked === true
   }
 
+export function invertCheckedState(state: CheckedState) {
+  if (state === 'indeterminate') return true
+  return !state
+}
+
 function setChecked(checked: CheckedState, item?: HierarchicalFilter) {
   if (!item) return
   item.checked = checked

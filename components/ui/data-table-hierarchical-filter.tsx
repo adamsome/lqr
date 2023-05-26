@@ -108,7 +108,7 @@ function Item({
           {getName(path)}
         </CheckboxLabel>
       </div>
-      {childIDs.map((childID, i) => (
+      {childIDs.map((childID) => (
         <Item
           key={childID}
           item={children[childID]}
