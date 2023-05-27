@@ -1,4 +1,4 @@
-import { CategoryText } from '@/components/ingredients/category-text'
+import { IngredientPathText } from '@/components/ingredients/ingredient-path-text'
 import { CATEGORY_DICT } from '@/lib/consts'
 import { Ingredient } from '@/lib/types'
 
@@ -6,7 +6,7 @@ type Props = {
   ingredient: Ingredient
 }
 
-export function CategoryCell({ ingredient }: Props) {
+export function IngredientPathCell({ ingredient }: Props) {
   const { category, ancestors } = ingredient
   const categoryItem = {
     id: category as string,
@@ -15,5 +15,10 @@ export function CategoryCell({ ingredient }: Props) {
   const items = [categoryItem].concat(
     ancestors.map(({ id, name }) => ({ id, name }))
   )
-  return <CategoryText items={items} />
+  return (
+    <IngredientPathText
+      path={[category, ...ancestors.map(({ id }) => id)]}
+      full
+    />
+  )
 }

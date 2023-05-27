@@ -44,7 +44,7 @@ export function DataTableFacetFilter(props: Props) {
     <DataTableHierarchicalFilter
       {...props}
       defaultValue={defaultValue}
-      getName={getFacetNameFromPath}
+      renderName={getFacetNameFromPath}
     />
   )
 }

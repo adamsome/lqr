@@ -116,7 +116,7 @@ export function DataTableFacetFilterButton<TData, TValue>({
                     onSelect={() => column?.setFilterValue(undefined)}
                     className="justify-center text-center"
                   >
-                    Clear filters
+                    Clear All
                   </CommandItem>
                 </CommandGroup>
               </>

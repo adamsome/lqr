@@ -1,7 +1,7 @@
 import { CheckedState } from '@radix-ui/react-checkbox'
 import { Column } from '@tanstack/react-table'
 import { produce } from 'immer'
-import { ReactNode, useMemo } from 'react'
+import { ReactNode, useMemo, useState } from 'react'
 
 import { Button } from '@/components/ui/button'
 import { Checkbox } from '@/components/ui/checkbox'
@@ -25,25 +25,27 @@ import {
   updateHierarchicalFilter,
 } from '@/lib/hierarchical-filter'
 import { cn } from '@/lib/utils'
+import { useCommandState } from 'cmdk'
 
-interface DataTableFacetedFilter<TData, TValue> {
+type Props<TData, TValue> = {
   column?: Column<TData, TValue>
   title?: string
   icon?: ReactNode
   root: HierarchicalFilter
-  getName(path: string[]): string | undefined
+  renderName(path: string[], full?: boolean): ReactNode
   transformFacetsFn?: (facets: Map<any, number>) => Map<any, number>
 }
 
-// TODO: Fix search
 export function DataTableHierarchicalFacetFilterButton<TData, TValue>({
   column,
   title,
   icon,
   root,
-  getName,
+  renderName,
   transformFacetsFn,
-}: DataTableFacetedFilter<TData, TValue>) {
+}: Props<TData, TValue>) {
+  const [search, setSearch] = useState('')
+
   const filterValue = column?.getFilterValue() as HierarchicalFilter
   const selected = filterValue ?? root
 
@@ -52,7 +54,7 @@ export function DataTableHierarchicalFacetFilterButton<TData, TValue>({
     if (!rawFacets || !transformFacetsFn) return rawFacets
     return transformFacetsFn(rawFacets)
   }, [rawFacets, transformFacetsFn])
-  console.log('hfilter', facets, selected)
+  console.log('hfilter', facets, selected, search)
 
   const { checked, childIDs, children } = selected
 
@@ -84,14 +86,17 @@ export function DataTableHierarchicalFacetFilterButton<TData, TValue>({
       <PopoverContent
         className={cn(
           '[--padding:theme(spacing.4)] lg:[--padding:theme(spacing.8)]',
-          'h-[calc(var(--radix-popover-content-available-height)-var(--padding))]',
-          'w-64 p-0'
+          'w-80 p-0'
         )}
         align="start"
       >
         <Command className="relative">
-          <CommandInput placeholder={title} />
-          <CommandList>
+          <CommandInput
+            placeholder={title}
+            value={search}
+            onValueChange={setSearch}
+          />
+          <CommandList className="max-h-[calc(var(--radix-popover-content-available-height)-var(--padding)-theme(spacing.11)-3px)]">
             <CommandEmpty>No results found.</CommandEmpty>
             <CommandGroup>
               <CommandItem onSelect={() => handleSelect([], checked)}>
@@ -107,7 +112,8 @@ export function DataTableHierarchicalFacetFilterButton<TData, TValue>({
                   item={children[id]}
                   path={[]}
                   facets={facets}
-                  getName={getName}
+                  search={search}
+                  renderName={renderName}
                   onSelect={handleSelect}
                 />
               ))}
@@ -119,16 +125,17 @@ export function DataTableHierarchicalFacetFilterButton<TData, TValue>({
   )
 }
 
-type ItemProps<TData, TValue> = {
+type ItemProps = {
   item: HierarchicalFilter
   path: string[]
+  search: string
   facets?: Map<any, number>
-  getName(path: string[]): string | undefined
+  renderName(path: string[], full?: boolean): ReactNode
   onSelect(path: string[], state: CheckedState): void
 }
 
-function Item<TData, TValue>(props: ItemProps<TData, TValue>) {
-  const { item, path: prevPath = [], facets, getName, onSelect } = props
+function Item(props: ItemProps) {
+  const { item, path: prevPath = [], ...rest } = props
   const { id, childIDs, children } = item
   const path = [...prevPath, id]
 
@@ -136,44 +143,39 @@ function Item<TData, TValue>(props: ItemProps<TData, TValue>) {
     <>
       <ItemContent {...props} />
       {childIDs.map((childID) => (
-        <Item
-          key={childID}
-          item={children[childID]}
-          path={path}
-          facets={facets}
-          getName={getName}
-          onSelect={onSelect}
-        />
+        <Item {...rest} key={childID} item={children[childID]} path={path} />
       ))}
     </>
   )
 }
 
-function ItemContent<TData, TValue>({
+function ItemContent({
   item,
   path: prevPath = [],
+  search,
   facets,
-  getName,
+  renderName,
   onSelect,
-}: ItemProps<TData, TValue>) {
+}: ItemProps) {
   const { id, checked } = item
-  const level = prevPath.length
-  const path = [...prevPath, id]
 
   const count = facets?.get(id)
   if (!count) return null
 
+  const level = prevPath.length
+  const path = [...prevPath, id]
+
   return (
-    <CommandItem key={id} onSelect={() => onSelect(path, checked)}>
+    <CommandItem value={id} onSelect={() => onSelect(path, checked)}>
       <Checkbox
         className={cn('mr-2', {
-          'ml-6': level === 1,
-          'ml-12': level === 2,
-          'ml-18': level >= 3,
+          'ml-6': !search && level === 1,
+          'ml-12': !search && level === 2,
+          'ml-18': !search && level >= 3,
         })}
         checked={checked}
       />
-      <span>{getName(path)}</span>
+      <span>{renderName(path, Boolean(search))}</span>
       {count && (
         <span className="ml-auto flex h-4 w-4 items-center justify-center font-mono text-xs">
           {count}

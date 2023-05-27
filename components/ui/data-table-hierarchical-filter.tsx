@@ -2,6 +2,7 @@ import { CheckedState } from '@radix-ui/react-checkbox'
 import { Column } from '@tanstack/react-table'
 import { produce } from 'immer'
 import { ListFilter } from 'lucide-react'
+import { ReactNode } from 'react'
 
 import { CheckboxLabel } from '@/components/ui/checkbox-label'
 import {
@@ -19,13 +20,13 @@ import { cn } from '@/lib/utils'
 type Props<TData> = {
   column: Column<TData, unknown>
   defaultValue: HierarchicalFilter
-  getName(path: string[]): string | undefined
+  renderName(path: string[], full?: boolean): ReactNode
 }
 
 export function DataTableHierarchicalFilter<TData>({
   column,
   defaultValue,
-  getName,
+  renderName,
 }: Props<TData>) {
   const value = column.getFilterValue() as HierarchicalFilter
   const filter = value ?? defaultValue
@@ -66,7 +67,7 @@ export function DataTableHierarchicalFilter<TData>({
           <Item
             key={id}
             item={filter.children[id]}
-            getName={getName}
+            renderName={renderName}
             onCheckedChange={handleCheckedChange}
           />
         ))}
@@ -78,7 +79,7 @@ export function DataTableHierarchicalFilter<TData>({
 type ItemProps = {
   item: HierarchicalFilter
   path?: string[]
-  getName(path: string[]): string | undefined
+  renderName(path: string[], full?: boolean): ReactNode
   onCheckedChange(path: string[], checked: CheckedState): void
 }
 
@@ -86,7 +87,7 @@ function Item({
   item,
   path: prevPath = [],
   onCheckedChange,
-  getName,
+  renderName,
 }: ItemProps) {
   const { id, checked, childIDs, children } = item
   const level = prevPath.length
@@ -105,7 +106,7 @@ function Item({
           checked={checked}
           onCheckedChange={(checked) => onCheckedChange(path, checked)}
         >
-          {getName(path)}
+          {renderName(path)}
         </CheckboxLabel>
       </div>
       {childIDs.map((childID) => (
@@ -113,7 +114,7 @@ function Item({
           key={childID}
           item={children[childID]}
           path={path}
-          getName={getName}
+          renderName={renderName}
           onCheckedChange={onCheckedChange}
         />
       ))}
