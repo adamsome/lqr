@@ -39,9 +39,9 @@ export type Category =
   | 'agave'
   | 'beer'
   | 'bitters'
+  | 'brandy'
   | 'cane'
   | 'fortifiedwine'
-  | 'brandy'
   | 'grain'
   | 'liqueur'
   | 'wine'
@@ -77,9 +77,9 @@ export const CATEGORY_DICT: Record<Category, CategoryDef> = {
   agave: { name: 'Agave', type: 'spirit' },
   beer: { name: 'Beer', type: 'beerWine' },
   bitters: { name: 'Bitters', type: 'bitters' },
+  brandy: { name: 'Brandy', type: 'spirit' },
   cane: { name: 'Cane', type: 'spirit' },
   fortifiedwine: { name: 'Fortified wine', type: 'spirit' },
-  brandy: { name: 'Brandy', type: 'spirit' },
   grain: { name: 'Grain', type: 'spirit' },
   liqueur: { name: 'Liqueur', type: 'spirit' },
   wine: { name: 'Wine', type: 'beerWine' },

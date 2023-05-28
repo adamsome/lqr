@@ -123,6 +123,11 @@
     "type": "bitters"
   },
   {
+    "id": "brandy",
+    "name": "Brandy",
+    "type": "spirit"
+  },
+  {
     "id": "cane",
     "name": "Cane",
     "type": "spirit"
@@ -130,11 +135,6 @@
   {
     "id": "fortifiedwine",
     "name": "Fortified wine",
-    "type": "spirit"
-  },
-  {
-    "id": "brandy",
-    "name": "Brandy",
     "type": "spirit"
   },
   {

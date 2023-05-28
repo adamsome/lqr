@@ -275,6 +275,11 @@
     "category": "fruit"
   },
   {
+    "id": "fruit_pineapple",
+    "name": "Pineapple",
+    "category": "fruit"
+  },
+  {
     "id": "fruit_raspberry",
     "name": "Raspberry",
     "category": "fruit"
@@ -635,13 +640,13 @@
     "category": "syrup"
   },
   {
-    "id": "syrup_genadine",
-    "name": "Genadine",
+    "id": "syrup_ginger",
+    "name": "Ginger",
     "category": "syrup"
   },
   {
-    "id": "syrup_ginger",
-    "name": "Ginger",
+    "id": "syrup_grenadine",
+    "name": "Grenadine",
     "category": "syrup"
   },
   {
@@ -964,6 +969,129 @@
     "category": "bitters"
   },
   {
+    "id": "brandy_apple",
+    "name": "Apple",
+    "category": "brandy"
+  },
+  {
+    "id": "brandy_apricot",
+    "name": "Apricot",
+    "category": "brandy"
+  },
+  {
+    "id": "brandy_basil",
+    "name": "Basil",
+    "category": "brandy"
+  },
+  {
+    "id": "brandy_carrot",
+    "name": "Carrot",
+    "category": "brandy"
+  },
+  {
+    "id": "brandy_cherry",
+    "name": "Cherry",
+    "category": "brandy"
+  },
+  {
+    "id": "brandy_douglasfir",
+    "name": "Douglas fir",
+    "category": "brandy"
+  },
+  {
+    "id": "brandy_grape",
+    "name": "Grape",
+    "category": "brandy",
+    "hasChildren": true
+  },
+  {
+    "id": "brandy_grape_american",
+    "name": "American",
+    "category": "brandy",
+    "parent": "brandy_grape"
+  },
+  {
+    "id": "brandy_grape_armagnac",
+    "name": "Armagnac",
+    "category": "brandy",
+    "parent": "brandy_grape"
+  },
+  {
+    "id": "brandy_grape_cognac",
+    "name": "Cognac",
+    "category": "brandy",
+    "parent": "brandy_grape"
+  },
+  {
+    "id": "brandy_grape_eaudevie",
+    "name": "Eau-de-vie",
+    "category": "brandy",
+    "parent": "brandy_grape"
+  },
+  {
+    "id": "brandy_grape_grappa",
+    "name": "Grappa",
+    "category": "brandy",
+    "parent": "brandy_grape"
+  },
+  {
+    "id": "brandy_grape_pisco",
+    "name": "Pisco",
+    "category": "brandy",
+    "parent": "brandy_grape"
+  },
+  {
+    "id": "brandy_grape_spanish",
+    "name": "Spanish",
+    "category": "brandy",
+    "parent": "brandy_grape"
+  },
+  {
+    "id": "brandy_hazelnut",
+    "name": "Hazelnut",
+    "category": "brandy"
+  },
+  {
+    "id": "brandy_mango",
+    "name": "Mango",
+    "category": "brandy"
+  },
+  {
+    "id": "brandy_peach",
+    "name": "Peach",
+    "category": "brandy"
+  },
+  {
+    "id": "brandy_pear",
+    "name": "Pear",
+    "category": "brandy"
+  },
+  {
+    "id": "brandy_plum",
+    "name": "Plum",
+    "category": "brandy"
+  },
+  {
+    "id": "brandy_raspberry",
+    "name": "Raspberry",
+    "category": "brandy"
+  },
+  {
+    "id": "brandy_shiso",
+    "name": "Shiso",
+    "category": "brandy"
+  },
+  {
+    "id": "brandy_tomato",
+    "name": "Tomato",
+    "category": "brandy"
+  },
+  {
+    "id": "brandy_vanilla",
+    "name": "Vanilla",
+    "category": "brandy"
+  },
+  {
     "id": "cane_bataviaarrack",
     "name": "Batavia arrack",
     "category": "cane"
@@ -1082,129 +1210,6 @@
     "id": "fortifiedwine_sweetvermouth",
     "name": "Sweet Vermouth",
     "category": "fortifiedwine"
-  },
-  {
-    "id": "brandy_apple",
-    "name": "Apple",
-    "category": "brandy"
-  },
-  {
-    "id": "brandy_apricot",
-    "name": "Apricot",
-    "category": "brandy"
-  },
-  {
-    "id": "brandy_basil",
-    "name": "Basil",
-    "category": "brandy"
-  },
-  {
-    "id": "brandy_carrot",
-    "name": "Carrot",
-    "category": "brandy"
-  },
-  {
-    "id": "brandy_cherry",
-    "name": "Cherry",
-    "category": "brandy"
-  },
-  {
-    "id": "brandy_douglasfir",
-    "name": "Douglas fir",
-    "category": "brandy"
-  },
-  {
-    "id": "brandy_grape",
-    "name": "Grape",
-    "category": "brandy",
-    "hasChildren": true
-  },
-  {
-    "id": "brandy_grape_armagnac",
-    "name": "Armagnac",
-    "category": "brandy",
-    "parent": "brandy_grape"
-  },
-  {
-    "id": "brandy_grape_cognac",
-    "name": "Cognac",
-    "category": "brandy",
-    "parent": "brandy_grape"
-  },
-  {
-    "id": "brandy_grape_american",
-    "name": "American",
-    "category": "brandy",
-    "parent": "brandy_grape"
-  },
-  {
-    "id": "brandy_grape_spanish",
-    "name": "Spanish",
-    "category": "brandy",
-    "parent": "brandy_grape"
-  },
-  {
-    "id": "brandy_grape_eaudevie",
-    "name": "Eau-de-vie",
-    "category": "brandy",
-    "parent": "brandy_grape"
-  },
-  {
-    "id": "brandy_grape_grappa",
-    "name": "Grappa",
-    "category": "brandy",
-    "parent": "brandy_grape"
-  },
-  {
-    "id": "brandy_grape_pisco",
-    "name": "Pisco",
-    "category": "brandy",
-    "parent": "brandy_grape"
-  },
-  {
-    "id": "brandy_hazelnut",
-    "name": "Hazelnut",
-    "category": "brandy"
-  },
-  {
-    "id": "brandy_mango",
-    "name": "Mango",
-    "category": "brandy"
-  },
-  {
-    "id": "brandy_peach",
-    "name": "Peach",
-    "category": "brandy"
-  },
-  {
-    "id": "brandy_pear",
-    "name": "Pear",
-    "category": "brandy"
-  },
-  {
-    "id": "brandy_plum",
-    "name": "Plum",
-    "category": "brandy"
-  },
-  {
-    "id": "brandy_raspberry",
-    "name": "Raspberry",
-    "category": "brandy"
-  },
-  {
-    "id": "brandy_shiso",
-    "name": "Shiso",
-    "category": "brandy"
-  },
-  {
-    "id": "brandy_tomato",
-    "name": "Tomato",
-    "category": "brandy"
-  },
-  {
-    "id": "brandy_vanilla",
-    "name": "Vanilla",
-    "category": "brandy"
   },
   {
     "id": "grain_aquavit",
@@ -1435,13 +1440,18 @@
     "category": "liqueur"
   },
   {
-    "id": "liqueur_cherryheering",
-    "name": "Cherry heering",
+    "id": "liqueur_blackberry",
+    "name": "Blackberry",
     "category": "liqueur"
   },
   {
     "id": "liqueur_cherry",
     "name": "Cherry",
+    "category": "liqueur"
+  },
+  {
+    "id": "liqueur_cherryheering",
+    "name": "Cherry heering",
     "category": "liqueur"
   },
   {

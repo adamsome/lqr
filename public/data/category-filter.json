@@ -32,9 +32,9 @@
     "agave",
     "beer",
     "bitters",
+    "brandy",
     "cane",
     "fortifiedwine",
-    "brandy",
     "grain",
     "liqueur",
     "wine"
@@ -421,6 +421,7 @@
         "fruit_orange",
         "fruit_papaya",
         "fruit_pear",
+        "fruit_pineapple",
         "fruit_raspberry",
         "fruit_strawberry",
         "fruit_umeboshi"
@@ -518,6 +519,12 @@
         },
         "fruit_pear": {
           "id": "fruit_pear",
+          "checked": false,
+          "childIDs": [],
+          "children": {}
+        },
+        "fruit_pineapple": {
+          "id": "fruit_pineapple",
           "checked": false,
           "childIDs": [],
           "children": {}
@@ -1051,8 +1058,8 @@
         "syrup_coffey",
         "syrup_curry",
         "syrup_demerara",
-        "syrup_genadine",
         "syrup_ginger",
+        "syrup_grenadine",
         "syrup_guava",
         "syrup_honey",
         "syrup_jerk",
@@ -1147,14 +1154,14 @@
           "childIDs": [],
           "children": {}
         },
-        "syrup_genadine": {
-          "id": "syrup_genadine",
+        "syrup_ginger": {
+          "id": "syrup_ginger",
           "checked": false,
           "childIDs": [],
           "children": {}
         },
-        "syrup_ginger": {
-          "id": "syrup_ginger",
+        "syrup_grenadine": {
+          "id": "syrup_grenadine",
           "checked": false,
           "childIDs": [],
           "children": {}
@@ -1626,6 +1633,177 @@
         }
       }
     },
+    "brandy": {
+      "id": "brandy",
+      "checked": false,
+      "childIDs": [
+        "brandy_apple",
+        "brandy_apricot",
+        "brandy_basil",
+        "brandy_carrot",
+        "brandy_cherry",
+        "brandy_douglasfir",
+        "brandy_grape",
+        "brandy_hazelnut",
+        "brandy_mango",
+        "brandy_peach",
+        "brandy_pear",
+        "brandy_plum",
+        "brandy_raspberry",
+        "brandy_shiso",
+        "brandy_tomato",
+        "brandy_vanilla"
+      ],
+      "children": {
+        "brandy_apple": {
+          "id": "brandy_apple",
+          "checked": false,
+          "childIDs": [],
+          "children": {}
+        },
+        "brandy_apricot": {
+          "id": "brandy_apricot",
+          "checked": false,
+          "childIDs": [],
+          "children": {}
+        },
+        "brandy_basil": {
+          "id": "brandy_basil",
+          "checked": false,
+          "childIDs": [],
+          "children": {}
+        },
+        "brandy_carrot": {
+          "id": "brandy_carrot",
+          "checked": false,
+          "childIDs": [],
+          "children": {}
+        },
+        "brandy_cherry": {
+          "id": "brandy_cherry",
+          "checked": false,
+          "childIDs": [],
+          "children": {}
+        },
+        "brandy_douglasfir": {
+          "id": "brandy_douglasfir",
+          "checked": false,
+          "childIDs": [],
+          "children": {}
+        },
+        "brandy_grape": {
+          "id": "brandy_grape",
+          "checked": false,
+          "childIDs": [
+            "brandy_grape_american",
+            "brandy_grape_armagnac",
+            "brandy_grape_cognac",
+            "brandy_grape_eaudevie",
+            "brandy_grape_grappa",
+            "brandy_grape_pisco",
+            "brandy_grape_spanish"
+          ],
+          "children": {
+            "brandy_grape_american": {
+              "id": "brandy_grape_american",
+              "checked": false,
+              "childIDs": [],
+              "children": {}
+            },
+            "brandy_grape_armagnac": {
+              "id": "brandy_grape_armagnac",
+              "checked": false,
+              "childIDs": [],
+              "children": {}
+            },
+            "brandy_grape_cognac": {
+              "id": "brandy_grape_cognac",
+              "checked": false,
+              "childIDs": [],
+              "children": {}
+            },
+            "brandy_grape_eaudevie": {
+              "id": "brandy_grape_eaudevie",
+              "checked": false,
+              "childIDs": [],
+              "children": {}
+            },
+            "brandy_grape_grappa": {
+              "id": "brandy_grape_grappa",
+              "checked": false,
+              "childIDs": [],
+              "children": {}
+            },
+            "brandy_grape_pisco": {
+              "id": "brandy_grape_pisco",
+              "checked": false,
+              "childIDs": [],
+              "children": {}
+            },
+            "brandy_grape_spanish": {
+              "id": "brandy_grape_spanish",
+              "checked": false,
+              "childIDs": [],
+              "children": {}
+            }
+          }
+        },
+        "brandy_hazelnut": {
+          "id": "brandy_hazelnut",
+          "checked": false,
+          "childIDs": [],
+          "children": {}
+        },
+        "brandy_mango": {
+          "id": "brandy_mango",
+          "checked": false,
+          "childIDs": [],
+          "children": {}
+        },
+        "brandy_peach": {
+          "id": "brandy_peach",
+          "checked": false,
+          "childIDs": [],
+          "children": {}
+        },
+        "brandy_pear": {
+          "id": "brandy_pear",
+          "checked": false,
+          "childIDs": [],
+          "children": {}
+        },
+        "brandy_plum": {
+          "id": "brandy_plum",
+          "checked": false,
+          "childIDs": [],
+          "children": {}
+        },
+        "brandy_raspberry": {
+          "id": "brandy_raspberry",
+          "checked": false,
+          "childIDs": [],
+          "children": {}
+        },
+        "brandy_shiso": {
+          "id": "brandy_shiso",
+          "checked": false,
+          "childIDs": [],
+          "children": {}
+        },
+        "brandy_tomato": {
+          "id": "brandy_tomato",
+          "checked": false,
+          "childIDs": [],
+          "children": {}
+        },
+        "brandy_vanilla": {
+          "id": "brandy_vanilla",
+          "checked": false,
+          "childIDs": [],
+          "children": {}
+        }
+      }
+    },
     "cane": {
       "id": "cane",
       "checked": false,
@@ -1792,177 +1970,6 @@
         },
         "fortifiedwine_sweetvermouth": {
           "id": "fortifiedwine_sweetvermouth",
-          "checked": false,
-          "childIDs": [],
-          "children": {}
-        }
-      }
-    },
-    "brandy": {
-      "id": "brandy",
-      "checked": false,
-      "childIDs": [
-        "brandy_apple",
-        "brandy_apricot",
-        "brandy_basil",
-        "brandy_carrot",
-        "brandy_cherry",
-        "brandy_douglasfir",
-        "brandy_grape",
-        "brandy_hazelnut",
-        "brandy_mango",
-        "brandy_peach",
-        "brandy_pear",
-        "brandy_plum",
-        "brandy_raspberry",
-        "brandy_shiso",
-        "brandy_tomato",
-        "brandy_vanilla"
-      ],
-      "children": {
-        "brandy_apple": {
-          "id": "brandy_apple",
-          "checked": false,
-          "childIDs": [],
-          "children": {}
-        },
-        "brandy_apricot": {
-          "id": "brandy_apricot",
-          "checked": false,
-          "childIDs": [],
-          "children": {}
-        },
-        "brandy_basil": {
-          "id": "brandy_basil",
-          "checked": false,
-          "childIDs": [],
-          "children": {}
-        },
-        "brandy_carrot": {
-          "id": "brandy_carrot",
-          "checked": false,
-          "childIDs": [],
-          "children": {}
-        },
-        "brandy_cherry": {
-          "id": "brandy_cherry",
-          "checked": false,
-          "childIDs": [],
-          "children": {}
-        },
-        "brandy_douglasfir": {
-          "id": "brandy_douglasfir",
-          "checked": false,
-          "childIDs": [],
-          "children": {}
-        },
-        "brandy_grape": {
-          "id": "brandy_grape",
-          "checked": false,
-          "childIDs": [
-            "brandy_grape_armagnac",
-            "brandy_grape_cognac",
-            "brandy_grape_american",
-            "brandy_grape_spanish",
-            "brandy_grape_eaudevie",
-            "brandy_grape_grappa",
-            "brandy_grape_pisco"
-          ],
-          "children": {
-            "brandy_grape_armagnac": {
-              "id": "brandy_grape_armagnac",
-              "checked": false,
-              "childIDs": [],
-              "children": {}
-            },
-            "brandy_grape_cognac": {
-              "id": "brandy_grape_cognac",
-              "checked": false,
-              "childIDs": [],
-              "children": {}
-            },
-            "brandy_grape_american": {
-              "id": "brandy_grape_american",
-              "checked": false,
-              "childIDs": [],
-              "children": {}
-            },
-            "brandy_grape_spanish": {
-              "id": "brandy_grape_spanish",
-              "checked": false,
-              "childIDs": [],
-              "children": {}
-            },
-            "brandy_grape_eaudevie": {
-              "id": "brandy_grape_eaudevie",
-              "checked": false,
-              "childIDs": [],
-              "children": {}
-            },
-            "brandy_grape_grappa": {
-              "id": "brandy_grape_grappa",
-              "checked": false,
-              "childIDs": [],
-              "children": {}
-            },
-            "brandy_grape_pisco": {
-              "id": "brandy_grape_pisco",
-              "checked": false,
-              "childIDs": [],
-              "children": {}
-            }
-          }
-        },
-        "brandy_hazelnut": {
-          "id": "brandy_hazelnut",
-          "checked": false,
-          "childIDs": [],
-          "children": {}
-        },
-        "brandy_mango": {
-          "id": "brandy_mango",
-          "checked": false,
-          "childIDs": [],
-          "children": {}
-        },
-        "brandy_peach": {
-          "id": "brandy_peach",
-          "checked": false,
-          "childIDs": [],
-          "children": {}
-        },
-        "brandy_pear": {
-          "id": "brandy_pear",
-          "checked": false,
-          "childIDs": [],
-          "children": {}
-        },
-        "brandy_plum": {
-          "id": "brandy_plum",
-          "checked": false,
-          "childIDs": [],
-          "children": {}
-        },
-        "brandy_raspberry": {
-          "id": "brandy_raspberry",
-          "checked": false,
-          "childIDs": [],
-          "children": {}
-        },
-        "brandy_shiso": {
-          "id": "brandy_shiso",
-          "checked": false,
-          "childIDs": [],
-          "children": {}
-        },
-        "brandy_tomato": {
-          "id": "brandy_tomato",
-          "checked": false,
-          "childIDs": [],
-          "children": {}
-        },
-        "brandy_vanilla": {
-          "id": "brandy_vanilla",
           "checked": false,
           "childIDs": [],
           "children": {}
@@ -2145,8 +2152,9 @@
         "liqueur_basil",
         "liqueur_bergamot",
         "liqueur_biscotti",
-        "liqueur_cherryheering",
+        "liqueur_blackberry",
         "liqueur_cherry",
+        "liqueur_cherryheering",
         "liqueur_coconut",
         "liqueur_coffeebean",
         "liqueur_cranberry",
@@ -2309,14 +2317,20 @@
           "childIDs": [],
           "children": {}
         },
-        "liqueur_cherryheering": {
-          "id": "liqueur_cherryheering",
+        "liqueur_blackberry": {
+          "id": "liqueur_blackberry",
           "checked": false,
           "childIDs": [],
           "children": {}
         },
         "liqueur_cherry": {
           "id": "liqueur_cherry",
+          "checked": false,
+          "childIDs": [],
+          "children": {}
+        },
+        "liqueur_cherryheering": {
+          "id": "liqueur_cherryheering",
           "checked": false,
           "childIDs": [],
           "children": {}
