@@ -3,22 +3,32 @@ Image,ID,Name,Type,Material,Style,Substyle,Method,Aging,Origin,Stock,Want,Refere
 ,1010,Beefeater,Gin,Grains w/ juniper & botanicals,London dry gin,,Column Still,Unaged,UK,1,1,"D+C: WH, D+C: Codex"
 ,1020,Tanqueray,Gin,Grains w/ juniper & botanicals,London dry gin,,Column Still,Unaged,UK,,8,"D+C: WH, D+C: Codex"
 ,1030,Fords,Gin,Grains w/ juniper & botanicals,London dry gin,,Column Still,Unaged,UK,,8,"D+C: WH, D+C: Codex"
+,1035,Broker's Gin,Gin,Grains w/ juniper & botanicals,London dry gin,,Column Still,Unaged,UK,,8,D+C: WH
 ,1040,Bimini,Gin,Grains w/ juniper & botanicals,Modern gin,,Column Still,Unaged,USA,,7,D+C: WH
 ,1050,Tanqueray 10,Gin,Grains w/ juniper & botanicals,London dry gin,,Column Still,Unaged,UK,,6,D+C: WH
+,1055,Perry’s Tot Navy Strength,Gin,Grains w/ juniper & botanicals,London dry gin,Overproof,Column Still,Unaged,UK,,6,D+C: WH
+,1056,Old Raj 110-proof,Gin,Grains w/ juniper & botanicals,London dry gin,Overproof,Column Still,Unaged,UK,,6,D+C: WH
 ,1060,Monkey 47,Gin,Grains w/ juniper & botanicals,Modern gin,,Column Still,Unaged,Germany,,7,D+C: WH
+,1065,Suntory Roku,Gin,Grains w/ juniper & botanicals,Modern gin,,Column Still,Unaged,Japan,,7,D+C: WH
 ,1070,St. George Dry Rye,Gin,Grains w/ juniper & botanicals,Modern gin,,Column Still,Unaged,USA,,6,"D+C: WH, D+C: Codex"
 ,1080,St. George Terroir,Gin,Grains w/ juniper & botanicals,Modern gin,,Column Still,Unaged,USA,,6,"D+C: WH, D+C: Codex"
 ,1090,Four Pillars Navy Strength,Gin,Grains w/ juniper & botanicals,Modern gin,,Column Still,Unaged,Australia,,8,D+C: WH
+,1095,Greenhook Ginsmiths Old Tom,Gin,Grains w/ juniper & botanicals,Old Tom,,Column Still,Unaged,Australia,,8,D+C: WH
 ,1100,Siembra Valles Blanco,Agave,Blue agave,Tequila,Blanco,Pot Still,Unaged,Mexico,,8,D+C: WH
+,1105,Siembra Valles Ancestral,Agave,Blue agave,Tequila,Blanco,Pot Still,Unaged,Mexico,,8,D+C: WH
 ,1110,Fortaleza Blanco,Agave,Blue agave,Tequila,Blanco,Pot Still,Unaged,Mexico,,8,D+C: WH
 ,1120,Cascahuin 48 Plata,Agave,Blue agave,Tequila,Blanco,Pot Still,Unaged,Mexico,,8,D+C: WH
+,1125,Calle 23,Agave,Blue agave,Tequila,Blanco,Pot Still,Unaged,Mexico,,8,D+C: WH
 ,1130,Olmeca Altos Blanco,Agave,Blue agave,Tequila,Blanco,Pot Still,Unaged,Mexico,,8,D+C: WH
 ,1140,Cimarron Blanco,Agave,Blue agave,Tequila,Blanco,Pot Still,Unaged,Mexico,,6,"D+C: WH, D+C: Codex"
 ,1150,Tequila Ocho Blanco,Agave,Blue agave,Tequila,Blanco,Pot Still,Unaged,Mexico,,8,D+C: WH
 ,1160,El Tesoro Blanco,Agave,Blue agave,Tequila,Blanco,Pot Still,Unaged,Mexico,,8,D+C: WH
 ,1170,Tapatio Blanco,Agave,Blue agave,Tequila,Blanco,Pot Still,Unaged,Mexico,1,1,D+C: WH
+,1172,Tapatio 110-proof,Agave,Blue agave,Tequila,Blanco,Pot Still,Unaged,Mexico,,6,
 ,1180,Siembra Azul Blanco,Agave,Blue agave,Tequila,Blanco,Pot Still,Unaged,Mexico,,6,"D+C: WH, D+C: Codex"
 ,1190,Siete Leguas Blanco,Agave,Blue agave,Tequila,Blanco,Pot Still,Unaged,Mexico,,6,"D+C: WH, D+C: Codex"
+,1195,El Tesoro Reposado,Agave,Blue agave,Tequila,Reposado,Pot Still,Lightly Aged,Mexico,,8,D+C: WH
+,1197,Tapatío Anejo,Agave,Blue agave,Tequila,Anejo,Pot Still,Aged,Mexico,,8,D+C: WH
 ,1200,Banhez,Agave,Espadín agave,Mezcal,Joven,Pot Still,Unaged,Mexico,1,4,
 ,1210,Del Maguey Vida,Agave,Espadín agave,Mezcal,Joven,Pot Still,Unaged,Mexico,,6,"D+C: WH, D+C: Codex"
 ,1220,Del Maguey Santo Domingo Albarradas,Agave,Espadín agave,Mezcal,Joven,Pot Still,Unaged,Mexico,,8,D+C: WH
@@ -29,15 +39,17 @@ Image,ID,Name,Type,Material,Style,Substyle,Method,Aging,Origin,Stock,Want,Refere
 ,1270,Palenqueros,Agave,Espadín agave,Mezcal,Joven,Pot Still,Unaged,Mexico,,7,D+C: WH
 ,1280,Mezontes,Agave,Other agave,Mezcal,Joven,Pot Still,Unaged,Mexico,,7,D+C: WH
 ,1290,Lalocura,Agave,Other agave,Mezcal,Joven,Pot Still,Unaged,Mexico,,7,D+C: WH
+,1295,Mezcal Vago Elote,Agave,Other agave,Mezcal,Joven,Pot Still,Unaged,Mexico,,7,D+C: WH
 ,1300,Hamilton Jamaican Gold,Rum,Molasses & evaporated cane,Jamaican rum,,Pot Still,Unaged,Jamaica,,4,D+C: Codex
 ,1310,Owney's Original,Rum,Molasses & evaporated cane,Rum,,Pot Still,Unaged,"New York, USA",,9,
 ,1320,Prichard's Crystal Rum,Rum,Molasses & evaporated cane,Rum,,Pot Still,Unaged,"Tennessee, USA",,9,
 ,1330,Privateer Silver Reserve,Rum,Molasses & evaporated cane,Rum,,Pot Still,Unaged,"Massachusetts, USA",,9,
-,1340,Rum Society #40,Rum,Molasses & evaporated cane,English rum,,Pot Still,Unaged,Guyana,,9,
+,1340,Rum Society #40,Rum,Molasses & evaporated cane,Demerara rum,,Pot Still,Unaged,Guyana,,9,
 ,1350,Rum Society #62,Rum,Molasses & evaporated cane,Rum,,Pot Still,Unaged,Regional Blend,,9,
 ,1360,Sammy's Beach Bar Light,Rum,Molasses & evaporated cane,Rum,,Pot Still,Unaged,"Hawaii, USA",,9,
 ,1370,Sergeant Classick White,Rum,Molasses & evaporated cane,Rum,,Pot Still,Unaged,"California, USA",,9,
-,1380,Wray & Nephew (overproof),Rum,Molasses & evaporated cane,Jamaican rum,,Pot Still,Unaged,Jamaica,,4,"D+C: WH, D+C: Codex"
+,1380,Wray & Nephew (overproof),Rum,Molasses & evaporated cane,Jamaican rum,Overproof,Pot Still,Unaged,Jamaica,,4,"D+C: WH, D+C: Codex"
+,1385,Rum Fire Jamaican Overproof,Rum,Molasses & evaporated cane,Jamaican rum,Overproof,Pot Still,Unaged,Jamaica,,4,
 ,1390,Grand Canyon Distillery Rum,Rum,Molasses & evaporated cane,Rum,,Pot Still,Unaged,"Arizona, USA",,9,
 ,1400,Ballast Point Three Sheets Aged,Rum,Molasses & evaporated cane,Rum,,Pot Still,Lightly Aged,"California, USA",,9,
 ,1410,Diablo’s Shadow Navy Strength,Rum,Molasses & evaporated cane,Rum,,Pot Still,Lightly Aged,"California, USA",,9,
@@ -57,10 +69,10 @@ Image,ID,Name,Type,Material,Style,Substyle,Method,Aging,Origin,Stock,Want,Refere
 ,1550,Berry Bros & Rudd Berrys' Own,Rum,Molasses & evaporated cane,Rum,,Pot Still,Aged,Various,,9,
 ,1560,Cadenhead,Rum,Molasses & evaporated cane,Rum,,Pot Still,Aged,Various,,9,
 ,1570,Duncan Taylor,Rum,Molasses & evaporated cane,Rum,,Pot Still,Aged,Various,,9,
-,1580,El Dorado Single Barrel PM,Rum,Molasses & evaporated cane,English rum,,Pot Still,Aged,Guyana,,9,
+,1580,El Dorado Single Barrel PM,Rum,Molasses & evaporated cane,Demerara rum,,Pot Still,Aged,Guyana,,9,
 ,1590,Hamilton St. Lucia,Rum,Molasses & evaporated cane,Rum,,Pot Still,Aged,St. Lucia,,9,
 ,1600,Mezan,Rum,Molasses & evaporated cane,Rum,,Pot Still,Aged,Various,,9,
-,1610,Plantation Xaymaca,Rum,Molasses & evaporated cane,Rum,,Pot Still,Aged,Various,,4,"Suderman, Lost Lake"
+,1610,Plantation Xaymaca,Rum,Molasses & evaporated cane,Jamaican rum,,Pot Still,Aged,Various,,4,"Suderman, Lost Lake"
 ,1620,Samaroli,Rum,Molasses & evaporated cane,Rum,,Pot Still,Aged,Various,,9,
 ,1630,St. Nicholas Abbey 5 Year,Rum,Molasses & evaporated cane,Rum,,Pot Still,Aged,Barbados,,6,
 ,1640,Appleton Estate 50 Year,Rum,Molasses & evaporated cane,Jamaican rum,,Pot Still,Long Aged,Jamaica,,9,
@@ -69,20 +81,20 @@ Image,ID,Name,Type,Material,Style,Substyle,Method,Aging,Origin,Stock,Want,Refere
 ,1670,The Black Tot,Rum,Molasses & evaporated cane,Rum,,Pot Still,Long Aged,Regional Blend,,9,
 ,1680,Appleton Estate Signature Blend,Rum,Molasses & evaporated cane,Jamaican rum,,Blended,Lightly Aged,Jamaica,1,2,"D+C: WH, Suderman"
 ,1690,Banks 5 Island,Rum,Molasses & evaporated cane,Rum,,Blended,Lightly Aged,Regional Blend,,9,
-,1700,Banks 7 Island,Rum,Molasses & evaporated cane,Rum,,Blended,Lightly Aged,Regional Blend,,9,
+,1700,Banks 7 Island,Rum,Molasses & evaporated cane,Rum,,Blended,Aged,Regional Blend,,9,
 ,1710,Ron Cartavio Selecto 5,Rum,Molasses & evaporated cane,Spanish rum,,Blended,Lightly Aged,Peru,,9,
 ,1720,Chairman’s Reserve Silver,Rum,Molasses & evaporated cane,Rum,,Blended,Lightly Aged,St. Lucia,,9,
-,1730,Cockspur Fine,Rum,Molasses & evaporated cane,Rum,,Blended,Lightly Aged,Barbados,,6,
+,1730,Cockspur Fine,Rum,Molasses & evaporated cane,Rum,,Blended,Aged,Barbados,,6,
 ,1740,Denizen,Rum,Molasses & evaporated cane,Rum,,Blended,Lightly Aged,Regional Blend,,9,
 ,1750,Diplomatico Añejo,Rum,Molasses & evaporated cane,Spanish rum,,Blended,Lightly Aged,Venezuela,,9,
 ,1760,Diplomatico Blanco,Rum,Molasses & evaporated cane,Spanish rum,,Blended,Lightly Aged,Venezuela,,9,
-,1770,El Dorado 3 Year,Rum,Molasses & evaporated cane,English rum,,Blended,Lightly Aged,Guyana,,5,"D+C: WH, D+C: Codex"
-,1780,Mount Gay Eclipse,Rum,Molasses & evaporated cane,Rum,,Blended,Lightly Aged,Barbados,,9,
+,1770,El Dorado 3 Year,Rum,Molasses & evaporated cane,Demerara rum,,Blended,Lightly Aged,Guyana,,5,"D+C: WH, D+C: Codex"
+,1780,Mount Gay Eclipse,Rum,Molasses & evaporated cane,Rum,,Blended,Aged,Barbados,,9,
 ,1790,Plantation 3 Stars,Rum,Molasses & evaporated cane,Spanish rum,,Blended,Lightly Aged,Regional Blend,,6,D+C: Codex
 ,1800,The Real McCoy 3-Year,Rum,Molasses & evaporated cane,Rum,,Blended,Lightly Aged,Barbados,,5,
 ,1810,Santa Teresa Claro,Rum,Molasses & evaporated cane,Spanish rum,,Blended,Lightly Aged,Venezuela,,9,
-,1820,Appleton Estate Reserve Blend,Rum,Molasses & evaporated cane,Jamaican rum,,Blended,Aged,Jamaica,,6,"D+C: Codex, Suderman, Beachbum"
-,1830,Appleton Estate Rare Blend 12,Rum,Molasses & evaporated cane,Jamaican rum,,Blended,Aged,Jamaica,,9,
+,1820,Appleton Estate Reserve Blend,Rum,Molasses & evaporated cane,Rum,,Blended,Aged,Jamaica,,6,"D+C: Codex, Suderman, Beachbum"
+,1830,Appleton Estate Rare Blend 12,Rum,Molasses & evaporated cane,Rum,,Blended,Aged,Jamaica,,9,
 ,1840,Cadenhead Green Label,Rum,Molasses & evaporated cane,Rum,,Blended,Aged,Regional Blend,,9,
 ,1850,Cartavio Solera 12,Rum,Molasses & evaporated cane,Spanish rum,,Blended,Aged,Peru,,9,
 ,1860,Cartavio 18,Rum,Molasses & evaporated cane,Spanish rum,,Blended,Aged,Peru,,9,
@@ -97,9 +109,9 @@ Image,ID,Name,Type,Material,Style,Substyle,Method,Aging,Origin,Stock,Want,Refere
 ,1950,Doorly's XO,Rum,Molasses & evaporated cane,Rum,,Blended,Aged,Barbados,,9,
 ,1960,Dos Maderas 5+3,Rum,Molasses & evaporated cane,Rum,,Blended,Aged,Regional Blend,,9,
 ,1970,Dos Maderas 5+5,Rum,Molasses & evaporated cane,Rum,,Blended,Aged,Regional Blend,,9,
-,1980,El Dorado 5 Year,Rum,Molasses & evaporated cane,English rum,,Blended,Aged,Guyana,,9,
-,1990,El Dorado 8 Year,Rum,Molasses & evaporated cane,English rum,,Blended,Aged,Guyana,,6,Suderman
-,2000,El Dorado 12 Year,Rum,Molasses & evaporated cane,English rum,,Blended,Aged,Guyana,1,1,Suderman
+,1980,El Dorado 5 Year,Rum,Molasses & evaporated cane,Demerara rum,,Blended,Aged,Guyana,,9,
+,1990,El Dorado 8 Year,Rum,Molasses & evaporated cane,Demerara rum,,Blended,Aged,Guyana,,6,Suderman
+,2000,El Dorado 12 Year,Rum,Molasses & evaporated cane,Demerara rum,,Blended,Aged,Guyana,1,1,Suderman
 ,2010,Kaniché XO,Rum,Molasses & evaporated cane,Rum,,Blended,Aged,Barbados,,9,
 ,2020,Mount Gay Black Barrel,Rum,Molasses & evaporated cane,Rum,,Blended,Aged,Barbados,,9,
 ,2030,Mount Gay XO,Rum,Molasses & evaporated cane,Rum,,Blended,Aged,Barbados,,9,
@@ -112,45 +124,46 @@ Image,ID,Name,Type,Material,Style,Substyle,Method,Aging,Origin,Stock,Want,Refere
 ,2100,The Real McCoy 12 Year,Rum,Molasses & evaporated cane,Rum,,Blended,Aged,Barbados,,6,
 ,2110,RL Seale Foursquare 9 Year Port Cask Finish,Rum,Molasses & evaporated cane,Rum,,Blended,Aged,Barbados,,5,
 ,2120,RL Seale's 10 Year,Rum,Molasses & evaporated cane,Rum,,Blended,Aged,Barbados,,9,
+,2125,Scarlet Ibis,Rum,Molasses & evaporated cane,Rum,,Blended,Aged,Trinidad,,9,
 ,2130,Appleton Estate 21,Rum,Molasses & evaporated cane,Jamaican rum,,Blended,Long Aged,Jamaica,,9,
 ,2140,Banks The Endeavour,Rum,Molasses & evaporated cane,Rum,,Blended,Long Aged,Regional Blend,,9,
 ,2150,Cartavio XO,Rum,Molasses & evaporated cane,Spanish rum,,Blended,Long Aged,Peru,,9,
-,2160,El Dorado Special Reserve 15 Year,Rum,Molasses & evaporated cane,English rum,,Blended,Long Aged,Guyana,,6,D+C: Codex
-,2170,El Dorado 21 Year,Rum,Molasses & evaporated cane,English rum,,Blended,Long Aged,Guyana,,9,
-,2180,El Dorado 25 Year,Rum,Molasses & evaporated cane,English rum,,Blended,Long Aged,Guyana,,9,
+,2160,El Dorado Special Reserve 15 Year,Rum,Molasses & evaporated cane,Demerara rum,,Blended,Long Aged,Guyana,,6,D+C: Codex
+,2170,El Dorado 21 Year,Rum,Molasses & evaporated cane,Demerara rum,,Blended,Long Aged,Guyana,,9,
+,2180,El Dorado 25 Year,Rum,Molasses & evaporated cane,Demerara rum,,Blended,Long Aged,Guyana,,9,
 ,2190,Mount Gay 1703,Rum,Molasses & evaporated cane,Rum,,Blended,Long Aged,Barbados,,9,
 ,2200,Pusser’s 15,Rum,Molasses & evaporated cane,Rum,,Blended,Long Aged,Regional Blend,,9,
 ,2210,Santa Teresa 1796,Rum,Molasses & evaporated cane,Spanish rum,,Blended,Long Aged,Venezuela,,4,D+C: WH
 ,2220,Revelation Rum Smooth Ambler,Rum,Molasses & evaporated cane,Jamaican rum,,Blended,Long Aged,Jamaica,,9,
-,2230,St. Lucia Distillers 1931,Rum,Molasses & evaporated cane,English rum,,Blended,Long Aged,St. Lucia,,9,
+,2230,St. Lucia Distillers 1931,Rum,Molasses & evaporated cane,Demerara rum,,Blended,Long Aged,St. Lucia,,9,
 ,2240,Bacardi Heritage 1909,Rum,Molasses & evaporated cane,Spanish rum,,Column Still,Lightly Aged,Mexico,,9,
 ,2250,Caliche,Rum,Molasses & evaporated cane,Spanish rum,,Column Still,Lightly Aged,Puerto Rico,,9,
 ,2260,Caña Brava,Rum,Molasses & evaporated cane,Spanish rum,,Column Still,Lightly Aged,Panama,,7,D+C: Codex
 ,2270,Crusoe Organic White,Rum,Molasses & evaporated cane,Spanish rum,,Column Still,Lightly Aged,"California, USA",,9,
-,2280,Cruzan Estate Diamond,Rum,Molasses & evaporated cane,English rum,,Column Still,Lightly Aged,US Virgin Islands,,9,
+,2280,Cruzan Estate Diamond,Rum,Molasses & evaporated cane,Rum,,Column Still,Lightly Aged,US Virgin Islands,,9,
 ,2290,Don Q Cristal,Rum,Molasses & evaporated cane,Spanish rum,,Column Still,Lightly Aged,Puerto Rico,0.1,6,
 ,2300,Facundo Neo,Rum,Molasses & evaporated cane,Spanish rum,,Column Still,Lightly Aged,Bahamas/Puerto Rico,,9,
 ,2310,Flor de Caña Extra Dry 4 Year,Rum,Molasses & evaporated cane,Spanish rum,,Column Still,Lightly Aged,Nicaragua,,4,"D+C: Codex, Suderman"
 ,2320,Ron Del Barrilito 2 Star,Rum,Molasses & evaporated cane,Spanish rum,,Column Still,Lightly Aged,Puerto Rico,,9,
-,2330,Scarlett Ibis,Rum,Molasses & evaporated cane,English rum,,Column Still,Lightly Aged,Trinidad,,9,
-,2340,Admiral Rodney,Rum,Molasses & evaporated cane,English rum,,Column Still,Aged,St. Lucia,,9,
-,2350,Angostura 1824,Rum,Molasses & evaporated cane,English rum,,Column Still,Aged,Trinidad,,9,
-,2360,Angostura 1919,Rum,Molasses & evaporated cane,English rum,,Column Still,Aged,Trinidad,,9,
-,2370,Angostura 5 Year,Rum,Molasses & evaporated cane,English rum,,Column Still,Aged,Trinidad,,9,
-,2380,Angostura 7 Year,Rum,Molasses & evaporated cane,English rum,,Column Still,Aged,Trinidad,,9,
+,2330,Scarlett Ibis,Rum,Molasses & evaporated cane,Demerara rum,,Column Still,Lightly Aged,Trinidad,,9,
+,2340,Admiral Rodney,Rum,Molasses & evaporated cane,Demerara rum,,Column Still,Aged,St. Lucia,,9,
+,2350,Angostura 1824,Rum,Molasses & evaporated cane,Rum,,Column Still,Aged,Trinidad,,9,
+,2360,Angostura 1919,Rum,Molasses & evaporated cane,Rum,,Column Still,Aged,Trinidad,,9,
+,2370,Angostura 5 Year,Rum,Molasses & evaporated cane,Rum,,Column Still,Aged,Trinidad,,9,
+,2380,Angostura 7 Year,Rum,Molasses & evaporated cane,Rum,,Column Still,Aged,Trinidad,,9,
 ,2390,Bacardi 8,Rum,Molasses & evaporated cane,Spanish rum,,Column Still,Aged,Bahamas/Puerto Rico,,9,
 ,2400,Bacardi Reserva Limitada,Rum,Molasses & evaporated cane,Spanish rum,,Column Still,Aged,Bahamas/Puerto Rico,,9,
 ,2410,Brugal 1888,Rum,Molasses & evaporated cane,Spanish rum,,Column Still,Aged,Dominican Republic,,9,
 ,2420,Brugal Extra Viejo,Rum,Molasses & evaporated cane,Spanish rum,,Column Still,Aged,Dominican Republic,,9,
 ,2430,Caña Brava 7 Year,Rum,Molasses & evaporated cane,Spanish rum,,Column Still,Aged,Panama,,9,
-,2440,Cruzan Single Barrel,Rum,Molasses & evaporated cane,English rum,,Column Still,Aged,US Virgin Islands,,9,
+,2440,Cruzan Single Barrel,Rum,Molasses & evaporated cane,Rum,,Column Still,Aged,US Virgin Islands,,9,
 ,2450,Don Pancho Origines 8,Rum,Molasses & evaporated cane,Spanish rum,,Column Still,Aged,Panama,,9,
 ,2460,Don Q Añejo,Rum,Molasses & evaporated cane,Spanish rum,,Column Still,Aged,Puerto Rico,,9,
 ,2470,Don Q Gran Añejo,Rum,Molasses & evaporated cane,Spanish rum,,Column Still,Aged,Puerto Rico,,9,
-,2480,El Dorado Single Barrel EHP,Rum,Molasses & evaporated cane,English rum,,Column Still,Aged,Guyana,,9,
-,2490,El Dorado Single Barrel ICBU,Rum,Molasses & evaporated cane,English rum,,Column Still,Aged,Guyana,,9,
-,2500,English Harbour 5,Rum,Molasses & evaporated cane,English rum,,Column Still,Aged,Antigua,,9,
-,2510,English Harbour 10,Rum,Molasses & evaporated cane,English rum,,Column Still,Aged,Antigua,,9,
+,2480,El Dorado Single Barrel EHP,Rum,Molasses & evaporated cane,Demerara rum,,Column Still,Aged,Guyana,,9,
+,2490,El Dorado Single Barrel ICBU,Rum,Molasses & evaporated cane,Demerara rum,,Column Still,Aged,Guyana,,9,
+,2500,English Harbour 5,Rum,Molasses & evaporated cane,Rum,,Column Still,Aged,Antigua,,9,
+,2510,English Harbour 10,Rum,Molasses & evaporated cane,Rum,,Column Still,Aged,Antigua,,9,
 ,2520,Facundo Eximo,Rum,Molasses & evaporated cane,Spanish rum,,Column Still,Aged,Bahamas/Puerto Rico,,9,
 ,2530,Facundo Exquisito,Rum,Molasses & evaporated cane,Spanish rum,,Column Still,Aged,Bahamas/Puerto Rico,,9,
 ,2540,Facundo Paraiso,Rum,Molasses & evaporated cane,Spanish rum,,Column Still,Aged,Bahamas/Puerto Rico,,9,
@@ -176,29 +189,29 @@ Image,ID,Name,Type,Material,Style,Substyle,Method,Aging,Origin,Stock,Want,Refere
 ,2740,Zafra,Rum,Molasses & evaporated cane,Spanish rum,,Column Still,Aged,Panama,,9,
 ,2750,Don Pancho Origines 18,Rum,Molasses & evaporated cane,Spanish rum,,Column Still,Long Aged,Panama,,9,
 ,2760,Don Pancho Origines 30,Rum,Molasses & evaporated cane,Spanish rum,,Column Still,Long Aged,Panama,,9,
-,2770,English Harbour 25,Rum,Molasses & evaporated cane,English rum,,Column Still,Long Aged,Antigua,,9,
+,2770,English Harbour 25,Rum,Molasses & evaporated cane,Rum,,Column Still,Long Aged,Antigua,,9,
 ,2780,Flor De Caña 18,Rum,Molasses & evaporated cane,Spanish rum,,Column Still,Long Aged,Nicaragua,,9,
 ,2790,Flor De Caña 25,Rum,Molasses & evaporated cane,Spanish rum,,Column Still,Long Aged,Nicaragua,,9,
 ,2800,Reserva de la Familia Serrallés 20 Year Old,Rum,Molasses & evaporated cane,Spanish rum,,Column Still,Long Aged,Puerto Rico,,9,
-,2810,Hamilton Jamaican Black,Rum,Molasses & evaporated cane,Black rum,,Pot Still,N/A,Jamaica,,2,
-,2820,Coruba,Rum,Molasses & evaporated cane,Black rum,,Blended,N/A,Jamaica,,4,
-,2830,Cruzan Blackstrap,Rum,Molasses & evaporated cane,Black rum,,Blended,N/A,US Virgin Islands,,8,"D+C: Codex, Suderman"
-,2840,Gosling’s Black Seal,Rum,Molasses & evaporated cane,Black rum,,Blended,N/A,Regional Blend,,8,"D+C: Codex, Suderman"
-,2850,Hamilton Guyana 86,Rum,Molasses & evaporated cane,Black rum,,Blended,N/A,Guyana,,3,
-,2860,Kohala Bay,Rum,Molasses & evaporated cane,Black rum,,Blended,N/A,Jamaica,,9,
-,2870,Lemon Hart 80 / 1804,Rum,Molasses & evaporated cane,Black rum,,Blended,N/A,Guyana,,4,
-,2880,Pampero Anniversario,Rum,Molasses & evaporated cane,Black rum,,Blended,N/A,Venezuela,,9,
-,2890,Newfoundland Screech,Rum,Molasses & evaporated cane,Black rum,,Blended,N/A,Jamaica,,9,
-,2900,Blackwell’s Black Gold,Rum,Molasses & evaporated cane,Black rum,,Blended,N/A,Jamaica,,9,
-,2910,Skipper Finest Old Demerara,Rum,Molasses & evaporated cane,Black rum,,Blended,N/A,Guyana,,9,
-,2920,Hamilton Guyana 151,Rum,Molasses & evaporated cane,Black rum,Overproof,Blended,N/A,Guyana,,6,Suderman
-,2930,Lemon Hart 151,Rum,Molasses & evaporated cane,Black rum,Overproof,Blended,N/A,Guyana,,9,
-,2940,Plantation O.F.T.D.,Rum,Molasses & evaporated cane,Black rum,Overproof,Blended,N/A,Regional Blend,1,3,D+C: Codex
+,2810,Hamilton Jamaican Black,Rum,Molasses & evaporated cane,Jamaican rum,Black,Pot Still,Unaged,Jamaica,,2,
+,2820,Coruba,Rum,Molasses & evaporated cane,Jamaican rum,Black,Blended,Aged,Jamaica,,4,
+,2830,Cruzan Blackstrap,Rum,Molasses & evaporated cane,Rum,Black,Blended,Lightly Aged,US Virgin Islands,,8,"D+C: Codex, Suderman"
+,2840,Gosling’s Black Seal,Rum,Molasses & evaporated cane,Rum,Black,Blended,Aged,Regional Blend,,8,"D+C: Codex, Suderman"
+,2850,Hamilton Guyana 86,Rum,Molasses & evaporated cane,Demerara rum,Black,Blended,Aged,Guyana,,3,
+,2860,Kohala Bay,Rum,Molasses & evaporated cane,Rum,Black,Blended,Aged,Jamaica,,9,
+,2870,Lemon Hart 80 / 1804,Rum,Molasses & evaporated cane,Demerara rum,Black,Blended,Aged,Guyana,,4,
+,2880,Pampero Anniversario,Rum,Molasses & evaporated cane,Rum,Black,Blended,Aged,Venezuela,,9,
+,2890,Newfoundland Screech,Rum,Molasses & evaporated cane,Rum,Black,Blended,Aged,Jamaica,,9,
+,2900,Blackwell’s Black Gold,Rum,Molasses & evaporated cane,Jamaican rum,Black,Blended,Aged,Jamaica,,9,
+,2910,Skipper Finest Old Demerara,Rum,Molasses & evaporated cane,Demerara rum,Black,Blended,Aged,Guyana,,9,
+,2920,Hamilton Guyana 151,Rum,Molasses & evaporated cane,Demerara rum,Black Overproof,Blended,Aged,Guyana,,6,Suderman
+,2930,Lemon Hart 151,Rum,Molasses & evaporated cane,Demerara rum,Black Overproof,Blended,Aged,Guyana,,9,
+,2940,Plantation O.F.T.D.,Rum,Molasses & evaporated cane,Rum,Black Overproof,Blended,Aged,Regional Blend,1,3,D+C: Codex
 ,2950,Rhum Barbancourt 5 Star,Rum,Fresh cane juice,French rum,,Coffey Still,Aged,Haiti,,6,Suderman
 ,2960,Rhum Barbancourt Estate Reserve,Rum,Fresh cane juice,French rum,,Coffey Still,Aged,Haiti,,9,
 ,2970,Capovilla Agricole PMG,Rum,Fresh cane juice,French rum,,Pot Still,Unaged,Marie Galante,,9,
 ,2980,Damoiseau Cane Rhum,Rum,Fresh cane juice,French rum,,Pot Still,Unaged,Guadeloupe,,9,
-,2990,Rhum Barbancourt 3 Star,Rum,Fresh cane juice,French rum,,Pot Still,Unaged,Haiti,1,1,"D+C: Codex, Suderman"
+,2990,Rhum Barbancourt 3 Star,Rum,Fresh cane juice,French rum,,Coffey Still,Aged,Haiti,1,1,"D+C: Codex, Suderman"
 ,3000,St. George California Agricole,Rum,Fresh cane juice,French rum,,Pot Still,Unaged,"California, USA",,9,
 ,3010,Capovilla Rhum Liberation 2010,Rum,Fresh cane juice,French rum,,Pot Still,Aged,Marie Galante,,9,
 ,3020,Damoiseau V.S.O.P.,Rum,Fresh cane juice,French rum,,Pot Still,Aged,Guadeloupe,,5,
@@ -240,9 +253,13 @@ Image,ID,Name,Type,Material,Style,Substyle,Method,Aging,Origin,Stock,Want,Refere
 ,3380,Rittenhouse,Whiskey,Rye & grains,Rye whiskey,,Column Still,Aged,USA,1,1,"D+C: WH, D+C: Codex"
 ,3390,George Dickel,Whiskey,Rye & grains,Rye whiskey,,Column Still,Aged,USA,,5,D+C: WH
 ,3400,Pikesville,Whiskey,Rye & grains,Rye whiskey,,Column Still,Aged,USA,,6,D+C: WH
+,3405,High West Silver Oat,Whiskey,Rye & grains,Rye whiskey,Oat,Column Still,Aged,USA,,8,D+C: WH
 ,3410,Dewer's,Whiskey,Barley & grains,Scotch whisky,Blended,Blended,Aged,Scotland,1,8,
 ,3420,Famous Grouse,Whiskey,Barley & grains,Scotch whisky,Blended,Blended,Aged,Scotland,1,4,D+C: Codex
-,3430,Tyconnel,Whiskey,Barley & grains,Irish whisky,Single malt,Pot Still,Aged,Ireland,,8,D+C: WH
+,3425,Compass Box Great King Street Glasgow,Whiskey,Barley & grains,Scotch whisky,Blended,Blended,Aged,Scotland,,4,D+C: Codex
+,3426,Street Pumas Blended Scotch,Whiskey,Barley & grains,Scotch whisky,Blended,Blended,Aged,Scotland,,7,D+C: Codex
+,3430,Tyrconnel,Whiskey,Barley & grains,Irish whisky,Single malt,Pot Still,Aged,Ireland,,8,D+C: WH
+,3435,Jameson Irish Whiskey,Whiskey,Barley & grains,Irish whisky,,Blended,Aged,Ireland,,8,D+C: WH
 ,3440,Monkey Shoulder Blended Malt,Whiskey,Barley & grains,Scotch whisky,Blended,Pot Still,Aged,Scotland,,5,D+C: WH
 ,3450,Great King St. Glasgow Blend,Whiskey,Barley & grains,Scotch whisky,Blended,Pot Still,Aged,Scotland,,5,D+C: WH
 ,3460,Redbreast 12-year,Whiskey,Barley & grains,Irish whisky,Single malt,Pot Still,Aged,Ireland,,5,D+C: WH
@@ -253,32 +270,55 @@ Image,ID,Name,Type,Material,Style,Substyle,Method,Aging,Origin,Stock,Want,Refere
 ,3510,Connemara Peated,Whiskey,Barley & grains,Irish whisky,Single malt,Pot Still,Aged,Ireland,,4,D+C: WH
 ,3520,Bowmore 12-year,Whiskey,Barley & grains,Scotch whisky,Single malt,Pot Still,Aged,Scotland,,4,"D+C: WH, D+C: Codex"
 ,3530,Laphroaig 10-year,Whiskey,Barley & grains,Scotch whisky,Single malt,Pot Still,Aged,Scotland,,4,"D+C: WH, D+C: Codex"
-,3540,Bertoux brandy,Brandy,Grapes,American brandy,,Pot Still,Aged,"California, USA",,8,D+C: WH
+,3532,Hibiki Japanese Harmony,Whiskey,Barley & grains,Japanese whisky,Single malt,Pot Still,Aged,Japan,,6,D+C: WH
+,3533,Suntory Toki,Whiskey,Barley & grains,Japanese whisky,Single malt,Pot Still,Aged,Japan,,6,D+C: WH
+,3538,Amrut Cask-Strength Single Malt Indian Whisky,Whiskey,Barley & grains,Indian whisky,Single malt,Pot Still,Aged,India,,7,D+C: WH
+,3539,Navazos Palazzi Overseas Malt Whiskey,Whiskey,Barley & grains,Indian whisky,Single malt,Pot Still,Aged,India,,7,D+C: WH
+,3541,Krogstad Aquavit,Grain,"Grains w/ herbs, roots, etc.",Aquavit,,N/A,Unaged,"Oregon, USA",,5,
+,3542,Svöl Swedish Style Aquavit,Grain,"Grains w/ herbs, roots, etc.",Aquavit,,N/A,Unaged,Sweden,,6,
+,3543,Linie Aquavit,Grain,"Grains w/ herbs, roots, etc.",Aquavit,,N/A,Aged,Norway,,6,
+,3544,Gamle Ode Dill Aquavit,Grain,"Grains w/ herbs, roots, etc.",Aquavit,,N/A,Unaged,"Wisconsin, USA",,6,
+,3545,Brennivin Aquavit,Grain,"Grains w/ herbs, roots, etc.",Aquavit,,N/A,Unaged,Iceland,,6,
+,3547,St. George California rice shochu,Grain,"Grains w/ herbs, roots, etc.",Shochu,,N/A,Unaged,"California, USA", ,7,D+C: WH
+,3549,Bertoux brandy,Brandy,Grapes,American brandy,,Pot Still,Aged,"California, USA",,8,D+C: WH
 ,3550,Clear Creek 2-year,Brandy,Apples,Apple brandy,,Pot Still,Aged,"Oregon, USA",,7,D+C: WH
+,3555,Clear Creek Muscat Grappa,Brandy,Apples,Grappa,,Pot Still,Aged,"Oregon, USA",,7,D+C: WH
 ,3560,Guillon-Painturaud VSOP,Brandy,Grapes,Cognac,,Pot Still,Aged,France,,5,"D+C: WH, D+C: Codex"
 ,3570,Lemorton Selection calvados domfrontais,Brandy,Apples,Calvados,,Pot Still,Aged,France,,6,D+C: WH
 ,3580,Germain-Robin Alambic,Brandy,Grapes,American brandy,,Pot Still,Aged,"California, USA",,8,D+C: WH
 ,3590,Louis Rogue La Vielle Prune,Brandy,Other fruits,Eau-de-vie,,Pot Still,Aged,France,,8,D+C: WH
 ,3600,Domaine du Manoir de Montreuil Reserve,Brandy,Apples,Calvados,,Pot Still,Aged,France,,5,D+C: WH
 ,3610,Hine H VSOP,Brandy,Grapes,Cognac,,Pot Still,Aged,France,,2,"D+C: WH, D+C: Codex"
+,3615,Paul Beau VS,Brandy,Grapes,Cognac,,Pot Still,Aged,France,,7,D+C: WH
 ,3620,PM Spirits Bas,Brandy,Grapes,Armagnac,,Pot Still,Aged,France,,5,D+C: WH
 ,3630,Lustau Solera Reserva,Brandy,Grapes,Spanish brandy,,Pot Still,Aged,Spain,,5,"D+C: WH, D+C: Codex"
 ,3640,Pierre Ferrand 1840,Brandy,Grapes,Cognac,,Pot Still,Aged,France,,5,"D+C: WH, D+C: Codex"
+,3645,Pierre Ferrand Ambré,Brandy,Grapes,Cognac,,Pot Still,Aged,France,,7,D+C: WH
 ,3650,Gourry de Chadville,Brandy,Grapes,Cognac,,Pot Still,Aged,France,,8,D+C: WH
 ,3660,Lairds Bonded,Brandy,Apples,Apple brandy,,Pot Still,Aged,"New Jersey, USA",2,1,"D+C: WH, D+C: Codex"
-,3670,Reisetbauer carrot eau-de-vie,Brandy,Other fruits,Eau-de-vie,,N/A,Unaged,Austria,,7,D+C: WH
-,3680,Rhine Hall mango brandy,Brandy,Other fruits,American brandy,,N/A,Unaged,"Illinois, USA",,8,D+C: WH
-,3690,Clear Creek Blue Plum brandy,Brandy,Other fruits,American brandy,,N/A,Unaged,"Oregon, USA",,6,D+C: WH
-,3700,Clear Creek Douglas Fir eau-de-vie,Brandy,Other fruits,Eau-de-vie,,N/A,Unaged,"Oregon, USA",,6,D+C: WH
-,3710,St. George Aqua Perfecta basil eau-de-vie,Brandy,Other fruits,Eau-de-vie,,N/A,Unaged,"California, USA",,6,D+C: WH
-,3720,Cobrafire eau-de-vie de raisin,Brandy,Other fruits,Eau-de-vie,,N/A,Unaged,France,,5,D+C: WH
-,3730,Cyril Zangs 00 apple cide eau-de-vie,Brandy,Other fruits,Apple brandy,,N/A,Unaged,France,,5,D+C: WH
-,3740,Clear Creek pear brandy,Brandy,Other fruits,American brandy,,N/A,Unaged,"Oregon, USA",,4,"D+C: WH, D+C: Codex"
+,3670,Reisetbauer carrot eau-de-vie,Brandy,Other fruits,Eau-de-vie,Carrot,N/A,Unaged,Austria,,7,D+C: WH
+,3672,Reisetbauer hazelnut eau-de-vie,Brandy,Other fruits,Eau-de-vie,Hazelnut,N/A,Unaged,Austria,,7,D+C: WH
+,3680,Rhine Hall mango brandy,Brandy,Other fruits,American brandy,Mango,N/A,Unaged,"Illinois, USA",,8,D+C: WH
+,3690,Clear Creek Blue Plum brandy,Brandy,Other fruits,American brandy,Plum,N/A,Unaged,"Oregon, USA",,6,D+C: WH
+,3700,Clear Creek Douglas Fir eau-de-vie,Brandy,Other fruits,Eau-de-vie,Douglas Fir,N/A,Unaged,"Oregon, USA",,6,D+C: WH
+,3710,St. George Aqua Perfecta basil eau-de-vie,Brandy,Other fruits,Eau-de-vie,Basil,N/A,Unaged,"California, USA",,6,D+C: WH
+,3720,Cobrafire eau-de-vie de raisin,Brandy,Other fruits,Eau-de-vie,Raisin,N/A,Unaged,France,,5,D+C: WH
+,3730,Cyril Zangs 00 apple cide eau-de-vie,Brandy,Other fruits,Apple brandy,Apple Cider,N/A,Unaged,France,,5,D+C: WH
+,3740,Clear Creek pear brandy,Brandy,Other fruits,American brandy,Pear,N/A,Unaged,"Oregon, USA",,4,"D+C: WH, D+C: Codex"
 ,3750,Capurro Acholado pisco,Brandy,Other fruits,Pisco,,N/A,Unaged,Peru,,3,"D+C: WH, D+C: Codex"
-,3760,St. George framboise eau-de-vie,Brandy,Other fruits,Eau-de-vie,,N/A,Unaged,"California, USA",,6,D+C: WH
+,3755,Campo de Encanto Acholado,Brandy,Other fruits,Pisco,,N/A,Unaged,Peru,,5,D+C: WH
+,3756,Barsol pisco,Brandy,Other fruits,Pisco,,N/A,Unaged,Peru,,5,D+C: WH
+,3760,St. George framboise eau-de-vie,Brandy,Other fruits,Eau-de-vie,Raspberry,N/A,Unaged,"California, USA",,6,D+C: WH
+,3764,Park Pineau des Charentes,Brandy,Other fruits,Eau-de-vie,Pineau des Charentes,N/A,Unaged,France,,6,D+C: WH
+,3765,Jean-Luc Pasquet Pineau des Charentes,Brandy,Other fruits,Eau-de-vie,Pineau des Charentes,N/A,Unaged,France,,6,D+C: WH
+,3766,J. Navarre Vieux Pineau des Charentes,Brandy,Other fruits,Eau-de-vie,Pineau des Charentes,N/A,Unaged,France,,6,D+C: WH
+,3767,Lemorton Pommeau de Normandie,Brandy,Other fruits,Eau-de-vie,Pommeau,N/A,Unaged,France,,6,D+C: WH
+,3768,Glasshouse Shiso Brandy,Brandy,Other fruits,Eau-de-vie,Shiso,N/A,Unaged,"California, USA",,8,D+C: WH
 ,3770,Aperol,Amaro,"Grains w/ herbs, roots, etc.",Apertivo,,N/A,N/A,Italy,,5,"D+C: WH, D+C: Codex"
 ,3780,Campari,Amaro,"Grains w/ herbs, roots, etc.",Apertivo,,N/A,N/A,Italy,1,1,"D+C: WH, D+C: Codex"
 ,3790,Suze,Amaro,"Grains w/ herbs, roots, etc.",Apertivo,,N/A,N/A,Italy,1,2,"D+C: WH, D+C: Codex"
+,3794,Salers Gentien Aperitif,Amaro,"Grains w/ herbs, roots, etc.",Apertivo,,N/A,N/A,France,,3,D+C: WH
+,3795,St. George Bruto Americano,Amaro,"Grains w/ herbs, roots, etc.",Apertivo,,N/A,N/A,"California, USA",,7,D+C: WH
 ,3800,Amaro Meletti,Amaro,"Grains w/ herbs, roots, etc.",Light amaro,,N/A,N/A,Italy,0.1,5,"D+C: WH, D+C: Codex"
 ,3810,Amaro Montenegro,Amaro,"Grains w/ herbs, roots, etc.",Light amaro,,N/A,N/A,Italy,,4,"D+C: WH, D+C: Codex"
 ,3820,Amaro Nonino Quintessentia,Amaro,"Grains w/ herbs, roots, etc.",Light amaro,,N/A,N/A,Italy,,4,"D+C: WH, D+C: Codex"
@@ -298,6 +338,7 @@ Image,ID,Name,Type,Material,Style,Substyle,Method,Aging,Origin,Stock,Want,Refere
 ,3960,Capalleti Amaro Sfumato,Amaro,"Grains w/ herbs, roots, etc.",Dense amaro,Rabarbaro,N/A,N/A,Italy,,6,D+C: WH
 ,3965,Zucca,Amaro,"Grains w/ herbs, roots, etc.",Dense amaro,Rabarbaro,N/A,N/A,Italy,,6,D+C: WH
 ,3980,Fernet-Vallet,Amaro,"Grains w/ herbs, roots, etc.",Dense amaro,,N/A,N/A,Italy,,7,D+C: WH
+,3985,Forthave Spirits Marseille,Amaro,"Grains w/ herbs, roots, etc.",Dense amaro,,N/A,N/A,Italy,,7,D+C: WH
 ,3990,Chareau California Aloe Liqueur,Liqueur,Grains w/ fruits,Herbal liqueur,,N/A,N/A,"California, USA",,6,"D+C: WH, D+C: Codex"
 ,4000,Sapins,Liqueur,Grains w/ fruits,Herbal liqueur,,N/A,N/A,Switzerland,,8,D+C: WH
 ,4010,Benedictine,Liqueur,Grains w/ fruits,Herbal liqueur,,N/A,N/A,France,1,1,"D+C: WH, D+C: Codex"
@@ -306,38 +347,61 @@ Image,ID,Name,Type,Material,Style,Substyle,Method,Aging,Origin,Stock,Want,Refere
 ,4040,Galliano L’Authentico,Liqueur,Grains w/ fruits,Herbal liqueur,,N/A,N/A,Italy,,6,"D+C: WH, D+C: Codex"
 ,4050,Green Chartreuse,Liqueur,Grains w/ fruits,Herbal liqueur,,N/A,N/A,France,0.5,1,"D+C: WH, D+C: Codex"
 ,4060,St-Germain Elderflower Liqueur,Liqueur,Grains w/ fruits,Herbal liqueur,,N/A,N/A,France,1,5,"D+C: WH, D+C: Codex"
+,4065,Licor 43,Liqueur,Grains w/ fruits,Herbal liqueur,,N/A,N/A,Spain,,6,
+,4067,Drambuie,Liqueur,Grains w/ fruits,Herbal liqueur,,N/A,N/A,Scotland,,,
 ,4070,Bigallet Thyme Liqueur,Liqueur,Grains w/ fruits,Herbal liqueur,,N/A,N/A,France,,7,D+C: WH
+,4073,Dolin Génépy des Alpes,Liqueur,Grains w/ fruits,Herbal liqueur,,N/A,N/A,France,,7,D+C: WH
 ,4075,St. Elizabeth Allspice Dram,Liqueur,Grains w/ fruits,Herbal liqueur,,N/A,N/A,Jamaica,1,2,Cove
-,4077,Velvet Falernum,Liqueur,Grains w/ fruits,Herbal liqueur,,N/A,N/A,Barbados,1,2,Cove
-,4080,Kübler Absinthe Superieure,Liqueur,Grains w/ fruits,Herbal liqueur,,N/A,N/A,Switzerland,1,3,
+,4077,John D. Taylor's Velvet Falernum,Liqueur,Grains w/ fruits,Herbal liqueur,,N/A,N/A,Barbados,1,2,Cove
+,4080,Kübler Absinthe Superieure,Liqueur,Grains w/ fruits,Absinthe,,N/A,N/A,Switzerland,1,3,
+,4085,Herbsaint,Liqueur,Grains w/ fruits,Absinthe,,N/A,N/A,France,,7,D+C: WH
 ,4090,Giffard Menthe-Pastille,Liqueur,Grains w/ fruits,Crème de menthe,,N/A,N/A,France,,6,"D+C: WH, D+C: Codex"
 ,4100,Tempus Fugit Creme de Menthe,Liqueur,Grains w/ fruits,Crème de menthe,,N/A,N/A,"California, USA",,6,"D+C: WH, D+C: Codex"
 ,4110,Giffard Crème de Violette,Liqueur,Grains w/ fruits,Crème de violette,,N/A,N/A,France,,5,D+C: Codex
 ,4120,Rothman & Winter Crème de Violette,Liqueur,Grains w/ fruits,Crème de violette,,N/A,N/A,Austria,0.5,7,
 ,4130,Umenoyado Yuzu Shu Liqueur,Liqueur,Grains w/ fruits,Fruit liqueur,Yuzu,N/A,N/A,France,,8,D+C: WH
 ,4140,Giffard Crème de Pamplemousse Rose,Liqueur,Grains w/ fruits,Fruit liqueur,Grapefruit,N/A,N/A,France,,6,"D+C: WH, D+C: Codex"
+,4145,Giffard Crème de Fruits de la Passion,Liqueur,Grains w/ fruits,Fruit liqueur,Passionfruit,N/A,N/A,France,,6,D+C: WH
 ,4150,Lejay Crème de Cassis de Dijon,Liqueur,Grains w/ fruits,Fruit liqueur,Crème de cassis,N/A,N/A,France,,8,D+C: WH
 ,4160,Mathilde Poire Pear Liqueur,Liqueur,Grains w/ fruits,Fruit liqueur,Pear,N/A,N/A,France,,6,"D+C: WH, D+C: Codex"
 ,4170,Leopold Bros. New York Sour Apple Liqueur,Liqueur,Grains w/ fruits,Fruit liqueur,Sour apple,N/A,N/A,"Colorado, USA",,8,D+C: WH
+,4175,Leopold Bros. Rocky Mountain Blackberry Liqueur,Liqueur,Grains w/ fruits,Fruit liqueur,Blackberry,N/A,N/A,"Colorado, USA",,8,D+C: WH
+,4176,Giffard Crème de Mûre,Liqueur,Grains w/ fruits,Fruit liqueur,Blackberry,N/A,N/A,France,,8,D+C: WH
+,4177,Leopold Bros. Michigan Tart Cherry Liqueur,Liqueur,Grains w/ fruits,Fruit liqueur,Cherry,N/A,N/A,"Colorado, USA",,8,
 ,4180,Massenez Crème de Pêche peach liqueur,Liqueur,Grains w/ fruits,Fruit liqueur,Peach,N/A,N/A,France,,6,"D+C: WH, D+C: Codex"
+,4183,Giffard Creme Peche De Vigne,Liqueur,Grains w/ fruits,Fruit liqueur,Peach,N/A,N/A,France,,6,
+,4185,Mathilde Peche,Liqueur,Grains w/ fruits,Fruit liqueur,Peach,N/A,N/A,France,,6,
+,4187,Combier Peche De Vigne Liqueur,Liqueur,Grains w/ fruits,Fruit liqueur,Peach,N/A,N/A,France,,6,
 ,4190,St George Spiced Pear Liqueur,Liqueur,Grains w/ fruits,Fruit liqueur,Pear,N/A,N/A,"California, USA",,8,D+C: WH
+,4195,Emile Pernot Liqueur de Sapin,Liqueur,Grains w/ fruits,Fruit liqueur,Fir,N/A,N/A,France,,8,D+C: WH
 ,4200,Giffard Rhubarb Liqueur,Liqueur,Grains w/ fruits,Fruit liqueur,Rhubarb,N/A,N/A,France,,6,D+C: WH
 ,4210,Rothman & Winter Orchard Cherry Liqueur,Liqueur,Grains w/ fruits,Fruit liqueur,Cherry,N/A,N/A,Austria,,8,D+C: WH
 ,4220,Giffard Banane du Brésil,Liqueur,Grains w/ fruits,Fruit liqueur,Banana,N/A,N/A,France,1,4,D+C: WH
 ,4230,Giffard Abricot du Roussillon,Liqueur,Grains w/ fruits,Fruit liqueur,Apricot,N/A,N/A,France,,4,"D+C: WH, D+C: Codex"
+,4235,Rothman & Winter Orchard Apricot Liqueur,Liqueur,Grains w/ fruits,Fruit liqueur,Apricot,N/A,N/A,Austria,,4,D+C: WH
 ,4240,Kalani Ron de Coco coconut liqueur,Liqueur,Grains w/ fruits,Fruit liqueur,Coconut,N/A,N/A,Mexico,,6,D+C: WH
+,4245,St. George Raspberry Liqueur,Liqueur,Grains w/ fruits,Fruit liqueur,Raspberry,N/A,N/A,"California, USA",,8,D+C: WH
+,4246,Pasquet Marie-Framboise,Liqueur,Grains w/ fruits,Fruit liqueur,Raspberry,N/A,N/A,France,,8,D+C: WH
+,4247,Chareau Aloe Liqueur,Liqueur,Grains w/ fruits,Fruit liqueur,Aloe,N/A,N/A,"California, USA",,8,D+C: WH
+,4248,Combier Crème de Rose,Liqueur,Grains w/ fruits,Fruit liqueur,Rose,N/A,N/A,France,,8,D+C: WH
+,4249,Italicus Rosolio Bergamot Liqueur,Liqueur,Grains w/ fruits,Fruit liqueur,Bergamot,N/A,N/A,Italy,,8,D+C: WH
 ,4250,Luxardo Maraschino Liqueur,Liqueur,Grains w/ fruits,Maraschino liqueur,,N/A,N/A,Italy,1,1,"D+C: WH, D+C: Codex"
 ,4260,Cointreau,Liqueur,Grains w/ fruits,Orange liqueur,,N/A,N/A,France,1,3,"D+C: WH, D+C: Codex"
 ,4270,Grand Marinier,Liqueur,Grains w/ fruits,Orange liqueur,,N/A,N/A,France,,7,"D+C: WH, D+C: Codex"
 ,4280,Pierre Ferrand Dry Curaçao,Liqueur,Grains w/ fruits,Orange liqueur,,N/A,N/A,France,0.5,3,D+C: WH
+,4283,Rhum Clément Créole Shrubb,Liqueur,Grains w/ fruits,Orange liqueur,,N/A,N/A,Martinique,,4,D+C: WH
+,4285,Giffard Blue Curaçao Liqueur,Liqueur,Grains w/ fruits,Orange liqueur,Blue Curaçao,N/A,N/A,France,,3,
 ,4290,Marie Brizard White Creme de Cacao,Liqueur,Grains w/ fruits,Crème de cacao,,N/A,N/A,France,,7,D+C: WH
 ,4300,Giffard White Crème de Cacao,Liqueur,Grains w/ fruits,Crème de cacao,,N/A,N/A,France,,3,"D+C: WH, D+C: Codex"
-,4310,Don Ciccio & Figli Finocchietto Fennel Liqueur,Liqueur,Grains w/ fruits,Rich liqueur,,N/A,N/A,Italy,,8,D+C: WH
-,4320,Ancho Reyes Ancho Chile Liqueur,Liqueur,Grains w/ fruits,Rich liqueur,,N/A,N/A,Mexico,,6,D+C: WH
-,4330,Ancho Reyes Ancho Verde Liqueur,Liqueur,Grains w/ fruits,Rich liqueur,,N/A,N/A,Mexico,1,6,D+C: WH
-,4340,Trader Vic’s Macadamia Nut Liqueur,Liqueur,Grains w/ fruits,Rich liqueur,,N/A,N/A,"California, USA",,7,D+C: WH
-,4350,Galliano Ristretto,Liqueur,Grains w/ fruits,Rich liqueur,,N/A,N/A,Italy,,5,"D+C: WH, D+C: Codex"
-,4360,Nux Alpina Walnut Liqueur,Liqueur,Grains w/ fruits,Rich liqueur,,N/A,N/A,Austria,,8,D+C: WH
+,4310,Don Ciccio & Figli Finocchietto Fennel Liqueur,Liqueur,Grains w/ fruits,Rich liqueur,Fennel,N/A,N/A,Italy,,8,D+C: WH
+,4320,Ancho Reyes Ancho Chile Liqueur,Liqueur,Grains w/ fruits,Rich liqueur,Ancho chile,N/A,N/A,Mexico,,6,D+C: WH
+,4330,Ancho Reyes Ancho Verde Liqueur,Liqueur,Grains w/ fruits,Rich liqueur,Ancho chile,N/A,N/A,Mexico,1,6,D+C: WH
+,4335,Empirical Spirits Habanero Spirit,Liqueur,Grains w/ fruits,Rich liqueur,Habanero,N/A,N/A,Denmark,,7,D+C: WH
+,4340,Trader Vic’s Macadamia Nut Liqueur,Liqueur,Grains w/ fruits,Rich liqueur,Macadamia,N/A,N/A,"California, USA",,7,D+C: WH
+,4350,Galliano Ristretto,Liqueur,Grains w/ fruits,Rich liqueur,Coffee Bean,N/A,N/A,Italy,,5,"D+C: WH, D+C: Codex"
+,4360,Nux Alpina Walnut Liqueur,Liqueur,Grains w/ fruits,Rich liqueur,Walnut,N/A,N/A,Austria,,8,D+C: WH
+,4365,Bittermens New Orleans Coffee Liqueur,Liqueur,Grains w/ fruits,Rich liqueur,Coffee Bean,N/A,N/A,"Oregon, USA",,8,D+C: WH
+,4366,Zirbenz Stone Pine Liqueur,Liqueur,Grains w/ fruits,Rich liqueur,Pine,N/A,N/A,Austria,,8,D+C: WH
 ,4370,Dolin Rouge,Fortified wine,"Grapes w/ herbs, roots, etc",Sweet vermouth,,N/A,N/A,France,2,1,"D+C: WH, D+C: Codex"
 ,4380,Punt e Mes,Fortified wine,"Grapes w/ herbs, roots, etc",Sweet vermouth,,N/A,N/A,Italy,,4,D+C: WH
 ,4390,Cocchi Vermouth di Torino,Fortified wine,"Grapes w/ herbs, roots, etc",Sweet vermouth,,N/A,N/A,Italy,,4,D+C: WH
@@ -346,20 +410,26 @@ Image,ID,Name,Type,Material,Style,Substyle,Method,Aging,Origin,Stock,Want,Refere
 ,4420,Noilly Prat Extra Dry,Fortified wine,"Grapes w/ herbs, roots, etc",Dry vermouth,,N/A,N/A,France,,6,"D+C: WH, D+C: Codex"
 ,4430,La Quintinye Vermouth Royal Blanc,Fortified wine,"Grapes w/ herbs, roots, etc",Blanc vermouth,,N/A,N/A,France,,4,"D+C: WH, D+C: Codex"
 ,4440,Dolin Blanc,Fortified wine,"Grapes w/ herbs, roots, etc",Blanc vermouth,,N/A,N/A,France,,6,"D+C: WH, D+C: Codex"
+,4445,Carpano Bianco,Fortified wine,"Grapes w/ herbs, roots, etc",Blanc vermouth,,N/A,N/A,Italy,,6,"D+C: WH, D+C: Codex"
 ,4450,Bonal Gentiane-Quina,Fortified wine,"Grapes w/ herbs, roots, etc",Apertif wine,,N/A,N/A,France,0.1,5,"D+C: WH, D+C: Codex"
 ,4460,Lillet Rose,Fortified wine,"Grapes w/ herbs, roots, etc",Apertif wine,,N/A,N/A,France,,6,"D+C: WH, D+C: Codex"
 ,4470,Lillet Blanc,Fortified wine,"Grapes w/ herbs, roots, etc",Apertif wine,,N/A,N/A,France,,6,"D+C: WH, D+C: Codex"
 ,4480,Cocchi Americano Bianco,Fortified wine,"Grapes w/ herbs, roots, etc",Apertif wine,,N/A,N/A,Italy,1,2,"D+C: WH, D+C: Codex"
 ,4490,Byrhh,Fortified wine,"Grapes w/ herbs, roots, etc",Apertif wine,,N/A,N/A,France,,7,D+C: WH
-,4500,Rainwater Madeira,Fortified wine,"Grapes w/ herbs, roots, etc",Madeira,,N/A,N/A,Portugal,,6,"D+C: WH, D+C: Codex"
+,4495,Cap Corse Blanc Quinquina,Fortified wine,"Grapes w/ herbs, roots, etc",Apertif wine,,N/A,N/A,France,,7,D+C: WH
+,4500,Henriques & Henriques Rainwater Madeira,Fortified wine,"Grapes w/ herbs, roots, etc",Madeira,,N/A,N/A,Portugal,,6,"D+C: WH, D+C: Codex"
 ,4510,Rare Wine Co. Savannah Verdelho,Fortified wine,"Grapes w/ herbs, roots, etc",Madeira,,N/A,N/A,Portugal,,8,D+C: WH
+,4515,Rare Wine Co. Baltimore Rainwater Madeira,Fortified wine,"Grapes w/ herbs, roots, etc",Madeira,,N/A,N/A,Portugal,,8,D+C: WH
 ,4520,H&H Generoso Doce 5-year,Fortified wine,"Grapes w/ herbs, roots, etc",Madeira,,N/A,N/A,Portugal,,8,D+C: WH
+,4525,Blandy's 5 Year Verdelho Madeira,Fortified wine,"Grapes w/ herbs, roots, etc",Madeira,,N/A,N/A,Portugal,,8,D+C: WH
 ,4530,Gonzalez Byass Tio Pepe,Fortified wine,"Grapes w/ herbs, roots, etc",Sherry,Fino,N/A,N/A,Spain,,7,"D+C: WH, D+C: Codex"
 ,4540,Lustau Jarana,Fortified wine,"Grapes w/ herbs, roots, etc",Sherry,Fino,N/A,N/A,Spain,,5,"D+C: WH, D+C: Codex"
 ,4550,Hidalgo La Gitana,Fortified wine,"Grapes w/ herbs, roots, etc",Sherry,Manzanilla,N/A,N/A,Spain,,5,"D+C: WH, D+C: Codex"
 ,4560,Equipo Navazos I Think Manzanilla En Rama,Fortified wine,"Grapes w/ herbs, roots, etc",Sherry,Manzanilla,N/A,N/A,Spain,,8,D+C: WH
+,4565,Lustau Papirusa,Fortified wine,"Grapes w/ herbs, roots, etc",Sherry,Manzanilla,N/A,N/A,Spain,,8,D+C: WH
+,4566,Bodegas Yuste Aurora,Fortified wine,"Grapes w/ herbs, roots, etc",Sherry,Manzanilla,N/A,N/A,Spain,,8,D+C: WH
 ,4570,Lustau Los Arcos,Fortified wine,"Grapes w/ herbs, roots, etc",Sherry,Amontillado,N/A,N/A,Spain,,4,"D+C: WH, D+C: Codex"
-,4580,Palo Cortado Lustau Peninsula,Fortified wine,"Grapes w/ herbs, roots, etc",Sherry,Amontillado,N/A,N/A,Spain,,5,"D+C: WH, D+C: Codex"
+,4580,Palo Cortado Lustau Peninsula,Fortified wine,"Grapes w/ herbs, roots, etc",Sherry,Amontillado,N/A,N/A,Spain,,8,D+C: WH
 ,4590,Barbadillo Principe de Barbadillo,Fortified wine,"Grapes w/ herbs, roots, etc",Sherry,Amontillado,N/A,N/A,Spain,,7,"D+C: WH, D+C: Codex"
 ,4600,Valdespino Palo Cortado Viejo,Fortified wine,"Grapes w/ herbs, roots, etc",Sherry,Amontillado,N/A,N/A,Spain,,8,D+C: WH
 ,4610,Gonzalez Byass Apostoles Palo Cortado,Fortified wine,"Grapes w/ herbs, roots, etc",Sherry,Amontillado,N/A,N/A,Spain,,8,D+C: WH

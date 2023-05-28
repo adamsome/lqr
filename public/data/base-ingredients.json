@@ -85,6 +85,11 @@
     "category": "coffee"
   },
   {
+    "id": "coffee_bean",
+    "name": "Bean",
+    "category": "coffee"
+  },
+  {
     "id": "cordial_apple",
     "name": "Apple",
     "category": "cordial"
@@ -130,6 +135,11 @@
     "category": "cream"
   },
   {
+    "id": "cream_sweet",
+    "name": "Sweet",
+    "category": "cream"
+  },
+  {
     "id": "egg_aquafaba",
     "name": "Aquafaba",
     "category": "egg"
@@ -142,6 +152,11 @@
   {
     "id": "egg_yolk",
     "name": "Yolk",
+    "category": "egg"
+  },
+  {
+    "id": "egg_whole",
+    "name": "Whole",
     "category": "egg"
   },
   {
@@ -267,6 +282,11 @@
   {
     "id": "fruit_papaya",
     "name": "Papaya",
+    "category": "fruit"
+  },
+  {
+    "id": "fruit_peach",
+    "name": "Peach",
     "category": "fruit"
   },
   {
@@ -525,8 +545,8 @@
     "category": "spice"
   },
   {
-    "id": "spice_markutlime",
-    "name": "Markut lime",
+    "id": "spice_makrutlime",
+    "name": "Makrut lime",
     "category": "spice"
   },
   {
@@ -919,6 +939,11 @@
     "category": "bitters"
   },
   {
+    "id": "bitters_floral",
+    "name": "Floral",
+    "category": "bitters"
+  },
+  {
     "id": "bitters_grapefruit",
     "name": "Grapefruit",
     "category": "bitters"
@@ -959,6 +984,11 @@
     "category": "bitters"
   },
   {
+    "id": "bitters_spicy",
+    "name": "Spicy",
+    "category": "bitters"
+  },
+  {
     "id": "bitters_thai",
     "name": "Thai",
     "category": "bitters"
@@ -971,6 +1001,11 @@
   {
     "id": "brandy_apple",
     "name": "Apple",
+    "category": "brandy"
+  },
+  {
+    "id": "brandy_applecider",
+    "name": "Apple Cider",
     "category": "brandy"
   },
   {
@@ -1035,8 +1070,20 @@
     "parent": "brandy_grape"
   },
   {
+    "id": "brandy_grape_pineaudescharentes",
+    "name": "Pineau des Charentes",
+    "category": "brandy",
+    "parent": "brandy_grape"
+  },
+  {
     "id": "brandy_grape_pisco",
     "name": "Pisco",
+    "category": "brandy",
+    "parent": "brandy_grape"
+  },
+  {
+    "id": "brandy_grape_pommeau",
+    "name": "Pommeau",
     "category": "brandy",
     "parent": "brandy_grape"
   },
@@ -1077,6 +1124,11 @@
     "category": "brandy"
   },
   {
+    "id": "brandy_raisin",
+    "name": "Raisin",
+    "category": "brandy"
+  },
+  {
     "id": "brandy_shiso",
     "name": "Shiso",
     "category": "brandy"
@@ -1104,7 +1156,26 @@
   {
     "id": "cane_rum",
     "name": "Rum",
-    "category": "cane"
+    "category": "cane",
+    "hasChildren": true
+  },
+  {
+    "id": "cane_rum_jamaican",
+    "name": "Jamaican",
+    "category": "cane",
+    "parent": "cane_rum"
+  },
+  {
+    "id": "cane_rum_demerara",
+    "name": "Demerara",
+    "category": "cane",
+    "parent": "cane_rum"
+  },
+  {
+    "id": "cane_rum_agricole",
+    "name": "Agricole",
+    "category": "cane",
+    "parent": "cane_rum"
   },
   {
     "id": "cane_swedishpunsch",
@@ -1144,7 +1215,20 @@
   {
     "id": "fortifiedwine_port",
     "name": "Port",
-    "category": "fortifiedwine"
+    "category": "fortifiedwine",
+    "hasChildren": true
+  },
+  {
+    "id": "fortifiedwine_port_tawny",
+    "name": "Tawny",
+    "category": "fortifiedwine",
+    "parent": "fortifiedwine_port"
+  },
+  {
+    "id": "fortifiedwine_port_white",
+    "name": "White",
+    "category": "fortifiedwine",
+    "parent": "fortifiedwine_port"
   },
   {
     "id": "fortifiedwine_sherry",
@@ -1277,6 +1361,12 @@
   {
     "id": "grain_whiskey_bourbon",
     "name": "Bourbon",
+    "category": "grain",
+    "parent": "grain_whiskey"
+  },
+  {
+    "id": "grain_whiskey_indian",
+    "name": "Indian",
     "category": "grain",
     "parent": "grain_whiskey"
   },
@@ -1557,7 +1647,14 @@
   {
     "id": "liqueur_orange",
     "name": "Orange",
-    "category": "liqueur"
+    "category": "liqueur",
+    "hasChildren": true
+  },
+  {
+    "id": "liqueur_orange_bluecuracao",
+    "name": "Blue Curaçao",
+    "category": "liqueur",
+    "parent": "liqueur_orange"
   },
   {
     "id": "liqueur_passionfruit",
@@ -1597,6 +1694,11 @@
   {
     "id": "liqueur_rich",
     "name": "Rich",
+    "category": "liqueur"
+  },
+  {
+    "id": "liqueur_rose",
+    "name": "Rose",
     "category": "liqueur"
   },
   {

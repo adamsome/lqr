@@ -56,6 +56,19 @@
     ]
   },
   {
+    "id": "brokers_gin",
+    "ordinal": 1035,
+    "name": "Broker's Gin",
+    "category": "grain",
+    "parent": "grain_gin_londondry",
+    "productionMethod": "column",
+    "aging": "none",
+    "origin": "UK",
+    "references": [
+      "D+C: WH"
+    ]
+  },
+  {
     "id": "bimini",
     "ordinal": 1040,
     "name": "Bimini",
@@ -82,6 +95,34 @@
     ]
   },
   {
+    "id": "perrys_tot_navy_strength",
+    "ordinal": 1055,
+    "name": "Perry's Tot Navy Strength",
+    "category": "grain",
+    "parent": "grain_gin_londondry",
+    "productionMethod": "column",
+    "aging": "none",
+    "overproof": true,
+    "origin": "UK",
+    "references": [
+      "D+C: WH"
+    ]
+  },
+  {
+    "id": "old_raj_110proof",
+    "ordinal": 1056,
+    "name": "Old Raj 110-proof",
+    "category": "grain",
+    "parent": "grain_gin_londondry",
+    "productionMethod": "column",
+    "aging": "none",
+    "overproof": true,
+    "origin": "UK",
+    "references": [
+      "D+C: WH"
+    ]
+  },
+  {
     "id": "monkey_47",
     "ordinal": 1060,
     "name": "Monkey 47",
@@ -90,6 +131,19 @@
     "productionMethod": "column",
     "aging": "none",
     "origin": "Germany",
+    "references": [
+      "D+C: WH"
+    ]
+  },
+  {
+    "id": "suntory_roku",
+    "ordinal": 1065,
+    "name": "Suntory Roku",
+    "category": "grain",
+    "parent": "grain_gin_contemporary",
+    "productionMethod": "column",
+    "aging": "none",
+    "origin": "Japan",
     "references": [
       "D+C: WH"
     ]
@@ -136,9 +190,35 @@
     ]
   },
   {
+    "id": "greenhook_ginsmiths_old_tom",
+    "ordinal": 1095,
+    "name": "Greenhook Ginsmiths Old Tom",
+    "category": "grain",
+    "parent": "grain_gin_oldtom",
+    "productionMethod": "column",
+    "aging": "none",
+    "origin": "Australia",
+    "references": [
+      "D+C: WH"
+    ]
+  },
+  {
     "id": "siembra_valles_blanco",
     "ordinal": 1100,
     "name": "Siembra Valles Blanco",
+    "category": "agave",
+    "parent": "agave_tequila_blanco",
+    "productionMethod": "pot",
+    "aging": "none",
+    "origin": "Mexico",
+    "references": [
+      "D+C: WH"
+    ]
+  },
+  {
+    "id": "siembra_valles_ancestral",
+    "ordinal": 1105,
+    "name": "Siembra Valles Ancestral",
     "category": "agave",
     "parent": "agave_tequila_blanco",
     "productionMethod": "pot",
@@ -165,6 +245,19 @@
     "id": "cascahuin_48_plata",
     "ordinal": 1120,
     "name": "Cascahuin 48 Plata",
+    "category": "agave",
+    "parent": "agave_tequila_blanco",
+    "productionMethod": "pot",
+    "aging": "none",
+    "origin": "Mexico",
+    "references": [
+      "D+C: WH"
+    ]
+  },
+  {
+    "id": "calle_23",
+    "ordinal": 1125,
+    "name": "Calle 23",
     "category": "agave",
     "parent": "agave_tequila_blanco",
     "productionMethod": "pot",
@@ -241,6 +334,16 @@
     ]
   },
   {
+    "id": "tapatio_110proof",
+    "ordinal": 1172,
+    "name": "Tapatio 110-proof",
+    "category": "agave",
+    "parent": "agave_tequila_blanco",
+    "productionMethod": "pot",
+    "aging": "none",
+    "origin": "Mexico"
+  },
+  {
     "id": "siembra_azul_blanco",
     "ordinal": 1180,
     "name": "Siembra Azul Blanco",
@@ -266,6 +369,32 @@
     "references": [
       "D+C: WH",
       "D+C: Codex"
+    ]
+  },
+  {
+    "id": "el_tesoro_reposado",
+    "ordinal": 1195,
+    "name": "El Tesoro Reposado",
+    "category": "agave",
+    "parent": "agave_tequila_reposado",
+    "productionMethod": "pot",
+    "aging": "light",
+    "origin": "Mexico",
+    "references": [
+      "D+C: WH"
+    ]
+  },
+  {
+    "id": "tapatio_anejo",
+    "ordinal": 1197,
+    "name": "Tapatío Anejo",
+    "category": "agave",
+    "parent": "agave_tequila_anejo",
+    "productionMethod": "pot",
+    "aging": "medium",
+    "origin": "Mexico",
+    "references": [
+      "D+C: WH"
     ]
   },
   {
@@ -398,11 +527,24 @@
     ]
   },
   {
+    "id": "mezcal_vago_elote",
+    "ordinal": 1295,
+    "name": "Mezcal Vago Elote",
+    "category": "agave",
+    "parent": "agave_mezcal",
+    "productionMethod": "pot",
+    "aging": "none",
+    "origin": "Mexico",
+    "references": [
+      "D+C: WH"
+    ]
+  },
+  {
     "id": "hamilton_jamaican_gold",
     "ordinal": 1300,
     "name": "Hamilton Jamaican Gold",
     "category": "cane",
-    "parent": "cane_rum",
+    "parent": "cane_rum_jamaican",
     "productionMethod": "pot",
     "aging": "none",
     "origin": "Jamaica",
@@ -448,7 +590,7 @@
     "ordinal": 1340,
     "name": "Rum Society #40",
     "category": "cane",
-    "parent": "cane_rum",
+    "parent": "cane_rum_demerara",
     "productionMethod": "pot",
     "aging": "none",
     "origin": "Guyana"
@@ -490,14 +632,26 @@
     "ordinal": 1380,
     "name": "Wray & Nephew (overproof)",
     "category": "cane",
-    "parent": "cane_rum",
+    "parent": "cane_rum_jamaican",
     "productionMethod": "pot",
     "aging": "none",
+    "overproof": true,
     "origin": "Jamaica",
     "references": [
       "D+C: WH",
       "D+C: Codex"
     ]
+  },
+  {
+    "id": "rum_fire_jamaican_overproof",
+    "ordinal": 1385,
+    "name": "Rum Fire Jamaican Overproof",
+    "category": "cane",
+    "parent": "cane_rum_jamaican",
+    "productionMethod": "pot",
+    "aging": "none",
+    "overproof": true,
+    "origin": "Jamaica"
   },
   {
     "id": "grand_canyon_distillery_rum",
@@ -646,7 +800,7 @@
     "ordinal": 1520,
     "name": "Smith & Cross Navy Strength",
     "category": "cane",
-    "parent": "cane_rum",
+    "parent": "cane_rum_jamaican",
     "productionMethod": "pot",
     "aging": "light",
     "origin": "Jamaica",
@@ -713,7 +867,7 @@
     "ordinal": 1580,
     "name": "El Dorado Single Barrel PM",
     "category": "cane",
-    "parent": "cane_rum",
+    "parent": "cane_rum_demerara",
     "productionMethod": "pot",
     "aging": "medium",
     "origin": "Guyana"
@@ -743,7 +897,7 @@
     "ordinal": 1610,
     "name": "Plantation Xaymaca",
     "category": "cane",
-    "parent": "cane_rum",
+    "parent": "cane_rum_jamaican",
     "productionMethod": "pot",
     "aging": "medium",
     "origin": "Various",
@@ -777,7 +931,7 @@
     "ordinal": 1640,
     "name": "Appleton Estate 50 Year",
     "category": "cane",
-    "parent": "cane_rum",
+    "parent": "cane_rum_jamaican",
     "productionMethod": "pot",
     "aging": "long",
     "origin": "Jamaica"
@@ -817,7 +971,7 @@
     "ordinal": 1680,
     "name": "Appleton Estate Signature Blend",
     "category": "cane",
-    "parent": "cane_rum",
+    "parent": "cane_rum_jamaican",
     "productionMethod": "blended",
     "aging": "light",
     "origin": "Jamaica",
@@ -843,7 +997,7 @@
     "category": "cane",
     "parent": "cane_rum",
     "productionMethod": "blended",
-    "aging": "light",
+    "aging": "medium",
     "origin": "Regional Blend"
   },
   {
@@ -873,7 +1027,7 @@
     "category": "cane",
     "parent": "cane_rum",
     "productionMethod": "blended",
-    "aging": "light",
+    "aging": "medium",
     "origin": "Barbados"
   },
   {
@@ -911,7 +1065,7 @@
     "ordinal": 1770,
     "name": "El Dorado 3 Year",
     "category": "cane",
-    "parent": "cane_rum",
+    "parent": "cane_rum_demerara",
     "productionMethod": "blended",
     "aging": "light",
     "origin": "Guyana",
@@ -927,7 +1081,7 @@
     "category": "cane",
     "parent": "cane_rum",
     "productionMethod": "blended",
-    "aging": "light",
+    "aging": "medium",
     "origin": "Barbados"
   },
   {
@@ -1137,7 +1291,7 @@
     "ordinal": 1980,
     "name": "El Dorado 5 Year",
     "category": "cane",
-    "parent": "cane_rum",
+    "parent": "cane_rum_demerara",
     "productionMethod": "blended",
     "aging": "medium",
     "origin": "Guyana"
@@ -1147,7 +1301,7 @@
     "ordinal": 1990,
     "name": "El Dorado 8 Year",
     "category": "cane",
-    "parent": "cane_rum",
+    "parent": "cane_rum_demerara",
     "productionMethod": "blended",
     "aging": "medium",
     "origin": "Guyana",
@@ -1160,7 +1314,7 @@
     "ordinal": 2000,
     "name": "El Dorado 12 Year",
     "category": "cane",
-    "parent": "cane_rum",
+    "parent": "cane_rum_demerara",
     "productionMethod": "blended",
     "aging": "medium",
     "origin": "Guyana",
@@ -1289,11 +1443,21 @@
     "origin": "Barbados"
   },
   {
+    "id": "scarlet_ibis",
+    "ordinal": 2125,
+    "name": "Scarlet Ibis",
+    "category": "cane",
+    "parent": "cane_rum",
+    "productionMethod": "blended",
+    "aging": "medium",
+    "origin": "Trinidad"
+  },
+  {
     "id": "appleton_estate_21",
     "ordinal": 2130,
     "name": "Appleton Estate 21",
     "category": "cane",
-    "parent": "cane_rum",
+    "parent": "cane_rum_jamaican",
     "productionMethod": "blended",
     "aging": "long",
     "origin": "Jamaica"
@@ -1323,7 +1487,7 @@
     "ordinal": 2160,
     "name": "El Dorado Special Reserve 15 Year",
     "category": "cane",
-    "parent": "cane_rum",
+    "parent": "cane_rum_demerara",
     "productionMethod": "blended",
     "aging": "long",
     "origin": "Guyana",
@@ -1336,7 +1500,7 @@
     "ordinal": 2170,
     "name": "El Dorado 21 Year",
     "category": "cane",
-    "parent": "cane_rum",
+    "parent": "cane_rum_demerara",
     "productionMethod": "blended",
     "aging": "long",
     "origin": "Guyana"
@@ -1346,7 +1510,7 @@
     "ordinal": 2180,
     "name": "El Dorado 25 Year",
     "category": "cane",
-    "parent": "cane_rum",
+    "parent": "cane_rum_demerara",
     "productionMethod": "blended",
     "aging": "long",
     "origin": "Guyana"
@@ -1389,7 +1553,7 @@
     "ordinal": 2220,
     "name": "Revelation Rum Smooth Ambler",
     "category": "cane",
-    "parent": "cane_rum",
+    "parent": "cane_rum_jamaican",
     "productionMethod": "blended",
     "aging": "long",
     "origin": "Jamaica"
@@ -1399,7 +1563,7 @@
     "ordinal": 2230,
     "name": "St. Lucia Distillers 1931",
     "category": "cane",
-    "parent": "cane_rum",
+    "parent": "cane_rum_demerara",
     "productionMethod": "blended",
     "aging": "long",
     "origin": "St. Lucia"
@@ -1507,7 +1671,7 @@
     "ordinal": 2330,
     "name": "Scarlett Ibis",
     "category": "cane",
-    "parent": "cane_rum",
+    "parent": "cane_rum_demerara",
     "productionMethod": "column",
     "aging": "light",
     "origin": "Trinidad"
@@ -1517,7 +1681,7 @@
     "ordinal": 2340,
     "name": "Admiral Rodney",
     "category": "cane",
-    "parent": "cane_rum",
+    "parent": "cane_rum_demerara",
     "productionMethod": "column",
     "aging": "medium",
     "origin": "St. Lucia"
@@ -1657,7 +1821,7 @@
     "ordinal": 2480,
     "name": "El Dorado Single Barrel EHP",
     "category": "cane",
-    "parent": "cane_rum",
+    "parent": "cane_rum_demerara",
     "productionMethod": "column",
     "aging": "medium",
     "origin": "Guyana"
@@ -1667,7 +1831,7 @@
     "ordinal": 2490,
     "name": "El Dorado Single Barrel ICBU",
     "category": "cane",
-    "parent": "cane_rum",
+    "parent": "cane_rum_demerara",
     "productionMethod": "column",
     "aging": "medium",
     "origin": "Guyana"
@@ -1994,8 +2158,9 @@
     "ordinal": 2810,
     "name": "Hamilton Jamaican Black",
     "category": "cane",
-    "parent": "cane_rum",
+    "parent": "cane_rum_jamaican",
     "productionMethod": "pot",
+    "aging": "none",
     "black": true,
     "origin": "Jamaica"
   },
@@ -2004,8 +2169,9 @@
     "ordinal": 2820,
     "name": "Coruba",
     "category": "cane",
-    "parent": "cane_rum",
+    "parent": "cane_rum_jamaican",
     "productionMethod": "blended",
+    "aging": "medium",
     "black": true,
     "origin": "Jamaica"
   },
@@ -2016,6 +2182,7 @@
     "category": "cane",
     "parent": "cane_rum",
     "productionMethod": "blended",
+    "aging": "light",
     "black": true,
     "origin": "US Virgin Islands",
     "references": [
@@ -2030,6 +2197,7 @@
     "category": "cane",
     "parent": "cane_rum",
     "productionMethod": "blended",
+    "aging": "medium",
     "black": true,
     "origin": "Regional Blend",
     "references": [
@@ -2042,8 +2210,9 @@
     "ordinal": 2850,
     "name": "Hamilton Guyana 86",
     "category": "cane",
-    "parent": "cane_rum",
+    "parent": "cane_rum_demerara",
     "productionMethod": "blended",
+    "aging": "medium",
     "black": true,
     "origin": "Guyana"
   },
@@ -2054,6 +2223,7 @@
     "category": "cane",
     "parent": "cane_rum",
     "productionMethod": "blended",
+    "aging": "medium",
     "black": true,
     "origin": "Jamaica"
   },
@@ -2062,8 +2232,9 @@
     "ordinal": 2870,
     "name": "Lemon Hart 80 / 1804",
     "category": "cane",
-    "parent": "cane_rum",
+    "parent": "cane_rum_demerara",
     "productionMethod": "blended",
+    "aging": "medium",
     "black": true,
     "origin": "Guyana"
   },
@@ -2074,6 +2245,7 @@
     "category": "cane",
     "parent": "cane_rum",
     "productionMethod": "blended",
+    "aging": "medium",
     "black": true,
     "origin": "Venezuela"
   },
@@ -2084,6 +2256,7 @@
     "category": "cane",
     "parent": "cane_rum",
     "productionMethod": "blended",
+    "aging": "medium",
     "black": true,
     "origin": "Jamaica"
   },
@@ -2092,8 +2265,9 @@
     "ordinal": 2900,
     "name": "Blackwell's Black Gold",
     "category": "cane",
-    "parent": "cane_rum",
+    "parent": "cane_rum_jamaican",
     "productionMethod": "blended",
+    "aging": "medium",
     "black": true,
     "origin": "Jamaica"
   },
@@ -2102,8 +2276,9 @@
     "ordinal": 2910,
     "name": "Skipper Finest Old Demerara",
     "category": "cane",
-    "parent": "cane_rum",
+    "parent": "cane_rum_demerara",
     "productionMethod": "blended",
+    "aging": "medium",
     "black": true,
     "origin": "Guyana"
   },
@@ -2112,8 +2287,9 @@
     "ordinal": 2920,
     "name": "Hamilton Guyana 151",
     "category": "cane",
-    "parent": "cane_rum",
+    "parent": "cane_rum_demerara",
     "productionMethod": "blended",
+    "aging": "medium",
     "black": true,
     "overproof": true,
     "origin": "Guyana",
@@ -2126,8 +2302,9 @@
     "ordinal": 2930,
     "name": "Lemon Hart 151",
     "category": "cane",
-    "parent": "cane_rum",
+    "parent": "cane_rum_demerara",
     "productionMethod": "blended",
+    "aging": "medium",
     "black": true,
     "overproof": true,
     "origin": "Guyana"
@@ -2139,6 +2316,7 @@
     "category": "cane",
     "parent": "cane_rum",
     "productionMethod": "blended",
+    "aging": "medium",
     "black": true,
     "overproof": true,
     "origin": "Regional Blend",
@@ -2151,7 +2329,7 @@
     "ordinal": 2950,
     "name": "Rhum Barbancourt 5 Star",
     "category": "cane",
-    "parent": "cane_rum",
+    "parent": "cane_rum_agricole",
     "productionMethod": "coffey",
     "aging": "medium",
     "origin": "Haiti",
@@ -2164,7 +2342,7 @@
     "ordinal": 2960,
     "name": "Rhum Barbancourt Estate Reserve",
     "category": "cane",
-    "parent": "cane_rum",
+    "parent": "cane_rum_agricole",
     "productionMethod": "coffey",
     "aging": "medium",
     "origin": "Haiti"
@@ -2174,7 +2352,7 @@
     "ordinal": 2970,
     "name": "Capovilla Agricole PMG",
     "category": "cane",
-    "parent": "cane_rum",
+    "parent": "cane_rum_agricole",
     "productionMethod": "pot",
     "aging": "none",
     "origin": "Marie Galante"
@@ -2184,7 +2362,7 @@
     "ordinal": 2980,
     "name": "Damoiseau Cane Rhum",
     "category": "cane",
-    "parent": "cane_rum",
+    "parent": "cane_rum_agricole",
     "productionMethod": "pot",
     "aging": "none",
     "origin": "Guadeloupe"
@@ -2194,9 +2372,9 @@
     "ordinal": 2990,
     "name": "Rhum Barbancourt 3 Star",
     "category": "cane",
-    "parent": "cane_rum",
-    "productionMethod": "pot",
-    "aging": "none",
+    "parent": "cane_rum_agricole",
+    "productionMethod": "coffey",
+    "aging": "medium",
     "origin": "Haiti",
     "references": [
       "D+C: Codex",
@@ -2208,7 +2386,7 @@
     "ordinal": 3000,
     "name": "St. George California Agricole",
     "category": "cane",
-    "parent": "cane_rum",
+    "parent": "cane_rum_agricole",
     "productionMethod": "pot",
     "aging": "none",
     "origin": "USA",
@@ -2219,7 +2397,7 @@
     "ordinal": 3010,
     "name": "Capovilla Rhum Liberation 2010",
     "category": "cane",
-    "parent": "cane_rum",
+    "parent": "cane_rum_agricole",
     "productionMethod": "pot",
     "aging": "medium",
     "origin": "Marie Galante"
@@ -2229,7 +2407,7 @@
     "ordinal": 3020,
     "name": "Damoiseau V.S.O.P.",
     "category": "cane",
-    "parent": "cane_rum",
+    "parent": "cane_rum_agricole",
     "productionMethod": "pot",
     "aging": "medium",
     "origin": "Guadeloupe"
@@ -2239,7 +2417,7 @@
     "ordinal": 3030,
     "name": "St. George California Reserve Agricole",
     "category": "cane",
-    "parent": "cane_rum",
+    "parent": "cane_rum_agricole",
     "productionMethod": "pot",
     "aging": "medium",
     "origin": "USA",
@@ -2250,7 +2428,7 @@
     "ordinal": 3040,
     "name": "Clément Première Canne",
     "category": "cane",
-    "parent": "cane_rum",
+    "parent": "cane_rum_agricole",
     "productionMethod": "column",
     "aging": "none",
     "origin": "Martinique"
@@ -2260,7 +2438,7 @@
     "ordinal": 3050,
     "name": "Clément Canne Bleue",
     "category": "cane",
-    "parent": "cane_rum",
+    "parent": "cane_rum_agricole",
     "productionMethod": "column",
     "aging": "none",
     "origin": "Martinique"
@@ -2270,7 +2448,7 @@
     "ordinal": 3060,
     "name": "Duquesne Blanc",
     "category": "cane",
-    "parent": "cane_rum",
+    "parent": "cane_rum_agricole",
     "productionMethod": "column",
     "aging": "none",
     "origin": "Martinique"
@@ -2280,7 +2458,7 @@
     "ordinal": 3070,
     "name": "La Favorite Blanc",
     "category": "cane",
-    "parent": "cane_rum",
+    "parent": "cane_rum_agricole",
     "productionMethod": "column",
     "aging": "none",
     "origin": "Martinique",
@@ -2293,7 +2471,7 @@
     "ordinal": 3080,
     "name": "Neisson Blanc",
     "category": "cane",
-    "parent": "cane_rum",
+    "parent": "cane_rum_agricole",
     "productionMethod": "column",
     "aging": "none",
     "origin": "Martinique"
@@ -2303,7 +2481,7 @@
     "ordinal": 3090,
     "name": "Neisson Le Rhum",
     "category": "cane",
-    "parent": "cane_rum",
+    "parent": "cane_rum_agricole",
     "productionMethod": "column",
     "aging": "none",
     "origin": "Martinique"
@@ -2313,7 +2491,7 @@
     "ordinal": 3100,
     "name": "Neisson L'Esprit Overproof",
     "category": "cane",
-    "parent": "cane_rum",
+    "parent": "cane_rum_agricole",
     "productionMethod": "column",
     "aging": "none",
     "origin": "Martinique"
@@ -2323,7 +2501,7 @@
     "ordinal": 3110,
     "name": "Rhum J.M White 100 proof",
     "category": "cane",
-    "parent": "cane_rum",
+    "parent": "cane_rum_agricole",
     "productionMethod": "column",
     "aging": "none",
     "origin": "Martinique",
@@ -2336,7 +2514,7 @@
     "ordinal": 3120,
     "name": "Clément V.S.O.P.",
     "category": "cane",
-    "parent": "cane_rum",
+    "parent": "cane_rum_agricole",
     "productionMethod": "column",
     "aging": "medium",
     "origin": "Martinique",
@@ -2349,7 +2527,7 @@
     "ordinal": 3130,
     "name": "Clément 6 Year Très Vieux",
     "category": "cane",
-    "parent": "cane_rum",
+    "parent": "cane_rum_agricole",
     "productionMethod": "column",
     "aging": "medium",
     "origin": "Martinique"
@@ -2359,7 +2537,7 @@
     "ordinal": 3140,
     "name": "Clément 10 Year Très Vieux",
     "category": "cane",
-    "parent": "cane_rum",
+    "parent": "cane_rum_agricole",
     "productionMethod": "column",
     "aging": "medium",
     "origin": "Martinique"
@@ -2369,7 +2547,7 @@
     "ordinal": 3150,
     "name": "Duquesne Élevé Sous Bois",
     "category": "cane",
-    "parent": "cane_rum",
+    "parent": "cane_rum_agricole",
     "productionMethod": "column",
     "aging": "medium",
     "origin": "Martinique"
@@ -2379,7 +2557,7 @@
     "ordinal": 3160,
     "name": "La Favorite Coeur d'Ambré",
     "category": "cane",
-    "parent": "cane_rum",
+    "parent": "cane_rum_agricole",
     "productionMethod": "column",
     "aging": "medium",
     "origin": "Martinique"
@@ -2389,7 +2567,7 @@
     "ordinal": 3170,
     "name": "La Favorite Vieux",
     "category": "cane",
-    "parent": "cane_rum",
+    "parent": "cane_rum_agricole",
     "productionMethod": "column",
     "aging": "medium",
     "origin": "Martinique"
@@ -2399,7 +2577,7 @@
     "ordinal": 3180,
     "name": "Neisson Élevé Sous Bois",
     "category": "cane",
-    "parent": "cane_rum",
+    "parent": "cane_rum_agricole",
     "productionMethod": "column",
     "aging": "medium",
     "origin": "Martinique",
@@ -2412,7 +2590,7 @@
     "ordinal": 3190,
     "name": "Neisson Réserve Spéciale",
     "category": "cane",
-    "parent": "cane_rum",
+    "parent": "cane_rum_agricole",
     "productionMethod": "column",
     "aging": "medium",
     "origin": "Martinique",
@@ -2425,7 +2603,7 @@
     "ordinal": 3200,
     "name": "Rhum J.M E.S.B. Gold",
     "category": "cane",
-    "parent": "cane_rum",
+    "parent": "cane_rum_agricole",
     "productionMethod": "column",
     "aging": "medium",
     "origin": "Martinique"
@@ -2435,7 +2613,7 @@
     "ordinal": 3210,
     "name": "Rhum J.M V.S.O.P.",
     "category": "cane",
-    "parent": "cane_rum",
+    "parent": "cane_rum_agricole",
     "productionMethod": "column",
     "aging": "medium",
     "origin": "Martinique",
@@ -2448,7 +2626,7 @@
     "ordinal": 3220,
     "name": "Clément Cuvée Homere",
     "category": "cane",
-    "parent": "cane_rum",
+    "parent": "cane_rum_agricole",
     "productionMethod": "column",
     "aging": "long",
     "origin": "Martinique"
@@ -2458,7 +2636,7 @@
     "ordinal": 3230,
     "name": "Neisson 15 Year",
     "category": "cane",
-    "parent": "cane_rum",
+    "parent": "cane_rum_agricole",
     "productionMethod": "column",
     "aging": "long",
     "origin": "Martinique"
@@ -2468,7 +2646,7 @@
     "ordinal": 3240,
     "name": "Neisson 18 Year",
     "category": "cane",
-    "parent": "cane_rum",
+    "parent": "cane_rum_agricole",
     "productionMethod": "column",
     "aging": "long",
     "origin": "Martinique"
@@ -2478,7 +2656,7 @@
     "ordinal": 3250,
     "name": "Rhum J.M 1994",
     "category": "cane",
-    "parent": "cane_rum",
+    "parent": "cane_rum_agricole",
     "productionMethod": "column",
     "aging": "long",
     "origin": "Martinique"
@@ -2488,7 +2666,7 @@
     "ordinal": 3260,
     "name": "Rhum J.M 1997",
     "category": "cane",
-    "parent": "cane_rum",
+    "parent": "cane_rum_agricole",
     "productionMethod": "column",
     "aging": "long",
     "origin": "Martinique"
@@ -2678,6 +2856,19 @@
     ]
   },
   {
+    "id": "high_west_silver_oat",
+    "ordinal": 3405,
+    "name": "High West Silver Oat",
+    "category": "grain",
+    "parent": "grain_whiskey_rye",
+    "productionMethod": "column",
+    "aging": "medium",
+    "origin": "USA",
+    "references": [
+      "D+C: WH"
+    ]
+  },
+  {
     "id": "dewers",
     "ordinal": 3410,
     "name": "Dewer's",
@@ -2701,12 +2892,51 @@
     ]
   },
   {
-    "id": "tyconnel",
+    "id": "compass_box_great_king_street_glasgow",
+    "ordinal": 3425,
+    "name": "Compass Box Great King Street Glasgow",
+    "category": "grain",
+    "parent": "grain_whiskey_scotch_blended",
+    "productionMethod": "blended",
+    "aging": "medium",
+    "origin": "Scotland",
+    "references": [
+      "D+C: Codex"
+    ]
+  },
+  {
+    "id": "street_pumas_blended_scotch",
+    "ordinal": 3426,
+    "name": "Street Pumas Blended Scotch",
+    "category": "grain",
+    "parent": "grain_whiskey_scotch_blended",
+    "productionMethod": "blended",
+    "aging": "medium",
+    "origin": "Scotland",
+    "references": [
+      "D+C: Codex"
+    ]
+  },
+  {
+    "id": "tyrconnel",
     "ordinal": 3430,
-    "name": "Tyconnel",
+    "name": "Tyrconnel",
     "category": "grain",
     "parent": "grain_whiskey_irish",
     "productionMethod": "pot",
+    "aging": "medium",
+    "origin": "Ireland",
+    "references": [
+      "D+C: WH"
+    ]
+  },
+  {
+    "id": "jameson_irish_whiskey",
+    "ordinal": 3435,
+    "name": "Jameson Irish Whiskey",
+    "category": "grain",
+    "parent": "grain_whiskey_irish",
+    "productionMethod": "blended",
     "aging": "medium",
     "origin": "Ireland",
     "references": [
@@ -2844,8 +3074,120 @@
     ]
   },
   {
+    "id": "hibiki_japanese_harmony",
+    "ordinal": 3532,
+    "name": "Hibiki Japanese Harmony",
+    "category": "grain",
+    "parent": "grain_whiskey_japanese",
+    "productionMethod": "pot",
+    "aging": "medium",
+    "origin": "Japan",
+    "references": [
+      "D+C: WH"
+    ]
+  },
+  {
+    "id": "suntory_toki",
+    "ordinal": 3533,
+    "name": "Suntory Toki",
+    "category": "grain",
+    "parent": "grain_whiskey_japanese",
+    "productionMethod": "pot",
+    "aging": "medium",
+    "origin": "Japan",
+    "references": [
+      "D+C: WH"
+    ]
+  },
+  {
+    "id": "amrut_caskstrength_single_malt_indian_whisky",
+    "ordinal": 3538,
+    "name": "Amrut Cask-Strength Single Malt Indian Whisky",
+    "category": "grain",
+    "parent": "grain_whiskey_indian",
+    "productionMethod": "pot",
+    "aging": "medium",
+    "origin": "India",
+    "references": [
+      "D+C: WH"
+    ]
+  },
+  {
+    "id": "navazos_palazzi_overseas_malt_whiskey",
+    "ordinal": 3539,
+    "name": "Navazos Palazzi Overseas Malt Whiskey",
+    "category": "grain",
+    "parent": "grain_whiskey_indian",
+    "productionMethod": "pot",
+    "aging": "medium",
+    "origin": "India",
+    "references": [
+      "D+C: WH"
+    ]
+  },
+  {
+    "id": "krogstad_aquavit",
+    "ordinal": 3541,
+    "name": "Krogstad Aquavit",
+    "category": "grain",
+    "parent": "grain_aquavit",
+    "aging": "none",
+    "origin": "USA",
+    "originTerritory": "Oregon"
+  },
+  {
+    "id": "svol_swedish_style_aquavit",
+    "ordinal": 3542,
+    "name": "Svöl Swedish Style Aquavit",
+    "category": "grain",
+    "parent": "grain_aquavit",
+    "aging": "none",
+    "origin": "Sweden"
+  },
+  {
+    "id": "linie_aquavit",
+    "ordinal": 3543,
+    "name": "Linie Aquavit",
+    "category": "grain",
+    "parent": "grain_aquavit",
+    "aging": "medium",
+    "origin": "Norway"
+  },
+  {
+    "id": "gamle_ode_dill_aquavit",
+    "ordinal": 3544,
+    "name": "Gamle Ode Dill Aquavit",
+    "category": "grain",
+    "parent": "grain_aquavit",
+    "aging": "none",
+    "origin": "USA",
+    "originTerritory": "Wisconsin"
+  },
+  {
+    "id": "brennivin_aquavit",
+    "ordinal": 3545,
+    "name": "Brennivin Aquavit",
+    "category": "grain",
+    "parent": "grain_aquavit",
+    "aging": "none",
+    "origin": "Iceland"
+  },
+  {
+    "id": "st_george_california_rice_shochu",
+    "ordinal": 3547,
+    "name": "St. George California rice shochu",
+    "category": "grain",
+    "parent": "grain_shochu",
+    "aging": "none",
+    "origin": "USA",
+    "originTerritory": "California",
+    "references": [
+      "D+C: WH"
+    ]
+  },
+  {
     "id": "bertoux_brandy",
-    "ordinal": 3540,
+    "ordinal": 3549,
     "name": "Bertoux brandy",
     "category": "brandy",
     "parent": "brandy_grape_american",
@@ -2863,6 +3205,20 @@
     "name": "Clear Creek 2-year",
     "category": "brandy",
     "parent": "brandy_apple",
+    "productionMethod": "pot",
+    "aging": "medium",
+    "origin": "USA",
+    "originTerritory": "Oregon",
+    "references": [
+      "D+C: WH"
+    ]
+  },
+  {
+    "id": "clear_creek_muscat_grappa",
+    "ordinal": 3555,
+    "name": "Clear Creek Muscat Grappa",
+    "category": "brandy",
+    "parent": "brandy_grape_grappa",
     "productionMethod": "pot",
     "aging": "medium",
     "origin": "USA",
@@ -2953,6 +3309,19 @@
     ]
   },
   {
+    "id": "paul_beau_vs",
+    "ordinal": 3615,
+    "name": "Paul Beau VS",
+    "category": "brandy",
+    "parent": "brandy_grape_cognac",
+    "productionMethod": "pot",
+    "aging": "medium",
+    "origin": "France",
+    "references": [
+      "D+C: WH"
+    ]
+  },
+  {
     "id": "pm_spirits_bas",
     "ordinal": 3620,
     "name": "PM Spirits Bas",
@@ -2994,6 +3363,19 @@
     ]
   },
   {
+    "id": "pierre_ferrand_ambre",
+    "ordinal": 3645,
+    "name": "Pierre Ferrand Ambré",
+    "category": "brandy",
+    "parent": "brandy_grape_cognac",
+    "productionMethod": "pot",
+    "aging": "medium",
+    "origin": "France",
+    "references": [
+      "D+C: WH"
+    ]
+  },
+  {
     "id": "gourry_de_chadville",
     "ordinal": 3650,
     "name": "Gourry de Chadville",
@@ -3026,7 +3408,19 @@
     "ordinal": 3670,
     "name": "Reisetbauer carrot eau-de-vie",
     "category": "brandy",
-    "parent": "brandy_grape_eaudevie",
+    "parent": "brandy_carrot",
+    "aging": "none",
+    "origin": "Austria",
+    "references": [
+      "D+C: WH"
+    ]
+  },
+  {
+    "id": "reisetbauer_hazelnut_eaudevie",
+    "ordinal": 3672,
+    "name": "Reisetbauer hazelnut eau-de-vie",
+    "category": "brandy",
+    "parent": "brandy_hazelnut",
     "aging": "none",
     "origin": "Austria",
     "references": [
@@ -3038,7 +3432,7 @@
     "ordinal": 3680,
     "name": "Rhine Hall mango brandy",
     "category": "brandy",
-    "parent": "brandy_grape_american",
+    "parent": "brandy_mango",
     "aging": "none",
     "origin": "USA",
     "originTerritory": "Illinois",
@@ -3051,7 +3445,7 @@
     "ordinal": 3690,
     "name": "Clear Creek Blue Plum brandy",
     "category": "brandy",
-    "parent": "brandy_grape_american",
+    "parent": "brandy_plum",
     "aging": "none",
     "origin": "USA",
     "originTerritory": "Oregon",
@@ -3064,7 +3458,7 @@
     "ordinal": 3700,
     "name": "Clear Creek Douglas Fir eau-de-vie",
     "category": "brandy",
-    "parent": "brandy_grape_eaudevie",
+    "parent": "brandy_douglasfir",
     "aging": "none",
     "origin": "USA",
     "originTerritory": "Oregon",
@@ -3077,7 +3471,7 @@
     "ordinal": 3710,
     "name": "St. George Aqua Perfecta basil eau-de-vie",
     "category": "brandy",
-    "parent": "brandy_grape_eaudevie",
+    "parent": "brandy_basil",
     "aging": "none",
     "origin": "USA",
     "originTerritory": "California",
@@ -3090,7 +3484,7 @@
     "ordinal": 3720,
     "name": "Cobrafire eau-de-vie de raisin",
     "category": "brandy",
-    "parent": "brandy_grape_eaudevie",
+    "parent": "brandy_raisin",
     "aging": "none",
     "origin": "France",
     "references": [
@@ -3102,7 +3496,7 @@
     "ordinal": 3730,
     "name": "Cyril Zangs 00 apple cide eau-de-vie",
     "category": "brandy",
-    "parent": "brandy_apple",
+    "parent": "brandy_applecider",
     "aging": "none",
     "origin": "France",
     "references": [
@@ -3114,7 +3508,7 @@
     "ordinal": 3740,
     "name": "Clear Creek pear brandy",
     "category": "brandy",
-    "parent": "brandy_grape_american",
+    "parent": "brandy_pear",
     "aging": "none",
     "origin": "USA",
     "originTerritory": "Oregon",
@@ -3137,11 +3531,96 @@
     ]
   },
   {
+    "id": "campo_de_encanto_acholado",
+    "ordinal": 3755,
+    "name": "Campo de Encanto Acholado",
+    "category": "brandy",
+    "parent": "brandy_grape_pisco",
+    "aging": "none",
+    "origin": "Peru",
+    "references": [
+      "D+C: WH"
+    ]
+  },
+  {
+    "id": "barsol_pisco",
+    "ordinal": 3756,
+    "name": "Barsol pisco",
+    "category": "brandy",
+    "parent": "brandy_grape_pisco",
+    "aging": "none",
+    "origin": "Peru",
+    "references": [
+      "D+C: WH"
+    ]
+  },
+  {
     "id": "st_george_framboise_eaudevie",
     "ordinal": 3760,
     "name": "St. George framboise eau-de-vie",
     "category": "brandy",
+    "parent": "brandy_raspberry",
+    "aging": "none",
+    "origin": "USA",
+    "originTerritory": "California",
+    "references": [
+      "D+C: WH"
+    ]
+  },
+  {
+    "id": "park_pineau_des_charentes",
+    "ordinal": 3764,
+    "name": "Park Pineau des Charentes",
+    "category": "brandy",
+    "parent": "brandy_grape_pineaudescharentes",
+    "aging": "none",
+    "origin": "France",
+    "references": [
+      "D+C: WH"
+    ]
+  },
+  {
+    "id": "jeanluc_pasquet_pineau_des_charentes",
+    "ordinal": 3765,
+    "name": "Jean-Luc Pasquet Pineau des Charentes",
+    "category": "brandy",
+    "parent": "brandy_grape_pineaudescharentes",
+    "aging": "none",
+    "origin": "France",
+    "references": [
+      "D+C: WH"
+    ]
+  },
+  {
+    "id": "j_navarre_vieux_pineau_des_charentes",
+    "ordinal": 3766,
+    "name": "J. Navarre Vieux Pineau des Charentes",
+    "category": "brandy",
+    "parent": "brandy_grape_pineaudescharentes",
+    "aging": "none",
+    "origin": "France",
+    "references": [
+      "D+C: WH"
+    ]
+  },
+  {
+    "id": "lemorton_pommeau_de_normandie",
+    "ordinal": 3767,
+    "name": "Lemorton Pommeau de Normandie",
+    "category": "brandy",
     "parent": "brandy_grape_eaudevie",
+    "aging": "none",
+    "origin": "France",
+    "references": [
+      "D+C: WH"
+    ]
+  },
+  {
+    "id": "glasshouse_shiso_brandy",
+    "ordinal": 3768,
+    "name": "Glasshouse Shiso Brandy",
+    "category": "brandy",
+    "parent": "brandy_shiso",
     "aging": "none",
     "origin": "USA",
     "originTerritory": "California",
@@ -3183,6 +3662,29 @@
     "references": [
       "D+C: WH",
       "D+C: Codex"
+    ]
+  },
+  {
+    "id": "salers_gentien_aperitif",
+    "ordinal": 3794,
+    "name": "Salers Gentien Aperitif",
+    "category": "liqueur",
+    "parent": "liqueur_amaro_aperitivo",
+    "origin": "France",
+    "references": [
+      "D+C: WH"
+    ]
+  },
+  {
+    "id": "st_george_bruto_americano",
+    "ordinal": 3795,
+    "name": "St. George Bruto Americano",
+    "category": "liqueur",
+    "parent": "liqueur_amaro_aperitivo",
+    "origin": "USA",
+    "originTerritory": "California",
+    "references": [
+      "D+C: WH"
     ]
   },
   {
@@ -3402,6 +3904,17 @@
     ]
   },
   {
+    "id": "forthave_spirits_marseille",
+    "ordinal": 3985,
+    "name": "Forthave Spirits Marseille",
+    "category": "liqueur",
+    "parent": "liqueur_amaro_dense",
+    "origin": "Italy",
+    "references": [
+      "D+C: WH"
+    ]
+  },
+  {
     "id": "chareau_california_aloe_liqueur",
     "ordinal": 3990,
     "name": "Chareau California Aloe Liqueur",
@@ -3498,9 +4011,36 @@
     ]
   },
   {
+    "id": "licor_43",
+    "ordinal": 4065,
+    "name": "Licor 43",
+    "category": "liqueur",
+    "parent": "liqueur_herbal",
+    "origin": "Spain"
+  },
+  {
+    "id": "drambuie",
+    "ordinal": 4067,
+    "name": "Drambuie",
+    "category": "liqueur",
+    "parent": "liqueur_herbal",
+    "origin": "Scotland"
+  },
+  {
     "id": "bigallet_thyme_liqueur",
     "ordinal": 4070,
     "name": "Bigallet Thyme Liqueur",
+    "category": "liqueur",
+    "parent": "liqueur_herbal",
+    "origin": "France",
+    "references": [
+      "D+C: WH"
+    ]
+  },
+  {
+    "id": "dolin_genepy_des_alpes",
+    "ordinal": 4073,
+    "name": "Dolin Génépy des Alpes",
     "category": "liqueur",
     "parent": "liqueur_herbal",
     "origin": "France",
@@ -3520,9 +4060,9 @@
     ]
   },
   {
-    "id": "velvet_falernum",
+    "id": "john_d_taylors_velvet_falernum",
     "ordinal": 4077,
-    "name": "Velvet Falernum",
+    "name": "John D. Taylor's Velvet Falernum",
     "category": "liqueur",
     "parent": "liqueur_herbal",
     "origin": "Barbados",
@@ -3535,8 +4075,19 @@
     "ordinal": 4080,
     "name": "Kübler Absinthe Superieure",
     "category": "liqueur",
-    "parent": "liqueur_herbal",
+    "parent": "liqueur_absinthe",
     "origin": "Switzerland"
+  },
+  {
+    "id": "herbsaint",
+    "ordinal": 4085,
+    "name": "Herbsaint",
+    "category": "liqueur",
+    "parent": "liqueur_absinthe",
+    "origin": "France",
+    "references": [
+      "D+C: WH"
+    ]
   },
   {
     "id": "giffard_menthepastille",
@@ -3606,6 +4157,17 @@
     ]
   },
   {
+    "id": "giffard_creme_de_fruits_de_la_passion",
+    "ordinal": 4145,
+    "name": "Giffard Crème de Fruits de la Passion",
+    "category": "liqueur",
+    "parent": "liqueur_passionfruit",
+    "origin": "France",
+    "references": [
+      "D+C: WH"
+    ]
+  },
+  {
     "id": "lejay_creme_de_cassis_de_dijon",
     "ordinal": 4150,
     "name": "Lejay Crème de Cassis de Dijon",
@@ -3641,6 +4203,40 @@
     ]
   },
   {
+    "id": "leopold_bros_rocky_mountain_blackberry_liqueur",
+    "ordinal": 4175,
+    "name": "Leopold Bros. Rocky Mountain Blackberry Liqueur",
+    "category": "liqueur",
+    "parent": "liqueur_blackberry",
+    "black": true,
+    "origin": "USA",
+    "originTerritory": "Colorado",
+    "references": [
+      "D+C: WH"
+    ]
+  },
+  {
+    "id": "giffard_creme_de_mure",
+    "ordinal": 4176,
+    "name": "Giffard Crème de Mûre",
+    "category": "liqueur",
+    "parent": "liqueur_blackberry",
+    "black": true,
+    "origin": "France",
+    "references": [
+      "D+C: WH"
+    ]
+  },
+  {
+    "id": "leopold_bros_michigan_tart_cherry_liqueur",
+    "ordinal": 4177,
+    "name": "Leopold Bros. Michigan Tart Cherry Liqueur",
+    "category": "liqueur",
+    "parent": "liqueur_cherry",
+    "origin": "USA",
+    "originTerritory": "Colorado"
+  },
+  {
     "id": "massenez_creme_de_peche_peach_liqueur",
     "ordinal": 4180,
     "name": "Massenez Crème de Pêche peach liqueur",
@@ -3653,6 +4249,30 @@
     ]
   },
   {
+    "id": "giffard_creme_peche_de_vigne",
+    "ordinal": 4183,
+    "name": "Giffard Creme Peche De Vigne",
+    "category": "liqueur",
+    "parent": "liqueur_peach",
+    "origin": "France"
+  },
+  {
+    "id": "mathilde_peche",
+    "ordinal": 4185,
+    "name": "Mathilde Peche",
+    "category": "liqueur",
+    "parent": "liqueur_peach",
+    "origin": "France"
+  },
+  {
+    "id": "combier_peche_de_vigne_liqueur",
+    "ordinal": 4187,
+    "name": "Combier Peche De Vigne Liqueur",
+    "category": "liqueur",
+    "parent": "liqueur_peach",
+    "origin": "France"
+  },
+  {
     "id": "st_george_spiced_pear_liqueur",
     "ordinal": 4190,
     "name": "St George Spiced Pear Liqueur",
@@ -3660,6 +4280,17 @@
     "parent": "liqueur_pear",
     "origin": "USA",
     "originTerritory": "California",
+    "references": [
+      "D+C: WH"
+    ]
+  },
+  {
+    "id": "emile_pernot_liqueur_de_sapin",
+    "ordinal": 4195,
+    "name": "Emile Pernot Liqueur de Sapin",
+    "category": "liqueur",
+    "parent": "liqueur_fir",
+    "origin": "France",
     "references": [
       "D+C: WH"
     ]
@@ -3710,12 +4341,80 @@
     ]
   },
   {
+    "id": "rothman_winter_orchard_apricot_liqueur",
+    "ordinal": 4235,
+    "name": "Rothman & Winter Orchard Apricot Liqueur",
+    "category": "liqueur",
+    "parent": "liqueur_apricot",
+    "origin": "Austria",
+    "references": [
+      "D+C: WH"
+    ]
+  },
+  {
     "id": "kalani_ron_de_coco_coconut_liqueur",
     "ordinal": 4240,
     "name": "Kalani Ron de Coco coconut liqueur",
     "category": "liqueur",
     "parent": "liqueur_coconut",
     "origin": "Mexico",
+    "references": [
+      "D+C: WH"
+    ]
+  },
+  {
+    "id": "st_george_raspberry_liqueur",
+    "ordinal": 4245,
+    "name": "St. George Raspberry Liqueur",
+    "category": "liqueur",
+    "parent": "liqueur_raspberry",
+    "origin": "USA",
+    "originTerritory": "California",
+    "references": [
+      "D+C: WH"
+    ]
+  },
+  {
+    "id": "pasquet_marieframboise",
+    "ordinal": 4246,
+    "name": "Pasquet Marie-Framboise",
+    "category": "liqueur",
+    "parent": "liqueur_raspberry",
+    "origin": "France",
+    "references": [
+      "D+C: WH"
+    ]
+  },
+  {
+    "id": "chareau_aloe_liqueur",
+    "ordinal": 4247,
+    "name": "Chareau Aloe Liqueur",
+    "category": "liqueur",
+    "parent": "liqueur_aloe",
+    "origin": "USA",
+    "originTerritory": "California",
+    "references": [
+      "D+C: WH"
+    ]
+  },
+  {
+    "id": "combier_creme_de_rose",
+    "ordinal": 4248,
+    "name": "Combier Crème de Rose",
+    "category": "liqueur",
+    "parent": "liqueur_rose",
+    "origin": "France",
+    "references": [
+      "D+C: WH"
+    ]
+  },
+  {
+    "id": "italicus_rosolio_bergamot_liqueur",
+    "ordinal": 4249,
+    "name": "Italicus Rosolio Bergamot Liqueur",
+    "category": "liqueur",
+    "parent": "liqueur_bergamot",
+    "origin": "Italy",
     "references": [
       "D+C: WH"
     ]
@@ -3768,6 +4467,25 @@
     ]
   },
   {
+    "id": "rhum_clement_creole_shrubb",
+    "ordinal": 4283,
+    "name": "Rhum Clément Créole Shrubb",
+    "category": "liqueur",
+    "parent": "liqueur_orange",
+    "origin": "Martinique",
+    "references": [
+      "D+C: WH"
+    ]
+  },
+  {
+    "id": "giffard_blue_curacao_liqueur",
+    "ordinal": 4285,
+    "name": "Giffard Blue Curaçao Liqueur",
+    "category": "liqueur",
+    "parent": "liqueur_orange_bluecuracao",
+    "origin": "France"
+  },
+  {
     "id": "marie_brizard_white_creme_de_cacao",
     "ordinal": 4290,
     "name": "Marie Brizard White Creme de Cacao",
@@ -3795,7 +4513,7 @@
     "ordinal": 4310,
     "name": "Don Ciccio & Figli Finocchietto Fennel Liqueur",
     "category": "liqueur",
-    "parent": "liqueur_rich",
+    "parent": "liqueur_fennel",
     "origin": "Italy",
     "references": [
       "D+C: WH"
@@ -3806,7 +4524,7 @@
     "ordinal": 4320,
     "name": "Ancho Reyes Ancho Chile Liqueur",
     "category": "liqueur",
-    "parent": "liqueur_rich",
+    "parent": "liqueur_anchochile",
     "origin": "Mexico",
     "references": [
       "D+C: WH"
@@ -3817,8 +4535,19 @@
     "ordinal": 4330,
     "name": "Ancho Reyes Ancho Verde Liqueur",
     "category": "liqueur",
-    "parent": "liqueur_rich",
+    "parent": "liqueur_anchochile",
     "origin": "Mexico",
+    "references": [
+      "D+C: WH"
+    ]
+  },
+  {
+    "id": "empirical_spirits_habanero_spirit",
+    "ordinal": 4335,
+    "name": "Empirical Spirits Habanero Spirit",
+    "category": "liqueur",
+    "parent": "liqueur_habanero",
+    "origin": "Denmark",
     "references": [
       "D+C: WH"
     ]
@@ -3828,7 +4557,7 @@
     "ordinal": 4340,
     "name": "Trader Vic's Macadamia Nut Liqueur",
     "category": "liqueur",
-    "parent": "liqueur_rich",
+    "parent": "liqueur_macadamia",
     "origin": "USA",
     "originTerritory": "California",
     "references": [
@@ -3840,7 +4569,7 @@
     "ordinal": 4350,
     "name": "Galliano Ristretto",
     "category": "liqueur",
-    "parent": "liqueur_rich",
+    "parent": "liqueur_coffeebean",
     "origin": "Italy",
     "references": [
       "D+C: WH",
@@ -3852,7 +4581,30 @@
     "ordinal": 4360,
     "name": "Nux Alpina Walnut Liqueur",
     "category": "liqueur",
-    "parent": "liqueur_rich",
+    "parent": "liqueur_walnut",
+    "origin": "Austria",
+    "references": [
+      "D+C: WH"
+    ]
+  },
+  {
+    "id": "bittermens_new_orleans_coffee_liqueur",
+    "ordinal": 4365,
+    "name": "Bittermens New Orleans Coffee Liqueur",
+    "category": "liqueur",
+    "parent": "liqueur_coffeebean",
+    "origin": "USA",
+    "originTerritory": "Oregon",
+    "references": [
+      "D+C: WH"
+    ]
+  },
+  {
+    "id": "zirbenz_stone_pine_liqueur",
+    "ordinal": 4366,
+    "name": "Zirbenz Stone Pine Liqueur",
+    "category": "liqueur",
+    "parent": "liqueur_pine",
     "origin": "Austria",
     "references": [
       "D+C: WH"
@@ -3953,6 +4705,18 @@
     ]
   },
   {
+    "id": "carpano_bianco",
+    "ordinal": 4445,
+    "name": "Carpano Bianco",
+    "category": "fortifiedwine",
+    "parent": "fortifiedwine_blancvermouth",
+    "origin": "Italy",
+    "references": [
+      "D+C: WH",
+      "D+C: Codex"
+    ]
+  },
+  {
     "id": "bonal_gentianequina",
     "ordinal": 4450,
     "name": "Bonal Gentiane-Quina",
@@ -4012,9 +4776,20 @@
     ]
   },
   {
-    "id": "rainwater_madeira",
+    "id": "cap_corse_blanc_quinquina",
+    "ordinal": 4495,
+    "name": "Cap Corse Blanc Quinquina",
+    "category": "fortifiedwine",
+    "parent": "fortifiedwine_aperitif",
+    "origin": "France",
+    "references": [
+      "D+C: WH"
+    ]
+  },
+  {
+    "id": "henriques_henriques_rainwater_madeira",
     "ordinal": 4500,
-    "name": "Rainwater Madeira",
+    "name": "Henriques & Henriques Rainwater Madeira",
     "category": "fortifiedwine",
     "parent": "fortifiedwine_madeira",
     "origin": "Portugal",
@@ -4035,9 +4810,31 @@
     ]
   },
   {
+    "id": "rare_wine_co_baltimore_rainwater_madeira",
+    "ordinal": 4515,
+    "name": "Rare Wine Co. Baltimore Rainwater Madeira",
+    "category": "fortifiedwine",
+    "parent": "fortifiedwine_madeira",
+    "origin": "Portugal",
+    "references": [
+      "D+C: WH"
+    ]
+  },
+  {
     "id": "hh_generoso_doce_5year",
     "ordinal": 4520,
     "name": "H&H Generoso Doce 5-year",
+    "category": "fortifiedwine",
+    "parent": "fortifiedwine_madeira",
+    "origin": "Portugal",
+    "references": [
+      "D+C: WH"
+    ]
+  },
+  {
+    "id": "blandys_5_year_verdelho_madeira",
+    "ordinal": 4525,
+    "name": "Blandy's 5 Year Verdelho Madeira",
     "category": "fortifiedwine",
     "parent": "fortifiedwine_madeira",
     "origin": "Portugal",
@@ -4093,6 +4890,28 @@
     ]
   },
   {
+    "id": "lustau_papirusa",
+    "ordinal": 4565,
+    "name": "Lustau Papirusa",
+    "category": "fortifiedwine",
+    "parent": "fortifiedwine_sherry_manzanilla",
+    "origin": "Spain",
+    "references": [
+      "D+C: WH"
+    ]
+  },
+  {
+    "id": "bodegas_yuste_aurora",
+    "ordinal": 4566,
+    "name": "Bodegas Yuste Aurora",
+    "category": "fortifiedwine",
+    "parent": "fortifiedwine_sherry_manzanilla",
+    "origin": "Spain",
+    "references": [
+      "D+C: WH"
+    ]
+  },
+  {
     "id": "lustau_los_arcos",
     "ordinal": 4570,
     "name": "Lustau Los Arcos",
@@ -4112,8 +4931,7 @@
     "parent": "fortifiedwine_sherry_amontillado",
     "origin": "Spain",
     "references": [
-      "D+C: WH",
-      "D+C: Codex"
+      "D+C: WH"
     ]
   },
   {
