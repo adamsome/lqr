@@ -1,6 +1,6 @@
 import { Column } from '@tanstack/react-table'
 import { Check, LucideIcon } from 'lucide-react'
-import { ReactNode, useMemo } from 'react'
+import { Fragment, ReactNode, useMemo } from 'react'
 
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
@@ -20,36 +20,38 @@ import {
 } from '@/components/ui/popover'
 import { Separator } from '@/components/ui/separator'
 import { cn } from '@/lib/utils'
+import { DataTableFacetedFilterItem } from '@/components/ui/data-table-facet-filter-button'
 
-export type DataTableFacetedFilterItem = {
-  label: string
-  value: string
-  Icon?: LucideIcon
-  icon?: ReactNode
-}
-
-type Props<TData, TValue> = {
-  column?: Column<TData, TValue>
+type Props = {
+  columns: (Column<any, unknown> | undefined)[]
+  columnNames?: (string | undefined | null)[]
   title?: string
   icon?: ReactNode
-  items: DataTableFacetedFilterItem[]
-  transformFacetsFn?: (facets: Map<any, number>) => Map<any, number>
+  itemsPerColumn: DataTableFacetedFilterItem[][]
+  transformFacetsFnPerColumn?: (
+    | ((facets: Map<any, number>) => Map<any, number>)
+    | undefined
+  )[]
 }
 
-export function DataTableFacetFilterButton<TData, TValue>({
-  column,
+export function DataTableMultiFacetFilterButton({
+  columns,
+  columnNames = [],
   title,
   icon,
-  items,
-  transformFacetsFn,
-}: Props<TData, TValue>) {
-  const rawFacets = column?.getFacetedUniqueValues()
-  const facets = useMemo(() => {
-    if (!rawFacets || !transformFacetsFn) return rawFacets
-    return transformFacetsFn(rawFacets)
-  }, [rawFacets, transformFacetsFn])
+  itemsPerColumn,
+  transformFacetsFnPerColumn,
+}: Props) {
+  const rawPerColumn = columns.map((c) => c?.getFacetedUniqueValues()) ?? []
+  const facetsPerColumn = rawPerColumn.map((facets, i) => {
+    const transform = transformFacetsFnPerColumn?.[i]
+    return facets && transform ? transform(facets) : facets
+  })
 
-  const selected = new Set(column?.getFilterValue() as string[])
+  const selectedPerColumn = columns.map(
+    (c) => new Set(c?.getFilterValue() as string[])
+  )
+  const selectedCount = selectedPerColumn.reduce((acc, s) => acc + s.size, 0)
 
   return (
     <Popover>
@@ -57,35 +59,37 @@ export function DataTableFacetFilterButton<TData, TValue>({
         <Button variant="outline" size="sm" className="h-8 border">
           {icon}
           {title}
-          {selected?.size > 0 && (
+          {selectedCount > 0 && (
             <>
               <Separator orientation="vertical" className="mx-2 h-4" />
               <Badge
                 variant="secondary"
                 className="rounded-sm px-1 font-normal lg:hidden"
               >
-                {selected.size}
+                {selectedCount}
               </Badge>
               <div className="hidden space-x-1 lg:flex">
-                {selected.size > 2 ? (
+                {selectedCount > 2 ? (
                   <Badge
                     variant="secondary"
                     className="rounded-sm px-1 font-normal"
                   >
-                    {selected.size} selected
+                    {selectedCount} selected
                   </Badge>
                 ) : (
-                  items
-                    .filter((item) => selected.has(item.value))
-                    .map((item) => (
-                      <Badge
-                        variant="secondary"
-                        key={item.value}
-                        className="rounded-sm px-1 font-normal"
-                      >
-                        {item.label}
-                      </Badge>
-                    ))
+                  itemsPerColumn.map((items, i) =>
+                    items
+                      .filter((item) => selectedPerColumn[i]?.has(item.value))
+                      .map((item) => (
+                        <Badge
+                          variant="secondary"
+                          key={`${i}_${item.value}`}
+                          className="rounded-sm px-1 font-normal"
+                        >
+                          {item.label}
+                        </Badge>
+                      ))
+                  )
                 )}
               </div>
             </>
@@ -93,27 +97,40 @@ export function DataTableFacetFilterButton<TData, TValue>({
         </Button>
       </PopoverTrigger>
       <PopoverContent className="w-52 p-0" align="start">
-        <Command>
+        <Command className="relative">
           <CommandInput placeholder={title} />
-          <CommandList>
+          <CommandList
+            className={cn(
+              '[--padding:theme(spacing.4)] lg:[--padding:theme(spacing.8)]',
+              'max-h-[calc(var(--radix-popover-content-available-height)-var(--padding)-theme(spacing.11)-3px)]'
+            )}
+          >
             <CommandEmpty>No results found.</CommandEmpty>
-            <CommandGroup>
-              {items.map((item) => (
-                <Item
-                  key={item.value}
-                  item={item}
-                  column={column}
-                  selected={selected}
-                  facets={facets}
-                />
-              ))}
-            </CommandGroup>
-            {selected.size > 0 && (
+            {itemsPerColumn.map((items, i) => (
+              <Fragment key={i}>
+                {i !== 0 && <CommandSeparator />}
+                <CommandGroup heading={columnNames[i]}>
+                  {items.map((item) => (
+                    <Item
+                      key={item.value}
+                      item={item}
+                      column={columns[i]}
+                      columnName={columnNames[i]}
+                      selected={selectedPerColumn[i]}
+                      facets={facetsPerColumn[i]}
+                    />
+                  ))}
+                </CommandGroup>
+              </Fragment>
+            ))}
+            {selectedCount > 0 && (
               <>
                 <CommandSeparator />
                 <CommandGroup>
                   <CommandItem
-                    onSelect={() => column?.setFilterValue(undefined)}
+                    onSelect={() =>
+                      columns.forEach((c) => c?.setFilterValue(undefined))
+                    }
                     className="justify-center text-center"
                   >
                     Clear All
@@ -131,17 +148,18 @@ export function DataTableFacetFilterButton<TData, TValue>({
 type ItemProps = {
   item: DataTableFacetedFilterItem
   column?: Column<any, any>
+  columnName?: string | null
   selected: Set<string>
   facets?: Map<any, number>
 }
 
-function Item({ item, column, selected, facets }: ItemProps) {
+function Item({ item, column, columnName, selected, facets }: ItemProps) {
   const isSelected = selected.has(item.value)
   const count = facets?.get(item.value)
   if (!count) return null
   return (
     <CommandItem
-      value={item.label}
+      value={`${columnName ?? ''} ${item.label}`}
       onSelect={() => {
         if (isSelected) {
           selected.delete(item.value)

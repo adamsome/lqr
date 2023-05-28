@@ -14,20 +14,20 @@ import {
   DataTableFacetedFilterItem,
 } from '@/components/ui/data-table-facet-filter-button'
 import { DataTableHierarchicalFacetFilterButton } from '@/components/ui/data-table-hierarchical-facet-filter-button'
+import { DataTableMultiFacetFilterButton } from '@/components/ui/data-table-multi-facet-filter-button'
 import { DataTableViewOptions } from '@/components/ui/data-table-view-options'
-import { CATEGORY_DICT, Category, PRODUCTION_METHOD_DICT } from '@/lib/consts'
+import { useIngredientName } from '@/hooks/use-ingredient-name'
+import {
+  AGING_DICT,
+  Aging,
+  CATEGORY_DICT,
+  Category,
+  PRODUCTION_METHOD_DICT,
+  ProductionMethod,
+} from '@/lib/consts'
 import { HierarchicalFilter } from '@/lib/hierarchical-filter'
 import { StockState, getStockState } from '@/lib/stock'
 import { Ingredient } from '@/lib/types'
-import { ProductionMethod } from '@/lib/consts'
-
-function StockIcon(props: { stock: StockState }) {
-  return (
-    <div className="mr-2 scale-[.8] transform">
-      <BaseStockIcon {...props} />
-    </div>
-  )
-}
 
 const STOCK_ITEMS: DataTableFacetedFilterItem[] = [
   { label: 'Full', value: 'full', icon: <StockIcon stock="full" /> },
@@ -35,12 +35,25 @@ const STOCK_ITEMS: DataTableFacetedFilterItem[] = [
   { label: 'Missing', value: 'none', icon: <StockIcon stock="none" /> },
 ]
 
+const NONE = { label: 'None', value: '__na' }
+
 const PRODUCTION_METHODS = Object.keys(PRODUCTION_METHOD_DICT)
 const PRODUCTION_METHOD_ITEMS: DataTableFacetedFilterItem[] =
   PRODUCTION_METHODS.map((key) => ({
     label: PRODUCTION_METHOD_DICT[key as ProductionMethod].name,
     value: key,
-  })).concat({ label: 'None', value: '__na' })
+  })).concat(NONE)
+
+const AGINGS = Object.keys(AGING_DICT)
+const AGING_ITEMS: DataTableFacetedFilterItem[] = AGINGS.map((key) => ({
+  label: AGING_DICT[key as Aging].name,
+  value: key,
+})).concat(NONE)
+
+const BLACK_ITEMS: DataTableFacetedFilterItem[] = [
+  { label: 'Black', value: 'Black' },
+  NONE,
+]
 
 function transformStockFacets(facets: Map<any, number>) {
   const result = new Map<StockState, number>()
@@ -68,6 +81,7 @@ type Props = DataTableToolbarProps<Ingredient>
 
 export function Toolbar({ table, hideColumns }: Props) {
   const { categoryFilter: root } = useCategoryMeta()
+  const getName = useIngredientName()
 
   const categoryRoot = useMemo(() => {
     const childIDs = root.childIDs.filter(
@@ -109,17 +123,26 @@ export function Toolbar({ table, hideColumns }: Props) {
             renderName={(path, full) => (
               <IngredientPathText path={path} full={full} />
             )}
+            getName={getName}
             transformFacetsFn={transformCategoryFacets}
           />
         )}
-        {table.getColumn('productionMethod') && (
-          <DataTableFacetFilterButton
-            column={table.getColumn('productionMethod')}
-            title="Method"
-            items={PRODUCTION_METHOD_ITEMS}
-            // transformFacetsFn={transformStockFacets}
-          />
-        )}
+        <DataTableMultiFacetFilterButton
+          columns={[
+            table.getColumn('productionMethod'),
+            table.getColumn('aging'),
+            table.getColumn('black'),
+            table.getColumn('overproof'),
+          ]}
+          columnNames={['Method', 'Aging', 'Black', 'Overproof']}
+          title="Style"
+          itemsPerColumn={[
+            PRODUCTION_METHOD_ITEMS,
+            AGING_ITEMS,
+            [{ label: 'Black', value: 'Black' }, NONE],
+            [{ label: 'Overproof', value: 'Overproof' }, NONE],
+          ]}
+        />
         {isFiltered && (
           <Button
             variant="ghost"
@@ -132,6 +155,14 @@ export function Toolbar({ table, hideColumns }: Props) {
         )}
       </div>
       <DataTableViewOptions table={table} hideColumns={hideColumns} />
+    </div>
+  )
+}
+
+function StockIcon(props: { stock: StockState }) {
+  return (
+    <div className="mr-2 scale-[.8] transform">
+      <BaseStockIcon {...props} />
     </div>
   )
 }

@@ -21,11 +21,14 @@ import {
 } from '@/components/ui/popover'
 import {
   HierarchicalFilter,
+  getHierarchicalSelectedPaths,
   invertCheckedState,
   updateHierarchicalFilter,
 } from '@/lib/hierarchical-filter'
 import { cn } from '@/lib/utils'
 import { useCommandState } from 'cmdk'
+import { Separator } from '@/components/ui/separator'
+import { Badge } from '@/components/ui/badge'
 
 type Props<TData, TValue> = {
   column?: Column<TData, TValue>
@@ -33,6 +36,7 @@ type Props<TData, TValue> = {
   icon?: ReactNode
   root: HierarchicalFilter
   renderName(path: string[], full?: boolean): ReactNode
+  getName(path: string[]): string
   transformFacetsFn?: (facets: Map<any, number>) => Map<any, number>
 }
 
@@ -42,6 +46,7 @@ export function DataTableHierarchicalFacetFilterButton<TData, TValue>({
   icon,
   root,
   renderName,
+  getName,
   transformFacetsFn,
 }: Props<TData, TValue>) {
   const [search, setSearch] = useState('')
@@ -54,9 +59,12 @@ export function DataTableHierarchicalFacetFilterButton<TData, TValue>({
     if (!rawFacets || !transformFacetsFn) return rawFacets
     return transformFacetsFn(rawFacets)
   }, [rawFacets, transformFacetsFn])
-  console.log('hfilter', facets, selected, search)
 
   const { checked, childIDs, children } = selected
+
+  const selectedPaths = useMemo(() => {
+    return getHierarchicalSelectedPaths(selected, { facets })
+  }, [selected, facets])
 
   function handleSelect(path: string[], state: CheckedState) {
     let nextState: CheckedState
@@ -81,22 +89,52 @@ export function DataTableHierarchicalFacetFilterButton<TData, TValue>({
         <Button variant="outline" size="sm" className="h-8 border">
           {icon}
           {title}
+          {selectedPaths.length > 0 && (
+            <>
+              <Separator orientation="vertical" className="mx-2 h-4" />
+              <Badge
+                variant="secondary"
+                className="rounded-sm px-1 font-normal lg:hidden"
+              >
+                {selectedPaths.length}
+              </Badge>
+              <div className="hidden space-x-1 lg:flex">
+                {selectedPaths.length > 2 ? (
+                  <Badge
+                    variant="secondary"
+                    className="rounded-sm px-1 font-normal"
+                  >
+                    {selectedPaths.length} selected
+                  </Badge>
+                ) : (
+                  selectedPaths.map((path) => (
+                    <Badge
+                      variant="secondary"
+                      key={path[path.length - 1]}
+                      className="rounded-sm px-1 font-normal"
+                    >
+                      {renderName(path)}
+                    </Badge>
+                  ))
+                )}
+              </div>
+            </>
+          )}
         </Button>
       </PopoverTrigger>
-      <PopoverContent
-        className={cn(
-          '[--padding:theme(spacing.4)] lg:[--padding:theme(spacing.8)]',
-          'w-80 p-0'
-        )}
-        align="start"
-      >
+      <PopoverContent className="w-80 p-0" align="start">
         <Command className="relative">
           <CommandInput
             placeholder={title}
             value={search}
             onValueChange={setSearch}
           />
-          <CommandList className="max-h-[calc(var(--radix-popover-content-available-height)-var(--padding)-theme(spacing.11)-3px)]">
+          <CommandList
+            className={cn(
+              '[--padding:theme(spacing.4)] lg:[--padding:theme(spacing.8)]',
+              'max-h-[calc(var(--radix-popover-content-available-height)-var(--padding)-theme(spacing.11)-3px)]'
+            )}
+          >
             <CommandEmpty>No results found.</CommandEmpty>
             <CommandGroup>
               <CommandItem onSelect={() => handleSelect([], checked)}>
@@ -114,6 +152,7 @@ export function DataTableHierarchicalFacetFilterButton<TData, TValue>({
                   facets={facets}
                   search={search}
                   renderName={renderName}
+                  getName={getName}
                   onSelect={handleSelect}
                 />
               ))}
@@ -131,6 +170,7 @@ type ItemProps = {
   search: string
   facets?: Map<any, number>
   renderName(path: string[], full?: boolean): ReactNode
+  getName(path: string[]): string
   onSelect(path: string[], state: CheckedState): void
 }
 
@@ -155,6 +195,7 @@ function ItemContent({
   search,
   facets,
   renderName,
+  getName,
   onSelect,
 }: ItemProps) {
   const { id, checked } = item
@@ -166,7 +207,7 @@ function ItemContent({
   const path = [...prevPath, id]
 
   return (
-    <CommandItem value={id} onSelect={() => onSelect(path, checked)}>
+    <CommandItem value={getName(path)} onSelect={() => onSelect(path, checked)}>
       <Checkbox
         className={cn('mr-2', {
           'ml-6': !search && level === 1,

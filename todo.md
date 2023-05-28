@@ -1,7 +1,7 @@
 # TODO
 
+- Recipes data structure
 - Vercel
-- Recipes
 - Clerk
 - Stock filter
 - Buy priority

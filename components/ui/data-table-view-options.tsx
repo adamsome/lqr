@@ -25,6 +25,7 @@ export function DataTableViewOptions<TData>({
     table.resetColumnFilters()
     table.resetGlobalFilter()
     table.resetSorting()
+    table.resetColumnVisibility()
   }
   return (
     <DropdownMenu>

@@ -35,6 +35,27 @@ export function invertCheckedState(state: CheckedState) {
   return !state
 }
 
+export function getHierarchicalSelectedPaths(
+  root: HierarchicalFilter,
+  { limit = 2, facets }: { limit?: number; facets?: Map<any, number> } = {},
+  path: string[] = []
+): string[][] {
+  const { childIDs, children } = root
+  return childIDs.reduce<string[][]>((acc, id) => {
+    if (acc.length > limit) return acc
+    const childPath = [...path, id]
+    const child = children[id]
+    const { checked } = child
+    if (!checked) return acc
+    if (id.startsWith('agave_tequila_anejo'))
+      console.log('t', checked, facets?.get(id))
+    if (checked === true && (!facets || facets.get(id))) acc.push(childPath)
+    return acc.concat(
+      getHierarchicalSelectedPaths(child, { limit, facets }, childPath)
+    )
+  }, [])
+}
+
 function setChecked(checked: CheckedState, item?: HierarchicalFilter) {
   if (!item) return
   item.checked = checked

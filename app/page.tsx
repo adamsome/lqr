@@ -6,15 +6,13 @@ import {
   CategoryMeta,
   CategoryMetaProvider,
 } from '@/components/category-meta-provider'
-import { columns } from '@/components/ingredients/columns'
+import { Table } from '@/components/ingredients/table'
 import { Container } from '@/components/ui/container'
-import { DataTable } from '@/components/ui/data-table'
 import { H1 } from '@/components/ui/h1'
 import { HierarchicalFilter } from '@/lib/hierarchical-filter'
 import { connectToDatabase } from '@/lib/mongodb'
 import { createIngredientParser } from '@/lib/parse-ingredients'
 import { Ingredient, IngredientDef, User } from '@/lib/types'
-import { Toolbar } from '@/components/ingredients/toolbar'
 
 async function readData(dataPath: string) {
   const data = await fs.readFile(path.join(process.cwd(), dataPath))
@@ -76,7 +74,7 @@ export default async function IndexPage() {
       <Container className="relative py-8">
         <section className="flex flex-col gap-4">
           <H1>Stock</H1>
-          <DataTable columns={columns} data={ingredients} Toolbar={Toolbar} />
+          <Table data={ingredients} />
         </section>
       </Container>
     </CategoryMetaProvider>
