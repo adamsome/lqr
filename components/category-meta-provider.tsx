@@ -3,11 +3,12 @@
 import { ReactNode, createContext, useContext } from 'react'
 
 import { HierarchicalFilter } from '@/lib/hierarchical-filter'
-import { IngredientDef } from '@/lib/types'
+import { Ingredient, IngredientDef } from '@/lib/types'
 
 export type CategoryMeta = {
   baseIngredientDict: Record<string, IngredientDef>
   categoryFilter: HierarchicalFilter
+  ingredientDict: Record<string, Ingredient>
 }
 
 const CategoryMetaContext = createContext<CategoryMeta | undefined>(undefined)

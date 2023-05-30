@@ -1,10 +1,15 @@
+import { curry } from 'ramda'
+
 import { CATEGORY_DICT, Category } from '@/lib/consts'
 import { IngredientDef } from '@/lib/types'
 
-export const getIngredientName =
-  (baseIngredientDict: Record<string, IngredientDef>) =>
-  (path: string[], { full }: { full?: boolean } = {}) => {
-    if (full) {
+export const getIngredientPathName = curry(
+  (
+    baseIngredientDict: Record<string, IngredientDef>,
+    path: string[],
+    { full }: { full?: boolean } = {}
+  ) => {
+    if (!full) {
       if (path.length > 1) {
         return baseIngredientDict[path[path.length - 1]].name
       }
@@ -22,3 +27,4 @@ export const getIngredientName =
       .join(', ')
     return categoryPrefix + ancestorNames
   }
+)

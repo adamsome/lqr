@@ -31,3 +31,33 @@ export function createIngredientParser(
   }
   return [baseIngredientDict, parseIngredient] as const
 }
+
+export function parseIngredients(
+  baseIngredients: IngredientDef[],
+  userIngredients: Record<string, Partial<IngredientDef>>,
+  ingredientDefs: IngredientDef[]
+) {
+  const [baseIngredientDict, parseIngredient] = createIngredientParser(
+    baseIngredients,
+    userIngredients
+  )
+
+  const { ingredientDict, ingredients } = ingredientDefs.reduce(
+    (acc, def) => {
+      const ingredient = parseIngredient(def)
+      acc.ingredientDict[def.id] = ingredient
+      acc.ingredients.push(ingredient)
+      return acc
+    },
+    {
+      ingredientDict: {} as Record<string, Ingredient>,
+      ingredients: [] as Ingredient[],
+    }
+  )
+
+  return {
+    baseIngredientDict,
+    ingredientDict,
+    ingredients,
+  }
+}

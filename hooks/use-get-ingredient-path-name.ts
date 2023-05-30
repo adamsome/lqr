@@ -1,14 +1,14 @@
 import { useCallback } from 'react'
 
 import { useCategoryMeta } from '@/components/category-meta-provider'
-import { getIngredientName } from '@/hooks/get-ingredient-name'
+import { getIngredientPathName } from '@/lib/ingredient/get-ingredient-path-name'
 
-export function useIngredientName() {
+export function useGetIngredientPathName() {
   const { baseIngredientDict } = useCategoryMeta()
 
   return useCallback(
     (path: string[], options: { full?: boolean } = {}) =>
-      getIngredientName(baseIngredientDict)(path, options),
+      getIngredientPathName(baseIngredientDict)(path, options),
     [baseIngredientDict]
   )
 }

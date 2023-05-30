@@ -4,10 +4,6 @@ type HasName = {
   name: string
 }
 
-type CategoryDef = HasName & {
-  type?: 'spirit' | 'beerWine' | 'bitters'
-}
-
 export type Category =
   | 'acid'
   | 'brine'
@@ -46,43 +42,52 @@ export type Category =
   | 'liqueur'
   | 'wine'
 
+export type CategoryDef = HasName & {
+  id: Category
+  type?: 'spirit' | 'beerWine' | 'bitters'
+}
+
 export const CATEGORY_DICT: Record<Category, CategoryDef> = {
-  acid: { name: 'Acid' },
-  brine: { name: 'Brine' },
-  cheese: { name: 'Cheese' },
-  chocolate: { name: 'Chocolate' },
-  cider: { name: 'Cider' },
-  coffee: { name: 'Coffee' },
-  cordial: { name: 'Cordial' },
-  cream: { name: 'Cream' },
-  egg: { name: 'Egg' },
-  extract: { name: 'Extract' },
-  flower: { name: 'Flower' },
-  fruit: { name: 'Fruit' },
-  jelly: { name: 'Jelly' },
-  juice: { name: 'Juice' },
-  leaf: { name: 'Leaf' },
-  milk: { name: 'Milk' },
-  nut: { name: 'Nut' },
-  oil: { name: 'Oil' },
-  puree: { name: 'Purée' },
-  shrub: { name: 'Shrub' },
-  soda: { name: 'Soda' },
-  spice: { name: 'Spice' },
-  sugar: { name: 'Sugar' },
-  syrup: { name: 'Syrup' },
-  tea: { name: 'Tea' },
-  vegetable: { name: 'Vegetable' },
-  water: { name: 'Water' },
-  agave: { name: 'Agave', type: 'spirit' },
-  beer: { name: 'Beer', type: 'beerWine' },
-  bitters: { name: 'Bitters', type: 'bitters' },
-  brandy: { name: 'Brandy', type: 'spirit' },
-  cane: { name: 'Cane', type: 'spirit' },
-  fortifiedwine: { name: 'Fortified wine', type: 'spirit' },
-  grain: { name: 'Grain', type: 'spirit' },
-  liqueur: { name: 'Liqueur', type: 'spirit' },
-  wine: { name: 'Wine', type: 'beerWine' },
+  acid: { id: 'acid', name: 'Acid' },
+  brine: { id: 'brine', name: 'Brine' },
+  cheese: { id: 'cheese', name: 'Cheese' },
+  chocolate: { id: 'chocolate', name: 'Chocolate' },
+  cider: { id: 'cider', name: 'Cider' },
+  coffee: { id: 'coffee', name: 'Coffee' },
+  cordial: { id: 'cordial', name: 'Cordial' },
+  cream: { id: 'cream', name: 'Cream' },
+  egg: { id: 'egg', name: 'Egg' },
+  extract: { id: 'extract', name: 'Extract' },
+  flower: { id: 'flower', name: 'Flower' },
+  fruit: { id: 'fruit', name: 'Fruit' },
+  jelly: { id: 'jelly', name: 'Jelly' },
+  juice: { id: 'juice', name: 'Juice' },
+  leaf: { id: 'leaf', name: 'Leaf' },
+  milk: { id: 'milk', name: 'Milk' },
+  nut: { id: 'nut', name: 'Nut' },
+  oil: { id: 'oil', name: 'Oil' },
+  puree: { id: 'puree', name: 'Purée' },
+  shrub: { id: 'shrub', name: 'Shrub' },
+  soda: { id: 'soda', name: 'Soda' },
+  spice: { id: 'spice', name: 'Spice' },
+  sugar: { id: 'sugar', name: 'Sugar' },
+  syrup: { id: 'syrup', name: 'Syrup' },
+  tea: { id: 'tea', name: 'Tea' },
+  vegetable: { id: 'vegetable', name: 'Vegetable' },
+  water: { id: 'water', name: 'Water' },
+  agave: { id: 'agave', name: 'Agave', type: 'spirit' },
+  beer: { id: 'beer', name: 'Beer', type: 'beerWine' },
+  bitters: { id: 'bitters', name: 'Bitters', type: 'bitters' },
+  brandy: { id: 'brandy', name: 'Brandy', type: 'spirit' },
+  cane: { id: 'cane', name: 'Cane', type: 'spirit' },
+  fortifiedwine: {
+    id: 'fortifiedwine',
+    name: 'Fortified wine',
+    type: 'spirit',
+  },
+  grain: { id: 'grain', name: 'Grain', type: 'spirit' },
+  liqueur: { id: 'liqueur', name: 'Liqueur', type: 'spirit' },
+  wine: { id: 'wine', name: 'Wine', type: 'beerWine' },
 }
 
 export type ProductionMethod = 'column' | 'pot' | 'blended' | 'coffey'

@@ -7,13 +7,12 @@ import { IngredientPathCell } from '@/components/ingredients/ingredient-path-cel
 import { StockCell } from '@/components/ingredients/stock-cell'
 import { StockIcon } from '@/components/ingredients/stock-icon'
 import { DataTableColumnHeader as Header } from '@/components/ui/data-table-column-header'
+import { getIngredientPathName } from '@/lib/ingredient/get-ingredient-path-name'
 import { AGING_DICT, PRODUCTION_METHOD_DICT } from '@/lib/consts'
 import { hierarchicalFilterFn } from '@/lib/hierarchical-filter'
 import { getStockState } from '@/lib/stock'
 import { Ingredient, IngredientDef } from '@/lib/types'
-import { useIngredientName } from '@/hooks/use-ingredient-name'
 import { compareBasic, getBoolValue, getDictValue, toString } from '@/lib/utils'
-import { getIngredientName } from '@/hooks/get-ingredient-name'
 
 type Column<T> = ColumnDef<T> & {
   className?: string
@@ -22,7 +21,7 @@ type Column<T> = ColumnDef<T> & {
 export const createColumns = (
   baseIngredientDict: Record<string, IngredientDef>
 ): Column<Ingredient>[] => {
-  const getName = getIngredientName(baseIngredientDict)
+  const getName = getIngredientPathName(baseIngredientDict)
   return [
     {
       accessorKey: 'stock',

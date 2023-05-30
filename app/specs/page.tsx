@@ -11,7 +11,10 @@ import { Container } from '@/components/ui/container'
 import { H1 } from '@/components/ui/h1'
 import { HierarchicalFilter } from '@/lib/hierarchical-filter'
 import { connectToDatabase } from '@/lib/mongodb'
-import { createIngredientParser } from '@/lib/parse-ingredients'
+import {
+  createIngredientParser,
+  parseIngredients,
+} from '@/lib/ingredient/parse-ingredients'
 import { Ingredient, IngredientDef, Spec, User } from '@/lib/types'
 
 async function readData(dataPath: string) {
@@ -49,12 +52,12 @@ async function getUserIngredients(): Promise<
 }
 
 type Data = CategoryMeta & {
-  ingredients: Ingredient[]
+  ingredientDict: Record<string, Ingredient>
   specs: Record<string, Spec>
 }
 
 async function getData(): Promise<Data> {
-  const [baseIngredients, ingredients, categoryFilter, userIngredients, specs] =
+  const [baseIngs, ingDefs, categoryFilter, userIngs, specs] =
     await Promise.all([
       getBaseIngredients(),
       getIngredients(),
@@ -63,27 +66,23 @@ async function getData(): Promise<Data> {
       getSpecs(),
     ])
 
-  const [baseIngredientDict, parseIngredient] = createIngredientParser(
-    baseIngredients,
-    userIngredients
-  )
+  const data = parseIngredients(baseIngs, userIngs, ingDefs)
 
   return {
-    baseIngredientDict,
+    ...data,
     categoryFilter,
-    ingredients: ingredients.map(parseIngredient),
     specs,
   }
 }
 
 export default async function IndexPage() {
-  const { ingredients, specs, ...meta } = await getData()
+  const { specs, ...meta } = await getData()
   return (
     <CategoryMetaProvider {...meta}>
       <Container className="relative py-8">
         <section className="flex flex-col gap-4">
           <H1>Specs</H1>
-          <Table specs={specs} ingredients={ingredients} />
+          <Table specs={specs} />
         </section>
       </Container>
     </CategoryMetaProvider>

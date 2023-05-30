@@ -18,6 +18,7 @@ export const createColumns = (): Column<Spec>[] => {
     {
       accessorKey: 'category',
       header: ({ column }) => <Header column={column}>Category</Header>,
+      filterFn: (row, id, value) => value.includes(row.getValue(id)),
     },
     {
       accessorKey: 'source',

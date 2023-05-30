@@ -1,6 +1,6 @@
 import { promises as fs } from 'fs'
 import { OptionalId, OptionalUnlessRequiredId, WithId } from 'mongodb'
-import path from 'path'
+import path, { parse } from 'path'
 
 import {
   CategoryMeta,
@@ -11,7 +11,10 @@ import { Container } from '@/components/ui/container'
 import { H1 } from '@/components/ui/h1'
 import { HierarchicalFilter } from '@/lib/hierarchical-filter'
 import { connectToDatabase } from '@/lib/mongodb'
-import { createIngredientParser } from '@/lib/parse-ingredients'
+import {
+  createIngredientParser,
+  parseIngredients,
+} from '@/lib/ingredient/parse-ingredients'
 import { Ingredient, IngredientDef, User } from '@/lib/types'
 
 async function readData(dataPath: string) {
@@ -47,24 +50,16 @@ async function getUserIngredients(): Promise<
 async function getData(): Promise<
   CategoryMeta & { ingredients: Ingredient[] }
 > {
-  const [baseIngredients, ingredients, categoryFilter, userIngredients] =
-    await Promise.all([
-      getBaseIngredients(),
-      getIngredients(),
-      getCategoryFilter(),
-      getUserIngredients(),
-    ])
+  const [baseIngs, ingDefs, categoryFilter, userIngs] = await Promise.all([
+    getBaseIngredients(),
+    getIngredients(),
+    getCategoryFilter(),
+    getUserIngredients(),
+  ])
 
-  const [baseIngredientDict, parseIngredient] = createIngredientParser(
-    baseIngredients,
-    userIngredients
-  )
+  const data = parseIngredients(baseIngs, userIngs, ingDefs)
 
-  return {
-    baseIngredientDict,
-    categoryFilter,
-    ingredients: ingredients.map(parseIngredient),
-  }
+  return { ...data, categoryFilter }
 }
 
 export default async function IndexPage() {

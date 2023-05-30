@@ -36,7 +36,7 @@ type Props<TData, TValue> = {
   icon?: ReactNode
   root: HierarchicalFilter
   renderName(path: string[], full?: boolean): ReactNode
-  getName(path: string[]): string
+  getName(path: string[], options?: { full?: boolean }): string
   transformFacetsFn?: (facets: Map<any, number>) => Map<any, number>
 }
 
@@ -170,7 +170,7 @@ type ItemProps = {
   search: string
   facets?: Map<any, number>
   renderName(path: string[], full?: boolean): ReactNode
-  getName(path: string[]): string
+  getName(path: string[], options?: { full?: boolean }): string
   onSelect(path: string[], state: CheckedState): void
 }
 
@@ -207,7 +207,10 @@ function ItemContent({
   const path = [...prevPath, id]
 
   return (
-    <CommandItem value={getName(path)} onSelect={() => onSelect(path, checked)}>
+    <CommandItem
+      value={getName(path, { full: true })}
+      onSelect={() => onSelect(path, checked)}
+    >
       <Checkbox
         className={cn('mr-2', {
           'ml-6': !search && level === 1,

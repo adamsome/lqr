@@ -13,7 +13,7 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
 } from '@/components/ui/dropdown-menu'
-import { DataTableToolbarProps } from '@/components/ui/data-table'
+import { DataTableToolbarProps } from '@/components/ui/data-table-container'
 
 type Props<TData> = DataTableToolbarProps<TData>
 

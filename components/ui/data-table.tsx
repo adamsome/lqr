@@ -2,24 +2,11 @@
 
 import {
   ColumnDef,
-  ColumnFiltersState,
-  SortingState,
   Table as TableType,
-  VisibilityState,
   flexRender,
-  getCoreRowModel,
-  getFacetedRowModel,
-  getFacetedUniqueValues,
-  getFilteredRowModel,
-  getPaginationRowModel,
-  getSortedRowModel,
-  useReactTable,
 } from '@tanstack/react-table'
-import { useState } from 'react'
 
 import { DataTablePagination } from '@/components/ui/data-table-pagination'
-import { DataTableViewOptions } from '@/components/ui/data-table-view-options'
-import { Input } from '@/components/ui/input'
 import {
   Table,
   TableBody,
@@ -29,61 +16,17 @@ import {
   TableRow,
 } from '@/components/ui/table'
 
-export type DataTableToolbarProps<TData> = {
-  table: TableType<TData>
-  hideColumns?: string[]
-}
-
 type Props<TData, TValue> = {
+  table: TableType<TData>
   columns: ColumnDef<TData, TValue>[]
-  data: TData[]
-  hideColumns?: string[]
-  Toolbar?: (props: DataTableToolbarProps<TData>) => JSX.Element | null
 }
 
 export function DataTable<TData, TValue>({
+  table,
   columns,
-  data,
-  hideColumns = [],
-  Toolbar,
 }: Props<TData, TValue>) {
-  const [sorting, setSorting] = useState<SortingState>([])
-  const [columnFilters, setColumnFilters] = useState<ColumnFiltersState>([])
-  const [columnVisibility, setColumnVisibility] = useState<VisibilityState>(
-    hideColumns.reduce((acc, id) => ({ ...acc, [id]: false }), {})
-  )
-  const [rowSelection, setRowSelection] = useState({})
-
-  const table = useReactTable({
-    data,
-    columns,
-    state: {
-      sorting,
-      columnFilters,
-      columnVisibility,
-      rowSelection,
-    },
-    initialState: {
-      pagination: {
-        pageSize: 50,
-      },
-    },
-    enableRowSelection: true,
-    onSortingChange: setSorting,
-    onColumnFiltersChange: setColumnFilters,
-    onColumnVisibilityChange: setColumnVisibility,
-    onRowSelectionChange: setRowSelection,
-    getCoreRowModel: getCoreRowModel(),
-    getFilteredRowModel: getFilteredRowModel(),
-    getPaginationRowModel: getPaginationRowModel(),
-    getSortedRowModel: getSortedRowModel(),
-    getFacetedRowModel: getFacetedRowModel(),
-    getFacetedUniqueValues: getFacetedUniqueValues(),
-  })
-
   return (
-    <div className="flex flex-col gap-4">
-      {Toolbar && <Toolbar table={table} hideColumns={hideColumns} />}
+    <>
       <div className="rounded-md border">
         <Table>
           <TableHeader>
@@ -131,7 +74,7 @@ export function DataTable<TData, TValue>({
         </Table>
       </div>
       <DataTablePagination table={table} />
-    </div>
+    </>
   )
 }
 

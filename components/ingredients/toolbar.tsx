@@ -7,7 +7,7 @@ import { useCategoryMeta } from '@/components/category-meta-provider'
 import { IngredientPathText } from '@/components/ingredients/ingredient-path-text'
 import { StockIcon as BaseStockIcon } from '@/components/ingredients/stock-icon'
 import { Button } from '@/components/ui/button'
-import { DataTableToolbarProps } from '@/components/ui/data-table'
+import { DataTableToolbarProps } from '@/components/ui/data-table-container'
 import { DataTableColumnFilterInput } from '@/components/ui/data-table-column-filter-input'
 import {
   DataTableFacetFilterButton,
@@ -16,7 +16,7 @@ import {
 import { DataTableHierarchicalFacetFilterButton } from '@/components/ui/data-table-hierarchical-facet-filter-button'
 import { DataTableMultiFacetFilterButton } from '@/components/ui/data-table-multi-facet-filter-button'
 import { DataTableViewOptions } from '@/components/ui/data-table-view-options'
-import { useIngredientName } from '@/hooks/use-ingredient-name'
+import { useGetIngredientPathName } from '@/hooks/use-get-ingredient-path-name'
 import {
   AGING_DICT,
   Aging,
@@ -81,7 +81,7 @@ type Props = DataTableToolbarProps<Ingredient>
 
 export function Toolbar({ table, hideColumns }: Props) {
   const { categoryFilter: root } = useCategoryMeta()
-  const getName = useIngredientName()
+  const getName = useGetIngredientPathName()
 
   const categoryRoot = useMemo(() => {
     const childIDs = root.childIDs.filter(

@@ -130,8 +130,8 @@ export function parseCategories() {
   const ingredientCategories = categoryList.map((c) => `  | '${c.id}'`)
   const ingredientCategoryDefs = categoryList.map((c) =>
     c.type
-      ? `  ${c.id}: { name: '${c.name}', type: '${c.type}' },`
-      : `  ${c.id}: { name: '${c.name}' },`
+      ? `  ${c.id}: { id: '${c.id}', name: '${c.name}', type: '${c.type}' },`
+      : `  ${c.id}: { id: '${c.id}', name: '${c.name}' },`
   )
   let consts = []
   consts.push(`// Auto-generated: Do not modify.`)
@@ -140,12 +140,13 @@ export function parseCategories() {
   consts.push(`  name: string`)
   consts.push(`}`)
   consts.push(``)
-  consts.push(`type CategoryDef = HasName & {`)
-  consts.push(`  type?: 'spirit' | 'beerWine' | 'bitters'`)
-  consts.push(`}`)
-  consts.push(``)
   consts.push(`export type Category =`)
   consts.push(...ingredientCategories)
+  consts.push(``)
+  consts.push(`export type CategoryDef = HasName & {`)
+  consts.push(`  id: Category`)
+  consts.push(`  type?: 'spirit' | 'beerWine' | 'bitters'`)
+  consts.push(`}`)
   consts.push(``)
   consts.push(`export const CATEGORY_DICT: Record<Category, CategoryDef> = {`)
   consts.push(...ingredientCategoryDefs)
