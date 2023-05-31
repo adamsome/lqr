@@ -10,6 +10,11 @@
     "category": "acid"
   },
   {
+    "id": "acid_habanero",
+    "name": "Habanero",
+    "category": "acid"
+  },
+  {
     "id": "acid_lactic",
     "name": "Lactic",
     "category": "acid"
@@ -76,7 +81,7 @@
   },
   {
     "id": "coffee_coldbrew",
-    "name": "Cold brew",
+    "name": "Cold Brew",
     "category": "coffee"
   },
   {
@@ -186,7 +191,7 @@
   },
   {
     "id": "extract_rootbeer",
-    "name": "Root beer",
+    "name": "Root Beer",
     "category": "extract"
   },
   {
@@ -321,7 +326,7 @@
   },
   {
     "id": "juice_bellpepper",
-    "name": "Bell pepper",
+    "name": "Bell Pepper",
     "category": "juice"
   },
   {
@@ -446,7 +451,7 @@
   },
   {
     "id": "puree_passionfruit",
-    "name": "Passion fruit",
+    "name": "Passion Fruit",
     "category": "puree"
   },
   {
@@ -471,7 +476,7 @@
   },
   {
     "id": "soda_gingerbeer",
-    "name": "Ginger beer",
+    "name": "Ginger Beer",
     "category": "soda"
   },
   {
@@ -511,7 +516,7 @@
   },
   {
     "id": "spice_blackpeppercorn",
-    "name": "Black peppercorn",
+    "name": "Black Peppercorn",
     "category": "spice"
   },
   {
@@ -546,7 +551,7 @@
   },
   {
     "id": "spice_makrutlime",
-    "name": "Makrut lime",
+    "name": "Makrut Lime",
     "category": "spice"
   },
   {
@@ -576,12 +581,12 @@
   },
   {
     "id": "spice_staranise",
-    "name": "Star anise",
+    "name": "Star Anise",
     "category": "spice"
   },
   {
     "id": "spice_vanillabean",
-    "name": "Vanilla bean",
+    "name": "Vanilla Bean",
     "category": "spice"
   },
   {
@@ -592,11 +597,6 @@
   {
     "id": "sugar_demerara",
     "name": "Demerara",
-    "category": "sugar"
-  },
-  {
-    "id": "sugar_molasses",
-    "name": "Molasses",
     "category": "sugar"
   },
   {
@@ -616,7 +616,7 @@
   },
   {
     "id": "syrup_bayleaf",
-    "name": "Bay leaf",
+    "name": "Bay Leaf",
     "category": "syrup"
   },
   {
@@ -691,7 +691,7 @@
   },
   {
     "id": "syrup_lihingmui",
-    "name": "Li hing mui",
+    "name": "Li Hing Mui",
     "category": "syrup"
   },
   {
@@ -726,7 +726,7 @@
   },
   {
     "id": "syrup_passionfruit",
-    "name": "Passion fruit",
+    "name": "Passion Fruit",
     "category": "syrup"
   },
   {
@@ -735,8 +735,13 @@
     "category": "syrup"
   },
   {
+    "id": "syrup_pineapplegum",
+    "name": "Pineapple Gum",
+    "category": "syrup"
+  },
+  {
     "id": "syrup_poppyseed",
-    "name": "Poppy seed",
+    "name": "Poppy Seed",
     "category": "syrup"
   },
   {
@@ -831,7 +836,7 @@
   },
   {
     "id": "water_orangeflower",
-    "name": "Orange flower",
+    "name": "Orange Flower",
     "category": "water"
   },
   {
@@ -1054,12 +1059,6 @@
   {
     "id": "brandy_grape_cognac",
     "name": "Cognac",
-    "category": "brandy",
-    "parent": "brandy_grape"
-  },
-  {
-    "id": "brandy_grape_eaudevie",
-    "name": "Eau-de-vie",
     "category": "brandy",
     "parent": "brandy_grape"
   },

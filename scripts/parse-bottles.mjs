@@ -40,6 +40,7 @@ const ingredientIDMap = {
   brandy_spanishbrandy: 'brandy_grape_spanish',
   brandy_pisco: 'brandy_grape_pisco',
   brandy_pineaudescharentes: 'brandy_grape_pineaudescharentes',
+  brandy_pommeau: 'brandy_grape_pommeau',
   amaro_mediumamaro_carciofo: 'liqueur_amaro_carciofo',
   amaro_mediumamaro_alpine: 'liqueur_amaro_alpine',
   amaro_denseamaro_fernet: 'liqueur_amaro_fernet',

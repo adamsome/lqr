@@ -3273,7 +3273,7 @@
     "ordinal": 3590,
     "name": "Louis Rogue La Vielle Prune",
     "category": "brandy",
-    "parent": "brandy_grape_eaudevie",
+    "parent": "brandy_plum",
     "productionMethod": "pot",
     "aging": "medium",
     "origin": "France",
@@ -3608,7 +3608,7 @@
     "ordinal": 3767,
     "name": "Lemorton Pommeau de Normandie",
     "category": "brandy",
-    "parent": "brandy_grape_eaudevie",
+    "parent": "brandy_grape_pommeau",
     "aging": "none",
     "origin": "France",
     "references": [

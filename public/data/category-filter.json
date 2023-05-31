@@ -46,6 +46,7 @@
       "childIDs": [
         "acid_champagne",
         "acid_citric",
+        "acid_habanero",
         "acid_lactic",
         "acid_lime",
         "acid_malic",
@@ -60,6 +61,12 @@
         },
         "acid_citric": {
           "id": "acid_citric",
+          "checked": false,
+          "childIDs": [],
+          "children": {}
+        },
+        "acid_habanero": {
+          "id": "acid_habanero",
           "checked": false,
           "childIDs": [],
           "children": {}
@@ -1041,7 +1048,6 @@
       "childIDs": [
         "sugar_brown",
         "sugar_demerara",
-        "sugar_molasses",
         "sugar_white"
       ],
       "children": {
@@ -1053,12 +1059,6 @@
         },
         "sugar_demerara": {
           "id": "sugar_demerara",
-          "checked": false,
-          "childIDs": [],
-          "children": {}
-        },
-        "sugar_molasses": {
-          "id": "sugar_molasses",
           "checked": false,
           "childIDs": [],
           "children": {}
@@ -1101,6 +1101,7 @@
         "syrup_papaya",
         "syrup_passionfruit",
         "syrup_pineapple",
+        "syrup_pineapplegum",
         "syrup_poppyseed",
         "syrup_port",
         "syrup_raspberry",
@@ -1268,6 +1269,12 @@
         },
         "syrup_pineapple": {
           "id": "syrup_pineapple",
+          "checked": false,
+          "childIDs": [],
+          "children": {}
+        },
+        "syrup_pineapplegum": {
+          "id": "syrup_pineapplegum",
           "checked": false,
           "childIDs": [],
           "children": {}
@@ -1748,7 +1755,6 @@
             "brandy_grape_american",
             "brandy_grape_armagnac",
             "brandy_grape_cognac",
-            "brandy_grape_eaudevie",
             "brandy_grape_grappa",
             "brandy_grape_pineaudescharentes",
             "brandy_grape_pisco",
@@ -1770,12 +1776,6 @@
             },
             "brandy_grape_cognac": {
               "id": "brandy_grape_cognac",
-              "checked": false,
-              "childIDs": [],
-              "children": {}
-            },
-            "brandy_grape_eaudevie": {
-              "id": "brandy_grape_eaudevie",
               "checked": false,
               "childIDs": [],
               "children": {}

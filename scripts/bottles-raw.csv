@@ -286,7 +286,7 @@ Image,ID,Name,Type,Material,Style,Substyle,Method,Aging,Origin,Stock,Want,Refere
 ,3560,Guillon-Painturaud VSOP,Brandy,Grapes,Cognac,,Pot Still,Aged,France,,5,"D+C: WH, D+C: Codex"
 ,3570,Lemorton Selection calvados domfrontais,Brandy,Apples,Calvados,,Pot Still,Aged,France,,6,D+C: WH
 ,3580,Germain-Robin Alambic,Brandy,Grapes,American brandy,,Pot Still,Aged,"California, USA",,8,D+C: WH
-,3590,Louis Rogue La Vielle Prune,Brandy,Other fruits,Eau-de-vie,,Pot Still,Aged,France,,8,D+C: WH
+,3590,Louis Rogue La Vielle Prune,Brandy,Other fruits,Eau-de-vie,Plum,Pot Still,Aged,France,,8,D+C: WH
 ,3600,Domaine du Manoir de Montreuil Reserve,Brandy,Apples,Calvados,,Pot Still,Aged,France,,5,D+C: WH
 ,3610,Hine H VSOP,Brandy,Grapes,Cognac,,Pot Still,Aged,France,,2,"D+C: WH, D+C: Codex"
 ,3615,Paul Beau VS,Brandy,Grapes,Cognac,,Pot Still,Aged,France,,7,D+C: WH
