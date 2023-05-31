@@ -28,3 +28,7 @@ export function toString(a: any) {
   }
   return ''
 }
+
+export function capitalize(str: string): string {
+  return str[0].toUpperCase() + str.slice(1).toLowerCase()
+}

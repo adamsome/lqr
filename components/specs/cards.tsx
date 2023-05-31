@@ -19,7 +19,7 @@ export function Cards({ table, columns }: Props) {
   }
   return (
     <>
-      <div className="w- grid grid-cols-[repeat(auto-fill,minmax(theme(spacing.80),1fr))] gap-4 lg:gap-6">
+      <div className="grid grid-cols-[repeat(auto-fill,minmax(theme(spacing.64),1fr))] gap-4 lg:gap-6">
         {rows.map((row) => (
           <Card key={row.id} spec={row.original} />
         ))}

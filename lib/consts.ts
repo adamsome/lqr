@@ -80,11 +80,7 @@ export const CATEGORY_DICT: Record<Category, CategoryDef> = {
   bitters: { id: 'bitters', name: 'Bitters', type: 'bitters' },
   brandy: { id: 'brandy', name: 'Brandy', type: 'spirit' },
   cane: { id: 'cane', name: 'Cane', type: 'spirit' },
-  fortifiedwine: {
-    id: 'fortifiedwine',
-    name: 'Fortified wine',
-    type: 'spirit',
-  },
+  fortifiedwine: { id: 'fortifiedwine', name: 'Fortified wine', type: 'spirit' },
   grain: { id: 'grain', name: 'Grain', type: 'spirit' },
   liqueur: { id: 'liqueur', name: 'Liqueur', type: 'spirit' },
   wine: { id: 'wine', name: 'Wine', type: 'beerWine' },

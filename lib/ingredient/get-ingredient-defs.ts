@@ -7,9 +7,12 @@ export const getIngredientDefs = curry(
   (
     baseIngredientDict: Record<string, IngredientDef>,
     id: string
-  ): [CategoryDef, ...IngredientDef[]] => {
+  ): [CategoryDef, ...IngredientDef[]] | undefined => {
     const defs: IngredientDef[] = []
     let def: IngredientDef | undefined = baseIngredientDict[id]
+    if (!def) {
+      return undefined
+    }
     const categoryID = def.category
     const category = CATEGORY_DICT[categoryID]
     while (def) {

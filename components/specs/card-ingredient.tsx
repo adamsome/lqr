@@ -1,27 +1,36 @@
 import { useCategoryMeta } from '@/components/category-meta-provider'
-import { IngredientName } from '@/components/specs/ingredient-name'
+import { useGetIngredientName } from '@/hooks/use-get-ingredient-name'
 import { SpecIngredient } from '@/lib/types'
+import { capitalize } from '@/lib/utils'
 
 type Props = {
   ingredient: SpecIngredient
 }
 
 export function CardIngredient({ ingredient }: Props) {
-  const { baseIngredientDict, ingredientDict } = useCategoryMeta()
-  const { id, bottleID, name } = ingredient
-  let baseName: string | undefined
-  let ingredientName: string | undefined
-  if (id) {
-    baseName = baseIngredientDict[id].name
-  }
+  const { ingredientDict } = useCategoryMeta()
+  const getIngredientName = useGetIngredientName()
+
+  const name = getIngredientName(ingredient)
+
+  const { bottleID } = ingredient
+  let bottleName = ''
   if (bottleID) {
-    ingredientName = ingredientDict[bottleID].name
+    bottleName = ingredientDict[bottleID].name
   }
-  const displayName = baseName ?? name ?? ''
+
   return (
     <div className="leading-snug">
-      {id && <IngredientName id={id} />}
-      {ingredientName && <span> ({ingredientName})</span>}
+      {bottleName ? (
+        <div className="leading-none">
+          <div className="text-xs text-muted-foreground">
+            {capitalize(name)}
+          </div>
+          <span className="leading-snug">{bottleName}</span>
+        </div>
+      ) : (
+        <div>{capitalize(name)}</div>
+      )}
     </div>
   )
 }

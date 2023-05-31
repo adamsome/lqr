@@ -24,7 +24,7 @@ export function Card({ spec }: Props) {
         <div className="flex flex-col gap-2">
           {ingredients.map((ingredient, i) => (
             <CardIngredient
-              key={ingredient.name ?? ingredient.id ?? i}
+              key={`${i}_${ingredient.name ?? ingredient.id}`}
               ingredient={ingredient}
             />
           ))}
