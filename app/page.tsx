@@ -1,6 +1,6 @@
 import { promises as fs } from 'fs'
 import { OptionalId, OptionalUnlessRequiredId, WithId } from 'mongodb'
-import path, { parse } from 'path'
+import path from 'path'
 
 import {
   CategoryMeta,
@@ -10,12 +10,11 @@ import { Table } from '@/components/ingredients/table'
 import { Container } from '@/components/ui/container'
 import { H1 } from '@/components/ui/h1'
 import { HierarchicalFilter } from '@/lib/hierarchical-filter'
+import { parseIngredients } from '@/lib/ingredient/parse-ingredients'
 import { connectToDatabase } from '@/lib/mongodb'
-import {
-  createIngredientParser,
-  parseIngredients,
-} from '@/lib/ingredient/parse-ingredients'
 import { Ingredient, IngredientDef, User } from '@/lib/types'
+
+export const revalidate = 0
 
 async function readData(dataPath: string) {
   const data = await fs.readFile(path.join(process.cwd(), dataPath))
