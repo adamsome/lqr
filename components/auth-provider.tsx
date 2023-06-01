@@ -22,10 +22,16 @@ export function AuthProvider({ children }: Props) {
           colorInputText: 'hsl(213 31% 91%)',
           colorShimmer: 'rgba(255,255,255,0.36)',
           shadowShimmer: '1px 1px 2px rgba(0,0,0,0.36)',
-          colorPrimary: 'hsl(210 40% 98%)',
-          colorTextOnPrimaryBackground: 'hsl(222.2 47.4% 1.2%)',
+          colorPrimary: 'hsl(223 47% 8%)',
+          colorTextOnPrimaryBackground: 'hsl(216 34% 17%)',
         },
         elements: {
+          formButtonPrimary:
+            'bg-primary hover:bg-primary/90 focus:bg-primary/80 active:bg-primary/80',
+          profileSectionPrimaryButton:
+            'text-primary hover:text-primary/90 focus:text-primary/80 active:text-primary/80',
+          badge:
+            'text-primary hover:text-primary/90 focus:text-primary/80 active:text-primary/80',
           activeDeviceIcon: {
             '--cl-chassis-bottom': '#d2d2d2',
             '--cl-chassis-back': '#e6e6e6',
