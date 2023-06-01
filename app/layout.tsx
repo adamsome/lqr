@@ -3,6 +3,7 @@ import './globals.css'
 import { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 
+import { AuthProvider } from '@/components/auth-provider'
 import { Header } from '@/components/header'
 import { TailwindIndicator } from '@/components/tailwind-indicator'
 import { ThemeProvider } from '@/components/theme-provider'
@@ -39,23 +40,25 @@ type Props = {
 
 export default function RootLayout({ children }: Props) {
   return (
-    <html lang="en">
-      <body
-        className={cn(
-          'min-h-screen bg-background font-sans antialiased',
-          inter.className
-        )}
-      >
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <TooltipProvider>
-            <div className="relative flex min-h-screen flex-col">
-              <Header />
-              <div className="flex-1">{children}</div>
-            </div>
-          </TooltipProvider>
-          <TailwindIndicator />
-        </ThemeProvider>
-      </body>
-    </html>
+    <AuthProvider>
+      <html lang="en">
+        <body
+          className={cn(
+            'min-h-screen bg-background font-sans antialiased',
+            inter.className
+          )}
+        >
+          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+            <TooltipProvider>
+              <div className="relative flex min-h-screen flex-col">
+                <Header />
+                <div className="flex-1">{children}</div>
+              </div>
+            </TooltipProvider>
+            <TailwindIndicator />
+          </ThemeProvider>
+        </body>
+      </html>
+    </AuthProvider>
   )
 }

@@ -1,3 +1,4 @@
+import { UserButton } from '@clerk/nextjs'
 import Link from 'next/link'
 
 import { GithubIcon } from '@/components/github-icon'
@@ -33,6 +34,9 @@ export function Header() {
               </div>
             </Link>
             <ModeToggle />
+            <div className="ms-2">
+              <UserButton afterSignOutUrl="/" />
+            </div>
           </nav>
         </div>
       </Container>
