@@ -112,17 +112,17 @@ export function parseCategories() {
   )
 
   writeFileSync(
-    join(dir, '../public/data/categories.json'),
+    join(dir, '../json/categories.json'),
     JSON.stringify(categoryList, null, 2),
     { encoding: 'utf8' }
   )
   writeFileSync(
-    join(dir, '../public/data/base-ingredients.json'),
+    join(dir, '../json/base-ingredients.json'),
     JSON.stringify(ingredientList, null, 2),
     { encoding: 'utf8' }
   )
   writeFileSync(
-    join(dir, '../public/data/category-filter.json'),
+    join(dir, '../json/category-filter.json'),
     JSON.stringify(tree, null, 2),
     { encoding: 'utf8' }
   )

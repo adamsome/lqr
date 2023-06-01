@@ -61,7 +61,7 @@ export function parseBottles() {
   const path = fileURLToPath(import.meta.url)
   const dir = dirname(path)
 
-  const categoriesJsonPath = join(dir, '../public/data/categories.json')
+  const categoriesJsonPath = join(dir, '../json/categories.json')
   const categoriesJson = readFileSync(categoriesJsonPath, 'utf-8')
   const categories = JSON.parse(categoriesJson)
   const categoryDict = categories.reduce((acc, it) => {
@@ -69,7 +69,7 @@ export function parseBottles() {
     return acc
   }, {})
 
-  const ingredientsJsonPath = join(dir, '../public/data/base-ingredients.json')
+  const ingredientsJsonPath = join(dir, '../json/base-ingredients.json')
   const ingredientsJson = readFileSync(ingredientsJsonPath, 'utf-8')
   const ingredients = JSON.parse(ingredientsJson)
   const ingredientDict = ingredients.reduce((acc, it) => {
@@ -208,12 +208,12 @@ export function parseBottles() {
     .filter(Boolean)
 
   writeFileSync(
-    join(dir, '../public/data/user-ingredients.json'),
+    join(dir, '../json/user-ingredients.json'),
     JSON.stringify(userIngredients, null, 2),
     { encoding: 'utf8' }
   )
   writeFileSync(
-    join(dir, '../public/data/ingredients.json'),
+    join(dir, '../json/ingredients.json'),
     JSON.stringify(bottles, null, 2),
     { encoding: 'utf8' }
   )

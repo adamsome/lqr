@@ -1,4 +1,12 @@
 import { Aging, Category, ProductionMethod } from '@/lib/consts'
+import { HierarchicalFilter } from '@/lib/hierarchical-filter'
+
+export interface StaticData {
+  baseIngredients: IngredientDef[]
+  ingredients: Ingredient[]
+  categoryFilter: HierarchicalFilter
+  specs: Record<string, Spec>
+}
 
 export interface IngredientDef {
   id: string

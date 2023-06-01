@@ -346,7 +346,7 @@ export function parseSpecs() {
   const path = fileURLToPath(import.meta.url)
   const dir = dirname(path)
 
-  const categoriesJsonPath = join(dir, '../public/data/categories.json')
+  const categoriesJsonPath = join(dir, '../json/categories.json')
   const categoriesJson = readFileSync(categoriesJsonPath, 'utf-8')
   const categories = JSON.parse(categoriesJson)
   const categoryDict = categories.reduce((acc, it) => {
@@ -354,7 +354,7 @@ export function parseSpecs() {
     return acc
   }, {})
 
-  const baseJsonPath = join(dir, '../public/data/base-ingredients.json')
+  const baseJsonPath = join(dir, '../json/base-ingredients.json')
   const baseJson = readFileSync(baseJsonPath, 'utf-8')
   const base = JSON.parse(baseJson)
   const baseDict = base.reduce((acc, it) => {
@@ -362,13 +362,9 @@ export function parseSpecs() {
     return acc
   }, {})
 
-  const ingredientsJsonPath = join(dir, '../public/data/ingredients.json')
+  const ingredientsJsonPath = join(dir, '../json/ingredients.json')
   const ingredientsJson = readFileSync(ingredientsJsonPath, 'utf-8')
   const ingredients = JSON.parse(ingredientsJson)
-  const ingredientDict = ingredients.reduce((acc, it) => {
-    acc[it.id] = it
-    return acc
-  }, {})
 
   const specsCsvPath = join(dir, './specs-books.csv')
   const specsCsv = readFileSync(specsCsvPath, 'utf-8')
@@ -578,7 +574,7 @@ export function parseSpecs() {
     })
 
   writeFileSync(
-    join(dir, '../public/data/specs.json'),
+    join(dir, '../json/specs.json'),
     JSON.stringify(specs, null, 2),
     { encoding: 'utf8' }
   )
