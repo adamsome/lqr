@@ -2,10 +2,10 @@
 
 import { ColumnDef, Table as TableType } from '@tanstack/react-table'
 
+import { Card } from '@/components/specs/card'
 import { DataTablePagination } from '@/components/ui/data-table-pagination'
 import { TableCell, TableRow } from '@/components/ui/table'
-import { Ingredient, Spec } from '@/lib/types'
-import { Card } from '@/components/specs/card'
+import { Spec } from '@/lib/types'
 
 type Props = {
   table: TableType<Spec>

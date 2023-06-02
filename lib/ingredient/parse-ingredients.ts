@@ -42,22 +42,22 @@ export function parseIngredients(
     userIngredients
   )
 
-  const { ingredientDict, ingredients } = ingredientDefs.reduce(
+  const { ingredientDict, ingredientIDs } = ingredientDefs.reduce(
     (acc, def) => {
       const ingredient = parseIngredient(def)
       acc.ingredientDict[def.id] = ingredient
-      acc.ingredients.push(ingredient)
+      acc.ingredientIDs.push(def.id)
       return acc
     },
     {
       ingredientDict: {} as Record<string, Ingredient>,
-      ingredients: [] as Ingredient[],
+      ingredientIDs: [] as string[],
     }
   )
 
   return {
     baseIngredientDict,
     ingredientDict,
-    ingredients,
+    ingredientIDs,
   }
 }

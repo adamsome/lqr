@@ -1,7 +1,7 @@
 import { Fragment } from 'react'
 
 import { cn } from '@/lib/utils'
-import { useCategoryMeta } from '@/components/category-meta-provider'
+import { useData } from '@/components/category-meta-provider'
 import { CATEGORY_DICT, Category } from '@/lib/consts'
 
 const DIM: Record<string, boolean> = {
@@ -34,7 +34,7 @@ type Props = {
 }
 
 export function IngredientPathText({ path, full }: Props) {
-  const { baseIngredientDict } = useCategoryMeta()
+  const { baseIngredientDict } = useData()
 
   if (!full) {
     if (path.length > 1) return <IngredientText id={path[path.length - 1]} />
@@ -76,7 +76,7 @@ export function IngredientPathText({ path, full }: Props) {
 type TextProps = { id: string }
 
 function IngredientText({ id }: TextProps) {
-  const { baseIngredientDict } = useCategoryMeta()
+  const { baseIngredientDict } = useData()
   return <>{baseIngredientDict[id]?.name}</>
 }
 

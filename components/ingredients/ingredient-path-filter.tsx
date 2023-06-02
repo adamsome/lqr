@@ -1,7 +1,7 @@
 import { Column } from '@tanstack/react-table'
 import { useMemo } from 'react'
 
-import { useCategoryMeta } from '@/components/category-meta-provider'
+import { useData } from '@/components/category-meta-provider'
 import { IngredientPathText } from '@/components/ingredients/ingredient-path-text'
 import { DataTableHierarchicalFilter } from '@/components/ui/data-table-hierarchical-filter'
 import { CATEGORY_DICT, Category } from '@/lib/consts'
@@ -13,7 +13,7 @@ type Props = {
 }
 
 export function IngredientPathFilter(props: Props) {
-  const { categoryFilter: root } = useCategoryMeta()
+  const { categoryFilter: root } = useData()
 
   const filter = useMemo(() => {
     const childIDs = root.childIDs.filter(

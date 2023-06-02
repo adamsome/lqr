@@ -8,6 +8,14 @@ export interface StaticData {
   specs: Record<string, Spec>
 }
 
+export interface Data {
+  baseIngredientDict: Record<string, IngredientDef>
+  ingredientDict: Record<string, Ingredient>
+  ingredientIDs: string[]
+  categoryFilter: HierarchicalFilter
+  specs: Record<string, Spec>
+}
+
 export interface IngredientDef {
   id: string
   ordinal?: number

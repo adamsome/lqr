@@ -3,7 +3,7 @@
 import { X } from 'lucide-react'
 import { useMemo } from 'react'
 
-import { useCategoryMeta } from '@/components/category-meta-provider'
+import { useData } from '@/components/category-meta-provider'
 import { IngredientPathText } from '@/components/ingredients/ingredient-path-text'
 import { StockIcon as BaseStockIcon } from '@/components/ingredients/stock-icon'
 import { Button } from '@/components/ui/button'
@@ -80,7 +80,7 @@ function transformCategoryFacets(facets: Map<any, number>) {
 type Props = DataTableToolbarProps<Ingredient>
 
 export function Toolbar({ table, hideColumns }: Props) {
-  const { categoryFilter: root } = useCategoryMeta()
+  const { categoryFilter: root } = useData()
   const getName = useGetIngredientPathName()
 
   const categoryRoot = useMemo(() => {

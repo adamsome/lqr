@@ -1,4 +1,4 @@
-import { useCategoryMeta } from '@/components/category-meta-provider'
+import { useData } from '@/components/category-meta-provider'
 import { useGetIngredientName } from '@/hooks/use-get-ingredient-name'
 import { SpecIngredient } from '@/lib/types'
 import { capitalize } from '@/lib/utils'
@@ -8,7 +8,7 @@ type Props = {
 }
 
 export function CardIngredient({ ingredient }: Props) {
-  const { ingredientDict } = useCategoryMeta()
+  const { ingredientDict } = useData()
   const getIngredientName = useGetIngredientName()
 
   const name = getIngredientName(ingredient)

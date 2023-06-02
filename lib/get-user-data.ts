@@ -5,7 +5,7 @@ import { IngredientDef, User } from '@/lib/types'
 
 import 'server-only'
 
-export async function getUserIngredients(): Promise<
+export async function getUserData(): Promise<
   Record<string, Partial<IngredientDef>>
 > {
   const { db } = await connectToDatabase()

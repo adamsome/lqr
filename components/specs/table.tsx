@@ -1,16 +1,13 @@
 'use client'
 
+import { useData } from '@/components/category-meta-provider'
 import { Cards } from '@/components/specs/cards'
 import { createColumns } from '@/components/specs/columns'
 import { Toolbar } from '@/components/specs/toolbar'
 import { DataTableContainer } from '@/components/ui/data-table-container'
-import { Ingredient, Spec } from '@/lib/types'
 
-type Props = {
-  specs: Record<string, Spec>
-}
-
-export function Table({ specs }: Props) {
+export function Table() {
+  const { specs } = useData()
   const keys = Object.keys(specs)
   const data = keys.map((key) => specs[key])
   return (

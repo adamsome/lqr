@@ -2,32 +2,23 @@
 
 import { ReactNode, createContext, useContext } from 'react'
 
-import { HierarchicalFilter } from '@/lib/hierarchical-filter'
-import { Ingredient, IngredientDef } from '@/lib/types'
+import { Data } from '@/lib/types'
 
-export type CategoryMeta = {
-  baseIngredientDict: Record<string, IngredientDef>
-  categoryFilter: HierarchicalFilter
-  ingredientDict: Record<string, Ingredient>
-}
+const DataContext = createContext<Data | undefined>(undefined)
 
-const CategoryMetaContext = createContext<CategoryMeta | undefined>(undefined)
-
-type Props = CategoryMeta & {
+type Props = Data & {
   children: ReactNode
 }
 
-export const CategoryMetaProvider = ({ children, ...value }: Props) => {
-  const { Provider } = CategoryMetaContext
+export const DataProvider = ({ children, ...value }: Props) => {
+  const { Provider } = DataContext
   return <Provider value={value}>{children}</Provider>
 }
 
-export const useCategoryMeta = (): CategoryMeta => {
-  const context = useContext(CategoryMetaContext)
+export const useData = (): Data => {
+  const context = useContext(DataContext)
   if (!context) {
-    throw new Error(
-      'Called useCategoryMeta before setting CategoryMetaProvider context'
-    )
+    throw new Error('Called useData before setting DataProvider context')
   }
   return context
 }
