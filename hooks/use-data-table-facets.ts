@@ -1,26 +1,24 @@
+import { useIsMounted } from '@/hooks/use-is-mounted'
 import { Column } from '@tanstack/react-table'
-import { useEffect, useState } from 'react'
+import { useMemo } from 'react'
 
 export function useDataTableFacets(
   column?: Column<any, unknown>,
   transformFacetsFn?: (facets: Map<any, number>) => Map<any, number>
 ) {
-  const [facets, setFacets] = useState<Map<any, number> | undefined>(undefined)
-  useEffect(() => {
-    let mounted = true
-    function loadFacets() {
-      if (!mounted) return
-      let rawFacets = column?.getFacetedUniqueValues()
-      if (rawFacets && transformFacetsFn) {
-        rawFacets = transformFacetsFn(rawFacets)
-      }
-      setFacets(rawFacets)
-    }
-    loadFacets()
-    return () => {
-      mounted = false
-    }
-  }, [column, transformFacetsFn])
+  const mounted = useIsMounted()
+
+  const getFacetedUniqueValues = useMemo(
+    () => (mounted ? column?.getFacetedUniqueValues : undefined),
+    [mounted, column]
+  )
+
+  const rawFacets = getFacetedUniqueValues?.()
+  const facets = useMemo(() => {
+    if (!mounted || !rawFacets || !transformFacetsFn) return rawFacets
+    return transformFacetsFn(rawFacets)
+  }, [mounted, rawFacets, transformFacetsFn])
+
   return facets
 }
 
@@ -31,25 +29,24 @@ export function useDataTableMultiFacets(
     | undefined
   )[]
 ) {
-  const [facetsPerColumn, setFacetsPerColumn] = useState<
-    (Map<any, number> | undefined)[]
-  >([])
-  useEffect(() => {
-    let mounted = true
-    function loadFacets() {
-      if (!mounted) return
-      const rawPerColumn =
-        (columns ?? []).map((c) => c?.getFacetedUniqueValues()) ?? []
-      const facetsPerColumn = rawPerColumn.map((facets, i) => {
-        const transform = transformFacetsFnPerColumn?.[i]
-        return facets && transform ? transform(facets) : facets
-      })
-      setFacetsPerColumn(facetsPerColumn)
-    }
-    loadFacets()
-    return () => {
-      mounted = false
-    }
-  }, [columns, transformFacetsFnPerColumn])
+  const mounted = useIsMounted()
+
+  const getFacetedUniqueValuesPerColumn = useMemo(
+    () =>
+      mounted ? columns?.map((c) => c?.getFacetedUniqueValues) : undefined,
+    [mounted, columns]
+  )
+
+  const rawPerColumn = (columns ?? []).map((_, i) =>
+    getFacetedUniqueValuesPerColumn?.[i]?.()
+  )
+
+  const facetsPerColumn = useMemo(() => {
+    return rawPerColumn.map((facets, i) => {
+      const transform = transformFacetsFnPerColumn?.[i]
+      return facets && transform ? transform(facets) : facets
+    })
+  }, [rawPerColumn, transformFacetsFnPerColumn])
+
   return facetsPerColumn
 }

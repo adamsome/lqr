@@ -1,21 +1,22 @@
 import { Table } from '@tanstack/react-table'
-import { useEffect, useState } from 'react'
+import { useMemo } from 'react'
+
+import { useIsMounted } from '@/hooks/use-is-mounted'
 
 export function useIsDataTableFiltered<T>(table: Table<T>) {
-  const [isFiltered, setIsFiltered] = useState(false)
-  useEffect(() => {
-    let mounted = true
-    function initIsFiltered() {
-      if (!mounted) return
-      setIsFiltered(
-        table.getPreFilteredRowModel().rows.length >
-          table.getFilteredRowModel().rows.length
-      )
-    }
-    initIsFiltered()
-    return () => {
-      mounted = false
-    }
-  }, [table])
-  return isFiltered
+  const mounted = useIsMounted()
+
+  const getPreFilteredRowModel = useMemo(
+    () => (mounted ? table.getPreFilteredRowModel : undefined),
+    [mounted, table]
+  )
+  const getFilteredRowModel = useMemo(
+    () => (mounted ? table.getFilteredRowModel : undefined),
+    [mounted, table]
+  )
+
+  return (
+    (getPreFilteredRowModel?.()?.rows?.length ?? 0) >
+    (getFilteredRowModel?.()?.rows?.length ?? 0)
+  )
 }
