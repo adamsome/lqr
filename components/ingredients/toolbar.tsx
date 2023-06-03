@@ -28,6 +28,7 @@ import {
 import { HierarchicalFilter } from '@/lib/hierarchical-filter'
 import { StockState, getStockState } from '@/lib/stock'
 import { Ingredient } from '@/lib/types'
+import { useIsDataTableFiltered } from '@/hooks/use-is-data-table-filtered'
 
 const STOCK_ITEMS: DataTableFacetedFilterItem[] = [
   { label: 'Full', value: 'full', icon: <StockIcon stock="full" /> },
@@ -80,6 +81,7 @@ function transformCategoryFacets(facets: Map<any, number>) {
 type Props = DataTableToolbarProps<Ingredient>
 
 export function Toolbar({ table, hideColumns }: Props) {
+  const isFiltered = useIsDataTableFiltered(table)
   const { categoryFilter: root } = useData()
   const getName = useGetIngredientPathName()
 
@@ -93,10 +95,6 @@ export function Toolbar({ table, hideColumns }: Props) {
     }, {} as HierarchicalFilter['children'])
     return { ...root, childIDs, children }
   }, [root])
-
-  const isFiltered =
-    table.getPreFilteredRowModel().rows.length >
-    table.getFilteredRowModel().rows.length
 
   return (
     <div className="flex items-center justify-between">

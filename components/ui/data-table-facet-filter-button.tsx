@@ -1,6 +1,6 @@
 import { Column } from '@tanstack/react-table'
 import { Check, LucideIcon } from 'lucide-react'
-import { ReactNode, useMemo } from 'react'
+import { ReactNode } from 'react'
 
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
@@ -19,6 +19,7 @@ import {
   PopoverTrigger,
 } from '@/components/ui/popover'
 import { Separator } from '@/components/ui/separator'
+import { useDataTableFacets } from '@/hooks/use-data-table-facets'
 import { cn } from '@/lib/utils'
 
 export type DataTableFacetedFilterItem = {
@@ -43,12 +44,7 @@ export function DataTableFacetFilterButton<TData, TValue>({
   items,
   transformFacetsFn,
 }: Props<TData, TValue>) {
-  const rawFacets = column?.getFacetedUniqueValues()
-  const facets = useMemo(() => {
-    if (!rawFacets || !transformFacetsFn) return rawFacets
-    return transformFacetsFn(rawFacets)
-  }, [rawFacets, transformFacetsFn])
-
+  const facets = useDataTableFacets(column, transformFacetsFn)
   const selected = new Set(column?.getFilterValue() as string[])
 
   return (

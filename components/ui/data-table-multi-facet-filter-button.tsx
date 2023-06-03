@@ -1,6 +1,6 @@
 import { Column } from '@tanstack/react-table'
-import { Check, LucideIcon } from 'lucide-react'
-import { Fragment, ReactNode, useMemo } from 'react'
+import { Check } from 'lucide-react'
+import { Fragment, ReactNode } from 'react'
 
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
@@ -13,14 +13,15 @@ import {
   CommandList,
   CommandSeparator,
 } from '@/components/ui/command'
+import { DataTableFacetedFilterItem } from '@/components/ui/data-table-facet-filter-button'
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
 } from '@/components/ui/popover'
 import { Separator } from '@/components/ui/separator'
+import { useDataTableMultiFacets } from '@/hooks/use-data-table-facets'
 import { cn } from '@/lib/utils'
-import { DataTableFacetedFilterItem } from '@/components/ui/data-table-facet-filter-button'
 
 type Props = {
   columns: (Column<any, unknown> | undefined)[]
@@ -42,11 +43,10 @@ export function DataTableMultiFacetFilterButton({
   itemsPerColumn,
   transformFacetsFnPerColumn,
 }: Props) {
-  const rawPerColumn = columns.map((c) => c?.getFacetedUniqueValues()) ?? []
-  const facetsPerColumn = rawPerColumn.map((facets, i) => {
-    const transform = transformFacetsFnPerColumn?.[i]
-    return facets && transform ? transform(facets) : facets
-  })
+  const facetsPerColumn = useDataTableMultiFacets(
+    columns,
+    transformFacetsFnPerColumn
+  )
 
   const selectedPerColumn = columns.map(
     (c) => new Set(c?.getFilterValue() as string[])

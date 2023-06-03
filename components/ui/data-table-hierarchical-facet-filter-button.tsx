@@ -3,6 +3,7 @@ import { Column } from '@tanstack/react-table'
 import { produce } from 'immer'
 import { ReactNode, useMemo, useState } from 'react'
 
+import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Checkbox } from '@/components/ui/checkbox'
 import {
@@ -19,6 +20,8 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from '@/components/ui/popover'
+import { Separator } from '@/components/ui/separator'
+import { useDataTableFacets } from '@/hooks/use-data-table-facets'
 import {
   HierarchicalFilter,
   getHierarchicalSelectedPaths,
@@ -26,9 +29,6 @@ import {
   updateHierarchicalFilter,
 } from '@/lib/hierarchical-filter'
 import { cn } from '@/lib/utils'
-import { useCommandState } from 'cmdk'
-import { Separator } from '@/components/ui/separator'
-import { Badge } from '@/components/ui/badge'
 
 type Props<TData, TValue> = {
   column?: Column<TData, TValue>
@@ -50,15 +50,10 @@ export function DataTableHierarchicalFacetFilterButton<TData, TValue>({
   transformFacetsFn,
 }: Props<TData, TValue>) {
   const [search, setSearch] = useState('')
+  const facets = useDataTableFacets(column, transformFacetsFn)
 
   const filterValue = column?.getFilterValue() as HierarchicalFilter
   const selected = filterValue ?? root
-
-  const rawFacets = column?.getFacetedUniqueValues()
-  const facets = useMemo(() => {
-    if (!rawFacets || !transformFacetsFn) return rawFacets
-    return transformFacetsFn(rawFacets)
-  }, [rawFacets, transformFacetsFn])
 
   const { checked, childIDs, children } = selected
 

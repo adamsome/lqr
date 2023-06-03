@@ -10,6 +10,7 @@ import {
   DataTableFacetedFilterItem,
 } from '@/components/ui/data-table-facet-filter-button'
 import { DataTableViewOptions } from '@/components/ui/data-table-view-options'
+import { useIsDataTableFiltered } from '@/hooks/use-is-data-table-filtered'
 import { Spec } from '@/lib/types'
 
 const CATEGORY_ITEMS: DataTableFacetedFilterItem[] = [
@@ -21,9 +22,7 @@ const CATEGORY_ITEMS: DataTableFacetedFilterItem[] = [
 type Props = DataTableToolbarProps<Spec>
 
 export function Toolbar({ table, hideColumns }: Props) {
-  const isFiltered =
-    table.getPreFilteredRowModel().rows.length >
-    table.getFilteredRowModel().rows.length
+  const isFiltered = useIsDataTableFiltered(table)
 
   return (
     <div className="flex items-center justify-between">
