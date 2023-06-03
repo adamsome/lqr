@@ -1,3 +1,4 @@
+import { DataProvider } from '@/components/category-meta-provider'
 import { Spec } from '@/components/specs/spec'
 import { getData } from '@/lib/get-data'
 
@@ -10,7 +11,13 @@ type Props = {
 }
 
 export default async function Page({ params }: Props) {
-  const { specs } = await getData()
-  const spec = specs[params.id]
-  return <Spec spec={spec} />
+  const data = await getData()
+  const { specs } = data
+  const { id } = params
+  const spec = specs[id]
+  return (
+    <DataProvider {...data}>
+      <Spec spec={spec} />
+    </DataProvider>
+  )
 }

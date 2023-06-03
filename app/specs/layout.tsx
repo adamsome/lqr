@@ -1,7 +1,5 @@
 import { ReactNode } from 'react'
 
-import { Header } from '@/components/header'
-
 type Props = {
   children: ReactNode
   modal: ReactNode
@@ -9,9 +7,9 @@ type Props = {
 
 export default function SpecsLayout({ children, modal }: Props) {
   return (
-    <div>
-      <div>Layout Modal .{modal}.</div>
+    <>
+      {modal}
       {children}
-    </div>
+    </>
   )
 }
