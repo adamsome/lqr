@@ -1,7 +1,9 @@
-import { DataProvider } from '@/components/category-meta-provider'
-import { Spec } from '@/components/specs/spec'
+import { Spec } from '@/app/spec/[id]/spec'
+import { DataProvider } from '@/components/data-provider'
 import InterceptRouteDialog from '@/components/ui/intercept-route-dialog'
 import { getData } from '@/lib/get-data'
+
+export const revalidate = 0
 
 type Props = {
   params: {

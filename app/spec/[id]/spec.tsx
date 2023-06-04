@@ -1,6 +1,6 @@
 'use client'
 
-import { SpecIngredient } from '@/components/specs/spec-ingredient'
+import { Ingredient } from '@/app/spec/[id]/ingredient'
 import { Spec } from '@/lib/types'
 
 type Props = {
@@ -22,7 +22,7 @@ export function Spec({ spec }: Props) {
       <div>
         <div className="flex flex-col gap-2">
           {ingredients.map((ingredient, i) => (
-            <SpecIngredient
+            <Ingredient
               key={`${i}_${ingredient.name ?? ingredient.id}`}
               ingredient={ingredient}
             />

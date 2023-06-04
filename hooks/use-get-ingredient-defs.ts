@@ -1,6 +1,6 @@
 import { useCallback, useMemo } from 'react'
 
-import { useData } from '@/components/category-meta-provider'
+import { useData } from '@/components/data-provider'
 import { getIngredientDefs } from '@/lib/ingredient/get-ingredient-defs'
 
 export function useGetIngredientDefs() {

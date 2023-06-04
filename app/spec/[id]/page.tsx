@@ -1,5 +1,6 @@
-import { DataProvider } from '@/components/category-meta-provider'
-import { Spec } from '@/components/specs/spec'
+import { DataProvider } from '@/components/data-provider'
+import { Spec } from '@/app/spec/[id]/spec'
+import { Container } from '@/components/ui/container'
 import { getData } from '@/lib/get-data'
 
 export const revalidate = 0
@@ -17,7 +18,9 @@ export default async function Page({ params }: Props) {
   const spec = specs[id]
   return (
     <DataProvider {...data}>
-      <Spec spec={spec} />
+      <Container className="relative py-8">
+        <Spec spec={spec} />
+      </Container>
     </DataProvider>
   )
 }

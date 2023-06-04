@@ -1,9 +1,9 @@
 'use client'
 
-import { useData } from '@/components/category-meta-provider'
-import { Cards } from '@/components/specs/cards'
-import { createColumns } from '@/components/specs/columns'
-import { Toolbar } from '@/components/specs/toolbar'
+import { Cards } from '@/app/specs/cards'
+import { createColumns } from '@/app/specs/columns'
+import { Toolbar } from '@/app/specs/toolbar'
+import { useData } from '@/components/data-provider'
 import { DataTableContainer } from '@/components/ui/data-table-container'
 
 export function Table() {

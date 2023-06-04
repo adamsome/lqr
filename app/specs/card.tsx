@@ -1,4 +1,4 @@
-import { CardIngredient } from '@/components/specs/card-ingredient'
+import { CardIngredient } from '@/app/specs/card-ingredient'
 import {
   CardContent,
   CardDescription,

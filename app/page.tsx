@@ -1,4 +1,4 @@
-import { DataProvider } from '@/components/category-meta-provider'
+import { DataProvider } from '@/components/data-provider'
 import { Table } from '@/components/ingredients/table'
 import { Container } from '@/components/ui/container'
 import { H1 } from '@/components/ui/h1'

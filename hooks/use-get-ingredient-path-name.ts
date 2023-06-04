@@ -1,6 +1,6 @@
 import { useCallback } from 'react'
 
-import { useData } from '@/components/category-meta-provider'
+import { useData } from '@/components/data-provider'
 import { getIngredientPathName } from '@/lib/ingredient/get-ingredient-path-name'
 
 export function useGetIngredientPathName() {

@@ -3,7 +3,7 @@
 import { X } from 'lucide-react'
 import { useMemo } from 'react'
 
-import { useData } from '@/components/category-meta-provider'
+import { useData } from '@/components/data-provider'
 import { IngredientPathText } from '@/components/ingredients/ingredient-path-text'
 import { StockIcon as BaseStockIcon } from '@/components/ingredients/stock-icon'
 import { Button } from '@/components/ui/button'

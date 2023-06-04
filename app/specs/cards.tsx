@@ -2,7 +2,7 @@
 
 import { ColumnDef, Table as TableType } from '@tanstack/react-table'
 
-import { Card } from '@/components/specs/card'
+import { Card } from '@/app/specs/card'
 import { DataTablePagination } from '@/components/ui/data-table-pagination'
 import { TableCell, TableRow } from '@/components/ui/table'
 import { Spec } from '@/lib/types'

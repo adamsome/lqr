@@ -1,7 +1,7 @@
 import { Fragment } from 'react'
 
 import { cn } from '@/lib/utils'
-import { useData } from '@/components/category-meta-provider'
+import { useData } from '@/components/data-provider'
 import { CATEGORY_DICT, Category } from '@/lib/consts'
 
 const DIM: Record<string, boolean> = {

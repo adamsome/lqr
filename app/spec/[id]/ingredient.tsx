@@ -1,4 +1,4 @@
-import { useData } from '@/components/category-meta-provider'
+import { useData } from '@/components/data-provider'
 import { useGetIngredientName } from '@/hooks/use-get-ingredient-name'
 import { SpecIngredient } from '@/lib/types'
 import { capitalize } from '@/lib/utils'
@@ -7,7 +7,7 @@ type Props = {
   ingredient: SpecIngredient
 }
 
-export function SpecIngredient({ ingredient }: Props) {
+export function Ingredient({ ingredient }: Props) {
   const { ingredientDict } = useData()
   const getIngredientName = useGetIngredientName()
 

@@ -1,7 +1,7 @@
 import { Column } from '@tanstack/react-table'
 import { useMemo } from 'react'
 
-import { useData } from '@/components/category-meta-provider'
+import { useData } from '@/components/data-provider'
 import { IngredientPathText } from '@/components/ingredients/ingredient-path-text'
 import { DataTableHierarchicalFilter } from '@/components/ui/data-table-hierarchical-filter'
 import { CATEGORY_DICT, Category } from '@/lib/consts'

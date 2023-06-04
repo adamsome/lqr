@@ -1,6 +1,6 @@
 'use client'
 
-import { useData } from '@/components/category-meta-provider'
+import { useData } from '@/components/data-provider'
 import { createColumns } from '@/components/ingredients/columns'
 import { Toolbar } from '@/components/ingredients/toolbar'
 import { DataTableContainer } from '@/components/ui/data-table-container'
