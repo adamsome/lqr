@@ -3,7 +3,7 @@
 import { ColumnDef, Table as TableType } from '@tanstack/react-table'
 
 import { Card } from '@/app/specs/card'
-import { DataTablePagination } from '@/components/ui/data-table-pagination'
+import { CardGrid } from '@/components/ui/card-grid'
 import { TableCell, TableRow } from '@/components/ui/table'
 import { Spec } from '@/lib/types'
 
@@ -19,12 +19,11 @@ export function Cards({ table, columns }: Props) {
   }
   return (
     <>
-      <div className="grid grid-cols-[repeat(auto-fill,minmax(theme(spacing.64),1fr))] gap-4 lg:gap-6">
+      <CardGrid>
         {rows.map((row) => (
           <Card key={row.id} spec={row.original} />
         ))}
-      </div>
-      <DataTablePagination table={table} />
+      </CardGrid>
     </>
   )
 }

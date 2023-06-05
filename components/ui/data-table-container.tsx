@@ -25,8 +25,7 @@ export type DataTableToolbarProps<TData> = {
 type Props<TData, TValue> = {
   columns: ColumnDef<TData, TValue>[]
   data: TData[]
-  Toolbar?: (props: DataTableToolbarProps<TData>) => JSX.Element | null
-  render?: (
+  render: (
     table: TableType<TData>,
     columns: ColumnDef<TData, TValue>[]
   ) => JSX.Element
@@ -35,7 +34,6 @@ type Props<TData, TValue> = {
 export function DataTableContainer<TData, TValue>({
   columns,
   data,
-  Toolbar,
   render,
 }: Props<TData, TValue>) {
   const [sorting, setSorting] = useState<SortingState>([])
@@ -70,11 +68,5 @@ export function DataTableContainer<TData, TValue>({
     getFacetedUniqueValues: getFacetedUniqueValues(),
   })
 
-  return (
-    <div className="flex flex-col gap-4">
-      {Toolbar && <Toolbar table={table} />}
-      {render && render(table, columns)}
-      {!render && <DataTable table={table} columns={columns} />}
-    </div>
-  )
+  return <>{render(table, columns)}</>
 }

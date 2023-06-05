@@ -5,6 +5,7 @@ import { createColumns } from '@/app/specs/columns'
 import { Toolbar } from '@/app/specs/toolbar'
 import { useData } from '@/components/data-provider'
 import { DataTableContainer } from '@/components/ui/data-table-container'
+import { DataTablePagination } from '@/components/ui/data-table-pagination'
 
 export function Table() {
   const { specs } = useData()
@@ -14,8 +15,13 @@ export function Table() {
     <DataTableContainer
       columns={createColumns()}
       data={data}
-      render={(table, columns) => <Cards table={table} columns={columns} />}
-      Toolbar={Toolbar}
+      render={(table, columns) => (
+        <div className="flex flex-col gap-4">
+          <Toolbar table={table} />
+          <Cards table={table} columns={columns} />
+          <DataTablePagination table={table} />
+        </div>
+      )}
     />
   )
 }
