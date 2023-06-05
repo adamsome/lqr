@@ -1,6 +1,6 @@
 'use client'
 
-import { StockIconButton } from '@/components/ingredients/stock-icon-button'
+import { StockIconButton } from '@/app/bar/stock-icon-button'
 import { useRefresh } from '@/hooks/use-refresh'
 
 type Props = {

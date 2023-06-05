@@ -1,23 +1,19 @@
-import { DataProvider } from '@/components/data-provider'
-import { Table } from '@/components/ingredients/table'
+import { CardHeader, CardLink } from '@/components/ui/card'
 import { Container } from '@/components/ui/container'
-import { H1 } from '@/components/ui/h1'
-import { getData } from '@/lib/get-data'
 
 export const revalidate = 0
 
-export default async function IndexPage() {
-  const data = await getData()
-  const { ingredientIDs, ingredientDict } = data
-  const ingredients = ingredientIDs.map((id) => ingredientDict[id])
+export default async function Page() {
   return (
-    <DataProvider {...data}>
-      <Container className="relative py-8">
-        <section className="flex flex-col gap-4">
-          <H1>Stock</H1>
-          <Table data={ingredients} />
-        </section>
-      </Container>
-    </DataProvider>
+    <Container className="relative py-8">
+      <div className="grid grid-cols-[repeat(auto-fill,minmax(theme(spacing.64),1fr))] gap-4 lg:gap-6">
+        <CardLink href="/bar">
+          <CardHeader>Bar</CardHeader>
+        </CardLink>
+        <CardLink href="/specs">
+          <CardHeader>Specs</CardHeader>
+        </CardLink>
+      </div>
+    </Container>
   )
 }

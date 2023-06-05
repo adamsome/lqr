@@ -11,7 +11,7 @@ type Props = {
   }
 }
 
-export default async function SpecModal({ params }: Props) {
+export default async function Page({ params }: Props) {
   const data = await getData()
   const { specs } = data
   const { id } = params

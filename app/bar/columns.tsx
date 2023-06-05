@@ -2,14 +2,14 @@
 
 import { ColumnDef } from '@tanstack/react-table'
 
-import { ActionCell } from '@/components/ingredients/action-cell'
+import { ActionCell } from '@/app/bar/action-cell'
+import { StockCell } from '@/app/bar/stock-cell'
 import { IngredientPathCell } from '@/components/ingredients/ingredient-path-cell'
-import { StockCell } from '@/components/ingredients/stock-cell'
 import { StockIcon } from '@/components/ingredients/stock-icon'
 import { DataTableColumnHeader as Header } from '@/components/ui/data-table-column-header'
-import { getIngredientPathName } from '@/lib/ingredient/get-ingredient-path-name'
 import { AGING_DICT, PRODUCTION_METHOD_DICT } from '@/lib/consts'
 import { hierarchicalFilterFn } from '@/lib/hierarchical-filter'
+import { getIngredientPathName } from '@/lib/ingredient/get-ingredient-path-name'
 import { getStockState } from '@/lib/stock'
 import { Ingredient, IngredientDef } from '@/lib/types'
 import { compareBasic, getBoolValue, getDictValue, toString } from '@/lib/utils'

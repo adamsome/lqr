@@ -15,6 +15,12 @@ export function Nav() {
         </span>
       </Link>
       <Link
+        href="/bar"
+        className="group flex items-center gap-x-2 overflow-hidden text-ellipsis whitespace-nowrap font-medium transition-colors hover:text-primary"
+      >
+        Bar
+      </Link>
+      <Link
         href="/specs"
         className="group flex items-center gap-x-2 overflow-hidden text-ellipsis whitespace-nowrap font-medium transition-colors hover:text-primary"
       >

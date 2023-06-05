@@ -7,8 +7,8 @@ import { useData } from '@/components/data-provider'
 import { IngredientPathText } from '@/components/ingredients/ingredient-path-text'
 import { StockIcon as BaseStockIcon } from '@/components/ingredients/stock-icon'
 import { Button } from '@/components/ui/button'
-import { DataTableToolbarProps } from '@/components/ui/data-table-container'
 import { DataTableColumnFilterInput } from '@/components/ui/data-table-column-filter-input'
+import { DataTableToolbarProps } from '@/components/ui/data-table-container'
 import {
   DataTableFacetFilterButton,
   DataTableFacetedFilterItem,
@@ -17,6 +17,7 @@ import { DataTableHierarchicalFacetFilterButton } from '@/components/ui/data-tab
 import { DataTableMultiFacetFilterButton } from '@/components/ui/data-table-multi-facet-filter-button'
 import { DataTableViewOptions } from '@/components/ui/data-table-view-options'
 import { useGetIngredientPathName } from '@/hooks/use-get-ingredient-path-name'
+import { useIsDataTableFiltered } from '@/hooks/use-is-data-table-filtered'
 import {
   AGING_DICT,
   Aging,
@@ -28,7 +29,6 @@ import {
 import { HierarchicalFilter } from '@/lib/hierarchical-filter'
 import { StockState, getStockState } from '@/lib/stock'
 import { Ingredient } from '@/lib/types'
-import { useIsDataTableFiltered } from '@/hooks/use-is-data-table-filtered'
 
 const STOCK_ITEMS: DataTableFacetedFilterItem[] = [
   { label: 'Full', value: 'full', icon: <StockIcon stock="full" /> },

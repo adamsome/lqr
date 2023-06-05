@@ -5,7 +5,7 @@ type Props = {
   modal: ReactNode
 }
 
-export default function SpecsLayout({ children, modal }: Props) {
+export default function Layout({ children, modal }: Props) {
   return (
     <>
       {modal}
