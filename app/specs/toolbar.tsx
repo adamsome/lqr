@@ -21,7 +21,7 @@ const CATEGORY_ITEMS: DataTableFacetedFilterItem[] = [
 
 type Props = DataTableToolbarProps<Spec>
 
-export function Toolbar({ table, hideColumns }: Props) {
+export function Toolbar({ table }: Props) {
   const isFiltered = useIsDataTableFiltered(table)
 
   return (
@@ -50,7 +50,7 @@ export function Toolbar({ table, hideColumns }: Props) {
           </Button>
         )}
       </div>
-      <DataTableViewOptions table={table} hideColumns={hideColumns} />
+      <DataTableViewOptions table={table} />
     </div>
   )
 }

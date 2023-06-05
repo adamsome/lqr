@@ -20,13 +20,11 @@ import { DataTable } from '@/components/ui/data-table'
 
 export type DataTableToolbarProps<TData> = {
   table: TableType<TData>
-  hideColumns?: string[]
 }
 
 type Props<TData, TValue> = {
   columns: ColumnDef<TData, TValue>[]
   data: TData[]
-  hideColumns?: string[]
   Toolbar?: (props: DataTableToolbarProps<TData>) => JSX.Element | null
   render?: (
     table: TableType<TData>,
@@ -37,15 +35,12 @@ type Props<TData, TValue> = {
 export function DataTableContainer<TData, TValue>({
   columns,
   data,
-  hideColumns = [],
   Toolbar,
   render,
 }: Props<TData, TValue>) {
   const [sorting, setSorting] = useState<SortingState>([])
   const [columnFilters, setColumnFilters] = useState<ColumnFiltersState>([])
-  const [columnVisibility, setColumnVisibility] = useState<VisibilityState>(
-    hideColumns.reduce((acc, id) => ({ ...acc, [id]: false }), {})
-  )
+  const [columnVisibility, setColumnVisibility] = useState<VisibilityState>({})
   const [rowSelection, setRowSelection] = useState({})
 
   const table = useReactTable({
@@ -77,7 +72,7 @@ export function DataTableContainer<TData, TValue>({
 
   return (
     <div className="flex flex-col gap-4">
-      {Toolbar && <Toolbar table={table} hideColumns={hideColumns} />}
+      {Toolbar && <Toolbar table={table} />}
       {render && render(table, columns)}
       {!render && <DataTable table={table} columns={columns} />}
     </div>

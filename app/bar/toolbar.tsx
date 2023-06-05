@@ -80,7 +80,7 @@ function transformCategoryFacets(facets: Map<any, number>) {
 
 type Props = DataTableToolbarProps<Ingredient>
 
-export function Toolbar({ table, hideColumns }: Props) {
+export function Toolbar({ table }: Props) {
   const isFiltered = useIsDataTableFiltered(table)
   const { categoryFilter: root } = useData()
   const getName = useGetIngredientPathName()
@@ -152,7 +152,7 @@ export function Toolbar({ table, hideColumns }: Props) {
           </Button>
         )}
       </div>
-      <DataTableViewOptions table={table} hideColumns={hideColumns} />
+      <DataTableViewOptions table={table} />
     </div>
   )
 }

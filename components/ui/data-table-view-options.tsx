@@ -17,10 +17,7 @@ import { DataTableToolbarProps } from '@/components/ui/data-table-container'
 
 type Props<TData> = DataTableToolbarProps<TData>
 
-export function DataTableViewOptions<TData>({
-  table,
-  hideColumns,
-}: Props<TData>) {
+export function DataTableViewOptions<TData>({ table }: Props<TData>) {
   function handleResetAll() {
     table.resetColumnFilters()
     table.resetGlobalFilter()
@@ -45,9 +42,7 @@ export function DataTableViewOptions<TData>({
           .getAllColumns()
           .filter(
             (column) =>
-              !hideColumns?.includes(column.id) &&
-              typeof column.accessorFn !== 'undefined' &&
-              column.getCanHide()
+              typeof column.accessorFn !== 'undefined' && column.getCanHide()
           )
           .map((column) => {
             return (
