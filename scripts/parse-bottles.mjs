@@ -207,6 +207,22 @@ export function parseBottles() {
     })
     .filter(Boolean)
 
+  bottles.push({
+    id: 'angostura',
+    name: 'Angostura Bitters',
+    category: 'bitters',
+    parent: 'bitters_aromatic',
+    origin: 'Trinidad',
+  })
+  bottles.push({
+    id: 'peychauds',
+    name: "Peychaud's Bitters",
+    category: 'bitters',
+    parent: 'bitters_creole',
+    origin: 'USA',
+    originTerritory: 'Louisiana',
+  })
+
   writeFileSync(
     join(dir, '../json/user-ingredients.json'),
     JSON.stringify(userIngredients, null, 2),

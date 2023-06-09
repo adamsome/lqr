@@ -29,7 +29,7 @@
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "39"
+    "sourcePage": 39
   },
   "pupule": {
     "id": "pupule",
@@ -61,11 +61,12 @@
         ]
       },
       {
+        "bottleID": "angostura",
         "id": "bitters_aromatic"
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "39"
+    "sourcePage": 39
   },
   "dons_own_grog": {
     "id": "dons_own_grog",
@@ -106,11 +107,12 @@
         "black": true
       },
       {
+        "bottleID": "angostura",
         "id": "bitters_aromatic"
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "40"
+    "sourcePage": 40
   },
   "port_au_prince": {
     "id": "port_au_prince",
@@ -142,11 +144,12 @@
         ]
       },
       {
+        "bottleID": "angostura",
         "id": "bitters_aromatic"
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "40"
+    "sourcePage": 40
   },
   "tree_dots_and_a_dash": {
     "id": "tree_dots_and_a_dash",
@@ -186,11 +189,12 @@
         ]
       },
       {
+        "bottleID": "angostura",
         "id": "bitters_aromatic"
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "43"
+    "sourcePage": 43
   },
   "mexican_el_diablo": {
     "id": "mexican_el_diablo",
@@ -214,7 +218,7 @@
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "43"
+    "sourcePage": 43
   },
   "port_light": {
     "id": "port_light",
@@ -238,7 +242,7 @@
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "44"
+    "sourcePage": 44
   },
   "demerara_dry_float": {
     "id": "demerara_dry_float",
@@ -277,7 +281,7 @@
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "44"
+    "sourcePage": 44
   },
   "jet_pilot": {
     "id": "jet_pilot",
@@ -321,7 +325,7 @@
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "61"
+    "sourcePage": 61
   },
   "halekulani_cocktail": {
     "id": "halekulani_cocktail",
@@ -347,11 +351,12 @@
         "id": "grain_whiskey_bourbon"
       },
       {
+        "bottleID": "angostura",
         "id": "bitters_aromatic"
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "61"
+    "sourcePage": 61
   },
   "sidewinders_fang": {
     "id": "sidewinders_fang",
@@ -388,7 +393,7 @@
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "62"
+    "sourcePage": 62
   },
   "hawaiin_sunset": {
     "id": "hawaiin_sunset",
@@ -412,7 +417,7 @@
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "62"
+    "sourcePage": 62
   },
   "captains_grog": {
     "id": "captains_grog",
@@ -467,7 +472,7 @@
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "65"
+    "sourcePage": 65
   },
   "suffering_bastard": {
     "id": "suffering_bastard",
@@ -490,11 +495,12 @@
         "id": "brandy_grape"
       },
       {
+        "bottleID": "angostura",
         "id": "bitters_aromatic"
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "65"
+    "sourcePage": 65
   },
   "merciless_virgin": {
     "id": "merciless_virgin",
@@ -527,7 +533,7 @@
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "67"
+    "sourcePage": 67
   },
   "saturn": {
     "id": "saturn",
@@ -552,7 +558,7 @@
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "67"
+    "sourcePage": 67
   },
   "tiki_bowl": {
     "id": "tiki_bowl",
@@ -592,7 +598,7 @@
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "68"
+    "sourcePage": 68
   },
   "hurricane": {
     "id": "hurricane",
@@ -612,7 +618,7 @@
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "68"
+    "sourcePage": 68
   },
   "mundo_perdido": {
     "id": "mundo_perdido",
@@ -638,7 +644,7 @@
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "93"
+    "sourcePage": 93
   },
   "formidable_dragon": {
     "id": "formidable_dragon",
@@ -688,7 +694,7 @@
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "93"
+    "sourcePage": 93
   },
   "lei_lani_volcano_20": {
     "id": "lei_lani_volcano_20",
@@ -717,7 +723,7 @@
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "94"
+    "sourcePage": 94
   },
   "tradewinds": {
     "id": "tradewinds",
@@ -748,7 +754,7 @@
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "94"
+    "sourcePage": 94
   },
   "peachtree_punch_20": {
     "id": "peachtree_punch_20",
@@ -783,7 +789,7 @@
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "96"
+    "sourcePage": 96
   },
   "jungle_bird": {
     "id": "jungle_bird",
@@ -810,7 +816,7 @@
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "96"
+    "sourcePage": 96
   },
   "golden_gun": {
     "id": "golden_gun",
@@ -846,11 +852,12 @@
         ]
       },
       {
+        "bottleID": "angostura",
         "id": "bitters_aromatic"
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "97"
+    "sourcePage": 97
   },
   "hinky_dinks_fizzy": {
     "id": "hinky_dinks_fizzy",
@@ -885,7 +892,7 @@
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "97"
+    "sourcePage": 97
   },
   "pampanito": {
     "id": "pampanito",
@@ -911,11 +918,12 @@
         "black": true
       },
       {
+        "bottleID": "angostura",
         "id": "bitters_aromatic"
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "115"
+    "sourcePage": 115
   },
   "maxs_mistake": {
     "id": "maxs_mistake",
@@ -935,6 +943,7 @@
         "id": "grain_gin_londondry"
       },
       {
+        "bottleID": "angostura",
         "id": "bitters_aromatic"
       },
       {
@@ -942,7 +951,7 @@
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "115"
+    "sourcePage": 115
   },
   "la_guildive": {
     "id": "la_guildive",
@@ -976,7 +985,7 @@
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "116"
+    "sourcePage": 116
   },
   "the_twenty_seventy_swizzle": {
     "id": "the_twenty_seventy_swizzle",
@@ -1018,7 +1027,7 @@
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "116"
+    "sourcePage": 116
   },
   "shudders_in_a_whisper": {
     "id": "shudders_in_a_whisper",
@@ -1051,14 +1060,16 @@
         ]
       },
       {
+        "bottleID": "peychauds",
         "id": "bitters_creole"
       },
       {
+        "bottleID": "angostura",
         "id": "bitters_aromatic"
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "118"
+    "sourcePage": 118
   },
   "cuevas": {
     "id": "cuevas",
@@ -1088,7 +1099,7 @@
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "118"
+    "sourcePage": 118
   },
   "norwegian_paralysis": {
     "id": "norwegian_paralysis",
@@ -1115,7 +1126,7 @@
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "119"
+    "sourcePage": 119
   },
   "juan_ho_royale": {
     "id": "juan_ho_royale",
@@ -1143,7 +1154,7 @@
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "119"
+    "sourcePage": 119
   },
   "chartreuse_swizzle": {
     "id": "chartreuse_swizzle",
@@ -1166,7 +1177,7 @@
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "120"
+    "sourcePage": 120
   },
   "roselita": {
     "id": "roselita",
@@ -1198,11 +1209,12 @@
         ]
       },
       {
+        "bottleID": "peychauds",
         "id": "bitters_creole"
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "120"
+    "sourcePage": 120
   },
   "center_of_the_galaxy": {
     "id": "center_of_the_galaxy",
@@ -1235,7 +1247,7 @@
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "121"
+    "sourcePage": 121
   },
   "callaloo_cooler": {
     "id": "callaloo_cooler",
@@ -1262,11 +1274,12 @@
         ]
       },
       {
+        "bottleID": "angostura",
         "id": "bitters_aromatic"
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "121"
+    "sourcePage": 121
   },
   "top_notch_volcano": {
     "id": "top_notch_volcano",
@@ -1306,7 +1319,7 @@
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "134"
+    "sourcePage": 134
   },
   "the_naked_ape": {
     "id": "the_naked_ape",
@@ -1338,11 +1351,12 @@
         "overproof": true
       },
       {
+        "bottleID": "angostura",
         "id": "bitters_aromatic"
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "134"
+    "sourcePage": 134
   },
   "swizzle_francais": {
     "id": "swizzle_francais",
@@ -1371,7 +1385,7 @@
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "136"
+    "sourcePage": 136
   },
   "sparkling_mai_tai": {
     "id": "sparkling_mai_tai",
@@ -1407,7 +1421,7 @@
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "136"
+    "sourcePage": 136
   },
   "the_ernesto": {
     "id": "the_ernesto",
@@ -1435,7 +1449,7 @@
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "137"
+    "sourcePage": 137
   },
   "the_sexpert": {
     "id": "the_sexpert",
@@ -1463,7 +1477,7 @@
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "137"
+    "sourcePage": 137
   },
   "hana_reviver": {
     "id": "hana_reviver",
@@ -1495,7 +1509,7 @@
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "139"
+    "sourcePage": 139
   },
   "kaiteur_swizzle": {
     "id": "kaiteur_swizzle",
@@ -1521,11 +1535,12 @@
         ]
       },
       {
+        "bottleID": "angostura",
         "id": "bitters_aromatic"
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "140"
+    "sourcePage": 140
   },
   "the_expedition": {
     "id": "the_expedition",
@@ -1561,7 +1576,7 @@
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "140"
+    "sourcePage": 140
   },
   "the_undead_gentleman": {
     "id": "the_undead_gentleman",
@@ -1599,11 +1614,12 @@
         ]
       },
       {
+        "bottleID": "angostura",
         "id": "bitters_aromatic"
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "142"
+    "sourcePage": 142
   },
   "the_dead_reckoning": {
     "id": "the_dead_reckoning",
@@ -1637,11 +1653,12 @@
         ]
       },
       {
+        "bottleID": "angostura",
         "id": "bitters_aromatic"
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "142"
+    "sourcePage": 142
   },
   "falinum": {
     "id": "falinum",
@@ -1674,7 +1691,7 @@
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "144"
+    "sourcePage": 144
   },
   "humuhumunukunukuapuaa": {
     "id": "humuhumunukunukuapuaa",
@@ -1694,11 +1711,12 @@
         "id": "grain_gin"
       },
       {
+        "bottleID": "peychauds",
         "id": "bitters_creole"
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "144"
+    "sourcePage": 144
   },
   "lauwiliwilinukunukuoioi": {
     "id": "lauwiliwilinukunukuoioi",
@@ -1723,11 +1741,12 @@
         ]
       },
       {
+        "bottleID": "peychauds",
         "id": "bitters_creole"
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "144"
+    "sourcePage": 144
   },
   "finkelgrog": {
     "id": "finkelgrog",
@@ -1770,7 +1789,7 @@
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "145"
+    "sourcePage": 145
   },
   "for_petes_sake": {
     "id": "for_petes_sake",
@@ -1793,11 +1812,12 @@
         "id": "brandy_grape_pisco"
       },
       {
+        "bottleID": "angostura",
         "id": "bitters_aromatic"
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "145"
+    "sourcePage": 145
   },
   "arrack_punch": {
     "id": "arrack_punch",
@@ -1830,7 +1850,7 @@
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "163"
+    "sourcePage": 163
   },
   "el_draque": {
     "id": "el_draque",
@@ -1851,7 +1871,7 @@
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "163"
+    "sourcePage": 163
   },
   "grog": {
     "id": "grog",
@@ -1869,7 +1889,7 @@
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "165"
+    "sourcePage": 165
   },
   "rum_flip": {
     "id": "rum_flip",
@@ -1892,7 +1912,7 @@
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "165"
+    "sourcePage": 165
   },
   "bombo": {
     "id": "bombo",
@@ -1912,7 +1932,7 @@
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "167"
+    "sourcePage": 167
   },
   "calibogus": {
     "id": "calibogus",
@@ -1945,7 +1965,7 @@
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "167"
+    "sourcePage": 167
   },
   "mary_pickford": {
     "id": "mary_pickford",
@@ -1971,7 +1991,7 @@
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "168"
+    "sourcePage": 168
   },
   "daiquiri_no_1": {
     "id": "daiquiri_no_1",
@@ -1993,7 +2013,7 @@
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "168"
+    "sourcePage": 168
   },
   "hotel_nacional_special": {
     "id": "hotel_nacional_special",
@@ -2022,7 +2042,7 @@
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "171"
+    "sourcePage": 171
   },
   "daisy_de_santiago": {
     "id": "daisy_de_santiago",
@@ -2051,7 +2071,7 @@
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "171"
+    "sourcePage": 171
   },
   "el_presidente": {
     "id": "el_presidente",
@@ -2077,7 +2097,7 @@
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "172"
+    "sourcePage": 172
   },
   "twelve_mile_limit": {
     "id": "twelve_mile_limit",
@@ -2105,7 +2125,7 @@
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "172"
+    "sourcePage": 172
   },
   "parisian_blonde": {
     "id": "parisian_blonde",
@@ -2129,7 +2149,7 @@
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "174"
+    "sourcePage": 174
   },
   "cora_middleton": {
     "id": "cora_middleton",
@@ -2158,7 +2178,7 @@
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "174"
+    "sourcePage": 174
   },
   "millionaire_cocktail_no_1": {
     "id": "millionaire_cocktail_no_1",
@@ -2193,7 +2213,7 @@
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "175"
+    "sourcePage": 175
   },
   "batida_de_maracuja_e_coco": {
     "id": "batida_de_maracuja_e_coco",
@@ -2214,7 +2234,7 @@
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "175"
+    "sourcePage": 175
   },
   "wray_ting": {
     "id": "wray_ting",
@@ -2235,7 +2255,7 @@
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "176"
+    "sourcePage": 176
   },
   "hibiscus_rum_punch": {
     "id": "hibiscus_rum_punch",
@@ -2264,7 +2284,7 @@
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "176"
+    "sourcePage": 176
   },
   "ti_punch_ti_punch_vieux": {
     "id": "ti_punch_ti_punch_vieux",
@@ -2292,7 +2312,7 @@
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "179"
+    "sourcePage": 179
   },
   "barbados_rum_punch": {
     "id": "barbados_rum_punch",
@@ -2314,11 +2334,12 @@
         ]
       },
       {
+        "bottleID": "angostura",
         "id": "bitters_aromatic"
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "179"
+    "sourcePage": 179
   },
   "jamaican_milk_punch": {
     "id": "jamaican_milk_punch",
@@ -2343,11 +2364,12 @@
         "id": "extract_vanilla"
       },
       {
+        "bottleID": "angostura",
         "id": "bitters_aromatic"
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "180"
+    "sourcePage": 180
   },
   "corn_and_oil": {
     "id": "corn_and_oil",
@@ -2367,11 +2389,12 @@
         ]
       },
       {
+        "bottleID": "angostura",
         "id": "bitters_aromatic"
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "180"
+    "sourcePage": 180
   },
   "queens_park_swizzle": {
     "id": "queens_park_swizzle",
@@ -2393,11 +2416,12 @@
         "black": true
       },
       {
+        "bottleID": "angostura",
         "id": "bitters_aromatic"
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "181"
+    "sourcePage": 181
   },
   "house_spiced_rum": {
     "id": "house_spiced_rum",
@@ -2441,7 +2465,7 @@
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "193"
+    "sourcePage": 193
   },
   "the_chadburn": {
     "id": "the_chadburn",
@@ -2468,7 +2492,7 @@
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "201"
+    "sourcePage": 201
   },
   "a_wish_for_grace": {
     "id": "a_wish_for_grace",
@@ -2499,11 +2523,12 @@
         "id": "fortifiedwine_madeira"
       },
       {
+        "bottleID": "angostura",
         "id": "bitters_aromatic"
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "201"
+    "sourcePage": 201
   },
   "hot_buttered_rum": {
     "id": "hot_buttered_rum",
@@ -2526,7 +2551,7 @@
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "202"
+    "sourcePage": 202
   },
   "hot_buttered_rum_batter": {
     "id": "hot_buttered_rum_batter",
@@ -2565,7 +2590,7 @@
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "202"
+    "sourcePage": 202
   },
   "abricot_vieux": {
     "id": "abricot_vieux",
@@ -2584,6 +2609,7 @@
         ]
       },
       {
+        "bottleID": "angostura",
         "id": "bitters_aromatic"
       },
       {
@@ -2591,7 +2617,7 @@
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "203"
+    "sourcePage": 203
   },
   "paniolo_oldfashioned": {
     "id": "paniolo_oldfashioned",
@@ -2610,11 +2636,12 @@
         ]
       },
       {
+        "bottleID": "angostura",
         "id": "bitters_aromatic"
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "203"
+    "sourcePage": 203
   },
   "port_royal": {
     "id": "port_royal",
@@ -2648,7 +2675,7 @@
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "204"
+    "sourcePage": 204
   },
   "kingston_palaka": {
     "id": "kingston_palaka",
@@ -2675,7 +2702,7 @@
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "204"
+    "sourcePage": 204
   },
   "donn_day_afternoon": {
     "id": "donn_day_afternoon",
@@ -2699,7 +2726,7 @@
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "206"
+    "sourcePage": 206
   },
   "baie_du_galion": {
     "id": "baie_du_galion",
@@ -2722,7 +2749,7 @@
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "206"
+    "sourcePage": 206
   },
   "agricole_guava_cooler": {
     "id": "agricole_guava_cooler",
@@ -2746,11 +2773,12 @@
         ]
       },
       {
+        "bottleID": "angostura",
         "id": "bitters_aromatic"
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "209"
+    "sourcePage": 209
   },
   "richard_sealebach": {
     "id": "richard_sealebach",
@@ -2766,9 +2794,11 @@
         "bottleID": "rl_seale_foursquare_9_year_port_cask_finish"
       },
       {
+        "bottleID": "angostura",
         "id": "bitters_aromatic"
       },
       {
+        "bottleID": "peychauds",
         "id": "bitters_creole"
       },
       {
@@ -2776,7 +2806,7 @@
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "209"
+    "sourcePage": 209
   },
   "cosa_nostra_2": {
     "id": "cosa_nostra_2",
@@ -2798,6 +2828,7 @@
         ]
       },
       {
+        "bottleID": "angostura",
         "id": "bitters_aromatic"
       },
       {
@@ -2805,7 +2836,7 @@
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "210"
+    "sourcePage": 210
   },
   "spontaneous_rumbustion": {
     "id": "spontaneous_rumbustion",
@@ -2838,7 +2869,7 @@
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "210"
+    "sourcePage": 210
   },
   "boo_loo": {
     "id": "boo_loo",
@@ -2889,7 +2920,7 @@
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "249"
+    "sourcePage": 249
   },
   "caribeno": {
     "id": "caribeno",
@@ -2914,7 +2945,7 @@
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "249"
+    "sourcePage": 249
   },
   "monks_respite": {
     "id": "monks_respite",
@@ -2946,7 +2977,7 @@
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "251"
+    "sourcePage": 251
   },
   "the_mastadon": {
     "id": "the_mastadon",
@@ -2982,11 +3013,12 @@
         "id": "grain_whiskey_bourbon"
       },
       {
+        "bottleID": "peychauds",
         "id": "bitters_creole"
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "251"
+    "sourcePage": 251
   },
   "pinata": {
     "id": "pinata",
@@ -3023,7 +3055,7 @@
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "252"
+    "sourcePage": 252
   },
   "bumboat": {
     "id": "bumboat",
@@ -3063,7 +3095,7 @@
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "252"
+    "sourcePage": 252
   },
   "planters_punch": {
     "id": "planters_punch",
@@ -3089,11 +3121,12 @@
         ]
       },
       {
+        "bottleID": "angostura",
         "id": "bitters_aromatic"
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "258"
+    "sourcePage": 258
   },
   "mai_tai": {
     "id": "mai_tai",
@@ -3123,7 +3156,7 @@
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "261"
+    "sourcePage": 261
   },
   "doctor_funk": {
     "id": "doctor_funk",
@@ -3159,7 +3192,7 @@
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "266"
+    "sourcePage": 266
   },
   "zombie": {
     "id": "zombie",
@@ -3209,7 +3242,7 @@
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "268"
+    "sourcePage": 268
   },
   "navy_grog": {
     "id": "navy_grog",
@@ -3255,7 +3288,7 @@
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "271"
+    "sourcePage": 271
   },
   "scorpion": {
     "id": "scorpion",
@@ -3289,7 +3322,7 @@
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "272"
+    "sourcePage": 272
   },
   "fog_cutter": {
     "id": "fog_cutter",
@@ -3323,7 +3356,7 @@
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "275"
+    "sourcePage": 275
   },
   "singapore_sling": {
     "id": "singapore_sling",
@@ -3350,6 +3383,7 @@
         "id": "grain_gin_londondry"
       },
       {
+        "bottleID": "angostura",
         "id": "bitters_aromatic"
       },
       {
@@ -3357,7 +3391,7 @@
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "276"
+    "sourcePage": 276
   },
   "hondo_hatties_jungle_punch": {
     "id": "hondo_hatties_jungle_punch",
@@ -3393,11 +3427,12 @@
         ]
       },
       {
+        "bottleID": "angostura",
         "id": "bitters_aromatic"
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "311"
+    "sourcePage": 311
   },
   "kahiko_punch": {
     "id": "kahiko_punch",
@@ -3428,7 +3463,7 @@
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "311"
+    "sourcePage": 311
   },
   "triumvirate_punch": {
     "id": "triumvirate_punch",
@@ -3453,6 +3488,7 @@
         ]
       },
       {
+        "bottleID": "angostura",
         "id": "bitters_aromatic"
       },
       {
@@ -3460,7 +3496,7 @@
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "312"
+    "sourcePage": 312
   },
   "eureka_punch": {
     "id": "eureka_punch",
@@ -3486,6 +3522,7 @@
         ]
       },
       {
+        "bottleID": "angostura",
         "id": "bitters_aromatic"
       },
       {
@@ -3493,7 +3530,7 @@
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "312"
+    "sourcePage": 312
   },
   "yuletidal_wave": {
     "id": "yuletidal_wave",
@@ -3534,7 +3571,7 @@
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "313"
+    "sourcePage": 313
   },
   "rumbustion_punch": {
     "id": "rumbustion_punch",
@@ -3570,7 +3607,7 @@
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "313"
+    "sourcePage": 313
   },
   "puka_punch": {
     "id": "puka_punch",
@@ -3617,6 +3654,7 @@
         "black": true
       },
       {
+        "bottleID": "angostura",
         "id": "bitters_aromatic"
       },
       {
@@ -3627,7 +3665,7 @@
       }
     ],
     "source": "Smuggler's Cove",
-    "sourcePage": "318"
+    "sourcePage": 318
   },
   "achilles_heel": {
     "id": "achilles_heel",
@@ -4126,6 +4164,7 @@
         "id": "syrup_guava"
       },
       {
+        "bottleID": "angostura",
         "id": "bitters_aromatic"
       },
       {
@@ -4234,6 +4273,7 @@
         "id": "acid_citric"
       },
       {
+        "bottleID": "angostura",
         "id": "bitters_aromatic"
       },
       {
@@ -4375,6 +4415,7 @@
         "id": "syrup_cinnamon"
       },
       {
+        "bottleID": "angostura",
         "id": "bitters_aromatic"
       },
       {
@@ -4869,6 +4910,7 @@
         "id": "syrup_cinnamon"
       },
       {
+        "bottleID": "peychauds",
         "id": "bitters_creole"
       },
       {
@@ -5242,6 +5284,7 @@
         "id": "syrup_simple"
       },
       {
+        "bottleID": "angostura",
         "id": "bitters_aromatic"
       },
       {
@@ -5310,6 +5353,7 @@
         "id": "acid_citric"
       },
       {
+        "bottleID": "angostura",
         "id": "bitters_aromatic"
       },
       {
@@ -5340,6 +5384,7 @@
         "id": "syrup_simple"
       },
       {
+        "bottleID": "angostura",
         "id": "bitters_aromatic"
       },
       {

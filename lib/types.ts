@@ -42,17 +42,32 @@ export interface User {
   ingredients: Record<string, Partial<IngredientDef>>
 }
 
-export type AmountType = 'oz' | 'dash' | 'scalar'
+export type Unit = 'oz' | 'tsp' | 'dash' | 'cube'
+export type Usage =
+  | 'rim'
+  | 'twist'
+  | 'grated'
+  | 'wheel'
+  | 'wedge'
+  | 'whole'
+  | 'float'
+  | 'top'
+  | 'rinse'
+  | 'muddled'
 export type SpecCategory = 'tiki' | 'highball' | 'daiquiri'
 export type GlassType = 'coupe' | 'rocks' | 'highball'
 export type MixType = 'stirred' | 'shaken'
 
-export interface SpecIngredient {
+export type Amount = {
+  quantity?: number
+  unit?: Unit
+  usage?: Usage
+}
+
+export interface SpecIngredient extends Amount {
   id?: string
   bottleID?: string
   name?: string
-  amount?: number
-  amountType?: AmountType
   productionMethod?: ProductionMethod
   aging?: Aging[]
   black?: boolean

@@ -660,6 +660,11 @@
     "category": "syrup"
   },
   {
+    "id": "syrup_demeraragum",
+    "name": "Demerara Gum",
+    "category": "syrup"
+  },
+  {
     "id": "syrup_ginger",
     "name": "Ginger",
     "category": "syrup"
@@ -1319,7 +1324,7 @@
   },
   {
     "id": "grain_gin_londondry",
-    "name": "London dry",
+    "name": "London Dry",
     "category": "grain",
     "parent": "grain_gin"
   },

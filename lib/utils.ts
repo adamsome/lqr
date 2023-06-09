@@ -32,3 +32,11 @@ export function toString(a: any) {
 export function capitalize(str: string): string {
   return str[0].toUpperCase() + str.slice(1).toLowerCase()
 }
+
+export function rejectNil<T>(arr: (T | undefined | null)[]): T[] {
+  return arr.filter((it) => it != null) as T[]
+}
+
+export function rejectFalsy<T>(arr: (T | undefined | null)[]): T[] {
+  return arr.filter((it) => it) as T[]
+}

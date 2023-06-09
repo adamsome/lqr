@@ -5037,5 +5037,20 @@
       "D+C: WH",
       "D+C: Codex"
     ]
+  },
+  {
+    "id": "angostura",
+    "name": "Angostura Bitters",
+    "category": "bitters",
+    "parent": "bitters_aromatic",
+    "origin": "Trinidad"
+  },
+  {
+    "id": "peychauds",
+    "name": "Peychaud's Bitters",
+    "category": "bitters",
+    "parent": "bitters_creole",
+    "origin": "USA",
+    "originTerritory": "Louisiana"
   }
 ]

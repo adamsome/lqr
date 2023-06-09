@@ -411,7 +411,7 @@ export function parseSpecs() {
           category: specCategory,
           ingredients: [],
           source: source ? source : undefined,
-          sourcePage: sourcePage ? sourcePage : undefined,
+          sourcePage: sourcePage ? Number(sourcePage) : undefined,
         }
       }
 

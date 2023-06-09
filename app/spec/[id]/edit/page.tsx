@@ -1,4 +1,4 @@
-import { Spec } from '@/app/spec/[id]/spec'
+import { Spec } from '@/app/spec/[id]/edit/spec'
 import { getData } from '@/lib/get-data'
 
 export const revalidate = 0
@@ -14,9 +14,5 @@ export default async function Page({ params }: Props) {
   const { specs } = data
   const { id } = params
   const spec = specs[id]
-  return (
-    <div className="py-8">
-      <Spec spec={spec} />
-    </div>
-  )
+  return <Spec spec={spec} />
 }

@@ -47,8 +47,6 @@ export function getHierarchicalSelectedPaths(
     const child = children[id]
     const { checked } = child
     if (!checked) return acc
-    if (id.startsWith('agave_tequila_anejo'))
-      console.log('t', checked, facets?.get(id))
     if (checked === true && (!facets || facets.get(id))) acc.push(childPath)
     return acc.concat(
       getHierarchicalSelectedPaths(child, { limit, facets }, childPath)

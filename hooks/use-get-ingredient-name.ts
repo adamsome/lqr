@@ -5,15 +5,16 @@ import { getIngredientName } from '@/lib/ingredient/get-ingredient-name'
 import { SpecIngredient } from '@/lib/types'
 
 export function useGetIngredientName() {
-  const { baseIngredientDict } = useData()
+  const { baseIngredientDict, ingredientDict } = useData()
 
   const _getIngredientName = useMemo(
-    () => getIngredientName(baseIngredientDict),
-    [baseIngredientDict]
+    () => getIngredientName(baseIngredientDict, ingredientDict),
+    [baseIngredientDict, ingredientDict]
   )
 
   return useCallback(
-    (ingredient: SpecIngredient) => _getIngredientName(ingredient),
+    (ingredient: SpecIngredient, options?: { inclBottle?: boolean }) =>
+      _getIngredientName(ingredient, options),
     [_getIngredientName]
   )
 }

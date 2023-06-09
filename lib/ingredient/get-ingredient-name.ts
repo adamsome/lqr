@@ -1,10 +1,8 @@
 import { curry } from 'ramda'
 
-import { Category } from '@/lib/consts'
+import { AGING_DICT, Category, PRODUCTION_METHOD_DICT } from '@/lib/consts'
 import { getIngredientDefs } from '@/lib/ingredient/get-ingredient-defs'
-import { IngredientDef, SpecIngredient } from '@/lib/types'
-import { PRODUCTION_METHOD_DICT } from '@/lib/consts'
-import { AGING_DICT } from '@/lib/consts'
+import { Ingredient, IngredientDef, SpecIngredient } from '@/lib/types'
 
 const suffixByCategory: Partial<Record<Category, string>> = {
   acid: 'Solution',
@@ -19,6 +17,7 @@ const omitCategoryAndFirstByID: Record<string, boolean> = {
   grain_whiskey_bourbon: true,
   grain_whiskey_scotch: true,
   liqueur_amaro_fernet: true,
+  liqueur_amaro_aperitivo: true,
   grain_gin_genever: true,
   liqueur_orange_bluecuracao: true,
   wine_red_lambrusco: true,
@@ -60,8 +59,8 @@ const omitCategoryByID: Record<string, boolean> = {
 }
 
 const omitCategoryByFirst: Record<string, boolean> = {
-  amaro: true,
-  sake: true,
+  liqueur_amaro: true,
+  wine_sake: true,
 }
 
 const reverseByCategory: Partial<Record<Category, boolean>> = {
@@ -75,6 +74,7 @@ const reverseByID: Record<string, boolean> = {
 }
 
 const idMap: Record<string, string> = {
+  egg_white: 'Egg Whites',
   syrup_tonic: 'Tonic Water',
   spice_bay: 'Bay Leaf',
   flat_water: 'Water',
@@ -105,8 +105,16 @@ function getDefaultIngredientName(ingredient: SpecIngredient | IngredientDef) {
 export const getIngredientName = curry(
   (
     baseIngredientDict: Record<string, IngredientDef>,
-    ingredient: SpecIngredient | IngredientDef
+    ingredientDict: Record<string, Ingredient>,
+    ingredient: SpecIngredient | IngredientDef,
+    { inclBottle }: { inclBottle?: boolean } = {}
   ): string => {
+    const { bottleID } = ingredient as SpecIngredient
+    if (inclBottle && bottleID) {
+      if (ingredientDict[bottleID]) {
+        return ingredientDict[bottleID].name
+      }
+    }
     const { id } = ingredient
 
     if (!id) {
