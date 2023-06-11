@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react'
 
-import { Button } from '@/components/ui/button'
+import { Button, Props as ButtonProps } from '@/components/ui/button'
 import {
   CommandDialog,
   CommandEmpty,
@@ -342,11 +342,18 @@ amountDict.garnish = [
   ...amountDict.muddled!,
 ]
 
-type Props = {
+type Props = Omit<ButtonProps, 'onSelect'> & {
+  openOnKey?: (e: KeyboardEvent) => boolean
   onSelect(ingredient: SpecIngredient): void
 }
 
-export function IngredientSelect({ onSelect }: Props) {
+export function IngredientSelect({
+  children,
+  onClick,
+  openOnKey,
+  onSelect,
+  ...props
+}: Props) {
   const getName = useGetIngredientName()
   const [open, setOpen] = useState(false)
   const [search, setSearch] = useState('')
@@ -362,13 +369,13 @@ export function IngredientSelect({ onSelect }: Props) {
 
   useEffect(() => {
     const down = (e: KeyboardEvent) => {
-      if (e.key === 'j' && e.metaKey) {
+      if (openOnKey?.(e)) {
         setOpen((open) => !open)
       }
     }
     document.addEventListener('keydown', down)
     return () => document.removeEventListener('keydown', down)
-  }, [])
+  }, [openOnKey])
 
   function handleClose() {
     setIngredient(null)
@@ -378,7 +385,6 @@ export function IngredientSelect({ onSelect }: Props) {
   }
 
   function handleSelect(value: Amount) {
-    console.log('select', value)
     const { quantity, unit, usage } = value
     onSelect({ ...(ingredient ?? {}), quantity, unit, usage })
     handleClose()
@@ -386,13 +392,14 @@ export function IngredientSelect({ onSelect }: Props) {
 
   return (
     <>
-      <Button variant="secondary" onClick={() => setOpen(!open)}>
-        <p className="flex gap-2 text-sm text-muted-foreground">
-          Add Ingredient
-          <kbd className="pointer-events-none inline-flex h-5 select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium text-muted-foreground opacity-100">
-            <span className="text-xs">⌘</span>J
-          </kbd>
-        </p>
+      <Button
+        {...props}
+        onClick={(e) => {
+          setOpen(!open)
+          onClick?.(e)
+        }}
+      >
+        {children}
       </Button>
       <CommandDialog
         open={open}

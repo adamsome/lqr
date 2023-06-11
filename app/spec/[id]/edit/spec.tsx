@@ -41,14 +41,14 @@ export function Spec({ spec }: Props) {
       ingredients,
     },
   })
-  const { fields, append, remove, update } = useFieldArray({
+  const { fields, append, remove, update, move } = useFieldArray({
     control: form.control,
     name: 'ingredients',
     keyName: 'uuid',
   })
 
   function onSubmit(values: Schema) {
-    console.log(values)
+    console.log('save', values)
   }
 
   return (
@@ -135,17 +135,33 @@ export function Spec({ spec }: Props) {
             </div>
             <div className="flex flex-col gap-6 [grid-area:list] md:mt-3">
               <Label>Ingredients</Label>
-              <div className="flex flex-col gap-2">
+              <div className="flex flex-col gap-3">
                 {fields.map((ingredient, i) => (
                   <Ingredient
                     key={`${i}_${ingredient.name ?? ingredient.id}`}
                     ingredient={ingredient as SpecIngredient}
+                    index={i}
+                    total={fields.length}
+                    onUpdate={(it) => update(i, it)}
+                    onRemove={() => remove(i)}
+                    onMove={(dir) => move(i, i + dir)}
                   />
                 ))}
               </div>
             </div>
             <div>
-              <IngredientSelect onSelect={append} />
+              <IngredientSelect
+                variant="secondary"
+                openOnKey={(e) => (e.metaKey || e.ctrlKey) && e.key === 'j'}
+                onSelect={append}
+              >
+                <p className="flex gap-2 text-sm text-muted-foreground">
+                  Add Ingredient
+                  <kbd className="pointer-events-none inline-flex h-5 select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium text-muted-foreground opacity-100">
+                    <span className="text-xs">⌘</span>J
+                  </kbd>
+                </p>
+              </IngredientSelect>
             </div>
           </div>
         </form>

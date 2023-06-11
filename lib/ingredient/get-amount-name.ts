@@ -41,7 +41,6 @@ function getAmountStr(q?: number, unit?: Unit): string | undefined {
 
 export function getSpecAmountName(amount: Amount): [string?, string?] {
   const { quantity: q, usage, unit } = amount
-  if (q || usage || unit) console.log('amt', amount)
   switch (usage) {
     case 'rim':
       if (!q || q === 1) return [, usage]
