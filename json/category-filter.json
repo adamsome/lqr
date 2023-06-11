@@ -439,7 +439,6 @@
         "fruit_blueberry",
         "fruit_cherry",
         "fruit_coconut",
-        "fruit_coffeebean",
         "fruit_cucumber",
         "fruit_grapefruit",
         "fruit_kiwi",
@@ -488,12 +487,6 @@
         },
         "fruit_coconut": {
           "id": "fruit_coconut",
-          "checked": false,
-          "childIDs": [],
-          "children": {}
-        },
-        "fruit_coffeebean": {
-          "id": "fruit_coffeebean",
           "checked": false,
           "childIDs": [],
           "children": {}

@@ -245,11 +245,6 @@
     "category": "fruit"
   },
   {
-    "id": "fruit_coffeebean",
-    "name": "Coffee bean",
-    "category": "fruit"
-  },
-  {
     "id": "fruit_cucumber",
     "name": "Cucumber",
     "category": "fruit"
