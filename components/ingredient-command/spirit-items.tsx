@@ -18,6 +18,7 @@ export function SpiritItems({ hasSearch, onSelect }: Props) {
     <HierarchicalCommandList
       root={categoryRoot}
       hasSearch={hasSearch}
+      groupTrunks
       getName={getPathName}
       getBottleName={(id) => ingredientDict[id]?.name ?? ''}
       renderName={(path, full) => (

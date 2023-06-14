@@ -2,7 +2,11 @@ import { CheckedState } from '@radix-ui/react-checkbox'
 import { ReactNode } from 'react'
 
 import { Checkbox } from '@/components/ui/checkbox'
-import { CommandGroup, CommandItem } from '@/components/ui/command'
+import {
+  CommandGroup,
+  CommandItem,
+  CommandSeparator,
+} from '@/components/ui/command'
 import { HierarchicalFilter } from '@/lib/hierarchical-filter'
 import { cn } from '@/lib/utils'
 
@@ -18,40 +22,43 @@ type Props = {
   hasSearch?: boolean
   showCheckbox?: boolean
   showBottles?: boolean
+  groupTrunks?: boolean
   renderName(path: string[], full?: boolean): ReactNode
   getName(path: string[], options?: { full?: boolean }): string
   getBottleName?: (bottleID: string) => string
   onSelect(options: SelectOptions): void
 }
 
-export function HierarchicalCommandList({
-  root,
-  facets,
-  hasSearch,
-  showCheckbox,
-  showBottles,
-  renderName,
-  getName,
-  getBottleName,
-  onSelect,
-}: Props) {
+export function HierarchicalCommandList({ root, ...props }: Props) {
+  const { groupTrunks } = props
   const { childIDs = [], children = {} } = root ?? {}
+  if (groupTrunks) {
+    const { renderName } = props
+    return (
+      <>
+        {childIDs.map((groupID, i) => (
+          <>
+            {i > 0 && <CommandSeparator />}
+            <CommandGroup
+              key={groupID}
+              className="[&_[cmdk-group-heading]]:opacity-75"
+              heading={renderName([groupID])}
+            >
+              {children[groupID].childIDs.map((id) => {
+                const child = children[groupID].children[id]
+                const path = [groupID]
+                return <Item key={id} root={child} path={path} {...props} />
+              })}
+            </CommandGroup>
+          </>
+        ))}
+      </>
+    )
+  }
   return (
     <CommandGroup>
       {childIDs.map((id) => (
-        <Item
-          key={id}
-          root={children[id]}
-          path={[]}
-          facets={facets}
-          hasSearch={hasSearch}
-          showCheckbox={showCheckbox}
-          showBottles={showBottles}
-          renderName={renderName}
-          getName={getName}
-          getBottleName={getBottleName}
-          onSelect={onSelect}
-        />
+        <Item key={id} root={children[id]} path={[]} {...props} />
       ))}
     </CommandGroup>
   )
@@ -85,7 +92,7 @@ function ItemContent({
   facets,
   hasSearch,
   showCheckbox,
-  showBottles,
+  groupTrunks,
   renderName,
   getName,
   onSelect,
@@ -95,11 +102,14 @@ function ItemContent({
   const count = facets?.get(id)
   if (facets !== undefined && !count) return null
 
-  const level = prevPath.length
+  let level = prevPath.length
+  if (groupTrunks) level--
+
   const path = [...prevPath, id]
 
   return (
     <CommandItem
+      className={cn({ 'mt-2 !py-1': groupTrunks })}
       value={getName(path, { full: true })}
       onSelect={() => onSelect({ path, checked })}
     >
@@ -115,6 +125,7 @@ function ItemContent({
       )}
       <span
         className={cn({
+          'text-popover-foreground': groupTrunks,
           'ml-6': !showCheckbox && !hasSearch && level === 1,
           'ml-12': !showCheckbox && !hasSearch && level === 2,
           'ml-18': !showCheckbox && !hasSearch && level >= 3,
@@ -138,13 +149,17 @@ function Bottle({
   bottleID,
   hasSearch,
   showCheckbox,
+  groupTrunks,
   renderName,
   getName,
   getBottleName,
   onSelect,
 }: BottleProps) {
   if (!getBottleName) return null
-  const level = path.length
+
+  let level = path.length - 1
+  if (groupTrunks) level--
+
   const name = getBottleName(bottleID)
   return (
     <CommandItem
