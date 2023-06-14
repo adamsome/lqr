@@ -1,5 +1,3 @@
-'use client'
-
 import { KeyboardEvent, useEffect, useState } from 'react'
 
 import { AmountItems } from '@/components/ingredient-command/amount-items'
@@ -20,6 +18,8 @@ import {
 import { INGREDIENT_KINDS, IngredientKind } from '@/lib/ingredient/kind'
 import { Amount, SpecIngredient } from '@/lib/types'
 import { cn } from '@/lib/utils'
+import { Dialog, DialogContent } from '@/components/ui/dialog'
+import { CustomDialog } from '@/components/ingredient-command/custom-dialog'
 
 type Special = 'allSpirits' | 'rum'
 
@@ -44,6 +44,7 @@ export function IngredientCommandDialogButton({
     undefined
   )
   const [showSpecial, setShowSpecial] = useState<Special | undefined>(undefined)
+  const [openCustom, setOpenCustom] = useState(false)
 
   useEffect(() => {
     const down = (e: globalThis.KeyboardEvent) => {
@@ -59,6 +60,7 @@ export function IngredientCommandDialogButton({
     setShowSpecial(undefined)
     setSearch('')
     setOpen(false)
+    setOpenCustom(false)
   }
 
   function handleSelectKind(value: IngredientKind) {
@@ -69,8 +71,9 @@ export function IngredientCommandDialogButton({
   function handleDialogKey(e: KeyboardEvent<HTMLDivElement>) {
     if (e.key === 'Escape' || (e.key === 'Backspace' && !search)) {
       e.preventDefault()
-      setSearch('')
-      if (ingredient) {
+      if (search) {
+        setSearch('')
+      } else if (ingredient) {
         setIngredient(undefined)
       } else if (kind) {
         if (showSpecial) {
@@ -94,6 +97,7 @@ export function IngredientCommandDialogButton({
     if (showSpecial !== 'rum' && it.id === 'cane_rum') {
       return setShowSpecial('rum')
     }
+    if (!kind) setKind('spirit')
     setIngredient(it)
   }
 
@@ -101,6 +105,22 @@ export function IngredientCommandDialogButton({
     const { quantity, unit, usage } = value
     onSelect({ ...(ingredient ?? {}), quantity, unit, usage })
     handleClose()
+  }
+
+  function handleSelectCustom() {
+    setOpen(false)
+    setOpenCustom(true)
+    setSearch('')
+  }
+
+  function handleSubmitCustom(name: string) {
+    if (name) {
+      onSelect({ name })
+      handleClose()
+    } else {
+      setOpen(true)
+      setOpenCustom(false)
+    }
   }
 
   return (
@@ -114,6 +134,7 @@ export function IngredientCommandDialogButton({
       >
         {children}
       </Button>
+      <CustomDialog open={openCustom} onSubmit={handleSubmitCustom} />
       <CommandDialog
         open={open}
         onOpenChange={setOpen}
@@ -141,6 +162,7 @@ export function IngredientCommandDialogButton({
             onSelectKind={handleSelectKind}
             onSelectAmount={handleSelectAmount}
             onSelectAllSpirits={handleSelectAllSpirits}
+            onSelectCustom={handleSelectCustom}
           />
         </CommandList>
       </CommandDialog>
@@ -158,6 +180,7 @@ type KindItemProps = {
   onSelectKind(value: IngredientKind): void
   onSelectAmount(value: Amount): void
   onSelectAllSpirits(): void
+  onSelectCustom(): void
 }
 
 function Items({
@@ -170,6 +193,7 @@ function Items({
   onSelectKind,
   onSelectAmount,
   onSelectAllSpirits,
+  onSelectCustom,
 }: KindItemProps) {
   if (!kind) {
     return (
@@ -179,6 +203,7 @@ function Items({
             {label}
           </CommandItem>
         ))}
+        <CommandItem onSelect={onSelectCustom}>Custom</CommandItem>
       </CommandGroup>
     )
   }
