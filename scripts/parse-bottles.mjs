@@ -290,7 +290,7 @@ export function parseBottles() {
   consts.push(`}`)
   consts.push(``)
 
-  appendFileSync(join(dir, '../lib/consts.ts'), consts.join('\n'), {
+  appendFileSync(join(dir, '../lib/generated-consts.ts'), consts.join('\n'), {
     encoding: 'utf8',
   })
 }

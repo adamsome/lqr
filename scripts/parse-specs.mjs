@@ -405,11 +405,27 @@ export function parseSpecs() {
       if (!specs[id]) {
         console.log(String(count).padStart(4) + '.', name)
         count++
+        const now = new Date().toISOString()
+        let year
+        let bar
+        if (source === "Smuggler's Cove") {
+          year = 2016
+          bar = "Smuggler's Cove"
+        }
+        if (source === 'Welcome Home') {
+          year = 2021
+          bar = 'Death & Co'
+        }
         specs[id] = {
           id,
           name,
+          username: 'adamsome',
+          updatedAt: now,
+          createdAt: now,
+          year,
           category: specCategory,
           ingredients: [],
+          bar,
           source: source ? source : undefined,
           sourcePage: sourcePage ? Number(sourcePage) : undefined,
         }

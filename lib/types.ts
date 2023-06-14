@@ -40,6 +40,7 @@ export type Ingredient = IngredientDef & {
 export interface User {
   username: string
   ingredients: Record<string, Partial<IngredientDef>>
+  admin?: boolean
 }
 
 export type Unit = 'oz' | 'tsp' | 'dash' | 'cube'
@@ -78,11 +79,17 @@ export interface SpecIngredient extends Amount {
 export interface Spec {
   id: string
   name: string
+  username: string
+  updatedAt: string
+  createdAt: string
+  year: number
   category: SpecCategory
   ingredients: SpecIngredient[]
   glass?: GlassType
   mix: MixType
   notes?: string
+  author?: string
+  bar?: string
   source?: string
   sourcePage?: number
 }

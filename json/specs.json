@@ -2,6 +2,10 @@
   "aku_aku": {
     "id": "aku_aku",
     "name": "Aku Aku",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.155Z",
+    "createdAt": "2023-06-14T05:51:09.155Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -28,12 +32,17 @@
         ]
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 39
   },
   "pupule": {
     "id": "pupule",
     "name": "Pupule",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.157Z",
+    "createdAt": "2023-06-14T05:51:09.157Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -65,12 +74,17 @@
         "id": "bitters_aromatic"
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 39
   },
   "dons_own_grog": {
     "id": "dons_own_grog",
     "name": "Don's Own Grog",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.159Z",
+    "createdAt": "2023-06-14T05:51:09.159Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -111,12 +125,17 @@
         "id": "bitters_aromatic"
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 40
   },
   "port_au_prince": {
     "id": "port_au_prince",
     "name": "Port Au Prince",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.160Z",
+    "createdAt": "2023-06-14T05:51:09.160Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -148,12 +167,17 @@
         "id": "bitters_aromatic"
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 40
   },
   "tree_dots_and_a_dash": {
     "id": "tree_dots_and_a_dash",
     "name": "Tree Dots and a Dash",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.162Z",
+    "createdAt": "2023-06-14T05:51:09.162Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -193,12 +217,17 @@
         "id": "bitters_aromatic"
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 43
   },
   "mexican_el_diablo": {
     "id": "mexican_el_diablo",
     "name": "Mexican El Diablo",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.164Z",
+    "createdAt": "2023-06-14T05:51:09.164Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -217,12 +246,17 @@
         "id": "soda_ginger"
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 43
   },
   "port_light": {
     "id": "port_light",
     "name": "Port Light",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.165Z",
+    "createdAt": "2023-06-14T05:51:09.165Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -241,12 +275,17 @@
         "id": "syrup_passionfruit"
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 44
   },
   "demerara_dry_float": {
     "id": "demerara_dry_float",
     "name": "Demerara Dry Float",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.165Z",
+    "createdAt": "2023-06-14T05:51:09.165Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -280,12 +319,17 @@
         ]
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 44
   },
   "jet_pilot": {
     "id": "jet_pilot",
     "name": "Jet Pilot",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.166Z",
+    "createdAt": "2023-06-14T05:51:09.166Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -324,12 +368,17 @@
         "id": "bitters_herbstura"
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 61
   },
   "halekulani_cocktail": {
     "id": "halekulani_cocktail",
     "name": "Halekulani Cocktail",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.167Z",
+    "createdAt": "2023-06-14T05:51:09.167Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -355,12 +404,17 @@
         "id": "bitters_aromatic"
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 61
   },
   "sidewinders_fang": {
     "id": "sidewinders_fang",
     "name": "Sidewinder's Fang",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.167Z",
+    "createdAt": "2023-06-14T05:51:09.167Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -392,12 +446,17 @@
         "black": true
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 62
   },
   "hawaiin_sunset": {
     "id": "hawaiin_sunset",
     "name": "Hawaiin Sunset",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.168Z",
+    "createdAt": "2023-06-14T05:51:09.168Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -416,12 +475,17 @@
         "id": "grain_vodka"
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 62
   },
   "captains_grog": {
     "id": "captains_grog",
     "name": "Captain's Grog",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.168Z",
+    "createdAt": "2023-06-14T05:51:09.168Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -471,12 +535,17 @@
         ]
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 65
   },
   "suffering_bastard": {
     "id": "suffering_bastard",
     "name": "Suffering Bastard",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.170Z",
+    "createdAt": "2023-06-14T05:51:09.170Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -499,12 +568,17 @@
         "id": "bitters_aromatic"
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 65
   },
   "merciless_virgin": {
     "id": "merciless_virgin",
     "name": "Merciless Virgin",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.171Z",
+    "createdAt": "2023-06-14T05:51:09.171Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -532,12 +606,17 @@
         ]
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 67
   },
   "saturn": {
     "id": "saturn",
     "name": "Saturn",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.172Z",
+    "createdAt": "2023-06-14T05:51:09.172Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -557,12 +636,17 @@
         "id": "grain_gin_londondry"
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 67
   },
   "tiki_bowl": {
     "id": "tiki_bowl",
     "name": "Tiki Bowl",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.173Z",
+    "createdAt": "2023-06-14T05:51:09.173Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -597,12 +681,17 @@
         "id": "bitters_herbstura"
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 68
   },
   "hurricane": {
     "id": "hurricane",
     "name": "Hurricane",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.174Z",
+    "createdAt": "2023-06-14T05:51:09.174Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -617,12 +706,17 @@
         "black": true
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 68
   },
   "mundo_perdido": {
     "id": "mundo_perdido",
     "name": "Mundo Perdido",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.175Z",
+    "createdAt": "2023-06-14T05:51:09.175Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -643,12 +737,17 @@
         "black": true
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 93
   },
   "formidable_dragon": {
     "id": "formidable_dragon",
     "name": "Formidable Dragon",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.175Z",
+    "createdAt": "2023-06-14T05:51:09.175Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -693,12 +792,17 @@
         "id": "soda_club"
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 93
   },
   "lei_lani_volcano_20": {
     "id": "lei_lani_volcano_20",
     "name": "Lei Lani Volcano 2.0",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.176Z",
+    "createdAt": "2023-06-14T05:51:09.176Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -722,12 +826,17 @@
         ]
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 94
   },
   "tradewinds": {
     "id": "tradewinds",
     "name": "Tradewinds",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.177Z",
+    "createdAt": "2023-06-14T05:51:09.177Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -753,12 +862,17 @@
         ]
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 94
   },
   "peachtree_punch_20": {
     "id": "peachtree_punch_20",
     "name": "Peachtree Punch 2.0",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.178Z",
+    "createdAt": "2023-06-14T05:51:09.178Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -788,12 +902,17 @@
         "id": "soda_club"
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 96
   },
   "jungle_bird": {
     "id": "jungle_bird",
     "name": "Jungle Bird",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.179Z",
+    "createdAt": "2023-06-14T05:51:09.179Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -815,12 +934,17 @@
         "black": true
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 96
   },
   "golden_gun": {
     "id": "golden_gun",
     "name": "Golden Gun",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.179Z",
+    "createdAt": "2023-06-14T05:51:09.179Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -856,12 +980,17 @@
         "id": "bitters_aromatic"
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 97
   },
   "hinky_dinks_fizzy": {
     "id": "hinky_dinks_fizzy",
     "name": "Hinky Dinks Fizzy",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.180Z",
+    "createdAt": "2023-06-14T05:51:09.180Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -891,12 +1020,17 @@
         ]
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 97
   },
   "pampanito": {
     "id": "pampanito",
     "name": "Pampanito",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.181Z",
+    "createdAt": "2023-06-14T05:51:09.181Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -922,12 +1056,17 @@
         "id": "bitters_aromatic"
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 115
   },
   "maxs_mistake": {
     "id": "maxs_mistake",
     "name": "Max's Mistake",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.181Z",
+    "createdAt": "2023-06-14T05:51:09.181Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -950,12 +1089,17 @@
         "name": "Fentimans Victorian Lemonade (or Any Quality Dry Sparkling Lemonade)"
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 115
   },
   "la_guildive": {
     "id": "la_guildive",
     "name": "La Guildive",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.182Z",
+    "createdAt": "2023-06-14T05:51:09.182Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -984,12 +1128,17 @@
         "id": "spice_cinnamon"
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 116
   },
   "the_twenty_seventy_swizzle": {
     "id": "the_twenty_seventy_swizzle",
     "name": "The Twenty Seventy Swizzle",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.183Z",
+    "createdAt": "2023-06-14T05:51:09.183Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -1026,12 +1175,17 @@
         "id": "spice_nutmeg"
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 116
   },
   "shudders_in_a_whisper": {
     "id": "shudders_in_a_whisper",
     "name": "Shudders in a Whisper",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.184Z",
+    "createdAt": "2023-06-14T05:51:09.184Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -1068,12 +1222,17 @@
         "id": "bitters_aromatic"
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 118
   },
   "cuevas": {
     "id": "cuevas",
     "name": "Cuevas",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.185Z",
+    "createdAt": "2023-06-14T05:51:09.185Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -1098,12 +1257,17 @@
         "id": "bitters_tiki"
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 118
   },
   "norwegian_paralysis": {
     "id": "norwegian_paralysis",
     "name": "Norwegian Paralysis",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.186Z",
+    "createdAt": "2023-06-14T05:51:09.186Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -1125,12 +1289,17 @@
         "id": "grain_aquavit"
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 119
   },
   "juan_ho_royale": {
     "id": "juan_ho_royale",
     "name": "Juan Ho Royale",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.187Z",
+    "createdAt": "2023-06-14T05:51:09.187Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -1153,12 +1322,17 @@
         "id": "agave_tequila_blanco"
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 119
   },
   "chartreuse_swizzle": {
     "id": "chartreuse_swizzle",
     "name": "Chartreuse Swizzle",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.188Z",
+    "createdAt": "2023-06-14T05:51:09.188Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -1176,12 +1350,17 @@
         "id": "liqueur_herbal"
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 120
   },
   "roselita": {
     "id": "roselita",
     "name": "Roselita",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.189Z",
+    "createdAt": "2023-06-14T05:51:09.189Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -1213,12 +1392,17 @@
         "id": "bitters_creole"
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 120
   },
   "center_of_the_galaxy": {
     "id": "center_of_the_galaxy",
     "name": "Center of the Galaxy",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.190Z",
+    "createdAt": "2023-06-14T05:51:09.190Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -1246,12 +1430,17 @@
         "id": "spice_cinnamon"
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 121
   },
   "callaloo_cooler": {
     "id": "callaloo_cooler",
     "name": "Callaloo Cooler",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.190Z",
+    "createdAt": "2023-06-14T05:51:09.190Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -1278,12 +1467,17 @@
         "id": "bitters_aromatic"
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 121
   },
   "top_notch_volcano": {
     "id": "top_notch_volcano",
     "name": "Top Notch Volcano",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.205Z",
+    "createdAt": "2023-06-14T05:51:09.205Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -1318,12 +1512,17 @@
         ]
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 134
   },
   "the_naked_ape": {
     "id": "the_naked_ape",
     "name": "The Naked Ape",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.205Z",
+    "createdAt": "2023-06-14T05:51:09.205Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -1355,12 +1554,17 @@
         "id": "bitters_aromatic"
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 134
   },
   "swizzle_francais": {
     "id": "swizzle_francais",
     "name": "Swizzle Français",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.206Z",
+    "createdAt": "2023-06-14T05:51:09.206Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -1384,12 +1588,17 @@
         "id": "spice_nutmeg"
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 136
   },
   "sparkling_mai_tai": {
     "id": "sparkling_mai_tai",
     "name": "Sparkling Mai Tai",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.206Z",
+    "createdAt": "2023-06-14T05:51:09.206Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -1420,12 +1629,17 @@
         "id": "wine_sparkling"
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 136
   },
   "the_ernesto": {
     "id": "the_ernesto",
     "name": "The Ernesto",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.207Z",
+    "createdAt": "2023-06-14T05:51:09.207Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -1448,12 +1662,17 @@
         "id": "bitters_herbstura"
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 137
   },
   "the_sexpert": {
     "id": "the_sexpert",
     "name": "The Sexpert",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.208Z",
+    "createdAt": "2023-06-14T05:51:09.208Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -1476,12 +1695,17 @@
         "id": "bitters_floral"
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 137
   },
   "hana_reviver": {
     "id": "hana_reviver",
     "name": "Hana Reviver",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.208Z",
+    "createdAt": "2023-06-14T05:51:09.208Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -1508,12 +1732,17 @@
         ]
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 139
   },
   "kaiteur_swizzle": {
     "id": "kaiteur_swizzle",
     "name": "Kaiteur Swizzle",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.209Z",
+    "createdAt": "2023-06-14T05:51:09.209Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -1539,12 +1768,17 @@
         "id": "bitters_aromatic"
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 140
   },
   "the_expedition": {
     "id": "the_expedition",
     "name": "The Expedition",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.209Z",
+    "createdAt": "2023-06-14T05:51:09.209Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -1575,12 +1809,17 @@
         "id": "grain_whiskey_bourbon"
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 140
   },
   "the_undead_gentleman": {
     "id": "the_undead_gentleman",
     "name": "The Undead Gentleman",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.211Z",
+    "createdAt": "2023-06-14T05:51:09.211Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -1618,12 +1857,17 @@
         "id": "bitters_aromatic"
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 142
   },
   "the_dead_reckoning": {
     "id": "the_dead_reckoning",
     "name": "The Dead Reckoning",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.212Z",
+    "createdAt": "2023-06-14T05:51:09.212Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -1657,12 +1901,17 @@
         "id": "bitters_aromatic"
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 142
   },
   "falinum": {
     "id": "falinum",
     "name": "Falinum",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.212Z",
+    "createdAt": "2023-06-14T05:51:09.212Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -1690,12 +1939,17 @@
         "id": "bitters_orange"
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 144
   },
   "humuhumunukunukuapuaa": {
     "id": "humuhumunukunukuapuaa",
     "name": "Humuhumunukunukuapua'a",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.213Z",
+    "createdAt": "2023-06-14T05:51:09.213Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -1715,12 +1969,17 @@
         "id": "bitters_creole"
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 144
   },
   "lauwiliwilinukunukuoioi": {
     "id": "lauwiliwilinukunukuoioi",
     "name": "Lauwiliwilinukunuku'oi'oi",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.213Z",
+    "createdAt": "2023-06-14T05:51:09.213Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -1745,12 +2004,17 @@
         "id": "bitters_creole"
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 144
   },
   "finkelgrog": {
     "id": "finkelgrog",
     "name": "Finkelgrog",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.213Z",
+    "createdAt": "2023-06-14T05:51:09.213Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -1788,12 +2052,17 @@
         "id": "spice_cinnamon"
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 145
   },
   "for_petes_sake": {
     "id": "for_petes_sake",
     "name": "For Pete's Sake",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.214Z",
+    "createdAt": "2023-06-14T05:51:09.214Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -1816,12 +2085,17 @@
         "id": "bitters_aromatic"
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 145
   },
   "arrack_punch": {
     "id": "arrack_punch",
     "name": "Arrack Punch",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.214Z",
+    "createdAt": "2023-06-14T05:51:09.214Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -1849,12 +2123,17 @@
         "name": "Cabonated Chai Tea"
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 163
   },
   "el_draque": {
     "id": "el_draque",
     "name": "El Draque",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.215Z",
+    "createdAt": "2023-06-14T05:51:09.215Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -1870,12 +2149,17 @@
         "id": "cane_cachaca"
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 163
   },
   "grog": {
     "id": "grog",
     "name": "Grog",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.215Z",
+    "createdAt": "2023-06-14T05:51:09.215Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -1888,12 +2172,17 @@
         "id": "cane_rum"
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 165
   },
   "rum_flip": {
     "id": "rum_flip",
     "name": "Rum Flip",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.215Z",
+    "createdAt": "2023-06-14T05:51:09.215Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -1911,12 +2200,17 @@
         ]
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 165
   },
   "bombo": {
     "id": "bombo",
     "name": "Bombo",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.216Z",
+    "createdAt": "2023-06-14T05:51:09.216Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -1931,12 +2225,17 @@
         ]
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 167
   },
   "calibogus": {
     "id": "calibogus",
     "name": "Calibogus",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.216Z",
+    "createdAt": "2023-06-14T05:51:09.216Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -1964,12 +2263,17 @@
         ]
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 167
   },
   "mary_pickford": {
     "id": "mary_pickford",
     "name": "Mary Pickford",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.216Z",
+    "createdAt": "2023-06-14T05:51:09.216Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -1990,12 +2294,17 @@
         ]
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 168
   },
   "daiquiri_no_1": {
     "id": "daiquiri_no_1",
     "name": "Daiquiri No. 1",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.217Z",
+    "createdAt": "2023-06-14T05:51:09.217Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -2012,12 +2321,17 @@
         ]
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 168
   },
   "hotel_nacional_special": {
     "id": "hotel_nacional_special",
     "name": "Hotel Nacional Special",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.217Z",
+    "createdAt": "2023-06-14T05:51:09.217Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -2041,12 +2355,17 @@
         ]
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 171
   },
   "daisy_de_santiago": {
     "id": "daisy_de_santiago",
     "name": "Daisy De Santiago",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.217Z",
+    "createdAt": "2023-06-14T05:51:09.217Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -2070,12 +2389,17 @@
         ]
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 171
   },
   "el_presidente": {
     "id": "el_presidente",
     "name": "El Presidente",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.218Z",
+    "createdAt": "2023-06-14T05:51:09.218Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -2096,12 +2420,17 @@
         ]
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 172
   },
   "twelve_mile_limit": {
     "id": "twelve_mile_limit",
     "name": "Twelve Mile Limit",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.218Z",
+    "createdAt": "2023-06-14T05:51:09.218Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -2124,12 +2453,17 @@
         "id": "brandy_grape"
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 172
   },
   "parisian_blonde": {
     "id": "parisian_blonde",
     "name": "Parisian Blonde",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.218Z",
+    "createdAt": "2023-06-14T05:51:09.218Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -2148,12 +2482,17 @@
         "id": "cream_sweet"
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 174
   },
   "cora_middleton": {
     "id": "cora_middleton",
     "name": "Cora Middleton",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.219Z",
+    "createdAt": "2023-06-14T05:51:09.219Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -2177,12 +2516,17 @@
         "name": "Small Hand Foods Raspberry Gum Syrup"
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 174
   },
   "millionaire_cocktail_no_1": {
     "id": "millionaire_cocktail_no_1",
     "name": "Millionaire Cocktail No. 1",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.219Z",
+    "createdAt": "2023-06-14T05:51:09.219Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -2212,12 +2556,17 @@
         "id": "grain_gin_sloe"
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 175
   },
   "batida_de_maracuja_e_coco": {
     "id": "batida_de_maracuja_e_coco",
     "name": "Batida De Maracuja E Coco",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.219Z",
+    "createdAt": "2023-06-14T05:51:09.219Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -2233,12 +2582,17 @@
         "id": "milk_condensed"
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 175
   },
   "wray_ting": {
     "id": "wray_ting",
     "name": "Wray & Ting",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.220Z",
+    "createdAt": "2023-06-14T05:51:09.220Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -2254,12 +2608,17 @@
         "id": "soda_grapefruit"
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 176
   },
   "hibiscus_rum_punch": {
     "id": "hibiscus_rum_punch",
     "name": "Hibiscus Rum Punch",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.220Z",
+    "createdAt": "2023-06-14T05:51:09.220Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -2283,12 +2642,17 @@
         ]
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 176
   },
   "ti_punch_ti_punch_vieux": {
     "id": "ti_punch_ti_punch_vieux",
     "name": "Ti' Punch / Ti' Punch Vieux",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.220Z",
+    "createdAt": "2023-06-14T05:51:09.220Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -2311,12 +2675,17 @@
         "id": "fruit_lime"
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 179
   },
   "barbados_rum_punch": {
     "id": "barbados_rum_punch",
     "name": "Barbados Rum Punch",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.221Z",
+    "createdAt": "2023-06-14T05:51:09.221Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -2338,12 +2707,17 @@
         "id": "bitters_aromatic"
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 179
   },
   "jamaican_milk_punch": {
     "id": "jamaican_milk_punch",
     "name": "Jamaican Milk Punch",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.221Z",
+    "createdAt": "2023-06-14T05:51:09.221Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -2368,12 +2742,17 @@
         "id": "bitters_aromatic"
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 180
   },
   "corn_and_oil": {
     "id": "corn_and_oil",
     "name": "Corn and Oil",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.221Z",
+    "createdAt": "2023-06-14T05:51:09.221Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -2393,12 +2772,17 @@
         "id": "bitters_aromatic"
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 180
   },
   "queens_park_swizzle": {
     "id": "queens_park_swizzle",
     "name": "Queen's Park Swizzle",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.222Z",
+    "createdAt": "2023-06-14T05:51:09.222Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -2420,12 +2804,17 @@
         "id": "bitters_aromatic"
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 181
   },
   "house_spiced_rum": {
     "id": "house_spiced_rum",
     "name": "House Spiced Rum",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.222Z",
+    "createdAt": "2023-06-14T05:51:09.222Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -2464,12 +2853,17 @@
         "id": "syrup_demerara"
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 193
   },
   "the_chadburn": {
     "id": "the_chadburn",
     "name": "The Chadburn",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.223Z",
+    "createdAt": "2023-06-14T05:51:09.223Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -2491,12 +2885,17 @@
         "id": "bitters_mole"
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 201
   },
   "a_wish_for_grace": {
     "id": "a_wish_for_grace",
     "name": "A Wish for Grace",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.223Z",
+    "createdAt": "2023-06-14T05:51:09.223Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -2527,12 +2926,17 @@
         "id": "bitters_aromatic"
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 201
   },
   "hot_buttered_rum": {
     "id": "hot_buttered_rum",
     "name": "Hot Buttered Rum",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.224Z",
+    "createdAt": "2023-06-14T05:51:09.224Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -2550,12 +2954,17 @@
         "name": "Water Hot"
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 202
   },
   "hot_buttered_rum_batter": {
     "id": "hot_buttered_rum_batter",
     "name": "Hot Buttered Rum Batter",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.224Z",
+    "createdAt": "2023-06-14T05:51:09.224Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -2589,12 +2998,17 @@
         "id": "extract_vanilla"
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 202
   },
   "abricot_vieux": {
     "id": "abricot_vieux",
     "name": "Abricot Vieux",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.225Z",
+    "createdAt": "2023-06-14T05:51:09.225Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -2616,12 +3030,17 @@
         "id": "bitters_orange"
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 203
   },
   "paniolo_oldfashioned": {
     "id": "paniolo_oldfashioned",
     "name": "Paniolo Old-fashioned",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.225Z",
+    "createdAt": "2023-06-14T05:51:09.225Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -2640,12 +3059,17 @@
         "id": "bitters_aromatic"
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 203
   },
   "port_royal": {
     "id": "port_royal",
     "name": "Port Royal",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.226Z",
+    "createdAt": "2023-06-14T05:51:09.226Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -2674,12 +3098,17 @@
         "id": "bitters_spicy"
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 204
   },
   "kingston_palaka": {
     "id": "kingston_palaka",
     "name": "Kingston Palaka",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.226Z",
+    "createdAt": "2023-06-14T05:51:09.226Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -2701,12 +3130,17 @@
         ]
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 204
   },
   "donn_day_afternoon": {
     "id": "donn_day_afternoon",
     "name": "Donn Day Afternoon",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.226Z",
+    "createdAt": "2023-06-14T05:51:09.226Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -2725,12 +3159,17 @@
         ]
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 206
   },
   "baie_du_galion": {
     "id": "baie_du_galion",
     "name": "Baie Du Galion",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.227Z",
+    "createdAt": "2023-06-14T05:51:09.227Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -2748,12 +3187,17 @@
         ]
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 206
   },
   "agricole_guava_cooler": {
     "id": "agricole_guava_cooler",
     "name": "Agricole Guava Cooler",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.227Z",
+    "createdAt": "2023-06-14T05:51:09.227Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -2777,12 +3221,17 @@
         "id": "bitters_aromatic"
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 209
   },
   "richard_sealebach": {
     "id": "richard_sealebach",
     "name": "Richard Sealebach",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.228Z",
+    "createdAt": "2023-06-14T05:51:09.228Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -2805,12 +3254,17 @@
         "id": "wine_sparkling"
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 209
   },
   "cosa_nostra_2": {
     "id": "cosa_nostra_2",
     "name": "Cosa Nostra #2",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.229Z",
+    "createdAt": "2023-06-14T05:51:09.229Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -2835,12 +3289,17 @@
         "id": "soda_ginger"
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 210
   },
   "spontaneous_rumbustion": {
     "id": "spontaneous_rumbustion",
     "name": "Spontaneous Rumbustion",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.229Z",
+    "createdAt": "2023-06-14T05:51:09.229Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -2868,12 +3327,17 @@
         "name": "Boiling Water"
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 210
   },
   "boo_loo": {
     "id": "boo_loo",
     "name": "Boo Loo",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.229Z",
+    "createdAt": "2023-06-14T05:51:09.229Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -2919,12 +3383,17 @@
         "id": "soda_club"
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 249
   },
   "caribeno": {
     "id": "caribeno",
     "name": "Caribeño",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.231Z",
+    "createdAt": "2023-06-14T05:51:09.231Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -2944,12 +3413,17 @@
         "id": "grain_gin_londondry"
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 249
   },
   "monks_respite": {
     "id": "monks_respite",
     "name": "Monk's Respite",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.249Z",
+    "createdAt": "2023-06-14T05:51:09.249Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -2976,12 +3450,17 @@
         "id": "bitters_orange"
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 251
   },
   "the_mastadon": {
     "id": "the_mastadon",
     "name": "The Mastadon",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.249Z",
+    "createdAt": "2023-06-14T05:51:09.249Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -3017,12 +3496,17 @@
         "id": "bitters_creole"
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 251
   },
   "pinata": {
     "id": "pinata",
     "name": "Piñata",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.250Z",
+    "createdAt": "2023-06-14T05:51:09.250Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -3054,12 +3538,17 @@
         ]
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 252
   },
   "bumboat": {
     "id": "bumboat",
     "name": "Bumboat",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.250Z",
+    "createdAt": "2023-06-14T05:51:09.250Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -3094,12 +3583,17 @@
         "overproof": true
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 252
   },
   "planters_punch": {
     "id": "planters_punch",
     "name": "Planter's Punch",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.251Z",
+    "createdAt": "2023-06-14T05:51:09.251Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -3125,12 +3619,17 @@
         "id": "bitters_aromatic"
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 258
   },
   "mai_tai": {
     "id": "mai_tai",
     "name": "Mai Tai",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.251Z",
+    "createdAt": "2023-06-14T05:51:09.251Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -3155,12 +3654,17 @@
         ]
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 261
   },
   "doctor_funk": {
     "id": "doctor_funk",
     "name": "Doctor Funk",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.252Z",
+    "createdAt": "2023-06-14T05:51:09.252Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -3191,12 +3695,17 @@
         "id": "soda_club"
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 266
   },
   "zombie": {
     "id": "zombie",
     "name": "Zombie",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.252Z",
+    "createdAt": "2023-06-14T05:51:09.252Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -3241,12 +3750,17 @@
         "id": "bitters_herbstura"
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 268
   },
   "navy_grog": {
     "id": "navy_grog",
     "name": "Navy Grog",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.253Z",
+    "createdAt": "2023-06-14T05:51:09.253Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -3287,12 +3801,17 @@
         ]
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 271
   },
   "scorpion": {
     "id": "scorpion",
     "name": "Scorpion",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.253Z",
+    "createdAt": "2023-06-14T05:51:09.253Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -3321,12 +3840,17 @@
         ]
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 272
   },
   "fog_cutter": {
     "id": "fog_cutter",
     "name": "Fog Cutter",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.254Z",
+    "createdAt": "2023-06-14T05:51:09.254Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -3355,12 +3879,17 @@
         "id": "fortifiedwine_sherry_oloroso"
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 275
   },
   "singapore_sling": {
     "id": "singapore_sling",
     "name": "Singapore Sling",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.254Z",
+    "createdAt": "2023-06-14T05:51:09.254Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -3390,12 +3919,17 @@
         "id": "bitters_orange"
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 276
   },
   "hondo_hatties_jungle_punch": {
     "id": "hondo_hatties_jungle_punch",
     "name": "Hondo Hattie's Jungle Punch!",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.255Z",
+    "createdAt": "2023-06-14T05:51:09.255Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -3431,12 +3965,17 @@
         "id": "bitters_aromatic"
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 311
   },
   "kahiko_punch": {
     "id": "kahiko_punch",
     "name": "Kahiko Punch",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.256Z",
+    "createdAt": "2023-06-14T05:51:09.256Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -3462,12 +4001,17 @@
         "id": "bitters_tiki"
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 311
   },
   "triumvirate_punch": {
     "id": "triumvirate_punch",
     "name": "Triumvirate Punch",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.256Z",
+    "createdAt": "2023-06-14T05:51:09.256Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -3495,12 +4039,17 @@
         "id": "spice_nutmeg"
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 312
   },
   "eureka_punch": {
     "id": "eureka_punch",
     "name": "Eureka Punch",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.256Z",
+    "createdAt": "2023-06-14T05:51:09.256Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -3529,12 +4078,17 @@
         "id": "soda_ginger"
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 312
   },
   "yuletidal_wave": {
     "id": "yuletidal_wave",
     "name": "Yuletidal Wave",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.257Z",
+    "createdAt": "2023-06-14T05:51:09.257Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -3570,12 +4124,17 @@
         ]
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 313
   },
   "rumbustion_punch": {
     "id": "rumbustion_punch",
     "name": "Rumbustion Punch",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.257Z",
+    "createdAt": "2023-06-14T05:51:09.257Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -3606,12 +4165,17 @@
         "id": "bitters_herbstura"
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 313
   },
   "puka_punch": {
     "id": "puka_punch",
     "name": "Puka Punch",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.258Z",
+    "createdAt": "2023-06-14T05:51:09.258Z",
+    "year": 2016,
     "category": "tiki",
     "ingredients": [
       {
@@ -3664,12 +4228,17 @@
         "overproof": true
       }
     ],
+    "bar": "Smuggler's Cove",
     "source": "Smuggler's Cove",
     "sourcePage": 318
   },
   "achilles_heel": {
     "id": "achilles_heel",
     "name": "Achilles’ Heel",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.259Z",
+    "createdAt": "2023-06-14T05:51:09.259Z",
+    "year": 2021,
     "category": "highball",
     "ingredients": [
       {
@@ -3707,11 +4276,16 @@
         "id": "coffee_bean"
       }
     ],
+    "bar": "Death & Co",
     "source": "Welcome Home"
   },
   "alpenglow": {
     "id": "alpenglow",
     "name": "Alpenglow",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.260Z",
+    "createdAt": "2023-06-14T05:51:09.260Z",
+    "year": 2021,
     "category": "highball",
     "ingredients": [
       {
@@ -3727,11 +4301,16 @@
         "id": "spice_bay"
       }
     ],
+    "bar": "Death & Co",
     "source": "Welcome Home"
   },
   "banquos_ghost": {
     "id": "banquos_ghost",
     "name": "Banquo’s Ghost",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.260Z",
+    "createdAt": "2023-06-14T05:51:09.260Z",
+    "year": 2021,
     "category": "highball",
     "ingredients": [
       {
@@ -3758,11 +4337,16 @@
         "id": "fruit_grapefruit"
       }
     ],
+    "bar": "Death & Co",
     "source": "Welcome Home"
   },
   "bastille": {
     "id": "bastille",
     "name": "Bastille",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.262Z",
+    "createdAt": "2023-06-14T05:51:09.262Z",
+    "year": 2021,
     "category": "highball",
     "ingredients": [
       {
@@ -3790,11 +4374,16 @@
         "id": "bitters_celery"
       }
     ],
+    "bar": "Death & Co",
     "source": "Welcome Home"
   },
   "beyond_the_sea": {
     "id": "beyond_the_sea",
     "name": "Beyond the Sea",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.263Z",
+    "createdAt": "2023-06-14T05:51:09.263Z",
+    "year": 2021,
     "category": "highball",
     "ingredients": [
       {
@@ -3821,11 +4410,16 @@
         "id": "water_rose"
       }
     ],
+    "bar": "Death & Co",
     "source": "Welcome Home"
   },
   "bicycle_wheel": {
     "id": "bicycle_wheel",
     "name": "Bicycle Wheel",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.264Z",
+    "createdAt": "2023-06-14T05:51:09.264Z",
+    "year": 2021,
     "category": "highball",
     "ingredients": [
       {
@@ -3850,11 +4444,16 @@
         "id": "fruit_grapefruit"
       }
     ],
+    "bar": "Death & Co",
     "source": "Welcome Home"
   },
   "black_poodle": {
     "id": "black_poodle",
     "name": "Black Poodle",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.265Z",
+    "createdAt": "2023-06-14T05:51:09.265Z",
+    "year": 2021,
     "category": "highball",
     "ingredients": [
       {
@@ -3883,11 +4482,16 @@
         "id": "fruit_cucumber"
       }
     ],
+    "bar": "Death & Co",
     "source": "Welcome Home"
   },
   "black_queen": {
     "id": "black_queen",
     "name": "Black Queen",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.265Z",
+    "createdAt": "2023-06-14T05:51:09.265Z",
+    "year": 2021,
     "category": "highball",
     "ingredients": [
       {
@@ -3922,11 +4526,16 @@
         "id": "fruit_cherry"
       }
     ],
+    "bar": "Death & Co",
     "source": "Welcome Home"
   },
   "blood_black_lace": {
     "id": "blood_black_lace",
     "name": "Blood & Black Lace",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.266Z",
+    "createdAt": "2023-06-14T05:51:09.266Z",
+    "year": 2021,
     "category": "highball",
     "ingredients": [
       {
@@ -3954,11 +4563,16 @@
         "id": "water_flat"
       }
     ],
+    "bar": "Death & Co",
     "source": "Welcome Home"
   },
   "bourbon_and_birch": {
     "id": "bourbon_and_birch",
     "name": "Bourbon and Birch",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.267Z",
+    "createdAt": "2023-06-14T05:51:09.267Z",
+    "year": 2021,
     "category": "highball",
     "ingredients": [
       {
@@ -3985,11 +4599,16 @@
         "id": "extract_birch"
       }
     ],
+    "bar": "Death & Co",
     "source": "Welcome Home"
   },
   "bulldog_front": {
     "id": "bulldog_front",
     "name": "Bulldog Front",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.267Z",
+    "createdAt": "2023-06-14T05:51:09.267Z",
+    "year": 2021,
     "category": "highball",
     "ingredients": [
       {
@@ -4021,11 +4640,16 @@
         "id": "fruit_lemon"
       }
     ],
+    "bar": "Death & Co",
     "source": "Welcome Home"
   },
   "camargo": {
     "id": "camargo",
     "name": "Camargo",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.268Z",
+    "createdAt": "2023-06-14T05:51:09.268Z",
+    "year": 2021,
     "category": "highball",
     "ingredients": [
       {
@@ -4054,11 +4678,16 @@
         "id": "acid_lactic"
       }
     ],
+    "bar": "Death & Co",
     "source": "Welcome Home"
   },
   "charlemagne": {
     "id": "charlemagne",
     "name": "Charlemagne",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.269Z",
+    "createdAt": "2023-06-14T05:51:09.269Z",
+    "year": 2021,
     "category": "highball",
     "ingredients": [
       {
@@ -4072,11 +4701,16 @@
         "id": "soda_club"
       }
     ],
+    "bar": "Death & Co",
     "source": "Welcome Home"
   },
   "cloud_nine": {
     "id": "cloud_nine",
     "name": "Cloud Nine",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.269Z",
+    "createdAt": "2023-06-14T05:51:09.269Z",
+    "year": 2021,
     "category": "highball",
     "ingredients": [
       {
@@ -4109,11 +4743,16 @@
         "id": "egg_white"
       }
     ],
+    "bar": "Death & Co",
     "source": "Welcome Home"
   },
   "crazy_diamond": {
     "id": "crazy_diamond",
     "name": "Crazy Diamond",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.270Z",
+    "createdAt": "2023-06-14T05:51:09.270Z",
+    "year": 2021,
     "category": "highball",
     "ingredients": [
       {
@@ -4138,11 +4777,16 @@
         "id": "liqueur_maraschino"
       }
     ],
+    "bar": "Death & Co",
     "source": "Welcome Home"
   },
   "doctor_mindbender": {
     "id": "doctor_mindbender",
     "name": "Doctor Mindbender",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.270Z",
+    "createdAt": "2023-06-14T05:51:09.270Z",
+    "year": 2021,
     "category": "highball",
     "ingredients": [
       {
@@ -4171,11 +4815,16 @@
         "id": "fruit_lime"
       }
     ],
+    "bar": "Death & Co",
     "source": "Welcome Home"
   },
   "drama_queen": {
     "id": "drama_queen",
     "name": "Drama Queen",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.271Z",
+    "createdAt": "2023-06-14T05:51:09.271Z",
+    "year": 2021,
     "category": "highball",
     "ingredients": [
       {
@@ -4205,11 +4854,16 @@
         "id": "spice_salt"
       }
     ],
+    "bar": "Death & Co",
     "source": "Welcome Home"
   },
   "drop_stitch": {
     "id": "drop_stitch",
     "name": "Drop Stitch",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.272Z",
+    "createdAt": "2023-06-14T05:51:09.272Z",
+    "year": 2021,
     "category": "highball",
     "ingredients": [
       {
@@ -4245,11 +4899,16 @@
         "id": "spice_mint"
       }
     ],
+    "bar": "Death & Co",
     "source": "Welcome Home"
   },
   "el_topo": {
     "id": "el_topo",
     "name": "El Topo",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.273Z",
+    "createdAt": "2023-06-14T05:51:09.273Z",
+    "year": 2021,
     "category": "highball",
     "ingredients": [
       {
@@ -4280,11 +4939,16 @@
         "name": "2 pineapple fronds"
       }
     ],
+    "bar": "Death & Co",
     "source": "Welcome Home"
   },
   "fleas_on_trapeze_vol_1": {
     "id": "fleas_on_trapeze_vol_1",
     "name": "Fleas on Trapeze Vol. 1",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.273Z",
+    "createdAt": "2023-06-14T05:51:09.273Z",
+    "year": 2021,
     "category": "highball",
     "ingredients": [
       {
@@ -4313,11 +4977,16 @@
         "name": "Fennel fronds"
       }
     ],
+    "bar": "Death & Co",
     "source": "Welcome Home"
   },
   "free_tail": {
     "id": "free_tail",
     "name": "Free Tail",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.274Z",
+    "createdAt": "2023-06-14T05:51:09.274Z",
+    "year": 2021,
     "category": "highball",
     "ingredients": [
       {
@@ -4354,11 +5023,16 @@
         "id": "fruit_grapefruit"
       }
     ],
+    "bar": "Death & Co",
     "source": "Welcome Home"
   },
   "gatekeeper": {
     "id": "gatekeeper",
     "name": "Gatekeeper",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.276Z",
+    "createdAt": "2023-06-14T05:51:09.276Z",
+    "year": 2021,
     "category": "highball",
     "ingredients": [
       {
@@ -4387,11 +5061,16 @@
         "id": "fruit_apple"
       }
     ],
+    "bar": "Death & Co",
     "source": "Welcome Home"
   },
   "ghost_colors": {
     "id": "ghost_colors",
     "name": "Ghost Colors",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.276Z",
+    "createdAt": "2023-06-14T05:51:09.276Z",
+    "year": 2021,
     "category": "highball",
     "ingredients": [
       {
@@ -4425,11 +5104,16 @@
         "id": "fruit_lime"
       }
     ],
+    "bar": "Death & Co",
     "source": "Welcome Home"
   },
   "gramercy_riffs": {
     "id": "gramercy_riffs",
     "name": "Gramercy Riffs",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.277Z",
+    "createdAt": "2023-06-14T05:51:09.277Z",
+    "year": 2021,
     "category": "highball",
     "ingredients": [
       {
@@ -4466,11 +5150,16 @@
         "id": "fruit_apple"
       }
     ],
+    "bar": "Death & Co",
     "source": "Welcome Home"
   },
   "halo_effect": {
     "id": "halo_effect",
     "name": "Halo Effect",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.278Z",
+    "createdAt": "2023-06-14T05:51:09.278Z",
+    "year": 2021,
     "category": "highball",
     "ingredients": [
       {
@@ -4493,11 +5182,16 @@
         "id": "spice_mint"
       }
     ],
+    "bar": "Death & Co",
     "source": "Welcome Home"
   },
   "harlequin": {
     "id": "harlequin",
     "name": "Harlequin",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.278Z",
+    "createdAt": "2023-06-14T05:51:09.278Z",
+    "year": 2021,
     "category": "highball",
     "ingredients": [
       {
@@ -4528,11 +5222,16 @@
         "id": "fruit_lemon"
       }
     ],
+    "bar": "Death & Co",
     "source": "Welcome Home"
   },
   "highball_standing_room": {
     "id": "highball_standing_room",
     "name": "Highball (Standing Room)",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.279Z",
+    "createdAt": "2023-06-14T05:51:09.279Z",
+    "year": 2021,
     "category": "highball",
     "ingredients": [
       {
@@ -4564,11 +5263,16 @@
         "id": "spice_shiso"
       }
     ],
+    "bar": "Death & Co",
     "source": "Welcome Home"
   },
   "high_noon": {
     "id": "high_noon",
     "name": "High Noon",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.280Z",
+    "createdAt": "2023-06-14T05:51:09.280Z",
+    "year": 2021,
     "category": "highball",
     "ingredients": [
       {
@@ -4599,11 +5303,16 @@
         "id": "fruit_lemon"
       }
     ],
+    "bar": "Death & Co",
     "source": "Welcome Home"
   },
   "high_speech": {
     "id": "high_speech",
     "name": "High Speech",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.280Z",
+    "createdAt": "2023-06-14T05:51:09.280Z",
+    "year": 2021,
     "category": "highball",
     "ingredients": [
       {
@@ -4640,11 +5349,16 @@
         "id": "fruit_lemon"
       }
     ],
+    "bar": "Death & Co",
     "source": "Welcome Home"
   },
   "hot_gossip": {
     "id": "hot_gossip",
     "name": "Hot Gossip",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.281Z",
+    "createdAt": "2023-06-14T05:51:09.281Z",
+    "year": 2021,
     "category": "highball",
     "ingredients": [
       {
@@ -4671,11 +5385,16 @@
         "id": "fruit_lime"
       }
     ],
+    "bar": "Death & Co",
     "source": "Welcome Home"
   },
   "hula_hula_hideout": {
     "id": "hula_hula_hideout",
     "name": "Hula Hula Hideout",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.282Z",
+    "createdAt": "2023-06-14T05:51:09.282Z",
+    "year": 2021,
     "category": "highball",
     "ingredients": [
       {
@@ -4705,11 +5424,16 @@
         "name": "1 pineapple frond"
       }
     ],
+    "bar": "Death & Co",
     "source": "Welcome Home"
   },
   "junior_marvin": {
     "id": "junior_marvin",
     "name": "Junior Marvin",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.282Z",
+    "createdAt": "2023-06-14T05:51:09.282Z",
+    "year": 2021,
     "category": "highball",
     "ingredients": [
       {
@@ -4734,11 +5458,16 @@
         "id": "liqueur_cremedementhe"
       }
     ],
+    "bar": "Death & Co",
     "source": "Welcome Home"
   },
   "kid_dynamite": {
     "id": "kid_dynamite",
     "name": "Kid Dynamite",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.282Z",
+    "createdAt": "2023-06-14T05:51:09.282Z",
+    "year": 2021,
     "category": "highball",
     "ingredients": [
       {
@@ -4759,11 +5488,16 @@
         "id": "fruit_lime"
       }
     ],
+    "bar": "Death & Co",
     "source": "Welcome Home"
   },
   "kid_dynamite_na": {
     "id": "kid_dynamite_na",
     "name": "Kid Dynamite (NA)",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.283Z",
+    "createdAt": "2023-06-14T05:51:09.283Z",
+    "year": 2021,
     "category": "highball",
     "ingredients": [
       {
@@ -4779,11 +5513,16 @@
         "id": "fruit_lime"
       }
     ],
+    "bar": "Death & Co",
     "source": "Welcome Home"
   },
   "kingston_americano": {
     "id": "kingston_americano",
     "name": "Kingston Americano",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.283Z",
+    "createdAt": "2023-06-14T05:51:09.283Z",
+    "year": 2021,
     "category": "highball",
     "ingredients": [
       {
@@ -4809,11 +5548,16 @@
         "id": "fruit_grapefruit"
       }
     ],
+    "bar": "Death & Co",
     "source": "Welcome Home"
   },
   "kinsale_cooler": {
     "id": "kinsale_cooler",
     "name": "Kinsale Cooler",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.283Z",
+    "createdAt": "2023-06-14T05:51:09.283Z",
+    "year": 2021,
     "category": "highball",
     "ingredients": [
       {
@@ -4848,11 +5592,16 @@
         "id": "fruit_lemon"
       }
     ],
+    "bar": "Death & Co",
     "source": "Welcome Home"
   },
   "lady_stardust": {
     "id": "lady_stardust",
     "name": "Lady Stardust",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.284Z",
+    "createdAt": "2023-06-14T05:51:09.284Z",
+    "year": 2021,
     "category": "highball",
     "ingredients": [
       {
@@ -4873,11 +5622,16 @@
         "id": "juice_lemon"
       }
     ],
+    "bar": "Death & Co",
     "source": "Welcome Home"
   },
   "left_a_woman_waiting": {
     "id": "left_a_woman_waiting",
     "name": "Left a Woman Waiting",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.284Z",
+    "createdAt": "2023-06-14T05:51:09.284Z",
+    "year": 2021,
     "category": "highball",
     "ingredients": [
       {
@@ -4923,11 +5677,16 @@
         "id": "fruit_orange"
       }
     ],
+    "bar": "Death & Co",
     "source": "Welcome Home"
   },
   "lipstick_vogue": {
     "id": "lipstick_vogue",
     "name": "Lipstick Vogue",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.285Z",
+    "createdAt": "2023-06-14T05:51:09.285Z",
+    "year": 2021,
     "category": "highball",
     "ingredients": [
       {
@@ -4955,11 +5714,16 @@
         "id": "fruit_apple"
       }
     ],
+    "bar": "Death & Co",
     "source": "Welcome Home"
   },
   "long_con": {
     "id": "long_con",
     "name": "Long Con",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.286Z",
+    "createdAt": "2023-06-14T05:51:09.286Z",
+    "year": 2021,
     "category": "highball",
     "ingredients": [
       {
@@ -4994,11 +5758,16 @@
         "id": "fruit_apple"
       }
     ],
+    "bar": "Death & Co",
     "source": "Welcome Home"
   },
   "long_division": {
     "id": "long_division",
     "name": "Long Division",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.286Z",
+    "createdAt": "2023-06-14T05:51:09.286Z",
+    "year": 2021,
     "category": "highball",
     "ingredients": [
       {
@@ -5032,11 +5801,16 @@
         "id": "syrup_demerara"
       }
     ],
+    "bar": "Death & Co",
     "source": "Welcome Home"
   },
   "lost_cause": {
     "id": "lost_cause",
     "name": "Lost Cause",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.287Z",
+    "createdAt": "2023-06-14T05:51:09.287Z",
+    "year": 2021,
     "category": "highball",
     "ingredients": [
       {
@@ -5057,11 +5831,16 @@
         "id": "brandy_pear"
       }
     ],
+    "bar": "Death & Co",
     "source": "Welcome Home"
   },
   "ludicrous_speed": {
     "id": "ludicrous_speed",
     "name": "Ludicrous Speed",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.287Z",
+    "createdAt": "2023-06-14T05:51:09.287Z",
+    "year": 2021,
     "category": "highball",
     "ingredients": [
       {
@@ -5097,11 +5876,16 @@
         "id": "fruit_lime"
       }
     ],
+    "bar": "Death & Co",
     "source": "Welcome Home"
   },
   "moon_magic": {
     "id": "moon_magic",
     "name": "Moon Magic",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.288Z",
+    "createdAt": "2023-06-14T05:51:09.288Z",
+    "year": 2021,
     "category": "highball",
     "ingredients": [
       {
@@ -5128,11 +5912,16 @@
         "id": "flower_edible"
       }
     ],
+    "bar": "Death & Co",
     "source": "Welcome Home"
   },
   "moon_river": {
     "id": "moon_river",
     "name": "Moon River",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.289Z",
+    "createdAt": "2023-06-14T05:51:09.289Z",
+    "year": 2021,
     "category": "highball",
     "ingredients": [
       {
@@ -5161,11 +5950,16 @@
         "id": "water_flat"
       }
     ],
+    "bar": "Death & Co",
     "source": "Welcome Home"
   },
   "moonrunner": {
     "id": "moonrunner",
     "name": "Moonrunner",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.289Z",
+    "createdAt": "2023-06-14T05:51:09.289Z",
+    "year": 2021,
     "category": "highball",
     "ingredients": [
       {
@@ -5196,11 +5990,16 @@
         "id": "flower_viola"
       }
     ],
+    "bar": "Death & Co",
     "source": "Welcome Home"
   },
   "outrigger": {
     "id": "outrigger",
     "name": "Outrigger",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.290Z",
+    "createdAt": "2023-06-14T05:51:09.290Z",
+    "year": 2021,
     "category": "highball",
     "ingredients": [
       {
@@ -5252,11 +6051,16 @@
         "id": "fruit_lime"
       }
     ],
+    "bar": "Death & Co",
     "source": "Welcome Home"
   },
   "parallel_lives": {
     "id": "parallel_lives",
     "name": "Parallel Lives",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.291Z",
+    "createdAt": "2023-06-14T05:51:09.291Z",
+    "year": 2021,
     "category": "highball",
     "ingredients": [
       {
@@ -5294,11 +6098,16 @@
         "id": "bitters_aromatic"
       }
     ],
+    "bar": "Death & Co",
     "source": "Welcome Home"
   },
   "repeater": {
     "id": "repeater",
     "name": "Repeater",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.292Z",
+    "createdAt": "2023-06-14T05:51:09.292Z",
+    "year": 2021,
     "category": "highball",
     "ingredients": [
       {
@@ -5329,11 +6138,16 @@
         "id": "spice_bay"
       }
     ],
+    "bar": "Death & Co",
     "source": "Welcome Home"
   },
   "ron_coco": {
     "id": "ron_coco",
     "name": "Ron Coco",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.307Z",
+    "createdAt": "2023-06-14T05:51:09.307Z",
+    "year": 2021,
     "category": "highball",
     "ingredients": [
       {
@@ -5360,11 +6174,16 @@
         "id": "fruit_lemon"
       }
     ],
+    "bar": "Death & Co",
     "source": "Welcome Home"
   },
   "savage_islands": {
     "id": "savage_islands",
     "name": "Savage Islands",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.308Z",
+    "createdAt": "2023-06-14T05:51:09.308Z",
+    "year": 2021,
     "category": "highball",
     "ingredients": [
       {
@@ -5391,11 +6210,16 @@
         "id": "fruit_pineapple"
       }
     ],
+    "bar": "Death & Co",
     "source": "Welcome Home"
   },
   "scarlet_tanager": {
     "id": "scarlet_tanager",
     "name": "Scarlet Tanager",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.308Z",
+    "createdAt": "2023-06-14T05:51:09.308Z",
+    "year": 2021,
     "category": "highball",
     "ingredients": [
       {
@@ -5429,11 +6253,16 @@
         "id": "fruit_olive"
       }
     ],
+    "bar": "Death & Co",
     "source": "Welcome Home"
   },
   "seven_year_itch": {
     "id": "seven_year_itch",
     "name": "Seven Year Itch",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.309Z",
+    "createdAt": "2023-06-14T05:51:09.309Z",
+    "year": 2021,
     "category": "highball",
     "ingredients": [
       {
@@ -5457,11 +6286,16 @@
         "id": "bitters_aromatic"
       }
     ],
+    "bar": "Death & Co",
     "source": "Welcome Home"
   },
   "shoganai": {
     "id": "shoganai",
     "name": "Shoganai",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.310Z",
+    "createdAt": "2023-06-14T05:51:09.310Z",
+    "year": 2021,
     "category": "highball",
     "ingredients": [
       {
@@ -5488,11 +6322,16 @@
         "id": "fruit_apple"
       }
     ],
+    "bar": "Death & Co",
     "source": "Welcome Home"
   },
   "silverheels": {
     "id": "silverheels",
     "name": "Silverheels",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.310Z",
+    "createdAt": "2023-06-14T05:51:09.310Z",
+    "year": 2021,
     "category": "highball",
     "ingredients": [
       {
@@ -5525,11 +6364,16 @@
         "id": "spice_mint"
       }
     ],
+    "bar": "Death & Co",
     "source": "Welcome Home"
   },
   "sinergia": {
     "id": "sinergia",
     "name": "Sinergia",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.311Z",
+    "createdAt": "2023-06-14T05:51:09.311Z",
+    "year": 2021,
     "category": "highball",
     "ingredients": [
       {
@@ -5563,11 +6407,16 @@
         "id": "wine_red_lambrusco"
       }
     ],
+    "bar": "Death & Co",
     "source": "Welcome Home"
   },
   "slightly_stormy": {
     "id": "slightly_stormy",
     "name": "Slightly Stormy",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.311Z",
+    "createdAt": "2023-06-14T05:51:09.311Z",
+    "year": 2021,
     "category": "highball",
     "ingredients": [
       {
@@ -5599,11 +6448,16 @@
         "id": "spice_ginger"
       }
     ],
+    "bar": "Death & Co",
     "source": "Welcome Home"
   },
   "sound_and_fury": {
     "id": "sound_and_fury",
     "name": "Sound and Fury",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.312Z",
+    "createdAt": "2023-06-14T05:51:09.312Z",
+    "year": 2021,
     "category": "highball",
     "ingredients": [
       {
@@ -5633,11 +6487,16 @@
         "id": "fruit_lime"
       }
     ],
+    "bar": "Death & Co",
     "source": "Welcome Home"
   },
   "spritz_roselle": {
     "id": "spritz_roselle",
     "name": "Spritz Roselle",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.312Z",
+    "createdAt": "2023-06-14T05:51:09.312Z",
+    "year": 2021,
     "category": "highball",
     "ingredients": [
       {
@@ -5669,11 +6528,16 @@
         "id": "flower_edible"
       }
     ],
+    "bar": "Death & Co",
     "source": "Welcome Home"
   },
   "starfish_and_coffee": {
     "id": "starfish_and_coffee",
     "name": "Starfish and Coffee",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.313Z",
+    "createdAt": "2023-06-14T05:51:09.313Z",
+    "year": 2021,
     "category": "highball",
     "ingredients": [
       {
@@ -5694,11 +6558,16 @@
         "id": "syrup_vanilla"
       }
     ],
+    "bar": "Death & Co",
     "source": "Welcome Home"
   },
   "tandem_jump": {
     "id": "tandem_jump",
     "name": "Tandem Jump",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.313Z",
+    "createdAt": "2023-06-14T05:51:09.313Z",
+    "year": 2021,
     "category": "highball",
     "ingredients": [
       {
@@ -5727,11 +6596,16 @@
         "id": "syrup_pineapple"
       }
     ],
+    "bar": "Death & Co",
     "source": "Welcome Home"
   },
   "tiny_fortunes": {
     "id": "tiny_fortunes",
     "name": "Tiny Fortunes",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.314Z",
+    "createdAt": "2023-06-14T05:51:09.314Z",
+    "year": 2021,
     "category": "highball",
     "ingredients": [
       {
@@ -5761,11 +6635,16 @@
         "id": "fruit_blackberry"
       }
     ],
+    "bar": "Death & Co",
     "source": "Welcome Home"
   },
   "ursa_major": {
     "id": "ursa_major",
     "name": "Ursa Major",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.314Z",
+    "createdAt": "2023-06-14T05:51:09.314Z",
+    "year": 2021,
     "category": "highball",
     "ingredients": [
       {
@@ -5789,11 +6668,16 @@
         "id": "fruit_lemon"
       }
     ],
+    "bar": "Death & Co",
     "source": "Welcome Home"
   },
   "velvet_buzzsaw": {
     "id": "velvet_buzzsaw",
     "name": "Velvet Buzzsaw",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.315Z",
+    "createdAt": "2023-06-14T05:51:09.315Z",
+    "year": 2021,
     "category": "highball",
     "ingredients": [
       {
@@ -5828,11 +6712,16 @@
         "id": "flower_viola"
       }
     ],
+    "bar": "Death & Co",
     "source": "Welcome Home"
   },
   "walkin_after_midnight": {
     "id": "walkin_after_midnight",
     "name": "Walkin’ After Midnight",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.315Z",
+    "createdAt": "2023-06-14T05:51:09.315Z",
+    "year": 2021,
     "category": "highball",
     "ingredients": [
       {
@@ -5859,11 +6748,16 @@
         "id": "fruit_lemon"
       }
     ],
+    "bar": "Death & Co",
     "source": "Welcome Home"
   },
   "watertiger": {
     "id": "watertiger",
     "name": "Water-Tiger",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.316Z",
+    "createdAt": "2023-06-14T05:51:09.316Z",
+    "year": 2021,
     "category": "highball",
     "ingredients": [
       {
@@ -5891,11 +6785,16 @@
         "id": "fruit_cucumber"
       }
     ],
+    "bar": "Death & Co",
     "source": "Welcome Home"
   },
   "weird_fiction": {
     "id": "weird_fiction",
     "name": "Weird Fiction",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.316Z",
+    "createdAt": "2023-06-14T05:51:09.316Z",
+    "year": 2021,
     "category": "highball",
     "ingredients": [
       {
@@ -5932,11 +6831,16 @@
         "id": "fruit_raspberry"
       }
     ],
+    "bar": "Death & Co",
     "source": "Welcome Home"
   },
   "whateverest": {
     "id": "whateverest",
     "name": "Whateverest",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.317Z",
+    "createdAt": "2023-06-14T05:51:09.317Z",
+    "year": 2021,
     "category": "highball",
     "ingredients": [
       {
@@ -5970,11 +6874,16 @@
         "id": "fruit_cucumber"
       }
     ],
+    "bar": "Death & Co",
     "source": "Welcome Home"
   },
   "windup_bird": {
     "id": "windup_bird",
     "name": "Windup Bird",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.318Z",
+    "createdAt": "2023-06-14T05:51:09.318Z",
+    "year": 2021,
     "category": "highball",
     "ingredients": [
       {
@@ -6005,11 +6914,16 @@
         "id": "liqueur_aloe"
       }
     ],
+    "bar": "Death & Co",
     "source": "Welcome Home"
   },
   "zouzou": {
     "id": "zouzou",
     "name": "Zouzou",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.319Z",
+    "createdAt": "2023-06-14T05:51:09.319Z",
+    "year": 2021,
     "category": "highball",
     "ingredients": [
       {
@@ -6041,11 +6955,16 @@
         "id": "fruit_orange"
       }
     ],
+    "bar": "Death & Co",
     "source": "Welcome Home"
   },
   "art_of_scratching": {
     "id": "art_of_scratching",
     "name": "Art of Scratching",
+    "username": "adamsome",
+    "updatedAt": "2023-06-14T05:51:09.319Z",
+    "createdAt": "2023-06-14T05:51:09.319Z",
+    "year": 2021,
     "category": "daiquiri",
     "ingredients": [
       {
@@ -6070,6 +6989,7 @@
         "id": "liqueur_cremedecacao"
       }
     ],
+    "bar": "Death & Co",
     "source": "Welcome Home"
   }
 }
