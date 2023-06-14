@@ -2,7 +2,7 @@ import { Fragment } from 'react'
 
 import { cn } from '@/lib/utils'
 import { useData } from '@/components/data-provider'
-import { CATEGORY_DICT, Category } from '@/lib/consts'
+import { CATEGORY_DICT, Category } from '@/lib/generated-consts'
 
 const DIM: Record<string, boolean> = {
   agave: true,
@@ -10,6 +10,7 @@ const DIM: Record<string, boolean> = {
   fortifiedwine: true,
   grain: true,
   liqueur: true,
+  wine: true,
 }
 const DIM_LAST: Record<string, boolean> = {
   agave_tequila: true,
@@ -18,10 +19,13 @@ const DIM_LAST: Record<string, boolean> = {
   liqueur_amaro: true,
 }
 const ONLY: Record<string, boolean> = {
+  brandy_grape_armagnac: true,
   brandy_grape_cognac: true,
   brandy_grape_eaudevie: true,
   brandy_grape_grappa: true,
+  brandy_grape_pineaudescharentes: true,
   brandy_grape_pisco: true,
+  brandy_grape_pommeau: true,
   grain_whiskey_bourbon: true,
   grain_whiskey_rye: true,
   grain_whiskey_scotch: true,
@@ -45,16 +49,18 @@ export function IngredientPathText({ path, full }: Props) {
   const [category, ...ancestors] = path
 
   const onlyIndex = ancestors.findLastIndex((id) => ONLY[id])
+  const hasChildren = ancestors.length > 0
   return (
     <span>
       <span
-        className={cn(DIM[category] && 'text-muted-foreground', {
-          'text-muted-foreground': onlyIndex >= 0 || DIM[category],
+        className={cn({
+          'text-muted-foreground':
+            hasChildren && (onlyIndex >= 0 || DIM[category]),
         })}
       >
         {CATEGORY_DICT[category as Category]?.name ?? ''}
       </span>
-      <span>{', '}</span>
+      {hasChildren && <span>{', '}</span>}
       {ancestors.map((id, i) => (
         <Fragment key={id}>
           <span

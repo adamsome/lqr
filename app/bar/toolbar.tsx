@@ -1,11 +1,9 @@
 'use client'
 
 import { X } from 'lucide-react'
-import { useMemo } from 'react'
 
-import { useData } from '@/components/data-provider'
-import { IngredientPathText } from '@/components/ingredients/ingredient-path-text'
-import { StockIcon as BaseStockIcon } from '@/components/ingredients/stock-icon'
+import { IngredientPathText } from '@/components/ingredient-path/text'
+import { StockIcon as BaseStockIcon } from '@/components/stock-icon'
 import { Button } from '@/components/ui/button'
 import { DataTableColumnFilterInput } from '@/components/ui/data-table-column-filter-input'
 import { DataTableToolbarProps } from '@/components/ui/data-table-container'
@@ -17,16 +15,14 @@ import { DataTableHierarchicalFacetFilterButton } from '@/components/ui/data-tab
 import { DataTableMultiFacetFilterButton } from '@/components/ui/data-table-multi-facet-filter-button'
 import { DataTableViewOptions } from '@/components/ui/data-table-view-options'
 import { useGetIngredientPathName } from '@/hooks/use-get-ingredient-path-name'
+import { useHierarchicalSpiritsRoot } from '@/hooks/use-hierarchical-spirits-root'
 import { useIsDataTableFiltered } from '@/hooks/use-is-data-table-filtered'
 import {
   AGING_DICT,
   Aging,
-  CATEGORY_DICT,
-  Category,
   PRODUCTION_METHOD_DICT,
   ProductionMethod,
-} from '@/lib/consts'
-import { HierarchicalFilter } from '@/lib/hierarchical-filter'
+} from '@/lib/generated-consts'
 import { StockState, getStockState } from '@/lib/stock'
 import { Ingredient } from '@/lib/types'
 
@@ -82,19 +78,8 @@ type Props = DataTableToolbarProps<Ingredient>
 
 export function Toolbar({ table }: Props) {
   const isFiltered = useIsDataTableFiltered(table)
-  const { categoryFilter: root } = useData()
+  const categoryRoot = useHierarchicalSpiritsRoot()
   const getName = useGetIngredientPathName()
-
-  const categoryRoot = useMemo(() => {
-    const childIDs = root.childIDs.filter(
-      (id) => CATEGORY_DICT[id as Category].type === 'spirit'
-    )
-    const children = childIDs.reduce((acc, id) => {
-      acc[id] = root.children[id]
-      return acc
-    }, {} as HierarchicalFilter['children'])
-    return { ...root, childIDs, children }
-  }, [root])
 
   return (
     <div className="flex items-center justify-between">

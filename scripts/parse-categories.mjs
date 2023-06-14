@@ -152,7 +152,7 @@ export function parseCategories() {
   consts.push(...ingredientCategoryDefs)
   consts.push(`}`)
   consts.push(``)
-  writeFileSync(join(dir, '../lib/consts.ts'), consts.join('\n'), {
+  writeFileSync(join(dir, '../lib/generated-consts.ts'), consts.join('\n'), {
     encoding: 'utf8',
   })
 }

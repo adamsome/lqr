@@ -77,6 +77,10 @@ export function parseBottles() {
     return acc
   }, {})
 
+  const treeJsonPath = join(dir, '../json/category-filter.json')
+  const treeJson = readFileSync(treeJsonPath, 'utf-8')
+  const tree = JSON.parse(treeJson)
+
   const bottlesCsvPath = join(dir, './bottles-raw.csv')
   const bottlesCsv = readFileSync(bottlesCsvPath, 'utf-8')
 
@@ -183,6 +187,16 @@ export function parseBottles() {
         }
       }
 
+      const path = parent.split('_')
+      const item = path.reduce((acc, curr, i) => {
+        const segment = acc?.id && i > 0 ? `${acc.id}_${curr}` : curr
+        return acc?.children[segment]
+      }, tree)
+      if (item) {
+        if (!item.bottleIDs) item.bottleIDs = []
+        item.bottleIDs.push(id)
+      }
+
       return {
         id,
         ordinal: Number(ordinal),
@@ -231,6 +245,11 @@ export function parseBottles() {
   writeFileSync(
     join(dir, '../json/ingredients.json'),
     JSON.stringify(bottles, null, 2),
+    { encoding: 'utf8' }
+  )
+  writeFileSync(
+    join(dir, '../json/category-filter.json'),
+    JSON.stringify(tree, null, 2),
     { encoding: 'utf8' }
   )
 

@@ -1,4 +1,4 @@
-import { StockIcon } from '@/components/ingredients/stock-icon'
+import { StockIcon } from '@/components/stock-icon'
 import { Button } from '@/components/ui/button'
 import { getNextStockValue, getStockState } from '@/lib/stock'
 import { cn } from '@/lib/utils'

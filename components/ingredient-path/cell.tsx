@@ -1,5 +1,5 @@
-import { IngredientPathText } from '@/components/ingredients/ingredient-path-text'
-import { CATEGORY_DICT } from '@/lib/consts'
+import { IngredientPathText } from '@/components/ingredient-path/text'
+import { CATEGORY_DICT } from '@/lib/generated-consts'
 import { Ingredient } from '@/lib/types'
 
 type Props = {

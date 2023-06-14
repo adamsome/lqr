@@ -1451,7 +1451,20 @@
           "id": "agave_mezcal",
           "checked": false,
           "childIDs": [],
-          "children": {}
+          "children": {},
+          "bottleIDs": [
+            "banhez",
+            "del_maguey_vida",
+            "del_maguey_santo_domingo_albarradas",
+            "del_maguey_san_luis_del_rio",
+            "del_maguey_chichicapa",
+            "nuestra_soledad_la_compania_ejutla",
+            "mal_bien_espadin",
+            "palenqueros",
+            "mezontes",
+            "lalocura",
+            "mezcal_vago_elote"
+          ]
         },
         "agave_tequila": {
           "id": "agave_tequila",
@@ -1466,19 +1479,40 @@
               "id": "agave_tequila_anejo",
               "checked": false,
               "childIDs": [],
-              "children": {}
+              "children": {},
+              "bottleIDs": [
+                "tapatio_anejo"
+              ]
             },
             "agave_tequila_blanco": {
               "id": "agave_tequila_blanco",
               "checked": false,
               "childIDs": [],
-              "children": {}
+              "children": {},
+              "bottleIDs": [
+                "siembra_valles_blanco",
+                "siembra_valles_ancestral",
+                "fortaleza_blanco",
+                "cascahuin_48_plata",
+                "calle_23",
+                "olmeca_altos_blanco",
+                "cimarron_blanco",
+                "tequila_ocho_blanco",
+                "el_tesoro_blanco",
+                "tapatio_blanco",
+                "tapatio_110proof",
+                "siembra_azul_blanco",
+                "siete_leguas_blanco"
+              ]
             },
             "agave_tequila_reposado": {
               "id": "agave_tequila_reposado",
               "checked": false,
               "childIDs": [],
-              "children": {}
+              "children": {},
+              "bottleIDs": [
+                "el_tesoro_reposado"
+              ]
             }
           }
         }
@@ -1710,13 +1744,22 @@
           "id": "brandy_apple",
           "checked": false,
           "childIDs": [],
-          "children": {}
+          "children": {},
+          "bottleIDs": [
+            "clear_creek_2year",
+            "lemorton_selection_calvados_domfrontais",
+            "domaine_du_manoir_de_montreuil_reserve",
+            "lairds_bonded"
+          ]
         },
         "brandy_applecider": {
           "id": "brandy_applecider",
           "checked": false,
           "childIDs": [],
-          "children": {}
+          "children": {},
+          "bottleIDs": [
+            "cyril_zangs_00_apple_cide_eaudevie"
+          ]
         },
         "brandy_apricot": {
           "id": "brandy_apricot",
@@ -1728,13 +1771,19 @@
           "id": "brandy_basil",
           "checked": false,
           "childIDs": [],
-          "children": {}
+          "children": {},
+          "bottleIDs": [
+            "st_george_aqua_perfecta_basil_eaudevie"
+          ]
         },
         "brandy_carrot": {
           "id": "brandy_carrot",
           "checked": false,
           "childIDs": [],
-          "children": {}
+          "children": {},
+          "bottleIDs": [
+            "reisetbauer_carrot_eaudevie"
+          ]
         },
         "brandy_cherry": {
           "id": "brandy_cherry",
@@ -1746,7 +1795,10 @@
           "id": "brandy_douglasfir",
           "checked": false,
           "childIDs": [],
-          "children": {}
+          "children": {},
+          "bottleIDs": [
+            "clear_creek_douglas_fir_eaudevie"
+          ]
         },
         "brandy_grape": {
           "id": "brandy_grape",
@@ -1766,49 +1818,83 @@
               "id": "brandy_grape_american",
               "checked": false,
               "childIDs": [],
-              "children": {}
+              "children": {},
+              "bottleIDs": [
+                "bertoux_brandy",
+                "germainrobin_alambic"
+              ]
             },
             "brandy_grape_armagnac": {
               "id": "brandy_grape_armagnac",
               "checked": false,
               "childIDs": [],
-              "children": {}
+              "children": {},
+              "bottleIDs": [
+                "pm_spirits_bas"
+              ]
             },
             "brandy_grape_cognac": {
               "id": "brandy_grape_cognac",
               "checked": false,
               "childIDs": [],
-              "children": {}
+              "children": {},
+              "bottleIDs": [
+                "guillonpainturaud_vsop",
+                "hine_h_vsop",
+                "paul_beau_vs",
+                "pierre_ferrand_1840",
+                "pierre_ferrand_ambre",
+                "gourry_de_chadville"
+              ]
             },
             "brandy_grape_grappa": {
               "id": "brandy_grape_grappa",
               "checked": false,
               "childIDs": [],
-              "children": {}
+              "children": {},
+              "bottleIDs": [
+                "clear_creek_muscat_grappa"
+              ]
             },
             "brandy_grape_pineaudescharentes": {
               "id": "brandy_grape_pineaudescharentes",
               "checked": false,
               "childIDs": [],
-              "children": {}
+              "children": {},
+              "bottleIDs": [
+                "park_pineau_des_charentes",
+                "jeanluc_pasquet_pineau_des_charentes",
+                "j_navarre_vieux_pineau_des_charentes"
+              ]
             },
             "brandy_grape_pisco": {
               "id": "brandy_grape_pisco",
               "checked": false,
               "childIDs": [],
-              "children": {}
+              "children": {},
+              "bottleIDs": [
+                "capurro_acholado_pisco",
+                "campo_de_encanto_acholado",
+                "barsol_pisco"
+              ]
             },
             "brandy_grape_pommeau": {
               "id": "brandy_grape_pommeau",
               "checked": false,
               "childIDs": [],
-              "children": {}
+              "children": {},
+              "bottleIDs": [
+                "lemorton_pommeau_de_normandie"
+              ]
             },
             "brandy_grape_spanish": {
               "id": "brandy_grape_spanish",
               "checked": false,
               "childIDs": [],
-              "children": {}
+              "children": {},
+              "bottleIDs": [
+                "lustau_solera_reserva"
+              ]
             }
           }
         },
@@ -1816,13 +1902,19 @@
           "id": "brandy_hazelnut",
           "checked": false,
           "childIDs": [],
-          "children": {}
+          "children": {},
+          "bottleIDs": [
+            "reisetbauer_hazelnut_eaudevie"
+          ]
         },
         "brandy_mango": {
           "id": "brandy_mango",
           "checked": false,
           "childIDs": [],
-          "children": {}
+          "children": {},
+          "bottleIDs": [
+            "rhine_hall_mango_brandy"
+          ]
         },
         "brandy_peach": {
           "id": "brandy_peach",
@@ -1834,31 +1926,47 @@
           "id": "brandy_pear",
           "checked": false,
           "childIDs": [],
-          "children": {}
+          "children": {},
+          "bottleIDs": [
+            "clear_creek_pear_brandy"
+          ]
         },
         "brandy_plum": {
           "id": "brandy_plum",
           "checked": false,
           "childIDs": [],
-          "children": {}
+          "children": {},
+          "bottleIDs": [
+            "louis_rogue_la_vielle_prune",
+            "clear_creek_blue_plum_brandy"
+          ]
         },
         "brandy_raspberry": {
           "id": "brandy_raspberry",
           "checked": false,
           "childIDs": [],
-          "children": {}
+          "children": {},
+          "bottleIDs": [
+            "st_george_framboise_eaudevie"
+          ]
         },
         "brandy_raisin": {
           "id": "brandy_raisin",
           "checked": false,
           "childIDs": [],
-          "children": {}
+          "children": {},
+          "bottleIDs": [
+            "cobrafire_eaudevie_de_raisin"
+          ]
         },
         "brandy_shiso": {
           "id": "brandy_shiso",
           "checked": false,
           "childIDs": [],
-          "children": {}
+          "children": {},
+          "bottleIDs": [
+            "glasshouse_shiso_brandy"
+          ]
         },
         "brandy_tomato": {
           "id": "brandy_tomato",
@@ -1894,7 +2002,13 @@
           "id": "cane_cachaca",
           "checked": false,
           "childIDs": [],
-          "children": {}
+          "children": {},
+          "bottleIDs": [
+            "avua_prata",
+            "novo_fogo_silver",
+            "avua_amburana",
+            "novo_fogo_gold"
+          ]
         },
         "cane_rum": {
           "id": "cane_rum",
@@ -1909,21 +2023,228 @@
               "id": "cane_rum_jamaican",
               "checked": false,
               "childIDs": [],
-              "children": {}
+              "children": {},
+              "bottleIDs": [
+                "hamilton_jamaican_gold",
+                "wray_nephew_overproof",
+                "rum_fire_jamaican_overproof",
+                "smith_cross_navy_strength",
+                "plantation_xaymaca",
+                "appleton_estate_50_year",
+                "appleton_estate_signature_blend",
+                "appleton_estate_21",
+                "revelation_rum_smooth_ambler",
+                "hamilton_jamaican_black",
+                "coruba",
+                "blackwells_black_gold"
+              ]
             },
             "cane_rum_demerara": {
               "id": "cane_rum_demerara",
               "checked": false,
               "childIDs": [],
-              "children": {}
+              "children": {},
+              "bottleIDs": [
+                "rum_society_40",
+                "el_dorado_single_barrel_pm",
+                "el_dorado_3_year",
+                "el_dorado_5_year",
+                "el_dorado_8_year",
+                "el_dorado_12_year",
+                "el_dorado_special_reserve_15_year",
+                "el_dorado_21_year",
+                "el_dorado_25_year",
+                "st_lucia_distillers_1931",
+                "scarlett_ibis",
+                "admiral_rodney",
+                "el_dorado_single_barrel_ehp",
+                "el_dorado_single_barrel_icbu",
+                "hamilton_guyana_86",
+                "lemon_hart_80_1804",
+                "skipper_finest_old_demerara",
+                "hamilton_guyana_151",
+                "lemon_hart_151"
+              ]
             },
             "cane_rum_agricole": {
               "id": "cane_rum_agricole",
               "checked": false,
               "childIDs": [],
-              "children": {}
+              "children": {},
+              "bottleIDs": [
+                "rhum_barbancourt_5_star",
+                "rhum_barbancourt_estate_reserve",
+                "capovilla_agricole_pmg",
+                "damoiseau_cane_rhum",
+                "rhum_barbancourt_3_star",
+                "st_george_california_agricole",
+                "capovilla_rhum_liberation_2010",
+                "damoiseau_vsop",
+                "st_george_california_reserve_agricole",
+                "clement_premiere_canne",
+                "clement_canne_bleue",
+                "duquesne_blanc",
+                "la_favorite_blanc",
+                "neisson_blanc",
+                "neisson_le_rhum",
+                "neisson_lesprit_overproof",
+                "rhum_jm_white_100_proof",
+                "clement_vsop",
+                "clement_6_year_tres_vieux",
+                "clement_10_year_tres_vieux",
+                "duquesne_eleve_sous_bois",
+                "la_favorite_coeur_dambre",
+                "la_favorite_vieux",
+                "neisson_eleve_sous_bois",
+                "neisson_reserve_speciale",
+                "rhum_jm_esb_gold",
+                "rhum_jm_vsop",
+                "clement_cuvee_homere",
+                "neisson_15_year",
+                "neisson_18_year",
+                "rhum_jm_1994",
+                "rhum_jm_1997"
+              ]
             }
-          }
+          },
+          "bottleIDs": [
+            "owneys_original",
+            "prichards_crystal_rum",
+            "privateer_silver_reserve",
+            "rum_society_62",
+            "sammys_beach_bar_light",
+            "sergeant_classick_white",
+            "grand_canyon_distillery_rum",
+            "ballast_point_three_sheets_aged",
+            "diablos_shadow_navy_strength",
+            "house_spirits_aged_rum",
+            "journeyman_roads_end_organic_rum_navy_strength",
+            "maggies_farm_queens_share_rum",
+            "montanya_oro",
+            "montanya_platino",
+            "prichards_fine",
+            "privateer_american_amber",
+            "ragged_mountain_gold",
+            "richland_single_estate_old_georgia_rum",
+            "rum_society_65",
+            "sun_rum_barrel_aged",
+            "thomas_tew_single_barrel",
+            "berry_bros_rudd_berrys_own",
+            "cadenhead",
+            "duncan_taylor",
+            "hamilton_st_lucia",
+            "mezan",
+            "samaroli",
+            "st_nicholas_abbey_5_year",
+            "diplomatico_ambassador",
+            "diplomatico_single_vintage",
+            "the_black_tot",
+            "banks_5_island",
+            "banks_7_island",
+            "ron_cartavio_selecto_5",
+            "chairmans_reserve_silver",
+            "cockspur_fine",
+            "denizen",
+            "diplomatico_anejo",
+            "diplomatico_blanco",
+            "mount_gay_eclipse",
+            "plantation_3_stars",
+            "the_real_mccoy_3year",
+            "santa_teresa_claro",
+            "appleton_estate_reserve_blend",
+            "appleton_estate_rare_blend_12",
+            "cadenhead_green_label",
+            "cartavio_solera_12",
+            "cartavio_18",
+            "chairmans_reserve",
+            "chairmans_reserve_the_forgotten_casks",
+            "cockspur_12",
+            "denizen_merchants_reserva",
+            "diplomatico_reserva",
+            "diplomatico_reserva_exclusiva",
+            "doorlys_5_year",
+            "doorlys_12_year",
+            "doorlys_xo",
+            "dos_maderas_53",
+            "dos_maderas_55",
+            "kaniche_xo",
+            "mount_gay_black_barrel",
+            "mount_gay_xo",
+            "plantation_5_year",
+            "plantation_grande_reserve",
+            "plantation_xo_20th_anniversary",
+            "providencia",
+            "pussers",
+            "the_real_mccoy_5_year",
+            "the_real_mccoy_12_year",
+            "rl_seale_foursquare_9_year_port_cask_finish",
+            "rl_seales_10_year",
+            "scarlet_ibis",
+            "banks_the_endeavour",
+            "cartavio_xo",
+            "mount_gay_1703",
+            "pussers_15",
+            "santa_teresa_1796",
+            "bacardi_heritage_1909",
+            "caliche",
+            "cana_brava",
+            "crusoe_organic_white",
+            "cruzan_estate_diamond",
+            "don_q_cristal",
+            "facundo_neo",
+            "flor_de_cana_extra_dry_4_year",
+            "ron_del_barrilito_2_star",
+            "angostura_1824",
+            "angostura_1919",
+            "angostura_5_year",
+            "angostura_7_year",
+            "bacardi_8",
+            "bacardi_reserva_limitada",
+            "brugal_1888",
+            "brugal_extra_viejo",
+            "cana_brava_7_year",
+            "cruzan_single_barrel",
+            "don_pancho_origines_8",
+            "don_q_anejo",
+            "don_q_gran_anejo",
+            "english_harbour_5",
+            "english_harbour_10",
+            "facundo_eximo",
+            "facundo_exquisito",
+            "facundo_paraiso",
+            "flor_de_cana_12",
+            "kirk_sweeney_12",
+            "kirk_sweeney_18",
+            "kirk_sweeney_23",
+            "ron_abuelo_7",
+            "ron_abuelo_12",
+            "ron_abuelo_centuria",
+            "ron_botran_reserva",
+            "ron_botran_solera_1893",
+            "ron_centenario_9",
+            "ron_centenario_12",
+            "ron_centenario_20",
+            "ron_cenenario_25",
+            "ron_del_barrilito_3_star",
+            "ron_matusalem_15",
+            "trigo",
+            "westerhall_plantation",
+            "zacapa_23",
+            "zacapa_xo",
+            "zafra",
+            "don_pancho_origines_18",
+            "don_pancho_origines_30",
+            "english_harbour_25",
+            "flor_de_cana_18",
+            "flor_de_cana_25",
+            "reserva_de_la_familia_serralles_20_year_old",
+            "cruzan_blackstrap",
+            "goslings_black_seal",
+            "kohala_bay",
+            "pampero_anniversario",
+            "newfoundland_screech",
+            "plantation_oftd"
+          ]
         },
         "cane_swedishpunsch": {
           "id": "cane_swedishpunsch",
@@ -1958,25 +2279,49 @@
           "id": "fortifiedwine_aperitif",
           "checked": false,
           "childIDs": [],
-          "children": {}
+          "children": {},
+          "bottleIDs": [
+            "bonal_gentianequina",
+            "lillet_rose",
+            "lillet_blanc",
+            "cocchi_americano_bianco",
+            "byrhh",
+            "cap_corse_blanc_quinquina"
+          ]
         },
         "fortifiedwine_blancvermouth": {
           "id": "fortifiedwine_blancvermouth",
           "checked": false,
           "childIDs": [],
-          "children": {}
+          "children": {},
+          "bottleIDs": [
+            "la_quintinye_vermouth_royal_blanc",
+            "dolin_blanc",
+            "carpano_bianco"
+          ]
         },
         "fortifiedwine_dryvermouth": {
           "id": "fortifiedwine_dryvermouth",
           "checked": false,
           "childIDs": [],
-          "children": {}
+          "children": {},
+          "bottleIDs": [
+            "dolin_dry",
+            "noilly_prat_extra_dry"
+          ]
         },
         "fortifiedwine_madeira": {
           "id": "fortifiedwine_madeira",
           "checked": false,
           "childIDs": [],
-          "children": {}
+          "children": {},
+          "bottleIDs": [
+            "henriques_henriques_rainwater_madeira",
+            "rare_wine_co_savannah_verdelho",
+            "rare_wine_co_baltimore_rainwater_madeira",
+            "hh_generoso_doce_5year",
+            "blandys_5_year_verdelho_madeira"
+          ]
         },
         "fortifiedwine_mistelle": {
           "id": "fortifiedwine_mistelle",
@@ -2025,13 +2370,24 @@
               "id": "fortifiedwine_sherry_amontillado",
               "checked": false,
               "childIDs": [],
-              "children": {}
+              "children": {},
+              "bottleIDs": [
+                "lustau_los_arcos",
+                "palo_cortado_lustau_peninsula",
+                "barbadillo_principe_de_barbadillo",
+                "valdespino_palo_cortado_viejo",
+                "gonzalez_byass_apostoles_palo_cortado"
+              ]
             },
             "fortifiedwine_sherry_cream": {
               "id": "fortifiedwine_sherry_cream",
               "checked": false,
               "childIDs": [],
-              "children": {}
+              "children": {},
+              "bottleIDs": [
+                "williams_humbert_dry_sack",
+                "lustau_east_india_solera"
+              ]
             },
             "fortifiedwine_sherry_eastindia": {
               "id": "fortifiedwine_sherry_eastindia",
@@ -2043,19 +2399,35 @@
               "id": "fortifiedwine_sherry_fino",
               "checked": false,
               "childIDs": [],
-              "children": {}
+              "children": {},
+              "bottleIDs": [
+                "gonzalez_byass_tio_pepe",
+                "lustau_jarana"
+              ]
             },
             "fortifiedwine_sherry_manzanilla": {
               "id": "fortifiedwine_sherry_manzanilla",
               "checked": false,
               "childIDs": [],
-              "children": {}
+              "children": {},
+              "bottleIDs": [
+                "hidalgo_la_gitana",
+                "equipo_navazos_i_think_manzanilla_en_rama",
+                "lustau_papirusa",
+                "bodegas_yuste_aurora"
+              ]
             },
             "fortifiedwine_sherry_oloroso": {
               "id": "fortifiedwine_sherry_oloroso",
               "checked": false,
               "childIDs": [],
-              "children": {}
+              "children": {},
+              "bottleIDs": [
+                "gonzales_byass_nectar",
+                "hidalgo_gobernador",
+                "gonzalez_byass_matusalem_oloroso",
+                "gutierrez_colosia_oloroso"
+              ]
             },
             "fortifiedwine_sherry_palecream": {
               "id": "fortifiedwine_sherry_palecream",
@@ -2081,7 +2453,13 @@
           "id": "fortifiedwine_sweetvermouth",
           "checked": false,
           "childIDs": [],
-          "children": {}
+          "children": {},
+          "bottleIDs": [
+            "dolin_rouge",
+            "punt_e_mes",
+            "cocchi_vermouth_di_torino",
+            "carpano_antica_formula"
+          ]
         }
       }
     },
@@ -2100,7 +2478,14 @@
           "id": "grain_aquavit",
           "checked": false,
           "childIDs": [],
-          "children": {}
+          "children": {},
+          "bottleIDs": [
+            "krogstad_aquavit",
+            "svol_swedish_style_aquavit",
+            "linie_aquavit",
+            "gamle_ode_dill_aquavit",
+            "brennivin_aquavit"
+          ]
         },
         "grain_gin": {
           "id": "grain_gin",
@@ -2118,7 +2503,15 @@
               "id": "grain_gin_contemporary",
               "checked": false,
               "childIDs": [],
-              "children": {}
+              "children": {},
+              "bottleIDs": [
+                "bimini",
+                "monkey_47",
+                "suntory_roku",
+                "st_george_dry_rye",
+                "st_george_terroir",
+                "four_pillars_navy_strength"
+              ]
             },
             "grain_gin_genever": {
               "id": "grain_gin_genever",
@@ -2130,19 +2523,34 @@
               "id": "grain_gin_londondry",
               "checked": false,
               "childIDs": [],
-              "children": {}
+              "children": {},
+              "bottleIDs": [
+                "beefeater",
+                "tanqueray",
+                "fords",
+                "brokers_gin",
+                "tanqueray_10",
+                "perrys_tot_navy_strength",
+                "old_raj_110proof"
+              ]
             },
             "grain_gin_oldtom": {
               "id": "grain_gin_oldtom",
               "checked": false,
               "childIDs": [],
-              "children": {}
+              "children": {},
+              "bottleIDs": [
+                "greenhook_ginsmiths_old_tom"
+              ]
             },
             "grain_gin_plymouth": {
               "id": "grain_gin_plymouth",
               "checked": false,
               "childIDs": [],
-              "children": {}
+              "children": {},
+              "bottleIDs": [
+                "plymouth"
+              ]
             },
             "grain_gin_sloe": {
               "id": "grain_gin_sloe",
@@ -2156,7 +2564,10 @@
           "id": "grain_shochu",
           "checked": false,
           "childIDs": [],
-          "children": {}
+          "children": {},
+          "bottleIDs": [
+            "st_george_california_rice_shochu"
+          ]
         },
         "grain_vodka": {
           "id": "grain_vodka",
@@ -2180,31 +2591,60 @@
               "id": "grain_whiskey_bourbon",
               "checked": false,
               "childIDs": [],
-              "children": {}
+              "children": {},
+              "bottleIDs": [
+                "buffalo_trace",
+                "elijah_craig_small_batch",
+                "old_forester_signature",
+                "russells_reserve_10year",
+                "old_granddad_114"
+              ]
             },
             "grain_whiskey_indian": {
               "id": "grain_whiskey_indian",
               "checked": false,
               "childIDs": [],
-              "children": {}
+              "children": {},
+              "bottleIDs": [
+                "amrut_caskstrength_single_malt_indian_whisky",
+                "navazos_palazzi_overseas_malt_whiskey"
+              ]
             },
             "grain_whiskey_irish": {
               "id": "grain_whiskey_irish",
               "checked": false,
               "childIDs": [],
-              "children": {}
+              "children": {},
+              "bottleIDs": [
+                "tyrconnel",
+                "jameson_irish_whiskey",
+                "redbreast_12year",
+                "connemara_peated"
+              ]
             },
             "grain_whiskey_japanese": {
               "id": "grain_whiskey_japanese",
               "checked": false,
               "childIDs": [],
-              "children": {}
+              "children": {},
+              "bottleIDs": [
+                "hibiki_japanese_harmony",
+                "suntory_toki"
+              ]
             },
             "grain_whiskey_rye": {
               "id": "grain_whiskey_rye",
               "checked": false,
               "childIDs": [],
-              "children": {}
+              "children": {},
+              "bottleIDs": [
+                "old_overholt",
+                "wild_turkey",
+                "rittenhouse",
+                "george_dickel",
+                "pikesville",
+                "high_west_silver_oat"
+              ]
             },
             "grain_whiskey_scotch": {
               "id": "grain_whiskey_scotch",
@@ -2221,7 +2661,15 @@
                   "id": "grain_whiskey_scotch_blended",
                   "checked": false,
                   "childIDs": [],
-                  "children": {}
+                  "children": {},
+                  "bottleIDs": [
+                    "dewers",
+                    "famous_grouse",
+                    "compass_box_great_king_street_glasgow",
+                    "street_pumas_blended_scotch",
+                    "monkey_shoulder_blended_malt",
+                    "great_king_st_glasgow_blend"
+                  ]
                 },
                 "grain_whiskey_scotch_campbeltown": {
                   "id": "grain_whiskey_scotch_campbeltown",
@@ -2247,7 +2695,15 @@
                   "childIDs": [],
                   "children": {}
                 }
-              }
+              },
+              "bottleIDs": [
+                "bunnahabhain",
+                "springbank_10year",
+                "kilkerran_12year",
+                "highland_park_12year",
+                "bowmore_12year",
+                "laphroaig_10year"
+              ]
             }
           }
         }
@@ -2314,7 +2770,11 @@
           "id": "liqueur_absinthe",
           "checked": false,
           "childIDs": [],
-          "children": {}
+          "children": {},
+          "bottleIDs": [
+            "kubler_absinthe_superieure",
+            "herbsaint"
+          ]
         },
         "liqueur_allspice": {
           "id": "liqueur_allspice",
@@ -2326,7 +2786,10 @@
           "id": "liqueur_aloe",
           "checked": false,
           "childIDs": [],
-          "children": {}
+          "children": {},
+          "bottleIDs": [
+            "chareau_aloe_liqueur"
+          ]
         },
         "liqueur_amaretto": {
           "id": "liqueur_amaretto",
@@ -2352,49 +2815,90 @@
               "id": "liqueur_amaro_alpine",
               "checked": false,
               "childIDs": [],
-              "children": {}
+              "children": {},
+              "bottleIDs": [
+                "braulio_amaro"
+              ]
             },
             "liqueur_amaro_aperitivo": {
               "id": "liqueur_amaro_aperitivo",
               "checked": false,
               "childIDs": [],
-              "children": {}
+              "children": {},
+              "bottleIDs": [
+                "aperol",
+                "campari",
+                "suze",
+                "salers_gentien_aperitif",
+                "st_george_bruto_americano"
+              ]
             },
             "liqueur_amaro_carciofo": {
               "id": "liqueur_amaro_carciofo",
               "checked": false,
               "childIDs": [],
-              "children": {}
+              "children": {},
+              "bottleIDs": [
+                "cynar"
+              ]
             },
             "liqueur_amaro_dense": {
               "id": "liqueur_amaro_dense",
               "checked": false,
               "childIDs": [],
-              "children": {}
+              "children": {},
+              "bottleIDs": [
+                "luxardo_amaro_albano",
+                "fernetvallet",
+                "forthave_spirits_marseille"
+              ]
             },
             "liqueur_amaro_fernet": {
               "id": "liqueur_amaro_fernet",
               "checked": false,
               "childIDs": [],
-              "children": {}
+              "children": {},
+              "bottleIDs": [
+                "fernet_vittone",
+                "fernetbranca"
+              ]
             },
             "liqueur_amaro_light": {
               "id": "liqueur_amaro_light",
               "checked": false,
               "childIDs": [],
-              "children": {}
+              "children": {},
+              "bottleIDs": [
+                "amaro_meletti",
+                "amaro_montenegro",
+                "amaro_nonino_quintessentia",
+                "lofi_gentian_amaro"
+              ]
             },
             "liqueur_amaro_medium": {
               "id": "liqueur_amaro_medium",
               "checked": false,
               "childIDs": [],
-              "children": {}
+              "children": {},
+              "bottleIDs": [
+                "amaro_averna",
+                "amaro_ciociaro",
+                "bigallet_chinachina_amer",
+                "ramazzotti",
+                "cappelletti_pasubio_vino_amaro",
+                "amaro_di_angostura",
+                "amaro_nardini"
+              ]
             },
             "liqueur_amaro_rabarbaro": {
               "id": "liqueur_amaro_rabarbaro",
               "checked": false,
               "childIDs": [],
-              "children": {}
+              "children": {},
+              "bottleIDs": [
+                "capalleti_amaro_sfumato",
+                "zucca"
+              ]
             }
           }
         },
@@ -2402,19 +2906,30 @@
           "id": "liqueur_anchochile",
           "checked": false,
           "childIDs": [],
-          "children": {}
+          "children": {},
+          "bottleIDs": [
+            "ancho_reyes_ancho_chile_liqueur",
+            "ancho_reyes_ancho_verde_liqueur"
+          ]
         },
         "liqueur_apricot": {
           "id": "liqueur_apricot",
           "checked": false,
           "childIDs": [],
-          "children": {}
+          "children": {},
+          "bottleIDs": [
+            "giffard_abricot_du_roussillon",
+            "rothman_winter_orchard_apricot_liqueur"
+          ]
         },
         "liqueur_banana": {
           "id": "liqueur_banana",
           "checked": false,
           "childIDs": [],
-          "children": {}
+          "children": {},
+          "bottleIDs": [
+            "giffard_banane_du_bresil"
+          ]
         },
         "liqueur_basil": {
           "id": "liqueur_basil",
@@ -2426,7 +2941,10 @@
           "id": "liqueur_bergamot",
           "checked": false,
           "childIDs": [],
-          "children": {}
+          "children": {},
+          "bottleIDs": [
+            "italicus_rosolio_bergamot_liqueur"
+          ]
         },
         "liqueur_biscotti": {
           "id": "liqueur_biscotti",
@@ -2438,13 +2956,21 @@
           "id": "liqueur_blackberry",
           "checked": false,
           "childIDs": [],
-          "children": {}
+          "children": {},
+          "bottleIDs": [
+            "leopold_bros_rocky_mountain_blackberry_liqueur",
+            "giffard_creme_de_mure"
+          ]
         },
         "liqueur_cherry": {
           "id": "liqueur_cherry",
           "checked": false,
           "childIDs": [],
-          "children": {}
+          "children": {},
+          "bottleIDs": [
+            "leopold_bros_michigan_tart_cherry_liqueur",
+            "rothman_winter_orchard_cherry_liqueur"
+          ]
         },
         "liqueur_cherryheering": {
           "id": "liqueur_cherryheering",
@@ -2456,13 +2982,20 @@
           "id": "liqueur_coconut",
           "checked": false,
           "childIDs": [],
-          "children": {}
+          "children": {},
+          "bottleIDs": [
+            "kalani_ron_de_coco_coconut_liqueur"
+          ]
         },
         "liqueur_coffeebean": {
           "id": "liqueur_coffeebean",
           "checked": false,
           "childIDs": [],
-          "children": {}
+          "children": {},
+          "bottleIDs": [
+            "galliano_ristretto",
+            "bittermens_new_orleans_coffee_liqueur"
+          ]
         },
         "liqueur_cranberry": {
           "id": "liqueur_cranberry",
@@ -2474,25 +3007,40 @@
           "id": "liqueur_cremedecacao",
           "checked": false,
           "childIDs": [],
-          "children": {}
+          "children": {},
+          "bottleIDs": [
+            "marie_brizard_white_creme_de_cacao",
+            "giffard_white_creme_de_cacao"
+          ]
         },
         "liqueur_cremedecassis": {
           "id": "liqueur_cremedecassis",
           "checked": false,
           "childIDs": [],
-          "children": {}
+          "children": {},
+          "bottleIDs": [
+            "lejay_creme_de_cassis_de_dijon"
+          ]
         },
         "liqueur_cremedementhe": {
           "id": "liqueur_cremedementhe",
           "checked": false,
           "childIDs": [],
-          "children": {}
+          "children": {},
+          "bottleIDs": [
+            "giffard_menthepastille",
+            "tempus_fugit_creme_de_menthe"
+          ]
         },
         "liqueur_cremedeviolette": {
           "id": "liqueur_cremedeviolette",
           "checked": false,
           "childIDs": [],
-          "children": {}
+          "children": {},
+          "bottleIDs": [
+            "giffard_creme_de_violette",
+            "rothman_winter_creme_de_violette"
+          ]
         },
         "liqueur_elderflower": {
           "id": "liqueur_elderflower",
@@ -2510,31 +3058,59 @@
           "id": "liqueur_fennel",
           "checked": false,
           "childIDs": [],
-          "children": {}
+          "children": {},
+          "bottleIDs": [
+            "don_ciccio_figli_finocchietto_fennel_liqueur"
+          ]
         },
         "liqueur_fir": {
           "id": "liqueur_fir",
           "checked": false,
           "childIDs": [],
-          "children": {}
+          "children": {},
+          "bottleIDs": [
+            "emile_pernot_liqueur_de_sapin"
+          ]
         },
         "liqueur_grapefruit": {
           "id": "liqueur_grapefruit",
           "checked": false,
           "childIDs": [],
-          "children": {}
+          "children": {},
+          "bottleIDs": [
+            "giffard_creme_de_pamplemousse_rose"
+          ]
         },
         "liqueur_habanero": {
           "id": "liqueur_habanero",
           "checked": false,
           "childIDs": [],
-          "children": {}
+          "children": {},
+          "bottleIDs": [
+            "empirical_spirits_habanero_spirit"
+          ]
         },
         "liqueur_herbal": {
           "id": "liqueur_herbal",
           "checked": false,
           "childIDs": [],
-          "children": {}
+          "children": {},
+          "bottleIDs": [
+            "chareau_california_aloe_liqueur",
+            "sapins",
+            "benedictine",
+            "yellow_chartreuse",
+            "strega",
+            "galliano_lauthentico",
+            "green_chartreuse",
+            "stgermain_elderflower_liqueur",
+            "licor_43",
+            "drambuie",
+            "bigallet_thyme_liqueur",
+            "dolin_genepy_des_alpes",
+            "st_elizabeth_allspice_dram",
+            "john_d_taylors_velvet_falernum"
+          ]
         },
         "liqueur_hibiscus": {
           "id": "liqueur_hibiscus",
@@ -2558,7 +3134,10 @@
           "id": "liqueur_macadamia",
           "checked": false,
           "childIDs": [],
-          "children": {}
+          "children": {},
+          "bottleIDs": [
+            "trader_vics_macadamia_nut_liqueur"
+          ]
         },
         "liqueur_mandarine": {
           "id": "liqueur_mandarine",
@@ -2570,7 +3149,10 @@
           "id": "liqueur_maraschino",
           "checked": false,
           "childIDs": [],
-          "children": {}
+          "children": {},
+          "bottleIDs": [
+            "luxardo_maraschino_liqueur"
+          ]
         },
         "liqueur_orange": {
           "id": "liqueur_orange",
@@ -2583,33 +3165,58 @@
               "id": "liqueur_orange_bluecuracao",
               "checked": false,
               "childIDs": [],
-              "children": {}
+              "children": {},
+              "bottleIDs": [
+                "giffard_blue_curacao_liqueur"
+              ]
             }
-          }
+          },
+          "bottleIDs": [
+            "cointreau",
+            "grand_marinier",
+            "pierre_ferrand_dry_curacao",
+            "rhum_clement_creole_shrubb"
+          ]
         },
         "liqueur_passionfruit": {
           "id": "liqueur_passionfruit",
           "checked": false,
           "childIDs": [],
-          "children": {}
+          "children": {},
+          "bottleIDs": [
+            "giffard_creme_de_fruits_de_la_passion"
+          ]
         },
         "liqueur_peach": {
           "id": "liqueur_peach",
           "checked": false,
           "childIDs": [],
-          "children": {}
+          "children": {},
+          "bottleIDs": [
+            "massenez_creme_de_peche_peach_liqueur",
+            "giffard_creme_peche_de_vigne",
+            "mathilde_peche",
+            "combier_peche_de_vigne_liqueur"
+          ]
         },
         "liqueur_pear": {
           "id": "liqueur_pear",
           "checked": false,
           "childIDs": [],
-          "children": {}
+          "children": {},
+          "bottleIDs": [
+            "mathilde_poire_pear_liqueur",
+            "st_george_spiced_pear_liqueur"
+          ]
         },
         "liqueur_pine": {
           "id": "liqueur_pine",
           "checked": false,
           "childIDs": [],
-          "children": {}
+          "children": {},
+          "bottleIDs": [
+            "zirbenz_stone_pine_liqueur"
+          ]
         },
         "liqueur_pineapple": {
           "id": "liqueur_pineapple",
@@ -2621,13 +3228,20 @@
           "id": "liqueur_raspberry",
           "checked": false,
           "childIDs": [],
-          "children": {}
+          "children": {},
+          "bottleIDs": [
+            "st_george_raspberry_liqueur",
+            "pasquet_marieframboise"
+          ]
         },
         "liqueur_rhubarb": {
           "id": "liqueur_rhubarb",
           "checked": false,
           "childIDs": [],
-          "children": {}
+          "children": {},
+          "bottleIDs": [
+            "giffard_rhubarb_liqueur"
+          ]
         },
         "liqueur_rich": {
           "id": "liqueur_rich",
@@ -2639,7 +3253,10 @@
           "id": "liqueur_rose",
           "checked": false,
           "childIDs": [],
-          "children": {}
+          "children": {},
+          "bottleIDs": [
+            "combier_creme_de_rose"
+          ]
         },
         "liqueur_rosemary": {
           "id": "liqueur_rosemary",
@@ -2651,7 +3268,10 @@
           "id": "liqueur_sourapple",
           "checked": false,
           "childIDs": [],
-          "children": {}
+          "children": {},
+          "bottleIDs": [
+            "leopold_bros_new_york_sour_apple_liqueur"
+          ]
         },
         "liqueur_strawberry": {
           "id": "liqueur_strawberry",
@@ -2675,13 +3295,19 @@
           "id": "liqueur_walnut",
           "checked": false,
           "childIDs": [],
-          "children": {}
+          "children": {},
+          "bottleIDs": [
+            "nux_alpina_walnut_liqueur"
+          ]
         },
         "liqueur_yuzu": {
           "id": "liqueur_yuzu",
           "checked": false,
           "childIDs": [],
-          "children": {}
+          "children": {},
+          "bottleIDs": [
+            "umenoyado_yuzu_shu_liqueur"
+          ]
         }
       }
     },

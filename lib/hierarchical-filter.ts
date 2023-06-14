@@ -7,12 +7,17 @@ export interface HierarchicalFilter {
   checked: CheckedState
   childIDs: string[]
   children: Record<string, HierarchicalFilter>
+  bottleIDs?: string[]
 }
 
 export const getHierarchicalFilterItem = (
   root: HierarchicalFilter,
   path: string[]
-) => path.reduce((acc, id) => acc.children[id], root)
+): HierarchicalFilter | undefined =>
+  path.reduce<HierarchicalFilter | undefined>(
+    (acc, id) => acc?.children[id],
+    root
+  )
 
 export const updateHierarchicalFilter = curry(
   (path: string[], checked: CheckedState, root: HierarchicalFilter) => {
@@ -63,7 +68,7 @@ function setChecked(checked: CheckedState, item?: HierarchicalFilter) {
 function updateAncestors(root: HierarchicalFilter, path: string[]): void {
   if (path.length === 0) return
   const parentPath = path.slice(0, path.length - 1)
-  const item = getHierarchicalFilterItem(root, parentPath)
+  const item = getHierarchicalFilterItem(root, parentPath)!
   const checked = item.children[item.childIDs[0]].checked
   if (checked === 'indeterminate') {
     item.checked = 'indeterminate'

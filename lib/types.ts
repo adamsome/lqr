@@ -1,4 +1,4 @@
-import { Aging, Category, ProductionMethod } from '@/lib/consts'
+import { Aging, Category, ProductionMethod } from '@/lib/generated-consts'
 import { HierarchicalFilter } from '@/lib/hierarchical-filter'
 
 export interface StaticData {
@@ -86,3 +86,5 @@ export interface Spec {
   source?: string
   sourcePage?: number
 }
+
+export type Option<T> = { label: string; value: T }

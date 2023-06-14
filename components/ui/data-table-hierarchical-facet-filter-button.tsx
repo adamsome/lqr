@@ -16,6 +16,10 @@ import {
   CommandSeparator,
 } from '@/components/ui/command'
 import {
+  HierarchicalCommandList,
+  SelectOptions,
+} from '@/components/ui/hierarchical-command-list'
+import {
   Popover,
   PopoverContent,
   PopoverTrigger,
@@ -55,21 +59,21 @@ export function DataTableHierarchicalFacetFilterButton<TData, TValue>({
   const filterValue = column?.getFilterValue() as HierarchicalFilter
   const selected = filterValue ?? root
 
-  const { checked, childIDs, children } = selected
+  const { checked } = selected
 
   const selectedPaths = useMemo(() => {
     return getHierarchicalSelectedPaths(selected, { facets })
   }, [selected, facets])
 
-  function handleSelect(path: string[], state: CheckedState) {
+  function handleSelect({ path, checked = false }: SelectOptions) {
     let nextState: CheckedState
     if (!path.length) {
-      if (state) {
+      if (checked) {
         return column?.setFilterValue(undefined)
       }
-      nextState = state ? false : true
+      nextState = checked ? false : true
     } else {
-      nextState = invertCheckedState(state)
+      nextState = invertCheckedState(checked)
     }
     const nextFilter = produce(
       selected,
@@ -132,94 +136,24 @@ export function DataTableHierarchicalFacetFilterButton<TData, TValue>({
           >
             <CommandEmpty>No results found.</CommandEmpty>
             <CommandGroup>
-              <CommandItem onSelect={() => handleSelect([], checked)}>
+              <CommandItem onSelect={() => handleSelect({ path: [], checked })}>
                 <Checkbox className="mr-2" checked={checked} />
                 <span>{checked ? 'Clear All' : 'Select All'}</span>
               </CommandItem>
             </CommandGroup>
             <CommandSeparator />
-            <CommandGroup>
-              {childIDs.map((id) => (
-                <Item
-                  key={id}
-                  item={children[id]}
-                  path={[]}
-                  facets={facets}
-                  search={search}
-                  renderName={renderName}
-                  getName={getName}
-                  onSelect={handleSelect}
-                />
-              ))}
-            </CommandGroup>
+            <HierarchicalCommandList
+              root={selected}
+              facets={facets}
+              hasSearch={Boolean(search)}
+              showCheckbox
+              getName={getName}
+              renderName={renderName}
+              onSelect={handleSelect}
+            />
           </CommandList>
         </Command>
       </PopoverContent>
     </Popover>
-  )
-}
-
-type ItemProps = {
-  item: HierarchicalFilter
-  path: string[]
-  search: string
-  facets?: Map<any, number>
-  renderName(path: string[], full?: boolean): ReactNode
-  getName(path: string[], options?: { full?: boolean }): string
-  onSelect(path: string[], state: CheckedState): void
-}
-
-function Item(props: ItemProps) {
-  const { item, path: prevPath = [], ...rest } = props
-  const { id, childIDs, children } = item
-  const path = [...prevPath, id]
-
-  return (
-    <>
-      <ItemContent {...props} />
-      {childIDs.map((childID) => (
-        <Item {...rest} key={childID} item={children[childID]} path={path} />
-      ))}
-    </>
-  )
-}
-
-function ItemContent({
-  item,
-  path: prevPath = [],
-  search,
-  facets,
-  renderName,
-  getName,
-  onSelect,
-}: ItemProps) {
-  const { id, checked } = item
-
-  const count = facets?.get(id)
-  if (!count) return null
-
-  const level = prevPath.length
-  const path = [...prevPath, id]
-
-  return (
-    <CommandItem
-      value={getName(path, { full: true })}
-      onSelect={() => onSelect(path, checked)}
-    >
-      <Checkbox
-        className={cn('mr-2', {
-          'ml-6': !search && level === 1,
-          'ml-12': !search && level === 2,
-          'ml-18': !search && level >= 3,
-        })}
-        checked={checked}
-      />
-      <span>{renderName(path, Boolean(search))}</span>
-      {count && (
-        <span className="ml-auto flex h-4 w-4 items-center justify-center font-mono text-xs">
-          {count}
-        </span>
-      )}
-    </CommandItem>
   )
 }

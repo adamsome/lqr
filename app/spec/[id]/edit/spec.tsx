@@ -6,7 +6,7 @@ import { useFieldArray, useForm } from 'react-hook-form'
 import * as z from 'zod'
 
 import { Ingredient } from '@/app/spec/[id]/edit/ingredient'
-import { IngredientSelect } from '@/app/spec/[id]/edit/ingredient-select'
+import { IngredientCommandDialogButton } from '@/components/ingredient-command/ingredient-command-dialog-button'
 import { Button, Props as ButtonProps } from '@/components/ui/button'
 import {
   Form,
@@ -81,7 +81,7 @@ export function Spec({ spec }: Props) {
                 <FormItem className="[grid-area:title]">
                   <FormControl>
                     <Input
-                      className="text-xl"
+                      className="text-xl font-bold"
                       placeholder="Name..."
                       {...field}
                     />
@@ -150,7 +150,7 @@ export function Spec({ spec }: Props) {
               </div>
             </div>
             <div>
-              <IngredientSelect
+              <IngredientCommandDialogButton
                 variant="secondary"
                 openOnKey={(e) => (e.metaKey || e.ctrlKey) && e.key === 'j'}
                 onSelect={append}
@@ -161,7 +161,7 @@ export function Spec({ spec }: Props) {
                     <span className="text-xs">⌘</span>J
                   </kbd>
                 </p>
-              </IngredientSelect>
+              </IngredientCommandDialogButton>
             </div>
           </div>
         </form>

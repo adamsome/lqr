@@ -1,4 +1,4 @@
-import { IngredientSelect } from '@/app/spec/[id]/edit/ingredient-select'
+import { IngredientCommandDialogButton } from '@/components/ingredient-command/ingredient-command-dialog-button'
 import { useData } from '@/components/data-provider'
 import { Button } from '@/components/ui/button'
 import { useGetIngredientName } from '@/hooks/use-get-ingredient-name'
@@ -67,13 +67,17 @@ export function Ingredient({
             {category}
           </div>
         )}
-        <IngredientSelect variant="secondary" size="xs" onSelect={onUpdate}>
+        <IngredientCommandDialogButton
+          variant="secondary"
+          size="xs"
+          onSelect={onUpdate}
+        >
           <div className="flex items-baseline gap-1.5">
             {amount[0] && <span>{amount[0]}</span>}
             <span>{name}</span>
             {amount[1] && <span>{amount[1]}</span>}
           </div>
-        </IngredientSelect>
+        </IngredientCommandDialogButton>
       </div>
       <Button className="text-muted-foreground" variant="secondary" size="xs">
         <X size={12} onClick={onRemove} />

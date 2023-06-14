@@ -1,6 +1,6 @@
 import { curry } from 'ramda'
 
-import { CATEGORY_DICT, Category } from '@/lib/consts'
+import { CATEGORY_DICT, Category } from '@/lib/generated-consts'
 import { IngredientDef } from '@/lib/types'
 
 export const getIngredientPathName = curry(

@@ -1,6 +1,10 @@
 import { curry } from 'ramda'
 
-import { AGING_DICT, Category, PRODUCTION_METHOD_DICT } from '@/lib/consts'
+import {
+  AGING_DICT,
+  Category,
+  PRODUCTION_METHOD_DICT,
+} from '@/lib/generated-consts'
 import { getIngredientDefs } from '@/lib/ingredient/get-ingredient-defs'
 import { Ingredient, IngredientDef, SpecIngredient } from '@/lib/types'
 
@@ -176,11 +180,20 @@ export const getIngredientName = curry(
         return 'Blackstrap Rum'
       }
       if (id === 'cane_rum_agricole' && productionMethod !== 'coffey') {
-        if (aging?.includes('medium') || aging?.includes('long')) {
-          return 'Rhum Agricole Vieux'
-        }
-        if (aging?.includes('none')) {
-          return 'Rhum Agricole Blanc'
+        if (productionMethod === 'pot') {
+          if (aging?.includes('medium') || aging?.includes('long')) {
+            return 'Cane Pot Still Aged Agricole Rum'
+          }
+          if (aging?.includes('none')) {
+            return 'Cane Pot Still Unaged Agricole Rum'
+          }
+        } else {
+          if (aging?.includes('medium') || aging?.includes('long')) {
+            return 'Rhum Agricole Vieux'
+          }
+          if (aging?.includes('none')) {
+            return 'Rhum Agricole Blanc'
+          }
         }
       }
     }
@@ -199,7 +212,8 @@ export const getIngredientName = curry(
     }
     if (prependAgingPaths.includes(path)) {
       if (aging.length) {
-        prefixes.push(AGING_DICT[aging[0]].name)
+        const mid = aging[Math.floor((aging.length - 1) / 2)]
+        prefixes.push(AGING_DICT[mid].name)
       }
     }
     if (prependOverproofPaths.includes(path)) {
