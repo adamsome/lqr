@@ -38,6 +38,7 @@ export type Ingredient = IngredientDef & {
 }
 
 export interface User {
+  id: string
   username: string
   ingredients: Record<string, Partial<IngredientDef>>
   admin?: boolean
@@ -79,6 +80,7 @@ export interface SpecIngredient extends Amount {
 export interface Spec {
   id: string
   name: string
+  userID: string
   username: string
   updatedAt: string
   createdAt: string

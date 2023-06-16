@@ -419,6 +419,7 @@ export function parseSpecs() {
         specs[id] = {
           id,
           name,
+          userID: 'user_2QaSdLhpL7dMcmD999SKB2teEIM',
           username: 'adamsome',
           updatedAt: now,
           createdAt: now,
