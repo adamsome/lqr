@@ -9,7 +9,7 @@ export async function PUT(req: NextRequest) {
   await db
     .collection<OptionalUnlessRequiredId<User>>('user')
     .updateOne(
-      { username: 'adamb' },
+      { username: 'adamsome' },
       { $set: { [`ingredients.${ingredientID}.stock`]: stock } }
     )
 

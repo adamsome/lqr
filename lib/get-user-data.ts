@@ -11,7 +11,7 @@ export async function getUserData(): Promise<
   const { db } = await connectToDatabase()
   const user = await db
     .collection<OptionalUnlessRequiredId<User>>('user')
-    .findOne({ username: 'adamb' })
+    .findOne({ username: 'adamsome' })
   if (user) {
     delete (user as OptionalId<WithId<User>>)._id
   }
