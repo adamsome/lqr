@@ -1,5 +1,5 @@
 import { CheckedState } from '@radix-ui/react-checkbox'
-import { ReactNode } from 'react'
+import { Fragment, ReactNode } from 'react'
 
 import { Checkbox } from '@/components/ui/checkbox'
 import {
@@ -37,10 +37,9 @@ export function HierarchicalCommandList({ root, ...props }: Props) {
     return (
       <>
         {childIDs.map((groupID, i) => (
-          <>
+          <Fragment key={groupID}>
             {i > 0 && <CommandSeparator />}
             <CommandGroup
-              key={groupID}
               className="[&_[cmdk-group-heading]]:opacity-75"
               heading={renderName([groupID])}
             >
@@ -50,7 +49,7 @@ export function HierarchicalCommandList({ root, ...props }: Props) {
                 return <Item key={id} root={child} path={path} {...props} />
               })}
             </CommandGroup>
-          </>
+          </Fragment>
         ))}
       </>
     )

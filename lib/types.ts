@@ -87,7 +87,7 @@ export interface Spec {
   category: SpecCategory
   ingredients: SpecIngredient[]
   glass?: GlassType
-  mix: MixType
+  mix?: MixType
   notes?: string
   author?: string
   bar?: string

@@ -2,6 +2,8 @@
 
 import { zodResolver } from '@hookform/resolvers/zod'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
+import { useState } from 'react'
 import { useFieldArray, useForm } from 'react-hook-form'
 import * as z from 'zod'
 
@@ -16,12 +18,13 @@ import {
   FormLabel,
   FormMessage,
 } from '@/components/ui/form'
+import { FullScreen } from '@/components/ui/full-screen'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { specSchema } from '@/lib/schema/spec'
 import { Spec, SpecIngredient } from '@/lib/types'
 import { cn } from '@/lib/utils'
-import { FullScreen } from '@/components/ui/full-screen'
+import { useRefresh } from '@/hooks/use-refresh'
 
 type Schema = z.infer<typeof specSchema>
 
@@ -30,6 +33,9 @@ type Props = {
 }
 
 export function Spec({ spec }: Props) {
+  const router = useRouter()
+  const { refresh } = useRefresh()
+  const [fetching, setFetching] = useState(false)
   const { id, name, ingredients, source, sourcePage } = spec
 
   const form = useForm<Schema>({
@@ -47,15 +53,27 @@ export function Spec({ spec }: Props) {
     keyName: 'uuid',
   })
 
-  function onSubmit(values: Schema) {
-    console.log('save', values)
+  async function handleSubmit(values: Schema) {
+    setFetching(true)
+    const updatedAt = new Date().toISOString()
+    const change: Spec = { ...spec, ...(values as Spec), updatedAt }
+    try {
+      await fetch(`/api/specs/${id}`, {
+        method: 'PUT',
+        body: JSON.stringify({ spec: change }),
+      })
+    } catch (err: any) {
+      console.error(`Error updating spec '${name}'`, err?.data ?? err)
+    }
+    refresh()
+    router.push(`/spec/${id}`)
   }
 
   return (
     <FullScreen onlySm>
       <Form {...form}>
         <form
-          onSubmit={form.handleSubmit(onSubmit)}
+          onSubmit={form.handleSubmit(handleSubmit)}
           className="flex flex-col gap-6 py-4 md:py-6"
         >
           <div
@@ -72,7 +90,9 @@ export function Spec({ spec }: Props) {
                   <p className="text-muted-foreground">Cancel</p>
                 </Link>
               </ResponsizeButton>
-              <ResponsizeButton type="submit">Submit</ResponsizeButton>
+              <ResponsizeButton disabled={fetching} type="submit">
+                Submit
+              </ResponsizeButton>
             </div>
             <FormField
               control={form.control}

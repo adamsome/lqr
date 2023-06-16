@@ -127,6 +127,7 @@ export function IngredientCommandDialogButton({
     <>
       <Button
         {...props}
+        type="button"
         onClick={(e) => {
           setOpen(!open)
           onClick?.(e)
