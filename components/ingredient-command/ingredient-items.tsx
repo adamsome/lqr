@@ -1,18 +1,21 @@
+import { useIngredientsByKind } from '@/components/ingredient-command/use-ingredients-by-kind'
 import {
   CommandGroup,
   CommandItem,
   CommandSeparator,
 } from '@/components/ui/command'
 import { useGetIngredientName } from '@/hooks/use-get-ingredient-name'
+import { IngredientKind } from '@/lib/ingredient/kind'
 import { SpecIngredient } from '@/lib/types'
 
 type Props = {
-  ingredients: SpecIngredient[]
+  kind?: IngredientKind
   onSelect(ingredient: SpecIngredient): void
 }
 
-export function IngredientItems({ ingredients, onSelect }: Props) {
+export function IngredientItems({ kind, onSelect }: Props) {
   const getName = useGetIngredientName()
+  const ingredients = useIngredientsByKind(kind)
   return (
     <CommandGroup>
       {ingredients.map((it, i) => {

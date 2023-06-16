@@ -1,27 +1,11 @@
-import { KeyboardEvent, useEffect, useState } from 'react'
+import { KeyboardEvent, useEffect } from 'react'
 
-import { AmountItems } from '@/components/ingredient-command/amount-items'
-import { IngredientItems } from '@/components/ingredient-command/ingredient-items'
-import { RumItems } from '@/components/ingredient-command/rum-items'
-import { SpiritItems } from '@/components/ingredient-command/spirit-items'
-import { useIngredientsByKind } from '@/components/ingredient-command/use-ingredients-by-kind'
-import { Button, Props as ButtonProps } from '@/components/ui/button'
-import {
-  CommandDialog,
-  CommandEmpty,
-  CommandGroup,
-  CommandInput,
-  CommandItem,
-  CommandList,
-  CommandSeparator,
-} from '@/components/ui/command'
-import { INGREDIENT_KINDS, IngredientKind } from '@/lib/ingredient/kind'
-import { Amount, SpecIngredient } from '@/lib/types'
-import { cn } from '@/lib/utils'
-import { Dialog, DialogContent } from '@/components/ui/dialog'
 import { CustomDialog } from '@/components/ingredient-command/custom-dialog'
-
-type Special = 'allSpirits' | 'rum'
+import { IngredientCommand } from '@/components/ingredient-command/ingredient-command'
+import { useIngredientCommandReducer } from '@/components/ingredient-command/reducer'
+import { Button, Props as ButtonProps } from '@/components/ui/button'
+import { CommandDialog } from '@/components/ui/command'
+import { Amount, SpecIngredient } from '@/lib/types'
 
 type Props = Omit<ButtonProps, 'onSelect'> & {
   openOnKey?: (e: globalThis.KeyboardEvent) => boolean
@@ -35,91 +19,36 @@ export function IngredientCommandDialogButton({
   onSelect,
   ...props
 }: Props) {
-  const byKind = useIngredientsByKind()
-
-  const [open, setOpen] = useState(false)
-  const [search, setSearch] = useState('')
-  const [kind, setKind] = useState<IngredientKind | undefined>(undefined)
-  const [ingredient, setIngredient] = useState<SpecIngredient | undefined>(
-    undefined
-  )
-  const [showSpecial, setShowSpecial] = useState<Special | undefined>(undefined)
-  const [openCustom, setOpenCustom] = useState(false)
+  const [state, dispatch] = useIngredientCommandReducer()
+  const { open, custom, search, ingredient } = state
 
   useEffect(() => {
     const down = (e: globalThis.KeyboardEvent) => {
-      if (openOnKey?.(e)) setOpen((open) => !open)
+      if (openOnKey?.(e)) dispatch({ type: 'toggleOpen' })
     }
     document.addEventListener('keydown', down)
     return () => document.removeEventListener('keydown', down)
-  }, [openOnKey])
-
-  function handleClose() {
-    setIngredient(undefined)
-    setKind(undefined)
-    setShowSpecial(undefined)
-    setSearch('')
-    setOpen(false)
-    setOpenCustom(false)
-  }
-
-  function handleSelectKind(value: IngredientKind) {
-    setKind(value)
-    setSearch('')
-  }
+  }, [openOnKey, dispatch])
 
   function handleDialogKey(e: KeyboardEvent<HTMLDivElement>) {
     if (e.key === 'Escape' || (e.key === 'Backspace' && !search)) {
       e.preventDefault()
-      if (search) {
-        setSearch('')
-      } else if (ingredient) {
-        setIngredient(undefined)
-      } else if (kind) {
-        if (showSpecial) {
-          setShowSpecial(undefined)
-        } else {
-          setKind(undefined)
-        }
-      } else {
-        handleClose()
-      }
+      dispatch({ type: 'back' })
     }
   }
 
-  function handleSelectAllSpirits() {
-    setSearch('')
-    setShowSpecial('allSpirits')
-  }
-
-  function handleSelectIngredient(it: SpecIngredient) {
-    setSearch('')
-    if (showSpecial !== 'rum' && it.id === 'cane_rum') {
-      return setShowSpecial('rum')
-    }
-    if (!kind) setKind('spirit')
-    setIngredient(it)
-  }
-
-  function handleSelectAmount(value: Amount) {
+  function handleSubmitAmount(value: Amount) {
     const { quantity, unit, usage } = value
     onSelect({ ...(ingredient ?? {}), quantity, unit, usage })
-    handleClose()
-  }
-
-  function handleSelectCustom() {
-    setOpen(false)
-    setOpenCustom(true)
-    setSearch('')
+    dispatch({ type: 'reset' })
   }
 
   function handleSubmitCustom(name: string) {
     if (name) {
       onSelect({ name })
-      handleClose()
+      dispatch({ type: 'reset' })
     } else {
-      setOpen(true)
-      setOpenCustom(false)
+      dispatch({ type: 'open' })
     }
   }
 
@@ -129,111 +58,24 @@ export function IngredientCommandDialogButton({
         {...props}
         type="button"
         onClick={(e) => {
-          setOpen(!open)
+          dispatch({ type: 'toggleOpen' })
           onClick?.(e)
         }}
       >
         {children}
       </Button>
-      <CustomDialog open={openCustom} onSubmit={handleSubmitCustom} />
+      <CustomDialog open={Boolean(custom)} onSubmit={handleSubmitCustom} />
       <CommandDialog
         open={open}
-        onOpenChange={setOpen}
+        onOpenChange={(value) => dispatch({ type: 'open', value })}
         onKeyDown={handleDialogKey}
       >
-        <CommandInput
-          placeholder="Type a command or search..."
-          value={search}
-          onValueChange={setSearch}
+        <IngredientCommand
+          state={state}
+          dispatch={dispatch}
+          submitAmount={handleSubmitAmount}
         />
-        <CommandList
-          className={cn(
-            '[--padding:theme(spacing.12)]',
-            'max-h-[calc(100vh-var(--padding)-theme(spacing.12)-3px)]'
-          )}
-        >
-          <CommandEmpty>No results found.</CommandEmpty>
-          <Items
-            kind={kind}
-            special={showSpecial}
-            ingredient={ingredient}
-            ingredients={kind ? byKind[kind] : []}
-            hasSearch={Boolean(search)}
-            onSelect={handleSelectIngredient}
-            onSelectKind={handleSelectKind}
-            onSelectAmount={handleSelectAmount}
-            onSelectAllSpirits={handleSelectAllSpirits}
-            onSelectCustom={handleSelectCustom}
-          />
-        </CommandList>
       </CommandDialog>
-    </>
-  )
-}
-
-type KindItemProps = {
-  kind?: IngredientKind
-  ingredient?: SpecIngredient
-  special?: Special
-  ingredients: SpecIngredient[]
-  hasSearch?: boolean
-  onSelect(ingredient: SpecIngredient): void
-  onSelectKind(value: IngredientKind): void
-  onSelectAmount(value: Amount): void
-  onSelectAllSpirits(): void
-  onSelectCustom(): void
-}
-
-function Items({
-  kind,
-  special,
-  ingredient,
-  ingredients,
-  hasSearch,
-  onSelect,
-  onSelectKind,
-  onSelectAmount,
-  onSelectAllSpirits,
-  onSelectCustom,
-}: KindItemProps) {
-  if (!kind) {
-    return (
-      <CommandGroup>
-        {INGREDIENT_KINDS.map(({ value, label }) => (
-          <CommandItem key={value} onSelect={() => onSelectKind(value)}>
-            {label}
-          </CommandItem>
-        ))}
-        <CommandItem onSelect={onSelectCustom}>Custom</CommandItem>
-      </CommandGroup>
-    )
-  }
-  if (ingredient) {
-    return (
-      <AmountItems
-        kind={kind}
-        ingredient={ingredient}
-        onSelect={onSelectAmount}
-      />
-    )
-  }
-  if (special === 'allSpirits') {
-    return <SpiritItems hasSearch={hasSearch} onSelect={onSelect} />
-  }
-  if (special === 'rum') {
-    return <RumItems onSelect={onSelect} />
-  }
-  return (
-    <>
-      {kind === 'spirit' && (
-        <>
-          <CommandGroup>
-            <CommandItem onSelect={onSelectAllSpirits}>All Spirits</CommandItem>
-          </CommandGroup>
-          <CommandSeparator className="mb-1" />
-        </>
-      )}
-      <IngredientItems ingredients={ingredients} onSelect={onSelect} />
     </>
   )
 }

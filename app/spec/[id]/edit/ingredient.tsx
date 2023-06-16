@@ -43,6 +43,7 @@ export function Ingredient({
     <div className="flex items-end gap-1">
       <div className="flex gap-px">
         <Button
+          type="button"
           className="rounded-ee-none rounded-se-none text-muted-foreground"
           variant="secondary"
           size="xs"
@@ -52,6 +53,7 @@ export function Ingredient({
           <ArrowUp size={12} />
         </Button>
         <Button
+          type="button"
           className="rounded-es-none rounded-ss-none text-muted-foreground"
           variant="secondary"
           size="xs"
@@ -79,7 +81,12 @@ export function Ingredient({
           </div>
         </IngredientCommandDialogButton>
       </div>
-      <Button className="text-muted-foreground" variant="secondary" size="xs">
+      <Button
+        type="button"
+        className="text-muted-foreground"
+        variant="secondary"
+        size="xs"
+      >
         <X size={12} onClick={onRemove} />
       </Button>
     </div>

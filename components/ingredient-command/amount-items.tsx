@@ -1,6 +1,7 @@
 import { CommandGroup, CommandItem } from '@/components/ui/command'
 import { IngredientKind } from '@/lib/ingredient/kind'
 import { Amount, Option, SpecIngredient, Usage } from '@/lib/types'
+import { uniqBy } from 'ramda'
 
 const kindAmountDict: Partial<
   Record<IngredientKind | Usage, Option<Amount>[]>
@@ -191,7 +192,7 @@ const kindAmountDict: Partial<
       value: { usage: 'muddled', quantity: 0.5, unit: 'tsp' },
     },
     {
-      label: '3/4 tsp grated',
+      label: '3/4 tsp muddled',
       value: { usage: 'muddled', quantity: 0.75, unit: 'tsp' },
     },
     {
@@ -218,10 +219,12 @@ kindAmountDict.dairy = [
 kindAmountDict.garnish = [
   ...kindAmountDict.twist!,
   ...kindAmountDict.whole!,
-  ...kindAmountDict.rim!,
   ...kindAmountDict.grated!,
   ...kindAmountDict.muddled!,
 ]
+
+const getKey = (amt: Amount): string =>
+  `${amt.usage ?? 'na'}_${amt.unit ?? 'na'}_${amt.quantity ?? 'na'}`
 
 type Props = {
   kind: IngredientKind
@@ -237,15 +240,11 @@ export function AmountItems({ kind, ingredient, onSelect }: Props) {
     if (!amounts) amounts = kindAmountDict.spirit
   }
   if (!amounts?.length) return null
+  amounts = uniqBy((o) => getKey(o.value), amounts)
   return (
     <CommandGroup>
       {amounts.map(({ label, value }) => (
-        <CommandItem
-          key={`${value.usage ?? 'na'}_${value.unit ?? 'na'}_${
-            value.quantity ?? 'na'
-          }`}
-          onSelect={() => onSelect(value)}
-        >
+        <CommandItem key={getKey(value)} onSelect={() => onSelect(value)}>
           {label}
         </CommandItem>
       ))}

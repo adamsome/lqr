@@ -174,10 +174,15 @@ function appendKindMoreIngredients(
   )
 }
 
-export function useIngredientsByKind() {
+export function useIngredientsByKind(kind?: IngredientKind) {
   const { categoryFilter } = useData()
-  return useMemo(
+  const byKind = useMemo(
     () => appendKindMoreIngredients(categoryFilter),
     [categoryFilter]
   )
+  const ingredients = useMemo(
+    () => (kind ? byKind[kind] : []) ?? [],
+    [byKind, kind]
+  )
+  return ingredients
 }
