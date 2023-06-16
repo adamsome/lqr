@@ -2,7 +2,7 @@ import { Table } from '@/app/specs/table'
 import { DataProvider } from '@/components/data-provider'
 import { Container } from '@/components/ui/container'
 import { H1 } from '@/components/ui/h1'
-import { getData } from '@/lib/get-data'
+import { getData } from '@/lib/model/data'
 
 export const revalidate = 0
 

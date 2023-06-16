@@ -9,12 +9,10 @@ import { DataTablePagination } from '@/components/ui/data-table-pagination'
 
 export function Table() {
   const { specs } = useData()
-  const keys = Object.keys(specs)
-  const data = keys.map((key) => specs[key])
   return (
     <DataTableContainer
       columns={createColumns()}
-      data={data}
+      data={specs}
       render={(table, columns) => (
         <div className="flex flex-col gap-4">
           <Toolbar table={table} />

@@ -1,5 +1,7 @@
+import invariant from 'tiny-invariant'
+
 import { Spec } from '@/app/spec/[id]/spec'
-import { getData } from '@/lib/get-data'
+import { getSpec } from '@/lib/model/spec'
 
 export const revalidate = 0
 
@@ -10,10 +12,9 @@ type Props = {
 }
 
 export default async function Page({ params }: Props) {
-  const data = await getData()
-  const { specs } = data
   const { id } = params
-  const spec = specs[id]
+  const spec = await getSpec(id)
+  invariant(spec, `No spec found with id '${id}'`)
   return (
     <div className="py-8">
       <Spec spec={spec} />

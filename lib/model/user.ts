@@ -1,5 +1,5 @@
 import { auth } from '@clerk/nextjs'
-import { OptionalId, OptionalUnlessRequiredId, WithId } from 'mongodb'
+import { OptionalUnlessRequiredId } from 'mongodb'
 import invariant from 'tiny-invariant'
 
 import { connectToDatabase } from '@/lib/mongodb'
@@ -7,7 +7,7 @@ import { IngredientDef, User } from '@/lib/types'
 
 import 'server-only'
 
-export async function getUserData(): Promise<
+export async function getUserIngredients(): Promise<
   Record<string, Partial<IngredientDef>>
 > {
   const { userId: id } = auth()
@@ -16,9 +16,6 @@ export async function getUserData(): Promise<
   const { db } = await connectToDatabase()
   const user = await db
     .collection<OptionalUnlessRequiredId<User>>('user')
-    .findOne({ id })
-  if (user) {
-    delete (user as OptionalId<WithId<User>>)._id
-  }
+    .findOne({ id }, { projection: { _id: false } })
   return user?.ingredients ?? {}
 }
