@@ -1,6 +1,7 @@
 import { Dispatch } from 'react'
 
 import { AmountItems } from '@/components/ingredient-command/amount-items'
+import { Breadcrumb } from '@/components/ingredient-command/breadcrumb'
 import { IngredientItems } from '@/components/ingredient-command/ingredient-items'
 import { Action, State } from '@/components/ingredient-command/reducer'
 import { RumItems } from '@/components/ingredient-command/rum-items'
@@ -24,10 +25,11 @@ type Props = {
 }
 
 export function IngredientCommand(props: Props) {
-  const { state, dispatch, submitAmount } = props
+  const { state, dispatch } = props
   const { search } = state
   return (
     <>
+      <Breadcrumb {...props} />
       <CommandInput
         placeholder="Type a command or search..."
         value={search}
@@ -36,7 +38,7 @@ export function IngredientCommand(props: Props) {
       <CommandList
         className={cn(
           '[--padding:theme(spacing.12)]',
-          'max-h-[calc(100vh-var(--padding)-theme(spacing.12)-3px)]'
+          'max-h-[calc(100vh-var(--padding)-theme(spacing.24)-3px)]'
         )}
       >
         <CommandEmpty>No results found.</CommandEmpty>

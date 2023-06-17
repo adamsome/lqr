@@ -19,6 +19,7 @@ export type Action =
   | { type: 'toggleOpen' }
   | { type: 'openCustom' }
   | { type: 'back' }
+  | { type: 'backTo'; value: 'kind' | 'ingredient' }
   | { type: 'reset' }
   | { type: 'setKind'; kind: IngredientKind }
   | { type: 'setIngredient'; ingredient: SpecIngredient }
@@ -71,6 +72,14 @@ export const reducer: ImmerReducer<State, Action> = (state, action) => {
       }
       return
     }
+    case 'backTo':
+      state.search = ''
+      state.ingredient = undefined
+      if (action.value === 'kind') {
+        state.special = undefined
+        state.kind = undefined
+      }
+      return
     case 'reset': {
       state.search = ''
       state.open = false
@@ -87,7 +96,9 @@ export const reducer: ImmerReducer<State, Action> = (state, action) => {
     }
     case 'setIngredient': {
       state.search = ''
-      if (special !== 'rum' && action.ingredient.id === 'cane_rum') {
+      const { ingredient } = action
+      const { id, bottleID } = ingredient
+      if (special !== 'rum' && id === 'cane_rum' && !bottleID) {
         state.special = 'rum'
         return
       }
