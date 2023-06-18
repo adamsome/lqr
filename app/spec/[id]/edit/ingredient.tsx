@@ -1,10 +1,7 @@
 import { IngredientCommandDialogButton } from '@/components/ingredient-command/ingredient-command-dialog-button'
-import { useData } from '@/components/data-provider'
 import { Button } from '@/components/ui/button'
-import { useGetIngredientName } from '@/hooks/use-get-ingredient-name'
-import { getSpecAmountName } from '@/lib/ingredient/get-amount-name'
+import { useIngredientName } from '@/hooks/use-ingredient-name'
 import { SpecIngredient } from '@/lib/types'
-import { capitalize } from '@/lib/utils'
 import { ArrowDown, ArrowUp, X } from 'lucide-react'
 
 type Props = {
@@ -24,21 +21,7 @@ export function Ingredient({
   onRemove,
   onMove,
 }: Props) {
-  const { ingredientDict } = useData()
-  const getIngredientName = useGetIngredientName()
-
-  const amount = getSpecAmountName(ingredient)
-
-  let category = ''
-  let name = getIngredientName(ingredient).toLocaleLowerCase()
-  if (!amount[0]) name = capitalize(name)
-
-  const { bottleID } = ingredient
-  if (bottleID) {
-    category = capitalize(name)
-    name = ingredientDict[bottleID].name
-  }
-
+  const { amount, category, name } = useIngredientName(ingredient)
   return (
     <div className="flex items-end gap-1">
       <div className="flex gap-px">

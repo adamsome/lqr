@@ -1,36 +1,26 @@
-import { useData } from '@/components/data-provider'
-import { useGetIngredientName } from '@/hooks/use-get-ingredient-name'
+import { useIngredientName } from '@/hooks/use-ingredient-name'
 import { SpecIngredient } from '@/lib/types'
-import { capitalize } from '@/lib/utils'
 
 type Props = {
   ingredient: SpecIngredient
 }
 
 export function Ingredient({ ingredient }: Props) {
-  const { ingredientDict } = useData()
-  const getIngredientName = useGetIngredientName()
-
-  const name = getIngredientName(ingredient)
-
-  const { bottleID } = ingredient
-  let bottleName = ''
-  if (bottleID) {
-    bottleName = ingredientDict[bottleID].name
-  }
-
+  const { amount, category, name } = useIngredientName(ingredient)
   return (
-    <div className="leading-snug">
-      {bottleName ? (
-        <div className="leading-none">
-          <div className="text-xs text-muted-foreground">
-            {capitalize(name)}
-          </div>
-          <span className="leading-snug">{bottleName}</span>
+    <div className="flex flex-col items-start leading-snug">
+      {category && (
+        <div className="text-xs leading-none text-muted-foreground">
+          {category}
         </div>
-      ) : (
-        <div>{capitalize(name)}</div>
       )}
+      <div className="inline-block">
+        {amount[0] && (
+          <span className="font-semibold text-popover-foreground">{`${amount[0]} `}</span>
+        )}
+        <span>{name}</span>
+        {amount[1] && <span>{` ${amount[1]}`}</span>}
+      </div>
     </div>
   )
 }

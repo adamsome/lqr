@@ -1,4 +1,4 @@
-import { CardIngredient } from '@/app/specs/card-ingredient'
+import { Ingredient } from '@/app/spec/[id]/ingredient'
 import {
   CardContent,
   CardDescription,
@@ -23,7 +23,7 @@ export function Card({ spec }: Props) {
       <CardContent>
         <div className="flex flex-col gap-2">
           {ingredients.map((ingredient, i) => (
-            <CardIngredient
+            <Ingredient
               key={`${i}_${ingredient.name ?? ingredient.id}`}
               ingredient={ingredient}
             />
