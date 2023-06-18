@@ -6,15 +6,9 @@ export const revalidate = 0
 
 type Props = {
   children: ReactNode
-  modal: ReactNode
 }
 
-export default async function Layout({ children, modal }: Props) {
+export default async function Layout({ children }: Props) {
   const data = await getData()
-  return (
-    <DataProvider {...data}>
-      {modal}
-      {children}
-    </DataProvider>
-  )
+  return <DataProvider {...data}>{children}</DataProvider>
 }

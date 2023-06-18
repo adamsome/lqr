@@ -44,6 +44,7 @@ const kindAmountDict: Partial<
     { label: '4 oz', value: { quantity: 4, unit: 'oz' } },
     { label: '3 oz', value: { quantity: 3, unit: 'oz' } },
     { label: '2 1/2 oz', value: { quantity: 2.5, unit: 'oz' } },
+    { label: '2 1/4 oz', value: { quantity: 2.25, unit: 'oz' } },
     { label: '1 3/4 oz', value: { quantity: 1.75, unit: 'oz' } },
     { label: '1 1/4 oz', value: { quantity: 1.25, unit: 'oz' } },
   ],
@@ -206,10 +207,13 @@ const kindAmountDict: Partial<
   ],
 }
 
-kindAmountDict.soda = kindAmountDict.juice!.map((a) => ({
-  ...a,
-  value: { ...a.value, usage: 'top' },
-}))
+kindAmountDict.soda = [
+  ...kindAmountDict.juice!.map((a) => ({
+    ...a,
+    value: { ...a.value, usage: 'top' as Usage },
+  })),
+  ...kindAmountDict.spirit!.filter((a) => a.value.usage === 'float'),
+]
 kindAmountDict.dairy = [
   { label: '1', value: { quantity: 1 } },
   { label: '2', value: { quantity: 2 } },

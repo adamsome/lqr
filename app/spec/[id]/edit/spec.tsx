@@ -88,10 +88,14 @@ export function Spec({ spec }: Props) {
             )}
           >
             <div className="flex justify-between gap-4 [grid-area:actions]">
-              <ResponsizeButton variant="secondary" onClick={handleClose}>
+              <ResponsizeButton
+                type="button"
+                variant="secondary"
+                onClick={handleClose}
+              >
                 Cancel
               </ResponsizeButton>
-              <ResponsizeButton disabled={fetching} type="submit">
+              <ResponsizeButton type="submit" disabled={fetching}>
                 Submit
               </ResponsizeButton>
             </div>
