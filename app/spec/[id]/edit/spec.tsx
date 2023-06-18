@@ -1,7 +1,6 @@
 'use client'
 
 import { zodResolver } from '@hookform/resolvers/zod'
-import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { useState } from 'react'
 import { useFieldArray, useForm } from 'react-hook-form'
@@ -21,10 +20,10 @@ import {
 import { FullScreen } from '@/components/ui/full-screen'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
+import { useRefresh } from '@/hooks/use-refresh'
 import { specSchema } from '@/lib/schema/spec'
 import { Spec, SpecIngredient } from '@/lib/types'
 import { cn } from '@/lib/utils'
-import { useRefresh } from '@/hooks/use-refresh'
 
 type Schema = z.infer<typeof specSchema>
 
@@ -53,6 +52,10 @@ export function Spec({ spec }: Props) {
     keyName: 'uuid',
   })
 
+  function handleClose() {
+    router.push(`/spec/${id}`)
+  }
+
   async function handleSubmit(values: Schema) {
     setFetching(true)
     const updatedAt = new Date().toISOString()
@@ -66,7 +69,7 @@ export function Spec({ spec }: Props) {
       console.error(`Error updating spec '${name}'`, err?.data ?? err)
     }
     refresh()
-    router.push(`/spec/${id}`)
+    handleClose()
   }
 
   return (
@@ -85,10 +88,8 @@ export function Spec({ spec }: Props) {
             )}
           >
             <div className="flex justify-between gap-4 [grid-area:actions]">
-              <ResponsizeButton asChild variant="secondary">
-                <Link href={`/spec/${id}`}>
-                  <p className="text-muted-foreground">Cancel</p>
-                </Link>
+              <ResponsizeButton variant="secondary" onClick={handleClose}>
+                Cancel
               </ResponsizeButton>
               <ResponsizeButton disabled={fetching} type="submit">
                 Submit
