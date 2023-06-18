@@ -1069,7 +1069,6 @@
       "checked": false,
       "childIDs": [
         "syrup_agave",
-        "syrup_almond",
         "syrup_bayleaf",
         "syrup_blackberry",
         "syrup_cane",
@@ -1113,12 +1112,6 @@
       "children": {
         "syrup_agave": {
           "id": "syrup_agave",
-          "checked": false,
-          "childIDs": [],
-          "children": {}
-        },
-        "syrup_almond": {
-          "id": "syrup_almond",
           "checked": false,
           "childIDs": [],
           "children": {}

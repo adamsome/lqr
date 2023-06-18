@@ -1,6 +1,7 @@
 # TODO
 
-- Add amounts to spec/specs
+- Add specs ingredients in stock
+- Move spec/[id] under specs/
 - Improve IngredientCommand search sorting
 - Buy priority
 - Rum categorization
