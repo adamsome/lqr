@@ -1,6 +1,5 @@
 import { IngredientKind } from '@/lib/ingredient/kind'
 import { SpecIngredient } from '@/lib/types'
-import { useReducer } from 'react'
 import { ImmerReducer, useImmerReducer } from 'use-immer'
 
 export type Special = 'allSpirits' | 'rum'
@@ -26,13 +25,13 @@ export type Action =
   | { type: 'setAllSpirits' }
   | { type: 'setSearch'; value: string }
 
-export const initState = (): State => ({
+const initState = (): State => ({
   open: false,
   custom: false,
   search: '',
 })
 
-export const reducer: ImmerReducer<State, Action> = (state, action) => {
+const reducer: ImmerReducer<State, Action> = (state, action) => {
   const { open, search, kind, ingredient, special } = state
   switch (action.type) {
     case 'open': {
@@ -121,6 +120,6 @@ export const reducer: ImmerReducer<State, Action> = (state, action) => {
   }
 }
 
-export function useIngredientCommandReducer(initialState?: State) {
-  return useImmerReducer(reducer, initialState ?? initState())
+export function useIngredientCommandReducer(initialState: Partial<State> = {}) {
+  return useImmerReducer(reducer, { ...initState(), ...initialState })
 }

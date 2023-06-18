@@ -2,25 +2,37 @@ import { KeyboardEvent, useEffect } from 'react'
 
 import { CustomDialog } from '@/components/ingredient-command/custom-dialog'
 import { IngredientCommand } from '@/components/ingredient-command/ingredient-command'
-import { useIngredientCommandReducer } from '@/components/ingredient-command/reducer'
+import {
+  State,
+  useIngredientCommandReducer,
+} from '@/components/ingredient-command/reducer'
+import { useKindByIngredient } from '@/components/ingredient-command/use-kind-by-ingredient'
 import { Button, Props as ButtonProps } from '@/components/ui/button'
 import { CommandDialog } from '@/components/ui/command'
 import { Amount, SpecIngredient } from '@/lib/types'
 
 type Props = Omit<ButtonProps, 'onSelect'> & {
+  ingredient?: SpecIngredient
   openOnKey?: (e: globalThis.KeyboardEvent) => boolean
   onSelect(ingredient: SpecIngredient): void
 }
 
 export function IngredientCommandDialogButton({
   children,
+  ingredient,
   onClick,
   openOnKey,
   onSelect,
   ...props
 }: Props) {
-  const [state, dispatch] = useIngredientCommandReducer()
-  const { open, custom, search, ingredient } = state
+  const [kind, isSpecial] = useKindByIngredient(ingredient)
+  const initialState: Partial<State> = {}
+  if (kind) initialState.kind = kind
+  if (ingredient) initialState.ingredient = ingredient
+  if (isSpecial) initialState.special = 'allSpirits'
+  if (ingredient?.name) initialState.custom = true
+  const [state, dispatch] = useIngredientCommandReducer(initialState)
+  const { open, custom, search, ingredient: currIngredient } = state
 
   useEffect(() => {
     const down = (e: globalThis.KeyboardEvent) => {
@@ -39,7 +51,7 @@ export function IngredientCommandDialogButton({
 
   function handleSubmitAmount(value: Amount) {
     const { quantity, unit, usage } = value
-    onSelect({ ...(ingredient ?? {}), quantity, unit, usage })
+    onSelect({ ...(currIngredient ?? {}), quantity, unit, usage })
     dispatch({ type: 'reset' })
   }
 

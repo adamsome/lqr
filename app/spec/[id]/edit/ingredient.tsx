@@ -72,6 +72,7 @@ export function Ingredient({
         <IngredientCommandDialogButton
           variant="secondary"
           size="xs"
+          ingredient={ingredient}
           onSelect={onUpdate}
         >
           <div className="flex items-baseline gap-1.5">
