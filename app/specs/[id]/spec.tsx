@@ -1,11 +1,13 @@
 'use client'
 
+import Link from 'next/link'
+
 import { Ingredient } from '@/app/specs/[id]/ingredient'
 import { SpecStock } from '@/app/specs/[id]/spec-stock'
 import { Button } from '@/components/ui/button'
 import { Label } from '@/components/ui/label'
+import { toSpecEdit } from '@/lib/routes'
 import { Spec } from '@/lib/types'
-import Link from 'next/link'
 
 type Props = {
   spec: Spec
@@ -41,7 +43,7 @@ export function Spec({ spec }: Props) {
       </div>
       <div>
         <Button asChild variant="outline">
-          <Link href={`/specs/${id}/edit`}>Edit</Link>
+          <Link href={toSpecEdit(id)}>Edit</Link>
         </Button>
       </div>
     </div>

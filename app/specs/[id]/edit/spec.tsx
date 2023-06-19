@@ -21,6 +21,7 @@ import { FullScreen } from '@/components/ui/full-screen'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { useRefresh } from '@/hooks/use-refresh'
+import { toSpec } from '@/lib/routes'
 import { specSchema } from '@/lib/schema/spec'
 import { Spec, SpecIngredient } from '@/lib/types'
 import { cn } from '@/lib/utils'
@@ -53,7 +54,7 @@ export function Spec({ spec }: Props) {
   })
 
   function handleClose() {
-    router.push(`/specs/${id}`)
+    router.push(toSpec(id))
   }
 
   async function handleSubmit(values: Schema) {

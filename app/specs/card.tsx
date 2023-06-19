@@ -8,6 +8,7 @@ import {
   CardLink,
   CardTitle,
 } from '@/components/ui/card'
+import { toSpec } from '@/lib/routes'
 import { Spec } from '@/lib/types'
 
 type Props = {
@@ -17,7 +18,7 @@ type Props = {
 export function Card({ spec }: Props) {
   const { id, name, ingredients, source, stock } = spec
   return (
-    <CardLink href={`/specs/${id}`}>
+    <CardLink href={toSpec(id)}>
       <CardHeader>
         <CardTitle>{name}</CardTitle>
         {source && <CardDescription>{source}</CardDescription>}
