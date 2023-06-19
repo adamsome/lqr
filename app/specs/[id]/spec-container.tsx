@@ -2,7 +2,7 @@
 
 import invariant from 'tiny-invariant'
 
-import { Spec } from '@/app/spec/[id]/spec'
+import { Spec } from '@/app/specs/[id]/spec'
 import { useData } from '@/components/data-provider'
 
 type Props = {

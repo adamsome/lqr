@@ -1,5 +1,5 @@
-import { Ingredient } from '@/app/spec/[id]/ingredient'
-import { SpecStock } from '@/app/spec/[id]/spec-stock'
+import { Ingredient } from '@/app/specs/[id]/ingredient'
+import { SpecStock } from '@/app/specs/[id]/spec-stock'
 import {
   CardContent,
   CardDescription,
@@ -17,7 +17,7 @@ type Props = {
 export function Card({ spec }: Props) {
   const { id, name, ingredients, source, stock } = spec
   return (
-    <CardLink href={`/spec/${id}`}>
+    <CardLink href={`/specs/${id}`}>
       <CardHeader>
         <CardTitle>{name}</CardTitle>
         {source && <CardDescription>{source}</CardDescription>}

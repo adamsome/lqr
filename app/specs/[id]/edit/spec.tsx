@@ -6,7 +6,7 @@ import { useState } from 'react'
 import { useFieldArray, useForm } from 'react-hook-form'
 import * as z from 'zod'
 
-import { Ingredient } from '@/app/spec/[id]/edit/ingredient'
+import { Ingredient } from '@/app/specs/[id]/edit/ingredient'
 import { IngredientCommandDialogButton } from '@/components/ingredient-command/ingredient-command-dialog-button'
 import { Button, Props as ButtonProps } from '@/components/ui/button'
 import {
@@ -53,7 +53,7 @@ export function Spec({ spec }: Props) {
   })
 
   function handleClose() {
-    router.push(`/spec/${id}`)
+    router.push(`/specs/${id}`)
   }
 
   async function handleSubmit(values: Schema) {

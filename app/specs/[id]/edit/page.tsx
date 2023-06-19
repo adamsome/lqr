@@ -1,6 +1,6 @@
 import invariant from 'tiny-invariant'
 
-import { Spec } from '@/app/spec/[id]/edit/spec'
+import { Spec } from '@/app/specs/[id]/edit/spec'
 import { getSpec } from '@/lib/model/spec'
 
 export const revalidate = 0

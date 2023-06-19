@@ -1,4 +1,4 @@
-import { SpecContainer } from '@/app/spec/[id]/spec-container'
+import { SpecContainer } from '@/app/specs/[id]/spec-container'
 
 type Props = {
   params: {

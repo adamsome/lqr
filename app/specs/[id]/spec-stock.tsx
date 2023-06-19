@@ -1,7 +1,8 @@
+import { Circle } from 'lucide-react'
+
 import { Badge } from '@/components/ui/badge'
 import { SpecStock } from '@/lib/types'
 import { cn } from '@/lib/utils'
-import { Circle } from 'lucide-react'
 
 type Props = {
   className?: string
