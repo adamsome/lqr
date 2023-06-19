@@ -76,6 +76,18 @@ export interface SpecIngredient extends Amount {
   infusion?: string
 }
 
+export interface SpecIngredientStock {
+  type: 'bottle' | 'categoryBottle' | 'category' | 'custom'
+  stock: number
+  bottles?: { id: string; stock: number }[]
+}
+
+export interface SpecStock {
+  count: number
+  total: number
+  ingredients: SpecIngredientStock[]
+}
+
 export interface Spec {
   id: string
   name: string
@@ -93,6 +105,7 @@ export interface Spec {
   bar?: string
   source?: string
   sourcePage?: number
+  stock?: SpecStock
 }
 
 export type Option<T> = { label: string; value: T }

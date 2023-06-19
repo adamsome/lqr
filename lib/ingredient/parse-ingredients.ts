@@ -7,7 +7,9 @@ export function createIngredientParser(
   const baseIngredientDict = baseIngredients.reduce<
     Record<string, IngredientDef>
   >((acc, it) => {
-    acc[it.id] = it
+    const { id } = it
+    const userIngredient = userIngredientDict[id] ?? {}
+    acc[id] = { ...it, ...userIngredient }
     return acc
   }, {})
   function parseIngredient(def: IngredientDef) {

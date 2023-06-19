@@ -1,7 +1,9 @@
 import { Ingredient } from '@/app/spec/[id]/ingredient'
+import { SpecStock } from '@/app/spec/[id]/spec-stock'
 import {
   CardContent,
   CardDescription,
+  CardFooter,
   CardHeader,
   CardLink,
   CardTitle,
@@ -13,14 +15,14 @@ type Props = {
 }
 
 export function Card({ spec }: Props) {
-  const { id, name, ingredients, source } = spec
+  const { id, name, ingredients, source, stock } = spec
   return (
     <CardLink href={`/spec/${id}`}>
       <CardHeader>
         <CardTitle>{name}</CardTitle>
         {source && <CardDescription>{source}</CardDescription>}
       </CardHeader>
-      <CardContent>
+      <CardContent className="flex-1 text-sm">
         <div className="flex flex-col gap-2">
           {ingredients.map((ingredient, i) => (
             <Ingredient
@@ -30,6 +32,9 @@ export function Card({ spec }: Props) {
           ))}
         </div>
       </CardContent>
+      <CardFooter>
+        <SpecStock stock={stock} />
+      </CardFooter>
     </CardLink>
   )
 }
