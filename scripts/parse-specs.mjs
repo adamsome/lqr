@@ -39,7 +39,7 @@ const catMapFull = {
   'blended aged rum (jamaica)': {
     id: 'cane_rum_jamaican',
     productionMethod: 'blended',
-    aging: ['medium', 'long'],
+    aging: ['light', 'medium', 'long'],
   },
   'black blended rum (jamaica)': {
     id: 'cane_rum_jamaican',
