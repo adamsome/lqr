@@ -2,8 +2,8 @@
 
 import { ColumnDef } from '@tanstack/react-table'
 
-import { ActionCell } from '@/app/bar/action-cell'
-import { StockCell } from '@/app/bar/stock-cell'
+import { ActionCell } from '@/app/research/action-cell'
+import { StockCell } from '@/app/research/stock-cell'
 import { IngredientPathCell } from '@/components/ingredient-path/cell'
 import { StockIcon } from '@/components/stock-icon'
 import { DataTableColumnHeader as Header } from '@/components/ui/data-table-column-header'

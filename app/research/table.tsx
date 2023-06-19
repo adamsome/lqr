@@ -1,7 +1,7 @@
 'use client'
 
-import { createColumns } from '@/app/bar/columns'
-import { Toolbar } from '@/app/bar/toolbar'
+import { createColumns } from '@/app/research/columns'
+import { Toolbar } from '@/app/research/toolbar'
 import { useData } from '@/components/data-provider'
 import { DataTable } from '@/components/ui/data-table'
 import { DataTableContainer } from '@/components/ui/data-table-container'

@@ -8,11 +8,11 @@ export default async function Page() {
   return (
     <Container className="relative py-8">
       <CardGrid>
-        <CardLink href="/bar">
-          <CardHeader>Bar</CardHeader>
-        </CardLink>
         <CardLink href="/specs">
           <CardHeader>Specs</CardHeader>
+        </CardLink>
+        <CardLink href="/research">
+          <CardHeader>Research</CardHeader>
         </CardLink>
       </CardGrid>
     </Container>

@@ -17,7 +17,7 @@ export default async function Layout({ children }: Props) {
     <DataProvider {...data}>
       <Container className="relative py-8">
         <section className="flex flex-col gap-4">
-          <H1>Stock</H1>
+          <H1>Research</H1>
           {children}
         </section>
       </Container>

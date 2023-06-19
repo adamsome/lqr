@@ -1,4 +1,4 @@
-import { Table } from '@/app/bar/table'
+import { Table } from '@/app/research/table'
 
 export const revalidate = 0
 
