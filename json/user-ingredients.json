@@ -3,7 +3,7 @@
     "buyPriority": 7
   },
   "beefeater": {
-    "stock": 1,
+    "stock": 0.1,
     "buyPriority": 1
   },
   "tanqueray": {
@@ -195,7 +195,7 @@
     "buyPriority": 9
   },
   "smith_cross_navy_strength": {
-    "stock": 1,
+    "stock": 0.1,
     "buyPriority": 2
   },
   "sun_rum_barrel_aged": {
@@ -244,7 +244,7 @@
     "buyPriority": 9
   },
   "appleton_estate_signature_blend": {
-    "stock": 1,
+    "stock": 0.1,
     "buyPriority": 2
   },
   "banks_5_island": {
@@ -341,7 +341,7 @@
     "buyPriority": 6
   },
   "el_dorado_12_year": {
-    "stock": 1,
+    "stock": 0.1,
     "buyPriority": 1
   },
   "kaniche_xo": {
@@ -590,10 +590,10 @@
     "buyPriority": 9
   },
   "hamilton_jamaican_black": {
-    "buyPriority": 2
+    "buyPriority": 5
   },
   "coruba": {
-    "buyPriority": 4
+    "buyPriority": 2
   },
   "cruzan_blackstrap": {
     "buyPriority": 8
@@ -645,8 +645,8 @@
     "buyPriority": 9
   },
   "rhum_barbancourt_3_star": {
-    "stock": 1,
-    "buyPriority": 1
+    "stock": 0.1,
+    "buyPriority": 3
   },
   "st_george_california_agricole": {
     "buyPriority": 9
@@ -754,6 +754,7 @@
     "buyPriority": 6
   },
   "russells_reserve_10year": {
+    "stock": 1,
     "buyPriority": 4
   },
   "old_granddad_114": {
@@ -881,6 +882,7 @@
     "buyPriority": 5
   },
   "hine_h_vsop": {
+    "stock": 1,
     "buyPriority": 2
   },
   "paul_beau_vs": {
@@ -1354,5 +1356,37 @@
   },
   "lustau_east_india_solera": {
     "buyPriority": 8
+  },
+  "angostura": {
+    "stock": 1,
+    "buyPriority": 1
+  },
+  "peychauds": {
+    "stock": 1,
+    "buyPriority": 1
+  },
+  "angostura_orange_bitters": {
+    "stock": 1,
+    "buyPriority": 1
+  },
+  "regans_orange_bitters_no_6": {
+    "stock": 1,
+    "buyPriority": 1
+  },
+  "fee_brothers_orange_bitters": {
+    "stock": 1,
+    "buyPriority": 1
+  },
+  "bittermens_elemakule_tiki_bitters": {
+    "stock": 1,
+    "buyPriority": 1
+  },
+  "bittermens_xocolatl_mole_bitters": {
+    "stock": 1,
+    "buyPriority": 1
+  },
+  "bittermens_hellfire_habanero_shrub": {
+    "stock": 1,
+    "buyPriority": 1
   }
 }

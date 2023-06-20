@@ -1,6 +1,6 @@
 Image,ID,Name,Type,Material,Style,Substyle,Method,Aging,Origin,Stock,Want,Reference
 ,1000,Plymouth,Gin,Grains w/ juniper & botanicals,Plymouth gin,,Column Still,Unaged,UK,,7,"D+C: WH, D+C: Codex"
-,1010,Beefeater,Gin,Grains w/ juniper & botanicals,London dry gin,,Column Still,Unaged,UK,1,1,"D+C: WH, D+C: Codex"
+,1010,Beefeater,Gin,Grains w/ juniper & botanicals,London dry gin,,Column Still,Unaged,UK,0.1,1,"D+C: WH, D+C: Codex"
 ,1020,Tanqueray,Gin,Grains w/ juniper & botanicals,London dry gin,,Column Still,Unaged,UK,,8,"D+C: WH, D+C: Codex"
 ,1030,Fords,Gin,Grains w/ juniper & botanicals,London dry gin,,Column Still,Unaged,UK,,8,"D+C: WH, D+C: Codex"
 ,1035,Broker's Gin,Gin,Grains w/ juniper & botanicals,London dry gin,,Column Still,Unaged,UK,,8,D+C: WH
@@ -63,7 +63,7 @@ Image,ID,Name,Type,Material,Style,Substyle,Method,Aging,Origin,Stock,Want,Refere
 ,1490,Ragged Mountain Gold,Rum,Molasses & evaporated cane,Rum,,Pot Still,Lightly Aged,"Massachusetts, USA",,9,
 ,1500,Richland Single Estate Old Georgia Rum,Rum,Molasses & evaporated cane,Rum,,Pot Still,Lightly Aged,"Georgia, USA",,9,
 ,1510,Rum Society #65 ,Rum,Molasses & evaporated cane,Rum,,Pot Still,Lightly Aged,Regional Blend,,9,
-,1520,Smith & Cross Navy Strength,Rum,Molasses & evaporated cane,Jamaican rum,,Pot Still,Lightly Aged,Jamaica,1,2,"D+C: Codex, Suderman, Lost Lake"
+,1520,Smith & Cross Navy Strength,Rum,Molasses & evaporated cane,Jamaican rum,,Pot Still,Lightly Aged,Jamaica,0.1,2,"D+C: Codex, Suderman, Lost Lake"
 ,1530,Sun Rum Barrel Aged,Rum,Molasses & evaporated cane,Rum,,Pot Still,Lightly Aged,"Washington, USA",,9,
 ,1540,Thomas Tew Single Barrel,Rum,Molasses & evaporated cane,Rum,,Pot Still,Lightly Aged,"Rhode Island, USA",,9,
 ,1550,Berry Bros & Rudd Berrys' Own,Rum,Molasses & evaporated cane,Rum,,Pot Still,Aged,Various,,9,
@@ -79,7 +79,7 @@ Image,ID,Name,Type,Material,Style,Substyle,Method,Aging,Origin,Stock,Want,Refere
 ,1650,Diplomatico Ambassador,Rum,Molasses & evaporated cane,Spanish rum,,Pot Still,Long Aged,Venezuela,,9,
 ,1660,Diplomatico Single Vintage,Rum,Molasses & evaporated cane,Spanish rum,,Pot Still,Long Aged,Venezuela,,9,
 ,1670,The Black Tot,Rum,Molasses & evaporated cane,Rum,,Pot Still,Long Aged,Regional Blend,,9,
-,1680,Appleton Estate Signature Blend,Rum,Molasses & evaporated cane,Jamaican rum,,Blended,Lightly Aged,Jamaica,1,2,"D+C: WH, Suderman"
+,1680,Appleton Estate Signature Blend,Rum,Molasses & evaporated cane,Jamaican rum,,Blended,Lightly Aged,Jamaica,0.1,2,"D+C: WH, Suderman"
 ,1690,Banks 5 Island,Rum,Molasses & evaporated cane,Rum,,Blended,Lightly Aged,Regional Blend,,9,
 ,1700,Banks 7 Island,Rum,Molasses & evaporated cane,Rum,,Blended,Aged,Regional Blend,,9,
 ,1710,Ron Cartavio Selecto 5,Rum,Molasses & evaporated cane,Spanish rum,,Blended,Lightly Aged,Peru,,9,
@@ -111,7 +111,7 @@ Image,ID,Name,Type,Material,Style,Substyle,Method,Aging,Origin,Stock,Want,Refere
 ,1970,Dos Maderas 5+5,Rum,Molasses & evaporated cane,Rum,,Blended,Aged,Regional Blend,,9,
 ,1980,El Dorado 5 Year,Rum,Molasses & evaporated cane,Demerara rum,,Blended,Aged,Guyana,,9,
 ,1990,El Dorado 8 Year,Rum,Molasses & evaporated cane,Demerara rum,,Blended,Aged,Guyana,,6,Suderman
-,2000,El Dorado 12 Year,Rum,Molasses & evaporated cane,Demerara rum,,Blended,Aged,Guyana,1,1,Suderman
+,2000,El Dorado 12 Year,Rum,Molasses & evaporated cane,Demerara rum,,Blended,Aged,Guyana,0.1,1,Suderman
 ,2010,Kaniché XO,Rum,Molasses & evaporated cane,Rum,,Blended,Aged,Barbados,,9,
 ,2020,Mount Gay Black Barrel,Rum,Molasses & evaporated cane,Rum,,Blended,Aged,Barbados,,9,
 ,2030,Mount Gay XO,Rum,Molasses & evaporated cane,Rum,,Blended,Aged,Barbados,,9,
@@ -193,8 +193,8 @@ Image,ID,Name,Type,Material,Style,Substyle,Method,Aging,Origin,Stock,Want,Refere
 ,2780,Flor De Caña 18,Rum,Molasses & evaporated cane,Spanish rum,,Column Still,Long Aged,Nicaragua,,9,
 ,2790,Flor De Caña 25,Rum,Molasses & evaporated cane,Spanish rum,,Column Still,Long Aged,Nicaragua,,9,
 ,2800,Reserva de la Familia Serrallés 20 Year Old,Rum,Molasses & evaporated cane,Spanish rum,,Column Still,Long Aged,Puerto Rico,,9,
-,2810,Hamilton Jamaican Black,Rum,Molasses & evaporated cane,Jamaican rum,Black,Pot Still,Unaged,Jamaica,,2,
-,2820,Coruba,Rum,Molasses & evaporated cane,Jamaican rum,Black,Blended,Aged,Jamaica,,4,
+,2810,Hamilton Jamaican Black,Rum,Molasses & evaporated cane,Jamaican rum,Black,Pot Still,Unaged,Jamaica,,5,
+,2820,Coruba,Rum,Molasses & evaporated cane,Jamaican rum,Black,Blended,Aged,Jamaica,,2,
 ,2830,Cruzan Blackstrap,Rum,Molasses & evaporated cane,Rum,Black,Blended,Lightly Aged,US Virgin Islands,,8,"D+C: Codex, Suderman"
 ,2840,Gosling’s Black Seal,Rum,Molasses & evaporated cane,Rum,Black,Blended,Aged,Regional Blend,,8,"D+C: Codex, Suderman"
 ,2850,Hamilton Guyana 86,Rum,Molasses & evaporated cane,Demerara rum,Black,Blended,Aged,Guyana,,3,
@@ -211,7 +211,7 @@ Image,ID,Name,Type,Material,Style,Substyle,Method,Aging,Origin,Stock,Want,Refere
 ,2960,Rhum Barbancourt Estate Reserve,Rum,Fresh cane juice,French rum,,Coffey Still,Aged,Haiti,,9,
 ,2970,Capovilla Agricole PMG,Rum,Fresh cane juice,French rum,,Pot Still,Unaged,Marie Galante,,9,
 ,2980,Damoiseau Cane Rhum,Rum,Fresh cane juice,French rum,,Pot Still,Unaged,Guadeloupe,,9,
-,2990,Rhum Barbancourt 3 Star,Rum,Fresh cane juice,French rum,,Coffey Still,Aged,Haiti,1,1,"D+C: Codex, Suderman"
+,2990,Rhum Barbancourt 3 Star,Rum,Fresh cane juice,French rum,,Coffey Still,Aged,Haiti,0.1,3,"D+C: Codex, Suderman"
 ,3000,St. George California Agricole,Rum,Fresh cane juice,French rum,,Pot Still,Unaged,"California, USA",,9,
 ,3010,Capovilla Rhum Liberation 2010,Rum,Fresh cane juice,French rum,,Pot Still,Aged,Marie Galante,,9,
 ,3020,Damoiseau V.S.O.P.,Rum,Fresh cane juice,French rum,,Pot Still,Aged,Guadeloupe,,5,
@@ -233,7 +233,7 @@ Image,ID,Name,Type,Material,Style,Substyle,Method,Aging,Origin,Stock,Want,Refere
 ,3180,Neisson Élevé Sous Bois,Rum,Fresh cane juice,Rhum Agricole,,Column Still,Aged,Martinique,,5,Lost Lake
 ,3190,Neisson Réserve Spéciale,Rum,Fresh cane juice,Rhum Agricole,,Column Still,Aged,Martinique,,7,D+C: Codex
 ,3200,Rhum J.M E.S.B. Gold,Rum,Fresh cane juice,Rhum Agricole,,Column Still,Aged,Martinique,,9,
-,3210,Rhum J.M V.S.O.P.,Rum,Fresh cane juice,Rhum Agricole,,Column Still,Aged,Martinique,,6,D+C: Codex
+,3210,Rhum J.M V.S.O.P.,Rum,Fresh cane juice,Rhum Agricole,,Column Still,Aged,Martinique,,6,"D+C: WH, D+C: Codex"
 ,3220,Clément Cuvée Homere,Rum,Fresh cane juice,Rhum Agricole,,Column Still,Long Aged,Martinique,,9,
 ,3230,Neisson 15 Year,Rum,Fresh cane juice,Rhum Agricole,,Column Still,Long Aged,Martinique,,9,
 ,3240,Neisson 18 Year,Rum,Fresh cane juice,Rhum Agricole,,Column Still,Long Aged,Martinique,,9,
@@ -247,7 +247,7 @@ Image,ID,Name,Type,Material,Style,Substyle,Method,Aging,Origin,Stock,Want,Refere
 ,3320,Elijah Craig Small Batch,Whiskey,Corn & grains,Bourbon whiskey,,Column Still,Aged,USA,,3,"D+C: WH, D+C: Codex"
 ,3330,Old Forester Signature,Whiskey,Corn & grains,Bourbon whiskey,,Column Still,Aged,USA,,6,D+C: WH
 ,3340,Old Overholt,Whiskey,Rye & grains,Rye whiskey,,Column Still,Aged,USA,,6,D+C: WH
-,3350,Russell’s Reserve 10-year,Whiskey,Corn & grains,Bourbon whiskey,,Column Still,Aged,USA,,4,"D+C: WH, D+C: Codex"
+,3350,Russell’s Reserve 10-year,Whiskey,Corn & grains,Bourbon whiskey,,Column Still,Aged,USA,1,4,"D+C: WH, D+C: Codex"
 ,3360,Old Grand-Dad 114,Whiskey,Corn & grains,Bourbon whiskey,,Column Still,Aged,USA,,4,"D+C: WH, D+C: Codex"
 ,3370,Wild Turkey,Whiskey,Rye & grains,Rye whiskey,,Column Still,Aged,USA,,6,D+C: WH
 ,3380,Rittenhouse,Whiskey,Rye & grains,Rye whiskey,,Column Still,Aged,USA,1,1,"D+C: WH, D+C: Codex"
@@ -288,7 +288,7 @@ Image,ID,Name,Type,Material,Style,Substyle,Method,Aging,Origin,Stock,Want,Refere
 ,3580,Germain-Robin Alambic,Brandy,Grapes,American brandy,,Pot Still,Aged,"California, USA",,8,D+C: WH
 ,3590,Louis Rogue La Vielle Prune,Brandy,Other fruits,Eau-de-vie,Plum,Pot Still,Aged,France,,8,D+C: WH
 ,3600,Domaine du Manoir de Montreuil Reserve,Brandy,Apples,Calvados,,Pot Still,Aged,France,,5,D+C: WH
-,3610,Hine H VSOP,Brandy,Grapes,Cognac,,Pot Still,Aged,France,,2,"D+C: WH, D+C: Codex"
+,3610,Hine H VSOP,Brandy,Grapes,Cognac,,Pot Still,Aged,France,1,2,"D+C: WH, D+C: Codex"
 ,3615,Paul Beau VS,Brandy,Grapes,Cognac,,Pot Still,Aged,France,,7,D+C: WH
 ,3620,PM Spirits Bas,Brandy,Grapes,Armagnac,,Pot Still,Aged,France,,5,D+C: WH
 ,3630,Lustau Solera Reserva,Brandy,Grapes,Spanish brandy,,Pot Still,Aged,Spain,,5,"D+C: WH, D+C: Codex"
@@ -439,14 +439,14 @@ Image,ID,Name,Type,Material,Style,Substyle,Method,Aging,Origin,Stock,Want,Refere
 ,4645,Gutiérrez Colosia Oloroso,Fortified wine,"Grapes w/ herbs, roots, etc",Sherry,Oloroso,N/A,N/A,Spain,1,8,"D+C: WH, D+C: Codex"
 ,4650,Williams & Humbert Dry Sack,Fortified wine,"Grapes w/ herbs, roots, etc",Sherry,Cream,N/A,N/A,Spain,,7,"D+C: WH, D+C: Codex"
 ,4660,Lustau East India Solera,Fortified wine,"Grapes w/ herbs, roots, etc",Sherry,Cream,N/A,N/A,Spain,,8,"D+C: WH, D+C: Codex"
-,,,,,FALSE,,,,,,,
-,,,,,FALSE,,,,,,,
-,,,,,FALSE,,,,,,,
-,,,,,FALSE,,,,,,,
-,,,,,FALSE,,,,,,,
-,,,,,FALSE,,,,,,,
-,,,,,FALSE,,,,,,,
-,,,,,FALSE,,,,,,,
+,5000,Angostura,Bitters,Bitters,Bitters,Aromatic,N/A,N/A,Trinidad,1,1,
+,5010,Peychauds,Bitters,Bitters,Bitters,Creole,N/A,N/A,"Louisiana, USA",1,1,
+,5020,Angostura Orange Bitters,Bitters,Bitters,Bitters,Orange,N/A,N/A,Trinidad,1,1,
+,5030,Regans Orange Bitters No 6,Bitters,Bitters,Bitters,Orange,N/A,N/A,Trinidad,1,1,
+,5040,Fee Brothers Orange Bitters,Bitters,Bitters,Bitters,Orange,N/A,N/A,Trinidad,1,1,
+,5050,Bittermens Elemakule Tiki Bitters,Bitters,Bitters,Bitters,Tiki,N/A,N/A,Trinidad,1,1,
+,5060,Bittermens Xocolatl Mole Bitters,Bitters,Bitters,Bitters,Mole,N/A,N/A,Trinidad,1,1,
+,5070,Bittermens Hellfire Habanero Shrub,Bitters,Bitters,Bitters,Spicy,N/A,N/A,Trinidad,1,1,
 ,,,,,FALSE,,,,,,,
 ,,,,,FALSE,,,,,,,
 ,,,,,FALSE,,,,,,,

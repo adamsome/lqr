@@ -2618,6 +2618,7 @@
     "aging": "medium",
     "origin": "Martinique",
     "references": [
+      "D+C: WH",
       "D+C: Codex"
     ]
   },
@@ -5037,6 +5038,71 @@
       "D+C: WH",
       "D+C: Codex"
     ]
+  },
+  {
+    "id": "angostura",
+    "ordinal": 5000,
+    "name": "Angostura",
+    "category": "bitters",
+    "parent": "bitters_aromatic",
+    "origin": "Trinidad"
+  },
+  {
+    "id": "peychauds",
+    "ordinal": 5010,
+    "name": "Peychauds",
+    "category": "bitters",
+    "parent": "bitters_creole",
+    "origin": "USA",
+    "originTerritory": "Louisiana"
+  },
+  {
+    "id": "angostura_orange_bitters",
+    "ordinal": 5020,
+    "name": "Angostura Orange Bitters",
+    "category": "bitters",
+    "parent": "bitters_orange",
+    "origin": "Trinidad"
+  },
+  {
+    "id": "regans_orange_bitters_no_6",
+    "ordinal": 5030,
+    "name": "Regans Orange Bitters No 6",
+    "category": "bitters",
+    "parent": "bitters_orange",
+    "origin": "Trinidad"
+  },
+  {
+    "id": "fee_brothers_orange_bitters",
+    "ordinal": 5040,
+    "name": "Fee Brothers Orange Bitters",
+    "category": "bitters",
+    "parent": "bitters_orange",
+    "origin": "Trinidad"
+  },
+  {
+    "id": "bittermens_elemakule_tiki_bitters",
+    "ordinal": 5050,
+    "name": "Bittermens Elemakule Tiki Bitters",
+    "category": "bitters",
+    "parent": "bitters_tiki",
+    "origin": "Trinidad"
+  },
+  {
+    "id": "bittermens_xocolatl_mole_bitters",
+    "ordinal": 5060,
+    "name": "Bittermens Xocolatl Mole Bitters",
+    "category": "bitters",
+    "parent": "bitters_mole",
+    "origin": "Trinidad"
+  },
+  {
+    "id": "bittermens_hellfire_habanero_shrub",
+    "ordinal": 5070,
+    "name": "Bittermens Hellfire Habanero Shrub",
+    "category": "bitters",
+    "parent": "bitters_spicy",
+    "origin": "Trinidad"
   },
   {
     "id": "angostura",

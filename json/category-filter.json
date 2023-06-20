@@ -1585,7 +1585,10 @@
           "id": "bitters_aromatic",
           "checked": false,
           "childIDs": [],
-          "children": {}
+          "children": {},
+          "bottleIDs": [
+            "angostura"
+          ]
         },
         "bitters_barrelaged": {
           "id": "bitters_barrelaged",
@@ -1627,7 +1630,10 @@
           "id": "bitters_creole",
           "checked": false,
           "childIDs": [],
-          "children": {}
+          "children": {},
+          "bottleIDs": [
+            "peychauds"
+          ]
         },
         "bitters_curry": {
           "id": "bitters_curry",
@@ -1669,7 +1675,10 @@
           "id": "bitters_mole",
           "checked": false,
           "childIDs": [],
-          "children": {}
+          "children": {},
+          "bottleIDs": [
+            "bittermens_xocolatl_mole_bitters"
+          ]
         },
         "bitters_moroccan": {
           "id": "bitters_moroccan",
@@ -1681,7 +1690,12 @@
           "id": "bitters_orange",
           "checked": false,
           "childIDs": [],
-          "children": {}
+          "children": {},
+          "bottleIDs": [
+            "angostura_orange_bitters",
+            "regans_orange_bitters_no_6",
+            "fee_brothers_orange_bitters"
+          ]
         },
         "bitters_peach": {
           "id": "bitters_peach",
@@ -1693,7 +1707,10 @@
           "id": "bitters_spicy",
           "checked": false,
           "childIDs": [],
-          "children": {}
+          "children": {},
+          "bottleIDs": [
+            "bittermens_hellfire_habanero_shrub"
+          ]
         },
         "bitters_thai": {
           "id": "bitters_thai",
@@ -1705,7 +1722,10 @@
           "id": "bitters_tiki",
           "checked": false,
           "childIDs": [],
-          "children": {}
+          "children": {},
+          "bottleIDs": [
+            "bittermens_elemakule_tiki_bitters"
+          ]
         }
       }
     },
