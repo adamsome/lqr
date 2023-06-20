@@ -1,11 +1,11 @@
 import { Dispatch } from 'react'
 
-import { AmountItems } from '@/components/ingredient-command/amount-items'
-import { Breadcrumb } from '@/components/ingredient-command/breadcrumb'
-import { IngredientItems } from '@/components/ingredient-command/ingredient-items'
-import { Action, State } from '@/components/ingredient-command/reducer'
-import { RumItems } from '@/components/ingredient-command/rum-items'
-import { SpiritItems } from '@/components/ingredient-command/spirit-items'
+import { AmountItems } from '@/components/spec-ingredient-command/amount-items'
+import { Breadcrumb } from '@/components/spec-ingredient-command/breadcrumb'
+import { IngredientItems } from '@/components/spec-ingredient-command/ingredient-items'
+import { Action, State } from '@/components/spec-ingredient-command/reducer'
+import { RumItems } from '@/components/spec-ingredient-command/rum-items'
+import { SpiritItems } from '@/components/spec-ingredient-command/spirit-items'
 import {
   CommandEmpty,
   CommandGroup,

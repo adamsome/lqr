@@ -7,7 +7,7 @@ import { useFieldArray, useForm } from 'react-hook-form'
 import * as z from 'zod'
 
 import { Ingredient } from '@/app/specs/[id]/edit/ingredient'
-import { IngredientCommandDialogButton } from '@/components/ingredient-command/ingredient-command-dialog-button'
+import { SpecIngredientCommandDialogButton } from '@/components/spec-ingredient-command/command-dialog-button'
 import { Button, Props as ButtonProps } from '@/components/ui/button'
 import {
   Form,
@@ -176,7 +176,7 @@ export function Spec({ spec }: Props) {
               </div>
             </div>
             <div>
-              <IngredientCommandDialogButton
+              <SpecIngredientCommandDialogButton
                 variant="secondary"
                 openOnKey={(e) => (e.metaKey || e.ctrlKey) && e.key === 'j'}
                 onSelect={append}
@@ -187,7 +187,7 @@ export function Spec({ spec }: Props) {
                     <span className="text-xs">⌘</span>J
                   </kbd>
                 </p>
-              </IngredientCommandDialogButton>
+              </SpecIngredientCommandDialogButton>
             </div>
           </div>
         </form>

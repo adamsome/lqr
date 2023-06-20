@@ -1,4 +1,4 @@
-import { IngredientCommandDialogButton } from '@/components/ingredient-command/ingredient-command-dialog-button'
+import { SpecIngredientCommandDialogButton } from '@/components/spec-ingredient-command/command-dialog-button'
 import { Button } from '@/components/ui/button'
 import { useIngredientName } from '@/hooks/use-ingredient-name'
 import { SpecIngredient } from '@/lib/types'
@@ -52,7 +52,7 @@ export function Ingredient({
             {category}
           </div>
         )}
-        <IngredientCommandDialogButton
+        <SpecIngredientCommandDialogButton
           variant="secondary"
           size="xs"
           ingredient={ingredient}
@@ -63,7 +63,7 @@ export function Ingredient({
             <span>{name}</span>
             {amount[1] && <span>{amount[1]}</span>}
           </div>
-        </IngredientCommandDialogButton>
+        </SpecIngredientCommandDialogButton>
       </div>
       <Button
         type="button"

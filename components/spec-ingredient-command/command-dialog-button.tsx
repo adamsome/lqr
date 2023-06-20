@@ -1,12 +1,12 @@
 import { KeyboardEvent, useEffect } from 'react'
 
-import { CustomDialog } from '@/components/ingredient-command/custom-dialog'
-import { IngredientCommand } from '@/components/ingredient-command/ingredient-command'
+import { CustomDialog } from '@/components/spec-ingredient-command/custom-dialog'
+import { IngredientCommand } from '@/components/spec-ingredient-command/command'
 import {
   State,
   useIngredientCommandReducer,
-} from '@/components/ingredient-command/reducer'
-import { useKindByIngredient } from '@/components/ingredient-command/use-kind-by-ingredient'
+} from '@/components/spec-ingredient-command/reducer'
+import { useKindByIngredient } from '@/components/spec-ingredient-command/use-kind-by-ingredient'
 import { Button, Props as ButtonProps } from '@/components/ui/button'
 import { CommandDialog } from '@/components/ui/command'
 import { Amount, SpecIngredient } from '@/lib/types'
@@ -17,7 +17,7 @@ type Props = Omit<ButtonProps, 'onSelect'> & {
   onSelect(ingredient: SpecIngredient): void
 }
 
-export function IngredientCommandDialogButton({
+export function SpecIngredientCommandDialogButton({
   children,
   ingredient,
   onClick,

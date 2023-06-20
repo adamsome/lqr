@@ -1,6 +1,7 @@
+import { ReactNode } from 'react'
+
 import { DataProvider } from '@/components/data-provider'
 import { getData } from '@/lib/model/data'
-import { ReactNode } from 'react'
 
 export const revalidate = 0
 

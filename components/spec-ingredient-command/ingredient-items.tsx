@@ -1,4 +1,4 @@
-import { useIngredientsByKind } from '@/components/ingredient-command/use-ingredients-by-kind'
+import { useIngredientsByKind } from '@/components/spec-ingredient-command/use-ingredients-by-kind'
 import {
   CommandGroup,
   CommandItem,

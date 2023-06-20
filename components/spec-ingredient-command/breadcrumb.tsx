@@ -1,6 +1,6 @@
 import { Dispatch } from 'react'
 
-import { Action, State } from '@/components/ingredient-command/reducer'
+import { Action, State } from '@/components/spec-ingredient-command/reducer'
 import { SpecIngredient } from '@/lib/types'
 import {
   Breadcrumb as BreadcrumbBase,
