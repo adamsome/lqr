@@ -2,6 +2,7 @@ import { curry } from 'ramda'
 
 import {
   AGING_DICT,
+  CATEGORY_DICT,
   Category,
   PRODUCTION_METHOD_DICT,
 } from '@/lib/generated-consts'
@@ -90,6 +91,7 @@ const idMap: Record<string, string> = {
   brandy_hazelnut: 'Hazelnut Fir Eau-de-vie',
   brandy_pear: 'Pear Eau-de-vie',
   brandy_raisin: 'Raisin Eau-de-vie',
+  liqueur_amaro_aperitivo: 'Bitter Aperitivo',
 }
 
 const prependBlackPaths: string[] = ['cane_rum']
@@ -106,12 +108,17 @@ function getDefaultIngredientName(ingredient: SpecIngredient | IngredientDef) {
   return ingredient.name ?? 'Unknown Ingredient'
 }
 
+type Options = {
+  inclBottle?: boolean
+  inclCategory?: boolean
+}
+
 export const getIngredientName = curry(
   (
     baseIngredientDict: Record<string, IngredientDef>,
     ingredientDict: Record<string, Ingredient>,
     ingredient: SpecIngredient | IngredientDef,
-    { inclBottle }: { inclBottle?: boolean } = {}
+    { inclBottle, inclCategory }: Options = {}
   ): string => {
     const { bottleID } = ingredient as SpecIngredient
     if (inclBottle && bottleID) {
@@ -131,6 +138,10 @@ export const getIngredientName = curry(
 
     const allDefs = getIngredientDefs(baseIngredientDict, id)
     if (!allDefs?.length) {
+      if (inclCategory) {
+        const category = CATEGORY_DICT[id as Category]
+        if (category) return category.name
+      }
       return getDefaultIngredientName(ingredient)
     }
 

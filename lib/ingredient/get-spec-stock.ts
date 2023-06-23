@@ -1,5 +1,7 @@
+import { curry, sortBy } from 'ramda'
+
 import { HierarchicalFilter } from '@/lib/hierarchical-filter'
-import { getIngredientDefs } from '@/lib/ingredient/get-ingredient-defs'
+import { getIngredientBottleIDs } from '@/lib/ingredient/get-ingredient-bottle-ids'
 import {
   Ingredient,
   IngredientDef,
@@ -8,7 +10,6 @@ import {
   SpecIngredientStock,
   SpecStock,
 } from '@/lib/types'
-import { curry, sortBy } from 'ramda'
 
 export const getSpecStock = curry(
   (
@@ -57,11 +58,9 @@ function getSpecIngredientStock(
 
   if (!ingredient.id) return { type: 'custom', stock: 0 }
 
-  const bottleIDs = getBottleIDs(
-    baseIngredientDict,
-    ingredientDict,
-    root,
-    ingredient
+  const bottleIDs = getIngredientBottleIDs(
+    { baseIngredientDict, ingredientDict, categoryFilter: root },
+    { include: [ingredient] }
   )
   if (bottleIDs.length === 0) {
     return {
@@ -86,51 +85,4 @@ function getSpecIngredientStock(
 const getBottleStock = curry(
   (ingredientDict: Record<string, Ingredient>, bottleID: string): number =>
     ingredientDict[bottleID]?.stock ?? -1
-)
-
-function getBottleIDs(
-  baseIngredientDict: Record<string, IngredientDef>,
-  ingredientDict: Record<string, Ingredient>,
-  root: HierarchicalFilter,
-  ingredient: SpecIngredient
-): string[] {
-  if (!ingredient?.id) return []
-  const defs = getIngredientDefs(baseIngredientDict, ingredient.id)
-  if (!defs?.length) return []
-  const node = defs.reduce<HierarchicalFilter | undefined>(
-    (acc, def) => acc?.children[def.id],
-    root
-  )
-  const isMethod = isBottleIngredientMethod(ingredientDict, ingredient)
-  return (node?.bottleIDs ?? []).filter(isMethod)
-}
-
-const isBottleIngredientMethod = curry(
-  (
-    ingredientDict: Record<string, Ingredient>,
-    ingredient: SpecIngredient,
-    bottleID: string
-  ) => {
-    const bottle = ingredientDict[bottleID]
-    if (!bottle) return false
-
-    const { aging, black, overproof, productionMethod } = ingredient
-
-    if (aging !== undefined) {
-      if (!bottle.aging) return false
-      if (!aging.includes(bottle.aging)) return false
-    }
-    if (black !== undefined) {
-      if (black && bottle.black !== black) return false
-      if (bottle.black === true) return false
-    }
-    if (productionMethod !== undefined) {
-      if (bottle.productionMethod !== productionMethod) return false
-    }
-    if (overproof !== undefined) {
-      if (overproof && bottle.overproof !== overproof) return false
-      if (bottle.overproof === true) return false
-    }
-    return true
-  }
 )
