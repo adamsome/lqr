@@ -1,5 +1,6 @@
 'use client'
 
+import { BarIngredientCommandDialogButton } from '@/components/bar-ingredient-command/command-dialog-button'
 import { StockIcon } from '@/components/stock-icon'
 import { Button } from '@/components/ui/button'
 import { getStockState } from '@/lib/stock'
@@ -40,10 +41,11 @@ export function Category({ className, category }: Props) {
       </div>
       <div className="flex flex-col flex-wrap items-start gap-2">
         {ingredients.map((it) => (
-          <Button
+          <BarIngredientCommandDialogButton
             key={it.id}
             className="flex max-w-full items-center gap-2 overflow-hidden"
             variant="secondary"
+            ingredient={it}
           >
             <div className="scale-[.8] transform opacity-60">
               <StockIcon stock={getStockState(it.stock)} />
@@ -51,7 +53,7 @@ export function Category({ className, category }: Props) {
             <span className="flex-1 overflow-hidden text-ellipsis whitespace-nowrap">
               {it.name}
             </span>
-          </Button>
+          </BarIngredientCommandDialogButton>
         ))}
         {ingredients.length === 0 && (
           <Button
