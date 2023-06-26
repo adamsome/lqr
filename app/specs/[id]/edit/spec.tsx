@@ -2,7 +2,6 @@
 
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useRouter } from 'next/navigation'
-import { useState } from 'react'
 import { useFieldArray, useForm } from 'react-hook-form'
 import * as z from 'zod'
 
@@ -20,7 +19,7 @@ import {
 import { FullScreen } from '@/components/ui/full-screen'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
-import { useRefresh } from '@/hooks/use-refresh'
+import { useMutate } from '@/hooks/use-mutate'
 import { toSpec } from '@/lib/routes'
 import { specSchema } from '@/lib/schema/spec'
 import { Spec, SpecIngredient } from '@/lib/types'
@@ -33,10 +32,10 @@ type Props = {
 }
 
 export function Spec({ spec }: Props) {
-  const router = useRouter()
-  const { refresh } = useRefresh()
-  const [fetching, setFetching] = useState(false)
   const { id, name, ingredients, source, sourcePage } = spec
+
+  const router = useRouter()
+  const [fetching, fetch] = useMutate(`/api/specs/${id}`)
 
   const form = useForm<Schema>({
     resolver: zodResolver(specSchema),
@@ -58,18 +57,12 @@ export function Spec({ spec }: Props) {
   }
 
   async function handleSubmit(values: Schema) {
-    setFetching(true)
     const updatedAt = new Date().toISOString()
     const change: Spec = { ...spec, ...(values as Spec), updatedAt }
-    try {
-      await fetch(`/api/specs/${id}`, {
-        method: 'PUT',
-        body: JSON.stringify({ spec: change }),
-      })
-    } catch (err: any) {
-      console.error(`Error updating spec '${name}'`, err?.data ?? err)
-    }
-    refresh()
+    await fetch({
+      method: 'PUT',
+      body: JSON.stringify({ spec: change }),
+    })
     handleClose()
   }
 

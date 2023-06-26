@@ -19,7 +19,6 @@ export function StockItems({ ingredient, onComplete }: Props) {
   const [fetching, fetch] = useMutate('/api/stock', ingredient.stock)
 
   async function handleClick(stock: StockState) {
-    console.log('stock', stock)
     await fetch({
       method: 'PUT',
       body: JSON.stringify({

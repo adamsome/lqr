@@ -7,7 +7,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu'
-import { useRefresh } from '@/hooks/use-refresh'
+import { useMutate } from '@/hooks/use-mutate'
 import { Ingredient } from '@/lib/types'
 
 type Props = {
@@ -15,17 +15,16 @@ type Props = {
 }
 
 export function ActionCell({ ingredient }: Props) {
-  const { refresh } = useRefresh()
+  const [fetching, fetch] = useMutate('/api/stock')
 
   async function handleClick() {
-    await fetch('/api/stock', {
+    await fetch({
       method: 'PUT',
       body: JSON.stringify({
         ingredientID: ingredient.id,
         stock: -1,
       }),
     })
-    refresh()
   }
 
   return (
