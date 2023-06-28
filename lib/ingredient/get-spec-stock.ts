@@ -1,7 +1,7 @@
 import { curry, sortBy } from 'ramda'
 
 import { HierarchicalFilter } from '@/lib/hierarchical-filter'
-import { getIngredientBottleIDs } from '@/lib/ingredient/get-ingredient-bottle-ids'
+import { filterIngredientItems } from '@/lib/ingredient/filter-ingredient-items'
 import {
   Ingredient,
   IngredientDef,
@@ -43,10 +43,6 @@ function getSpecIngredientStock(
   const { bottleID } = ingredient
   const getStock = getBottleStock(ingredientDict)
   if (bottleID) {
-    // TODO: Remove once bitters are in
-    if (bottleID === 'angostura' || bottleID === 'peychauds') {
-      return { type: 'bottle', stock: 1 }
-    }
     const stock = getStock(bottleID)
     // TODO: If no exact bottle match, check if in-stock bottles of category
     return {
@@ -58,11 +54,11 @@ function getSpecIngredientStock(
 
   if (!ingredient.id) return { type: 'custom', stock: 0 }
 
-  const bottleIDs = getIngredientBottleIDs(
+  const items = filterIngredientItems(
     { baseIngredientDict, ingredientDict, categoryFilter: root },
     { include: [ingredient] }
   )
-  if (bottleIDs.length === 0) {
+  if (items.length === 0) {
     return {
       type: 'category',
       stock: baseIngredientDict[ingredient.id]?.stock ?? -1,
@@ -71,8 +67,8 @@ function getSpecIngredientStock(
 
   const bottles = sortBy(
     (x) => -x.stock,
-    bottleIDs
-      .map((id) => ({ id, stock: getStock(id) }))
+    items
+      .map(({ id }) => ({ id, stock: getStock(id) }))
       .filter(({ stock }) => stock >= 0)
   )
   return {

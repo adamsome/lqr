@@ -11,22 +11,30 @@ type IngredientData = {
   categoryFilter: HierarchicalFilter
 }
 
+export type IngredientItem = {
+  id: string
+  path: string[]
+}
+
 export type IngredientFilter = {
   include?: (Ingredient | SpecIngredient)[]
   exclude?: (Ingredient | SpecIngredient)[]
+  items?: IngredientItem[]
+  excludeIDs?: string[]
+  name?: string
 }
 
-export const getIngredientBottleIDs = curry(
+export const filterIngredientItems = curry(
   (
     data: IngredientData,
     { include = [], exclude = [] }: IngredientFilter
-  ): string[] => {
+  ): IngredientItem[] => {
     const getBottleIDs = _getIngredientBottleIDs(data)
     const exclBottleIDs = new Set(
-      uniq(exclude.flatMap((id) => getBottleIDs(id)))
+      uniq(exclude.flatMap((it) => getBottleIDs(it).map(({ id }) => id)))
     )
-    return uniq(include.flatMap((id) => getBottleIDs(id))).filter(
-      (id) => !exclBottleIDs.has(id)
+    return uniq(include.flatMap((it) => getBottleIDs(it))).filter(
+      ({ id }) => !exclBottleIDs.has(id)
     )
   }
 )
@@ -35,7 +43,7 @@ const _getIngredientBottleIDs = curry(
   (
     data: IngredientData,
     ingredient: SpecIngredient | IngredientDef
-  ): string[] => {
+  ): IngredientItem[] => {
     const { baseIngredientDict, ingredientDict, categoryFilter: root } = data
     if (!ingredient?.id) return []
     let defs = getIngredientDefs(baseIngredientDict, ingredient.id)
@@ -47,23 +55,28 @@ const _getIngredientBottleIDs = curry(
         return []
       }
     }
-    const node = defs.reduce<HierarchicalFilter | undefined>(
-      (acc, def) => acc?.children[def.id],
+    const path = defs.map((def) => def.id)
+    const node = path.reduce<HierarchicalFilter | undefined>(
+      (acc, id) => acc?.children[id],
       root
     )
     const isMethod = isBottleIngredientMethod(ingredientDict, ingredient)
-    return getDescendentBottleIDs(node).filter(isMethod)
+    return getDescendentBottleIDs(path, node).filter(({ id }) => isMethod(id))
   }
 )
 
-const getDescendentBottleIDs = (root?: HierarchicalFilter): string[] => {
+const getDescendentBottleIDs = (
+  path: string[],
+  root?: HierarchicalFilter
+): IngredientItem[] => {
   if (!root) return []
-  const bottleIDs = [...(root.bottleIDs ?? [])]
+  const bottleIDs = root.bottleIDs ?? []
+  const bottles = bottleIDs.map((id) => ({ path, id }))
   for (const childID of root.childIDs) {
     const node = root.children[childID]
-    bottleIDs.push(...getDescendentBottleIDs(node))
+    bottles.push(...getDescendentBottleIDs([...path, childID], node))
   }
-  return bottleIDs
+  return bottles
 }
 
 const isBottleIngredientMethod = curry(

@@ -2,20 +2,17 @@ import { BarCategory, Category } from '@/app/bar/category'
 import { DataProvider } from '@/components/data-provider'
 import { Container } from '@/components/ui/container'
 import { H2 } from '@/components/ui/h2'
+import { HierarchicalFilter } from '@/lib/hierarchical-filter'
 import {
-  IngredientFilter,
-  getIngredientBottleIDs,
-} from '@/lib/ingredient/get-ingredient-bottle-ids'
+  IngredientItem,
+  filterIngredientItems,
+} from '@/lib/ingredient/filter-ingredient-items'
 import { getIngredientName } from '@/lib/ingredient/get-ingredient-name'
 import { getData } from '@/lib/model/data'
 import { Ingredient, IngredientDef } from '@/lib/types'
 import { cn } from '@/lib/utils'
 
-type Section = IngredientFilter &
-  Partial<Omit<BarCategory, 'ingredients'>> & {
-    bottleIDs?: string[]
-    excludeBottleIDs?: string[]
-  }
+type Section = Partial<Omit<BarCategory, 'ingredients'>>
 
 const sections: Section[] = [
   { include: [{ id: 'grain_whiskey_rye' }] },
@@ -44,8 +41,17 @@ const sections: Section[] = [
       { id: 'grain_whiskey_irish' },
     ],
   },
-  { name: 'Chartreuse', bottleIDs: ['green_chartreuse', 'yellow_chartreuse'] },
-  { name: 'Benedictine', bottleIDs: ['benedictine'] },
+  {
+    name: 'Chartreuse',
+    items: [
+      { id: 'green_chartreuse', path: ['liqueur', 'liqueur_herbal'] },
+      { id: 'yellow_chartreuse', path: ['liqueur', 'liqueur_herbal'] },
+    ],
+  },
+  {
+    name: 'Benedictine',
+    items: [{ id: 'benedictine', path: ['liqueur', 'liqueur_herbal'] }],
+  },
   { include: [{ id: 'cane_rum_jamaican', black: false }] },
   { include: [{ id: 'cane_rum_demerara', overproof: false, black: false }] },
   {
@@ -60,7 +66,15 @@ const sections: Section[] = [
     ],
     rowSpan: 2,
   },
-  { name: 'Falernum', bottleIDs: ['john_d_taylors_velvet_falernum'] },
+  {
+    name: 'Falernum',
+    items: [
+      {
+        id: 'john_d_taylors_velvet_falernum',
+        path: ['liqueur', 'liqueur_herbal'],
+      },
+    ],
+  },
   { include: [{ id: 'cane_rum_agricole' }] },
   {
     name: 'Black & Overproof Rum',
@@ -74,7 +88,12 @@ const sections: Section[] = [
       { id: 'cane_rum_agricole' },
     ],
   },
-  { name: 'Allspice Dram', bottleIDs: ['st_elizabeth_allspice_dram'] },
+  {
+    name: 'Allspice Dram',
+    items: [
+      { id: 'st_elizabeth_allspice_dram', path: ['liqueur', 'liqueur_herbal'] },
+    ],
+  },
   {
     name: 'Amari',
     include: [{ id: 'liqueur_amaro' }],
@@ -96,7 +115,7 @@ const sections: Section[] = [
       { id: 'liqueur_orange' },
       { id: 'liqueur_maraschino' },
     ],
-    excludeBottleIDs: [
+    excludeIDs: [
       'green_chartreuse',
       'yellow_chartreuse',
       'benedictine',
@@ -119,40 +138,62 @@ function getStocked(
   return Object.keys(dict).filter((id) => (dict[id].stock ?? -1) >= 0)
 }
 
+function createTree(items: IngredientItem[]): HierarchicalFilter {
+  const root: HierarchicalFilter = {
+    id: 'all',
+    checked: false,
+    childIDs: [],
+    children: {},
+  }
+  for (const { id: bottleID, path } of items) {
+    let node = root
+    for (const id of path) {
+      if (!node.children[id]) {
+        node.childIDs.push(id)
+        node.children[id] = { id, checked: false, childIDs: [], children: {} }
+      }
+      node = node.children[id]
+    }
+    if (!node.bottleIDs) node.bottleIDs = []
+    node.bottleIDs.push(bottleID)
+  }
+  return root
+}
+
 export default async function Page() {
   const data = await getData()
   const { baseIngredientDict, ingredientDict } = data
-  const getBottleIDs = getIngredientBottleIDs(data)
+  const getItems = filterIngredientItems(data)
   const getName = getIngredientName(baseIngredientDict, ingredientDict)
 
   const stockedIngredients = new Set<string>(getStocked(baseIngredientDict))
   const stockedSpirits = new Set<string>(getStocked(ingredientDict))
 
   const categories: BarCategory[] = sections.map((section) => {
-    const { include, exclude, bottleIDs, excludeBottleIDs, ...rest } = section
-    const exclIDs = new Set(excludeBottleIDs ?? [])
-    const ids =
-      bottleIDs ??
-      getBottleIDs({ include, exclude }).filter(
-        (id) => (ingredientDict[id]?.stock ?? -1) >= 0 && !exclIDs.has(id)
-      )
-    ids.forEach((id) => {
+    const { include, exclude, items: itemsProp, excludeIDs } = section
+    const exclIDs = new Set(excludeIDs ?? [])
+    const allItems = itemsProp ?? getItems({ include, exclude }) ?? []
+    const items = allItems.filter((it) => !exclIDs.has(it.id))
+    const root = createTree(items)
+    const stockedItems = items.filter(
+      ({ id }) => (ingredientDict[id]?.stock ?? -1) >= 0
+    )
+    stockedItems.forEach(({ id }) => {
       stockedSpirits.delete(id)
       stockedIngredients.delete(id)
     })
-    const ingredients = ids.map((id) => ingredientDict[id])
+    const stocked = stockedItems.map(({ id }) => ingredientDict[id])
     const name =
-      rest.name ?? getName(include?.[0] ?? {}, { inclCategory: true })
-    return { ...rest, ingredients, name }
+      section.name ?? getName(include?.[0] ?? {}, { inclCategory: true })
+    return { ...section, stocked, root, name }
   })
+
   categories.push({
-    ingredients: Array.from(stockedSpirits).map((id) => ingredientDict[id]),
+    stocked: Array.from(stockedSpirits).map((id) => ingredientDict[id]),
     name: 'Other Spirits',
   })
   categories.push({
-    ingredients: Array.from(stockedIngredients).map(
-      (id) => baseIngredientDict[id]
-    ),
+    stocked: Array.from(stockedIngredients).map((id) => baseIngredientDict[id]),
     name: 'Other Ingredients',
   })
 

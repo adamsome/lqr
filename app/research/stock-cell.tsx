@@ -9,10 +9,10 @@ type Props = {
 }
 
 export function StockCell({ ingredientID, stock = -1 }: Props) {
-  const [fetching, fetch] = useMutate('/api/stock', stock)
+  const [mutating, mutate] = useMutate('/api/stock', stock)
 
   async function handleClick(stockToSet: number) {
-    await fetch({
+    await mutate({
       method: 'PUT',
       body: JSON.stringify({
         ingredientID,
@@ -22,6 +22,6 @@ export function StockCell({ ingredientID, stock = -1 }: Props) {
   }
 
   return (
-    <StockIconButton stock={stock} fetching={fetching} onClick={handleClick} />
+    <StockIconButton stock={stock} fetching={mutating} onClick={handleClick} />
   )
 }

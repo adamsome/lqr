@@ -15,10 +15,10 @@ type Props = {
 }
 
 export function ActionCell({ ingredient }: Props) {
-  const [fetching, fetch] = useMutate('/api/stock')
+  const [, mutate] = useMutate('/api/stock')
 
   async function handleClick() {
-    await fetch({
+    await mutate({
       method: 'PUT',
       body: JSON.stringify({
         ingredientID: ingredient.id,

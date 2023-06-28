@@ -16,10 +16,10 @@ type Props = {
 
 export function StockItems({ ingredient, onComplete }: Props) {
   const stock = getStockState(ingredient.stock)
-  const [fetching, fetch] = useMutate('/api/stock', ingredient.stock)
+  const [mutating, mutate] = useMutate('/api/stock', ingredient.stock)
 
   async function handleClick(stock: StockState) {
-    await fetch({
+    await mutate({
       method: 'PUT',
       body: JSON.stringify({
         ingredientID: ingredient.id,
@@ -33,10 +33,10 @@ export function StockItems({ ingredient, onComplete }: Props) {
     <CommandGroup heading="Stock">
       <Item
         stock={stock === 'full' ? 'low' : 'full'}
-        fetching={fetching}
+        fetching={mutating}
         onClick={handleClick}
       />
-      <Item stock="none" fetching={fetching} onClick={handleClick} />
+      <Item stock="none" fetching={mutating} onClick={handleClick} />
     </CommandGroup>
   )
 }

@@ -35,7 +35,7 @@ export function Spec({ spec }: Props) {
   const { id, name, ingredients, source, sourcePage } = spec
 
   const router = useRouter()
-  const [fetching, fetch] = useMutate(`/api/specs/${id}`)
+  const [mutating, mutate] = useMutate(`/api/specs/${id}`)
 
   const form = useForm<Schema>({
     resolver: zodResolver(specSchema),
@@ -59,7 +59,7 @@ export function Spec({ spec }: Props) {
   async function handleSubmit(values: Schema) {
     const updatedAt = new Date().toISOString()
     const change: Spec = { ...spec, ...(values as Spec), updatedAt }
-    await fetch({
+    await mutate({
       method: 'PUT',
       body: JSON.stringify({ spec: change }),
     })
@@ -89,7 +89,7 @@ export function Spec({ spec }: Props) {
               >
                 Cancel
               </ResponsizeButton>
-              <ResponsizeButton type="submit" disabled={fetching}>
+              <ResponsizeButton type="submit" disabled={mutating}>
                 Submit
               </ResponsizeButton>
             </div>
