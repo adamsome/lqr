@@ -2,20 +2,20 @@ import { Aging, Category, ProductionMethod } from '@/lib/generated-consts'
 import { HierarchicalFilter } from '@/lib/hierarchical-filter'
 
 export interface StaticData {
-  baseIngredients: IngredientDef[]
+  baseIngredients: Ingredient[]
   ingredients: Ingredient[]
   categoryFilter: HierarchicalFilter
 }
 
 export interface Data {
-  baseIngredientDict: Record<string, IngredientDef>
+  baseIngredientDict: Record<string, Ingredient>
   ingredientDict: Record<string, Ingredient>
   ingredientIDs: string[]
   categoryFilter: HierarchicalFilter
   specs: Spec[]
 }
 
-export interface IngredientDef {
+export interface Ingredient {
   id: string
   ordinal?: number
   name: string
@@ -32,14 +32,12 @@ export interface IngredientDef {
   references?: string[]
 }
 
-export type Ingredient = IngredientDef & {
-  ancestors: IngredientDef[]
-}
+export type WithPath<T> = T & { path: string[] }
 
 export interface User {
   id: string
   username: string
-  ingredients: Record<string, Partial<IngredientDef>>
+  ingredients: Record<string, Partial<Ingredient>>
   admin?: boolean
 }
 

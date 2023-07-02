@@ -94,8 +94,6 @@ type ItemProps<T extends HasIDAndName> = Props<T> & {
 function Item<T extends HasIDAndName>(props: ItemProps<T>) {
   const { root, path: prevPath = [], showBottles, ...rest } = props
   const { id, childIDs, children, bottleIDs, checked } = root
-  if (id.startsWith('juice_tomato'))
-    console.log('tom', props, rest.rejectCheckedLeaves)
   if (
     rest.rejectCheckedLeaves &&
     checked &&

@@ -16,7 +16,7 @@ import {
   KIND_MORE_INGREDIENT_TYPES,
 } from '@/lib/ingredient/kind-ingredients'
 import { getData } from '@/lib/model/data'
-import { Data, Ingredient, IngredientDef } from '@/lib/types'
+import { Data, Ingredient } from '@/lib/types'
 import { cn, rejectNil } from '@/lib/utils'
 
 type Section = Partial<Omit<BarCategory, 'ingredients'>> & {
@@ -137,9 +137,7 @@ const ingredientSections: Section[] = [
   { kind: 'garnish' },
 ]
 
-function getStocked(
-  dict: Record<string, IngredientDef | Ingredient>
-): string[] {
+function getStocked(dict: Record<string, Ingredient>): string[] {
   return Object.keys(dict).filter((id) => (dict[id].stock ?? -1) >= 0)
 }
 
@@ -188,7 +186,6 @@ const createCategoryParser = (data: Data) => {
         name = INGREDIENT_KINDS.find(({ value }) => value === kind)?.label
         const kindIngredients = KIND_INGREDIENT_DICT[kind] ?? []
         topIDs.push(...uniq(rejectNil(kindIngredients.map(({ id }) => id))))
-        if (name?.startsWith('Syrup')) console.log(topIDs)
         topIDs.forEach((id) => exclIDs.add(id))
         const [, moreIngredients = []] =
           KIND_MORE_INGREDIENT_TYPES.find(([moreKind]) => moreKind === kind) ??

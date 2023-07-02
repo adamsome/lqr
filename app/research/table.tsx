@@ -6,14 +6,23 @@ import { useData } from '@/components/data-provider'
 import { DataTable } from '@/components/ui/data-table'
 import { DataTableContainer } from '@/components/ui/data-table-container'
 import { DataTablePagination } from '@/components/ui/data-table-pagination'
+import { getIngredientPath } from '@/lib/ingredient/get-ingredient-path'
+import { Ingredient, WithPath } from '@/lib/types'
 
 export function Table() {
   const { baseIngredientDict, ingredientDict, ingredientIDs } = useData()
-  const ingredients = ingredientIDs.map((id) => ingredientDict[id])
+  const items: WithPath<Ingredient>[] = []
+  const getPath = getIngredientPath(baseIngredientDict, ingredientDict)
+  for (const id of ingredientIDs) {
+    const it = ingredientDict[id]
+    if (it.ordinal === undefined) continue
+    const path = getPath(it.parent)
+    items.push({ ...it, path })
+  }
   return (
     <DataTableContainer
       columns={createColumns(baseIngredientDict)}
-      data={ingredients}
+      data={items}
       render={(table, columns) => (
         <div className="flex flex-col gap-4">
           <Toolbar table={table} />

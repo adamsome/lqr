@@ -7,7 +7,7 @@ import {
   PRODUCTION_METHOD_DICT,
 } from '@/lib/generated-consts'
 import { getIngredientDefs } from '@/lib/ingredient/get-ingredient-defs'
-import { Ingredient, IngredientDef, SpecIngredient } from '@/lib/types'
+import { Ingredient, SpecIngredient } from '@/lib/types'
 
 const suffixByCategory: Partial<Record<Category, string>> = {
   acid: 'Solution',
@@ -104,7 +104,7 @@ const prependAgingPaths: string[] = [
 ]
 const prependOverproofPaths: string[] = ['grain_gin', 'cane_rum']
 
-function getDefaultIngredientName(ingredient: SpecIngredient | IngredientDef) {
+function getDefaultIngredientName(ingredient: SpecIngredient | Ingredient) {
   return ingredient.name ?? 'Unknown Ingredient'
 }
 
@@ -115,9 +115,9 @@ type Options = {
 
 export const getIngredientName = curry(
   (
-    baseIngredientDict: Record<string, IngredientDef>,
+    baseIngredientDict: Record<string, Ingredient>,
     ingredientDict: Record<string, Ingredient>,
-    ingredient: SpecIngredient | IngredientDef,
+    ingredient: SpecIngredient | Ingredient,
     { inclBottle, inclCategory }: Options = {}
   ): string => {
     const { bottleID } = ingredient as SpecIngredient

@@ -5106,6 +5106,7 @@
   },
   {
     "id": "angostura",
+    "ordinal": 10010,
     "name": "Angostura Bitters",
     "category": "bitters",
     "parent": "bitters_aromatic",
@@ -5113,6 +5114,7 @@
   },
   {
     "id": "peychauds",
+    "ordinal": 10020,
     "name": "Peychaud's Bitters",
     "category": "bitters",
     "parent": "bitters_creole",

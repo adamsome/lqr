@@ -1,5 +1,5 @@
 import { IngredientKind } from '@/lib/ingredient/kind'
-import { IngredientDef, SpecIngredient } from '@/lib/types'
+import { Ingredient, SpecIngredient } from '@/lib/types'
 
 export const KIND_INGREDIENT_DICT: Record<IngredientKind, SpecIngredient[]> = {
   spirit: [
@@ -110,7 +110,7 @@ export const KIND_INGREDIENT_DICT: Record<IngredientKind, SpecIngredient[]> = {
 
 export const KIND_MORE_INGREDIENT_TYPES: [
   IngredientKind,
-  Partial<IngredientDef>[]
+  Partial<Ingredient>[]
 ][] = [
   [
     'bitters',

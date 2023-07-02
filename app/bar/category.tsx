@@ -9,17 +9,17 @@ import {
 import { BarIngredientCommandDialogButton } from '@/components/bar-ingredient-command/command-dialog-button'
 import { StockIcon } from '@/components/stock-icon'
 import { SelectOptions } from '@/components/ui/hierarchical-command-list'
+import { useGetIngredientName } from '@/hooks/use-get-ingredient-name'
 import { useMutate } from '@/hooks/use-mutate'
 import { HierarchicalFilter } from '@/lib/hierarchical-filter'
 import { IngredientFilter } from '@/lib/ingredient/filter-ingredient-items'
 import { getStockState } from '@/lib/stock'
-import { Ingredient, IngredientDef } from '@/lib/types'
+import { Ingredient } from '@/lib/types'
 import { cn } from '@/lib/utils'
 import invariant from 'tiny-invariant'
-import { useGetIngredientName } from '@/hooks/use-get-ingredient-name'
 
 export type BarCategory = IngredientFilter & {
-  stocked: IngredientDef[]
+  stocked: Ingredient[]
   topItems?: Ingredient[]
   root?: HierarchicalFilter
   rowSpan?: number

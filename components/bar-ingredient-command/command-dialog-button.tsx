@@ -9,13 +9,13 @@ import {
   CommandInput,
   CommandList,
 } from '@/components/ui/command'
-import { IngredientDef } from '@/lib/types'
+import { Ingredient } from '@/lib/types'
 import { cn } from '@/lib/utils'
 
 type Props = Omit<ButtonProps, 'onSelect'> & {
-  ingredient: IngredientDef
+  ingredient: Ingredient
   openOnKey?: (e: globalThis.KeyboardEvent) => boolean
-  onSelect?: (ingredient: IngredientDef) => void
+  onSelect?: (ingredient: Ingredient) => void
 }
 
 export function BarIngredientCommandDialogButton({

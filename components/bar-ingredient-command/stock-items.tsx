@@ -7,10 +7,10 @@ import {
   getStockState,
   getStockStateValue,
 } from '@/lib/stock'
-import { IngredientDef } from '@/lib/types'
+import { Ingredient } from '@/lib/types'
 
 type Props = {
-  ingredient: IngredientDef
+  ingredient: Ingredient
   onComplete(): void
 }
 

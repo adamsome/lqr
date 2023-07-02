@@ -4,7 +4,6 @@ import { HierarchicalFilter } from '@/lib/hierarchical-filter'
 import { filterIngredientItems } from '@/lib/ingredient/filter-ingredient-items'
 import {
   Ingredient,
-  IngredientDef,
   Spec,
   SpecIngredient,
   SpecIngredientStock,
@@ -13,7 +12,7 @@ import {
 
 export const getSpecStock = curry(
   (
-    baseIngredientDict: Record<string, IngredientDef>,
+    baseIngredientDict: Record<string, Ingredient>,
     ingredientDict: Record<string, Ingredient>,
     root: HierarchicalFilter,
     spec: Spec
@@ -30,7 +29,7 @@ export const getSpecStock = curry(
 )
 
 function getSpecIngredientStock(
-  baseIngredientDict: Record<string, IngredientDef>,
+  baseIngredientDict: Record<string, Ingredient>,
   ingredientDict: Record<string, Ingredient>,
   root: HierarchicalFilter,
   ingredient: SpecIngredient

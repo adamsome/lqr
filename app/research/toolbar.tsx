@@ -24,7 +24,7 @@ import {
   ProductionMethod,
 } from '@/lib/generated-consts'
 import { StockState, getStockState } from '@/lib/stock'
-import { Ingredient } from '@/lib/types'
+import { Ingredient, WithPath } from '@/lib/types'
 
 const STOCK_ITEMS: DataTableFacetedFilterItem[] = [
   { label: 'Full', value: 'full', icon: <StockIcon stock="full" /> },
@@ -46,11 +46,6 @@ const AGING_ITEMS: DataTableFacetedFilterItem[] = AGINGS.map((key) => ({
   label: AGING_DICT[key as Aging].name,
   value: key,
 })).concat(NONE)
-
-const BLACK_ITEMS: DataTableFacetedFilterItem[] = [
-  { label: 'Black', value: 'Black' },
-  NONE,
-]
 
 function transformStockFacets(facets: Map<any, number>) {
   const result = new Map<StockState, number>()
@@ -74,7 +69,7 @@ function transformCategoryFacets(facets: Map<any, number>) {
   return result
 }
 
-type Props = DataTableToolbarProps<Ingredient>
+type Props = DataTableToolbarProps<WithPath<Ingredient>>
 
 export function Toolbar({ table }: Props) {
   const isFiltered = useIsDataTableFiltered(table)

@@ -1,7 +1,5 @@
 import { Table } from '@tanstack/react-table'
 
-import { Ingredient } from '@/lib/types'
-import { DataTableViewOptions } from '@/components/ui/data-table-view-options'
 import { Input } from '@/components/ui/input'
 
 type Props<T, K extends keyof T & string> = {

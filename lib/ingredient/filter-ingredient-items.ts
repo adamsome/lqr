@@ -3,10 +3,10 @@ import { curry, uniq } from 'ramda'
 import { CATEGORY_DICT, Category } from '@/lib/generated-consts'
 import { HierarchicalFilter } from '@/lib/hierarchical-filter'
 import { getIngredientDefs } from '@/lib/ingredient/get-ingredient-defs'
-import { Ingredient, IngredientDef, SpecIngredient } from '@/lib/types'
+import { Ingredient, SpecIngredient } from '@/lib/types'
 
 type IngredientData = {
-  baseIngredientDict: Record<string, IngredientDef>
+  baseIngredientDict: Record<string, Ingredient>
   ingredientDict: Record<string, Ingredient>
   categoryFilter: HierarchicalFilter
 }
@@ -41,7 +41,7 @@ export const filterIngredientItems = curry(
 const getIngredientItems = curry(
   (
     data: IngredientData,
-    ingredient: SpecIngredient | IngredientDef
+    ingredient: SpecIngredient | Ingredient
   ): IngredientItem[] => {
     const { baseIngredientDict, ingredientDict, categoryFilter: root } = data
     if (!ingredient?.id) return []
@@ -82,7 +82,7 @@ const getDescendentItems = (
 const isBottleIngredientMethod = curry(
   (
     ingredientDict: Record<string, Ingredient>,
-    ingredient: SpecIngredient | IngredientDef,
+    ingredient: SpecIngredient | Ingredient,
     bottleID: string
   ) => {
     const bottle = ingredientDict[bottleID]

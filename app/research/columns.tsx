@@ -4,14 +4,14 @@ import { ColumnDef } from '@tanstack/react-table'
 
 import { ActionCell } from '@/app/research/action-cell'
 import { StockCell } from '@/app/research/stock-cell'
-import { IngredientPathCell } from '@/components/ingredient-path/cell'
+import { IngredientPathText } from '@/components/ingredient-path/text'
 import { StockIcon } from '@/components/stock-icon'
 import { DataTableColumnHeader as Header } from '@/components/ui/data-table-column-header'
 import { AGING_DICT, PRODUCTION_METHOD_DICT } from '@/lib/generated-consts'
 import { hierarchicalFilterFn } from '@/lib/hierarchical-filter'
 import { getIngredientPathName } from '@/lib/ingredient/get-ingredient-path-name'
 import { getStockState } from '@/lib/stock'
-import { Ingredient, IngredientDef } from '@/lib/types'
+import { Ingredient, WithPath } from '@/lib/types'
 import { compareBasic, getBoolValue, getDictValue, toString } from '@/lib/utils'
 
 type Column<T> = ColumnDef<T> & {
@@ -19,8 +19,8 @@ type Column<T> = ColumnDef<T> & {
 }
 
 export const createColumns = (
-  baseIngredientDict: Record<string, IngredientDef>
-): Column<Ingredient>[] => {
+  baseIngredientDict: Record<string, Ingredient>
+): Column<WithPath<Ingredient>>[] => {
   const getPathName = getIngredientPathName(baseIngredientDict)
   return [
     {
@@ -48,8 +48,7 @@ export const createColumns = (
     },
     {
       accessorKey: 'ancestors',
-      accessorFn: (row) =>
-        [row.category, ...row.ancestors.map((a) => a.id)].join('|'),
+      accessorFn: (row) => row.path.join('|'),
       sortingFn: (a, b, id) => {
         const aPath = (a.getValue(id) as string).split('|')
         const bPath = (b.getValue(id) as string).split('|')
@@ -59,11 +58,8 @@ export const createColumns = (
         )
       },
       header: ({ column }) => <Header column={column}>Category</Header>,
-      cell: ({ row }) => <IngredientPathCell ingredient={row.original} />,
-      filterFn: hierarchicalFilterFn((row) => {
-        const { ancestors, category } = row.original
-        return [category as string].concat(ancestors.map((a) => a.id))
-      }),
+      cell: ({ row }) => <IngredientPathText path={row.original.path} />,
+      filterFn: hierarchicalFilterFn((row) => row.original.path),
     },
     {
       accessorKey: 'productionMethod',
@@ -104,7 +100,7 @@ export const createColumns = (
     },
     {
       id: 'actions',
-      cell: ({ row }) => <ActionCell ingredient={row.original} />,
+      cell: ({ row }) => <ActionCell ingredientID={row.original.id} />,
       className: 'pr-1',
     },
   ]

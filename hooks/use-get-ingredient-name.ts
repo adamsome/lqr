@@ -2,7 +2,7 @@ import { useCallback, useMemo } from 'react'
 
 import { useData } from '@/components/data-provider'
 import { getIngredientName } from '@/lib/ingredient/get-ingredient-name'
-import { IngredientDef, SpecIngredient } from '@/lib/types'
+import { Ingredient, SpecIngredient } from '@/lib/types'
 
 export function useGetIngredientName() {
   const { baseIngredientDict, ingredientDict } = useData()
@@ -14,7 +14,7 @@ export function useGetIngredientName() {
 
   return useCallback(
     (
-      ingredient: SpecIngredient | IngredientDef,
+      ingredient: SpecIngredient | Ingredient,
       options?: { inclBottle?: boolean }
     ) => _getIngredientName(ingredient, options),
     [_getIngredientName]

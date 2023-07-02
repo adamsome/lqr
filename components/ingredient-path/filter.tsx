@@ -30,9 +30,13 @@ export function IngredientPathFilter(props: Props) {
     <DataTableHierarchicalFilter
       {...props}
       defaultValue={filter}
-      renderName={(path, full) => (
-        <IngredientPathText path={path} full={full} />
-      )}
+      renderName={(path, full) =>
+        full ? (
+          <IngredientPathText path={path} />
+        ) : (
+          <IngredientPathText id={path[path.length - 1]} />
+        )
+      }
     />
   )
 }

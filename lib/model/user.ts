@@ -3,12 +3,12 @@ import { OptionalUnlessRequiredId } from 'mongodb'
 import invariant from 'tiny-invariant'
 
 import { connectToDatabase } from '@/lib/mongodb'
-import { IngredientDef, User } from '@/lib/types'
+import { Ingredient, User } from '@/lib/types'
 
 import 'server-only'
 
 export async function getUserIngredients(): Promise<
-  Record<string, Partial<IngredientDef>>
+  Record<string, Partial<Ingredient>>
 > {
   const { userId: id } = auth()
   invariant(id, `User ID requried to get user data`)

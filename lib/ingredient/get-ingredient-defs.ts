@@ -1,17 +1,17 @@
 import { curry } from 'ramda'
 
 import { CATEGORY_DICT, CategoryDef } from '@/lib/generated-consts'
-import { IngredientDef } from '@/lib/types'
+import { Ingredient } from '@/lib/types'
 
-export type DefPath = [CategoryDef, ...IngredientDef[]]
+export type DefPath = [CategoryDef, ...Ingredient[]]
 
 export const getIngredientDefs = curry(
   (
-    baseIngredientDict: Record<string, IngredientDef>,
+    baseIngredientDict: Record<string, Ingredient>,
     id: string
   ): DefPath | undefined => {
-    const defs: IngredientDef[] = []
-    let def: IngredientDef | undefined = baseIngredientDict[id]
+    const defs: Ingredient[] = []
+    let def: Ingredient | undefined = baseIngredientDict[id]
     if (!def) {
       return undefined
     }
