@@ -21,7 +21,7 @@ type Column<T> = ColumnDef<T> & {
 export const createColumns = (
   baseIngredientDict: Record<string, IngredientDef>
 ): Column<Ingredient>[] => {
-  const getName = getIngredientPathName(baseIngredientDict)
+  const getPathName = getIngredientPathName(baseIngredientDict)
   return [
     {
       accessorKey: 'stock',
@@ -54,8 +54,8 @@ export const createColumns = (
         const aPath = (a.getValue(id) as string).split('|')
         const bPath = (b.getValue(id) as string).split('|')
         return compareBasic(
-          toString(getName(aPath, { full: true })).toLowerCase(),
-          toString(getName(bPath, { full: true })).toLowerCase()
+          toString(getPathName(aPath)).toLowerCase(),
+          toString(getPathName(bPath)).toLowerCase()
         )
       },
       header: ({ column }) => <Header column={column}>Category</Header>,

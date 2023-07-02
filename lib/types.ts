@@ -77,7 +77,7 @@ export interface SpecIngredient extends Amount {
 }
 
 export interface SpecIngredientStock {
-  type: 'bottle' | 'categoryBottle' | 'category' | 'custom'
+  type: 'bottle' | 'category' | 'custom'
   stock: number
   bottles?: { id: string; stock: number }[]
 }
@@ -108,4 +108,11 @@ export interface Spec {
   stock?: SpecStock
 }
 
+export type IngredientSpecifier<T extends HasIDAndName = HasIDAndName> = {
+  id?: string
+  path?: string[]
+  item?: T
+}
+
+export type HasIDAndName = { id: string; name: string }
 export type Option<T> = { label: string; value: T }

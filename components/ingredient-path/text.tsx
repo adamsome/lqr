@@ -1,8 +1,8 @@
 import { Fragment } from 'react'
 
-import { cn } from '@/lib/utils'
 import { useData } from '@/components/data-provider'
 import { CATEGORY_DICT, Category } from '@/lib/generated-consts'
+import { cn } from '@/lib/utils'
 
 const DIM: Record<string, boolean> = {
   agave: true,
@@ -33,17 +33,23 @@ const ONLY: Record<string, boolean> = {
 }
 
 type Props = {
-  path: string[]
-  full?: boolean
+  id?: string
+  path?: string[]
 }
 
-export function IngredientPathText({ path, full }: Props) {
-  const { baseIngredientDict } = useData()
+export function IngredientPathText({ id, path }: Props) {
+  const { baseIngredientDict, ingredientDict } = useData()
 
-  if (!full) {
-    if (path.length > 1) return <IngredientText id={path[path.length - 1]} />
-    if (path.length === 1) return <CategoryText id={path[0]} />
-    return null
+  if (!path) {
+    if (!id) return <>Unknown Ingredient Path</>
+    return (
+      <>
+        {ingredientDict[id]?.name ??
+          baseIngredientDict[id]?.name ??
+          CATEGORY_DICT[id as Category]?.name ??
+          'Unknown Ingredient ID'}
+      </>
+    )
   }
 
   const [category, ...ancestors] = path

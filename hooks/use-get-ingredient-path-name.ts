@@ -7,8 +7,7 @@ export function useGetIngredientPathName() {
   const { baseIngredientDict } = useData()
 
   return useCallback(
-    (path: string[], options: { full?: boolean } = {}) =>
-      getIngredientPathName(baseIngredientDict)(path, options),
+    (path: string[]) => getIngredientPathName(baseIngredientDict)(path),
     [baseIngredientDict]
   )
 }

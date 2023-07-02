@@ -32,6 +32,7 @@ import {
   invertCheckedState,
   updateHierarchicalFilter,
 } from '@/lib/hierarchical-filter'
+import { IngredientSpecifier } from '@/lib/types'
 import { cn } from '@/lib/utils'
 
 type Props<TData, TValue> = {
@@ -39,8 +40,8 @@ type Props<TData, TValue> = {
   title?: string
   icon?: ReactNode
   root: HierarchicalFilter
-  renderName(path: string[], full?: boolean): ReactNode
-  getName(path: string[], options?: { full?: boolean }): string
+  renderName(specifier: IngredientSpecifier): ReactNode
+  getIngredientPathName(path: string[]): string
   transformFacetsFn?: (facets: Map<any, number>) => Map<any, number>
 }
 
@@ -50,7 +51,7 @@ export function DataTableHierarchicalFacetFilterButton<TData, TValue>({
   icon,
   root,
   renderName,
-  getName,
+  getIngredientPathName,
   transformFacetsFn,
 }: Props<TData, TValue>) {
   const [search, setSearch] = useState('')
@@ -67,7 +68,7 @@ export function DataTableHierarchicalFacetFilterButton<TData, TValue>({
 
   function handleSelect({ path, checked = false }: SelectOptions) {
     let nextState: CheckedState
-    if (!path.length) {
+    if (!path?.length) {
       if (checked) {
         return column?.setFilterValue(undefined)
       }
@@ -77,7 +78,7 @@ export function DataTableHierarchicalFacetFilterButton<TData, TValue>({
     }
     const nextFilter = produce(
       selected,
-      updateHierarchicalFilter(path, nextState)
+      updateHierarchicalFilter(path ?? [], nextState)
     )
     column?.setFilterValue(nextFilter.checked ? nextFilter : undefined)
   }
@@ -112,7 +113,7 @@ export function DataTableHierarchicalFacetFilterButton<TData, TValue>({
                       key={path[path.length - 1]}
                       className="rounded-sm px-1 font-normal"
                     >
-                      {renderName(path)}
+                      {renderName({ path })}
                     </Badge>
                   ))
                 )}
@@ -147,7 +148,7 @@ export function DataTableHierarchicalFacetFilterButton<TData, TValue>({
               facets={facets}
               hasSearch={Boolean(search)}
               showCheckbox
-              getName={getName}
+              getIngredientPathName={getIngredientPathName}
               renderName={renderName}
               onSelect={handleSelect}
             />

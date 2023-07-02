@@ -59,6 +59,8 @@ export const KIND_INGREDIENT_DICT: Record<IngredientKind, SpecIngredient[]> = {
     { id: 'soda_ginger' },
     { id: 'soda_grapefruit' },
     { id: 'soda_guava' },
+    { id: 'fortifiedwine_sherry_fino' },
+    { id: 'fortifiedwine_sherry_manzanilla' },
     { id: 'fortifiedwine_sherry_oloroso' },
     { id: 'fortifiedwine_sherry_palecream' },
     { id: 'fortifiedwine_sherry_pedroximenez' },
@@ -119,7 +121,6 @@ export const KIND_MORE_INGREDIENT_TYPES: [
       { category: 'shrub' },
     ],
   ],
-  ['syrup', [{ category: 'syrup' }]],
   [
     'juice',
     [
@@ -132,6 +133,7 @@ export const KIND_MORE_INGREDIENT_TYPES: [
       { category: 'water' },
     ],
   ],
+  ['syrup', [{ category: 'syrup' }]],
   ['soda', [{ category: 'cider' }]],
   ['dairy', [{ category: 'cream' }, { category: 'oil' }]],
   [

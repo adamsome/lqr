@@ -1,9 +1,9 @@
 import { curry, uniq } from 'ramda'
 
+import { CATEGORY_DICT, Category } from '@/lib/generated-consts'
 import { HierarchicalFilter } from '@/lib/hierarchical-filter'
 import { getIngredientDefs } from '@/lib/ingredient/get-ingredient-defs'
 import { Ingredient, IngredientDef, SpecIngredient } from '@/lib/types'
-import { CATEGORY_DICT, Category } from '@/lib/generated-consts'
 
 type IngredientData = {
   baseIngredientDict: Record<string, IngredientDef>
@@ -19,7 +19,6 @@ export type IngredientItem = {
 export type IngredientFilter = {
   include?: (Ingredient | SpecIngredient)[]
   exclude?: (Ingredient | SpecIngredient)[]
-  items?: IngredientItem[]
   excludeIDs?: string[]
   name?: string
 }
@@ -29,17 +28,17 @@ export const filterIngredientItems = curry(
     data: IngredientData,
     { include = [], exclude = [] }: IngredientFilter
   ): IngredientItem[] => {
-    const getBottleIDs = _getIngredientBottleIDs(data)
-    const exclBottleIDs = new Set(
-      uniq(exclude.flatMap((it) => getBottleIDs(it).map(({ id }) => id)))
+    const getItems = getIngredientItems(data)
+    const excludIDs = new Set(
+      uniq(exclude.flatMap((it) => getItems(it).map(({ id }) => id)))
     )
-    return uniq(include.flatMap((it) => getBottleIDs(it))).filter(
-      ({ id }) => !exclBottleIDs.has(id)
+    return uniq(include.flatMap((it) => getItems(it))).filter(
+      ({ id }) => !excludIDs.has(id)
     )
   }
 )
 
-const _getIngredientBottleIDs = curry(
+const getIngredientItems = curry(
   (
     data: IngredientData,
     ingredient: SpecIngredient | IngredientDef
@@ -61,22 +60,23 @@ const _getIngredientBottleIDs = curry(
       root
     )
     const isMethod = isBottleIngredientMethod(ingredientDict, ingredient)
-    return getDescendentBottleIDs(path, node).filter(({ id }) => isMethod(id))
+    return getDescendentItems(path, node).filter(({ id }) => isMethod(id))
   }
 )
 
-const getDescendentBottleIDs = (
+const getDescendentItems = (
   path: string[],
   root?: HierarchicalFilter
 ): IngredientItem[] => {
   if (!root) return []
   const bottleIDs = root.bottleIDs ?? []
-  const bottles = bottleIDs.map((id) => ({ path, id }))
+  const items: IngredientItem[] = [{ id: root.id, path }]
+  items.push(...bottleIDs.map((id) => ({ path, id })))
   for (const childID of root.childIDs) {
     const node = root.children[childID]
-    bottles.push(...getDescendentBottleIDs([...path, childID], node))
+    items.push(...getDescendentItems([...path, childID], node))
   }
-  return bottles
+  return items
 }
 
 const isBottleIngredientMethod = curry(
@@ -86,7 +86,7 @@ const isBottleIngredientMethod = curry(
     bottleID: string
   ) => {
     const bottle = ingredientDict[bottleID]
-    if (!bottle) return false
+    if (!bottle) return true
 
     const { aging, black, overproof, productionMethod } = ingredient
 

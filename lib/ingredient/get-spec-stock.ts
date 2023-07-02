@@ -23,12 +23,7 @@ export const getSpecStock = curry(
     )
     return {
       count: ingredients.filter((it) => it.stock > 0).length,
-      total: ingredients.filter(
-        (it) =>
-          it.type !== 'custom' &&
-          // TODO: Remove once we can stock base ingredients
-          it.type !== 'category'
-      ).length,
+      total: ingredients.filter((it) => it.type !== 'custom').length,
       ingredients,
     }
   }
@@ -41,9 +36,9 @@ function getSpecIngredientStock(
   ingredient: SpecIngredient
 ): SpecIngredientStock {
   const { bottleID } = ingredient
-  const getStock = getBottleStock(ingredientDict)
+  const _getStock = getStock(ingredientDict)
   if (bottleID) {
-    const stock = getStock(bottleID)
+    const stock = _getStock(bottleID)
     // TODO: If no exact bottle match, check if in-stock bottles of category
     return {
       type: 'bottle',
@@ -58,27 +53,20 @@ function getSpecIngredientStock(
     { baseIngredientDict, ingredientDict, categoryFilter: root },
     { include: [ingredient] }
   )
-  if (items.length === 0) {
-    return {
-      type: 'category',
-      stock: baseIngredientDict[ingredient.id]?.stock ?? -1,
-    }
-  }
-
-  const bottles = sortBy(
+  const sortedItems = sortBy(
     (x) => -x.stock,
     items
-      .map(({ id }) => ({ id, stock: getStock(id) }))
+      .map(({ id }) => ({ id, stock: _getStock(id) }))
       .filter(({ stock }) => stock >= 0)
   )
   return {
-    type: 'categoryBottle',
-    stock: bottles[0]?.stock ?? -1,
-    bottles,
+    type: 'category',
+    stock: sortedItems[0]?.stock ?? -1,
+    bottles: sortedItems,
   }
 }
 
-const getBottleStock = curry(
-  (ingredientDict: Record<string, Ingredient>, bottleID: string): number =>
-    ingredientDict[bottleID]?.stock ?? -1
+const getStock = curry(
+  (ingredientDict: Record<string, Ingredient>, id: string): number =>
+    ingredientDict[id]?.stock ?? -1
 )

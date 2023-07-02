@@ -4,21 +4,7 @@ import { CATEGORY_DICT, Category } from '@/lib/generated-consts'
 import { IngredientDef } from '@/lib/types'
 
 export const getIngredientPathName = curry(
-  (
-    baseIngredientDict: Record<string, IngredientDef>,
-    path: string[],
-    { full }: { full?: boolean } = {}
-  ) => {
-    if (!full) {
-      if (path.length > 1) {
-        return baseIngredientDict[path[path.length - 1]].name
-      }
-      if (path.length === 0) {
-        return CATEGORY_DICT[path[0] as Category].name
-      }
-      return ''
-    }
-
+  (baseIngredientDict: Record<string, IngredientDef>, path: string[]) => {
     const [category, ...ids] = path
     let categoryPrefix = CATEGORY_DICT[category as Category].name
     if (ids.length) categoryPrefix += ', '

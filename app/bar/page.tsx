@@ -1,3 +1,5 @@
+import { uniq } from 'ramda'
+
 import { BarCategory, Category } from '@/app/bar/category'
 import { DataProvider } from '@/components/data-provider'
 import { Container } from '@/components/ui/container'
@@ -8,13 +10,21 @@ import {
   filterIngredientItems,
 } from '@/lib/ingredient/filter-ingredient-items'
 import { getIngredientName } from '@/lib/ingredient/get-ingredient-name'
+import { INGREDIENT_KINDS, IngredientKind } from '@/lib/ingredient/kind'
+import {
+  KIND_INGREDIENT_DICT,
+  KIND_MORE_INGREDIENT_TYPES,
+} from '@/lib/ingredient/kind-ingredients'
 import { getData } from '@/lib/model/data'
-import { Ingredient, IngredientDef } from '@/lib/types'
-import { cn } from '@/lib/utils'
+import { Data, Ingredient, IngredientDef } from '@/lib/types'
+import { cn, rejectNil } from '@/lib/utils'
 
-type Section = Partial<Omit<BarCategory, 'ingredients'>>
+type Section = Partial<Omit<BarCategory, 'ingredients'>> & {
+  ids?: string[]
+  kind?: IngredientKind
+}
 
-const sections: Section[] = [
+const spiritSections: Section[] = [
   { include: [{ id: 'grain_whiskey_rye' }] },
   { include: [{ id: 'grain_gin' }] },
   { include: [{ id: 'fortifiedwine_dryvermouth' }] },
@@ -43,15 +53,9 @@ const sections: Section[] = [
   },
   {
     name: 'Chartreuse',
-    items: [
-      { id: 'green_chartreuse', path: ['liqueur', 'liqueur_herbal'] },
-      { id: 'yellow_chartreuse', path: ['liqueur', 'liqueur_herbal'] },
-    ],
+    ids: ['green_chartreuse', 'yellow_chartreuse'],
   },
-  {
-    name: 'Benedictine',
-    items: [{ id: 'benedictine', path: ['liqueur', 'liqueur_herbal'] }],
-  },
+  { name: 'Benedictine', ids: ['benedictine'] },
   { include: [{ id: 'cane_rum_jamaican', black: false }] },
   { include: [{ id: 'cane_rum_demerara', overproof: false, black: false }] },
   {
@@ -68,12 +72,7 @@ const sections: Section[] = [
   },
   {
     name: 'Falernum',
-    items: [
-      {
-        id: 'john_d_taylors_velvet_falernum',
-        path: ['liqueur', 'liqueur_herbal'],
-      },
-    ],
+    ids: ['john_d_taylors_velvet_falernum'],
   },
   { include: [{ id: 'cane_rum_agricole' }] },
   {
@@ -90,9 +89,7 @@ const sections: Section[] = [
   },
   {
     name: 'Allspice Dram',
-    items: [
-      { id: 'st_elizabeth_allspice_dram', path: ['liqueur', 'liqueur_herbal'] },
-    ],
+    ids: ['st_elizabeth_allspice_dram'],
   },
   {
     name: 'Amari',
@@ -132,86 +129,159 @@ const sections: Section[] = [
   // wine
 ]
 
+const ingredientSections: Section[] = [
+  { kind: 'juice', rowSpan: 2 },
+  { kind: 'syrup', rowSpan: 2 },
+  { kind: 'soda', rowSpan: 2 },
+  { kind: 'dairy' },
+  { kind: 'garnish' },
+]
+
 function getStocked(
   dict: Record<string, IngredientDef | Ingredient>
 ): string[] {
   return Object.keys(dict).filter((id) => (dict[id].stock ?? -1) >= 0)
 }
 
-function createTree(items: IngredientItem[]): HierarchicalFilter {
+function createTree(
+  items: IngredientItem[],
+  excl?: Set<string>
+): HierarchicalFilter {
   const root: HierarchicalFilter = {
     id: 'all',
     checked: false,
     childIDs: [],
     children: {},
   }
-  for (const { id: bottleID, path } of items) {
+  for (const { id: ingredientID, path } of items) {
     let node = root
     for (const id of path) {
       if (!node.children[id]) {
         node.childIDs.push(id)
-        node.children[id] = { id, checked: false, childIDs: [], children: {} }
+        const checked = excl?.has(id) ?? false
+        node.children[id] = { id, checked, childIDs: [], children: {} }
       }
       node = node.children[id]
     }
-    if (!node.bottleIDs) node.bottleIDs = []
-    node.bottleIDs.push(bottleID)
+    if (node.id !== ingredientID && !excl?.has(ingredientID)) {
+      if (!node.bottleIDs) node.bottleIDs = []
+      node.bottleIDs.push(ingredientID)
+    }
   }
   return root
+}
+
+const createCategoryParser = (data: Data) => {
+  const { baseIngredientDict, ingredientDict } = data
+  const getItems = filterIngredientItems(data)
+  const getName = getIngredientName(baseIngredientDict, ingredientDict)
+
+  return (allStocked: Set<string>) =>
+    (section: Section): BarCategory => {
+      const { include: incl, exclude, ids = [], kind, excludeIDs } = section
+      const include = incl ?? []
+      const exclIDs = new Set(excludeIDs ?? [])
+      let name: string | undefined
+      let topIDs = ids
+
+      if (kind) {
+        name = INGREDIENT_KINDS.find(({ value }) => value === kind)?.label
+        const kindIngredients = KIND_INGREDIENT_DICT[kind] ?? []
+        topIDs.push(...uniq(rejectNil(kindIngredients.map(({ id }) => id))))
+        if (name?.startsWith('Syrup')) console.log(topIDs)
+        topIDs.forEach((id) => exclIDs.add(id))
+        const [, moreIngredients = []] =
+          KIND_MORE_INGREDIENT_TYPES.find(([moreKind]) => moreKind === kind) ??
+          []
+        include.push(...moreIngredients.map(({ category: id }) => ({ id })))
+      }
+
+      const allItems = getItems({ include, exclude }) ?? []
+      const items = allItems.filter((it) => !exclIDs.has(it.id))
+      const stockedIDs = topIDs
+        .concat(items.map(({ id }) => id))
+        .filter(
+          (id) =>
+            (ingredientDict[id]?.stock ??
+              baseIngredientDict[id]?.stock ??
+              -1) >= 0
+        )
+
+      const excludeSet = new Set(stockedIDs)
+      const root = createTree(items, excludeSet)
+      topIDs = topIDs.filter((id) => !excludeSet.has(id))
+
+      const stocked = stockedIDs
+        // Remove any that have already been added in previous categories
+        .filter((id) => allStocked.has(id))
+        .map((id) => ingredientDict[id] ?? baseIngredientDict[id])
+      stockedIDs.forEach((id) => {
+        allStocked.delete(id)
+      })
+
+      const topItems = topIDs.map((id) => {
+        const def = ingredientDict[id] ?? baseIngredientDict[id] ?? {}
+        const name = getName(def)
+        return { ...def, name }
+      })
+
+      name =
+        name ??
+        section.name ??
+        getName(include?.[0] ?? {}, { inclCategory: true })
+
+      return { ...section, stocked, root, topItems, name }
+    }
 }
 
 export default async function Page() {
   const data = await getData()
   const { baseIngredientDict, ingredientDict } = data
-  const getItems = filterIngredientItems(data)
-  const getName = getIngredientName(baseIngredientDict, ingredientDict)
 
-  const stockedIngredients = new Set<string>(getStocked(baseIngredientDict))
-  const stockedSpirits = new Set<string>(getStocked(ingredientDict))
+  const ingredients = new Set<string>(getStocked(baseIngredientDict))
+  const spirits = new Set<string>(getStocked(ingredientDict))
 
-  const categories: BarCategory[] = sections.map((section) => {
-    const { include, exclude, items: itemsProp, excludeIDs } = section
-    const exclIDs = new Set(excludeIDs ?? [])
-    const allItems = itemsProp ?? getItems({ include, exclude }) ?? []
-    const items = allItems.filter((it) => !exclIDs.has(it.id))
-    const root = createTree(items)
-    const stockedItems = items.filter(
-      ({ id }) => (ingredientDict[id]?.stock ?? -1) >= 0
-    )
-    stockedItems.forEach(({ id }) => {
-      stockedSpirits.delete(id)
-      stockedIngredients.delete(id)
-    })
-    const stocked = stockedItems.map(({ id }) => ingredientDict[id])
-    const name =
-      section.name ?? getName(include?.[0] ?? {}, { inclCategory: true })
-    return { ...section, stocked, root, name }
-  })
+  const toCategory = createCategoryParser(data)
 
-  categories.push({
-    stocked: Array.from(stockedSpirits).map((id) => ingredientDict[id]),
+  const spiritCategories = spiritSections.map(toCategory(spirits))
+  const ingredientCategories = ingredientSections.map(toCategory(ingredients))
+
+  spiritCategories.push({
+    stocked: Array.from(spirits).map((id) => ingredientDict[id]),
     name: 'Other Spirits',
-  })
-  categories.push({
-    stocked: Array.from(stockedIngredients).map((id) => baseIngredientDict[id]),
-    name: 'Other Ingredients',
   })
 
   return (
     <DataProvider {...data}>
       <Container className="relative py-8">
-        <section className="flex flex-col gap-4">
-          <H2>Spirits</H2>
-          <div
-            className={cn(
-              'grid gap-x-4 gap-y-4 lg:gap-x-6 lg:gap-y-8',
-              'grid-cols-[repeat(auto-fill,minmax(theme(spacing.64),1fr))]',
-              'grid-rows-['
-            )}
-          >
-            {categories.map((c, i) => (
-              <Category key={c.name ?? i} category={c} />
-            ))}
+        <section className="flex flex-col gap-8">
+          <div className="flex flex-col gap-4">
+            <H2>Spirits</H2>
+            <div
+              className={cn(
+                'grid gap-x-4 gap-y-4 lg:gap-x-6 lg:gap-y-8',
+                'grid-cols-[repeat(auto-fill,minmax(theme(spacing.64),1fr))]',
+                'grid-rows-['
+              )}
+            >
+              {spiritCategories.map((c, i) => (
+                <Category key={c.name ?? i} category={c} muteItems />
+              ))}
+            </div>
+          </div>
+          <div className="flex flex-col gap-4">
+            <H2>Ingredients</H2>
+            <div
+              className={cn(
+                'grid gap-x-4 gap-y-4 lg:gap-x-6 lg:gap-y-8',
+                'grid-cols-[repeat(auto-fill,minmax(theme(spacing.64),1fr))]',
+                'grid-rows-['
+              )}
+            >
+              {ingredientCategories.map((c, i) => (
+                <Category key={c.name ?? i} category={c} />
+              ))}
+            </div>
           </div>
         </section>
       </Container>

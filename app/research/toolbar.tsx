@@ -79,7 +79,7 @@ type Props = DataTableToolbarProps<Ingredient>
 export function Toolbar({ table }: Props) {
   const isFiltered = useIsDataTableFiltered(table)
   const categoryRoot = useHierarchicalSpiritsRoot()
-  const getName = useGetIngredientPathName()
+  const getIngredientPathName = useGetIngredientPathName()
 
   return (
     <div className="flex items-center justify-between">
@@ -103,10 +103,10 @@ export function Toolbar({ table }: Props) {
             column={table.getColumn('ancestors')}
             title="Category"
             root={categoryRoot}
-            renderName={(path, full) => (
-              <IngredientPathText path={path} full={full} />
+            renderName={({ id, path }) => (
+              <IngredientPathText id={id} path={path} />
             )}
-            getName={getName}
+            getIngredientPathName={getIngredientPathName}
             transformFacetsFn={transformCategoryFacets}
           />
         )}

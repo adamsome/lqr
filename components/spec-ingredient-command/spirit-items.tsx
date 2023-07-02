@@ -13,19 +13,18 @@ type Props = {
 export function SpiritItems({ hasSearch, onSelect }: Props) {
   const { ingredientDict } = useData()
   const categoryRoot = useHierarchicalSpiritsRoot()
-  const getPathName = useGetIngredientPathName()
+  const getIngredientPathName = useGetIngredientPathName()
   return (
     <HierarchicalCommandList
       root={categoryRoot}
       hasSearch={hasSearch}
       groupTrunks
-      getName={getPathName}
-      getBottleName={(id) => ingredientDict[id]?.name ?? ''}
-      renderName={(path, full) => (
-        <IngredientPathText path={path} full={full} />
-      )}
-      onSelect={({ path, bottleID }) =>
-        onSelect({ id: path[path.length - 1], bottleID })
+      muteItems
+      showBottles
+      getIngredientPathName={getIngredientPathName}
+      renderName={({ id, path }) => <IngredientPathText id={id} path={path} />}
+      onSelect={({ path, id: bottleID }) =>
+        onSelect({ id: path?.[path.length - 1], bottleID })
       }
     />
   )

@@ -13,11 +13,14 @@ import { useMutate } from '@/hooks/use-mutate'
 import { HierarchicalFilter } from '@/lib/hierarchical-filter'
 import { IngredientFilter } from '@/lib/ingredient/filter-ingredient-items'
 import { getStockState } from '@/lib/stock'
-import { IngredientDef } from '@/lib/types'
+import { Ingredient, IngredientDef } from '@/lib/types'
 import { cn } from '@/lib/utils'
+import invariant from 'tiny-invariant'
+import { useGetIngredientName } from '@/hooks/use-get-ingredient-name'
 
 export type BarCategory = IngredientFilter & {
   stocked: IngredientDef[]
+  topItems?: Ingredient[]
   root?: HierarchicalFilter
   rowSpan?: number
 }
@@ -25,21 +28,22 @@ export type BarCategory = IngredientFilter & {
 type Props = {
   className?: string
   category: BarCategory
+  muteItems?: boolean
 }
 
-export function Category({ className, category }: Props) {
-  const { name, stocked, root, rowSpan = 1 } = category
+export function Category({ className, category, muteItems }: Props) {
+  const { name, stocked, topItems, root, rowSpan = 1 } = category
 
   const [mutating, mutate] = useMutate('/api/stock')
+  const getIngredientName = useGetIngredientName()
 
-  function handleSelect(selection: SelectOptions) {
-    const { bottleID: ingredientID } = selection
-    if (!ingredientID) {
-      console.warn('Adding non-bottles not yet supported')
-      return
-    }
+  function onSelect({ item, id, path }: SelectOptions) {
+    const ingredientID = item ? item.id : id ?? path?.[path.length - 1]
+    invariant(ingredientID, `ID required to add an ingredient.`)
     mutate({ method: 'PUT', body: JSON.stringify({ ingredientID, stock: 1 }) })
   }
+
+  const addProps = { topItems, root, muteItems, mutating, onSelect }
 
   return (
     <div
@@ -55,9 +59,7 @@ export function Category({ className, category }: Props) {
           className="px-1 text-muted-foreground"
           variant="ghost"
           size="xs"
-          root={root}
-          disabled={mutating}
-          onSelect={handleSelect}
+          {...addProps}
         >
           <Plus size={16} />
         </AddButton>
@@ -74,7 +76,7 @@ export function Category({ className, category }: Props) {
               <StockIcon stock={getStockState(it.stock)} />
             </div>
             <span className="flex-1 overflow-hidden text-ellipsis whitespace-nowrap">
-              {it.name}
+              {getIngredientName(it, { inclBottle: true })}
             </span>
           </BarIngredientCommandDialogButton>
         ))}
@@ -82,9 +84,7 @@ export function Category({ className, category }: Props) {
           <AddButton
             className="gap-1 border-dashed pl-3 text-muted-foreground"
             variant="outline"
-            root={root}
-            disabled={mutating}
-            onSelect={handleSelect}
+            {...addProps}
           >
             <Plus size={16} />
             Add Bottle
