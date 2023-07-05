@@ -104,51 +104,64 @@ const prependAgingPaths: string[] = [
 ]
 const prependOverproofPaths: string[] = ['grain_gin', 'cane_rum']
 
+const preserve: Record<string, true> = {
+  IPA: true,
+}
+
 function getDefaultIngredientName(ingredient: SpecIngredient | Ingredient) {
   return ingredient.name ?? 'Unknown Ingredient'
 }
 
-type Options = {
+function format(str: string, toLower?: boolean) {
+  return toLower ? str.toLocaleLowerCase() : str
+}
+
+function formatPreserve(str: string, toLower?: boolean) {
+  if (toLower && preserve[str]) return str
+  return format(str, toLower)
+}
+
+export type Options = {
   inclBottle?: boolean
   inclCategory?: boolean
+  toLower?: boolean
 }
 
 export const getIngredientName = curry(
   (
-    baseIngredientDict: Record<string, Ingredient>,
-    ingredientDict: Record<string, Ingredient>,
+    byID: Record<string, Ingredient>,
     ingredient: SpecIngredient | Ingredient,
-    { inclBottle, inclCategory }: Options = {}
+    { inclBottle, inclCategory, toLower }: Options = {}
   ): string => {
     const { bottleID } = ingredient as SpecIngredient
     if (inclBottle && bottleID) {
-      if (ingredientDict[bottleID]) {
-        return ingredientDict[bottleID].name
+      if (byID[bottleID]) {
+        return byID[bottleID].name
       }
     }
     const { id } = ingredient
 
     if (!id) {
-      return getDefaultIngredientName(ingredient)
+      return format(getDefaultIngredientName(ingredient), toLower)
     }
 
     if (idMap[id]) {
-      return idMap[id]
+      return format(idMap[id], toLower)
     }
 
-    const allDefs = getIngredientDefs(baseIngredientDict, id)
+    const allDefs = getIngredientDefs(byID, id)
     if (!allDefs?.length) {
       if (inclCategory) {
         const category = CATEGORY_DICT[id as Category]
         if (category) return category.name
       }
-      return getDefaultIngredientName(ingredient)
+      return format(getDefaultIngredientName(ingredient), toLower)
     }
 
     const [category, ...defs] = allDefs
     const [def1] = defs
 
-    let nameParts = allDefs.map((def) => def.name)
+    let nameParts = allDefs.map((def) => formatPreserve(def.name, toLower))
     if (omitCategoryAndFirstByID[id]) {
       nameParts = nameParts.slice(2)
     } else if (
@@ -188,22 +201,22 @@ export const getIngredientName = curry(
         productionMethod === 'blended' &&
         aging?.includes('light')
       ) {
-        return 'Blackstrap Rum'
+        return format('Blackstrap Rum', toLower)
       }
       if (id === 'cane_rum_agricole' && productionMethod !== 'coffey') {
         if (productionMethod === 'pot') {
           if (aging?.includes('medium') || aging?.includes('long')) {
-            return 'Cane Pot Still Aged Agricole Rum'
+            return format('Cane Pot Still Aged Agricole Rum', toLower)
           }
           if (aging?.includes('none')) {
-            return 'Cane Pot Still Unaged Agricole Rum'
+            return format('Cane Pot Still Unaged Agricole Rum', toLower)
           }
         } else {
           if (aging?.includes('medium') || aging?.includes('long')) {
-            return 'Rhum Agricole Vieux'
+            return format('Rhum Agricole Vieux', toLower)
           }
           if (aging?.includes('none')) {
-            return 'Rhum Agricole Blanc'
+            return format('Rhum Agricole Blanc', toLower)
           }
         }
       }
@@ -234,7 +247,7 @@ export const getIngredientName = curry(
     }
 
     if (prefixes.length) {
-      name = `${prefixes.join(' ')} ${name}`
+      name = `${format(prefixes.join(' '), toLower)} ${name}`
     }
 
     return name

@@ -16,17 +16,17 @@ export async function getData(): Promise<Data> {
     getSpecs(),
   ])
   const { baseIngredients, ingredients, categoryFilter } = staticData
-  const data = parseIngredients(baseIngredients, userIngredients, ingredients)
-
-  const getStock = getSpecStock(
-    data.baseIngredientDict,
-    data.ingredientDict,
-    categoryFilter
+  const ingredientDict = parseIngredients(
+    baseIngredients,
+    userIngredients,
+    ingredients
   )
+
+  const getStock = getSpecStock(ingredientDict, categoryFilter)
   const specs = sortBy(
     (s) => (s.stock?.total ?? 0) - (s.stock?.count ?? 0),
     rawSpecs.map((spec) => ({ ...spec, stock: getStock(spec) }))
   )
 
-  return { ...data, categoryFilter, specs }
+  return { ingredientDict, categoryFilter, specs }
 }

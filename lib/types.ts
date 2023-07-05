@@ -8,9 +8,7 @@ export interface StaticData {
 }
 
 export interface Data {
-  baseIngredientDict: Record<string, Ingredient>
   ingredientDict: Record<string, Ingredient>
-  ingredientIDs: string[]
   categoryFilter: HierarchicalFilter
   specs: Spec[]
 }

@@ -6,12 +6,9 @@ import { Ingredient } from '@/lib/types'
 export type DefPath = [CategoryDef, ...Ingredient[]]
 
 export const getIngredientDefs = curry(
-  (
-    baseIngredientDict: Record<string, Ingredient>,
-    id: string
-  ): DefPath | undefined => {
+  (byID: Record<string, Ingredient>, id: string): DefPath | undefined => {
     const defs: Ingredient[] = []
-    let def: Ingredient | undefined = baseIngredientDict[id]
+    let def: Ingredient | undefined = byID[id]
     if (!def) {
       return undefined
     }
@@ -19,7 +16,7 @@ export const getIngredientDefs = curry(
     const category = CATEGORY_DICT[categoryID]
     while (def) {
       defs.push(def)
-      def = def.parent ? baseIngredientDict[def.parent] : undefined
+      def = def.parent ? byID[def.parent] : undefined
     }
     defs.reverse()
     return [category, ...defs]

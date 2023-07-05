@@ -6,9 +6,8 @@ import { getIngredientDefs } from '@/lib/ingredient/get-ingredient-defs'
 import { Ingredient, SpecIngredient } from '@/lib/types'
 
 type IngredientData = {
-  baseIngredientDict: Record<string, Ingredient>
-  ingredientDict: Record<string, Ingredient>
-  categoryFilter: HierarchicalFilter
+  byID: Record<string, Ingredient>
+  tree: HierarchicalFilter
 }
 
 export type IngredientItem = {
@@ -43,9 +42,9 @@ const getIngredientItems = curry(
     data: IngredientData,
     ingredient: SpecIngredient | Ingredient
   ): IngredientItem[] => {
-    const { baseIngredientDict, ingredientDict, categoryFilter: root } = data
+    const { byID: ingredientDict, tree } = data
     if (!ingredient?.id) return []
-    let defs = getIngredientDefs(baseIngredientDict, ingredient.id)
+    let defs = getIngredientDefs(ingredientDict, ingredient.id)
     if (!defs?.length) {
       const category = CATEGORY_DICT[ingredient.id as Category]
       if (category) {
@@ -57,7 +56,7 @@ const getIngredientItems = curry(
     const path = defs.map((def) => def.id)
     const node = path.reduce<HierarchicalFilter | undefined>(
       (acc, id) => acc?.children[id],
-      root
+      tree
     )
     const isMethod = isBottleIngredientMethod(ingredientDict, ingredient)
     return getDescendentItems(path, node).filter(({ id }) => isMethod(id))
@@ -66,14 +65,14 @@ const getIngredientItems = curry(
 
 const getDescendentItems = (
   path: string[],
-  root?: HierarchicalFilter
+  tree?: HierarchicalFilter
 ): IngredientItem[] => {
-  if (!root) return []
-  const bottleIDs = root.bottleIDs ?? []
-  const items: IngredientItem[] = [{ id: root.id, path }]
+  if (!tree) return []
+  const bottleIDs = tree.bottleIDs ?? []
+  const items: IngredientItem[] = [{ id: tree.id, path }]
   items.push(...bottleIDs.map((id) => ({ path, id })))
-  for (const childID of root.childIDs) {
-    const node = root.children[childID]
+  for (const childID of tree.childIDs) {
+    const node = tree.children[childID]
     items.push(...getDescendentItems([...path, childID], node))
   }
   return items
@@ -81,11 +80,11 @@ const getDescendentItems = (
 
 const isBottleIngredientMethod = curry(
   (
-    ingredientDict: Record<string, Ingredient>,
+    byID: Record<string, Ingredient>,
     ingredient: SpecIngredient | Ingredient,
     bottleID: string
   ) => {
-    const bottle = ingredientDict[bottleID]
+    const bottle = byID[bottleID]
     if (!bottle) return true
 
     const { aging, black, overproof, productionMethod } = ingredient

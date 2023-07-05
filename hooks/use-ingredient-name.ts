@@ -11,7 +11,7 @@ export function useIngredientName(ingredient: SpecIngredient) {
   const amount = getSpecAmountName(ingredient)
 
   let category
-  let name = getIngredientName(ingredient).toLocaleLowerCase()
+  let name = getIngredientName(ingredient, { toLower: true })
   if (!amount[0]) name = capitalize(name)
 
   const { bottleID } = ingredient

@@ -10,10 +10,10 @@ import { getIngredientPath } from '@/lib/ingredient/get-ingredient-path'
 import { Ingredient, WithPath } from '@/lib/types'
 
 export function Table() {
-  const { baseIngredientDict, ingredientDict, ingredientIDs } = useData()
+  const { ingredientDict } = useData()
   const items: WithPath<Ingredient>[] = []
-  const getPath = getIngredientPath(baseIngredientDict, ingredientDict)
-  for (const id of ingredientIDs) {
+  const getPath = getIngredientPath(ingredientDict)
+  for (const id of Object.keys(ingredientDict)) {
     const it = ingredientDict[id]
     if (it.ordinal === undefined) continue
     const path = getPath(it.parent)
@@ -21,7 +21,7 @@ export function Table() {
   }
   return (
     <DataTableContainer
-      columns={createColumns(baseIngredientDict)}
+      columns={createColumns(ingredientDict)}
       data={items}
       render={(table, columns) => (
         <div className="flex flex-col gap-4">

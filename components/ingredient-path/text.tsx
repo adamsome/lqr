@@ -38,14 +38,13 @@ type Props = {
 }
 
 export function IngredientPathText({ id, path }: Props) {
-  const { baseIngredientDict, ingredientDict } = useData()
+  const { ingredientDict } = useData()
 
   if (!path) {
     if (!id) return <>Unknown Ingredient Path</>
     return (
       <>
         {ingredientDict[id]?.name ??
-          baseIngredientDict[id]?.name ??
           CATEGORY_DICT[id as Category]?.name ??
           'Unknown Ingredient ID'}
       </>
@@ -76,22 +75,11 @@ export function IngredientPathText({ id, path }: Props) {
                 (DIM_LAST[ancestors[i - 1]] && i !== onlyIndex),
             })}
           >
-            {baseIngredientDict[id]?.name ?? ''}
+            {ingredientDict[id]?.name ?? ''}
           </span>
           <span>{i === ancestors.length - 1 ? '' : ', '}</span>
         </Fragment>
       ))}
     </span>
   )
-}
-
-type TextProps = { id: string }
-
-function IngredientText({ id }: TextProps) {
-  const { baseIngredientDict } = useData()
-  return <>{baseIngredientDict[id]?.name}</>
-}
-
-function CategoryText({ id }: TextProps) {
-  return <>{CATEGORY_DICT[id as Category].name}</>
 }

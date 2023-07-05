@@ -12,13 +12,12 @@ import {
 
 export const getSpecStock = curry(
   (
-    baseIngredientDict: Record<string, Ingredient>,
-    ingredientDict: Record<string, Ingredient>,
-    root: HierarchicalFilter,
+    byID: Record<string, Ingredient>,
+    tree: HierarchicalFilter,
     spec: Spec
   ): SpecStock => {
     const ingredients = spec.ingredients.map((it) =>
-      getSpecIngredientStock(baseIngredientDict, ingredientDict, root, it)
+      getSpecIngredientStock(byID, tree, it)
     )
     return {
       count: ingredients.filter((it) => it.stock > 0).length,
@@ -29,13 +28,12 @@ export const getSpecStock = curry(
 )
 
 function getSpecIngredientStock(
-  baseIngredientDict: Record<string, Ingredient>,
-  ingredientDict: Record<string, Ingredient>,
-  root: HierarchicalFilter,
+  byID: Record<string, Ingredient>,
+  tree: HierarchicalFilter,
   ingredient: SpecIngredient
 ): SpecIngredientStock {
   const { bottleID } = ingredient
-  const _getStock = getStock(ingredientDict)
+  const _getStock = getStock(byID)
   if (bottleID) {
     const stock = _getStock(bottleID)
     // TODO: If no exact bottle match, check if in-stock bottles of category
@@ -48,10 +46,7 @@ function getSpecIngredientStock(
 
   if (!ingredient.id) return { type: 'custom', stock: 0 }
 
-  const items = filterIngredientItems(
-    { baseIngredientDict, ingredientDict, categoryFilter: root },
-    { include: [ingredient] }
-  )
+  const items = filterIngredientItems({ byID, tree }, { include: [ingredient] })
   const sortedItems = sortBy(
     (x) => -x.stock,
     items
@@ -66,6 +61,6 @@ function getSpecIngredientStock(
 }
 
 const getStock = curry(
-  (ingredientDict: Record<string, Ingredient>, id: string): number =>
-    ingredientDict[id]?.stock ?? -1
+  (byID: Record<string, Ingredient>, id: string): number =>
+    byID[id]?.stock ?? -1
 )

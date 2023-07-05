@@ -1,4 +1,4 @@
-import { uniq } from 'ramda'
+import { partition, uniq } from 'ramda'
 
 import { BarCategory, Category } from '@/app/bar/category'
 import { DataProvider } from '@/components/data-provider'
@@ -137,8 +137,11 @@ const ingredientSections: Section[] = [
   { kind: 'garnish' },
 ]
 
-function getStocked(dict: Record<string, Ingredient>): string[] {
-  return Object.keys(dict).filter((id) => (dict[id].stock ?? -1) >= 0)
+function partitionStocked(
+  byID: Record<string, Ingredient>
+): [string[], string[]] {
+  const ids = Object.keys(byID).filter((id) => (byID[id].stock ?? -1) >= 0)
+  return partition((id) => byID[id].ordinal !== undefined, ids)
 }
 
 function createTree(
@@ -170,9 +173,12 @@ function createTree(
 }
 
 const createCategoryParser = (data: Data) => {
-  const { baseIngredientDict, ingredientDict } = data
-  const getItems = filterIngredientItems(data)
-  const getName = getIngredientName(baseIngredientDict, ingredientDict)
+  const { ingredientDict, categoryFilter } = data
+  const getItems = filterIngredientItems({
+    byID: ingredientDict,
+    tree: categoryFilter,
+  })
+  const getName = getIngredientName(ingredientDict)
 
   return (allStocked: Set<string>) =>
     (section: Section): BarCategory => {
@@ -197,12 +203,7 @@ const createCategoryParser = (data: Data) => {
       const items = allItems.filter((it) => !exclIDs.has(it.id))
       const stockedIDs = topIDs
         .concat(items.map(({ id }) => id))
-        .filter(
-          (id) =>
-            (ingredientDict[id]?.stock ??
-              baseIngredientDict[id]?.stock ??
-              -1) >= 0
-        )
+        .filter((id) => (ingredientDict[id]?.stock ?? -1) >= 0)
 
       const excludeSet = new Set(stockedIDs)
       const root = createTree(items, excludeSet)
@@ -211,13 +212,13 @@ const createCategoryParser = (data: Data) => {
       const stocked = stockedIDs
         // Remove any that have already been added in previous categories
         .filter((id) => allStocked.has(id))
-        .map((id) => ingredientDict[id] ?? baseIngredientDict[id])
+        .map((id) => ingredientDict[id])
       stockedIDs.forEach((id) => {
         allStocked.delete(id)
       })
 
       const topItems = topIDs.map((id) => {
-        const def = ingredientDict[id] ?? baseIngredientDict[id] ?? {}
+        const def = ingredientDict[id] ?? {}
         const name = getName(def)
         return { ...def, name }
       })
@@ -233,10 +234,11 @@ const createCategoryParser = (data: Data) => {
 
 export default async function Page() {
   const data = await getData()
-  const { baseIngredientDict, ingredientDict } = data
+  const { ingredientDict } = data
 
-  const ingredients = new Set<string>(getStocked(baseIngredientDict))
-  const spirits = new Set<string>(getStocked(ingredientDict))
+  const [bottleIDs, ids] = partitionStocked(ingredientDict)
+  const ingredients = new Set<string>(ids)
+  const spirits = new Set<string>(bottleIDs)
 
   const toCategory = createCategoryParser(data)
 

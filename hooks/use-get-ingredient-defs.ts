@@ -4,11 +4,11 @@ import { useData } from '@/components/data-provider'
 import { getIngredientDefs } from '@/lib/ingredient/get-ingredient-defs'
 
 export function useGetIngredientDefs() {
-  const { baseIngredientDict } = useData()
+  const { ingredientDict } = useData()
 
   const _getIngredientDefs = useMemo(
-    () => getIngredientDefs(baseIngredientDict),
-    [baseIngredientDict]
+    () => getIngredientDefs(ingredientDict),
+    [ingredientDict]
   )
 
   return useCallback(
