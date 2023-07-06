@@ -137,13 +137,6 @@ const ingredientSections: Section[] = [
   { kind: 'garnish' },
 ]
 
-function partitionStocked(
-  byID: Record<string, Ingredient>
-): [string[], string[]] {
-  const ids = Object.keys(byID).filter((id) => (byID[id].stock ?? -1) >= 0)
-  return partition((id) => byID[id].ordinal !== undefined, ids)
-}
-
 function createTree(
   items: IngredientItem[],
   excl?: Set<string>
@@ -236,18 +229,22 @@ export default async function Page() {
   const data = await getData()
   const { ingredientDict } = data
 
-  const [bottleIDs, ids] = partitionStocked(ingredientDict)
-  const ingredients = new Set<string>(ids)
-  const spirits = new Set<string>(bottleIDs)
+  const stocked = new Set<string>(
+    Object.keys(ingredientDict).filter(
+      (id) => (ingredientDict[id].stock ?? -1) >= 0
+    )
+  )
 
   const toCategory = createCategoryParser(data)
 
-  const spiritCategories = spiritSections.map(toCategory(spirits))
-  const ingredientCategories = ingredientSections.map(toCategory(ingredients))
+  const spiritCategories = spiritSections.map(toCategory(stocked))
+  const ingredientCategories = ingredientSections.map(toCategory(stocked))
 
   spiritCategories.push({
-    stocked: Array.from(spirits).map((id) => ingredientDict[id]),
     name: 'Other Spirits',
+    stocked: Array.from(stocked)
+      .map((id) => ingredientDict[id])
+      .filter((it) => it.ordinal !== undefined),
   })
 
   return (
