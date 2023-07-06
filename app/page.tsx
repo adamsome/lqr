@@ -1,7 +1,7 @@
 import { CardHeader, CardLink } from '@/components/ui/card'
 import { CardGrid } from '@/components/ui/card-grid'
 import { Container } from '@/components/ui/container'
-import { RESEARCH, SPECS } from '@/lib/routes'
+import { BAR, RESEARCH, SPECS } from '@/lib/routes'
 
 export const revalidate = 0
 
@@ -11,6 +11,9 @@ export default async function Page() {
       <CardGrid>
         <CardLink href={SPECS}>
           <CardHeader>Specs</CardHeader>
+        </CardLink>
+        <CardLink href={BAR}>
+          <CardHeader>Bar</CardHeader>
         </CardLink>
         <CardLink href={RESEARCH}>
           <CardHeader>Research</CardHeader>
