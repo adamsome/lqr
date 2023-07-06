@@ -116,9 +116,9 @@ export const KIND_MORE_INGREDIENT_TYPES: [
     'bitters',
     [
       { category: 'bitters' },
-      { category: 'acid' },
-      { category: 'extract' },
       { category: 'shrub' },
+      { category: 'extract' },
+      { category: 'acid' },
     ],
   ],
   [

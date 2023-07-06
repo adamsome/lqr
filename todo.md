@@ -1,6 +1,5 @@
 # TODO
 
-- FIX: Bar, Bitters, not incl. extracts
 - Bar Add any ingredient
 - Add progress circle w/ weighted spec ingredients
 - Spec alt. versions

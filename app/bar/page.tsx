@@ -28,7 +28,7 @@ const spiritSections: Section[] = [
   { include: [{ id: 'grain_whiskey_rye' }] },
   { include: [{ id: 'grain_gin' }] },
   { include: [{ id: 'fortifiedwine_dryvermouth' }] },
-  { include: [{ id: 'bitters' }], rowSpan: 2 },
+  { kind: 'bitters', rowSpan: 2 },
   { include: [{ id: 'brandy_grape_cognac' }] },
   { include: [{ id: 'agave_tequila' }] },
   { include: [{ id: 'fortifiedwine_sweetvermouth' }] },
@@ -183,8 +183,9 @@ const createCategoryParser = (data: Data) => {
 
       if (kind) {
         name = INGREDIENT_KINDS.find(({ value }) => value === kind)?.label
-        const kindIngredients = KIND_INGREDIENT_DICT[kind] ?? []
-        topIDs.push(...uniq(rejectNil(kindIngredients.map(({ id }) => id))))
+        const kindItems = KIND_INGREDIENT_DICT[kind] ?? []
+        const kindIDs = kindItems.map(({ id, bottleID }) => bottleID ?? id)
+        topIDs.push(...uniq(rejectNil(kindIDs)))
         topIDs.forEach((id) => exclIDs.add(id))
         const [, moreIngredients = []] =
           KIND_MORE_INGREDIENT_TYPES.find(([moreKind]) => moreKind === kind) ??
