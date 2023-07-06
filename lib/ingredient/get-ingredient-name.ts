@@ -133,13 +133,20 @@ export const getIngredientName = curry(
     ingredient: SpecIngredient | Ingredient,
     { inclBottle, inclCategory, toLower }: Options = {}
   ): string => {
-    const { bottleID } = ingredient as SpecIngredient
-    if (inclBottle && bottleID) {
-      if (byID[bottleID]) {
-        return byID[bottleID].name
+    const { id } = ingredient
+
+    if (inclBottle) {
+      const { bottleID } = ingredient as SpecIngredient
+      if (bottleID) {
+        if (byID[bottleID]) {
+          return byID[bottleID].name
+        }
+      }
+      const { ordinal } = ingredient as Ingredient
+      if (ordinal !== undefined && id && byID[id]) {
+        return byID[id].name
       }
     }
-    const { id } = ingredient
 
     if (!id) {
       return format(getDefaultIngredientName(ingredient), toLower)
