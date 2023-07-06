@@ -29,6 +29,7 @@ export function Card({ spec }: Props) {
             <Ingredient
               key={`${i}_${ingredient.name ?? ingredient.id}`}
               ingredient={ingredient}
+              stock={stock?.ingredients[i]}
             />
           ))}
         </div>
