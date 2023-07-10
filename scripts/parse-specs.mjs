@@ -59,6 +59,44 @@ const catMapFull = {
     id: 'liqueur_amaro_medium',
     bottleID: 'cappelletti_pasubio_vino_amaro',
   },
+  'syrup (strawberry) (basil)': { id: 'syrup_strawberrybasil' },
+  'singani 63 eau-de-vie': {
+    id: 'brandy_grape_singani',
+    bottleID: 'singani_63',
+  },
+  umeshu: { id: 'liqueur_umeshu' },
+  'novo fogo cachaça': {
+    id: 'cane_cachaca',
+    bottleID: 'novo_fogo_silver',
+  },
+  'domaine d’espérance blanche armagnac': {
+    id: 'brandy_grape_armagnac',
+    bottleID: 'domaine_desperance_blanche_armagnac',
+  },
+  'domaine d’esperance blanche armagnac': {
+    id: 'brandy_grape_armagnac',
+    bottleID: 'domaine_desperance_blanche_armagnac',
+  },
+  'aquafaba (egg white substitute)': {
+    id: 'egg_aquafaba',
+  },
+  'cobrafire eau-de-vie de raisin': {
+    id: 'brandy_raisin',
+    bottleID: 'cobrafire_eaudevie_de_raisin',
+  },
+  'amaro (carciofo) (cynar)': {
+    id: 'liqueur_amaro_carciofo',
+    bottleID: 'cynar',
+  },
+  'amaro (aperitivo) (campari) (infusion : coffee bean)': {
+    id: 'liqueur_amaro_aperitivo',
+    bottleID: 'campari',
+    infusion: 'coffee bean',
+  },
+  'amaro (citron sauvage)': {
+    bottleID: 'bittermens_citron_sauvage',
+    id: 'liqueur_grapefruit',
+  },
 }
 const catSkip = [
   'garnish',
@@ -85,6 +123,77 @@ const catSkip = [
   'Water (Flavored)',
   'Syrup (Demerara) (Tamarind)',
   'Tea (Genmaicha)',
+  'Vodka (Green chile)',
+  'Hot sauce',
+  'Syrup (Orgeat) (Macadamia)',
+  'Bitters (Hopped grapefruit)',
+  'Parasol',
+  'Whey (Kefir)',
+  'Syrup (Lime Leaf, Lemongrass & Shiso)',
+  'Mix (Gardenia)',
+  'Mix (Papaya)',
+  'Syrup (White Chocolate) (Wasabi)',
+  'Vermouth (Absinthe)',
+  'Tea (Summer Royal)',
+  'Calpico',
+  'Syrup (Strawberry) (Aloe)',
+  'Lecithin',
+  'Liqueur (Noyaux)',
+  'Syrup (Pineapple) (Hopped)',
+  'Pickle (Tomato)',
+  'Powder (Raspberry)',
+  'Whiskey (Malt) (American)',
+  'Rum (Spanish) (Oloroso)',
+  'Rum (Pineapple)',
+  'Vodka (Hop)',
+  'Bitters (Yuzu)',
+  'Tincture (Habanero)',
+  'Bitters (Chocolate chile)',
+  'Whiskey (Blend)',
+  'Water (Boiling)',
+  'Tincture (Sarsaparilla)',
+  'Liqueur (Grapefruit and Rosemary)',
+  'Liqueur (Pomegranate)',
+  'Vodka (Buddha’s Hand)',
+  'Syrup (Aperitif)',
+  'Spirit (Escubac)',
+  'Bitters (Pecan)',
+  'Fruit (Umeboshi plum)',
+  'Spirit (Träkal)',
+  'Amaro (Elisir Novasalu)',
+  'Brine (Japanese pickle)',
+  'Pickle (Cucumber)',
+  'Liqueur (Élixir combier)',
+  'Cream (Grand Marnier)',
+  'Sorbet (Oat milk)',
+  'Yogurt (Greek)',
+  'Syrup (Hibiscus Honey)',
+]
+const skipPreSplit = [
+  'Pajarote Toronja Arandense & Romero Licor',
+  'Miracle Mile cucumber/orris root bitters',
+  '1 mint sprig, 1 orange wheel, blackberries, raspberries, and powdered sugar',
+  '2 pineapple fronds and 1 small dried chile',
+  '1 small cube of bread soaked in 151-proof rum, 1 empty lime shell, and ground cinnamon',
+  '1 lemon wheel, 1 raspberry, and 1 mint bouquet',
+  '1 mint bouquet and dried banana slices',
+  '1 orange wheel, 1 mint bouquet, and powdered sugar',
+  '1 dehydrated pineapple slice, 1 mint bouquet, and 1 coffee bean',
+  '1 mint bouquet, 1 orange half wheel, 1 apple slice, powdered sugar, and 1 cinnamon stick',
+  '1 lemon twist and 1 orange twist',
+  '1 lemon wheel, 1 apple slice, and 1 mint bouquet',
+  '1 orange twist and 1 lemon twist',
+  '1 mint bouquet, 2 raspberries, 2 blackberries, and powdered sugar',
+  '1 orange half wheel and 2 raspberries and/or blackberries on a skewer, 1 cinnamon stick',
+  '1 coriander flower',
+  '1 lemon twist and 1 rosemary sprig',
+  'dashi Kombu–Infused Pear Brandy in an atomizer',
+  '1 pickled carrot or 1 pickled radish slice',
+  'Toasted coconut flakes and grapefruit zest',
+  'Campari-Infused Toasted Coconut',
+  'Toasted Oat Cream  and nutmeg',
+  'Spent Coffee Grounds Syrup',
+  '1 mint bouquet and toasted coconut',
 ]
 const ingSkip = [
   'Peruvian Pisco',
@@ -93,6 +202,7 @@ const ingSkip = [
   'Blended Aged Rum (guyana)',
   'Blended Aged Rum (barbados)',
   'white port',
+  'Absinthe, to rinse',
 ]
 const catMap = {
   'Whisky (Malt) (Indian)': 'grain_whiskey_indian',
@@ -109,6 +219,8 @@ const c1Map = {
   molasses: 'syrup_molasses',
   olive: 'fruit_olive',
   packedgoldenbrownsugar: 'sugar_brown',
+  pineapplefronds: 'leaf_pineapple',
+  rhubarb: 'vegetable_rhubarb',
   salt: 'spice_salt',
   sweetenedcondensedmilk: 'milk_condensed',
   tonic: 'soda_tonic',
@@ -170,6 +282,13 @@ const c2Map = {
   lambrusco: 'red_lambrusco',
   genepy: 'herbal',
   sauternes: 'sweet_sauternes',
+  pineapplepulp: 'pineapple',
+  strega: 'herbal',
+  byrrh: '',
+  nocino: 'walnut',
+  rancio: 'red_rancio',
+  maurinquina: '',
+  pasubio: 'medium',
 }
 const c3Map = {
   brutoamericano: '',
@@ -182,28 +301,73 @@ const c3Map = {
   lofi: '',
   amburana: '',
   aperol: '',
+  chinachina: '',
+  abano: '',
+  diangostura: '',
+  ciociaro: '',
+  rabarbaro: '',
+  braulio: '',
+  nardini: '',
+  granclassicobitter: '',
+  bitterbianco: '',
 }
-const c4Map = {}
+const c4Map = {
+  sfumato: '',
+}
 const csMap = {
   vermouth_dry: ['fortifiedwine', 'dryvermouth'],
   vermouth_sweet: ['fortifiedwine', 'sweetvermouth'],
   vermouth_blanc: ['fortifiedwine', 'blancvermouth'],
+  vermouth_ambre: ['fortifiedwine', 'ambrevermouth'],
   grain_aquavit: ['grain', 'aquavit'],
   water_sparkling: ['soda', 'club'],
   wine_madeira: ['fortifiedwine', 'madeira'],
-  eaudevie_pear: ['brandy', 'pear'],
-  eaudevie_hazelnut: ['brandy', 'hazelnut'],
+  wine_syrah: ['wine', 'red', 'syrah'],
+  wine_moscatel: ['wine', 'sweet', 'moscatel'],
+  wine_malbec: ['wine', 'red', 'malbec'],
+  brandy_garammasala: ['brandy', 'garammasala'],
+  eaudevie_apple: ['brandy', 'apple'],
+  eaudevie_applecider: ['brandy', 'applecider'],
+  eaudevie_apricot: ['brandy', 'apricot'],
+  eaudevie_basil: ['brandy', 'basil'],
+  eaudevie_carrot: ['brandy', 'carrot'],
+  eaudevie_cherry: ['brandy', 'cherry'],
   eaudevie_douglasfir: ['brandy', 'douglasfir'],
   eaudevie_grape_grappa: ['brandy', 'grape', 'grappa'],
+  eaudevie_grape_singani: ['brandy', 'grape', 'singani'],
+  eaudevie_hazelnut: ['brandy', 'hazelnut'],
+  eaudevie_mango: ['brandy', 'mango'],
+  eaudevie_peach: ['brandy', 'peach'],
+  eaudevie_pear: ['brandy', 'pear'],
+  eaudevie_plum: ['brandy', 'plum'],
+  eaudevie_plum_aged: ['brandy', 'plum', ''],
+  eaudevie_raspberry: ['brandy', 'raspberry'],
+  eaudevie_raisin: ['brandy', 'raisin'],
+  eaudevie_shiso: ['brandy', 'shiso'],
+  eaudevie_tomato: ['brandy', 'tomato'],
+  eaudevie_vanilla: ['brandy', 'vanilla'],
   water: ['water', 'flat'],
   spirit_habanero: ['liqueur', 'habanero'],
   wine_port: ['fortifiedwine', 'port', 'white'],
   liqueur_mint: ['liqueur', 'cremedementhe'],
+  liqueur_violette: ['liqueur', 'cremedeviolette'],
   verjus_blanc: ['juice', 'verjus'],
   chartreuse_yellow: ['liqueur', 'herbal'],
+  chartreuse_yellowvep: ['liqueur', 'herbal'],
   ginger: ['spice', 'ginger'],
   shochu_rice: ['grain_shochu'],
+  shochu_barley: ['grain', 'shochu'],
+  shochu_sesame: ['grain', 'shochu'],
+  shochu_lemongrass: ['grain', 'shochu'],
   fruit_berry: ['fruit', 'raspberry'],
+  cane_rum_clairin: ['cane', 'clairin'],
+  spice_banana: ['leaf', 'banana'],
+  chartreuse_green: ['liqueur', 'herbal'],
+  liqueur_punsch: ['cane_swedishpunsch'],
+  wine_mistelle: ['fortifiedwine', 'mistelle'],
+  sugar: ['sugar', 'white'],
+  milk: ['milk', 'whole'],
+  egg: ['egg', 'whole'],
 }
 const special = {
   grain_aquavit: {
@@ -225,6 +389,10 @@ const special = {
       id: 'grain_gin_plymouth',
       overproof: true,
     },
+    oldtom_aged: {
+      id: 'grain_gin_oldtom',
+      aging: ['light', 'medium', 'long'],
+    },
   },
   cane_cachaca: {
     aged: {
@@ -239,6 +407,12 @@ const special = {
       black: true,
     },
     blackblendedoverproof: {
+      id: 'cane_rum',
+      productionMethod: 'blended',
+      black: true,
+      overproof: true,
+    },
+    blend_overproof: {
       id: 'cane_rum',
       productionMethod: 'blended',
       black: true,
@@ -266,12 +440,22 @@ const special = {
       aging: ['light'],
       black: true,
     },
+    blend: {
+      id: 'cane_rum',
+      productionMethod: 'blended',
+      aging: ['medium', 'long'],
+    },
     blendedaged: {
       id: 'cane_rum',
       productionMethod: 'blended',
       aging: ['medium', 'long'],
     },
     blendedlightlyaged: {
+      id: 'cane_rum',
+      productionMethod: 'blended',
+      aging: ['light'],
+    },
+    blend_unaged: {
       id: 'cane_rum',
       productionMethod: 'blended',
       aging: ['light'],
@@ -307,12 +491,42 @@ const special = {
       productionMethod: 'column',
       aging: ['light'],
     },
+    demerara_overproof: {
+      id: 'cane_rum',
+      productionMethod: 'blended',
+      black: true,
+      overproof: true,
+    },
     english: {
       id: 'cane_rum',
     },
     english_aged: {
       id: 'cane_rum',
       aging: ['medium', 'long'],
+    },
+    english_unaged: {
+      id: 'cane_rum',
+      aging: ['light', 'medium'],
+    },
+    haiti: {
+      id: 'cane_rum_agricole',
+      productionMethod: 'coffey',
+      aging: ['medium', 'long'],
+    },
+    haiti_unaged: {
+      id: 'cane_rum_agricole',
+      productionMethod: 'coffey',
+      aging: ['none'],
+    },
+    spanish: {
+      id: 'cane_rum',
+      productionMethod: 'blended',
+      aging: ['light'],
+    },
+    spanish_unaged: {
+      id: 'cane_rum',
+      productionMethod: 'blended',
+      aging: ['light'],
     },
     potstillunaged: {
       id: 'cane_rum',
@@ -397,6 +611,11 @@ export function parseSpecs() {
       if (!ingName) {
         if (name === 'Fresh & Lively (Highball)') specCategory = 'highball'
         if (name === 'Light & Playful (Daiquiri)') specCategory = 'daiquiri'
+        if (name === 'Bright & Confident (Sidecar)') specCategory = 'sidecar'
+        if (name === 'Boozy & Honest (Old-Fashioned)')
+          specCategory = 'oldfashioned'
+        if (name === 'Elegant & Timeless (Martini)') specCategory = 'martini'
+        if (name === 'Rich & Comforting (Flip)') specCategory = 'flip'
         console.log(`\n\x1b[95m${specCategory}\x1b[0m\n`)
         return
       }
@@ -438,6 +657,15 @@ export function parseSpecs() {
       if (catMap[rawCat]) {
         categoryStr = catMap[rawCat]
       }
+
+      if (
+        skipPreSplit.some(
+          (c) =>
+            categoryStr === c.toLowerCase() ||
+            ingName.toLowerCase() === c.toLowerCase()
+        )
+      )
+        return specs[id].ingredients.push({ name: ingName })
 
       let categoryParts = categoryStr.split(' and ')
       categoryParts.forEach((_cat) => {
@@ -486,13 +714,6 @@ export function parseSpecs() {
             ing.infusion = infusion
             c3 = undefined
           }
-          console.log(
-            '[2()]',
-            paren1Idx,
-            paren2Idx,
-            `"${category}"`,
-            `"${c1}:${c2}:${c3}"`
-          )
         } else if (nbParens === 3) {
           const paren1Idx = category.indexOf('(')
           const paren2Idx = category.indexOf('(', paren1Idx + 1)
@@ -508,14 +729,6 @@ export function parseSpecs() {
             ing.infusion = infusion
             c4 = undefined
           }
-          console.log(
-            '[3()]',
-            paren1Idx,
-            paren2Idx,
-            paren3Idx,
-            `"${category}"`,
-            `"${c1}:${c2}:${c3}:${c4}"`
-          )
         } else {
           c1 = slugify(category)
         }
@@ -554,6 +767,8 @@ export function parseSpecs() {
         if (csMap[catID]) {
           c1 = csMap[catID][0]
           c2 = csMap[catID][1]
+          c3 = csMap[catID][2]
+          c4 = csMap[catID][3]
           catID = createCatID(c1, c2, c3, c4)
         }
 

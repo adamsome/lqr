@@ -17,11 +17,14 @@ const ingredientIDMap = {
   gin_moderngin: 'grain_gin_contemporary',
   gin_londondrygin: 'grain_gin_londondry',
   gin_oldtom: 'grain_gin_oldtom',
+  gin_genever: 'grain_gin_genever',
+  gin_sloe: 'grain_gin_sloe',
   rum_demerararum: 'cane_rum_demerara',
   rum_frenchrum: 'cane_rum_agricole',
   rum_jamaicanrum: 'cane_rum_jamaican',
   rum_rhumagricole: 'cane_rum_agricole',
   rum_spanishrum: 'cane_rum',
+  rum_swedishpunsch: 'cane_swedishpunsch',
   grain_bourbonwhiskey: 'grain_whiskey_bourbon',
   grain_ryewhiskey: 'grain_whiskey_rye',
   whiskey_scotchwhisky_blended: 'grain_whiskey_scotch_blended',
@@ -55,6 +58,7 @@ const ingredientIDMap = {
   liqueur_richliqueur: 'liqueur_rich',
   liqueur_orangeliqueur_bluecuracao: 'liqueur_orange_bluecuracao',
   fortifiedwine_apertifwine: 'fortifiedwine_aperitif',
+  fortifiedwine_mistelle: 'fortifiedwine_mistelle',
 }
 
 export function parseBottles() {
@@ -220,22 +224,6 @@ export function parseBottles() {
       }
     })
     .filter(Boolean)
-
-  bottles.push({
-    id: 'angostura',
-    name: 'Angostura Bitters',
-    category: 'bitters',
-    parent: 'bitters_aromatic',
-    origin: 'Trinidad',
-  })
-  bottles.push({
-    id: 'peychauds',
-    name: "Peychaud's Bitters",
-    category: 'bitters',
-    parent: 'bitters_creole',
-    origin: 'USA',
-    originTerritory: 'Louisiana',
-  })
 
   writeFileSync(
     join(dir, '../json/user-ingredients.json'),

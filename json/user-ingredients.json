@@ -9,6 +9,9 @@
   "tanqueray": {
     "buyPriority": 8
   },
+  "bombay": {
+    "buyPriority": 8
+  },
   "fords": {
     "buyPriority": 8
   },
@@ -17,6 +20,21 @@
   },
   "bimini": {
     "buyPriority": 7
+  },
+  "mahon": {
+    "buyPriority": 7
+  },
+  "dorothy_parker": {
+    "buyPriority": 7
+  },
+  "the_botanist": {
+    "buyPriority": 7
+  },
+  "reisetbauer_blue": {
+    "buyPriority": 8
+  },
+  "oakland_spirits_co_automatic_sea": {
+    "buyPriority": 8
   },
   "tanqueray_10": {
     "buyPriority": 6
@@ -42,10 +60,28 @@
   "four_pillars_navy_strength": {
     "buyPriority": 8
   },
+  "haymans_old_tom": {
+    "buyPriority": 8
+  },
+  "ransom_old_tom": {
+    "buyPriority": 8
+  },
   "greenhook_ginsmiths_old_tom": {
     "buyPriority": 8
   },
+  "bols_genever": {
+    "buyPriority": 8
+  },
+  "anchor_genevieve": {
+    "buyPriority": 8
+  },
+  "reisetbauer_sloeberry": {
+    "buyPriority": 8
+  },
   "siembra_valles_blanco": {
+    "buyPriority": 8
+  },
+  "siembra_valles_highproof": {
     "buyPriority": 8
   },
   "siembra_valles_ancestral": {
@@ -82,13 +118,37 @@
   "siembra_azul_blanco": {
     "buyPriority": 6
   },
+  "ocho_2012_plata": {
+    "buyPriority": 6
+  },
   "siete_leguas_blanco": {
     "buyPriority": 6
+  },
+  "tapatio_reposado": {
+    "buyPriority": 8
+  },
+  "olmeca_altos_reposado": {
+    "buyPriority": 8
+  },
+  "ocho_reposado": {
+    "buyPriority": 8
+  },
+  "siete_leguas_reposado": {
+    "buyPriority": 8
   },
   "el_tesoro_reposado": {
     "buyPriority": 8
   },
+  "cimarron_reposado": {
+    "buyPriority": 8
+  },
   "tapatio_anejo": {
+    "buyPriority": 8
+  },
+  "siembra_azul_anejo": {
+    "buyPriority": 8
+  },
+  "siete_leguas_anejo": {
     "buyPriority": 8
   },
   "banhez": {
@@ -107,13 +167,28 @@
   "del_maguey_chichicapa": {
     "buyPriority": 7
   },
+  "del_maguey_tobala": {
+    "buyPriority": 7
+  },
   "nuestra_soledad_la_compania_ejutla": {
+    "buyPriority": 5
+  },
+  "nuestra_soledad_lachigui": {
+    "buyPriority": 5
+  },
+  "nuestra_soledad_san_luis_del_rio": {
     "buyPriority": 5
   },
   "mal_bien_espadin": {
     "buyPriority": 6
   },
   "palenqueros": {
+    "buyPriority": 7
+  },
+  "sombra": {
+    "buyPriority": 7
+  },
+  "agave_de_cortes": {
     "buyPriority": 7
   },
   "mezontes": {
@@ -225,10 +300,16 @@
   "plantation_xaymaca": {
     "buyPriority": 4
   },
+  "plantation_2000": {
+    "buyPriority": 4
+  },
   "samaroli": {
     "buyPriority": 9
   },
   "st_nicholas_abbey_5_year": {
+    "buyPriority": 6
+  },
+  "hampden_estate_single_jamaican": {
     "buyPriority": 6
   },
   "appleton_estate_50_year": {
@@ -286,10 +367,19 @@
   "santa_teresa_claro": {
     "buyPriority": 9
   },
+  "probitas_white": {
+    "buyPriority": 9
+  },
+  "diplomatico_planas": {
+    "buyPriority": 9
+  },
   "appleton_estate_reserve_blend": {
     "buyPriority": 6
   },
   "appleton_estate_rare_blend_12": {
+    "buyPriority": 9
+  },
+  "appleton_estate_vx": {
     "buyPriority": 9
   },
   "cadenhead_green_label": {
@@ -344,6 +434,9 @@
     "stock": 0.1,
     "buyPriority": 1
   },
+  "el_dorado_15_year": {
+    "buyPriority": 9
+  },
   "kaniche_xo": {
     "buyPriority": 9
   },
@@ -363,6 +456,9 @@
     "buyPriority": 6
   },
   "providencia": {
+    "buyPriority": 9
+  },
+  "lost_spirits_navy_style": {
     "buyPriority": 9
   },
   "pussers": {
@@ -477,7 +573,7 @@
   "cana_brava_7_year": {
     "buyPriority": 9
   },
-  "cruzan_single_barrel": {
+  "cruzan_singlebarrel": {
     "buyPriority": 9
   },
   "don_pancho_origines_8": {
@@ -562,10 +658,10 @@
   "westerhall_plantation": {
     "buyPriority": 9
   },
-  "zacapa_23": {
+  "ron_zacapa_23": {
     "buyPriority": 6
   },
-  "zacapa_xo": {
+  "ron_zacapa_xo": {
     "buyPriority": 9
   },
   "zafra": {
@@ -642,6 +738,9 @@
     "buyPriority": 9
   },
   "damoiseau_cane_rhum": {
+    "buyPriority": 9
+  },
+  "damoiseau_110proof": {
     "buyPriority": 9
   },
   "rhum_barbancourt_3_star": {
@@ -741,11 +840,32 @@
   "novo_fogo_gold": {
     "buyPriority": 9
   },
+  "yaguara_ouro": {
+    "buyPriority": 9
+  },
+  "clairin_sajous": {
+    "buyPriority": 9
+  },
+  "clairin_vaval": {
+    "buyPriority": 9
+  },
   "buffalo_trace": {
     "buyPriority": 6
   },
   "elijah_craig_small_batch": {
     "buyPriority": 3
+  },
+  "elijah_craig_12year": {
+    "buyPriority": 7
+  },
+  "evan_williams_single_barrel": {
+    "buyPriority": 4
+  },
+  "evan_williams_bonded": {
+    "buyPriority": 4
+  },
+  "mic_drop_bourbon": {
+    "buyPriority": 8
   },
   "old_forester_signature": {
     "buyPriority": 6
@@ -757,8 +877,41 @@
     "stock": 1,
     "buyPriority": 4
   },
+  "four_roses_single_barrel": {
+    "buyPriority": 4
+  },
+  "rabbit_hole": {
+    "buyPriority": 4
+  },
   "old_granddad_114": {
     "buyPriority": 4
+  },
+  "old_granddad_bonded": {
+    "buyPriority": 4
+  },
+  "eagle_rare": {
+    "buyPriority": 5
+  },
+  "j_rieger_kansas_city": {
+    "buyPriority": 5
+  },
+  "knob_creek_100": {
+    "buyPriority": 7
+  },
+  "bookers": {
+    "buyPriority": 8
+  },
+  "barrell_whiskey_batch_004": {
+    "buyPriority": 8
+  },
+  "barrell_dovetail": {
+    "buyPriority": 8
+  },
+  "wyoming_whiskey": {
+    "buyPriority": 8
+  },
+  "weller_special_reserve": {
+    "buyPriority": 8
   },
   "wild_turkey": {
     "buyPriority": 6
@@ -773,6 +926,9 @@
   "pikesville": {
     "buyPriority": 6
   },
+  "leopold_bros_maryland_rye": {
+    "buyPriority": 8
+  },
   "high_west_silver_oat": {
     "buyPriority": 8
   },
@@ -781,6 +937,10 @@
     "buyPriority": 8
   },
   "famous_grouse": {
+    "stock": 1,
+    "buyPriority": 4
+  },
+  "naked_grouse": {
     "stock": 1,
     "buyPriority": 4
   },
@@ -794,6 +954,12 @@
     "buyPriority": 8
   },
   "jameson_irish_whiskey": {
+    "buyPriority": 8
+  },
+  "jameson_black_barrel": {
+    "buyPriority": 8
+  },
+  "kilbeggan": {
     "buyPriority": 8
   },
   "monkey_shoulder_blended_malt": {
@@ -812,16 +978,31 @@
   "springbank_10year": {
     "buyPriority": 4
   },
+  "macallan_15year": {
+    "buyPriority": 4
+  },
   "kilkerran_12year": {
     "buyPriority": 4
   },
   "highland_park_12year": {
     "buyPriority": 4
   },
+  "glen_grant_10year": {
+    "buyPriority": 4
+  },
+  "caol_ila_12year": {
+    "buyPriority": 4
+  },
   "connemara_peated": {
     "buyPriority": 4
   },
+  "knappogue_castle_12year": {
+    "buyPriority": 4
+  },
   "bowmore_12year": {
+    "buyPriority": 4
+  },
+  "kilchoman_machir_bay": {
     "buyPriority": 4
   },
   "laphroaig_10year": {
@@ -831,6 +1012,18 @@
     "buyPriority": 6
   },
   "suntory_toki": {
+    "buyPriority": 6
+  },
+  "nikka_coffey_grain": {
+    "buyPriority": 6
+  },
+  "yamazaki_12year": {
+    "buyPriority": 6
+  },
+  "nikka_taketsuru": {
+    "buyPriority": 6
+  },
+  "hibiki_12year": {
     "buyPriority": 6
   },
   "amrut_caskstrength_single_malt_indian_whisky": {
@@ -854,8 +1047,17 @@
   "brennivin_aquavit": {
     "buyPriority": 6
   },
+  "beniotome": {
+    "buyPriority": 7
+  },
   "st_george_california_rice_shochu": {
     "buyPriority": 7
+  },
+  "kintaro_baisen_mugi_shochu": {
+    "buyPriority": 8
+  },
+  "mizu_lemongrass_shochu": {
+    "buyPriority": 8
   },
   "bertoux_brandy": {
     "buyPriority": 8
@@ -863,7 +1065,13 @@
   "clear_creek_2year": {
     "buyPriority": 7
   },
+  "clear_creek_8year": {
+    "buyPriority": 7
+  },
   "clear_creek_muscat_grappa": {
+    "buyPriority": 7
+  },
+  "ransom_gewurztraminer_grappa": {
     "buyPriority": 7
   },
   "guillonpainturaud_vsop": {
@@ -878,7 +1086,28 @@
   "louis_rogue_la_vielle_prune": {
     "buyPriority": 8
   },
+  "clear_creek_mirabelle_plum": {
+    "buyPriority": 8
+  },
+  "trimbach_mirabelle_plum_eaudevie": {
+    "buyPriority": 8
+  },
+  "louis_roque_la_vieille_prune_eaudevie": {
+    "buyPriority": 8
+  },
   "domaine_du_manoir_de_montreuil_reserve": {
+    "buyPriority": 5
+  },
+  "dupont_calvados_hors_dage": {
+    "buyPriority": 5
+  },
+  "dupont_fine_reserve": {
+    "buyPriority": 5
+  },
+  "busnel_vsop": {
+    "buyPriority": 5
+  },
+  "bordelet": {
     "buyPriority": 5
   },
   "hine_h_vsop": {
@@ -888,10 +1117,40 @@
   "paul_beau_vs": {
     "buyPriority": 7
   },
+  "paul_beau_hors_dage": {
+    "buyPriority": 7
+  },
   "pm_spirits_bas": {
     "buyPriority": 5
   },
+  "chateau_du_tariquet_15year_basarmagnac": {
+    "buyPriority": 8
+  },
+  "domaine_desperance_blanche_armagnac": {
+    "buyPriority": 5
+  },
+  "delord_napoleon_armagnac": {
+    "buyPriority": 5
+  },
+  "delord_25year_bas_armagnac": {
+    "buyPriority": 5
+  },
+  "tariquet_classique_vs_basarmagnac": {
+    "buyPriority": 5
+  },
+  "chateau_de_pellehaut_selection_armagnac": {
+    "buyPriority": 5
+  },
+  "pellehaut_armagnac": {
+    "buyPriority": 5
+  },
   "lustau_solera_reserva": {
+    "buyPriority": 5
+  },
+  "lustau_brandy_de_jerez": {
+    "buyPriority": 5
+  },
+  "torres_15year_brandy": {
     "buyPriority": 5
   },
   "pierre_ferrand_1840": {
@@ -900,12 +1159,15 @@
   "pierre_ferrand_ambre": {
     "buyPriority": 7
   },
-  "gourry_de_chadville": {
+  "gourry_de_chadeville": {
     "buyPriority": 8
   },
   "lairds_bonded": {
     "stock": 2,
     "buyPriority": 1
+  },
+  "copper_kings_floodwall_apple_brandy": {
+    "buyPriority": 8
   },
   "reisetbauer_carrot_eaudevie": {
     "buyPriority": 7
@@ -916,23 +1178,41 @@
   "rhine_hall_mango_brandy": {
     "buyPriority": 8
   },
+  "rhine_hall_apple_brandy": {
+    "buyPriority": 8
+  },
   "clear_creek_blue_plum_brandy": {
     "buyPriority": 6
   },
   "clear_creek_douglas_fir_eaudevie": {
     "buyPriority": 6
   },
+  "clear_creek_framboise_eaudevie": {
+    "buyPriority": 6
+  },
   "st_george_aqua_perfecta_basil_eaudevie": {
     "buyPriority": 6
   },
+  "blume_marillen_apricot_eaudevie": {
+    "buyPriority": 7
+  },
   "cobrafire_eaudevie_de_raisin": {
+    "buyPriority": 5
+  },
+  "glasshouse_trade_winds_garam_masala_brandy": {
     "buyPriority": 5
   },
   "cyril_zangs_00_apple_cide_eaudevie": {
     "buyPriority": 5
   },
+  "laurent_cazottes_72_tomatoes": {
+    "buyPriority": 8
+  },
   "clear_creek_pear_brandy": {
     "buyPriority": 4
+  },
+  "singani_63": {
+    "buyPriority": 7
   },
   "capurro_acholado_pisco": {
     "buyPriority": 3
@@ -943,7 +1223,22 @@
   "barsol_pisco": {
     "buyPriority": 5
   },
-  "st_george_framboise_eaudevie": {
+  "barsol_acholado_pisco": {
+    "buyPriority": 5
+  },
+  "kappa_pisco": {
+    "buyPriority": 5
+  },
+  "st_george_raspberry_brandy": {
+    "buyPriority": 6
+  },
+  "massenez_framboise_eaudevie": {
+    "buyPriority": 8
+  },
+  "massenez_kirschwasser": {
+    "buyPriority": 8
+  },
+  "gilles_brisson_pineau_des_charentes": {
     "buyPriority": 6
   },
   "park_pineau_des_charentes": {
@@ -958,6 +1253,9 @@
   "lemorton_pommeau_de_normandie": {
     "buyPriority": 6
   },
+  "dupont_pommeau_de_normande": {
+    "buyPriority": 7
+  },
   "glasshouse_shiso_brandy": {
     "buyPriority": 8
   },
@@ -968,6 +1266,9 @@
     "stock": 1,
     "buyPriority": 1
   },
+  "gran_classico_bitter": {
+    "buyPriority": 5
+  },
   "suze": {
     "stock": 1,
     "buyPriority": 2
@@ -976,6 +1277,9 @@
     "buyPriority": 3
   },
   "st_george_bruto_americano": {
+    "buyPriority": 7
+  },
+  "luxardo_bitter_bianco": {
     "buyPriority": 7
   },
   "amaro_meletti": {
@@ -1011,10 +1315,13 @@
   "cappelletti_pasubio_vino_amaro": {
     "buyPriority": 5
   },
+  "amaro_pasubio": {
+    "buyPriority": 7
+  },
   "amaro_di_angostura": {
     "buyPriority": 6
   },
-  "braulio_amaro": {
+  "amaro_braulio": {
     "buyPriority": 4
   },
   "amaro_nardini": {
@@ -1027,7 +1334,7 @@
   "fernetbranca": {
     "buyPriority": 4
   },
-  "luxardo_amaro_albano": {
+  "luxardo_amaro_abano": {
     "buyPriority": 4
   },
   "capalleti_amaro_sfumato": {
@@ -1058,7 +1365,7 @@
   "strega": {
     "buyPriority": 5
   },
-  "galliano_lauthentico": {
+  "galliano_lautentico": {
     "buyPriority": 6
   },
   "green_chartreuse": {
@@ -1066,6 +1373,10 @@
     "buyPriority": 1
   },
   "stgermain_elderflower_liqueur": {
+    "stock": 1,
+    "buyPriority": 5
+  },
+  "giffard_elderflower_liqueur": {
     "stock": 1,
     "buyPriority": 5
   },
@@ -1090,6 +1401,9 @@
     "stock": 1,
     "buyPriority": 3
   },
+  "st_george_absinthe_verte": {
+    "buyPriority": 8
+  },
   "herbsaint": {
     "buyPriority": 7
   },
@@ -1112,13 +1426,25 @@
   "giffard_creme_de_pamplemousse_rose": {
     "buyPriority": 6
   },
+  "bittermens_citron_sauvage": {
+    "buyPriority": 8
+  },
   "giffard_creme_de_fruits_de_la_passion": {
     "buyPriority": 6
+  },
+  "mandarine_napoleon": {
+    "buyPriority": 8
   },
   "lejay_creme_de_cassis_de_dijon": {
     "buyPriority": 8
   },
   "mathilde_poire_pear_liqueur": {
+    "buyPriority": 6
+  },
+  "emile_pernot_fraise_de_boise": {
+    "buyPriority": 6
+  },
+  "merlet_creme_de_fraise_des_bois": {
     "buyPriority": 6
   },
   "leopold_bros_new_york_sour_apple_liqueur": {
@@ -1133,16 +1459,25 @@
   "leopold_bros_michigan_tart_cherry_liqueur": {
     "buyPriority": 8
   },
+  "rhine_hall_cherry_brandy": {
+    "buyPriority": 8
+  },
   "massenez_creme_de_peche_peach_liqueur": {
     "buyPriority": 6
   },
-  "giffard_creme_peche_de_vigne": {
+  "giffard_creme_de_peche_de_vigne": {
     "buyPriority": 6
   },
   "mathilde_peche": {
     "buyPriority": 6
   },
-  "combier_peche_de_vigne_liqueur": {
+  "combier_peche_de_vigne": {
+    "buyPriority": 6
+  },
+  "combier_pamplemousse_rose": {
+    "buyPriority": 6
+  },
+  "peach_street_peach_brandy": {
     "buyPriority": 6
   },
   "st_george_spiced_pear_liqueur": {
@@ -1151,24 +1486,48 @@
   "emile_pernot_liqueur_de_sapin": {
     "buyPriority": 8
   },
+  "clear_creek_cranberry_liqueur": {
+    "buyPriority": 8
+  },
+  "combier_rose_liqueur": {
+    "buyPriority": 8
+  },
   "giffard_rhubarb_liqueur": {
     "buyPriority": 6
   },
   "rothman_winter_orchard_cherry_liqueur": {
     "buyPriority": 8
   },
+  "cherry_heering": {
+    "buyPriority": 5
+  },
+  "tempus_fugit_creme_de_banane": {
+    "buyPriority": 6
+  },
   "giffard_banane_du_bresil": {
     "stock": 1,
     "buyPriority": 4
   },
   "giffard_abricot_du_roussillon": {
-    "buyPriority": 4
+    "buyPriority": 8
+  },
+  "giffard_muroise_du_val_de_loire": {
+    "buyPriority": 8
+  },
+  "giffard_lichili": {
+    "buyPriority": 8
+  },
+  "giffard_caribbean_pineapple": {
+    "buyPriority": 8
   },
   "rothman_winter_orchard_apricot_liqueur": {
     "buyPriority": 4
   },
   "kalani_ron_de_coco_coconut_liqueur": {
     "buyPriority": 6
+  },
+  "giffard_creme_de_framboise": {
+    "buyPriority": 8
   },
   "st_george_raspberry_liqueur": {
     "buyPriority": 8
@@ -1193,7 +1552,7 @@
     "stock": 1,
     "buyPriority": 3
   },
-  "grand_marinier": {
+  "grand_marnier": {
     "buyPriority": 7
   },
   "pierre_ferrand_dry_curacao": {
@@ -1225,13 +1584,28 @@
   "empirical_spirits_habanero_spirit": {
     "buyPriority": 7
   },
+  "massenez_garden_party_basil_liqueur": {
+    "buyPriority": 7
+  },
+  "caffo_amaretto": {
+    "buyPriority": 7
+  },
   "trader_vics_macadamia_nut_liqueur": {
     "buyPriority": 7
   },
   "galliano_ristretto": {
     "buyPriority": 5
   },
+  "faretti_biscotti": {
+    "buyPriority": 5
+  },
   "nux_alpina_walnut_liqueur": {
+    "buyPriority": 8
+  },
+  "aggazzotti_nocino_riserva": {
+    "buyPriority": 8
+  },
+  "don_ciccio_figli_nocino": {
     "buyPriority": 8
   },
   "bittermens_new_orleans_coffee_liqueur": {
@@ -1251,8 +1625,22 @@
     "buyPriority": 4
   },
   "carpano_antica_formula": {
-    "stock": 0.1,
     "buyPriority": 4
+  },
+  "del_professore": {
+    "buyPriority": 8
+  },
+  "gonzalez_byass_la_copa": {
+    "buyPriority": 8
+  },
+  "lustau_vermut_rojo": {
+    "buyPriority": 8
+  },
+  "imbue_bittersweet_vermouth": {
+    "buyPriority": 8
+  },
+  "ransom_sweet_vermouth": {
+    "buyPriority": 8
   },
   "dolin_dry": {
     "stock": 1,
@@ -1270,6 +1658,15 @@
   "carpano_bianco": {
     "buyPriority": 6
   },
+  "la_quintinye_blanc_vermouth": {
+    "buyPriority": 8
+  },
+  "martini_riserva_speciale_ambrato_vermouth_di_torino": {
+    "buyPriority": 7
+  },
+  "noilly_prat_ambre": {
+    "buyPriority": 7
+  },
   "bonal_gentianequina": {
     "stock": 0.1,
     "buyPriority": 5
@@ -1284,16 +1681,31 @@
     "stock": 1,
     "buyPriority": 2
   },
-  "byrhh": {
+  "byrrh": {
     "buyPriority": 7
   },
   "cap_corse_blanc_quinquina": {
     "buyPriority": 7
   },
+  "maurin_quina": {
+    "buyPriority": 7
+  },
+  "neige_apple_ice_wine": {
+    "buyPriority": 7
+  },
   "henriques_henriques_rainwater_madeira": {
     "buyPriority": 6
   },
+  "henriques_henriques_5year_vino_generoso_doce_madeira": {
+    "buyPriority": 6
+  },
   "rare_wine_co_savannah_verdelho": {
+    "buyPriority": 8
+  },
+  "rare_wine_co_boston_bual": {
+    "buyPriority": 8
+  },
+  "rare_wine_co_charleston_sercial": {
     "buyPriority": 8
   },
   "rare_wine_co_baltimore_rainwater_madeira": {
@@ -1323,10 +1735,13 @@
   "bodegas_yuste_aurora": {
     "buyPriority": 8
   },
+  "orleans_borbon_manzanilla": {
+    "buyPriority": 8
+  },
   "lustau_los_arcos": {
     "buyPriority": 4
   },
-  "palo_cortado_lustau_peninsula": {
+  "lustau_palo_cortado_peninsula": {
     "buyPriority": 8
   },
   "barbadillo_principe_de_barbadillo": {
@@ -1338,23 +1753,58 @@
   "gonzalez_byass_apostoles_palo_cortado": {
     "buyPriority": 8
   },
-  "gonzales_byass_nectar": {
-    "buyPriority": 7
-  },
   "hidalgo_gobernador": {
     "buyPriority": 8
   },
   "gonzalez_byass_matusalem_oloroso": {
     "buyPriority": 8
   },
+  "el_maestro_sierra_15year_oloroso": {
+    "stock": 1,
+    "buyPriority": 8
+  },
   "gutierrez_colosia_oloroso": {
     "stock": 1,
     "buyPriority": 8
+  },
+  "lustau_don_nuno_oloroso": {
+    "stock": 1,
+    "buyPriority": 8
+  },
+  "gonzalez_byass_noe_pedro_ximenez": {
+    "buyPriority": 7
+  },
+  "gonzalez_byass_nectar": {
+    "buyPriority": 7
+  },
+  "lustau_pedro_ximenez": {
+    "buyPriority": 7
   },
   "williams_humbert_dry_sack": {
     "buyPriority": 7
   },
   "lustau_east_india_solera": {
+    "buyPriority": 8
+  },
+  "zurbaran_cream": {
+    "buyPriority": 8
+  },
+  "morenita_cream": {
+    "buyPriority": 8
+  },
+  "alvear_festival_pale_cream": {
+    "buyPriority": 8
+  },
+  "quinta_do_infantado_white_porto": {
+    "buyPriority": 8
+  },
+  "dows_ruby_port": {
+    "buyPriority": 8
+  },
+  "taylor_fladgate_ruby_port": {
+    "buyPriority": 8
+  },
+  "macvin_du_jura": {
     "buyPriority": 8
   },
   "angostura": {
@@ -1388,5 +1838,8 @@
   "bittermens_hellfire_habanero_shrub": {
     "stock": 1,
     "buyPriority": 1
+  },
+  "kronan_swedish_punsch": {
+    "buyPriority": 6
   }
 }

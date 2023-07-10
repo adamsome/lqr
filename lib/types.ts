@@ -51,7 +51,14 @@ export type Usage =
   | 'top'
   | 'rinse'
   | 'muddled'
-export type SpecCategory = 'tiki' | 'highball' | 'daiquiri'
+export type SpecCategory =
+  | 'tiki'
+  | 'highball'
+  | 'daiquiri'
+  | 'sidecar'
+  | 'oldfashioned'
+  | 'martini'
+  | 'flip'
 export type GlassType = 'coupe' | 'rocks' | 'highball'
 export type MixType = 'stirred' | 'shaken'
 

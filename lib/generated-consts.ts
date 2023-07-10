@@ -95,11 +95,11 @@ export const PRODUCTION_METHOD_DICT: Record<ProductionMethod, HasName> = {
   coffey: { name: 'Coffey Still' },
 }
 
-export type Aging = 'none' | 'light' | 'medium' | 'long'
+export type Aging = 'none' | 'medium' | 'light' | 'long'
 
 export const AGING_DICT: Record<Aging, HasName> = {
   none: { name: 'Unaged' },
-  light: { name: 'Lightly Aged' },
   medium: { name: 'Aged' },
+  light: { name: 'Lightly Aged' },
   long: { name: 'Long Aged' },
 }

@@ -110,8 +110,8 @@
     "category": "cordial"
   },
   {
-    "id": "cordial_lime",
-    "name": "Lime",
+    "id": "cordial_keylime",
+    "name": "Key Lime",
     "category": "cordial"
   },
   {
@@ -320,6 +320,11 @@
     "category": "jelly"
   },
   {
+    "id": "juice_apple",
+    "name": "Apple",
+    "category": "juice"
+  },
+  {
     "id": "juice_bellpepper",
     "name": "Bell Pepper",
     "category": "juice"
@@ -387,6 +392,11 @@
   {
     "id": "leaf_banana",
     "name": "Banana",
+    "category": "leaf"
+  },
+  {
+    "id": "leaf_pineapple",
+    "name": "Pineapple",
     "category": "leaf"
   },
   {
@@ -765,6 +775,11 @@
     "category": "syrup"
   },
   {
+    "id": "syrup_strawberrybasil",
+    "name": "Strawberry Basil",
+    "category": "syrup"
+  },
+  {
     "id": "syrup_tonic",
     "name": "Tonic",
     "category": "syrup"
@@ -780,8 +795,8 @@
     "category": "syrup"
   },
   {
-    "id": "syrup_verjus",
-    "name": "Verjus",
+    "id": "syrup_redverjus",
+    "name": "Red Verjus",
     "category": "syrup"
   },
   {
@@ -905,7 +920,7 @@
   },
   {
     "id": "bitters_blackstrap",
-    "name": "Black strap",
+    "name": "Black Strap",
     "category": "bitters"
   },
   {
@@ -1030,7 +1045,12 @@
   },
   {
     "id": "brandy_douglasfir",
-    "name": "Douglas fir",
+    "name": "Douglas Fir",
+    "category": "brandy"
+  },
+  {
+    "id": "brandy_garammasala",
+    "name": "Garam Masala",
     "category": "brandy"
   },
   {
@@ -1078,6 +1098,12 @@
   {
     "id": "brandy_grape_pommeau",
     "name": "Pommeau",
+    "category": "brandy",
+    "parent": "brandy_grape"
+  },
+  {
+    "id": "brandy_grape_singani",
+    "name": "Singani",
     "category": "brandy",
     "parent": "brandy_grape"
   },
@@ -1139,12 +1165,17 @@
   },
   {
     "id": "cane_bataviaarrack",
-    "name": "Batavia arrack",
+    "name": "Batavia Arrack",
     "category": "cane"
   },
   {
     "id": "cane_cachaca",
     "name": "Cachaça",
+    "category": "cane"
+  },
+  {
+    "id": "cane_clairin",
+    "name": "Clairin",
     "category": "cane"
   },
   {
@@ -1173,12 +1204,12 @@
   },
   {
     "id": "cane_swedishpunsch",
-    "name": "Swedish punsch",
+    "name": "Swedish Punsch",
     "category": "cane"
   },
   {
     "id": "fortifiedwine_ambrevermouth",
-    "name": "Ambré vermouth",
+    "name": "Ambré Vermouth",
     "category": "fortifiedwine"
   },
   {
@@ -1268,13 +1299,13 @@
   },
   {
     "id": "fortifiedwine_sherry_palecream",
-    "name": "Pale cream",
+    "name": "Pale Cream",
     "category": "fortifiedwine",
     "parent": "fortifiedwine_sherry"
   },
   {
-    "id": "fortifiedwine_sherry_palocartado",
-    "name": "Palo cartado",
+    "id": "fortifiedwine_sherry_palocortado",
+    "name": "Palo Cortado",
     "category": "fortifiedwine",
     "parent": "fortifiedwine_sherry"
   },
@@ -1529,13 +1560,18 @@
     "category": "liqueur"
   },
   {
+    "id": "liqueur_blackraspberry",
+    "name": "Black Raspberry",
+    "category": "liqueur"
+  },
+  {
     "id": "liqueur_cherry",
     "name": "Cherry",
     "category": "liqueur"
   },
   {
     "id": "liqueur_cherryheering",
-    "name": "Cherry heering",
+    "name": "Cherry Heering",
     "category": "liqueur"
   },
   {
@@ -1545,7 +1581,7 @@
   },
   {
     "id": "liqueur_coffeebean",
-    "name": "Coffee bean",
+    "name": "Coffee Bean",
     "category": "liqueur"
   },
   {
@@ -1555,22 +1591,22 @@
   },
   {
     "id": "liqueur_cremedecacao",
-    "name": "Crème de cacao",
+    "name": "Crème de Cacao",
     "category": "liqueur"
   },
   {
     "id": "liqueur_cremedecassis",
-    "name": "Crème de cassis",
+    "name": "Crème de Cassis",
     "category": "liqueur"
   },
   {
     "id": "liqueur_cremedementhe",
-    "name": "Crème de menthe",
+    "name": "Crème de Menthe",
     "category": "liqueur"
   },
   {
     "id": "liqueur_cremedeviolette",
-    "name": "Crème de violette",
+    "name": "Crème de Violette",
     "category": "liqueur"
   },
   {
@@ -1652,7 +1688,7 @@
   },
   {
     "id": "liqueur_passionfruit",
-    "name": "Passion fruit",
+    "name": "Passion Fruit",
     "category": "liqueur"
   },
   {
@@ -1663,6 +1699,11 @@
   {
     "id": "liqueur_pear",
     "name": "Pear",
+    "category": "liqueur"
+  },
+  {
+    "id": "liqueur_pimms",
+    "name": "Pimm's",
     "category": "liqueur"
   },
   {
@@ -1702,7 +1743,7 @@
   },
   {
     "id": "liqueur_sourapple",
-    "name": "Sour apple",
+    "name": "Sour Apple",
     "category": "liqueur"
   },
   {
@@ -1713,6 +1754,11 @@
   {
     "id": "liqueur_thyme",
     "name": "Thyme",
+    "category": "liqueur"
+  },
+  {
+    "id": "liqueur_umeshu",
+    "name": "Umeshu",
     "category": "liqueur"
   },
   {

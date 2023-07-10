@@ -17,6 +17,10 @@ const CATEGORY_ITEMS: DataTableFacetedFilterItem[] = [
   { label: 'Tiki', value: 'tiki' },
   { label: 'Highball', value: 'highball' },
   { label: 'Daiquiri', value: 'daiquiri' },
+  { label: 'Sidecar', value: 'sidecar' },
+  { label: 'Old-Fashioned', value: 'oldfashioned' },
+  { label: 'Martini', value: 'martini' },
+  { label: 'Flip', value: 'flip' },
 ]
 
 type Props = DataTableToolbarProps<Spec>
