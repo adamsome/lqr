@@ -1,7 +1,7 @@
-import { partition, uniq } from 'ramda'
+import { uniq } from 'ramda'
 
 import { BarCategory, Category } from '@/app/bar/category'
-import { DataProvider } from '@/components/data-provider'
+import { IngredientDataProvider } from '@/components/data-provider'
 import { Container } from '@/components/ui/container'
 import { H2 } from '@/components/ui/h2'
 import { HierarchicalFilter } from '@/lib/hierarchical-filter'
@@ -15,9 +15,11 @@ import {
   KIND_INGREDIENT_DICT,
   KIND_MORE_INGREDIENT_TYPES,
 } from '@/lib/ingredient/kind-ingredients'
-import { getData } from '@/lib/model/data'
-import { Data, Ingredient } from '@/lib/types'
+import { getIngredientData } from '@/lib/model/ingredient-data'
+import { IngredientData } from '@/lib/types'
 import { cn, rejectNil } from '@/lib/utils'
+
+export const revalidate = 0
 
 type Section = Partial<Omit<BarCategory, 'ingredients'>> & {
   ids?: string[]
@@ -165,13 +167,10 @@ function createTree(
   return root
 }
 
-const createCategoryParser = (data: Data) => {
-  const { ingredientDict, categoryFilter } = data
-  const getItems = filterIngredientItems({
-    byID: ingredientDict,
-    tree: categoryFilter,
-  })
-  const getName = getIngredientName(ingredientDict)
+const createCategoryParser = (data: IngredientData) => {
+  const { dict, tree } = data
+  const getItems = filterIngredientItems({ dict, tree })
+  const getName = getIngredientName(dict)
 
   return (allStocked: Set<string>) =>
     (section: Section): BarCategory => {
@@ -197,7 +196,7 @@ const createCategoryParser = (data: Data) => {
       const items = allItems.filter((it) => !exclIDs.has(it.id))
       const stockedIDs = topIDs
         .concat(items.map(({ id }) => id))
-        .filter((id) => (ingredientDict[id]?.stock ?? -1) >= 0)
+        .filter((id) => (dict[id]?.stock ?? -1) >= 0)
 
       const excludeSet = new Set(stockedIDs)
       const root = createTree(items, excludeSet)
@@ -206,13 +205,13 @@ const createCategoryParser = (data: Data) => {
       const stocked = stockedIDs
         // Remove any that have already been added in previous categories
         .filter((id) => allStocked.has(id))
-        .map((id) => ingredientDict[id])
+        .map((id) => dict[id])
       stockedIDs.forEach((id) => {
         allStocked.delete(id)
       })
 
       const topItems = topIDs.map((id) => {
-        const def = ingredientDict[id] ?? {}
+        const def = dict[id] ?? {}
         const name = getName(def)
         return { ...def, name }
       })
@@ -227,13 +226,11 @@ const createCategoryParser = (data: Data) => {
 }
 
 export default async function Page() {
-  const data = await getData()
-  const { ingredientDict } = data
+  const data = await getIngredientData()
+  const { dict } = data
 
   const stocked = new Set<string>(
-    Object.keys(ingredientDict).filter(
-      (id) => (ingredientDict[id].stock ?? -1) >= 0
-    )
+    Object.keys(dict).filter((id) => (dict[id].stock ?? -1) >= 0)
   )
 
   const toCategory = createCategoryParser(data)
@@ -244,12 +241,12 @@ export default async function Page() {
   spiritCategories.push({
     name: 'Other Spirits',
     stocked: Array.from(stocked)
-      .map((id) => ingredientDict[id])
+      .map((id) => dict[id])
       .filter((it) => it.ordinal !== undefined),
   })
 
   return (
-    <DataProvider {...data}>
+    <IngredientDataProvider {...data}>
       <Container className="relative py-8">
         <section className="flex flex-col gap-8">
           <div className="flex flex-col gap-4">
@@ -282,6 +279,6 @@ export default async function Page() {
           </div>
         </section>
       </Container>
-    </DataProvider>
+    </IngredientDataProvider>
   )
 }

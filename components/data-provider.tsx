@@ -2,21 +2,23 @@
 
 import { ReactNode, createContext, useContext } from 'react'
 
-import { Data } from '@/lib/types'
+import { IngredientData } from '@/lib/types'
 
-const DataContext = createContext<Data | undefined>(undefined)
+const IngredientDataContext = createContext<IngredientData | undefined>(
+  undefined
+)
 
-type Props = Data & {
+type Props = IngredientData & {
   children: ReactNode
 }
 
-export const DataProvider = ({ children, ...value }: Props) => {
-  const { Provider } = DataContext
+export const IngredientDataProvider = ({ children, ...value }: Props) => {
+  const { Provider } = IngredientDataContext
   return <Provider value={value}>{children}</Provider>
 }
 
-export const useData = (): Data => {
-  const context = useContext(DataContext)
+export const useIngredientData = (): IngredientData => {
+  const context = useContext(IngredientDataContext)
   if (!context) {
     throw new Error('Called useData before setting DataProvider context')
   }

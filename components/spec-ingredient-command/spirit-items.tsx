@@ -1,4 +1,3 @@
-import { useData } from '@/components/data-provider'
 import { IngredientPathText } from '@/components/ingredient-path/text'
 import { HierarchicalCommandList } from '@/components/ui/hierarchical-command-list'
 import { useGetIngredientPathName } from '@/hooks/use-get-ingredient-path-name'
@@ -11,7 +10,6 @@ type Props = {
 }
 
 export function SpiritItems({ hasSearch, onSelect }: Props) {
-  const { ingredientDict } = useData()
   const categoryRoot = useHierarchicalSpiritsRoot()
   const getIngredientPathName = useGetIngredientPathName()
   return (

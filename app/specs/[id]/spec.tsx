@@ -7,13 +7,14 @@ import { SpecStock } from '@/app/specs/[id]/spec-stock'
 import { Button } from '@/components/ui/button'
 import { Label } from '@/components/ui/label'
 import { toSpecEdit } from '@/lib/routes'
-import { Spec } from '@/lib/types'
+import { IngredientData, Spec } from '@/lib/types'
 
 type Props = {
   spec: Spec
+  data: IngredientData
 }
 
-export function Spec({ spec }: Props) {
+export function Spec({ spec, data }: Props) {
   const { id, name, ingredients, source, stock } = spec
   return (
     <div className="flex flex-col gap-6 sm:flex-row">
@@ -35,6 +36,7 @@ export function Spec({ spec }: Props) {
             {ingredients.map((ingredient, i) => (
               <Ingredient
                 key={`${i}_${ingredient.name ?? ingredient.id}`}
+                data={data}
                 ingredient={ingredient}
                 stock={stock?.ingredients[i]}
               />

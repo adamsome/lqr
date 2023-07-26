@@ -1,6 +1,6 @@
 import { useMemo } from 'react'
 
-import { useData } from '@/components/data-provider'
+import { useIngredientData } from '@/components/data-provider'
 import { HierarchicalFilter } from '@/lib/hierarchical-filter'
 import { IngredientKind } from '@/lib/ingredient/kind'
 import {
@@ -48,10 +48,10 @@ const GARNISH_USAGE: Partial<Record<Usage, boolean>> = {
 }
 
 export function useKindByIngredient(ingredient?: SpecIngredient) {
-  const { categoryFilter } = useData()
+  const { tree } = useIngredientData()
   return useMemo((): [IngredientKind?, boolean?] => {
     if (!ingredient) return []
     if (ingredient.usage && GARNISH_USAGE[ingredient.usage]) return ['garnish']
-    return findKind(ingredient, categoryFilter)
-  }, [ingredient, categoryFilter])
+    return findKind(ingredient, tree)
+  }, [ingredient, tree])
 }

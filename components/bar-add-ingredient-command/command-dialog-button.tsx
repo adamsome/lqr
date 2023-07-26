@@ -1,6 +1,6 @@
 import { KeyboardEvent, useEffect, useState } from 'react'
 
-import { useData } from '@/components/data-provider'
+import { useIngredientData } from '@/components/data-provider'
 import { IngredientPathText } from '@/components/ingredient-path/text'
 import { Button, Props as ButtonProps } from '@/components/ui/button'
 import {
@@ -41,7 +41,7 @@ export function BarAddIngredientCommandDialogButton({
   onSelect,
   ...props
 }: Props) {
-  const { ingredientDict } = useData()
+  const { dict } = useIngredientData()
   const baseRoot = useHierarchicalSpiritsRoot()
   const getIngredientPathName = useGetIngredientPathName()
   const getName = useGetIngredientName()
@@ -113,7 +113,7 @@ export function BarAddIngredientCommandDialogButton({
               if (item) return getName(item)
               if (!id) return 'Unknown Ingredient'
               return (
-                ingredientDict[id]?.name ??
+                dict[id]?.name ??
                 CATEGORY_DICT[id as Category]?.name ??
                 getName({ id })
               )

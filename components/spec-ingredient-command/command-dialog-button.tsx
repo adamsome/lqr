@@ -9,10 +9,11 @@ import {
 import { useKindByIngredient } from '@/components/spec-ingredient-command/use-kind-by-ingredient'
 import { Button, Props as ButtonProps } from '@/components/ui/button'
 import { CommandDialog } from '@/components/ui/command'
-import { Amount, SpecIngredient } from '@/lib/types'
+import { Amount, Ingredient, SpecIngredient } from '@/lib/types'
 
 type Props = Omit<ButtonProps, 'onSelect'> & {
   ingredient?: SpecIngredient
+  submit?: 'ingredient' | 'amount'
   openOnKey?: (e: globalThis.KeyboardEvent) => boolean
   onSelect(ingredient: SpecIngredient): void
 }
@@ -20,6 +21,7 @@ type Props = Omit<ButtonProps, 'onSelect'> & {
 export function SpecIngredientCommandDialogButton({
   children,
   ingredient,
+  submit = 'amount',
   onClick,
   openOnKey,
   onSelect,
@@ -50,8 +52,15 @@ export function SpecIngredientCommandDialogButton({
   }
 
   function handleSubmitAmount(value: Amount) {
+    if (submit === 'ingredient') return
     const { quantity, unit, usage } = value
     onSelect({ ...(currIngredient ?? {}), quantity, unit, usage })
+    dispatch({ type: 'reset' })
+  }
+
+  function handleSubmitIngredient(ingredient: SpecIngredient) {
+    if (submit === 'amount') return
+    onSelect(ingredient)
     dispatch({ type: 'reset' })
   }
 
@@ -85,7 +94,8 @@ export function SpecIngredientCommandDialogButton({
         <IngredientCommand
           state={state}
           dispatch={dispatch}
-          submitAmount={handleSubmitAmount}
+          onSubmitAmount={handleSubmitAmount}
+          onSubmitIngredient={handleSubmitIngredient}
         />
       </CommandDialog>
     </>

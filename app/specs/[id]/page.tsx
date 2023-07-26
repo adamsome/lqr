@@ -1,4 +1,5 @@
-import { SpecContainer } from '@/app/specs/[id]/spec-container'
+import { Spec } from '@/app/specs/[id]/spec'
+import { getSpecData } from '@/lib/model/spec-data'
 
 type Props = {
   params: {
@@ -8,9 +9,10 @@ type Props = {
 
 export default async function Page({ params }: Props) {
   const { id } = params
+  const [spec, data] = await getSpecData(id)
   return (
     <div className="py-8">
-      <SpecContainer id={id} />
+      <Spec spec={spec} data={data} />
     </div>
   )
 }

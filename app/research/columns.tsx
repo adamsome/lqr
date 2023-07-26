@@ -19,9 +19,9 @@ type Column<T> = ColumnDef<T> & {
 }
 
 export const createColumns = (
-  ingredientDict: Record<string, Ingredient>
+  dict: Record<string, Ingredient>
 ): Column<WithPath<Ingredient>>[] => {
-  const getPathName = getIngredientPathName(ingredientDict)
+  const getPathName = getIngredientPathName(dict)
   return [
     {
       accessorKey: 'stock',

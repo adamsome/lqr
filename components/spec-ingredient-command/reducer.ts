@@ -23,6 +23,7 @@ export type Action =
   | { type: 'setKind'; kind: IngredientKind }
   | { type: 'setIngredient'; ingredient: SpecIngredient }
   | { type: 'setAllSpirits' }
+  | { type: 'setRum' }
   | { type: 'setSearch'; value: string }
 
 const initState = (): State => ({
@@ -95,14 +96,13 @@ const reducer: ImmerReducer<State, Action> = (state, action) => {
     }
     case 'setIngredient': {
       state.search = ''
-      const { ingredient } = action
-      const { id, bottleID } = ingredient
-      if (special !== 'rum' && id === 'cane_rum' && !bottleID) {
-        state.special = 'rum'
-        return
-      }
       if (!kind) state.kind = 'spirit'
       state.ingredient = action.ingredient
+      return
+    }
+    case 'setRum': {
+      state.search = ''
+      state.special = 'rum'
       return
     }
     case 'setAllSpirits': {

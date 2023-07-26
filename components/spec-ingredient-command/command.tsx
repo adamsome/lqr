@@ -21,7 +21,8 @@ import { cn } from '@/lib/utils'
 type Props = {
   state: State
   dispatch: Dispatch<Action>
-  submitAmount(value: Amount): void
+  onSubmitAmount(value: Amount): void
+  onSubmitIngredient(ingredient: SpecIngredient): void
 }
 
 export function IngredientCommand(props: Props) {
@@ -48,11 +49,17 @@ export function IngredientCommand(props: Props) {
   )
 }
 
-function Items({ state, dispatch, submitAmount }: Props) {
+function Items({ state, dispatch, onSubmitAmount, onSubmitIngredient }: Props) {
   const { search, kind, ingredient, special } = state
 
-  const onSelectIngredient = (ingredient: SpecIngredient) =>
+  const onSelectIngredient = (ingredient: SpecIngredient) => {
+    const { id, bottleID } = ingredient
+    if (special !== 'rum' && id === 'cane_rum' && !bottleID) {
+      return dispatch({ type: 'setRum' })
+    }
     dispatch({ type: 'setIngredient', ingredient })
+    onSubmitIngredient(ingredient)
+  }
 
   if (!kind) {
     return (
@@ -76,7 +83,7 @@ function Items({ state, dispatch, submitAmount }: Props) {
       <AmountItems
         kind={kind}
         ingredient={ingredient}
-        onSelect={submitAmount}
+        onSelect={onSubmitAmount}
       />
     )
   }

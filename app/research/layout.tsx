@@ -1,9 +1,9 @@
 import { ReactNode } from 'react'
 
-import { DataProvider } from '@/components/data-provider'
+import { IngredientDataProvider } from '@/components/data-provider'
 import { Container } from '@/components/ui/container'
 import { H1 } from '@/components/ui/h1'
-import { getData } from '@/lib/model/data'
+import { getIngredientData } from '@/lib/model/ingredient-data'
 
 export const revalidate = 0
 
@@ -12,15 +12,15 @@ type Props = {
 }
 
 export default async function Layout({ children }: Props) {
-  const data = await getData()
+  const data = await getIngredientData()
   return (
-    <DataProvider {...data}>
+    <IngredientDataProvider {...data}>
       <Container className="relative py-8">
         <section className="flex flex-col gap-4">
           <H1>Research</H1>
           {children}
         </section>
       </Container>
-    </DataProvider>
+    </IngredientDataProvider>
   )
 }

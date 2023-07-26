@@ -1,16 +1,16 @@
 import { Aging, Category, ProductionMethod } from '@/lib/generated-consts'
 import { HierarchicalFilter } from '@/lib/hierarchical-filter'
+import { SpecCategory } from '@/lib/spec-category'
 
 export interface StaticData {
   baseIngredients: Ingredient[]
   ingredients: Ingredient[]
-  categoryFilter: HierarchicalFilter
+  tree: HierarchicalFilter
 }
 
-export interface Data {
-  ingredientDict: Record<string, Ingredient>
-  categoryFilter: HierarchicalFilter
-  specs: Spec[]
+export interface IngredientData {
+  dict: Record<string, Ingredient>
+  tree: HierarchicalFilter
 }
 
 export interface Ingredient {
@@ -51,14 +51,7 @@ export type Usage =
   | 'top'
   | 'rinse'
   | 'muddled'
-export type SpecCategory =
-  | 'tiki'
-  | 'highball'
-  | 'daiquiri'
-  | 'sidecar'
-  | 'oldfashioned'
-  | 'martini'
-  | 'flip'
+
 export type GlassType = 'coupe' | 'rocks' | 'highball'
 export type MixType = 'stirred' | 'shaken'
 

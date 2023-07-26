@@ -1,6 +1,6 @@
 import { Fragment } from 'react'
 
-import { useData } from '@/components/data-provider'
+import { useIngredientData } from '@/components/data-provider'
 import { CATEGORY_DICT, Category } from '@/lib/generated-consts'
 import { cn } from '@/lib/utils'
 
@@ -38,13 +38,13 @@ type Props = {
 }
 
 export function IngredientPathText({ id, path }: Props) {
-  const { ingredientDict } = useData()
+  const { dict } = useIngredientData()
 
   if (!path) {
     if (!id) return <>Unknown Ingredient Path</>
     return (
       <>
-        {ingredientDict[id]?.name ??
+        {dict[id]?.name ??
           CATEGORY_DICT[id as Category]?.name ??
           'Unknown Ingredient ID'}
       </>
@@ -75,7 +75,7 @@ export function IngredientPathText({ id, path }: Props) {
                 (DIM_LAST[ancestors[i - 1]] && i !== onlyIndex),
             })}
           >
-            {ingredientDict[id]?.name ?? ''}
+            {dict[id]?.name ?? ''}
           </span>
           <span>{i === ancestors.length - 1 ? '' : ', '}</span>
         </Fragment>

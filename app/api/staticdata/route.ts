@@ -12,6 +12,6 @@ export async function GET() {
   return NextResponse.json(`{
     "baseIngredients": ${data[0].toString()},
     "ingredients": ${data[1].toString()},
-    "categoryFilter": ${data[2].toString()}
+    "tree": ${data[2].toString()}
   }`)
 }

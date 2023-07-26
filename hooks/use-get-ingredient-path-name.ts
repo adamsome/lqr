@@ -1,13 +1,13 @@
 import { useCallback } from 'react'
 
-import { useData } from '@/components/data-provider'
+import { useIngredientData } from '@/components/data-provider'
 import { getIngredientPathName } from '@/lib/ingredient/get-ingredient-path-name'
 
 export function useGetIngredientPathName() {
-  const { ingredientDict } = useData()
+  const { dict } = useIngredientData()
 
   return useCallback(
-    (path: string[]) => getIngredientPathName(ingredientDict)(path),
-    [ingredientDict]
+    (path: string[]) => getIngredientPathName(dict)(path),
+    [dict]
   )
 }

@@ -1,7 +1,7 @@
 import { Column } from '@tanstack/react-table'
 import { useMemo } from 'react'
 
-import { useData } from '@/components/data-provider'
+import { useIngredientData } from '@/components/data-provider'
 import { IngredientPathText } from '@/components/ingredient-path/text'
 import { DataTableHierarchicalFilter } from '@/components/ui/data-table-hierarchical-filter'
 import { CATEGORY_DICT, Category } from '@/lib/generated-consts'
@@ -13,18 +13,18 @@ type Props = {
 }
 
 export function IngredientPathFilter(props: Props) {
-  const { categoryFilter: root } = useData()
+  const { tree } = useIngredientData()
 
   const filter = useMemo(() => {
-    const childIDs = root.childIDs.filter(
+    const childIDs = tree.childIDs.filter(
       (id) => CATEGORY_DICT[id as Category].type === 'spirit'
     )
     const children = childIDs.reduce((acc, id) => {
-      acc[id] = root.children[id]
+      acc[id] = tree.children[id]
       return acc
     }, {} as HierarchicalFilter['children'])
-    return { ...root, childIDs, children }
-  }, [root])
+    return { ...tree, childIDs, children }
+  }, [tree])
 
   return (
     <DataTableHierarchicalFilter

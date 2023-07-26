@@ -1,14 +1,20 @@
-import { useIngredientName } from '@/hooks/use-ingredient-name'
-import { SpecIngredient, SpecIngredientStock } from '@/lib/types'
+import { getIngredientView } from '@/lib/ingredient/get-ingredient-view'
+import {
+  IngredientData,
+  SpecIngredient,
+  SpecIngredientStock,
+} from '@/lib/types'
 import { cn } from '@/lib/utils'
 
 type Props = {
+  data: IngredientData
   ingredient: SpecIngredient
   stock?: SpecIngredientStock
 }
 
-export function Ingredient({ ingredient, stock }: Props) {
-  const { amount, category, name } = useIngredientName(ingredient)
+export function Ingredient({ data, ingredient, stock }: Props) {
+  const { dict } = data
+  const { amount, category, name } = getIngredientView(dict, ingredient)
   const notInStock = !stock || stock.stock <= 0
   const missing = notInStock && stock?.type !== 'custom'
   const custom = notInStock && stock?.type === 'custom'

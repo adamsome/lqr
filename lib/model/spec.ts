@@ -1,11 +1,13 @@
 import { auth } from '@clerk/nextjs'
 import { OptionalUnlessRequiredId } from 'mongodb'
 import { uniq } from 'ramda'
+import invariant from 'tiny-invariant'
 
 import { connectToDatabase } from '@/lib/mongodb'
 import { Spec } from '@/lib/types'
 import { rejectNil } from '@/lib/utils'
-import invariant from 'tiny-invariant'
+
+import 'server-only'
 
 const PUBLIC_USER_ID = 'user_2QaSdLhpL7dMcmD999SKB2teEIM'
 

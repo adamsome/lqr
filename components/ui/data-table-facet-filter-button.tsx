@@ -33,7 +33,7 @@ type Props<TData, TValue> = {
   column?: Column<TData, TValue>
   title?: string
   icon?: ReactNode
-  items: DataTableFacetedFilterItem[]
+  items: readonly DataTableFacetedFilterItem[]
   transformFacetsFn?: (facets: Map<any, number>) => Map<any, number>
 }
 

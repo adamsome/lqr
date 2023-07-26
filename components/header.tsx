@@ -7,6 +7,7 @@ import { ModeToggle } from '@/components/theme-toggle'
 import { buttonVariants } from '@/components/ui/button'
 import { Container } from '@/components/ui/container'
 import { cn } from '@/lib/utils'
+import { Suspense } from 'react'
 
 export function Header() {
   return (
@@ -35,7 +36,9 @@ export function Header() {
             </Link>
             <ModeToggle />
             <div className="ms-2">
-              <UserButton afterSignOutUrl="/" />
+              <Suspense>
+                <UserButton afterSignOutUrl="/" />
+              </Suspense>
             </div>
           </nav>
         </div>

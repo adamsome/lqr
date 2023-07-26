@@ -9,13 +9,14 @@ import {
   CardTitle,
 } from '@/components/ui/card'
 import { toSpec } from '@/lib/routes'
-import { Spec } from '@/lib/types'
+import { IngredientData, Spec } from '@/lib/types'
 
 type Props = {
+  data: IngredientData
   spec: Spec
 }
 
-export function Card({ spec }: Props) {
+export function Card({ data, spec }: Props) {
   const { id, name, ingredients, source, stock } = spec
   return (
     <CardLink href={toSpec(id)}>
@@ -28,6 +29,7 @@ export function Card({ spec }: Props) {
           {ingredients.map((ingredient, i) => (
             <Ingredient
               key={`${i}_${ingredient.name ?? ingredient.id}`}
+              data={data}
               ingredient={ingredient}
               stock={stock?.ingredients[i]}
             />

@@ -6,7 +6,7 @@ import { getIngredientDefs } from '@/lib/ingredient/get-ingredient-defs'
 import { Ingredient, SpecIngredient } from '@/lib/types'
 
 type IngredientData = {
-  byID: Record<string, Ingredient>
+  dict: Record<string, Ingredient>
   tree: HierarchicalFilter
 }
 
@@ -42,9 +42,9 @@ const getIngredientItems = curry(
     data: IngredientData,
     ingredient: SpecIngredient | Ingredient
   ): IngredientItem[] => {
-    const { byID: ingredientDict, tree } = data
+    const { dict, tree } = data
     if (!ingredient?.id) return []
-    let defs = getIngredientDefs(ingredientDict, ingredient.id)
+    let defs = getIngredientDefs(dict, ingredient.id)
     if (!defs?.length) {
       const category = CATEGORY_DICT[ingredient.id as Category]
       if (category) {
@@ -58,7 +58,7 @@ const getIngredientItems = curry(
       (acc, id) => acc?.children[id],
       tree
     )
-    const isMethod = isBottleIngredientMethod(ingredientDict, ingredient)
+    const isMethod = isBottleIngredientMethod(dict, ingredient)
     return getDescendentItems(path, node).filter(({ id }) => isMethod(id))
   }
 )
@@ -80,11 +80,11 @@ const getDescendentItems = (
 
 const isBottleIngredientMethod = curry(
   (
-    byID: Record<string, Ingredient>,
+    dict: Record<string, Ingredient>,
     ingredient: SpecIngredient | Ingredient,
     bottleID: string
   ) => {
-    const bottle = byID[bottleID]
+    const bottle = dict[bottleID]
     if (!bottle) return true
 
     const { aging, black, overproof, productionMethod } = ingredient

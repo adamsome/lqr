@@ -1,8 +1,8 @@
 import { ReactNode } from 'react'
 
-import { DataProvider } from '@/components/data-provider'
-import { getData } from '@/lib/model/data'
+import { IngredientDataProvider } from '@/components/data-provider'
 import { Container } from '@/components/ui/container'
+import { getIngredientData } from '@/lib/model/ingredient-data'
 
 export const revalidate = 0
 
@@ -11,10 +11,10 @@ type Props = {
 }
 
 export default async function Layout({ children }: Props) {
-  const data = await getData()
+  const data = await getIngredientData()
   return (
-    <DataProvider {...data}>
+    <IngredientDataProvider {...data}>
       <Container>{children}</Container>
-    </DataProvider>
+    </IngredientDataProvider>
   )
 }

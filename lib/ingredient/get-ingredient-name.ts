@@ -129,7 +129,7 @@ export type Options = {
 
 export const getIngredientName = curry(
   (
-    byID: Record<string, Ingredient>,
+    dict: Record<string, Ingredient>,
     ingredient: SpecIngredient | Ingredient,
     { inclBottle, inclCategory, toLower }: Options = {}
   ): string => {
@@ -138,13 +138,13 @@ export const getIngredientName = curry(
     if (inclBottle) {
       const { bottleID } = ingredient as SpecIngredient
       if (bottleID) {
-        if (byID[bottleID]) {
-          return byID[bottleID].name
+        if (dict[bottleID]) {
+          return dict[bottleID].name
         }
       }
       const { ordinal } = ingredient as Ingredient
-      if (ordinal !== undefined && id && byID[id]) {
-        return byID[id].name
+      if (ordinal !== undefined && id && dict[id]) {
+        return dict[id].name
       }
     }
 
@@ -156,7 +156,7 @@ export const getIngredientName = curry(
       return format(idMap[id], toLower)
     }
 
-    const allDefs = getIngredientDefs(byID, id)
+    const allDefs = getIngredientDefs(dict, id)
     if (!allDefs?.length) {
       if (inclCategory) {
         const category = CATEGORY_DICT[id as Category]

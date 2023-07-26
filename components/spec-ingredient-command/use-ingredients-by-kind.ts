@@ -1,6 +1,6 @@
 import { useMemo } from 'react'
 
-import { useData } from '@/components/data-provider'
+import { useIngredientData } from '@/components/data-provider'
 import { HierarchicalFilter } from '@/lib/hierarchical-filter'
 import { IngredientKind } from '@/lib/ingredient/kind'
 import {
@@ -11,14 +11,14 @@ import { SpecIngredient } from '@/lib/types'
 import { rejectNil } from '@/lib/utils'
 
 function appendKindMoreIngredients(
-  categoryFilter: HierarchicalFilter
+  tree: HierarchicalFilter
 ): Record<IngredientKind, SpecIngredient[]> {
   return KIND_MORE_INGREDIENT_TYPES.reduce(
     (acc, [kind, defs]) => {
       const ingredients = acc[kind]
       const idSet = new Set(rejectNil(ingredients.map((it) => it.id)))
       const moreIngredients = defs.flatMap(({ id, category }) => {
-        const ids = categoryFilter.children[category ?? '']?.childIDs ?? []
+        const ids = tree.children[category ?? '']?.childIDs ?? []
         if (id) ids.push(id)
         return ids
           .filter((id) => !idSet.has(id))
@@ -31,10 +31,7 @@ function appendKindMoreIngredients(
 }
 
 export function useIngredientsByKind(kind?: IngredientKind) {
-  const { categoryFilter } = useData()
-  const byKind = useMemo(
-    () => appendKindMoreIngredients(categoryFilter),
-    [categoryFilter]
-  )
+  const { tree } = useIngredientData()
+  const byKind = useMemo(() => appendKindMoreIngredients(tree), [tree])
   return useMemo(() => (kind ? byKind[kind] : []) ?? [], [byKind, kind])
 }
