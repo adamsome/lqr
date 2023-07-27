@@ -1,19 +1,17 @@
 'use client'
 
 import { Plus } from 'lucide-react'
-import { usePathname, useRouter, useSearchParams } from 'next/navigation'
-import { useCallback } from 'react'
 
 import { CATEGORY_KEY, INGREDIENT_KEY } from '@/app/specs/consts'
 import { FilterSection } from '@/app/specs/filter-section'
 import { IngredientFilter } from '@/app/specs/ingredient-filter'
 import { SpecIngredientCommandDialogButton } from '@/components/spec-ingredient-command/command-dialog-button'
 import { Button } from '@/components/ui/button'
-import { getIngredientName as makeGetIngredientName } from '@/lib/ingredient/get-ingredient-name'
-import { IngredientData } from '@/lib/types'
-import { useRouterSearchParams } from '@/hooks/use-router-search-params'
-import { SPEC_CATEGORIES } from '@/lib/spec-category'
 import { CheckboxLabel } from '@/components/ui/checkbox-label'
+import { useRouterSearchParams } from '@/hooks/use-router-search-params'
+import { getIngredientName as makeGetIngredientName } from '@/lib/ingredient/get-ingredient-name'
+import { SPEC_CATEGORIES } from '@/lib/spec-category'
+import { IngredientData } from '@/lib/types'
 
 type Props = {
   data: IngredientData
@@ -28,7 +26,7 @@ export function Filters({ data, categories, ingredients }: Props) {
   const getIngredientName = makeGetIngredientName(dict)
 
   return (
-    <div className="flex flex-col gap-6 py-[13px]">
+    <div className="flex flex-col gap-6">
       <FilterSection name="Category">
         {SPEC_CATEGORIES.map(({ value, label }) => (
           <CheckboxLabel

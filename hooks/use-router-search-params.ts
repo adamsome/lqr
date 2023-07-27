@@ -6,6 +6,16 @@ export function useRouterSearchParams() {
   const pathname = usePathname()
   const searchParams = useSearchParams() as unknown as URLSearchParams
 
+  const setQueryString = useCallback(
+    (name: string, value: string) => {
+      const params = new URLSearchParams(searchParams)
+      params.set(name, value)
+
+      return params.toString()
+    },
+    [searchParams]
+  )
+
   const appendQueryString = useCallback(
     (name: string, value: string) => {
       const params = new URLSearchParams(searchParams)
@@ -43,6 +53,13 @@ export function useRouterSearchParams() {
     [pushQueryString, clearQueryString]
   )
 
+  const set = useCallback(
+    (name: string, value: string) => {
+      pushQueryString(setQueryString(name, value))
+    },
+    [pushQueryString, setQueryString]
+  )
+
   const append = useCallback(
     (name?: string, value?: string) => {
       if (name && value) pushQueryString(appendQueryString(name, value))
@@ -50,5 +67,5 @@ export function useRouterSearchParams() {
     [pushQueryString, appendQueryString]
   )
 
-  return { append, clear, searchParams }
+  return { set, append, clear, searchParams }
 }

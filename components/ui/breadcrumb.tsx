@@ -1,4 +1,4 @@
-import { ChevronRight, MoveLeft, RotateCcw } from 'lucide-react'
+import { ChevronRight, MoveLeft } from 'lucide-react'
 import { Children, Fragment, HTMLAttributes, ReactNode } from 'react'
 
 import { cn } from '@/lib/utils'
