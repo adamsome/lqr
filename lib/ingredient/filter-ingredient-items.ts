@@ -28,11 +28,11 @@ export const filterIngredientItems = curry(
     { include = [], exclude = [] }: IngredientFilter
   ): IngredientItem[] => {
     const getItems = getIngredientItems(data)
-    const excludIDs = new Set(
+    const excludeIDs = new Set(
       uniq(exclude.flatMap((it) => getItems(it).map(({ id }) => id)))
     )
     return uniq(include.flatMap((it) => getItems(it))).filter(
-      ({ id }) => !excludIDs.has(id)
+      ({ id }) => !excludeIDs.has(id)
     )
   }
 )

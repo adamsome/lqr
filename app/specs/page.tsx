@@ -50,7 +50,7 @@ export default async function Page({ searchParams }: Props) {
             />
           </div>
           <div className="flex flex-1 flex-col gap-4">
-            <Grid data={data} specs={specs.slice(0, 100)} />
+            <Grid data={data} specs={specs} />
           </div>
         </div>
       </div>

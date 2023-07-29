@@ -10,6 +10,34 @@ import {
   SpecStock,
 } from '@/lib/types'
 
+const ignoreIDs = [
+  'liqueur_amaro_aperitivo',
+  'liqueur_amaro_light',
+  'liqueur_amaro_medium',
+  'liqueur_herbal',
+  'fortifiedwine_aperitif',
+]
+
+const altBottleGroups: Record<string, string[][]> = {
+  liqueur_amaro_aperitivo: [
+    ['gran_classico_bitter', 'campari'],
+    ['suze', 'salers_gentien_aperitif'],
+  ],
+  liqueur_amaro_medium: [
+    ['amaro_ciociaro', 'bigallet_chinachina_amer'],
+    ['cappelletti_pasubio_vino_amaro', 'cappelletti_pasubio_vino_amaro'],
+  ],
+  fortifiedwine_aperitif: [
+    ['cocchi_americano_bianco', 'lillet_blanc', 'cap_corse_blanc_quinquina'],
+  ],
+}
+
+const altGroups: Record<string, string[]> = {
+  grain_gin_londondry: ['grain_gin_plymouth', 'grain_gin_contemporary'],
+  grain_gin_plymouth: ['grain_gin_londondry', 'grain_gin_contemporary'],
+  grain_gin_contemporary: ['grain_gin_londondry', 'grain_gin_plymouth'],
+}
+
 export const getSpecStock = curry(
   (
     dict: Record<string, Ingredient>,
@@ -32,24 +60,45 @@ function getSpecIngredientStock(
   tree: HierarchicalFilter,
   ingredient: SpecIngredient
 ): SpecIngredientStock {
-  const { bottleID } = ingredient
+  const { id, bottleID } = ingredient
   const _getStock = getStock(dict)
   if (bottleID) {
     const stock = _getStock(bottleID)
-    // TODO: If no exact bottle match, check if in-stock bottles of category
-    return {
-      type: 'bottle',
-      stock,
-      bottles: [{ id: bottleID, stock }],
+    if (stock > 0 || (id && ignoreIDs.includes(id))) {
+      if (stock <= 0 && id && altBottleGroups[id]) {
+        const group = altBottleGroups[id].find((bottles) =>
+          bottles.includes(bottleID)
+        )
+        if (group) {
+          const bottles = group.filter((g) => _getStock(g) > 0)
+          if (bottles.length > 0) {
+            const sortedBottles = sortBy(
+              (x) => -x.stock,
+              bottles.map((id) => ({ id, stock: _getStock(id) }))
+            )
+            return {
+              type: 'category',
+              stock: sortedBottles[0].stock,
+              bottles: sortedBottles,
+            }
+          }
+        }
+      }
+      return {
+        type: 'bottle',
+        stock,
+        bottles: [{ id: bottleID, stock }],
+      }
     }
   }
 
-  if (!ingredient.id) return { type: 'custom', stock: 0 }
+  if (!id) return { type: 'custom', stock: 0 }
 
-  const items = filterIngredientItems(
-    { dict: dict, tree },
-    { include: [ingredient] }
-  )
+  const include = [ingredient]
+  if (altGroups[id]) {
+    include.push(...altGroups[id].map((id) => ({ id })))
+  }
+  const items = filterIngredientItems({ dict, tree }, { include })
   const sortedItems = sortBy(
     (x) => -x.stock,
     items

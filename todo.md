@@ -1,8 +1,8 @@
 # TODO
 
+- Add progress circle w/ weighted spec ingredients
 - Specs sort
 - Move user button under dropdown
-- Add progress circle w/ weighted spec ingredients
 - Bar Add any ingredient
 - Specs Add
 - Specs compact cards
@@ -15,3 +15,17 @@
 - Buy priority
 - Rum categorization
 - Select mode
+
+- Spec infusions
+- Search all ingredients from root command page
+
+- Synonyms:
+
+  - Genepy
+  - Cane syrup
+
+- Strange specs:
+
+  - Carousel
+
+- MY BAR: Add pisco, coffee bean
