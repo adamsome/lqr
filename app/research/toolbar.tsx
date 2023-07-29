@@ -15,7 +15,7 @@ import { DataTableHierarchicalFacetFilterButton } from '@/components/ui/data-tab
 import { DataTableMultiFacetFilterButton } from '@/components/ui/data-table-multi-facet-filter-button'
 import { DataTableViewOptions } from '@/components/ui/data-table-view-options'
 import { useGetIngredientPathName } from '@/hooks/use-get-ingredient-path-name'
-import { useHierarchicalSpiritsRoot } from '@/hooks/use-hierarchical-spirits-root'
+import { useFilterIngredientTree } from '@/hooks/use-hierarchical-spirits-root'
 import { useIsDataTableFiltered } from '@/hooks/use-is-data-table-filtered'
 import {
   AGING_DICT,
@@ -73,7 +73,7 @@ type Props = DataTableToolbarProps<WithPath<Ingredient>>
 
 export function Toolbar({ table }: Props) {
   const isFiltered = useIsDataTableFiltered(table)
-  const categoryRoot = useHierarchicalSpiritsRoot()
+  const categoryRoot = useFilterIngredientTree('spirit', 'beerWine')
   const getIngredientPathName = useGetIngredientPathName()
 
   return (

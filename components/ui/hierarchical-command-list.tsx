@@ -92,7 +92,7 @@ type ItemProps<T extends HasIDAndName> = Props<T> & {
 }
 
 function Item<T extends HasIDAndName>(props: ItemProps<T>) {
-  const { root, path: prevPath = [], showBottles, ...rest } = props
+  const { root, path: prevPath = [], ...rest } = props
   const { id, childIDs, children, bottleIDs, checked } = root
   if (
     rest.rejectCheckedLeaves &&
@@ -107,7 +107,7 @@ function Item<T extends HasIDAndName>(props: ItemProps<T>) {
   return (
     <>
       <ItemContent {...props} />
-      {showBottles &&
+      {rest.showBottles &&
         bottleIDs?.map((id) => (
           <Bottle {...rest} key={id} bottleID={id} path={path} />
         ))}
@@ -182,7 +182,7 @@ function ItemContent<T extends HasIDAndName>({
       )}
       <span
         className={cn({
-          'text-popover-foreground': muteItems,
+          'text-muted-foreground': muteItems,
           'ml-6': !showCheckbox && !hasSearch && level === 1,
           'ml-12': !showCheckbox && !hasSearch && level === 2,
           'ml-18': !showCheckbox && !hasSearch && level >= 3,

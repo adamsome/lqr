@@ -15,7 +15,7 @@ import {
 } from '@/components/ui/hierarchical-command-list'
 import { useGetIngredientName } from '@/hooks/use-get-ingredient-name'
 import { useGetIngredientPathName } from '@/hooks/use-get-ingredient-path-name'
-import { useHierarchicalSpiritsRoot } from '@/hooks/use-hierarchical-spirits-root'
+import { useFilterIngredientTree } from '@/hooks/use-hierarchical-spirits-root'
 import { CATEGORY_DICT, Category } from '@/lib/generated-consts'
 import { HierarchicalFilter } from '@/lib/hierarchical-filter'
 import { Ingredient } from '@/lib/types'
@@ -42,7 +42,7 @@ export function BarAddIngredientCommandDialogButton({
   ...props
 }: Props) {
   const { dict } = useIngredientData()
-  const baseRoot = useHierarchicalSpiritsRoot()
+  const baseRoot = useFilterIngredientTree('spirit', 'beerWine')
   const getIngredientPathName = useGetIngredientPathName()
   const getName = useGetIngredientName()
 
