@@ -1,4 +1,5 @@
 import { CATEGORY_KEY, INGREDIENT_KEY, SEARCH_KEY } from '@/app/specs/consts'
+import { Count } from '@/app/specs/count'
 import { Filters } from '@/app/specs/filters'
 import { Grid } from '@/app/specs/grid'
 import { Toolbar } from '@/app/specs/toolbar'
@@ -38,7 +39,9 @@ export default async function Page({ searchParams }: Props) {
 
   return (
     <section className="relative my-8 flex flex-col gap-4">
-      <H1>Specs</H1>
+      <H1 className="flex items-baseline gap-3">
+        Specs <Count count={specs.length} total={allSpecs.length} />
+      </H1>
       <div className="flex flex-col gap-6">
         <Toolbar search={search} />
         <div className="flex gap-6">
