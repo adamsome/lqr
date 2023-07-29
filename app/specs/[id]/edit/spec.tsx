@@ -82,16 +82,16 @@ export function Spec({ spec }: Props) {
             )}
           >
             <div className="flex justify-between gap-4 [grid-area:actions]">
-              <ResponsizeButton
+              <ResponsiveButton
                 type="button"
                 variant="secondary"
                 onClick={handleClose}
               >
                 Cancel
-              </ResponsizeButton>
-              <ResponsizeButton type="submit" disabled={mutating}>
+              </ResponsiveButton>
+              <ResponsiveButton type="submit" disabled={mutating}>
                 Submit
-              </ResponsizeButton>
+              </ResponsiveButton>
             </div>
             <FormField
               control={form.control}
@@ -189,7 +189,7 @@ export function Spec({ spec }: Props) {
   )
 }
 
-function ResponsizeButton({ children, ...props }: ButtonProps) {
+function ResponsiveButton({ children, ...props }: ButtonProps) {
   return (
     <>
       <Button className="md:hidden" {...props} size="sm">
