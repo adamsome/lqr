@@ -12,9 +12,11 @@ function getQuantityStr(quantity?: number): string {
   let num = floor ? String(floor) : ''
   if (near(decimal, 1 / 8)) return `${num} 1/8`
   if (near(decimal, 1 / 4)) return `${num} 1/4`
+  if (near(decimal, 1 / 3)) return `${num} 1/3`
   if (near(decimal, 3 / 8)) return `${num} 3/8`
   if (near(decimal, 1 / 2)) return `${num} 1/2`
   if (near(decimal, 5 / 8)) return `${num} 5/8`
+  if (near(decimal, 2 / 3)) return `${num} 2/3`
   if (near(decimal, 3 / 4)) return `${num} 3/4`
   if (near(decimal, 7 / 8)) return `${num} 7/8`
   return num

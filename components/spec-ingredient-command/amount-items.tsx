@@ -47,6 +47,8 @@ const kindAmountDict: Partial<
     { label: '2 1/4 oz', value: { quantity: 2.25, unit: 'oz' } },
     { label: '1 3/4 oz', value: { quantity: 1.75, unit: 'oz' } },
     { label: '1 1/4 oz', value: { quantity: 1.25, unit: 'oz' } },
+    { label: '1/3 oz', value: { quantity: 0.333, unit: 'oz' } },
+    { label: '2/3 oz', value: { quantity: 0.667, unit: 'oz' } },
   ],
   bitters: [
     { label: '1 dash', value: { quantity: 1, unit: 'dash' } },
@@ -100,6 +102,8 @@ const kindAmountDict: Partial<
     { label: '2 1/2 oz', value: { quantity: 2.5, unit: 'oz' } },
     { label: '3 oz', value: { quantity: 3, unit: 'oz' } },
     { label: '4 oz', value: { quantity: 4, unit: 'oz' } },
+    { label: '1/3 oz', value: { quantity: 0.333, unit: 'oz' } },
+    { label: '2/3 oz', value: { quantity: 0.667, unit: 'oz' } },
   ],
   twist: [
     { label: 'Twist', value: { quantity: 1, usage: 'twist' } },

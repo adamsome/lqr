@@ -32,11 +32,26 @@ const altBottleGroups: Record<string, string[][]> = {
   ],
 }
 
-const altGroups: Record<string, string[]> = {
-  grain_gin_londondry: ['grain_gin_plymouth', 'grain_gin_contemporary'],
-  grain_gin_plymouth: ['grain_gin_londondry', 'grain_gin_contemporary'],
-  grain_gin_contemporary: ['grain_gin_londondry', 'grain_gin_plymouth'],
-}
+const similar = [
+  ['grain_gin_londondry', 'grain_gin_plymouth', 'grain_gin_contemporary'],
+  [
+    'syrup_cane',
+    'syrup_demerara',
+    'syrup_demeraragum',
+    'syrup_molasses',
+    'syrup_simple',
+  ],
+  ['syrup_raspberrygum', 'syrup_raspberry'],
+  ['syrup_pineapplegum', 'syrup_pineapple'],
+]
+
+const similarSet = similar.reduce((acc, group) => {
+  group.forEach((item) => {
+    const others = group.filter((it) => it !== item)
+    acc.set(item, others)
+  })
+  return acc
+}, new Map<string, string[]>())
 
 export const getSpecStock = curry(
   (
@@ -65,6 +80,7 @@ function getSpecIngredientStock(
   if (bottleID) {
     const stock = _getStock(bottleID)
     if (stock > 0 || (id && ignoreIDs.includes(id))) {
+      // Handle checking for alt bottles that can be substituted
       if (stock <= 0 && id && altBottleGroups[id]) {
         const group = altBottleGroups[id].find((bottles) =>
           bottles.includes(bottleID)
@@ -95,8 +111,8 @@ function getSpecIngredientStock(
   if (!id) return { type: 'custom', stock: 0 }
 
   const include = [ingredient]
-  if (altGroups[id]) {
-    include.push(...altGroups[id].map((id) => ({ id })))
+  if (similarSet.has(id)) {
+    include.push(...similarSet.get(id)!.map((id) => ({ id })))
   }
   const items = filterIngredientItems({ dict, tree }, { include })
   const sortedItems = sortBy(

@@ -867,6 +867,7 @@
         "soda_gingerbeer",
         "soda_grapefruit",
         "soda_guava",
+        "soda_lemonade",
         "soda_tonic"
       ],
       "children": {
@@ -896,6 +897,12 @@
         },
         "soda_guava": {
           "id": "soda_guava",
+          "checked": false,
+          "childIDs": [],
+          "children": {}
+        },
+        "soda_lemonade": {
+          "id": "soda_lemonade",
           "checked": false,
           "childIDs": [],
           "children": {}
@@ -1100,6 +1107,7 @@
         "syrup_jerk",
         "syrup_kiwi",
         "syrup_lihingmui",
+        "syrup_macadamia",
         "syrup_maple",
         "syrup_milk",
         "syrup_molasses",
@@ -1112,6 +1120,7 @@
         "syrup_poppyseed",
         "syrup_port",
         "syrup_raspberry",
+        "syrup_raspberrygum",
         "syrup_sarsaparilla",
         "syrup_simple",
         "syrup_strawberry",
@@ -1233,6 +1242,12 @@
           "childIDs": [],
           "children": {}
         },
+        "syrup_macadamia": {
+          "id": "syrup_macadamia",
+          "checked": false,
+          "childIDs": [],
+          "children": {}
+        },
         "syrup_maple": {
           "id": "syrup_maple",
           "checked": false,
@@ -1301,6 +1316,12 @@
         },
         "syrup_raspberry": {
           "id": "syrup_raspberry",
+          "checked": false,
+          "childIDs": [],
+          "children": {}
+        },
+        "syrup_raspberrygum": {
+          "id": "syrup_raspberrygum",
           "checked": false,
           "childIDs": [],
           "children": {}

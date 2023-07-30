@@ -495,6 +495,11 @@
     "category": "soda"
   },
   {
+    "id": "soda_lemonade",
+    "name": "Lemonade",
+    "category": "soda"
+  },
+  {
     "id": "soda_tonic",
     "name": "Tonic",
     "category": "soda"
@@ -700,6 +705,11 @@
     "category": "syrup"
   },
   {
+    "id": "syrup_macadamia",
+    "name": "Macadamia",
+    "category": "syrup"
+  },
+  {
     "id": "syrup_maple",
     "name": "Maple",
     "category": "syrup"
@@ -757,6 +767,11 @@
   {
     "id": "syrup_raspberry",
     "name": "Raspberry",
+    "category": "syrup"
+  },
+  {
+    "id": "syrup_raspberrygum",
+    "name": "Raspberry Gum",
     "category": "syrup"
   },
   {

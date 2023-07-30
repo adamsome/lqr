@@ -27,5 +27,3 @@
 - Strange specs:
 
   - Carousel
-
-- MY BAR: Add pisco, coffee bean
