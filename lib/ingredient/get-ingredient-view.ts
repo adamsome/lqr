@@ -10,15 +10,18 @@ export function getIngredientView(
   const getName = getIngredientName(dict)
 
   const amount = getSpecAmountName(ingredient)
-
   let category
   let name = getName(ingredient, { toLower: true })
+  let infusion: string | undefined
+
   if (!amount[0]) name = capitalize(name)
 
-  const { bottleID } = ingredient
-  if (bottleID) {
+  if (ingredient.bottleID) {
     category = capitalize(name)
-    name = dict[bottleID].name
+    name = dict[ingredient.bottleID].name
+    if (ingredient.infusion) {
+      infusion = `${capitalize(ingredient.infusion)}-infused`
+    }
   }
-  return { amount, category, name }
+  return { amount, category, name, infusion }
 }

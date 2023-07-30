@@ -16,13 +16,8 @@
 - Rum categorization
 - Select mode
 
-- Spec infusions
+- Spec similar bottles & category show stocked bottles
 - Search all ingredients from root command page
-
-- Synonyms:
-
-  - Genepy
-  - Cane syrup
 
 - Strange specs:
 

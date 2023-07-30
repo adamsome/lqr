@@ -1,8 +1,11 @@
+import { ArrowDown, ArrowUp, MoreHorizontal } from 'lucide-react'
+
+import { MoreCommand } from '@/app/specs/[id]/edit/more-command'
+import { useIngredientData } from '@/components/data-provider'
 import { SpecIngredientCommandDialogButton } from '@/components/spec-ingredient-command/command-dialog-button'
 import { Button } from '@/components/ui/button'
-import { useIngredientName } from '@/hooks/use-ingredient-name'
+import { getIngredientView } from '@/lib/ingredient/get-ingredient-view'
 import { SpecIngredient } from '@/lib/types'
-import { ArrowDown, ArrowUp, X } from 'lucide-react'
 
 type Props = {
   ingredient: SpecIngredient
@@ -21,7 +24,11 @@ export function Ingredient({
   onRemove,
   onMove,
 }: Props) {
-  const { amount, category, name } = useIngredientName(ingredient)
+  const { dict } = useIngredientData()
+  const { amount, category, name, infusion } = getIngredientView(
+    dict,
+    ingredient
+  )
   return (
     <div className="flex items-end gap-1">
       <div className="flex gap-px">
@@ -52,27 +59,32 @@ export function Ingredient({
             {category}
           </div>
         )}
-        <SpecIngredientCommandDialogButton
-          variant="secondary"
-          size="xs"
-          ingredient={ingredient}
-          onSelect={onUpdate}
-        >
-          <div className="flex items-baseline gap-1.5">
-            {amount[0] && <span>{amount[0]}</span>}
-            <span>{name}</span>
-            {amount[1] && <span>{amount[1]}</span>}
-          </div>
-        </SpecIngredientCommandDialogButton>
+        <div className="flex items-center gap-1">
+          <SpecIngredientCommandDialogButton
+            variant="secondary"
+            size="xs"
+            ingredient={ingredient}
+            onSelect={onUpdate}
+          >
+            <div className="flex items-baseline gap-1.5">
+              {amount[0] && <span>{amount[0]}</span>}
+              {infusion && <span>{infusion} </span>}
+              <span>{name}</span>
+              {amount[1] && <span>{amount[1]}</span>}
+            </div>
+          </SpecIngredientCommandDialogButton>
+          <MoreCommand
+            className="text-muted-foreground"
+            variant="secondary"
+            size="xs"
+            ingredient={ingredient}
+            onRemove={onRemove}
+            onSelect={onUpdate}
+          >
+            <MoreHorizontal size={12} />
+          </MoreCommand>
+        </div>
       </div>
-      <Button
-        type="button"
-        className="text-muted-foreground"
-        variant="secondary"
-        size="xs"
-      >
-        <X size={12} onClick={onRemove} />
-      </Button>
     </div>
   )
 }

@@ -14,10 +14,13 @@ type Props = {
 
 export function Ingredient({ data, ingredient, stock }: Props) {
   const { dict } = data
-  const { amount, category, name } = getIngredientView(dict, ingredient)
+  const { bottleID } = ingredient
+  const { amount, category, name, infusion } = getIngredientView(
+    dict,
+    ingredient
+  )
   const notInStock = !stock || stock.stock <= 0
-  const categoryMatch =
-    !notInStock && stock.type === 'category' && ingredient.bottleID
+  const categoryMatch = !notInStock && stock.type === 'category' && bottleID
   const missing = notInStock && stock?.type !== 'custom'
   const custom = notInStock && stock?.type === 'custom'
   return (
@@ -38,6 +41,7 @@ export function Ingredient({ data, ingredient, stock }: Props) {
         {amount[0] && (
           <span className="font-semibold text-popover-foreground">{`${amount[0]} `}</span>
         )}
+        {infusion && <span>{infusion} </span>}
         <span>{name}</span>
         {amount[1] && <span>{` ${amount[1]}`}</span>}
       </div>

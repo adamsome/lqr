@@ -1,6 +1,5 @@
 import { KeyboardEvent, useEffect } from 'react'
 
-import { CustomDialog } from '@/components/spec-ingredient-command/custom-dialog'
 import { IngredientCommand } from '@/components/spec-ingredient-command/command'
 import {
   State,
@@ -9,7 +8,8 @@ import {
 import { useKindByIngredient } from '@/components/spec-ingredient-command/use-kind-by-ingredient'
 import { Button, Props as ButtonProps } from '@/components/ui/button'
 import { CommandDialog } from '@/components/ui/command'
-import { Amount, Ingredient, SpecIngredient } from '@/lib/types'
+import { NameDialog } from '@/components/ui/custom-dialog'
+import { Amount, SpecIngredient } from '@/lib/types'
 
 type Props = Omit<ButtonProps, 'onSelect'> & {
   ingredient?: SpecIngredient
@@ -85,7 +85,11 @@ export function SpecIngredientCommandDialogButton({
       >
         {children}
       </Button>
-      <CustomDialog open={Boolean(custom)} onSubmit={handleSubmitCustom} />
+      <NameDialog
+        open={Boolean(custom)}
+        title="Custom Ingredient"
+        onSubmit={handleSubmitCustom}
+      />
       <CommandDialog
         open={open}
         onOpenChange={(value) => dispatch({ type: 'open', value })}
