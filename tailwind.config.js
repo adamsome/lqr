@@ -47,6 +47,15 @@ module.exports = {
       spacing: {
         18: '4.5rem',
       },
+      animation: {
+        arc: 'arc 1s forwards ease-in',
+      },
+      keyframes: {
+        arc: {
+          from: { 'stroke-dashoffset': 'var(--arc-length)' },
+          to: { 'stroke-dashoffset': '0' },
+        },
+      },
     },
   },
   plugins: [require('tailwindcss-animate')],

@@ -21,7 +21,7 @@ export async function getAllSpecsData(): Promise<[Spec[], IngredientData]> {
 
   const getStock = getSpecStock(dict, tree)
   const specs = sortBy(
-    (s) => (s.stock?.total ?? 0) - (s.stock?.count ?? 0),
+    (s) => -(s.stock?.count ?? 0) / (s.stock?.total ?? 0),
     rawSpecs.map((spec) => ({ ...spec, stock: getStock(spec) }))
   )
 

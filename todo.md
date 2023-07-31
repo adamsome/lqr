@@ -19,6 +19,15 @@
 - Spec similar bottles & category show stocked bottles
 - Search all ingredients from root command page
 
+- Homes
+
+  - Avatar & name
+  - My Bar: Count of bottles, Low stocked
+  - Favorite specs
+  - Recent specs
+  - Following
+
 - Strange specs:
 
   - Carousel
+  - Beach Goth
