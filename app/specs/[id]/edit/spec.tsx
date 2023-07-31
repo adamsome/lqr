@@ -32,7 +32,7 @@ type Props = {
 }
 
 export function Spec({ spec }: Props) {
-  const { id, name, ingredients, source, sourcePage } = spec
+  const { id, name, ingredients, source } = spec
 
   const router = useRouter()
   const [mutating, mutate] = useMutate(`/api/specs/${id}`)
@@ -42,7 +42,6 @@ export function Spec({ spec }: Props) {
     defaultValues: {
       name,
       source,
-      sourcePage,
       ingredients,
     },
   })
@@ -128,24 +127,6 @@ export function Spec({ spec }: Props) {
                     <FormLabel className="w-24 md:text-right">Source</FormLabel>
                     <FormControl>
                       <Input placeholder="Source..." {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              <FormField
-                control={form.control}
-                name="sourcePage"
-                render={({ field }) => (
-                  <FormItem className="flex items-center gap-4">
-                    <FormLabel className="w-24 md:text-right">Page #</FormLabel>
-                    <FormControl>
-                      <Input
-                        type="numeric"
-                        placeholder="Pg..."
-                        {...field}
-                        onChange={(e) => field.onChange(Number(e.target.value))}
-                      />
                     </FormControl>
                     <FormMessage />
                   </FormItem>

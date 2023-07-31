@@ -52,7 +52,7 @@ export type Usage =
   | 'rinse'
   | 'muddled'
 
-export type GlassType = 'coupe' | 'rocks' | 'highball'
+export type GlassType = 'coupe' | 'rocks' | 'highball' | 'tiki'
 export type MixType = 'stirred' | 'shaken'
 
 export type Amount = {
@@ -97,7 +97,6 @@ export interface Spec {
   glass?: GlassType
   mix?: MixType
   notes?: string
-  author?: string
   bar?: string
   source?: string
   sourcePage?: number
