@@ -24,6 +24,7 @@ import { toSpec } from '@/lib/routes'
 import { specSchema } from '@/lib/schema/spec'
 import { Spec, SpecIngredient } from '@/lib/types'
 import { cn } from '@/lib/utils'
+import { Textarea } from '@/components/ui/textarea'
 
 type Schema = z.infer<typeof specSchema>
 
@@ -113,10 +114,10 @@ export function Spec({ spec }: Props) {
           <div
             className={cn(
               'grid gap-6',
-              "[grid-template-areas:'meta'_'list']",
-              "md:[grid-template-areas:'list_meta']",
-              'md:grid-cols-[1fr,theme(spacing.72)]',
-              'lg:grid-cols-[1fr,theme(spacing.96)]'
+              "[grid-template-areas:'meta'_'list'_'notes']",
+              "md:[grid-template-areas:'list_meta'_'list_notes']",
+              'md:grid-cols-[1fr,1fr]',
+              'md:grid-rows-[min-content,1fr]'
             )}
           >
             <div className="flex flex-col gap-3 [grid-area:meta]">
@@ -133,6 +134,8 @@ export function Spec({ spec }: Props) {
                   </FormItem>
                 )}
               />
+            </div>
+            <div className="flex flex-col gap-3 [grid-area:notes]">
               <FormField
                 control={form.control}
                 name="notes"
@@ -140,14 +143,14 @@ export function Spec({ spec }: Props) {
                   <FormItem className="flex flex-col gap-1">
                     <FormLabel>Instructions</FormLabel>
                     <FormControl>
-                      <Input placeholder="Instructions..." {...field} />
+                      <Textarea placeholder="Instructions..." {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
                 )}
               />
             </div>
-            <div className="flex flex-col gap-6 [grid-area:list]">
+            <div className="flex flex-col gap-4 [grid-area:list]">
               <Label>Ingredients</Label>
               <div className="flex flex-col gap-3">
                 {fields.map((ingredient, i) => (
@@ -162,9 +165,8 @@ export function Spec({ spec }: Props) {
                   />
                 ))}
               </div>
-            </div>
-            <div>
               <SpecIngredientCommandDialogButton
+                className="self-start"
                 variant="secondary"
                 openOnKey={(e) => (e.metaKey || e.ctrlKey) && e.key === 'j'}
                 onSelect={append}
