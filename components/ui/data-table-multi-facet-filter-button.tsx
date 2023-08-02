@@ -1,5 +1,5 @@
+import { CheckIcon } from '@radix-ui/react-icons'
 import { Column } from '@tanstack/react-table'
-import { Check } from 'lucide-react'
 import { Fragment, ReactNode } from 'react'
 
 import { Badge } from '@/components/ui/badge'
@@ -178,11 +178,8 @@ function Item({ item, column, columnName, selected, facets }: ItemProps) {
             : 'opacity-50 [&_svg]:invisible'
         )}
       >
-        <Check className={cn('h-4 w-4')} />
+        <CheckIcon />
       </div>
-      {item.Icon && (
-        <item.Icon className="mr-2 h-4 w-4 text-muted-foreground" />
-      )}
       {item.icon}
       <span>{item.label}</span>
       {count && (

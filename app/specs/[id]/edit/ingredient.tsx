@@ -1,4 +1,8 @@
-import { ArrowDown, ArrowUp, MoreHorizontal } from 'lucide-react'
+import {
+  ArrowDownIcon,
+  ArrowUpIcon,
+  DotsHorizontalIcon,
+} from '@radix-ui/react-icons'
 
 import { MoreCommand } from '@/app/specs/[id]/edit/more-command'
 import { useIngredientData } from '@/components/data-provider'
@@ -40,7 +44,7 @@ export function Ingredient({
           disabled={index === 0}
           onClick={() => onMove(-1)}
         >
-          <ArrowUp size={12} />
+          <ArrowUpIcon />
         </Button>
         <Button
           type="button"
@@ -50,7 +54,7 @@ export function Ingredient({
           disabled={index === total - 1}
           onClick={() => onMove(1)}
         >
-          <ArrowDown size={12} />
+          <ArrowDownIcon />
         </Button>
       </div>
       <div className="flex flex-col items-start gap-1 leading-snug">
@@ -81,7 +85,7 @@ export function Ingredient({
             onRemove={onRemove}
             onSelect={onUpdate}
           >
-            <MoreHorizontal size={12} />
+            <DotsHorizontalIcon />
           </MoreCommand>
         </div>
       </div>

@@ -1,6 +1,6 @@
-import { LucideProps } from 'lucide-react'
+import { SVGAttributes } from 'react'
 
-export function GithubIcon(props: LucideProps) {
+export function GithubIcon(props: SVGAttributes<SVGElement>) {
   return (
     <svg viewBox="0 0 438.549 438.549" {...props}>
       <path

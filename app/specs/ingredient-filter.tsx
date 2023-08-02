@@ -1,4 +1,4 @@
-import { X } from 'lucide-react'
+import { Cross1Icon } from '@radix-ui/react-icons'
 
 import { Button } from '@/components/ui/button'
 
@@ -14,13 +14,8 @@ export function IngredientFilter({ name, onClear }: Props) {
       className="flex w-full items-center justify-between text-sm"
     >
       {name}
-      <Button
-        type="button"
-        className="text-muted-foreground"
-        variant="secondary"
-        size="xs"
-      >
-        <X size={12} onClick={onClear} />
+      <Button type="button" variant="secondary" size="xs">
+        <Cross1Icon onClick={onClear} />
       </Button>
     </div>
   )

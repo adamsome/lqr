@@ -1,7 +1,7 @@
 import { CheckedState } from '@radix-ui/react-checkbox'
+import { GearIcon } from '@radix-ui/react-icons'
 import { Column } from '@tanstack/react-table'
 import { produce } from 'immer'
-import { ListFilter } from 'lucide-react'
 import { ReactNode } from 'react'
 
 import { CheckboxLabel } from '@/components/ui/checkbox-label'
@@ -46,7 +46,7 @@ export function DataTableHierarchicalFilter<TData>({
           'text-accent-foreground': value,
         })}
       >
-        <ListFilter size={16} />
+        <GearIcon />
       </PopoverTrigger>
       <PopoverContent
         className={cn(

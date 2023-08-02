@@ -1,6 +1,6 @@
 'use client'
 
-import { Plus } from 'lucide-react'
+import { PlusIcon } from '@radix-ui/react-icons'
 
 import { CATEGORY_KEY, INGREDIENT_KEY } from '@/app/specs/consts'
 import { FilterSection } from '@/app/specs/filter-section'
@@ -65,7 +65,7 @@ export function Filters({ data, categories, ingredients }: Props) {
           submit="ingredient"
           onSelect={(it) => append(INGREDIENT_KEY, it.bottleID ?? it.id)}
         >
-          <Plus size={16} />
+          <PlusIcon />
           Add Filter
         </SpecIngredientCommandDialogButton>
       </FilterSection>

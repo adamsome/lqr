@@ -1,4 +1,4 @@
-import { ChevronRight, MoveLeft } from 'lucide-react'
+import { ArrowLeftIcon, ChevronRightIcon } from '@radix-ui/react-icons'
 import { Children, Fragment, HTMLAttributes, ReactNode } from 'react'
 
 import { cn } from '@/lib/utils'
@@ -22,9 +22,8 @@ export function Breadcrumb({ children, className, back, onBackClick }: Props) {
     >
       {back && (
         <BreadcrumbItem>
-          <MoveLeft
+          <ArrowLeftIcon
             className={cn('relative left-0.5 top-px mr-3 flex-none')}
-            size={16}
             onClick={onBackClick}
           />
         </BreadcrumbItem>
@@ -32,10 +31,7 @@ export function Breadcrumb({ children, className, back, onBackClick }: Props) {
       {Children.map(items, (child, i) => (
         <Fragment key={i}>
           {i > 0 && (
-            <ChevronRight
-              className="relative top-px mx-1 flex-none text-muted-foreground/75"
-              size={16}
-            />
+            <ChevronRightIcon className="relative top-px mx-1 flex-none text-muted-foreground/75" />
           )}
           {child}
         </Fragment>

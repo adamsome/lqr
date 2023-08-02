@@ -1,3 +1,8 @@
+import {
+  CircleBackslashIcon,
+  CircleIcon,
+  Cross1Icon,
+} from '@radix-ui/react-icons'
 import { KeyboardEvent, useEffect, useState } from 'react'
 
 import { Button, Props as ButtonProps } from '@/components/ui/button'
@@ -9,10 +14,9 @@ import {
   CommandItem,
   CommandList,
 } from '@/components/ui/command'
+import { NameDialog } from '@/components/ui/custom-dialog'
 import { SpecIngredient } from '@/lib/types'
 import { cn } from '@/lib/utils'
-import { FlaskConical, FlaskConicalOff, X } from 'lucide-react'
-import { NameDialog } from '@/components/ui/custom-dialog'
 
 type Props = Omit<ButtonProps, 'onSelect'> & {
   ingredient: SpecIngredient
@@ -96,7 +100,7 @@ export function MoreCommand({
               className="flex items-center gap-2 overflow-hidden"
               onSelect={() => onRemove()}
             >
-              <X size={16} />
+              <Cross1Icon />
               <span className="flex-1 overflow-hidden text-ellipsis whitespace-nowrap">
                 Remove
               </span>
@@ -107,11 +111,7 @@ export function MoreCommand({
                 infusion ? handleSetInfusion() : setInfusionOpen(true)
               }
             >
-              {infusion ? (
-                <FlaskConicalOff size={8} />
-              ) : (
-                <FlaskConical size={8} />
-              )}
+              {infusion ? <CircleBackslashIcon /> : <CircleIcon />}
               <span className="flex-1 overflow-hidden text-ellipsis whitespace-nowrap">
                 {infusion ? 'Remove' : 'Add'} Infusion
               </span>

@@ -1,6 +1,6 @@
 'use client'
 
-import { Check, ChevronsUpDown } from 'lucide-react'
+import { CaretSortIcon, CheckIcon } from '@radix-ui/react-icons'
 import { ReactElement, Ref, forwardRef, useState } from 'react'
 
 import { Button } from '@/components/ui/button'
@@ -58,7 +58,7 @@ function _Combobox<T>(
           {...props}
         >
           {value ? options.find((o) => o.value === value)?.label : 'Amt'}
-          <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
+          <CaretSortIcon className="ml-2 shrink-0 opacity-50" />
         </Button>
       </PopoverTrigger>
       <PopoverContent className="w-[200px] p-0">
@@ -76,7 +76,7 @@ function _Combobox<T>(
                   onChange(value)
                 }}
               >
-                <Check
+                <CheckIcon
                   className={cn(
                     'mr-2 h-4 w-4',
                     value === o.value ? 'opacity-100' : 'opacity-0'

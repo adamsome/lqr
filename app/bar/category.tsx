@@ -1,6 +1,6 @@
 'use client'
 
-import { Plus } from 'lucide-react'
+import { PlusIcon } from '@radix-ui/react-icons'
 
 import {
   Props as AddButtonProps,
@@ -56,12 +56,12 @@ export function Category({ className, category, muteItems }: Props) {
       <div className="flex items-center justify-between border-b pb-1 font-semibold">
         {name ?? 'Unknown Category'}
         <AddButton
-          className="px-1 text-muted-foreground"
+          className="text-muted-foreground"
           variant="ghost"
           size="xs"
           {...addProps}
         >
-          <Plus size={16} />
+          <PlusIcon />
         </AddButton>
       </div>
       <div className="flex flex-col flex-wrap items-start gap-2">
@@ -82,11 +82,11 @@ export function Category({ className, category, muteItems }: Props) {
         ))}
         {stocked.length === 0 && (
           <AddButton
-            className="gap-1 border-dashed pl-3 text-muted-foreground"
+            className="gap-1 border-dashed text-muted-foreground"
             variant="outline"
             {...addProps}
           >
-            <Plus size={16} />
+            <PlusIcon />
             Add Bottle
           </AddButton>
         )}

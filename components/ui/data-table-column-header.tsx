@@ -1,5 +1,5 @@
+import { ArrowDownIcon, ArrowUpIcon } from '@radix-ui/react-icons'
 import { Column } from '@tanstack/react-table'
-import { ArrowDown, ArrowUp } from 'lucide-react'
 import { HTMLAttributes, ReactNode } from 'react'
 
 import {
@@ -47,9 +47,9 @@ export function DataTableColumnHeader<TData, TValue>({
         >
           {children}
           {column.getIsSorted() === 'desc' ? (
-            <ArrowDown className="h-4 w-4" />
+            <ArrowDownIcon />
           ) : column.getIsSorted() === 'asc' ? (
-            <ArrowUp className="h-4 w-4" />
+            <ArrowUpIcon />
           ) : null}
         </div>
       </Tooltip>

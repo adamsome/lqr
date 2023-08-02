@@ -1,6 +1,6 @@
 'use client'
 
-import { Search } from 'lucide-react'
+import { MagnifyingGlassIcon } from '@radix-ui/react-icons'
 import { FormEvent, useEffect, useState } from 'react'
 import { useDebounce } from 'react-use'
 
@@ -54,7 +54,7 @@ export function Toolbar({ search: searchProp }: Props) {
             'animate-pulse': searchProp !== search,
           })}
         >
-          <Search size={16} />
+          <MagnifyingGlassIcon />
         </div>
       </div>
     </form>

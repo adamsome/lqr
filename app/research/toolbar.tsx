@@ -1,6 +1,6 @@
 'use client'
 
-import { X } from 'lucide-react'
+import { Cross1Icon } from '@radix-ui/react-icons'
 
 import { IngredientPathText } from '@/components/ingredient-path/text'
 import { StockIcon as BaseStockIcon } from '@/components/stock-icon'
@@ -128,7 +128,7 @@ export function Toolbar({ table }: Props) {
             className="h-8 px-2 lg:px-3"
           >
             Reset
-            <X className="ml-2 h-4 w-4" />
+            <Cross1Icon className="ml-2" />
           </Button>
         )}
       </div>

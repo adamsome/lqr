@@ -1,10 +1,10 @@
 'use client'
 
 import { DropdownMenuTrigger } from '@radix-ui/react-dropdown-menu'
-import { Table } from '@tanstack/react-table'
-import { MoreHorizontal } from 'lucide-react'
+import { DotsHorizontalIcon } from '@radix-ui/react-icons'
 
 import { Button } from '@/components/ui/button'
+import { DataTableToolbarProps } from '@/components/ui/data-table-container'
 import {
   DropdownMenu,
   DropdownMenuCheckboxItem,
@@ -13,7 +13,6 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
 } from '@/components/ui/dropdown-menu'
-import { DataTableToolbarProps } from '@/components/ui/data-table-container'
 
 type Props<TData> = DataTableToolbarProps<TData>
 
@@ -32,7 +31,7 @@ export function DataTableViewOptions<TData>({ table }: Props<TData>) {
           size="sm"
           className="ml-auto hidden h-10 lg:flex"
         >
-          <MoreHorizontal className="h-4 w-4" />
+          <DotsHorizontalIcon />
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end" className="w-[150px]">
