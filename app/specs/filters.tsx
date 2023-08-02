@@ -10,8 +10,10 @@ import { Button } from '@/components/ui/button'
 import { CheckboxLabel } from '@/components/ui/checkbox-label'
 import { useRouterSearchParams } from '@/hooks/use-router-search-params'
 import { getIngredientName as makeGetIngredientName } from '@/lib/ingredient/get-ingredient-name'
-import { SPEC_CATEGORIES } from '@/lib/spec-category'
+import { getSpecCategoryItems } from '@/lib/spec-category'
 import { IngredientData } from '@/lib/types'
+
+const SPEC_CATEGORY_ITEMS = getSpecCategoryItems()
 
 type Props = {
   data: IngredientData
@@ -28,7 +30,7 @@ export function Filters({ data, categories, ingredients }: Props) {
   return (
     <div className="flex flex-col gap-6">
       <FilterSection name="Category">
-        {SPEC_CATEGORIES.map(({ value, label }) => (
+        {SPEC_CATEGORY_ITEMS.map(({ value, label }) => (
           <CheckboxLabel
             key={value}
             id={value}

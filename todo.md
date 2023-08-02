@@ -1,5 +1,6 @@
 # TODO
 
+- Spec Edit move notes to bottom & make textarea
 - Spec metadata & user
 
   - Year
@@ -8,8 +9,6 @@
   - Glass
   - Mix
   - Notes (instructions)
-  - Updated at (Created at)
-  - Remove sourcePage
 
 - Specs Add
 - Bar Add any ingredient
@@ -39,6 +38,9 @@
 
 ## QoL
 
+- Spec modified at ([Intl.RelativeTimeFormat](https://stackoverflow.com/questions/61911591/react-intl-with-relativetime-formatting))
+- Category/Glass/Mix type icons
+- Add source & source link
 - Spec favorite/stars
 - Specs search by ingredient too
 - Spec alt. versions

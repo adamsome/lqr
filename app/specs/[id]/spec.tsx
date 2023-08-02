@@ -3,10 +3,12 @@
 import Link from 'next/link'
 
 import { Ingredient } from '@/app/specs/[id]/ingredient'
-import { SpecStock } from '@/app/specs/[id]/spec-stock'
 import { Button } from '@/components/ui/button'
-import { Label } from '@/components/ui/label'
+import { DotSeparator } from '@/components/ui/dot-separator'
+import { getGlassTypeLabel } from '@/lib/glass-type'
+import { getMixTypeLabel } from '@/lib/mix-type'
 import { toSpecEdit } from '@/lib/routes'
+import { getSpecCategoryLabel } from '@/lib/spec-category'
 import { IngredientData, Spec } from '@/lib/types'
 
 type Props = {
@@ -15,34 +17,49 @@ type Props = {
 }
 
 export function Spec({ spec, data }: Props) {
-  const { id, name, ingredients, source, stock } = spec
+  const {
+    id,
+    name,
+    year,
+    username,
+    userDisplayName,
+    ingredients,
+    stock,
+    category,
+    mix,
+    glass,
+    notes,
+  } = spec
   return (
     <div className="flex flex-col gap-6 sm:flex-row">
       <div className="flex flex-1 flex-col gap-y-6">
-        <div className="flex flex-col gap-y-1.5">
-          <div className="text-lg font-semibold leading-none tracking-tight">
+        <div className="flex flex-col gap-y-1">
+          <div className="mb-3 text-4xl font-semibold leading-none tracking-tight">
             {name}
+            {year && <span className="text-muted-foreground"> ({year})</span>}
           </div>
-          {source && (
-            <div className="text-sm text-muted-foreground">{source}</div>
+          {(userDisplayName || username) && (
+            <div className="text-xl">{userDisplayName ?? username}</div>
+          )}
+          {(category || mix || glass) && (
+            <DotSeparator className="font-semibold text-muted-foreground">
+              {category && <div>{getSpecCategoryLabel(category)}</div>}
+              {mix && <div>{getMixTypeLabel(mix)}</div>}
+              {glass && <div>{getGlassTypeLabel(glass)} Glass</div>}
+            </DotSeparator>
           )}
         </div>
-        <div className="flex flex-col gap-4">
-          <div className="flex items-center gap-2">
-            <Label>Ingredients</Label>
-            <SpecStock stock={stock} />
-          </div>
-          <div className="flex flex-col gap-2">
-            {ingredients.map((ingredient, i) => (
-              <Ingredient
-                key={`${i}_${ingredient.name ?? ingredient.id}`}
-                data={data}
-                ingredient={ingredient}
-                stock={stock?.ingredients[i]}
-              />
-            ))}
-          </div>
+        <div className="flex flex-col gap-2">
+          {ingredients.map((ingredient, i) => (
+            <Ingredient
+              key={`${i}_${ingredient.name ?? ingredient.id}`}
+              data={data}
+              ingredient={ingredient}
+              stock={stock?.ingredients[i]}
+            />
+          ))}
         </div>
+        {notes && <div className="text-muted-foreground">{notes}</div>}
       </div>
       <div>
         <Button asChild variant="outline">

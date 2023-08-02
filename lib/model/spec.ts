@@ -4,30 +4,37 @@ import { uniq } from 'ramda'
 import invariant from 'tiny-invariant'
 
 import { connectToDatabase } from '@/lib/mongodb'
-import { Spec } from '@/lib/types'
+import { Follow, Spec } from '@/lib/types'
 import { rejectNil } from '@/lib/utils'
 
 import 'server-only'
 
-const PUBLIC_USER_ID = 'user_2QaSdLhpL7dMcmD999SKB2teEIM'
-
-async function connect() {
-  const { db } = await connectToDatabase()
-  return db.collection<OptionalUnlessRequiredId<Spec>>('spec')
-}
-
 export async function getSpecs(): Promise<Spec[]> {
   const { userId: id } = auth()
-  const ids = uniq(rejectNil([id, PUBLIC_USER_ID]))
-  const db = await connect()
+  const { db } = await connectToDatabase()
+
+  let userIDs: string[]
+  if (id) {
+    const follows = await db
+      .collection<OptionalUnlessRequiredId<Follow>>('follow')
+      .find({ follower: id })
+      .toArray()
+    userIDs = [id, ...follows.map((f) => f.followee)]
+  } else {
+    // TODO: Handle unsigned-in user
+    userIDs = []
+  }
+
   return await db
-    .find({ userID: { $in: ids } }, { projection: { _id: false } })
+    .collection<OptionalUnlessRequiredId<Spec>>('spec')
+    .find({ userID: { $in: userIDs } }, { projection: { _id: false } })
     .toArray()
 }
 
 export async function getSpec(id: string): Promise<Spec> {
-  const db = await connect()
+  const { db } = await connectToDatabase()
   const spec: Spec[] = await db
+    .collection<OptionalUnlessRequiredId<Spec>>('spec')
     .find({ id }, { projection: { _id: false } })
     .toArray()
   invariant(spec?.length === 1, `Found multiple specs with id '${id}<`)
@@ -35,6 +42,8 @@ export async function getSpec(id: string): Promise<Spec> {
 }
 
 export async function updateSpec(spec: Spec) {
-  const db = await connect()
-  await db.updateOne({ id: spec.id }, { $set: spec })
+  const { db } = await connectToDatabase()
+  await db
+    .collection<OptionalUnlessRequiredId<Spec>>('spec')
+    .updateOne({ id: spec.id }, { $set: spec })
 }

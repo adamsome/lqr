@@ -50,6 +50,6 @@ specs = specs.map((curr) => {
 
 await specColl.deleteMany({})
 const res = await specColl.insertMany(specs, { upsert: true })
-console.log('res', (res?.insertedCount ?? 0) > 0 ? res.insertedCount : res)
+console.log('Inserted', (res?.insertedCount ?? 0) > 0 ? res.insertedCount : res)
 
 process.exit()

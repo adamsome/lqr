@@ -1,5 +1,7 @@
 import { Aging, Category, ProductionMethod } from '@/lib/generated-consts'
+import { GlassType } from '@/lib/glass-type'
 import { HierarchicalFilter } from '@/lib/hierarchical-filter'
+import { MixType } from '@/lib/mix-type'
 import { SpecCategory } from '@/lib/spec-category'
 
 export interface StaticData {
@@ -35,8 +37,14 @@ export type WithPath<T> = T & { path: string[] }
 export interface User {
   id: string
   username: string
+  displayName?: string
   ingredients: Record<string, Partial<Ingredient>>
   admin?: boolean
+}
+
+export interface Follow {
+  follower: string
+  followee: string
 }
 
 export type Unit = 'oz' | 'tsp' | 'dash' | 'cube'
@@ -51,9 +59,6 @@ export type Usage =
   | 'top'
   | 'rinse'
   | 'muddled'
-
-export type GlassType = 'coupe' | 'rocks' | 'highball' | 'tiki'
-export type MixType = 'stirred' | 'shaken'
 
 export type Amount = {
   quantity?: number
@@ -89,6 +94,7 @@ export interface Spec {
   name: string
   userID: string
   username: string
+  userDisplayName?: string
   updatedAt: string
   createdAt: string
   year: number

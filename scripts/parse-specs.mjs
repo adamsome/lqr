@@ -625,19 +625,29 @@ export function parseSpecs() {
         const now = new Date().toISOString()
         let year
         let bar
+        let username = 'adamsome'
+        let userID = 'user_2QaSdLhpL7dMcmD999SKB2teEIM'
+        let userDisplayName = undefined
         if (source === "Smuggler's Cove") {
           year = 2016
           bar = "Smuggler's Cove"
+          username = 'smugglers_cove'
+          userID = 'user_smugglerscove'
+          userDisplayName = "Smuggler's Cove"
         }
         if (source === 'Welcome Home') {
           year = 2021
           bar = 'Death & Co'
+          username = 'deathco_welcome_home'
+          userID = 'user_deathcowelcomehome'
+          userDisplayName = 'Death & Co Welcome Home'
         }
         specs[id] = {
           id,
           name,
-          userID: 'user_2QaSdLhpL7dMcmD999SKB2teEIM',
-          username: 'adamsome',
+          userID,
+          username,
+          userDisplayName,
           updatedAt: now,
           createdAt: now,
           year,

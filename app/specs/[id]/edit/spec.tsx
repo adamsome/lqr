@@ -32,7 +32,7 @@ type Props = {
 }
 
 export function Spec({ spec }: Props) {
-  const { id, name, ingredients, source } = spec
+  const { id, name, year, ingredients, notes } = spec
 
   const router = useRouter()
   const [mutating, mutate] = useMutate(`/api/specs/${id}`)
@@ -41,8 +41,9 @@ export function Spec({ spec }: Props) {
     resolver: zodResolver(specSchema),
     defaultValues: {
       name,
-      source,
+      year,
       ingredients,
+      notes,
     },
   })
   const { fields, append, remove, update, move } = useFieldArray({
@@ -121,19 +122,32 @@ export function Spec({ spec }: Props) {
             <div className="flex flex-col gap-3 [grid-area:meta]">
               <FormField
                 control={form.control}
-                name="source"
+                name="year"
                 render={({ field }) => (
-                  <FormItem className="flex items-center gap-4">
-                    <FormLabel className="w-24 md:text-right">Source</FormLabel>
+                  <FormItem className="flex flex-col gap-1">
+                    <FormLabel>Year</FormLabel>
                     <FormControl>
-                      <Input placeholder="Source..." {...field} />
+                      <Input placeholder="Year..." {...field} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="notes"
+                render={({ field }) => (
+                  <FormItem className="flex flex-col gap-1">
+                    <FormLabel>Instructions</FormLabel>
+                    <FormControl>
+                      <Input placeholder="Instructions..." {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
                 )}
               />
             </div>
-            <div className="flex flex-col gap-6 [grid-area:list] md:mt-3">
+            <div className="flex flex-col gap-6 [grid-area:list]">
               <Label>Ingredients</Label>
               <div className="flex flex-col gap-3">
                 {fields.map((ingredient, i) => (
