@@ -1,6 +1,5 @@
 # TODO
 
-- Spec Edit move notes to bottom & make textarea
 - Spec metadata & user
 
   - Year
@@ -30,7 +29,7 @@
 
 ## Home & following
 
-- Avatar & name
+- Avatar & name (use Clerk pictureUrl)
 - My Bar: Count of bottles, Low stocked
 - Favorite specs
 - Recent specs

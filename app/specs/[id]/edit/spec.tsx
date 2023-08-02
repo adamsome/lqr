@@ -19,12 +19,22 @@ import {
 import { FullScreen } from '@/components/ui/full-screen'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/select'
+import { Textarea } from '@/components/ui/textarea'
 import { useMutate } from '@/hooks/use-mutate'
+import { getGlassTypeItems } from '@/lib/glass-type'
+import { getMixTypeItems } from '@/lib/mix-type'
 import { toSpec } from '@/lib/routes'
 import { specSchema } from '@/lib/schema/spec'
+import { getSpecCategoryItems } from '@/lib/spec-category'
 import { Spec, SpecIngredient } from '@/lib/types'
 import { cn } from '@/lib/utils'
-import { Textarea } from '@/components/ui/textarea'
 
 type Schema = z.infer<typeof specSchema>
 
@@ -32,8 +42,12 @@ type Props = {
   spec: Spec
 }
 
+const CATEGORY_ITEMS = getSpecCategoryItems()
+const MIX_ITEMS = getMixTypeItems()
+const GLASS_ITEMS = getGlassTypeItems()
+
 export function Spec({ spec }: Props) {
-  const { id, name, year, ingredients, notes } = spec
+  const { id, name, year, category, mix, glass, ingredients, notes } = spec
 
   const router = useRouter()
   const [mutating, mutate] = useMutate(`/api/specs/${id}`)
@@ -43,6 +57,9 @@ export function Spec({ spec }: Props) {
     defaultValues: {
       name,
       year,
+      category,
+      mix,
+      glass,
       ingredients,
       notes,
     },
@@ -130,6 +147,87 @@ export function Spec({ spec }: Props) {
                     <FormControl>
                       <Input placeholder="Year..." {...field} />
                     </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="category"
+                render={({ field }) => (
+                  <FormItem className="flex flex-col gap-1">
+                    <FormLabel>Category</FormLabel>
+                    <Select
+                      onValueChange={field.onChange}
+                      defaultValue={field.value}
+                    >
+                      <FormControl>
+                        <SelectTrigger>
+                          <SelectValue placeholder="Category..." />
+                        </SelectTrigger>
+                      </FormControl>
+                      <SelectContent>
+                        {CATEGORY_ITEMS.map(({ value, label }) => (
+                          <SelectItem key={value} value={value}>
+                            {label}
+                          </SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="mix"
+                render={({ field }) => (
+                  <FormItem className="flex flex-col gap-1">
+                    <FormLabel>Method</FormLabel>
+                    <Select
+                      onValueChange={field.onChange}
+                      defaultValue={field.value}
+                    >
+                      <FormControl>
+                        <SelectTrigger>
+                          <SelectValue placeholder="Shaken or stirred..." />
+                        </SelectTrigger>
+                      </FormControl>
+                      <SelectContent>
+                        {MIX_ITEMS.map(({ value, label }) => (
+                          <SelectItem key={value} value={value}>
+                            {label}
+                          </SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="glass"
+                render={({ field }) => (
+                  <FormItem className="flex flex-col gap-1">
+                    <FormLabel>Glass</FormLabel>
+                    <Select
+                      onValueChange={field.onChange}
+                      defaultValue={field.value}
+                    >
+                      <FormControl>
+                        <SelectTrigger>
+                          <SelectValue placeholder="Glass..." />
+                        </SelectTrigger>
+                      </FormControl>
+                      <SelectContent>
+                        {GLASS_ITEMS.map(({ value, label }) => (
+                          <SelectItem key={value} value={value}>
+                            {label}
+                          </SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
                     <FormMessage />
                   </FormItem>
                 )}
