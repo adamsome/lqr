@@ -25,7 +25,7 @@ type Option<T> = {
 
 function getOptionValue<T>(
   options: Option<T>[],
-  label?: string
+  label?: string,
 ): T | undefined {
   if (label === undefined) return
   return options.find((o) => o.label === label)?.value
@@ -38,9 +38,9 @@ type Props<T> = {
   onChange(value?: T): void
 }
 
-function _Combobox<T>(
+function ComboboxGeneric<T>(
   { name, options, value: valueProp, onChange, ...props }: Props<T>,
-  ref: Ref<HTMLButtonElement>
+  ref: Ref<HTMLButtonElement>,
 ) {
   const [open, setOpen] = useState(false)
   const [value, setValue] = useState<T | undefined>(valueProp)
@@ -54,7 +54,7 @@ function _Combobox<T>(
           aria-expanded={open}
           className="justify-between text-muted-foreground"
           name={name}
-          // ref={ref}
+          ref={ref}
           {...props}
         >
           {value ? options.find((o) => o.value === value)?.label : 'Amt'}
@@ -79,7 +79,7 @@ function _Combobox<T>(
                 <CheckIcon
                   className={cn(
                     'mr-2 h-4 w-4',
-                    value === o.value ? 'opacity-100' : 'opacity-0'
+                    value === o.value ? 'opacity-100' : 'opacity-0',
                   )}
                 />
                 {o.label}
@@ -93,8 +93,8 @@ function _Combobox<T>(
 }
 
 // Cast the output
-export const Combobox = forwardRef(_Combobox) as <T>(
-  p: Props<T> & { ref?: Ref<HTMLButtonElement> }
+export const Combobox = forwardRef(ComboboxGeneric) as <T>(
+  p: Props<T> & { ref?: Ref<HTMLButtonElement> },
 ) => ReactElement
 
-_Combobox.displayName = 'Combobox'
+ComboboxGeneric.displayName = 'Combobox'
