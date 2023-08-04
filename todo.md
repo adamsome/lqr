@@ -1,17 +1,9 @@
 # TODO
 
-- Spec metadata & user
-
-  - Year
-  - User
-  - Category
-  - Glass
-  - Mix
-  - Notes (instructions)
-
 - Specs Add
 - Bar Add any ingredient
 - Specs sort
+- Specs filter rum subcategories
 - [SPECS] Add from Trello
 
 ## Redesign
@@ -21,12 +13,6 @@
 - Spec bigger text on desktop
 - Move user button under dropdown
 
-## Shop
-
-- Shopping page (low stock)
-- Add to wishlist
-- Buy priority
-
 ## Home & following
 
 - Avatar & name (use Clerk pictureUrl)
@@ -34,6 +20,12 @@
 - Favorite specs
 - Recent specs
 - Following
+
+## Shop
+
+- Shopping page (low stock)
+- Add to wishlist
+- Buy priority
 
 ## QoL
 

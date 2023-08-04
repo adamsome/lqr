@@ -1,3 +1,4 @@
+import { Suspense } from 'react'
 import invariant from 'tiny-invariant'
 
 import { Spec } from '@/app/specs/[id]/edit/spec'
@@ -15,5 +16,9 @@ export default async function Page({ params }: Props) {
   const { id } = params
   const spec = await getSpec(id)
   invariant(spec, `No spec found with id '${id}'`)
-  return <Spec spec={spec} />
+  return (
+    <Suspense>
+      <Spec spec={spec} />
+    </Suspense>
+  )
 }

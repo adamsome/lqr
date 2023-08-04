@@ -1,5 +1,6 @@
 import { UserButton } from '@clerk/nextjs'
 import Link from 'next/link'
+import { Suspense } from 'react'
 
 import { GithubIcon } from '@/components/github-icon'
 import { Nav } from '@/components/nav'
@@ -7,7 +8,6 @@ import { ModeToggle } from '@/components/theme-toggle'
 import { buttonVariants } from '@/components/ui/button'
 import { Container } from '@/components/ui/container'
 import { cn } from '@/lib/utils'
-import { Suspense } from 'react'
 
 export function Header() {
   return (
@@ -27,14 +27,16 @@ export function Header() {
                     size: 'sm',
                     variant: 'ghost',
                   }),
-                  'w-9 px-0'
+                  'w-9 px-0',
                 )}
               >
                 <GithubIcon className="h-5 w-5" />
                 <span className="sr-only">GitHub</span>
               </div>
             </Link>
-            <ModeToggle />
+            <Suspense>
+              <ModeToggle />
+            </Suspense>
             <div className="ms-2">
               <Suspense>
                 <UserButton afterSignOutUrl="/" />

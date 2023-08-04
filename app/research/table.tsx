@@ -1,5 +1,7 @@
 'use client'
 
+import { Suspense } from 'react'
+
 import { createColumns } from '@/app/research/columns'
 import { Toolbar } from '@/app/research/toolbar'
 import { useIngredientData } from '@/components/data-provider'
@@ -24,11 +26,13 @@ export function Table() {
       columns={createColumns(dict)}
       data={items}
       render={(table, columns) => (
-        <div className="flex flex-col gap-4">
-          <Toolbar table={table} />
-          <DataTable table={table} columns={columns} />
-          <DataTablePagination table={table} />
-        </div>
+        <Suspense>
+          <div className="flex flex-col gap-4">
+            <Toolbar table={table} />
+            <DataTable table={table} columns={columns} />
+            <DataTablePagination table={table} />
+          </div>
+        </Suspense>
       )}
     />
   )
