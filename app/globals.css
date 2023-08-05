@@ -34,9 +34,13 @@
     --ring: 240 5% 64.9%;
 
     --radius: 0.5rem;
+
+    color-scheme: light;
+    /* note: must keep in sync with `theme-color` in `theme-effect.ts` */
+    @apply bg-[#ffffff];
   }
 
-  .dark {
+  :root.dark {
     --background: 240 10% 3.9%;
     --foreground: 0 0% 98%;
 
@@ -65,6 +69,14 @@
     --destructive-foreground: 0 85.7% 97.3%;
 
     --ring: 240 3.7% 15.9%;
+
+    color-scheme: dark;
+    /* note: must keep in sync with `theme-color` in `theme-effect.ts` */
+    @apply bg-[#09090b];
+  }
+
+  :root.pause-transitions * {
+    transition-duration: 0ms !important;
   }
 }
 

@@ -30,7 +30,7 @@ export const buttonVariants = cva(
       variant: 'default',
       size: 'default',
     },
-  }
+  },
 )
 
 export type Props = React.ButtonHTMLAttributes<HTMLButtonElement> &
@@ -48,6 +48,6 @@ export const Button = forwardRef<HTMLButtonElement, Props>(
         {...props}
       />
     )
-  }
+  },
 )
 Button.displayName = 'Button'

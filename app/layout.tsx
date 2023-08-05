@@ -6,9 +6,8 @@ import { Inter } from 'next/font/google'
 import { AuthProvider } from '@/components/auth-provider'
 import { Header } from '@/components/header'
 import { TailwindIndicator } from '@/components/tailwind-indicator'
-import { ThemeProvider } from '@/components/theme-provider'
+import { themeEffect } from '@/components/theme-effect'
 import { TooltipProvider } from '@/components/ui/tooltip'
-import { cn } from '@/lib/utils'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -22,10 +21,7 @@ export const metadata: Metadata = {
     },
   ],
   creator: 'adamsome',
-  themeColor: [
-    { media: '(prefers-color-scheme: light)', color: 'white' },
-    { media: '(prefers-color-scheme: dark)', color: 'black' },
-  ],
+  themeColor: 'transparent',
   icons: {
     icon: '/favicon.ico',
     shortcut: '/icon.png',
@@ -41,22 +37,26 @@ type Props = {
 export default function Layout({ children }: Props) {
   return (
     <AuthProvider>
-      <html lang="en">
-        <body
-          className={cn(
-            'min-h-screen bg-background font-sans antialiased',
-            inter.className
-          )}
-        >
-          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-            <TooltipProvider>
-              <div className="relative flex min-h-screen flex-col">
-                <Header />
-                <div className="flex-1">{children}</div>
-              </div>
-            </TooltipProvider>
-            <TailwindIndicator />
-          </ThemeProvider>
+      <html
+        lang="en"
+        className={`${inter.className} antialiased font-sans`}
+        suppressHydrationWarning={true}
+      >
+        <head>
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `(${themeEffect.toString()})();`,
+            }}
+          />
+        </head>
+        <body className="min-h-screen">
+          <TooltipProvider>
+            <div className="relative flex min-h-screen flex-col">
+              <Header />
+              <div className="flex-1">{children}</div>
+            </div>
+          </TooltipProvider>
+          <TailwindIndicator />
         </body>
       </html>
     </AuthProvider>

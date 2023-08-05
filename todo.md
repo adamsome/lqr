@@ -29,6 +29,7 @@
 
 ## QoL
 
+- Improve specs perf. (use fetch w/ cache tags?)
 - Spec modified at ([Intl.RelativeTimeFormat](https://stackoverflow.com/questions/61911591/react-intl-with-relativetime-formatting))
 - Category/Glass/Mix type icons
 - Add source & source link

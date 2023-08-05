@@ -4,7 +4,7 @@ import { Suspense } from 'react'
 
 import { GithubIcon } from '@/components/github-icon'
 import { Nav } from '@/components/nav'
-import { ModeToggle } from '@/components/theme-toggle'
+import { ThemeToggle } from '@/components/theme-toggle'
 import { buttonVariants } from '@/components/ui/button'
 import { Container } from '@/components/ui/container'
 import { cn } from '@/lib/utils'
@@ -34,9 +34,7 @@ export function Header() {
                 <span className="sr-only">GitHub</span>
               </div>
             </Link>
-            <Suspense>
-              <ModeToggle />
-            </Suspense>
+            <ThemeToggle />
             <div className="ms-2">
               <Suspense>
                 <UserButton afterSignOutUrl="/" />
