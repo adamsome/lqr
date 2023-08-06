@@ -23,10 +23,7 @@ export function Header() {
             >
               <div
                 className={cn(
-                  buttonVariants({
-                    size: 'sm',
-                    variant: 'ghost',
-                  }),
+                  buttonVariants({ size: 'sm', variant: 'ghost' }),
                   'w-9 px-0',
                 )}
               >

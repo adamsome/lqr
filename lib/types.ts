@@ -38,7 +38,7 @@ export interface User {
   id: string
   username: string
   displayName?: string
-  ingredients: Record<string, Partial<Ingredient>>
+  ingredients?: Record<string, Partial<Ingredient>>
   admin?: boolean
 }
 

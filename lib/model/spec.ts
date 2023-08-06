@@ -1,15 +1,16 @@
 import { auth } from '@clerk/nextjs'
 import { OptionalUnlessRequiredId } from 'mongodb'
-import { uniq } from 'ramda'
 import invariant from 'tiny-invariant'
 
 import { connectToDatabase } from '@/lib/mongodb'
-import { Follow, Spec } from '@/lib/types'
-import { rejectNil } from '@/lib/utils'
+import { Follow, Spec, User } from '@/lib/types'
 
 import 'server-only'
 
-export async function getSpecs(): Promise<Spec[]> {
+export async function getSpecs(): Promise<{
+  specs: Spec[]
+  userDict: Record<string, User>
+}> {
   const { userId: id } = auth()
   const { db } = await connectToDatabase()
 
@@ -25,10 +26,21 @@ export async function getSpecs(): Promise<Spec[]> {
     userIDs = []
   }
 
-  return await db
+  const specs = await db
     .collection<OptionalUnlessRequiredId<Spec>>('spec')
     .find({ userID: { $in: userIDs } }, { projection: { _id: false } })
     .toArray()
+
+  const userDict = userIDs.reduce<Record<string, User>>((acc, id) => {
+    const userSpec = specs.find((s) => s.userID === id)
+    if (userSpec) {
+      const { username, userDisplayName } = userSpec
+      acc[username] = { id, username, displayName: userDisplayName }
+    }
+    return acc
+  }, {})
+
+  return { specs, userDict }
 }
 
 export async function getSpec(id: string): Promise<Spec> {

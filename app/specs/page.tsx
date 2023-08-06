@@ -1,21 +1,28 @@
-import { CATEGORY_KEY, INGREDIENT_KEY, SEARCH_KEY } from '@/app/specs/consts'
+import {
+  CATEGORY_KEY,
+  INGREDIENT_KEY,
+  SEARCH_KEY,
+  USER_KEY,
+} from '@/app/specs/consts'
 import { Count } from '@/app/specs/count'
-import { Filters } from '@/app/specs/filters'
+import { Filters, UserState } from '@/app/specs/filters'
 import { Grid } from '@/app/specs/grid'
 import { Toolbar } from '@/app/specs/toolbar'
 import { H1 } from '@/components/ui/h1'
 import { getAllSpecsData } from '@/lib/model/spec-data'
+import { sortBy } from 'ramda'
 
 type Props = {
   searchParams: { [key: string]: string | string[] | undefined }
 }
 
 export default async function Page({ searchParams }: Props) {
-  const [allSpecs, data] = await getAllSpecsData()
+  const { specs: allSpecs, userDict, data } = await getAllSpecsData()
   const getValues = getSearchParamValues(searchParams)
 
   const search = getValues(SEARCH_KEY)[0] ?? ''
   const categories = getValues(CATEGORY_KEY)
+  const users = getValues(USER_KEY)
   const ingredients = getValues(INGREDIENT_KEY)
 
   let specs = allSpecs
@@ -29,13 +36,29 @@ export default async function Page({ searchParams }: Props) {
   if (categories.length) {
     specs = specs.filter((s) => categories.includes(s.category))
   }
+  if (users.length) {
+    specs = specs.filter((u) => users.includes(u.username))
+  }
   if (ingredients.length) {
     specs = specs.filter((s) =>
       ingredients.every((id) =>
-        s.ingredients.some((it) => it.bottleID === id || it.id === id)
-      )
+        s.ingredients.some((it) => it.bottleID === id || it.id === id),
+      ),
     )
   }
+
+  const checkedUserDict = users.reduce<Record<string, UserState>>(
+    (acc, username) => {
+      acc[username] = { ...userDict[username], checked: true }
+      return acc
+    },
+    { ...userDict },
+  )
+  const userStates = sortBy(
+    (u) => u.username,
+    Object.keys(checkedUserDict).map((username) => checkedUserDict[username]),
+  )
+  console.log('u', userStates)
 
   return (
     <section className="relative my-8 flex flex-col gap-4">
@@ -49,6 +72,7 @@ export default async function Page({ searchParams }: Props) {
             <Filters
               data={data}
               categories={categories}
+              users={userStates}
               ingredients={ingredients}
             />
           </div>

@@ -2,7 +2,7 @@
 
 import { PlusIcon } from '@radix-ui/react-icons'
 
-import { CATEGORY_KEY, INGREDIENT_KEY } from '@/app/specs/consts'
+import { CATEGORY_KEY, INGREDIENT_KEY, USER_KEY } from '@/app/specs/consts'
 import { FilterSection } from '@/app/specs/filter-section'
 import { IngredientFilter } from '@/app/specs/ingredient-filter'
 import { SpecIngredientCommandDialogButton } from '@/components/spec-ingredient-command/command-dialog-button'
@@ -11,17 +11,22 @@ import { CheckboxLabel } from '@/components/ui/checkbox-label'
 import { useRouterSearchParams } from '@/hooks/use-router-search-params'
 import { getIngredientName as makeGetIngredientName } from '@/lib/ingredient/get-ingredient-name'
 import { getSpecCategoryItems } from '@/lib/spec-category'
-import { IngredientData } from '@/lib/types'
+import { IngredientData, User } from '@/lib/types'
 
 const SPEC_CATEGORY_ITEMS = getSpecCategoryItems()
+
+export type UserState = User & {
+  checked?: boolean
+}
 
 type Props = {
   data: IngredientData
   categories: string[]
+  users: UserState[]
   ingredients: string[]
 }
 
-export function Filters({ data, categories, ingredients }: Props) {
+export function Filters({ data, categories, users, ingredients }: Props) {
   const { searchParams, append, clear } = useRouterSearchParams()
 
   const { dict } = data
@@ -40,6 +45,24 @@ export function Filters({ data, categories, ingredients }: Props) {
             }
           >
             {label}
+          </CheckboxLabel>
+        ))}
+      </FilterSection>
+
+      <FilterSection name="Users">
+        {users.map(({ username, displayName, checked }) => (
+          <CheckboxLabel
+            key={username}
+            id={username}
+            checked={checked ?? false}
+            onCheckedChange={(value) => {
+              console.log('ck', value, checked)
+              return value
+                ? append(USER_KEY, username)
+                : clear(USER_KEY, username)
+            }}
+          >
+            {displayName ?? username}
           </CheckboxLabel>
         ))}
       </FilterSection>
