@@ -9,7 +9,7 @@ type Props = {
 }
 
 export function StockCell({ ingredientID, stock = -1 }: Props) {
-  const [mutating, mutate] = useMutate('/api/stock', stock)
+  const { mutating, mutate } = useMutate('/api/stock', { watchData: stock })
 
   async function handleClick(stockToSet: number) {
     await mutate({

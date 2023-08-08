@@ -34,7 +34,7 @@ type Props = {
 export function Category({ className, category, muteItems }: Props) {
   const { name, stocked, topItems, root, rowSpan = 1 } = category
 
-  const [mutating, mutate] = useMutate('/api/stock')
+  const { mutating, mutate } = useMutate('/api/stock')
   const getIngredientName = useGetIngredientName()
 
   function onSelect({ item, id, path }: SelectOptions) {

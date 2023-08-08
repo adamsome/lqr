@@ -14,7 +14,7 @@ type Props = {
 }
 
 export function ActionCell({ ingredientID }: Props) {
-  const [, mutate] = useMutate('/api/stock')
+  const { mutate } = useMutate('/api/stock')
 
   async function handleClick() {
     await mutate({

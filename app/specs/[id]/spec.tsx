@@ -10,6 +10,7 @@ import { getMixTypeLabel } from '@/lib/mix-type'
 import { toSpecEdit } from '@/lib/routes'
 import { getSpecCategoryLabel } from '@/lib/spec-category'
 import { IngredientData, Spec } from '@/lib/types'
+import { useUser } from '@/hooks/use-user'
 
 type Props = {
   spec: Spec
@@ -30,6 +31,7 @@ export function Spec({ spec, data }: Props) {
     glass,
     notes,
   } = spec
+  const { id: userID, admin } = useUser()
   return (
     <div className="flex flex-col gap-6 sm:flex-row">
       <div className="flex flex-1 flex-col gap-y-6">
@@ -61,11 +63,13 @@ export function Spec({ spec, data }: Props) {
         </div>
         {notes && <div className="text-muted-foreground">{notes}</div>}
       </div>
-      <div>
-        <Button asChild variant="outline">
-          <Link href={toSpecEdit(id)}>Edit</Link>
-        </Button>
-      </div>
+      {(admin || userID === spec.userID) && (
+        <div>
+          <Button asChild variant="outline">
+            <Link href={toSpecEdit(id)}>Edit</Link>
+          </Button>
+        </div>
+      )}
     </div>
   )
 }

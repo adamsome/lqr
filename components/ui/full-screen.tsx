@@ -16,7 +16,8 @@ export function FullScreen({ children, className, onlySm }: Props) {
     <div
       className={cn(
         className,
-        !skip && 'fixed inset-0 z-50 h-screen w-screen bg-background'
+        !skip &&
+          'fixed inset-0 z-50 h-screen w-screen bg-background overflow-hidden',
       )}
     >
       <Container skip={skip}>{children}</Container>

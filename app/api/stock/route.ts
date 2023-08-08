@@ -8,7 +8,12 @@ import { User } from '@/lib/types'
 
 export async function PUT(req: NextRequest) {
   const { userId: id } = auth()
-  invariant(id, `User ID requried to get user data`)
+  if (!id) {
+    return NextResponse.json(
+      { data: `Must be signed in to get user data.` },
+      { status: 401 },
+    )
+  }
 
   const { ingredientID, stock } = await req.json()
   const { db } = await connectToDatabase()
@@ -16,7 +21,7 @@ export async function PUT(req: NextRequest) {
     .collection<OptionalUnlessRequiredId<User>>('user')
     .updateOne(
       { id },
-      { $set: { [`ingredients.${ingredientID}.stock`]: stock } }
+      { $set: { [`ingredients.${ingredientID}.stock`]: stock } },
     )
 
   return NextResponse.json(true)

@@ -4,6 +4,8 @@
 - Bar Add any ingredient
 - Specs sort
 - Specs filter rum subcategories
+- Prepend `/u/` user segment in front of all routes
+- Add specs loading page
 - [SPECS] Add from Trello
 
 ## Redesign

@@ -7,6 +7,7 @@ import { AuthProvider } from '@/components/auth-provider'
 import { Header } from '@/components/header'
 import { TailwindIndicator } from '@/components/tailwind-indicator'
 import { themeEffect } from '@/components/theme-effect'
+import { Toaster } from '@/components/ui/toaster'
 import { TooltipProvider } from '@/components/ui/tooltip'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -55,6 +56,7 @@ export default function Layout({ children }: Props) {
               <Header />
               <div className="flex-1">{children}</div>
             </div>
+            <Toaster />
           </TooltipProvider>
           <TailwindIndicator />
         </body>

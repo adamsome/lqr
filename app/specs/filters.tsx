@@ -55,12 +55,9 @@ export function Filters({ data, categories, users, ingredients }: Props) {
             key={username}
             id={username}
             checked={checked ?? false}
-            onCheckedChange={(value) => {
-              console.log('ck', value, checked)
-              return value
-                ? append(USER_KEY, username)
-                : clear(USER_KEY, username)
-            }}
+            onCheckedChange={(value) =>
+              value ? append(USER_KEY, username) : clear(USER_KEY, username)
+            }
           >
             {displayName ?? username}
           </CheckboxLabel>

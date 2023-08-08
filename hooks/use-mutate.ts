@@ -2,35 +2,67 @@ import { useRouter } from 'next/navigation'
 import { useCallback, useEffect, useState } from 'react'
 import { usePrevious } from 'react-use'
 
-export function useMutate(url: string, data?: unknown) {
-  const [fetching, setFetching] = useState(false)
-  const prev = usePrevious(data)
+import { useToast } from '@/components/ui/use-toast'
+
+export type UseMutateOptions = {
+  watchData?: unknown
+}
+
+export function useMutate<T = unknown>(
+  url: string,
+  { watchData }: UseMutateOptions = {},
+) {
+  const [mutating, setMutating] = useState(false)
+  const [error, setError] = useState('')
+  const prev = usePrevious(watchData)
   const router = useRouter()
+  const { toast } = useToast()
 
   useEffect(() => {
-    if (data !== undefined && data !== prev) {
-      setFetching(false)
+    if (watchData !== undefined && watchData !== prev) {
+      setMutating(false)
     }
-  }, [data, prev])
+  }, [watchData, prev])
 
   const refresh = useCallback(() => {
     router.refresh()
-    setFetching(data !== undefined ? true : false)
-  }, [data, router])
+    setMutating(watchData !== undefined ? true : false)
+  }, [watchData, router])
 
-  const doFetch = useCallback(
-    async (init?: RequestInit | undefined) => {
-      setFetching(true)
-      try {
-        await fetch(url, init)
-      } catch (err: any) {
-        console.error(`Error updating '${url}'`, err?.data ?? err)
-        setFetching(false)
-      }
-      refresh()
+  const handleError = useCallback(
+    (err: any) => {
+      let msg = (err?.data ?? err) as string
+      if (typeof msg !== 'string') msg = `Unknown error updating '${url}'`
+      console.error(msg, err?.data ?? err)
+      toast({ title: msg, variant: 'destructive' })
+      setError(msg)
+      setMutating(false)
+      return { error: msg }
     },
-    [url, refresh]
+    [url, toast],
   )
 
-  return [fetching, doFetch] as const
+  const mutate = useCallback(
+    async (
+      init?: RequestInit | undefined,
+    ): Promise<{ data?: T; error?: string }> => {
+      setMutating(true)
+      setError('')
+      let res
+      try {
+        res = await fetch(url, init)
+        const data = (await res.json()) as T
+        if (res.ok && res.status === 200) {
+          refresh()
+          return { data }
+        }
+        return handleError(data)
+      } catch (err: any) {
+        return handleError(err)
+      }
+    },
+    [url, handleError, refresh],
+  )
+
+  return { mutating, error, mutate }
 }

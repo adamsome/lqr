@@ -1,11 +1,18 @@
 import { auth } from '@clerk/nextjs'
-import { OptionalUnlessRequiredId } from 'mongodb'
+import {
+  Filter,
+  FindOptions,
+  OptionalId,
+  OptionalUnlessRequiredId,
+} from 'mongodb'
 import invariant from 'tiny-invariant'
 
 import { connectToDatabase } from '@/lib/mongodb'
 import { Follow, Spec, User } from '@/lib/types'
 
 import 'server-only'
+
+const NO_ID: FindOptions = { projection: { _id: false } }
 
 export async function getSpecs(): Promise<{
   specs: Spec[]
@@ -28,7 +35,7 @@ export async function getSpecs(): Promise<{
 
   const specs = await db
     .collection<OptionalUnlessRequiredId<Spec>>('spec')
-    .find({ userID: { $in: userIDs } }, { projection: { _id: false } })
+    .find({ userID: { $in: userIDs } }, NO_ID)
     .toArray()
 
   const userDict = userIDs.reduce<Record<string, User>>((acc, id) => {
@@ -43,19 +50,35 @@ export async function getSpecs(): Promise<{
   return { specs, userDict }
 }
 
-export async function getSpec(id: string): Promise<Spec> {
+export async function getSpec(
+  filter: Filter<OptionalId<Spec>>,
+): Promise<Spec | undefined> {
   const { db } = await connectToDatabase()
   const spec: Spec[] = await db
     .collection<OptionalUnlessRequiredId<Spec>>('spec')
-    .find({ id }, { projection: { _id: false } })
+    .find(filter, NO_ID)
     .toArray()
-  invariant(spec?.length === 1, `Found multiple specs with id '${id}<`)
+  invariant((spec?.length ?? 0) <= 1, `Got multiple specs`)
   return spec[0]
 }
 
 export async function updateSpec(spec: Spec) {
   const { db } = await connectToDatabase()
-  await db
+  return await db
     .collection<OptionalUnlessRequiredId<Spec>>('spec')
     .updateOne({ id: spec.id }, { $set: spec })
+}
+
+export async function addSpec(spec: Spec) {
+  const { db } = await connectToDatabase()
+  return await db
+    .collection<OptionalUnlessRequiredId<Spec>>('spec')
+    .insertOne(spec)
+}
+
+export async function deleteSpec(filter: Filter<OptionalId<Spec>>) {
+  const { db } = await connectToDatabase()
+  return await db
+    .collection<OptionalUnlessRequiredId<Spec>>('spec')
+    .deleteOne(filter)
 }

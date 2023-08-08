@@ -1,12 +1,10 @@
 'use client'
 
 import { zodResolver } from '@hookform/resolvers/zod'
-import { useRouter } from 'next/navigation'
-import { useFieldArray, useForm } from 'react-hook-form'
+import { useForm } from 'react-hook-form'
 import * as z from 'zod'
 
-import { Ingredient } from '@/app/specs/[id]/edit/ingredient'
-import { SpecIngredientCommandDialogButton } from '@/components/spec-ingredient-command/command-dialog-button'
+import { IngredientsForm } from '@/app/specs/[id]/edit/ingredients-form'
 import { Button, Props as ButtonProps } from '@/components/ui/button'
 import {
   Form,
@@ -18,7 +16,6 @@ import {
 } from '@/components/ui/form'
 import { FullScreen } from '@/components/ui/full-screen'
 import { Input } from '@/components/ui/input'
-import { Label } from '@/components/ui/label'
 import {
   Select,
   SelectContent,
@@ -27,68 +24,55 @@ import {
   SelectValue,
 } from '@/components/ui/select'
 import { Textarea } from '@/components/ui/textarea'
-import { useMutate } from '@/hooks/use-mutate'
 import { getGlassTypeItems } from '@/lib/glass-type'
 import { getMixTypeItems } from '@/lib/mix-type'
-import { toSpec } from '@/lib/routes'
 import { specSchema } from '@/lib/schema/spec'
 import { getSpecCategoryItems } from '@/lib/spec-category'
-import { Spec, SpecIngredient } from '@/lib/types'
+import { Spec } from '@/lib/types'
 import { cn } from '@/lib/utils'
+import { useEffect } from 'react'
 
 type Schema = z.infer<typeof specSchema>
 
 type Props = {
-  spec: Spec
+  spec?: Partial<Spec>
+  showDelete?: boolean
+  mutating?: boolean
+  onSubmit(values: Schema): void
+  onClose(): void
+  onDelete?: () => void
 }
 
 const CATEGORY_ITEMS = getSpecCategoryItems()
 const MIX_ITEMS = getMixTypeItems()
 const GLASS_ITEMS = getGlassTypeItems()
 
-export function Spec({ spec }: Props) {
-  const { id, name, year, category, mix, glass, ingredients, notes } = spec
-
-  const router = useRouter()
-  const [mutating, mutate] = useMutate(`/api/specs/${id}`)
-
+export function SpecForm({
+  spec,
+  showDelete,
+  mutating,
+  onSubmit,
+  onClose,
+  onDelete,
+}: Props) {
   const form = useForm<Schema>({
     resolver: zodResolver(specSchema),
-    defaultValues: {
-      name,
-      year,
-      category,
-      mix,
-      glass,
-      ingredients,
-      notes,
+    defaultValues: spec ?? {
+      ingredients: [],
+      name: '',
+      notes: '',
     },
   })
-  const { fields, append, remove, update, move } = useFieldArray({
-    control: form.control,
-    name: 'ingredients',
-    keyName: 'uuid',
-  })
 
-  function handleClose() {
-    router.push(toSpec(id))
-  }
-
-  async function handleSubmit(values: Schema) {
-    const updatedAt = new Date().toISOString()
-    const change: Spec = { ...spec, ...(values as Spec), updatedAt }
-    await mutate({
-      method: 'PUT',
-      body: JSON.stringify({ spec: change }),
-    })
-    handleClose()
-  }
+  useEffect(() => {
+    form.setFocus('name')
+  }, [form])
 
   return (
     <FullScreen onlySm>
       <Form {...form}>
         <form
-          onSubmit={form.handleSubmit(handleSubmit)}
+          onSubmit={form.handleSubmit(onSubmit)}
           className="flex flex-col gap-6 py-4 md:py-6"
         >
           <div
@@ -96,14 +80,14 @@ export function Spec({ spec }: Props) {
               'grid gap-6',
               "[grid-template-areas:'actions'_'title']",
               "md:[grid-template-areas:'title_actions']",
-              'md:grid-cols-[1fr,auto]'
+              'md:grid-cols-[1fr,auto]',
             )}
           >
             <div className="flex justify-between gap-4 [grid-area:actions]">
               <ResponsiveButton
                 type="button"
                 variant="secondary"
-                onClick={handleClose}
+                onClick={onClose}
               >
                 Cancel
               </ResponsiveButton>
@@ -134,18 +118,27 @@ export function Spec({ spec }: Props) {
               "[grid-template-areas:'meta'_'list'_'notes']",
               "md:[grid-template-areas:'list_meta'_'list_notes']",
               'md:grid-cols-[1fr,1fr]',
-              'md:grid-rows-[min-content,1fr]'
+              'md:grid-rows-[min-content,1fr]',
             )}
           >
             <div className="flex flex-col gap-3 [grid-area:meta]">
               <FormField
                 control={form.control}
                 name="year"
-                render={({ field }) => (
+                render={({ field, fieldState }) => (
                   <FormItem className="flex flex-col gap-1">
                     <FormLabel>Year</FormLabel>
                     <FormControl>
-                      <Input placeholder="Year..." {...field} />
+                      <Input
+                        type="number"
+                        placeholder="Year..."
+                        {...field}
+                        value={field.value || ''}
+                        onChange={(e) => {
+                          const val = e.target.value
+                          return field.onChange(val ? +val : undefined)
+                        }}
+                      />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -233,7 +226,7 @@ export function Spec({ spec }: Props) {
                 )}
               />
             </div>
-            <div className="flex flex-col gap-3 [grid-area:notes]">
+            <div className="flex flex-col gap-6 [grid-area:notes]">
               <FormField
                 control={form.control}
                 name="notes"
@@ -241,42 +234,32 @@ export function Spec({ spec }: Props) {
                   <FormItem className="flex flex-col gap-1">
                     <FormLabel>Instructions</FormLabel>
                     <FormControl>
-                      <Textarea placeholder="Instructions..." {...field} />
+                      <Textarea
+                        placeholder="Instructions..."
+                        {...field}
+                        onChange={(e) =>
+                          field.onChange(e.target.value || undefined)
+                        }
+                      />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
                 )}
               />
+              {showDelete && (
+                <Button
+                  variant="destructive"
+                  disabled={mutating}
+                  onClick={onDelete}
+                >
+                  Delete
+                </Button>
+              )}
             </div>
-            <div className="flex flex-col gap-4 [grid-area:list]">
-              <Label>Ingredients</Label>
-              <div className="flex flex-col gap-3">
-                {fields.map((ingredient, i) => (
-                  <Ingredient
-                    key={`${i}_${ingredient.name ?? ingredient.id}`}
-                    ingredient={ingredient as SpecIngredient}
-                    index={i}
-                    total={fields.length}
-                    onUpdate={(it) => update(i, it)}
-                    onRemove={() => remove(i)}
-                    onMove={(dir) => move(i, i + dir)}
-                  />
-                ))}
-              </div>
-              <SpecIngredientCommandDialogButton
-                className="self-start"
-                variant="secondary"
-                openOnKey={(e) => (e.metaKey || e.ctrlKey) && e.key === 'j'}
-                onSelect={append}
-              >
-                <p className="flex gap-2 text-sm text-muted-foreground">
-                  Add Ingredient
-                  <kbd className="pointer-events-none inline-flex h-5 select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium text-muted-foreground opacity-100">
-                    <span className="text-xs">⌘</span>J
-                  </kbd>
-                </p>
-              </SpecIngredientCommandDialogButton>
-            </div>
+            <IngredientsForm
+              className="[grid-area:list]"
+              control={form.control}
+            />
           </div>
         </form>
       </Form>

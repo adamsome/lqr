@@ -6,10 +6,13 @@ import { getSpec, getSpecs } from '@/lib/model/spec'
 import { IngredientData, Spec, User } from '@/lib/types'
 
 import 'server-only'
+import invariant from 'tiny-invariant'
 
 export async function getSpecData(id: string): Promise<[Spec, IngredientData]> {
-  const [data, spec] = await Promise.all([getIngredientData(), getSpec(id)])
+  const [data, spec] = await Promise.all([getIngredientData(), getSpec({ id })])
   const { dict, tree } = data
+
+  invariant(spec, `No spec data for id '${id}'`)
 
   const getStock = getSpecStock(dict, tree)
   return [{ ...spec, stock: getStock(spec) }, data]

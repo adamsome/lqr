@@ -8,8 +8,10 @@ import { Count } from '@/app/specs/count'
 import { Filters, UserState } from '@/app/specs/filters'
 import { Grid } from '@/app/specs/grid'
 import { Toolbar } from '@/app/specs/toolbar'
+import { Button } from '@/components/ui/button'
 import { H1 } from '@/components/ui/h1'
 import { getAllSpecsData } from '@/lib/model/spec-data'
+import Link from 'next/link'
 import { sortBy } from 'ramda'
 
 type Props = {
@@ -58,13 +60,17 @@ export default async function Page({ searchParams }: Props) {
     (u) => u.username,
     Object.keys(checkedUserDict).map((username) => checkedUserDict[username]),
   )
-  console.log('u', userStates)
 
   return (
     <section className="relative my-8 flex flex-col gap-4">
-      <H1 className="flex items-baseline gap-3">
-        Specs <Count count={specs.length} total={allSpecs.length} />
-      </H1>
+      <div className="flex items-center gap-4">
+        <H1 className="flex-1 flex items-baseline gap-3">
+          Specs <Count count={specs.length} total={allSpecs.length} />
+        </H1>
+        <Link href="/specs/add">
+          <Button>Add Spec</Button>
+        </Link>
+      </div>
       <div className="flex flex-col gap-6">
         <Toolbar search={search} />
         <div className="flex gap-6">

@@ -11,6 +11,6 @@ export const specSchema = z.object({
   category: z.enum(SPEC_CATEGORIES).optional(),
   mix: z.enum(MIX_TYPES).optional(),
   glass: z.enum(GLASS_TYPES).optional(),
-  ingredients: z.array(specIngredientSchema),
-  notes: z.string().min(2).max(500).optional(),
+  ingredients: z.array(specIngredientSchema).min(1),
+  notes: z.string().max(500).optional(),
 })

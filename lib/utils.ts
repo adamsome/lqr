@@ -7,7 +7,7 @@ export function cn(...inputs: ClassValue[]) {
 
 export const getDictValue = (
   value: string,
-  dict: Record<string, { name: string }>
+  dict: Record<string, { name: string }>,
 ) => (value === '__na' ? '' : dict[value].name)
 
 export const getBoolValue = (value: string) => (value === '__na' ? '' : value)
@@ -39,4 +39,16 @@ export function rejectNil<T>(arr: (T | undefined | null)[]): T[] {
 
 export function rejectFalsy<T>(arr: (T | undefined | null)[]): T[] {
   return arr.filter((it) => it) as T[]
+}
+
+export function slugify(
+  str: string,
+  { replaceSpaces = '-' }: { replaceSpaces?: string } = {},
+): string {
+  return str
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^\w ]+/g, '')
+    .replace(/ +/g, replaceSpaces)
 }

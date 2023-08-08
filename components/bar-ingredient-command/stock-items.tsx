@@ -16,7 +16,9 @@ type Props = {
 
 export function StockItems({ ingredient, onComplete }: Props) {
   const stock = getStockState(ingredient.stock)
-  const [mutating, mutate] = useMutate('/api/stock', ingredient.stock)
+  const { mutating, mutate } = useMutate('/api/stock', {
+    watchData: ingredient.stock,
+  })
 
   async function handleClick(stock: StockState) {
     await mutate({
