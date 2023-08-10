@@ -155,10 +155,11 @@ const rawRumOptions: Option<Partial<Option<SpecIngredient>>[]>[] = [
 ]
 
 type Props = {
+  stocked?: Set<string>
   onSelect(ingredient: SpecIngredient): void
 }
 
-export function RumItems({ onSelect }: Props) {
+export function RumItems({ stocked, onSelect }: Props) {
   const getName = useGetIngredientName()
   const rumOptions = useMemo(() => {
     return rawRumOptions.map((group) => {
@@ -169,6 +170,12 @@ export function RumItems({ onSelect }: Props) {
       return { ...group, value }
     })
   }, [getName])
+
+  function isStocked(it: SpecIngredient): boolean {
+    return (
+      !stocked || stocked.has(it.bottleID ?? '') || stocked.has(it.id ?? '')
+    )
+  }
 
   return (
     <>
@@ -185,13 +192,14 @@ export function RumItems({ onSelect }: Props) {
               opt ? (
                 <CommandItem
                   key={opt.label}
-                  onSelect={() => onSelect(opt.value)}
+                  disabled={isStocked(opt.value)}
+                  onSelect={() => !isStocked(opt.value) && onSelect(opt.value)}
                 >
                   {opt.label}
                 </CommandItem>
               ) : (
                 <CommandSeparator key={`separator_${i}`} className="my-1" />
-              )
+              ),
             )}
           </CommandGroup>
         </Fragment>

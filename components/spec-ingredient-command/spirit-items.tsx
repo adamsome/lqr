@@ -9,10 +9,11 @@ import { SpecIngredient } from '@/lib/types'
 
 type Props = {
   hasSearch?: boolean
+  stocked?: Set<string>
   onSelect(ingredient: SpecIngredient): void
 }
 
-export function SpiritItems({ hasSearch, onSelect }: Props) {
+export function SpiritItems({ hasSearch, stocked, onSelect }: Props) {
   const { dict } = useIngredientData()
   const categoryRoot = useFilterIngredientTree('spirit', 'beerWine')
   const getIngredientPathName = useGetIngredientPathName()
@@ -20,6 +21,7 @@ export function SpiritItems({ hasSearch, onSelect }: Props) {
   return (
     <HierarchicalCommandList
       root={categoryRoot}
+      disabledIDs={stocked}
       hasSearch={hasSearch}
       groupTrunks
       muteItems

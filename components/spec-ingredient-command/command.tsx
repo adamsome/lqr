@@ -20,6 +20,8 @@ import { cn } from '@/lib/utils'
 
 type Props = {
   state: State
+  stocked?: Set<string>
+  hideCustom?: boolean
   dispatch: Dispatch<Action>
   onSubmitAmount(value: Amount): void
   onSubmitIngredient(ingredient: SpecIngredient): void
@@ -39,7 +41,7 @@ export function IngredientCommand(props: Props) {
       <CommandList
         className={cn(
           '[--padding:theme(spacing.12)]',
-          'max-h-[calc(100vh-var(--padding)-theme(spacing.24)-3px)]'
+          'max-h-[calc(100vh-var(--padding)-theme(spacing.24)-3px)]',
         )}
       >
         <CommandEmpty>No results found.</CommandEmpty>
@@ -49,7 +51,14 @@ export function IngredientCommand(props: Props) {
   )
 }
 
-function Items({ state, dispatch, onSubmitAmount, onSubmitIngredient }: Props) {
+function Items({
+  state,
+  stocked,
+  hideCustom,
+  dispatch,
+  onSubmitAmount,
+  onSubmitIngredient,
+}: Props) {
   const { search, kind, ingredient, special } = state
 
   const onSelectIngredient = (ingredient: SpecIngredient) => {
@@ -72,9 +81,11 @@ function Items({ state, dispatch, onSubmitAmount, onSubmitIngredient }: Props) {
             {label}
           </CommandItem>
         ))}
-        <CommandItem onSelect={() => dispatch({ type: 'openCustom' })}>
-          Custom
-        </CommandItem>
+        {!hideCustom && (
+          <CommandItem onSelect={() => dispatch({ type: 'openCustom' })}>
+            Custom
+          </CommandItem>
+        )}
       </CommandGroup>
     )
   }
@@ -89,11 +100,15 @@ function Items({ state, dispatch, onSubmitAmount, onSubmitIngredient }: Props) {
   }
   if (special === 'allSpirits') {
     return (
-      <SpiritItems hasSearch={Boolean(search)} onSelect={onSelectIngredient} />
+      <SpiritItems
+        hasSearch={Boolean(search)}
+        stocked={stocked}
+        onSelect={onSelectIngredient}
+      />
     )
   }
   if (special === 'rum') {
-    return <RumItems onSelect={onSelectIngredient} />
+    return <RumItems stocked={stocked} onSelect={onSelectIngredient} />
   }
   return (
     <>
@@ -107,7 +122,11 @@ function Items({ state, dispatch, onSubmitAmount, onSubmitIngredient }: Props) {
           <CommandSeparator className="mb-1" />
         </>
       )}
-      <IngredientItems kind={kind} onSelect={onSelectIngredient} />
+      <IngredientItems
+        kind={kind}
+        stocked={stocked}
+        onSelect={onSelectIngredient}
+      />
     </>
   )
 }

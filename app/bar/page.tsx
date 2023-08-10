@@ -1,8 +1,10 @@
 import { uniq } from 'ramda'
 
+import { AddCommand } from '@/app/bar/add-command'
 import { BarCategory, Category } from '@/app/bar/category'
 import { IngredientDataProvider } from '@/components/data-provider'
 import { Container } from '@/components/ui/container'
+import { H1 } from '@/components/ui/h1'
 import { H2 } from '@/components/ui/h2'
 import { HierarchicalFilter } from '@/lib/hierarchical-filter'
 import {
@@ -122,13 +124,6 @@ const spiritSections: Section[] = [
       'st_elizabeth_allspice_dram',
     ],
   },
-  // other brandies
-  // other vermouth
-  // fortified wine
-  // liqueurs
-
-  // beer
-  // wine
 ]
 
 const ingredientSections: Section[] = [
@@ -141,7 +136,7 @@ const ingredientSections: Section[] = [
 
 function createTree(
   items: IngredientItem[],
-  excl?: Set<string>
+  excl?: Set<string>,
 ): HierarchicalFilter {
   const root: HierarchicalFilter = {
     id: 'all',
@@ -230,7 +225,10 @@ export default async function Page() {
   const { dict } = data
 
   const stocked = new Set<string>(
-    Object.keys(dict).filter((id) => (dict[id].stock ?? -1) >= 0)
+    Object.keys(dict).filter((id) => (dict[id].stock ?? -1) >= 0),
+  )
+  const allStocked = new Set<string>(
+    Object.keys(dict).filter((id) => (dict[id].stock ?? -1) >= 0),
   )
 
   const toCategory = createCategoryParser(data)
@@ -250,12 +248,14 @@ export default async function Page() {
       <Container className="relative py-8">
         <section className="flex flex-col gap-8">
           <div className="flex flex-col gap-4">
-            <H2>Spirits</H2>
+            <div className="flex items-center gap-4">
+              <H1 className="flex-1">Bar</H1>
+              <AddCommand stocked={allStocked} />
+            </div>
             <div
               className={cn(
                 'grid gap-x-4 gap-y-4 lg:gap-x-6 lg:gap-y-8',
                 'grid-cols-[repeat(auto-fill,minmax(theme(spacing.64),1fr))]',
-                'grid-rows-['
               )}
             >
               {spiritCategories.map((c, i) => (
@@ -264,12 +264,11 @@ export default async function Page() {
             </div>
           </div>
           <div className="flex flex-col gap-4">
-            <H2>Ingredients</H2>
+            <H2>Non-alcoholic</H2>
             <div
               className={cn(
                 'grid gap-x-4 gap-y-4 lg:gap-x-6 lg:gap-y-8',
                 'grid-cols-[repeat(auto-fill,minmax(theme(spacing.64),1fr))]',
-                'grid-rows-['
               )}
             >
               {ingredientCategories.map((c, i) => (

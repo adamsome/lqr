@@ -20,6 +20,7 @@ type Props<T extends HasIDAndName> = {
   topItems?: T[]
   root: HierarchicalFilter
   facets?: Map<any, number>
+  disabledIDs?: Set<string>
   hasSearch?: boolean
   showCheckbox?: boolean
   showBottles?: boolean
@@ -121,6 +122,7 @@ function Item<T extends HasIDAndName>(props: ItemProps<T>) {
 function TopItem<T extends HasIDAndName>({
   item,
   facets,
+  disabledIDs,
   showCheckbox,
   renderName,
   onSelect,
@@ -130,7 +132,11 @@ function TopItem<T extends HasIDAndName>({
   if (facets !== undefined && !count) return null
 
   return (
-    <CommandItem value={name} onSelect={() => onSelect({ item })}>
+    <CommandItem
+      value={name}
+      disabled={disabledIDs?.has(id)}
+      onSelect={() => onSelect({ item })}
+    >
       {showCheckbox && <Checkbox className={cn('mr-2')} />}
       <span>{renderName({ item })}</span>
       {count && (
@@ -146,6 +152,7 @@ function ItemContent<T extends HasIDAndName>({
   path: prevPath = [],
   root,
   facets,
+  disabledIDs,
   hasSearch,
   showCheckbox,
   groupTrunks,
@@ -168,6 +175,7 @@ function ItemContent<T extends HasIDAndName>({
     <CommandItem
       className={cn({ 'mt-2 !py-1': muteItems })}
       value={getIngredientPathName(path)}
+      disabled={disabledIDs?.has(id)}
       onSelect={() => onSelect({ path, checked })}
     >
       {showCheckbox && (
@@ -206,6 +214,7 @@ type BottleProps<T extends HasIDAndName> = Omit<ItemProps<T>, 'root'> & {
 function Bottle<T extends HasIDAndName>({
   path,
   bottleID,
+  disabledIDs,
   hasSearch,
   showCheckbox,
   groupTrunks,
@@ -220,6 +229,7 @@ function Bottle<T extends HasIDAndName>({
   return (
     <CommandItem
       value={`${name} ${getIngredientPathName(path)}`}
+      disabled={disabledIDs?.has(bottleID)}
       onSelect={() => onSelect({ path, id: bottleID })}
     >
       <span

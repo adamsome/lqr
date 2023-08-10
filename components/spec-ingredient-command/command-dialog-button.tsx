@@ -14,6 +14,8 @@ import { Amount, SpecIngredient } from '@/lib/types'
 type Props = Omit<ButtonProps, 'onSelect'> & {
   ingredient?: SpecIngredient
   submit?: 'ingredient' | 'amount'
+  stocked?: Set<string>
+  hideCustom?: boolean
   openOnKey?: (e: globalThis.KeyboardEvent) => boolean
   onSelect(ingredient: SpecIngredient): void
 }
@@ -22,6 +24,8 @@ export function SpecIngredientCommandDialogButton({
   children,
   ingredient,
   submit = 'amount',
+  stocked,
+  hideCustom,
   onClick,
   openOnKey,
   onSelect,
@@ -97,6 +101,8 @@ export function SpecIngredientCommandDialogButton({
       >
         <IngredientCommand
           state={state}
+          stocked={stocked}
+          hideCustom={hideCustom}
           dispatch={dispatch}
           onSubmitAmount={handleSubmitAmount}
           onSubmitIngredient={handleSubmitIngredient}
