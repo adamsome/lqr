@@ -2,11 +2,15 @@ import {
   CATEGORY_KEY,
   INGREDIENT_KEY,
   SEARCH_KEY,
+  SORT_DESC_KEY,
+  SORT_KEY,
+  SpecSort,
   USER_KEY,
 } from '@/app/specs/consts'
 import { Count } from '@/app/specs/count'
 import { Filters, UserState } from '@/app/specs/filters'
 import { Grid } from '@/app/specs/grid'
+import { sortSpecs } from '@/app/specs/sort-specs'
 import { Toolbar } from '@/app/specs/toolbar'
 import { Button } from '@/components/ui/button'
 import { H1 } from '@/components/ui/h1'
@@ -26,6 +30,8 @@ export default async function Page({ searchParams }: Props) {
   const categories = getValues(CATEGORY_KEY)
   const users = getValues(USER_KEY)
   const ingredients = getValues(INGREDIENT_KEY)
+  const sort = searchParams[SORT_KEY] as SpecSort | undefined
+  const desc = Boolean(searchParams[SORT_DESC_KEY])
 
   let specs = allSpecs
   if (search) {
@@ -48,6 +54,8 @@ export default async function Page({ searchParams }: Props) {
       ),
     )
   }
+
+  specs = sortSpecs(specs, sort, desc)
 
   const checkedUserDict = users.reduce<Record<string, UserState>>(
     (acc, username) => {
@@ -72,7 +80,7 @@ export default async function Page({ searchParams }: Props) {
         </Link>
       </div>
       <div className="flex flex-col gap-6">
-        <Toolbar search={search} />
+        <Toolbar search={search} sort={sort} desc={desc} />
         <div className="flex gap-6">
           <div className="w-60">
             <Filters

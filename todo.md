@@ -1,10 +1,9 @@
 # TODO
 
-- Specs sort
 - Specs filter rum subcategories
 - Prepend `/u/` user segment in front of all routes
-- Add specs loading page
 - [SPECS] Add from Trello
+- BUG spec edit not showing initially
 
 ## Redesign
 
@@ -12,12 +11,13 @@
 - Specs compact cards
 - Spec bigger text on desktop
 - Move user button under dropdown
+- Add specs loading page
 
 ## Home & following
 
 - Avatar & name (use Clerk pictureUrl)
 - My Bar: Count of bottles, Low stocked
-- Favorite specs
+- Favorite specs (In Stock sort incl. favorite)
 - Recent specs
 - Following
 

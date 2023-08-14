@@ -25,13 +25,10 @@ export async function getAllSpecsData(): Promise<{
 }> {
   const [data, specsData] = await Promise.all([getIngredientData(), getSpecs()])
   const { dict, tree } = data
-  const { specs, userDict } = specsData
+  const { specs: rawSpecs, userDict } = specsData
 
   const getStock = getSpecStock(dict, tree)
-  const sortedSpecs = sortBy(
-    (s) => -(s.stock?.count ?? 0) / (s.stock?.total ?? 0),
-    specs.map((spec) => ({ ...spec, stock: getStock(spec) })),
-  )
+  const specs = rawSpecs.map((spec) => ({ ...spec, stock: getStock(spec) }))
 
-  return { specs: sortedSpecs, userDict, data }
+  return { specs, userDict, data }
 }
