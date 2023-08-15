@@ -172,9 +172,8 @@ export function RumItems({ stocked, onSelect }: Props) {
   }, [getName])
 
   function isStocked(it: SpecIngredient): boolean {
-    return (
-      !stocked || stocked.has(it.bottleID ?? '') || stocked.has(it.id ?? '')
-    )
+    if (!stocked) return false
+    return stocked.has(it.bottleID ?? '') || stocked.has(it.id ?? '')
   }
 
   return (

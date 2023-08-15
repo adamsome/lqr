@@ -10,11 +10,17 @@ import {
 import { Count } from '@/app/specs/count'
 import { Filters, UserState } from '@/app/specs/filters'
 import { Grid } from '@/app/specs/grid'
+import { parseIngredientParam } from '@/app/specs/ingredient-param'
 import { sortSpecs } from '@/app/specs/sort-specs'
 import { Toolbar } from '@/app/specs/toolbar'
 import { Button } from '@/components/ui/button'
 import { H1 } from '@/components/ui/h1'
+import {
+  filterIngredientItems,
+  testIngredientMethods,
+} from '@/lib/ingredient/filter-ingredient-items'
 import { getAllSpecsData } from '@/lib/model/spec-data'
+import { rejectNil } from '@/lib/utils'
 import Link from 'next/link'
 import { sortBy } from 'ramda'
 
@@ -29,7 +35,9 @@ export default async function Page({ searchParams }: Props) {
   const search = getValues(SEARCH_KEY)[0] ?? ''
   const categories = getValues(CATEGORY_KEY)
   const users = getValues(USER_KEY)
-  const ingredients = getValues(INGREDIENT_KEY)
+  const ingredients = rejectNil(
+    getValues(INGREDIENT_KEY).map(parseIngredientParam),
+  )
   const sort = searchParams[SORT_KEY] as SpecSort | undefined
   const desc = Boolean(searchParams[SORT_DESC_KEY])
 
@@ -48,9 +56,26 @@ export default async function Page({ searchParams }: Props) {
     specs = specs.filter((u) => users.includes(u.username))
   }
   if (ingredients.length) {
+    const filterItems = filterIngredientItems(data)
+    const idsPerIngredient = ingredients.map((it) =>
+      data.dict[it.id ?? '']?.ordinal
+        ? // If specific bottle ingredient (i.e. has ordinal), only match it
+          [it.id]
+        : // Match against all descendent ingredients and bottles
+          filterItems({ include: [it] }).map(({ id }) => id),
+    )
     specs = specs.filter((s) =>
-      ingredients.every((id) =>
-        s.ingredients.some((it) => it.bottleID === id || it.id === id),
+      // Spec must match every ingredient filter item
+      idsPerIngredient.every((ids, i) =>
+        // Within filter item + descendents, one must match a spec ingredient
+        ids.some((id) =>
+          s.ingredients.some(
+            (it) =>
+              it.bottleID === id ||
+              // If filter item is not a specific bottle, test modifiers too
+              (it.id === id && testIngredientMethods(ingredients[i], it)),
+          ),
+        ),
       ),
     )
   }

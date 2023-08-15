@@ -5,13 +5,14 @@ import { PlusIcon } from '@radix-ui/react-icons'
 import { CATEGORY_KEY, INGREDIENT_KEY, USER_KEY } from '@/app/specs/consts'
 import { FilterSection } from '@/app/specs/filter-section'
 import { IngredientFilter } from '@/app/specs/ingredient-filter'
+import { buildIngredientParam } from '@/app/specs/ingredient-param'
 import { SpecIngredientCommandDialogButton } from '@/components/spec-ingredient-command/command-dialog-button'
 import { Button } from '@/components/ui/button'
 import { CheckboxLabel } from '@/components/ui/checkbox-label'
 import { useRouterSearchParams } from '@/hooks/use-router-search-params'
 import { getIngredientName as makeGetIngredientName } from '@/lib/ingredient/get-ingredient-name'
 import { getSpecCategoryItems } from '@/lib/spec-category'
-import { IngredientData, User } from '@/lib/types'
+import { IngredientData, SpecIngredient, User } from '@/lib/types'
 
 const SPEC_CATEGORY_ITEMS = getSpecCategoryItems()
 
@@ -23,7 +24,7 @@ type Props = {
   data: IngredientData
   categories: string[]
   users: UserState[]
-  ingredients: string[]
+  ingredients: SpecIngredient[]
 }
 
 export function Filters({ data, categories, users, ingredients }: Props) {
@@ -31,6 +32,10 @@ export function Filters({ data, categories, users, ingredients }: Props) {
 
   const { dict } = data
   const getIngredientName = makeGetIngredientName(dict)
+
+  function handleSelectIngredient(ingredient: SpecIngredient): void {
+    append(INGREDIENT_KEY, buildIngredientParam(ingredient))
+  }
 
   return (
     <div className="flex flex-col gap-6">
@@ -66,14 +71,15 @@ export function Filters({ data, categories, users, ingredients }: Props) {
 
       <FilterSection name="Ingredients">
         <div className="flex flex-col gap-1 empty:hidden">
-          {ingredients.map((id) => {
+          {ingredients.map((it) => {
+            const { id = '' } = it
             const { ordinal, name } = dict[id] ?? {}
-            const label = ordinal ? name : getIngredientName({ id })
+            const label = ordinal ? name : getIngredientName(it)
             return (
               <IngredientFilter
-                key={id}
+                key={id || label}
                 name={label}
-                onClear={() => clear(INGREDIENT_KEY, id)}
+                onClear={() => clear(INGREDIENT_KEY, buildIngredientParam(it))}
               />
             )
           })}
@@ -83,7 +89,8 @@ export function Filters({ data, categories, users, ingredients }: Props) {
           variant="secondary"
           size="sm"
           submit="ingredient"
-          onSelect={(it) => append(INGREDIENT_KEY, it.bottleID ?? it.id)}
+          hideCustom
+          onSelect={handleSelectIngredient}
         >
           <PlusIcon />
           Add Filter

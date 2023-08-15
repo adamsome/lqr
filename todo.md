@@ -1,6 +1,6 @@
 # TODO
 
-- Specs filter rum subcategories
+- Specs load more / show top X
 - Prepend `/u/` user segment in front of all routes
 - [SPECS] Add from Trello
 - BUG spec edit not showing initially
