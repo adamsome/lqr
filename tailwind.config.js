@@ -69,11 +69,28 @@ module.exports = {
           from: { 'stroke-dashoffset': 'var(--arc-length)' },
           to: { 'stroke-dashoffset': '0' },
         },
+        'fade-in': {
+          from: { opacity: 0 },
+          to: { opacity: 1 },
+        },
+        loader: {
+          '0%': {
+            width: '1px',
+          },
+          '50%': {
+            width: '2.5px',
+          },
+          '100%': {
+            width: '1px',
+          },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
         arc: 'arc 1s forwards ease-in',
+        'fade-in': 'fade-in 0.3s ease-out',
+        loader: 'loader 1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite',
       },
     },
   },

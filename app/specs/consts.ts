@@ -4,6 +4,9 @@ export const USER_KEY = 'u'
 export const INGREDIENT_KEY = 'it'
 export const SORT_KEY = 'sort'
 export const SORT_DESC_KEY = 'desc'
+export const LIMIT_KEY = 'limit'
+
+export const DEFAULT_LIMIT = 50
 
 export const SORT_VALUES = [
   'stock',

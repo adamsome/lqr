@@ -13,7 +13,7 @@ export function CheckboxLabel({ id, children, ...props }: Props) {
       <Checkbox id={id} {...props} />
       <label
         htmlFor={id}
-        className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+        className="text-sm font-medium leading-none cursor-pointer peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
       >
         {children}
       </label>

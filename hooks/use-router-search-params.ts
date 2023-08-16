@@ -1,3 +1,4 @@
+import { NavigateOptions } from 'next/dist/shared/lib/app-router-context'
 import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 import { useCallback } from 'react'
 
@@ -13,7 +14,7 @@ export function useRouterSearchParams() {
 
       return params.toString()
     },
-    [searchParams]
+    [searchParams],
   )
 
   const appendQueryString = useCallback(
@@ -23,7 +24,7 @@ export function useRouterSearchParams() {
 
       return params.toString()
     },
-    [searchParams]
+    [searchParams],
   )
 
   const clearQueryString = useCallback(
@@ -39,32 +40,34 @@ export function useRouterSearchParams() {
       }
       return params.toString()
     },
-    [searchParams]
+    [searchParams],
   )
 
   const pushQueryString = useCallback(
-    (searchParam: string) => router.push(`${pathname}?${searchParam}`),
-    [router, pathname]
+    (searchParam: string, options?: NavigateOptions) =>
+      router.push(`${pathname}?${searchParam}`, options),
+    [router, pathname],
   )
 
   const clear = useCallback(
-    (name?: string, value?: string) =>
-      pushQueryString(clearQueryString(name, value)),
-    [pushQueryString, clearQueryString]
+    (name?: string, value?: string, options?: NavigateOptions) =>
+      pushQueryString(clearQueryString(name, value), options),
+    [pushQueryString, clearQueryString],
   )
 
   const set = useCallback(
-    (name: string, value: string) => {
-      pushQueryString(setQueryString(name, value))
+    (name: string, value: string, options?: NavigateOptions) => {
+      pushQueryString(setQueryString(name, value), options)
     },
-    [pushQueryString, setQueryString]
+    [pushQueryString, setQueryString],
   )
 
   const append = useCallback(
-    (name?: string, value?: string) => {
-      if (name && value) pushQueryString(appendQueryString(name, value))
+    (name?: string, value?: string, options?: NavigateOptions) => {
+      if (name && value)
+        pushQueryString(appendQueryString(name, value), options)
     },
-    [pushQueryString, appendQueryString]
+    [pushQueryString, appendQueryString],
   )
 
   return { set, append, clear, searchParams }
