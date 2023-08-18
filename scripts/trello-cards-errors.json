@@ -1,0 +1,166 @@
+[
+  {
+    "id": "banana_boulevardier",
+    "name": "Banana Boulevardier",
+    "year": null,
+    "lines": [
+      "1 whisky, rye",
+      "1 vermouth, sweet",
+      "1/2 Campari",
+      "1/2 banana liqueur, Giffard Banane du Bresil",
+      "Twist, orange"
+    ],
+    "basis": "boulevardier",
+    "modifiedAt": "2023-01-08T03:38:11.282Z",
+    "error": "exists",
+    "list": "Spirited – Whiskey"
+  },
+  {
+    "id": "rob_roy",
+    "name": "Rob Roy",
+    "year": 2022,
+    "lines": [
+      "2 whisky, scotch, blended (Famous Grouse)",
+      "1 vermouth, sweet (Cocchi di Torino)",
+      "2 dashes bitters, Angostura",
+      "Cherry"
+    ],
+    "reference": "Suderman, Peter. (2022). *Cocktails With Suderman.*",
+    "basis": "rob_roy",
+    "modifiedAt": "2023-01-08T03:53:40.726Z",
+    "error": "exists",
+    "list": "Spirited – Manhattans"
+  },
+  {
+    "id": "original",
+    "name": "Original",
+    "lines": [
+      "1 gin",
+      "1 bitter apertivo",
+      "1 bitter wine aperitif"
+    ],
+    "basis": "negroni",
+    "modifiedAt": "2022-09-28T23:14:45.424Z",
+    "error": "exists",
+    "list": "Spirited – Gin"
+  },
+  {
+    "id": "original",
+    "name": "Original",
+    "lines": [
+      "1 1/2 calvados (or brandy, apple (Laird's Bonded))",
+      "3/4 green chartreuse",
+      "3/4 Bénédictine",
+      "2 dash bitters, Angostura",
+      "Cherry"
+    ],
+    "basis": "widows_kiss",
+    "modifiedAt": "2018-03-01T03:35:03.234Z",
+    "error": "exists",
+    "list": "Spirited – Others"
+  },
+  {
+    "id": "pdt",
+    "name": "PDT",
+    "year": 1909,
+    "lines": [
+      "Sub 1/2 simple syrup & 1 barspoon Bonne Maman Raspberry Preserves",
+      "No vermouth"
+    ],
+    "reference": "Lowe, Paul. (1909). *Drinks.*",
+    "basis": "clover_club",
+    "modifiedAt": "2017-06-11T03:28:49.628Z",
+    "error": "exists",
+    "list": "Sours – Gin"
+  },
+  {
+    "id": "diffords_guide",
+    "name": "Difford's Guide",
+    "lines": [
+      "1/2 lemon juice",
+      "5/12 orgeat",
+      "dash bitter, aromatic, Angostura"
+    ],
+    "basis": "army_navy",
+    "modifiedAt": "2020-10-23T17:52:31.539Z",
+    "error": "exists",
+    "list": "Sours – Gin"
+  },
+  {
+    "id": "original",
+    "name": "Original",
+    "lines": [
+      "1 lemon juice",
+      "1 orgeat",
+      "",
+      "_Original not recommended._"
+    ],
+    "basis": "army_navy",
+    "modifiedAt": "2020-10-23T17:52:31.539Z",
+    "error": "exists",
+    "list": "Sours – Gin"
+  },
+  {
+    "id": "simple",
+    "name": "Simple",
+    "lines": [
+      "2 oz whiskey",
+      "1 oz lemon juice",
+      "1 tsp sugar",
+      "1 egg white (optional)"
+    ],
+    "modifiedAt": "2017-06-11T23:10:58.407Z",
+    "error": "exists",
+    "list": "Sours – Others"
+  },
+  {
+    "id": "original",
+    "name": "Original",
+    "year": 1937,
+    "lines": [
+      "1 1/2 cognac",
+      "3/4 absinthe",
+      "1 tsp maraschino",
+      "1/2 tsp lemon juice",
+      "2 tsp egg white",
+      "Top w/ club soda"
+    ],
+    "reference": "Baker, Jr, Charles H. (1937). *The Gentleman's Companion: An Exotic Drinking Book.*",
+    "basis": "astor_hotel_special",
+    "modifiedAt": "2023-01-01T02:27:58.053Z",
+    "error": "exists",
+    "list": "Sours – Others"
+  },
+  {
+    "id": "suderman",
+    "name": "Suderman",
+    "lines": [
+      "5 drops saline",
+      "1/4 agave syrup",
+      "3/4 Cointreau",
+      "3/4 lime juice",
+      "2 tequila, blanco, Espolon"
+    ],
+    "basis": "margarita",
+    "modifiedAt": "2022-05-30T00:25:55.791Z",
+    "error": "exists",
+    "list": "Tropicals & Tiki"
+  },
+  {
+    "id": "pdt",
+    "name": "PDT",
+    "year": 1941,
+    "lines": [
+      "1 rum, amber (Banks 5 Island)",
+      "1/2 lime juice",
+      "1/2 honey syrup",
+      "Top w/ 1 champagne (Moët Imperial)",
+      "Lime wheel"
+    ],
+    "reference": "Whitfield, W. C. (1941). *Here's How.*",
+    "basis": "airmail",
+    "modifiedAt": "2016-02-02T19:54:48.469Z",
+    "error": "exists",
+    "list": "Highballs & Royales"
+  }
+]

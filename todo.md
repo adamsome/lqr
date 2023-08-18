@@ -1,9 +1,6 @@
 # TODO
 
-- Specs load more / show top X
-- Prepend `/u/` user segment in front of all routes
 - [SPECS] Add from Trello
-- BUG spec edit not showing initially
 
 ## Redesign
 
@@ -15,6 +12,7 @@
 
 ## Home & following
 
+- Prepend `/u/` user segment in front of all routes
 - Avatar & name (use Clerk pictureUrl)
 - My Bar: Count of bottles, Low stocked
 - Favorite specs (In Stock sort incl. favorite)
