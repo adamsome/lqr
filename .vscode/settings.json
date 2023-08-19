@@ -1,3 +1,9 @@
 {
-    "typescript.preferences.importModuleSpecifier": "non-relative"
+  "editor.quickSuggestions": {
+    "strings": "on"
+  },
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
+  "typescript.preferences.importModuleSpecifier": "non-relative"
 }
