@@ -20,7 +20,12 @@
     "name": "Toronto",
     "year": 1922,
     "lines": [
-      "Sub bitters w/ fernet (Fernet Branca)"
+      "2 rye (Wild Turkey)",
+      "1 demerara sugar cube",
+      "1/4 fernet (Fernet Branca)",
+      "Muddle sugar w/ fernet",
+      "Build in rocks glass",
+      "Orange twist"
     ],
     "reference": "Vermeire, Robert. (1922). *Cocktails: How to Mix Them.*",
     "basis": "old_fashioned",
@@ -30,9 +35,17 @@
   {
     "id": "oaxaca",
     "name": "Oaxaca",
+    "year": 2007,
     "lines": [
-      "Sub mezcal for whiskey"
+      "1 1/2 tequila, reposado (El Tesoro Reposado)",
+      "1/2 mezcal (Del Maguey San Luis del Rio)",
+      "1 tsp agave syrup",
+      "2 dash bitters, Angostura",
+      "Muddle sugar w/ bitters",
+      "Build in rocks glass",
+      "Orange twist"
     ],
+    "reference": "Ward, Phil. Death + Co, New York (2007).",
     "basis": "old_fashioned",
     "modifiedAt": "2017-06-11T02:03:16.813Z",
     "list": "Spirited – Whiskey"
@@ -88,9 +101,14 @@
   {
     "id": "hearns",
     "name": "Hearn's",
+    "year": 1920,
     "lines": [
-      "Sub irish whiskey"
+      "1 whisky, Irish",
+      "1 absinthe",
+      "1 sweet vermouth",
+      "1 dash Angostura"
     ],
+    "reference": "McGarry, Jack. The Dead Rabbit, New York (2007).",
     "basis": "brain_duster",
     "modifiedAt": "2017-06-11T02:04:10.544Z",
     "list": "Spirited – Whiskey"
@@ -108,7 +126,8 @@
       "Add whiskey and ice",
       "Stir, strain into rocks glass",
       "Absinthe rinse (Vieux Pontarlier)",
-      "Lemon twist (discard)"
+      "Lemon twist",
+      "Express lemon twist & discard"
     ],
     "reference": "Boothby, William. (1908). *World's Drinks and How to Mix Them.*",
     "modifiedAt": "2017-06-11T03:22:56.904Z",
@@ -124,7 +143,8 @@
       "1⁄2 tsp simple syrup",
       "Absinthe rinse",
       "2 dash bitters, lemon",
-      "Lemon twist (discard)"
+      "Lemon twist",
+      "Express lemon twist & discard"
     ],
     "reference": "(2014). [Spice Kitchen & Bar](http://spicekitchenandbar.com/).",
     "basis": "sazerac",
@@ -238,13 +258,15 @@
   {
     "id": "banana_boulevardier",
     "name": "Banana Boulevardier",
+    "year": 2022,
     "lines": [
       "1 1/2 whisky, rye",
       "3/4 vermouth, sweet",
       "3/4 Campari",
-      "1/4 banana liqueur, Giffard Banane du Bresil",
+      "1/4 banana liqueur (Giffard Banane du Bresil)",
       "Twist, orange"
     ],
+    "reference": "Suderman, Peter. (2022). *Cocktails With Suderman.*",
     "basis": "boulevardier",
     "modifiedAt": "2023-01-08T03:38:11.282Z",
     "list": "Spirited – Whiskey"
@@ -257,7 +279,7 @@
       "1 1/2 whisky, rye (Rittenhouse)",
       "3/4 vermouth, sweet (Carpano Antica Formula)",
       "3/4 Cynar",
-      "1 tsp banana liqueur, Giffard Banane du Bresil",
+      "1 tsp banana liqueur (Giffard Banane du Bresil)",
       "4 drops bitters, chocolate (Bittermens Mole)",
       "Twist, orange"
     ],
@@ -282,21 +304,9 @@
     "list": "Spirited – Whiskey"
   },
   {
-    "id": "original",
-    "name": "Original",
-    "year": 1930,
-    "lines": [
-      "Equal parts (3/4)"
-    ],
-    "reference": "Craddock, Harry. (1930). *Savoy Cocktail Book, The.*",
-    "basis": "blood_and_sand",
-    "modifiedAt": "2016-02-04T22:03:12.710Z",
-    "list": "Spirited – Whiskey"
-  },
-  {
     "id": "frisco",
     "name": "Frisco",
-    "year": 1930,
+    "year": 1908,
     "lines": [
       "2 rye (Old Potrero Hotaling's)",
       "1/2 Bénédictine",
@@ -342,7 +352,7 @@
     "lines": [
       "2 rye",
       "1/2 grapefruit juice (not pink)",
-      "1 barspoon raspberry syrup or grenadine",
+      "1 barspoon grenadine",
       "Grapefruit twist"
     ],
     "reference": "Duffy, Patrick Gavin. (1934). *Official Mixer’s Manual, The.*",
@@ -387,7 +397,8 @@
       "1 dash bitters, Peychaud's",
       "Shaken",
       "Rocks glass w/ ice",
-      "Lemon twist or cherry"
+      "Cherry",
+      "Lemon twist"
     ],
     "reference": "Embury, David. (1948). *Fine Art of Mixing Drinks, The.*",
     "modifiedAt": "2020-12-21T02:01:17.793Z",
@@ -416,26 +427,11 @@
     "name": "Diamondback",
     "year": 1951,
     "lines": [
-      "1 1/2 rye",
-      "3/4 brandy, apple",
-      "3/4 yellow chartreuse"
-    ],
-    "modifiedAt": "2016-02-04T03:20:55.391Z",
-    "list": "Spirited – Whiskey"
-  },
-  {
-    "id": "pdt",
-    "name": "PDT",
-    "lines": [
       "2 rye (Rittenhouse)",
       "1/2 brandy, apple (Laird's Bonded)",
-      "1/2 yellow chartreuse",
-      "",
-      "—Saucier, Ted. (1951). *Bottoms Up.* Lord Baltimore Hotel, Baltimore.",
-      "",
-      "*Note: Murray Tenson (Zig Zag Café, Seattle) recommends green chartreuse.*"
+      "1/2 yellow chartreuse"
     ],
-    "basis": "diamondback",
+    "reference": "Saucier, Ted. (1951). *Bottoms Up.* Lord Baltimore Hotel, Baltimore.",
     "modifiedAt": "2016-02-04T03:20:55.391Z",
     "list": "Spirited – Whiskey"
   },
@@ -489,10 +485,9 @@
     "name": "Manhattan",
     "year": 1884,
     "lines": [
-      "2 rye (Wild Turkey)",
-      "1 vermouth, sweet (Martini)",
+      "2 rye",
+      "1 vermouth, sweet",
       "2 dashes bitters, Angostura",
-      "(optional) Dash absinthe or maraschino",
       "3 cherries, brandied"
     ],
     "reference": "Byron, O. H. (1884). *Modern Bartender's Guide.*",
@@ -500,31 +495,43 @@
     "list": "Spirited – Manhattans"
   },
   {
-    "id": "dry",
-    "name": "Dry",
+    "id": "dry_manhattan",
+    "name": "Dry Manhattan",
+    "year": 1884,
     "lines": [
-      "Sub dry vermouth"
+      "2 rye",
+      "1 vermouth, dry (Dolin Dry)",
+      "2 dashes bitters, Angostura",
+      "3 cherries, brandied"
     ],
     "basis": "manhattan",
     "modifiedAt": "2021-10-06T23:59:12.796Z",
     "list": "Spirited – Manhattans"
   },
   {
-    "id": "perfect",
-    "name": "Perfect",
+    "id": "perfect_manhattan",
+    "name": "Perfect Manhattan",
+    "year": 1884,
     "lines": [
-      "Sub 1/2 dry vermouth"
+      "2 rye",
+      "1/2 vermouth, dry (Dolin Dry)",
+      "1/2 vermouth, sweet",
+      "2 dashes bitters, Angostura",
+      "3 cherries, brandied"
     ],
     "basis": "manhattan",
     "modifiedAt": "2021-10-06T23:59:12.796Z",
     "list": "Spirited – Manhattans"
   },
   {
-    "id": "harvard_aka_metropolitan",
-    "name": "Harvard AKA Metropolitan",
+    "id": "harvard",
+    "name": "Harvard",
     "year": 1895,
     "lines": [
-      "Sub brandy"
+      "2 brandy",
+      "1 vermouth, sweet",
+      "2 dashes bitters, Angostura",
+      "3 cherries, brandied"
     ],
     "reference": "Kappeler, George. (1895). *Modern American Drinks.*",
     "basis": "manhattan",
@@ -535,7 +542,11 @@
     "id": "saratoga",
     "name": "Saratoga",
     "lines": [
-      "Sub 1/2 brandy"
+      "1 rye",
+      "1 brandy",
+      "1 vermouth, sweet",
+      "2 dashes bitters, Angostura",
+      "3 cherries, brandied"
     ],
     "basis": "manhattan",
     "modifiedAt": "2021-10-06T23:59:12.796Z",
@@ -544,6 +555,7 @@
   {
     "id": "hecklinger",
     "name": "Hecklinger",
+    "year": 2014,
     "lines": [
       "1 whisky, rye",
       "1 Meletti",
@@ -578,8 +590,9 @@
       "1/2 vermouth, sweet (Carpano Antica)",
       "1/2 vermouth, dry (Dolin)",
       "1 dash bitters, Angostura",
-      "1 dash bitters, orange (1/2 Fee Brothers, 1/2 Regan's)",
-      "Orange twist"
+      "1 dash bitters, orange",
+      "Orange twist",
+      "For orange bitters, use 1/2 Fee Brothers, 1/2 Regan's"
     ],
     "reference": "Pogash, Jonathan. (2007). PDT, New York.",
     "basis": "rob_roy",
@@ -636,21 +649,10 @@
     "lines": [
       "1 whiskey, Irish (Red Breast)",
       "1 green chartreuse",
-      "1 vermouth, sweet"
-    ],
-    "modifiedAt": "2018-03-05T05:34:14.411Z",
-    "list": "Spirited – Manhattans"
-  },
-  {
-    "id": "modern",
-    "name": "Modern",
-    "year": 1916,
-    "lines": [
-      "2 whiskey",
-      "Chartreuse rinse"
+      "1 vermouth, sweet",
+      "Modern version uses 2 oz whiskey and a chartreuse rinse"
     ],
     "reference": "Ensslin, Hugo. (1916). *Recipes for Mixed Drinks.*",
-    "basis": "tipperary",
     "modifiedAt": "2018-03-05T05:34:14.411Z",
     "list": "Spirited – Manhattans"
   },
@@ -693,7 +695,7 @@
       "2 rye",
       "3/4 vermouth, sweet",
       "1/4 absinthe",
-      "3 or 4 dashes Angostura bitters"
+      "4 dashes Angostura bitters"
     ],
     "reference": "Crockett, A. S. (1935). *Old Waldorf-Astoria Bar Book, The.*",
     "modifiedAt": "2017-06-11T02:07:23.223Z",
@@ -709,25 +711,10 @@
       "1 vermouth, sweet (Carpano Antica or Martini)",
       "1 dash bitters, Angostura",
       "1 dash bitters, Peychaud's",
-      "1/4 Bénédictine or rinse",
+      "1/4 Bénédictine",
       "Build in-glass"
     ],
     "reference": "Arthur, Stanley Clisby. (1937). *Famous New Orleans Drinks.* Bergeron, Walter (bartender), Hotel Monteleone, New Orleans.",
-    "modifiedAt": "2018-03-01T02:11:28.090Z",
-    "list": "Spirited – Manhattans"
-  },
-  {
-    "id": "gumbopagescom",
-    "name": "gumbopages.com",
-    "lines": [
-      "1 rye (Bulleit rye)",
-      "1 cognac (Remy Martin VSOP)",
-      "1 vermouth, sweet (Dolin Rouge)",
-      "1 tsp Bénédictine",
-      "2 dash Peychaud’s bitters",
-      "2 dash Angostura bitters"
-    ],
-    "basis": "vieux_carre",
     "modifiedAt": "2018-03-01T02:11:28.090Z",
     "list": "Spirited – Manhattans"
   },
@@ -737,50 +724,13 @@
     "year": 1937,
     "lines": [
       "2 rye (Wild Turkey Rye)",
-      "3/4 Bénédictine",
+      "1/2 Bénédictine",
       "3/4 vermouth, sweet (Dolin)",
       "3 dash absinthe (St. George)",
       "3 dash bitters, Peychaud's",
       "Cherries, brandied"
     ],
-    "modifiedAt": "2023-05-29T03:09:54.401Z",
-    "list": "Spirited – Manhattans"
-  },
-  {
-    "id": "alternate_1",
-    "name": "Alternate 1:",
-    "lines": [
-      "1/4 Bénédictine",
-      "1/2 vermouth, sweet"
-    ],
-    "basis": "de_la_louisiane",
-    "modifiedAt": "2023-05-29T03:09:54.401Z",
-    "list": "Spirited – Manhattans"
-  },
-  {
-    "id": "alternate_2",
-    "name": "Alternate 2:",
-    "lines": [
-      "Sub Bonal for sweet vermouth"
-    ],
-    "basis": "de_la_louisiane",
-    "modifiedAt": "2023-05-29T03:09:54.401Z",
-    "list": "Spirited – Manhattans"
-  },
-  {
-    "id": "diffords_guide",
-    "name": "Difford's Guide",
-    "year": 1937,
-    "lines": [
-      "1 rye",
-      "1 vermouth, sweet",
-      "1/2 Bénédictine",
-      "1/6 absinthe",
-      "2 dash bitters, Peychaud's",
-      "3/4 water, chilled"
-    ],
     "reference": "Arthur, Stanley Clisby. (1937). *Famous New Orleans Drinks.*",
-    "basis": "de_la_louisiane",
     "modifiedAt": "2023-05-29T03:09:54.401Z",
     "list": "Spirited – Manhattans"
   },
@@ -804,15 +754,6 @@
     "name": "Fourth Regiment",
     "year": 1937,
     "lines": [
-      "1 rye",
-      "1 vermouth, sweet",
-      "1 dash bitters, Angostura,",
-      "1 dash bitters, orange,",
-      "1 dash bitters, celery",
-      "Lemon twist",
-      "",
-      "—Baker, Jr, Charles H. (1937). *The Gentleman's Companion: An Exotic Drinking Book.*",
-      "",
       "1 1/2 rye (Rittenhouse 100 or Wild Turkey 101)",
       "1 1/2 vermouth, sweet (Carpano Antica Formula)",
       "1/4 orange curaçao (Boudier)",
@@ -821,7 +762,7 @@
       "2 dash bitters, celery",
       "Orange twist"
     ],
-    "reference": "Adkins, Erik. (n.d.). Slanted Door.",
+    "reference": "Baker, Jr, Charles H. (1937). *The Gentleman's Companion: An Exotic Drinking Book.*",
     "modifiedAt": "2016-02-05T01:40:56.513Z",
     "list": "Spirited – Manhattans"
   },
@@ -872,26 +813,13 @@
     "name": "Greenpoint",
     "year": 2005,
     "lines": [
-      "2 rye (Rittenhouse)",
-      "1 Punt e Mes",
-      "1 barspoon yellow chartreuse",
-      "1 dash bitters, Angostura"
+      "1 3/4 rye (Rittenhouse)",
+      "1/2 Punt e Mes",
+      "1/2 yellow chartreuse",
+      "2 dash bitters, Angostura",
+      "1 dash bitters, orange"
     ],
     "reference": "McIlroy, Michael. (2005). New York.",
-    "modifiedAt": "2017-06-11T02:03:06.870Z",
-    "list": "Spirited – Manhattans"
-  },
-  {
-    "id": "pdt_rolodex",
-    "name": "PDT Rolodex",
-    "lines": [
-      "1 3/4 (50ml) rye",
-      "1/2 (12.5ml) vermouth, sweet (Punt e Mes or Carpano Antica)",
-      "1/2 (12.5ml) Yellow Chartreuse",
-      "2 dash bitters, Angostura (not optional)",
-      "1 dash bitters, orange (not optional)"
-    ],
-    "basis": "greenpoint",
     "modifiedAt": "2017-06-11T02:03:06.870Z",
     "list": "Spirited – Manhattans"
   },
@@ -935,10 +863,9 @@
       "1 tsp Demerara syrup or sugar cube",
       "2 dash bitters, aromatic (Angostura)",
       "1 dash bitters, mole (Bittermens Xocolatl Mole)",
-      "Lemon & orange twist",
-      "",
-      "Miller, Brian. (2008). Death & Co. New York."
+      "Lemon & orange twist"
     ],
+    "reference":"Miller, Brian. (2008). Death & Co. New York.",
     "modifiedAt": "2018-10-03T14:13:41.340Z",
     "list": "Spirited – Manhattans"
   },
@@ -950,10 +877,9 @@
       "2 whisky (Jack Daniels)",
       "3/4 vermouth, dry",
       "1/4 Bénédictine",
-      "Lemon twist",
-      "",
-      "DeGroff, Dale. (2010). *Art of Mixing Perfect Drinks, The.*"
+      "Lemon twist"
     ],
+    "reference": "DeGroff, Dale. (2010). *Art of Mixing Perfect Drinks, The.*",
     "modifiedAt": "2016-02-05T01:43:17.925Z",
     "list": "Spirited – Manhattans"
   },
@@ -994,7 +920,7 @@
     "year": 1800,
     "lines": [
       "2 gin",
-      "1 sugar cube (or 1/2 simple syrup)",
+      "1 sugar cube",
       "1 tsp water",
       "2 dashes Angostura bitters"
     ],
@@ -1002,24 +928,17 @@
     "list": "Spirited – Gin"
   },
   {
-    "id": "fancy",
-    "name": "Fancy",
+    "id": "improved_gin_cocktail",
+    "name": "Improved Gin Cocktail",
+    "year": 1800,
     "lines": [
-      "Add lemon peel"
+      "2 gin",
+      "1 sugar cube",
+      "1 tsp orange liquer",
+      "1 tsp water",
+      "2 dashes Angostura bitters",
+      "Lemon twist"
     ],
-    "basis": "gin_cocktail",
-    "modifiedAt": "2017-06-11T02:09:26.661Z",
-    "list": "Spirited – Gin"
-  },
-  {
-    "id": "improved",
-    "name": "Improved",
-    "lines": [
-      "Add lemon peel",
-      "Prefer Genever",
-      "Add 1 tsp orange liqueur (or maraschino)"
-    ],
-    "basis": "gin_cocktail",
     "modifiedAt": "2017-06-11T02:09:26.661Z",
     "list": "Spirited – Gin"
   },
@@ -1046,19 +965,9 @@
       "1 gin, London dry (Tanqueray)",
       "1 vermouth, sweet (Dolin)",
       "1 green chartreuse",
-      "1 dash bitters, orange (1/2 Fee's, 1/2 Regan's)"
+      "1 dash bitters, orange"
     ],
     "reference": "Lawlor, C. F. (1885). *The Mixicologist.*",
-    "modifiedAt": "2021-05-22T03:03:29.117Z",
-    "list": "Spirited – Gin"
-  },
-  {
-    "id": "aperitif",
-    "name": "Aperitif",
-    "lines": [
-      "3 gin"
-    ],
-    "basis": "bijou",
     "modifiedAt": "2021-05-22T03:03:29.117Z",
     "list": "Spirited – Gin"
   },
@@ -1066,9 +975,10 @@
     "id": "amber_dream",
     "name": "Amber Dream",
     "lines": [
-      "2 gin",
-      "1/2 chartreuse",
-      "Sub bitters, aromatic"
+      "2 gin, London dry (Tanqueray)",
+      "1 vermouth, sweet (Dolin)",
+      "1/2 green chartreuse",
+      "1 dash bitters, aromatic"
     ],
     "basis": "bijou",
     "modifiedAt": "2021-05-22T03:03:29.117Z",
@@ -1094,10 +1004,10 @@
     "name": "Martini",
     "year": 1904,
     "lines": [
-      "2 or 3 gin (Plymouth)",
+      "2 gin (Plymouth)",
       "1 vermouth, dry (Dolin)",
-      "(optional) bitters, orange",
-      "Lemon twist or 3 olives on pick"
+      "1 dash bitters, orange",
+      "Lemon twist"
     ],
     "reference": "Newman, Frank. (1904). _American Bar._",
     "modifiedAt": "2023-04-08T02:39:02.502Z",
@@ -1112,24 +1022,11 @@
       "1 1/2 vermouth, dry",
       "1/4 maraschino (Luxardo)",
       "Absinthe rinse",
-      "Cherry & lemon twist"
+      "Cherry",
+      "lemon twist",
+      "Modern take: use 2 1/4 oz gin, 3/4 oz vermouth, and add 2 dashes orange bitters."
     ],
     "reference": "Johnson, Harry. (1900). _Bartender's Manual._",
-    "basis": "martini",
-    "modifiedAt": "2023-04-08T02:39:02.502Z",
-    "list": "Spirited – Gin"
-  },
-  {
-    "id": "suderman",
-    "name": "Suderman",
-    "lines": [
-      "2 1/4 gin, dry (Ford’s)",
-      "3/4 vermouth, dry (Dolin)",
-      "1/4 cherry liqueur (Maraschino)",
-      "2 dashes bitters, orange (Regan’s)",
-      "Absinthe rinse",
-      "Lemon twist"
-    ],
     "basis": "martini",
     "modifiedAt": "2023-04-08T02:39:02.502Z",
     "list": "Spirited – Gin"
@@ -1139,7 +1036,10 @@
     "name": "Gibson",
     "year": 1908,
     "lines": [
-      "Sub onion for olive"
+      "2 gin (Plymouth)",
+      "1 vermouth, dry (Dolin)",
+      "1 dash bitters, orange",
+      "Garnish with a cocktail onion."
     ],
     "reference": "Boothby, William. (1908). _World's Drinks and How to Mix Them._",
     "basis": "martini",
@@ -1151,8 +1051,8 @@
     "name": "Alaska",
     "year": 1930,
     "lines": [
-      "Sub yellow Chartreuse for vermouth",
-      "No bitters or garnish"
+      "2 gin (Plymouth)",
+      "1 yellow Chartreuse"
     ],
     "reference": "Craddock, Harry. (1930). _Savoy Cocktail Book, The._",
     "basis": "martini",
@@ -1164,9 +1064,11 @@
     "name": "Vesper",
     "year": 1953,
     "lines": [
-      "Sub 2 1/4 gin & 3/4 vodka for gin",
-      "Sub 1/2 bitter wine aperitif (Lillet Blanc or Cocchi Americano) for vermouth",
-      "Twist"
+      "1 1/4 gin (Plymouth)",
+      "3/4 vodka",
+      "1/2 bitter wine aperitif (Lillet Blanc)",
+      "1 dash bitters, orange",
+      "Lemon twist"
     ],
     "reference": "Fleming, Ian. (1953). _Casino Royale._",
     "basis": "martini",
@@ -1174,21 +1076,11 @@
     "list": "Spirited – Gin"
   },
   {
-    "id": "sherry",
-    "name": "Sherry",
+    "id": "sherry_martini",
+    "name": "Sherry Martini",
     "lines": [
       "2 gin",
-      "1 sherry, fino or manzanilla"
-    ],
-    "basis": "martini",
-    "modifiedAt": "2023-04-08T02:39:02.502Z",
-    "list": "Spirited – Gin"
-  },
-  {
-    "id": "burnt",
-    "name": "Burnt",
-    "lines": [
-      "Sub scotch for vermouth"
+      "1 sherry, fino"
     ],
     "basis": "martini",
     "modifiedAt": "2023-04-08T02:39:02.502Z",
@@ -1201,7 +1093,7 @@
     "lines": [
       "2 gin",
       "3/4 vermouth, dry",
-      "1/4 banana liqueur, Giffard Banane du Bresil",
+      "1/4 banana liqueur (Giffard Banane du Bresil)",
       "2 dashes bitters, orange",
       "Twist, orange"
     ],
@@ -1229,7 +1121,11 @@
     "name": "Income Tax",
     "year": 1900,
     "lines": [
-      "Add 2 dashes bitters, Angostura"
+      "2 gin (Beefeater Gin)",
+      "1/2 vermouth, dry (Dolin Dry Vermouth)",
+      "1/2 vermouth, sweet (Carpano Antica Sweet Vermouth)",
+      "3/4 orange juice",
+      "2 dashes bitters, Angostura"
     ],
     "reference": "Anonymous. (n.d.)",
     "basis": "bronx",
@@ -1296,17 +1192,6 @@
     "list": "Spirited – Gin"
   },
   {
-    "id": "oleosaccharum",
-    "name": "Oleo-Saccharum",
-    "lines": [
-      "1 gin, Campari, Dolin",
-      "1/3 oleo-saccharum, tangerine"
-    ],
-    "basis": "lucien_gaudin",
-    "modifiedAt": "2023-04-23T03:52:52.575Z",
-    "list": "Spirited – Gin"
-  },
-  {
     "id": "dorflinger",
     "name": "Dorflinger",
     "year": 1935,
@@ -1327,7 +1212,7 @@
       "1 1/2 gin (Beefeater)",
       "1 1/2 vermouth, dry (Dolin)",
       "1/2 Bénédictine",
-      "1 dash bitters, orange (1/2 Fee's, 1/2 Regan's)",
+      "1 dash bitters, orange",
       "Orange twist"
     ],
     "reference": "Gale, Hyman, Marco, Abe. (1940). *The How & When*",
@@ -1370,9 +1255,10 @@
     "year": 2002,
     "lines": [
       "2 gin",
-      "3/4 bitter aperitivo (e.g. Suze, Salers, Gran Classico)",
-      "1 bitter wine aperitif (e.g. Lillet, Cocchi Americano, Kina)",
-      "Twist, grapefruit"
+      "3/4 bitter aperitivo (Suze)",
+      "1 bitter wine aperitif (Cocchi Americano)",
+      "Twist, grapefruit",
+      "Can use Salers or Gran Classico for the aperitivo and Lillet Blanc for the aperitif."
     ],
     "reference": "Collins, Wayne. (2002). London.",
     "basis": "negroni",
@@ -1383,12 +1269,13 @@
     "id": "charente_white_negroni",
     "name": "Charente White Negroni",
     "lines": [
-      "Sub 1/2 cognac, 1/2 gin",
-      "",
-      "—Lataille, Matthias; Difford, Simon. (2014). Cabinet Room, London.",
-      "",
-      "*Best attempt:* 3/4 of each"
+      "1 gin",
+      "1 cognac",
+      "3/4 bitter aperitivo (Suze)",
+      "1 bitter wine aperitif (Cocchi Americano)",
+      "Twist, grapefruit"
     ],
+    "reference": "Lataille, Matthias; Difford, Simon. (2014). Cabinet Room, London.",
     "basis": "negroni",
     "modifiedAt": "2022-09-28T23:14:45.424Z",
     "list": "Spirited – Gin"
@@ -1398,7 +1285,11 @@
     "name": "Kingston Negroni",
     "year": 2009,
     "lines": [
-      "Sub gin w/ rum, amber (Smith & Cross)"
+      "1 rum, jamaican (Smith & Cross)",
+      "1 bitter aperitivo (Campari)",
+      "1 sweet vermouth (Martini)",
+      "Coupe or rocks glass w/ ice",
+      "Orange twist"
     ],
     "reference": "Simo, Joaquin. (2009). Death & Company, New York.",
     "basis": "negroni",
@@ -1409,10 +1300,13 @@
     "id": "mezcal_negroni",
     "name": "Mezcal Negroni",
     "lines": [
-      "Sub gin w/ mezcal (Del Maguey Vida)",
-      "Sub Campari w/ Cynar",
-      "Add 4 drops 20% saline solution",
-      "orange peel"
+      "1 mezcal (Del Maguey Vida)",
+      "1 Cynar",
+      "1 sweet vermouth (Martini)",
+      "Coupe or rocks glass w/ ice",
+      "Orange twist",
+      "1 dash salt",
+      "Can use 4 drops of saline solution instead of salt."
     ],
     "basis": "negroni",
     "modifiedAt": "2022-09-28T23:14:45.424Z",
@@ -1440,29 +1334,10 @@
     "lines": [
       "1 gin",
       "1 rye",
-      "1 amaro, grassy/herbal (e.g. Cynar, Bonal)",
-      "1 amaro, floral (e.g. Gran Classico, Meletti)",
-      "2 bitters, tiki (allspice/cinnamon)"
-    ],
-    "basis": "negroni",
-    "modifiedAt": "2022-09-28T23:14:45.424Z",
-    "list": "Spirited – Gin"
-  },
-  {
-    "id": "attempt_1",
-    "name": "Attempt 1",
-    "lines": [
-      "1 Warwick, 1 Templeton, 1/2 Cynar, 1/2 Gran Classico, 1/4 Dolin Rouge, 2 dash Bitter Truth Aromatic"
-    ],
-    "basis": "negroni",
-    "modifiedAt": "2022-09-28T23:14:45.424Z",
-    "list": "Spirited – Gin"
-  },
-  {
-    "id": "attempt_2",
-    "name": "Attempt 2",
-    "lines": [
-      "3/4 Warwick, 3/4 Templeton, 1/2 Cynar, 1/2 Gran Classico, 1/2 Dolin Rouge, 1 dash Bitter Truth Aromatic, 1 dash Allspice Bitters"
+      "1 Bonal",
+      "1 Meletti",
+      "2 bitters, tiki",
+      "Can substitute with Cynar and Gran Classico."
     ],
     "basis": "negroni",
     "modifiedAt": "2022-09-28T23:14:45.424Z",
@@ -1498,9 +1373,10 @@
     "name": "Dreamy Dorini Smoky Martini",
     "year": 2002,
     "lines": [
-      "2.5 Gin",
-      "Splash whisky, scotch, Islay (Laphraoig)",
-      "Build in glass with Pernod ice rinse",
+      "2 1/2 Gin",
+      "4 dashes whisky, scotch, Islay (Laphraoig)",
+      "Pernod rinse",
+      "Build in glass",
       "Lemon twist"
     ],
     "reference": "Degroff, Dale. (2002). *Craft of the Cocktail.*",
@@ -1573,8 +1449,9 @@
       "3/4 sweet vermouth (Punt E Mes)",
       "1/4 Cynar",
       "1 tsp maraschino",
-      "1 grapefruit peel, muddled",
-      "Coupe"
+      "1 grapefruit peel",
+      "Coupe",
+      "Muddle the grapefruit peel before stirring."
     ],
     "reference": "Day, Alex. Death + Co, New York (2009).",
     "modifiedAt": "2023-04-28T03:59:08.382Z",
@@ -1683,7 +1560,7 @@
     "name": "David Wondrich",
     "lines": [
       "1 1/2 rum, white",
-      "1 1/2 vermouth, sweet, white (Dolic Blanc)",
+      "1 1/2 vermouth, blanc (Dolic Blanc)",
       "1 barspoon orange liqueur (Cointreau)",
       "1/2 barspoon grenadine",
       "Orange peel"
@@ -1697,8 +1574,8 @@
     "name": "Savoy Tango",
     "year": 1930,
     "lines": [
-      "1 1/2 gin, sloe (Plymouth or Hayman's)",
-      "1 1/2 brandy, apple or calvados (Laird's Bonded)",
+      "1 1/2 gin, sloe (Plymouth)",
+      "1 1/2 brandy, apple (Laird's Bonded)",
       "Shaken"
     ],
     "reference": "Craddock, Harry. (1930). *Savoy Cocktail Book, The.*",
@@ -1739,7 +1616,7 @@
     "year": 2007,
     "lines": [
       "2 brandy, apple (Laird's Bonded)",
-      "1 sweet vermouth (Vya or Carpano Antica Formula)",
+      "1 sweet vermouth (Carpano Antica Formula)",
       "1⁄4 maraschino liqueur (Maraska)",
       "1⁄4 fernet (Fernet Branca)"
     ],
@@ -1798,9 +1675,9 @@
     "name": "Improved Tequila Cocktail",
     "year": 2011,
     "lines": [
-      "2 tequila, blanco, Siete Leguas or Siembra Azul",
-      "1 tsp Maraschino liqueur",
-      "2 dash bitters, mole, Bittermens Xocolatl",
+      "2 tequila, blanco (Siete Leguas)",
+      "1 tsp Maraschino (Luxardo)",
+      "2 dash bitters, mole (Bittermens Xocolatl)",
       "1 dash bitters, aromatic, Angostura",
       "1 tsp agave syrup",
       "twist"
@@ -1815,12 +1692,12 @@
     "year": 2013,
     "lines": [
       "1 1/2 Cynar",
-      "1/2 tequila, blanco, Cabeza",
+      "1/2 tequila, blanco (Cabeza)",
       "1/2 tsp fernet",
-      "dash bitters, mole, Bittermens Xocolatl",
-      "5 leafs mint",
-      "mint garnish",
-      "crushed ice, swizzle"
+      "1 dash bitters, mole (Bittermens Xocolatl)",
+      "5 mint leaves",
+      "Crushed ice, swizzle.",
+      "Garnish with mint."
     ],
     "reference": "Simó, Joaquín. (2013). Pouring Ribbons, NYC",
     "modifiedAt": "2022-05-30T00:29:50.917Z",
@@ -1832,10 +1709,10 @@
     "year": 2015,
     "lines": [
       "1 pisco",
-      "1 calvados (or brandy, apple)",
+      "1 calvados",
       "1 wine, white, Sauvignon blanc",
       "1/2 bitter apertivo (Suze)",
-      "1/8 simple (2/1)",
+      "1/8 simple",
       "Stir into rocks w/ ice",
       "Grapes"
     ],
@@ -1881,52 +1758,20 @@
     "lines": [
       "2 gin",
       "3/4 lemon juice",
-      "2 tsp raspberry syrup or grenadine",
-      "1 egg white",
-      "(optional) 1/2 dry vermouth"
+      "2 tsp grenadine",
+      "1 egg white"
     ],
     "modifiedAt": "2017-06-11T03:28:49.628Z",
     "list": "Sours – Gin"
   },
   {
-    "id": "clover_leaf",
-    "name": "Clover Leaf",
-    "lines": [
-      "Mint sprigs"
-    ],
-    "basis": "clover_club",
-    "modifiedAt": "2017-06-11T03:28:49.628Z",
-    "list": "Sours – Gin"
-  },
-  {
-    "id": "royal",
-    "name": "Royal",
-    "year": null,
-    "lines": [
-      "Sub egg yolk"
-    ],
-    "basis": "clover_club",
-    "modifiedAt": "2017-06-11T03:28:49.628Z",
-    "list": "Sours – Gin"
-  },
-  {
-    "id": "grand_royal",
-    "name": "Grand Royal",
-    "lines": [
-      "Sub whole egg"
-    ],
-    "basis": "clover_club",
-    "modifiedAt": "2017-06-11T03:28:49.628Z",
-    "list": "Sours – Gin"
-  },
-  {
-    "id": "simple",
-    "name": "Simple",
+    "id": "gin_sour",
+    "name": "Gin Sour",
     "lines": [
       "2 gin (Plymouth)",
       "3/4 lemon juice",
       "3/4 simple syrup",
-      "(optional) egg white"
+      "1 egg white"
     ],
     "modifiedAt": "2017-11-26T08:21:16.175Z",
     "list": "Sours – Gin"
@@ -1935,9 +1780,13 @@
     "id": "fitzgerald",
     "name": "Fitzgerald",
     "lines": [
-      "Add bitters"
+      "2 gin",
+      "3/4 lemon juice",
+      "2 tsp grenadine",
+      "1 egg white",
+      "1 dash bitters, aromatic"
     ],
-    "basis": "simple",
+    "basis": "gin_sour",
     "modifiedAt": "2017-11-26T08:21:16.175Z",
     "list": "Sours – Gin"
   },
@@ -1946,10 +1795,14 @@
     "name": "Southside",
     "year": 1916,
     "lines": [
-      "Muddle 4 mint leaves w/ syrup"
+      "2 gin (Plymouth)",
+      "3/4 lemon juice",
+      "3/4 simple syrup",
+      "1 egg white",
+      "4 mint leaves, muddled"
     ],
     "reference": "Ensslin, Hugo. (1916). *Recipes for Mixed Drinks.*",
-    "basis": "simple",
+    "basis": "gin_sour",
     "modifiedAt": "2017-11-26T08:21:16.175Z",
     "list": "Sours – Gin"
   },
@@ -1963,22 +1816,7 @@
       "3/4 lime cordial",
       "Lime wheel"
     ],
-    "basis": "simple",
-    "modifiedAt": "2017-11-26T08:21:16.175Z",
-    "list": "Sours – Gin"
-  },
-  {
-    "id": "lime_cordial",
-    "name": "Lime cordial",
-    "year": 1922,
-    "lines": [
-      "24 simple syrup",
-      "Zest of 12 limes",
-      "Infuse for 10m",
-      "Strain, bottle, & refrigerate"
-    ],
-    "reference": "McElhone, Harry. (1922). *ABC of Mixing Cocktails.*",
-    "basis": "simple",
+    "basis": "gin_sour",
     "modifiedAt": "2017-11-26T08:21:16.175Z",
     "list": "Sours – Gin"
   },
@@ -1987,41 +1825,12 @@
     "name": "Bee's Knees",
     "year": 1937,
     "lines": [
-      "Sub 3/4 honey syrup"
+      "2 gin (Plymouth)",
+      "3/4 lemon juice",
+      "3/4 honey syrup"
     ],
     "reference": "Meier, Frank. (1937). *Artistry of Mixing Drinks.*",
-    "basis": "simple",
-    "modifiedAt": "2017-11-26T08:21:16.175Z",
-    "list": "Sours – Gin"
-  },
-  {
-    "id": "earl_grey_marteani",
-    "name": "Earl Grey MarTEAni",
-    "year": 2004,
-    "lines": [
-      "1 1/2 gin, Earl Grey infused",
-      "1 simple syrup",
-      "3/4 lemon juice",
-      "1 egg white",
-      "Sugar rim (1/2)",
-      "Lemon twist"
-    ],
-    "basis": "simple",
-    "modifiedAt": "2017-11-26T08:21:16.175Z",
-    "list": "Sours – Gin"
-  },
-  {
-    "id": "earl_grey_infused_gin",
-    "name": "Earl Grey infused gin",
-    "year": 2004,
-    "lines": [
-      "1 750 ml gin (Tanqueray)",
-      "4 tbsp Earl Grey tea, loose",
-      "Shake, sit, room temp., 2 hr",
-      "Strain"
-    ],
-    "reference": "Saunders, Audrey. (2004). \"State of the Cocktail, The.\" *New York Magazine.*",
-    "basis": "simple",
+    "basis": "gin_sour",
     "modifiedAt": "2017-11-26T08:21:16.175Z",
     "list": "Sours – Gin"
   },
@@ -2045,7 +1854,11 @@
     "name": "The Casino",
     "year": 1930,
     "lines": [
-      "Sub orange bitters for crème de violette"
+      "2 gin",
+      "1/2 lemon juice",
+      "1/2 marischino",
+      "3 dashes bitters, orange",
+      "Lemon twist"
     ],
     "reference": "Craddock, Harry. (1930). *Savoy Cocktail Book, The.*",
     "basis": "aviation",
@@ -2057,9 +1870,11 @@
     "name": "Water Lily",
     "year": 2007,
     "lines": [
-      "Sub orange liqueur (Cointreau) for maraschino",
-      "All 3/4 oz",
-      "Sub orange twist"
+      "3/4 gin",
+      "3/4 lemon juice",
+      "3/4 orange liqueur (Cointreau)",
+      "3/4 crème de violette",
+      "Orange twist"
     ],
     "reference": "Boccato, Richard. (2007). PDT, New York.",
     "basis": "aviation",
@@ -2080,37 +1895,6 @@
       "Cherry, brandied"
     ],
     "reference": "Meehan, Jim. (2009, Winter). PDT, New York.",
-    "basis": "aviation",
-    "modifiedAt": "2022-08-24T04:46:51.711Z",
-    "list": "Sours – Gin"
-  },
-  {
-    "id": "hugos_second_flight",
-    "name": "Hugo's Second Flight",
-    "lines": [
-      "50ml (1 1/2) London Dry Gin",
-      "20ml (3/4) Maraschino liqueur",
-      "20ml (3/4) Crème de violette",
-      "2-4 dashes The Bitter Truth Lemon Bitters",
-      "10ml (1/3) lemon juice",
-      "Garnish w/ cherry and Crème de violette infused cucumber"
-    ],
-    "basis": "aviation",
-    "modifiedAt": "2022-08-24T04:46:51.711Z",
-    "list": "Sours – Gin"
-  },
-  {
-    "id": "eagles_dream",
-    "name": "Eagle's Dream",
-    "year": 2008,
-    "lines": [
-      "1 1/2 gin, dry",
-      "1/2 creme de violette (The Bitter Truth)",
-      "1/2 lemon juice",
-      "1/2 tsp granulated sugar",
-      "1 egg white"
-    ],
-    "reference": "Hess, Robert. (2008). *The Essential Bartender's Guide: How to Make Truly Great Cocktails*.",
     "basis": "aviation",
     "modifiedAt": "2022-08-24T04:46:51.711Z",
     "list": "Sours – Gin"
@@ -2155,21 +1939,20 @@
       "3/4 oz orange curacao",
       "1/2 lime",
       "1 dash Angostura",
-      "1 dash orange bitters",
-      "",
-      "\u001f—McElhone, Harry. (1927). *Barflies and Cocktails.*"
+      "1 dash orange bitters"
     ],
+    "reference": "McElhone, Harry. (1927). *Barflies and Cocktails.*",
     "modifiedAt": "2023-04-21T18:18:41.030Z",
     "list": "Sours – Gin"
   },
   {
-    "id": "corpse_reviver_n_2",
-    "name": "Corpse Reviver Nº 2",
+    "id": "corpse_reviver_2",
+    "name": "Corpse Reviver # 2",
     "year": 1930,
     "lines": [
       "3/4 gin, dry (Plymouth)",
       "3/4 orange liqueur (Cointreau)",
-      "3/4 bitter wine aperitif (Lillet Blanc or Cocchi Americano)",
+      "3/4 bitter wine aperitif (Cocchi Americano)",
       "3/4 lemon juice",
       "Absinthe rinse"
     ],
@@ -2180,13 +1963,13 @@
   {
     "id": "hoop_la",
     "name": "Hoop La!",
-    "year": 1930,
     "lines": [
-      "Sub gin w/ brandy",
-      "Omit absinthe"
+      "3/4 brandy (Plymouth)",
+      "3/4 orange liqueur (Cointreau)",
+      "3/4 bitter wine aperitif (Cocchi Americano)",
+      "3/4 lemon juice"
     ],
-    "reference": "Craddock, Harry. (1930). *Savoy Cocktail Book, The.*",
-    "basis": "corpse_reviver_n_2",
+    "basis": "corpse_reviver_2",
     "modifiedAt": "2017-06-11T03:31:16.607Z",
     "list": "Sours – Gin"
   },
@@ -2202,7 +1985,7 @@
       "Absinthe rinse",
       "Lemon twist"
     ],
-    "basis": "corpse_reviver_n_2",
+    "basis": "corpse_reviver_2",
     "modifiedAt": "2017-06-11T03:31:16.607Z",
     "list": "Sours – Gin"
   },
@@ -2211,10 +1994,14 @@
     "name": "Creeping Death",
     "year": 2012,
     "lines": [
-      "Sub Cynar for wine aperitif"
+      "3/4 gin, dry (Plymouth)",
+      "3/4 orange liqueur (Cointreau)",
+      "3/4 Cynar",
+      "3/4 lemon juice",
+      "Absinthe rinse"
     ],
     "reference": "*Savoy Stomp.* (2012). Easter, Trevor (bartender).",
-    "basis": "corpse_reviver_n_2",
+    "basis": "corpse_reviver_2",
     "modifiedAt": "2017-06-11T03:31:16.607Z",
     "list": "Sours – Gin"
   },
@@ -2224,22 +2011,11 @@
     "year": 1937,
     "lines": [
       "1 1/2 oz gin (Plymouth)",
-      "3/4 oz bitter wine aperitif (Lillet Blanc or Cocchi Americano)",
-      "3/4 oz creme de cacao, white (Marie Brizard or Tempus Fugit)",
+      "3/4 oz bitter wine aperitif (Cocchi Americano)",
+      "3/4 oz creme de cacao, white (Marie Brizard)",
       "3/4 lemon juice"
     ],
     "reference": "Tarling, W. J. (1937). *Café Royale Cocktail Book.*",
-    "modifiedAt": "2016-02-18T00:32:17.458Z",
-    "list": "Sours – Gin"
-  },
-  {
-    "id": "scotch_variant",
-    "name": "Scotch variant",
-    "year": null,
-    "lines": [
-      "Sub gin w/ whisky, Scotch, Islay (Ardbeg)"
-    ],
-    "basis": "20th_century",
     "modifiedAt": "2016-02-18T00:32:17.458Z",
     "list": "Sours – Gin"
   },
@@ -2248,8 +2024,10 @@
     "name": "21st Century",
     "year": 2007,
     "lines": [
-      "Sub gin w/ 2 tequila, silver (Siete Leguas Blanco)",
-      "Sub wine aperitif w/ absinthe rinse (Pernod)"
+      "2 oz tequila, blanco (Siete Leguas Blanco)",
+      "3/4 oz creme de cacao, white (Marie Brizard)",
+      "3/4 lemon juice",
+      "Absinthe rinse (Pernod)"
     ],
     "reference": "Meehan, Jim. (2007). Pegu Club, New York.",
     "basis": "20th_century",
@@ -2266,11 +2044,10 @@
       "1/2 orange juice",
       "1/2 lemon juice",
       "1 egg white",
-      "Orange or lemon twist",
-      "Coupe",
-      "",
-      "Perosino, J. (Tarling, W. J.). Café Royal Cocktail Book."
+      "Orange twist",
+      "Coupe"
     ],
+    "reference": "Perosino, J. (Tarling, W. J.). Café Royal Cocktail Book.",
     "modifiedAt": "2023-04-29T05:53:15.505Z",
     "list": "Sours – Gin"
   },
@@ -2282,34 +2059,24 @@
       "2 gin",
       "1/2 lemon juice",
       "1/4 orgeat",
-      "dash bitter, aromatic, Angostura",
+      "1 dash bitter, aromatic, Angostura",
       "shaken"
     ],
-    "modifiedAt": "2020-10-23T17:52:31.539Z",
-    "list": "Sours – Gin"
-  },
-  {
-    "id": "steve_the_bartender",
-    "name": "Steve the Bartender",
-    "lines": [
-      "3/4 lemon juice",
-      "1/2 orgeat"
-    ],
-    "basis": "army_navy",
+    "reference": "Embury, David. (1948). *Fine Art of Mixing Drinks, The.*",
     "modifiedAt": "2020-10-23T17:52:31.539Z",
     "list": "Sours – Gin"
   },
   {
     "id": "aruba",
     "name": "Aruba",
-    "year": 1948,
     "lines": [
+      "2 gin",
       "3/4 lemon juice",
       "1/2 orgeat",
-      "Add 1/2 orange liqueur (Cointreau)",
-      "Add egg white"
+      "1/2 orange liqueur (Cointreau)",
+      "1 dash bitter, aromatic, Angostura",
+      "1 egg white"
     ],
-    "reference": "Embury, David. (1948). *Fine Art of Mixing Drinks, The.*",
     "basis": "army_navy",
     "modifiedAt": "2020-10-23T17:52:31.539Z",
     "list": "Sours – Gin"
@@ -2333,8 +2100,10 @@
     "name": "Final Ward",
     "year": 2000,
     "lines": [
-      "Sub rye",
-      "Sub lemon juice"
+      "3/4 rye",
+      "3/4 green chartreuse",
+      "3/4 maraschino (Luxardo)",
+      "3/4 lemon juice"
     ],
     "reference": "Ward, Phil. (c. 2000s). Death + Company, New York.",
     "basis": "the_last_word",
@@ -2363,8 +2132,10 @@
     "name": "Industry Sour",
     "year": 2011,
     "lines": [
-      "Sub gin w/ fernet (Fernet Branca)",
-      "Sub maraschino w/ simple syrup"
+      "3/4 fernet (Fernet Branca)",
+      "3/4 green chartreuse",
+      "3/4 simple syrup",
+      "3/4 lemon juice"
     ],
     "reference": "Kilgore, Ted. (2011). Taste, St. Louis.",
     "basis": "the_last_word",
@@ -2387,8 +2158,10 @@
     "id": "next_to_last_word",
     "name": "Next to Last Word",
     "lines": [
-      "Sub elderflower liqueur for chartreuse",
-      "Sub lemon juice"
+      "3/4 gin",
+      "3/4 St-Germain",
+      "3/4 maraschino (Luxardo)",
+      "3/4 lemon juice"
     ],
     "basis": "the_last_word",
     "modifiedAt": "2017-06-11T02:02:45.612Z",
@@ -2465,31 +2238,13 @@
     "name": "Brandy Crusta",
     "year": 1862,
     "lines": [
-      "2 oz cognac",
-      "1 tsp orange liqueur",
-      "1 tsp maraschino",
-      "1/2 tsp simple syrup",
-      "2 tsp lemon juice",
-      "2 dashes bitters",
-      "lemon peel"
-    ],
-    "modifiedAt": "2022-01-09T07:10:30.117Z",
-    "list": "Sours – Others"
-  },
-  {
-    "id": "pdt_version",
-    "name": "PDT version",
-    "year": 1862,
-    "lines": [
-      "2 brandy (Hine V.S.O.P. Cognac)",
+      "2 brandy (Hine VSOP)",
       "1/2 maraschino (Luxardo Maraschino)",
       "1/2 orange curaçao (Marie Brizard Orange Curaçao)",
       "3/4 lemon juice",
-      "",
       "Stir and strain into a chilled, sugar-rimmed wine glass filled with an entire lemon and orange peel"
     ],
     "reference": "Thomas, Jerry. (1862). *Bar-Tender's Guide.*",
-    "basis": "brandy_crusta",
     "modifiedAt": "2022-01-09T07:10:30.117Z",
     "list": "Sours – Others"
   },
@@ -2501,12 +2256,22 @@
       "2 rye (Rittenhouse)",
       "1/2 lemon juice",
       "1/2 orange juice",
-      "1 tsp grenadine",
-      "",
-      "*Note: PDT subs 1/4 simple & barspoon pomegranate molasses for the grenadine. Could use raspberry preserves (Bonne Maman) as well.*"
+      "1 tsp grenadine"
     ],
     "reference": "*Cocktail Book, The: A Sideboard Manual for Gentlemen.* (1900).",
     "modifiedAt": "2020-12-30T06:10:35.456Z",
+    "list": "Sours – Others"
+  },
+  {
+    "id": "whiskey_sour",
+    "name": "Whiskey Sour",
+    "lines": [
+      "2 oz whiskey",
+      "1 oz lemon juice",
+      "1 tsp sugar",
+      "1 egg white"
+    ],
+    "modifiedAt": "2017-06-11T23:10:58.407Z",
     "list": "Sours – Others"
   },
   {
@@ -2517,10 +2282,10 @@
       "1 whisky, Scotch, blended (Famous Grouse)",
       "1 whiskey, Irish (Jameson)",
       "3/4 lemon juice",
-      "1/2 orgeat (Kassatly Chtaura)"
+      "1/2 orgeat"
     ],
     "reference": "McElhone, Harry. (1922). *ABC of Mixing Cocktails.*",
-    "basis": "simple",
+    "basis": "whiskey_sour",
     "modifiedAt": "2017-06-11T23:10:58.407Z",
     "list": "Sours – Others"
   },
@@ -2536,7 +2301,7 @@
       "Absinthe rinse (Vieux Pontarlier)"
     ],
     "reference": "Craddock, Harry. (1930). *Savoy Cocktail Book, The.*",
-    "basis": "simple",
+    "basis": "whiskey_sour",
     "modifiedAt": "2017-06-11T23:10:58.407Z",
     "list": "Sours – Others"
   },
@@ -2551,7 +2316,7 @@
       "Rocks glass w/ large cube"
     ],
     "reference": "Siegal, T. J. (c. 2000). Milk & Honey, New York.",
-    "basis": "simple",
+    "basis": "whiskey_sour",
     "modifiedAt": "2017-06-11T23:10:58.407Z",
     "list": "Sours – Others"
   },
@@ -2587,25 +2352,13 @@
     "name": "Sidecar",
     "year": 1922,
     "lines": [
-      "2 cognac (Rémy Martin VSOP)",
-      "3/4 orange liqueur (Cointreau)",
+      "1 1/2 cognac (Hine H)",
+      "3/4 orange liqueur (Grand Marnier)",
       "3/4 lemon juice",
-      "(optional) 1/4 simple syrup",
-      "Shake, stir, strain into sugar-rimmed coupe"
-    ],
-    "modifiedAt": "2018-03-04T13:45:50.198Z",
-    "list": "Sours – Others"
-  },
-  {
-    "id": "french_school",
-    "name": "French School",
-    "year": 1922,
-    "lines": [
-      "1 cognac",
-      "1 orange liqueur"
+      "1 tsp demerara syrup",
+      "Orange twist"
     ],
     "reference": "Vermeire, Robert. (1922). *Cocktails: How to Mix Them.*",
-    "basis": "sidecar",
     "modifiedAt": "2018-03-04T13:45:50.198Z",
     "list": "Sours – Others"
   },
@@ -2614,27 +2367,14 @@
     "name": "Deauville",
     "year": 1930,
     "lines": [
-      "Sub cognac w/ 3/4 brandy, apple or calvados & 3/4 cognac"
+      "3/4 cognac (Hine H)",
+      "3/4 apple brandy",
+      "3/4 orange liqueur (Grand Marnier)",
+      "3/4 lemon juice",
+      "1 tsp demerara syrup",
+      "Orange twist"
     ],
     "reference": "Craddock, Harry. (1930). *Savoy Cocktail Book, The*.",
-    "basis": "sidecar",
-    "modifiedAt": "2018-03-04T13:45:50.198Z",
-    "list": "Sours – Others"
-  },
-  {
-    "id": "cavalier",
-    "name": "Cavalier",
-    "year": 2006,
-    "lines": [
-      "2 cognac (Hine VSOP)",
-      "3/4 lemon juice",
-      "1/4 orange liqueur (Cointreau)",
-      "1/4 orgeat (Kassatly Chtaura)",
-      "1 barspoon apricot preserves (Bonne Maman)",
-      "1 dash bitters, orange or apricot",
-      "Lemon twist, discard"
-    ],
-    "reference": "Voisey, Charlotte. (2006). London.",
     "basis": "sidecar",
     "modifiedAt": "2018-03-04T13:45:50.198Z",
     "list": "Sours – Others"
@@ -2644,57 +2384,15 @@
     "name": "Scofflaw",
     "year": 1927,
     "lines": [
-      "1 rye",
+      "1 1/2 rye",
       "1 vermouth, dry",
       "1/2 lemon juice",
       "1/2 grenadine",
       "1 dash bitters, orange",
-      "",
-      "\u001f—McElhone, Harry. (1927). *Barflies and Cocktails.*"
-    ],
-    "modifiedAt": "2023-03-25T03:09:34.913Z",
-    "list": "Sours – Others"
-  },
-  {
-    "id": "gary_regans_joy_of_mixology_2003",
-    "name": "Gary Regan's Joy of Mixology, 2003",
-    "lines": [
-      "2 rye or bourbon",
-      "1 vermouth, dry",
-      "hop 1/2 lemon juice",
-      "1/4 grenadine",
-      "1 dash bitters, orange"
-    ],
-    "basis": "scofflaw",
-    "modifiedAt": "2023-03-25T03:09:34.913Z",
-    "list": "Sours – Others"
-  },
-  {
-    "id": "ted_haighs_vintage_spirits_and_forgotten_cocktails_2009",
-    "name": "Ted Haigh's Vintage Spirits and Forgotten Cocktails, 2009",
-    "lines": [
-      "1 1/2 rye",
-      "1 vermouth, dry",
-      "3/4 lemon juice",
-      "3/4 grenadine",
+      "Salt",
       "Lemon twist"
     ],
-    "basis": "scofflaw",
-    "modifiedAt": "2023-03-25T03:09:34.913Z",
-    "list": "Sours – Others"
-  },
-  {
-    "id": "imbibe",
-    "name": "Imbibe",
-    "lines": [
-      "1 1/2 whisky, rye",
-      "1 vermouth, dry",
-      "3/4 lime juice",
-      "1/2 grenadine",
-      "1 dash bitters, orange",
-      "Orange twist"
-    ],
-    "basis": "scofflaw",
+    "reference": "McElhone, Harry. (1927). *Barflies and Cocktails.*",
     "modifiedAt": "2023-03-25T03:09:34.913Z",
     "list": "Sours – Others"
   },
@@ -2706,7 +2404,7 @@
       "2 brandy, apple (Laird's Bonded Apple Brandy)",
       "3/4 lemon juice",
       "3/4 orange juice",
-      "1/2 maple syrup, grade B (Deep Mountain)"
+      "1/2 maple syrup"
     ],
     "reference": "Judge Jr. (1927). *Here's How.*",
     "modifiedAt": "2016-02-03T03:06:32.762Z",
@@ -2746,7 +2444,7 @@
     "name": "Junior",
     "year": 1937,
     "lines": [
-      "2 rye (Rittenhouse Bonded)",
+      "2 rye (Rittenhouse)",
       "3/4 lime juice",
       "1/2 Bénédictine",
       "2 dash bitters, Angostura"
@@ -2791,10 +2489,10 @@
     "name": "Pimms Cup",
     "year": 1946,
     "lines": [
-      "2 Pimms #1 Cup",
+      "2 Pimm's",
       "3/4 lemon juice",
       "1/2 simple syrup",
-      "3 cucumber slices (1 for garnish)",
+      "2 cucumber slices",
       "Muddle cucumber w/ syrup",
       "Add rest, shake, strain into Collins glass w/ ice",
       "Top w/ 1 oz ginger ale",
@@ -2809,8 +2507,8 @@
     "name": "Charlie Chaplin",
     "year": 1948,
     "lines": [
-      "1 gin, sloe (Plymouth or Hayman's)",
-      "1 brandy, apricot (Rothman & Winter or Marie Brizard)",
+      "1 gin, sloe (Hayman's Old Tom)",
+      "1 brandy, apricot (Rothman & Winter Orchard Apricot Liqueur)",
       "1 lime juice"
     ],
     "reference": "Embury, David. (1948). *Fine Art of Mixing Drinks, The.*",
@@ -2824,8 +2522,7 @@
     "lines": [
       "2 rum, white",
       "1/2 lemon juice",
-      "1/2 tbsp honey",
-      "1/2 tbsp warm water"
+      "1/2 oz honey syrup"
     ],
     "reference": "Embury, David. (1948). *The Fine Art of Mixing Drinks*",
     "modifiedAt": "2017-06-11T23:20:24.735Z",
@@ -2836,7 +2533,10 @@
     "name": "Swarm",
     "year": 2013,
     "lines": [
-      "Add 1 oz Cynar"
+      "2 oz rum, white",
+      "1 oz Cynar",
+      "1/2 oz lemon juice",
+      "1/2 oz honey syrup"
     ],
     "reference": "Giles, Autumn. (2013). [Serious Eats](http://www.seriouseats.com/recipes/2013/04/the-swarm-honey-bee-cocktail-with-cynar-easy-rum-drink-recipe.html).",
     "basis": "honey_bee",
@@ -2868,7 +2568,7 @@
       "3/4 lemon juice",
       "1/2 green chartreuse",
       "1/4 Cynar",
-      "1 barspoon strawberry preserves (Bonne Maman)",
+      "1 barspoon grenadine",
       "6 mint leaves",
       "Muddle mint w/ Cynar",
       "Mint leaf"
@@ -2878,38 +2578,12 @@
     "list": "Sours – Others"
   },
   {
-    "id": "trinidad_sour",
-    "name": "Trinidad Sour",
-    "year": 2009,
-    "lines": [
-      "1 1/2 bitters, aromatic, Angostura",
-      "1/2 whisky, rye, 100-proof",
-      "1 orgeat (Gifford's)",
-      "3/4 lemon juice",
-      "Shaken"
-    ],
-    "modifiedAt": "2020-10-23T17:40:47.494Z",
-    "list": "Sours – Others"
-  },
-  {
-    "id": "alt",
-    "name": "Alt",
-    "year": 2009,
-    "lines": [
-      "1 bitters"
-    ],
-    "reference": " Gonzalez, Giuseppe. (2009). Clover Club Bar, Brooklyn, New York.",
-    "basis": "trinidad_sour",
-    "modifiedAt": "2020-10-23T17:40:47.494Z",
-    "list": "Sours – Others"
-  },
-  {
     "id": "port_of_spain",
     "name": "Port of Spain",
     "year": 2013,
     "lines": [
       "1 1/2 mezcal (Del Maguey Vida)",
-      "1 orgeat (Small Hand Foods)",
+      "1 orgeat",
       "3/4 lime juice",
       "1/2 bitters, aromatic, Angostura"
     ],
@@ -2935,8 +2609,8 @@
     "list": "Sours – Others"
   },
   {
-    "id": "rum_sours_daiquiri",
-    "name": "Rum Sours: Daiquiri",
+    "id": "daiquiri",
+    "name": "Daiquiri",
     "year": 1914,
     "lines": [
       "2 rum, white (Banks 5 Island)",
@@ -2952,10 +2626,13 @@
     "id": "planters_punch",
     "name": "Planter's Punch",
     "lines": [
-      "Use Coruba dark Jamaican rum",
-      "Add 3 dashes Angostura bitters"
+      "2 rum, black (Coruba)",
+      "3/4 lime juice",
+      "3/4 simple syrup",
+      "3 dashes bitters, Angostura",
+      "Lime wheel"
     ],
-    "basis": "rum_sours_daiquiri",
+    "basis": "daiquiri",
     "modifiedAt": "2017-06-11T23:19:09.478Z",
     "list": "Tropicals & Tiki"
   },
@@ -2971,7 +2648,7 @@
       "Lime wheel"
     ],
     "reference": "*Bar La Florida Cocktail Book.* (1939). \"Daiquiri #3\" (original name).",
-    "basis": "rum_sours_daiquiri",
+    "basis": "daiquiri",
     "modifiedAt": "2017-06-11T23:19:09.478Z",
     "list": "Tropicals & Tiki"
   },
@@ -2984,10 +2661,10 @@
       "3/4 orange liqueur",
       "3/4 lime juice",
       "1/4 maraschino (Luxardo)",
-      "1/8 simple syrup (optional)"
+      "1/8 simple syrup"
     ],
     "reference": "Bergeron, Jules. (1947). *Trader Vic's Bartender's Guide.*",
-    "basis": "rum_sours_daiquiri",
+    "basis": "daiquiri",
     "modifiedAt": "2017-06-11T23:19:09.478Z",
     "list": "Tropicals & Tiki"
   },
@@ -3002,11 +2679,12 @@
       "8 mint leaves",
       "Muddle mint w/ syrup in Collins glass",
       "Add rest, add pebble ice, swizzle, add pebble ice",
-      "Add 2 dash bitters each, Peychaud's & Angostura",
+      "2 dash bitters, Peychaud's",
+      "2 dash bitters, Angostura",
       "Mint sprig"
     ],
     "reference": "Bergeron, Jules. (1947). *Trader Vic's Bartender's Guide.*",
-    "basis": "rum_sours_daiquiri",
+    "basis": "daiquiri",
     "modifiedAt": "2017-06-11T23:19:09.478Z",
     "list": "Tropicals & Tiki"
   },
@@ -3020,7 +2698,7 @@
       "3/4 simple syrup",
       "1/2 lemon juice",
       "1/2 lime juice",
-      "2 dashes bitters, orange (1/2 Regan's, 1/2 Fee's)",
+      "2 dashes bitters, orange",
       "1 egg white"
     ],
     "reference": "Ross, Sam. (2008). New York.",
@@ -3037,7 +2715,7 @@
       "1/2 curaçao, orange (Marie Brizard)",
       "1/2 pineapple juice",
       "1/4 rum, aged (Pampero Aniversario)",
-      "2 dash bitters, orange (1/2 Regan's, 1/2 Fee's)",
+      "2 dash bitters, orange",
       "Orange twist"
     ],
     "reference": "Johnson, Harry. (1900). *Bartender's Manual.*",
@@ -3058,7 +2736,8 @@
       "1/4 lime juice",
       "1 dash bitters, Angostura",
       "Collins glass w/ ice",
-      "Cherry & pineapple slice"
+      "Cherry slice",
+      "Pineapple slice"
     ],
     "reference": "*Sloppy Joe's*. (1931). Ngiam Tong Boon (bartender), Long Bar, Raffles Hotel, Singapore, 1915.",
     "modifiedAt": "2016-02-03T03:03:38.910Z",
@@ -3070,34 +2749,11 @@
     "year": 1928,
     "lines": [
       "2 rum, white (Banks 5 Island)",
-      "1/2 maraschino (Luxardo)",
-      "3/4 pineapple juice",
-      "1/4 grenadine"
+      "1/4 maraschino (Luxardo)",
+      "1 pineapple juice",
+      "1 tsp grenadine"
     ],
     "reference": "Chicote, Pedro. (1928). *Cocktails.*",
-    "modifiedAt": "2016-02-04T23:32:21.165Z",
-    "list": "Tropicals & Tiki"
-  },
-  {
-    "id": "gary_regans_joy_of_mixology_the_2003",
-    "name": "Gary Regan's Joy of Mixology, The, 2003",
-    "lines": [
-      "Sub 1 pineapple",
-      "Sub 1/4 maraschino",
-      "Sub 1 dash grenadine"
-    ],
-    "basis": "mary_pickford",
-    "modifiedAt": "2016-02-04T23:32:21.165Z",
-    "list": "Tropicals & Tiki"
-  },
-  {
-    "id": "sam_rosss_bartenders_choice_2012",
-    "name": "Sam Ross's Bartender's Choice, 2012",
-    "lines": [
-      "Sub 1 pineapple",
-      "Sub 1/4 maraschino"
-    ],
-    "basis": "mary_pickford",
     "modifiedAt": "2016-02-04T23:32:21.165Z",
     "list": "Tropicals & Tiki"
   },
@@ -3107,31 +2763,14 @@
     "year": 1937,
     "lines": [
       "2 tequila, silver (El Tesoro Platinum)",
-      "3/4 curaçao, orange (Marie Brizard)",
-      "3/4 lime juice",
-      "(optional) 1/2 agave syrup or simple syrup",
-      "Rocks glass w/ ice or coupe",
-      "(optional) salt rim",
-      "Lime wheel",
-      "",
-      "—Tarling, W. J. (1937). *Café Royal Cocktail Book.* \"Picador Cocktail\" (orig).",
-      "",
-      "*Note: Orange curaçao can be substituted w/ 1/2 orange liqueur, e.g. Cointreau, and 1/2 simple syrup.*"
-    ],
-    "modifiedAt": "2022-05-30T00:25:55.791Z",
-    "list": "Tropicals & Tiki"
-  },
-  {
-    "id": "employees_only",
-    "name": "Employees Only",
-    "lines": [
-      "5 drops saline",
-      "1/2 agave syrup",
-      "1/2 Cointreau",
+      "1/2 curaçao, orange (Marie Brizard)",
       "1 lime juice",
-      "2 mezcal, Del Maguey Vida"
+      "1/2 agave syrup or simple syrup",
+      "Salt",
+      "Rocks glass w/ ice or coupe",
+      "Lime wheel"
     ],
-    "basis": "margarita",
+    "reference": "Tarling, W. J. (1937). *Café Royal Cocktail Book.* \"Picador Cocktail\" (orig).",
     "modifiedAt": "2022-05-30T00:25:55.791Z",
     "list": "Tropicals & Tiki"
   },
@@ -3140,24 +2779,16 @@
     "name": "Bronco Buster",
     "year": 1951,
     "lines": [
-      "Sub tequila w/ 1 rye & 1 brandy, apple",
-      "Sub lime w/ lemon"
+      "1 rye",
+      "1 brandy, apple",
+      "1/2 curaçao, orange (Marie Brizard)",
+      "1 lemon juice",
+      "1/2 agave syrup or simple syrup",
+      "Salt",
+      "Rocks glass w/ ice or coupe",
+      "Lime wheel"
     ],
     "reference": "Saucier, Ted. (1951). *Bottoms Up.* Arizona Biltmore Hotel, Phoenix.",
-    "basis": "margarita",
-    "modifiedAt": "2022-05-30T00:25:55.791Z",
-    "list": "Tropicals & Tiki"
-  },
-  {
-    "id": "ruirita",
-    "name": "Ruirita",
-    "year": 2009,
-    "lines": [
-      "Sub Cynar for orange liqueur",
-      "Add 3 dashes rhubarb bitters",
-      "Add 2 drops orange flower water to rinse glass"
-    ],
-    "reference": "Dietsch, Michael. (2009). *A Dash of Bitters* (blog). http://adashofbitters.com/2009/04/13/mixology-monday-a-simple-twist-of-great/.",
     "basis": "margarita",
     "modifiedAt": "2022-05-30T00:25:55.791Z",
     "list": "Tropicals & Tiki"
@@ -3182,11 +2813,11 @@
     "name": "Beachbum Berry’s Mai Tai",
     "year": 1947,
     "lines": [
-      "1 rum, dark (Appleton Estate Extra Dark Jamaican or Banks 5 Island)",
+      "1 rum, dark (Appleton Estate Signature Blend)",
       "1 rhum agricole (Rhum Clément VSOP)",
       "1 lime juice",
       "1/2 curaçao, orange (Marie Brizard)",
-      "1/2 orgeat (Latitude 29 Formula Orgeat or Kassatly Chtaura)",
+      "1/2 orgeat",
       "1/4 simple syrup",
       "Rocks glass w/ pebble ice",
       "Mint sprig"
@@ -3199,13 +2830,14 @@
     "id": "smugglers_cove_mai_tai",
     "name": "Smuggler’s Cove Mai Tai",
     "lines": [
-      "2 rum, aged (Denizen Marchant’s Reserve 8, Appleton Estate 12yr or El Dorado 12yr)",
+      "2 rum, aged (El Dorado 12yr)",
       "3/4 lime juice",
-      "1/2 orange curaçao or orange liqueur (Cointreau)",
-      "1/4 rock candy syrup (2 parts rock candy, 1 part water) or demerara syrup",
-      "1/4 orgeat almond syrup",
+      "1/2 orange liqueur (Cointreau)",
+      "1/4 demerara syrup",
+      "1/4 orgeat",
       "Shake w/ crushed ice, pour unstrained into rocks glass",
-      "Lime juice & mint sprig"
+      "Lime juice",
+      "Mint sprig"
     ],
     "reference": "Cate, Martin. (2000s). Smuggier's Cove, San Francisco.",
     "basis": "beachbum_berrys_mai_tai",
@@ -3223,7 +2855,7 @@
       "1 lime juice",
       "1/2 curaçao, orange (Pierre Ferrand)",
       "3/4 orgeat (Small Hand Foods)",
-      "1/4 syrup, demerara, 2:1",
+      "1/4 syrup, demerara",
       "Shake w/ lime hull",
       "Rocks glass w/ pebble ice",
       "Mint sprig"
@@ -3240,9 +2872,9 @@
     "lines": [
       "2 rum, blackstrap",
       "1/2 falernum (John D. Taylor)",
-      "2–3 dash bitters, Angostura",
-      "Build in rocks glass w/ ice",
-      "Squeeze 1/4 lime atop"
+      "3 dash bitters, Angostura",
+      "Build in rocks glass w/ ice.",
+      "Squeeze 1/4 lime on top."
     ],
     "reference": "Anonymous, Barbados. (c. 1900).",
     "modifiedAt": "2016-02-04T19:59:11.693Z",
@@ -3253,11 +2885,11 @@
     "name": "Pisco Sour",
     "year": 1951,
     "lines": [
-      "2 pisco (La Diablada)",
+      "2 pisco (Barsol pisco)",
       "3/4 lime juice",
       "3/4 simple syrup",
       "1 egg white",
-      "Garnish 4 dash bitters, Angostura, swirled"
+      "Garnish with 4 dashes of Angostura bitters"
     ],
     "reference": "Baker, Jr, Charles H., (1951). *South American Gentleman's Companion, The.*",
     "modifiedAt": "2016-02-02T23:52:00.883Z",
@@ -3268,15 +2900,6 @@
     "name": "Jungle Bird",
     "year": 1978,
     "lines": [
-      "4 pineapple juice",
-      "1 1/2 rum, dark, Jamaican",
-      "3/4 bitter aperitivo (Campari)",
-      "1/2 lime juice",
-      "1/2 simple syrup",
-      "Orchid, cherry, and lemon & orange wheels",
-      "",
-      "—Berry, Jeff. (2010). *Beachbum Berry Remixed.* via Poister, John J. (1989). *New American Bartender's Guide.* Aviary Bar, Hilton Hotel, Kuala Lumpur, 1978.",
-      "",
       "1 1/2 rum, blackstrap (Cruzan)",
       "1 1/2 pineapple",
       "3/4 bitter aperitivo (Campari)",
@@ -3293,9 +2916,9 @@
     "year": 1989,
     "lines": [
       "2 cachaça (Beleza Pura)",
-      "1/2 lime, cut into quarters",
+      "Lime wedge",
       "2 cubes demerara sugar",
-      "Muddle then shake, pour unstrained into rocks glass"
+      "Cut 1/2 of a lime into wedges, then muddle, then shake, pour unstrained into rocks glass"
     ],
     "reference": "Schumann, Charles. (1989). *Tropical Bar Book*.",
     "modifiedAt": "2016-02-02T17:45:00.527Z",
@@ -3326,38 +2949,20 @@
       "1/2 lemon juice",
       "1/2 pineapple juice",
       "Shake, strain over rocks",
-      "Dust w/ cocoa powder",
-      "",
-      "_This exotic sipper from Imbibe's 2013 Cocktail Bar of the Year, Pouring Ribbons, (see the \"Imbibe 75\" feature in our January/February issue) is a little smoky, a little nutty and perfectly bright._"
+      "Dust w/ cocoa powder"
     ],
     "modifiedAt": "2020-12-21T02:52:01.075Z",
     "list": "Tropicals & Tiki"
   },
   {
-    "id": "highballs_gin_tonic",
-    "name": "Highballs: Gin & Tonic",
-    "year": 1800,
-    "lines": [
-      "Note:",
-      "",
-      "  - Simple: spirit, ice, lengthener",
-      "  - Complex: add juice/liqeur",
-      "  - Collins: add lemon juice and sugar",
-      "  - Fizzes: shaken, served no ice"
-    ],
-    "modifiedAt": "2020-12-30T05:36:46.183Z",
-    "list": "Highballs & Royales"
-  },
-  {
     "id": "gin_tonic",
     "name": "Gin & Tonic",
     "lines": [
-      "Gin",
-      "Top w/ tonic water",
-      "Lime",
-      "Bitters"
+      "2 oz Gin",
+      "Top w/ 4 oz tonic water",
+      "Lime wedge",
+      "1 dash bitters, Angostura"
     ],
-    "basis": "highballs_gin_tonic",
     "modifiedAt": "2020-12-30T05:36:46.183Z",
     "list": "Highballs & Royales"
   },
@@ -3367,10 +2972,9 @@
     "year": null,
     "lines": [
       "2 rum, dark",
-      "4 ginger beer (topped)",
+      "Top w/ 4 ginger beer",
       "3/4 lime juice"
     ],
-    "basis": "highballs_gin_tonic",
     "modifiedAt": "2020-12-30T05:36:46.183Z",
     "list": "Highballs & Royales"
   },
@@ -3385,20 +2989,6 @@
       "Absinthe rinse"
     ],
     "reference": "McElhone, Harry. (1922). *ABC of Mixing Cocktails.* Ciro's Club, London.",
-    "basis": "highballs_gin_tonic",
-    "modifiedAt": "2020-12-30T05:36:46.183Z",
-    "list": "Highballs & Royales"
-  },
-  {
-    "id": "swollen_gland",
-    "name": "Swollen Gland",
-    "year": 2009,
-    "lines": [
-      "Sub yellow chartreuse & bitters, Peychaud's for grenadine",
-      "Cucumber ribbon on pick"
-    ],
-    "reference": "Meehan, Jim, & Reissmueller, Lydia. (2009, Fall). PDT, New York.",
-    "basis": "highballs_gin_tonic",
     "modifiedAt": "2020-12-30T05:36:46.183Z",
     "list": "Highballs & Royales"
   },
@@ -3414,31 +3004,6 @@
       "Lime wheel"
     ],
     "reference": "Beebe, Lucius. (1946). *Stork Club Bar Book, The.* Morgan, Jack (bartender) Cock 'n' Bull, Los Angeles.",
-    "basis": "highballs_gin_tonic",
-    "modifiedAt": "2020-12-30T05:36:46.183Z",
-    "list": "Highballs & Royales"
-  },
-  {
-    "id": "cuba_libre",
-    "name": "Cuba Libre",
-    "lines": [
-      "Rum",
-      "Top w/ Cola",
-      "Lime"
-    ],
-    "basis": "highballs_gin_tonic",
-    "modifiedAt": "2020-12-30T05:36:46.183Z",
-    "list": "Highballs & Royales"
-  },
-  {
-    "id": "harvey_wallbanger",
-    "name": "Harvey Wallbanger",
-    "lines": [
-      "4 Vodka",
-      "1 Galliano",
-      "Top w/ Orange juice"
-    ],
-    "basis": "highballs_gin_tonic",
     "modifiedAt": "2020-12-30T05:36:46.183Z",
     "list": "Highballs & Royales"
   },
@@ -3450,16 +3015,15 @@
       "2 tequila",
       "1/2 lime juice",
       "Build in salt-rimmed Collins glass w/ ice",
-      "Top w/ 2 oz Mexican Squirt or Tin Grapefruit Soda",
+      "Top w/ 2 oz Grapefruit Soda",
       "Grapefruit wheel"
     ],
     "reference": "Wondrich, David. (2005). *Killer Cocktails.*",
-    "basis": "highballs_gin_tonic",
     "modifiedAt": "2020-12-30T05:36:46.183Z",
     "list": "Highballs & Royales"
   },
   {
-    "id": "gin_fizzes_tom_collins",
+    "id": "tom_collins",
     "name": "Gin Fizzes: Tom Collins",
     "year": 1876,
     "lines": [
@@ -3472,78 +3036,17 @@
     "list": "Highballs & Royales"
   },
   {
-    "id": "tom_collins",
-    "name": "Tom Collins",
-    "year": 1876,
-    "lines": [
-      "Sub gin, Old Tom (Hayman's)",
-      "Add lemon wedge",
-      "Change 2 oz club soda"
-    ],
-    "reference": "Thomas, Jerry. (1876). *Bar-Tender's Guide.*",
-    "basis": "gin_fizzes_tom_collins",
-    "modifiedAt": "2016-02-05T01:25:38.293Z",
-    "list": "Highballs & Royales"
-  },
-  {
-    "id": "rickey",
-    "name": "Rickey",
-    "year": 1882,
-    "lines": [
-      "Sub lemon w/ lime",
-      "Omit simple syrup"
-    ],
-    "reference": "Johnson, Harry. (1882). *Bartender's Manual.*",
-    "basis": "gin_fizzes_tom_collins",
-    "modifiedAt": "2016-02-05T01:25:38.293Z",
-    "list": "Highballs & Royales"
-  },
-  {
-    "id": "sloe_gin_fizz",
-    "name": "Sloe Gin Fizz",
-    "year": 1910,
-    "lines": [
-      "Sub 1/2 gin (Plymouth)",
-      "Sub 1/2 gin, sloe (Plymouth)",
-      "Change 1/4 simple syrup"
-    ],
-    "reference": "Grohusko, J. A. (1910). *Jack's Manual.*",
-    "basis": "gin_fizzes_tom_collins",
-    "modifiedAt": "2016-02-05T01:25:38.293Z",
-    "list": "Highballs & Royales"
-  },
-  {
-    "id": "silver_fizz",
-    "name": "Silver Fizz",
-    "lines": [
-      "Add egg white"
-    ],
-    "basis": "gin_fizzes_tom_collins",
-    "modifiedAt": "2016-02-05T01:25:38.293Z",
-    "list": "Highballs & Royales"
-  },
-  {
-    "id": "royal_fizz",
-    "name": "Royal Fizz",
-    "lines": [
-      "Add whole egg"
-    ],
-    "basis": "gin_fizzes_tom_collins",
-    "modifiedAt": "2016-02-05T01:25:38.293Z",
-    "list": "Highballs & Royales"
-  },
-  {
     "id": "morning_glory",
     "name": "Morning Glory",
     "year": 1876,
     "lines": [
       "1 rye",
       "1 cognac",
-      "1/4 oz orange liqeur or St Germain",
-      "1 dash sugar",
-      "Bitters",
+      "1/4 oz orange liqeur",
+      "1 dash simple sugar",
+      "1 dash bitters, Angostura",
       "Absinthe rinse",
-      "Top w/ club soda (or champagne —Wondrich, D.)"
+      "Top w/ 2 club soda"
     ],
     "reference": "Thomas, Jerry. (1876). *Bar-Tender's Guide.*",
     "modifiedAt": "2018-03-05T05:32:09.902Z",
@@ -3560,7 +3063,7 @@
       "1/2 lime juice",
       "1/2 lemon juice",
       "Add 1 egg white",
-      "5 drops orange flower water (Marivani)",
+      "5 drops orange flower water",
       "Collins glass",
       "Top w/ 1 oz club soda"
     ],
@@ -3575,11 +3078,10 @@
     "lines": [
       "1 bourbon (Bulleit)",
       "1/2 orange liqueur (Cointreau)",
-      "7 dash each bitters, Angostura & Peychaud's",
+      "7 dash bitters, Peychaud's",
+      "7 dash bitters, Angostura",
       "Top w/ 2 oz champagne (Moët)",
-      "Orange twist",
-      "",
-      "*Note: PDT uses 3 dash Peychaud's, 2 dash Angostura*"
+      "Orange twist"
     ],
     "reference": "Haigh, Ted. (2003). *Vintage Spirits and Forgotten Cocktails.* Seelbach Hotel Bar, Louisville, 1917.",
     "modifiedAt": "2016-02-03T00:58:30.825Z",
@@ -3625,7 +3127,7 @@
     "year": 1935,
     "lines": [
       "1 1/2 absinthe",
-      "Top w/ 4 oz champagne, brut",
+      "Top w/ 4 oz champagne",
       "Champagne flute"
     ],
     "reference": "Hemingway, Ernest. (1935) \"Death in the Afternoon\". *So Red the Nose, or Breath in the Afternoon.*",
@@ -3637,23 +3139,12 @@
     "name": "Jimmie Roosevelt",
     "year": 1937,
     "lines": [
-      "1 cognac (Rémy Martin VSOP)",
-      "1 demerara sugar cube soaked w/ bitters, Angostura",
-      "1 barspoon green chartreuse",
-      "2 champagne (Moët)",
-      "Stir cognac w/ ice, strain into coupe w/ 3 cracked cubes",
-      "Add sugar cube",
-      "Top w/ champagne",
-      "Float w/ green chartreuse",
-      "",
-      "–Baker, Jr, Charles H. (1937). *The Gentleman's Companion: An Exotic Drinking Book.*",
-      "",
       "1 1/2 cognac (Pierre Fernand 1840)",
       "3/4 chartreuse, green",
       "2 dash bitters, aromatic",
-      "2 champagne",
       "Shake cognac, chartreuse, bitters w/ ice",
-      "Top w/ champagne in coupe"
+      "Top w/ 2 champagne",
+      "coupe"
     ],
     "reference": "Rea, Brian",
     "modifiedAt": "2017-06-11T01:55:06.051Z",
@@ -3667,7 +3158,7 @@
       "2 oz amber rum",
       "3/4 oz lime juice",
       "2 tsp honey",
-      "Top w/ champagne"
+      "Top w/ 2 champagne"
     ],
     "modifiedAt": "2016-02-02T19:54:48.469Z",
     "list": "Highballs & Royales"
@@ -3679,10 +3170,11 @@
     "lines": [
       "2 tequila, silver (Siembra Azul Blanco)",
       "1 ginger beer",
-      "3/4 cr\u0005ème de cassis (Theuriet)",
+      "3/4 crème de cassis",
       "3/4 lemon juice",
       "Strain into rocks glass w/ ice",
-      "Lemon wheel & candied ginger"
+      "Lemon wheel",
+      "Garnish w/ candied ginger"
     ],
     "reference": "Bergeron, Jules. (1947). *Trader Vic's Bartender's Guide.*",
     "modifiedAt": "2016-02-02T19:54:51.037Z",
@@ -3731,7 +3223,7 @@
       "1 egg white",
       "Collins glass",
       "Top w/ 2 oz club soda",
-      "Suze spritz"
+      "Suze rinse"
     ],
     "reference": "deBary, John. (2009, Fall). PDT, New York.",
     "modifiedAt": "2016-02-03T02:01:08.162Z",
@@ -3745,7 +3237,7 @@
       "1 1⁄2 vermouth, sweet (Carpano Antica)",
       "1⁄2 Chartreuse, yellow",
       "Dash bitters, orange",
-      "Top w/ Prosecco",
+      "Top w/ 2 Prosecco",
       "Orange twist"
     ],
     "reference": "(2014). [Bea](http://www.beanyc.com/)",
@@ -3762,45 +3254,11 @@
       "3/4 orange liqueur",
       "1/4 lemon juice",
       "Salt",
-      "Tonic",
-      "",
-      "OK Omens, Portland, OR."
+      "Top w/ 2 Tonic"
     ],
+    "reference": "(2019). OK Omens, Portland, OR.",
     "modifiedAt": "2022-08-30T03:57:55.944Z",
     "list": "Highballs & Royales"
-  },
-  {
-    "id": "eggnog",
-    "name": "Eggnog",
-    "year": 1800,
-    "lines": [
-      "8 eggs, separated",
-      "1/2–3/4 cup sugar",
-      "3 cups whole milk",
-      "1 pt cream",
-      "8 oz brandy",
-      "8 oz dark rum",
-      "Nutmeg"
-    ],
-    "reference": "Weld, Jr. Issac. (1800). *Travels Through the States of North America and the Provinces of Upper and Lower Canada, during the years 1795, 1796, and 1977.*",
-    "modifiedAt": "2016-02-04T03:40:46.224Z",
-    "list": "Flips & Nogs"
-  },
-  {
-    "id": "milk_punch",
-    "name": "Milk Punch",
-    "year": 1862,
-    "lines": [
-      "1 1/2 whole milk",
-      "1 cognac (Pierre Ferrand Ambre)",
-      "1 rum, dark (Myer's)",
-      "3/4 simple syrup",
-      "Rocks glass w/ 1 large cube",
-      "Nutmeg, grated"
-    ],
-    "reference": "Thomas, Jerry. (1862). *Bar-Tender's Guide.*",
-    "modifiedAt": "2016-02-03T02:53:51.111Z",
-    "list": "Flips & Nogs"
   },
   {
     "id": "coffee_cocktail",
@@ -3838,7 +3296,8 @@
       "1 green Chartreuse",
       "1 egg",
       "1 tsp sugar",
-      "Nutmeg and cinnamon"
+      "Nutmeg, grated",
+      "Cinnamon, grated"
     ],
     "modifiedAt": "2018-03-01T02:12:19.698Z",
     "list": "Flips & Nogs"
@@ -3847,9 +3306,9 @@
     "id": "fernet_flip",
     "name": "Fernet Flip",
     "lines": [
-      "1 Fernet Branca",
-      "1 Carpano Antica vermouth",
-      "Dash sugar",
+      "1 fernet (Fernet Branca)",
+      "1 vermouth, sweet (Carpano Antica)",
+      "Sugar",
       "2 dashes chocolate bitters",
       "1 egg"
     ],
