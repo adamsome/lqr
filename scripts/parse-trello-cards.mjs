@@ -22,13 +22,13 @@ let printIdx = 0
 
 /**
  * @typedef {{
+ *   id?: string,
+ *   bottleID?: string,
  *   note?: string,
- *   subs?: string,
  *   quantity?: number,
  *   unit?: string,
  *   usage?: string,
- *   unknown?: string,
- *   _raw?: string,
+ *   raw?: string,
  *   btl?: string
  * }} SpecIngredient
  */
@@ -98,7 +98,6 @@ function fuzzIngredient(term) {
   return extract(term, ingredients, FUZZ_OPTIONS)
 }
 
-// TODO: Handle rum subcategories
 // TODO: Handle scotch, peated subcategories
 // TODO: Handle glass type
 // TODO: Handle shaken/stirred
@@ -170,6 +169,10 @@ function parseCardLine(origLine) {
   if (['cherry', 'cherry, brandied'].some((s) => s === line)) line = '1 cherry'
   if (['mint sprig'].some((s) => s === line)) line = '1 spice_mint'
 
+  /**
+   * @param {SpecIngredient} it
+   * @returns {SpecIngredient}
+   */
   function buildIt(it) {
     const _ = {}
     _.line = rawLine
@@ -201,6 +204,10 @@ function parseCardLine(origLine) {
         }
         _.idMatches = matches.map(([{ id }, score]) => `${score}: ${id}`)
       }
+    }
+
+    if (it.bottleID && it.id) {
+      it = { ...it, ...addRumCategories(it.bottleID) }
     }
 
     if (!it.unit && it.quantity) {
@@ -412,4 +419,37 @@ function parseAmount(words) {
     amt += den ? num / Number(den) : num
   }
   return amt
+}
+
+function addRumCategories(id) {
+  switch (id) {
+    case 'smith_cross_navy_strength':
+      return { productionMethod: 'pot', aging: ['light'] }
+    case 'denizen':
+      return { productionMethod: 'pot', aging: ['light', 'medium', 'long'] }
+    case 'el_dorado_8_year':
+    case 'appleton_estate_signature_blend':
+    case 'mount_gay_eclipse':
+    case 'plantation_xaymaca':
+    case 'clement_vsop':
+    case 'rhum_barbancourt_5_star':
+    case 'neisson_eleve_sous_bois':
+    case 'neisson_le_rhum':
+      return { aging: ['light', 'medium', 'long'] }
+    case 'pampero_anniversario':
+    case 'bacardi_8':
+      return { aging: ['medium', 'long'] }
+    case 'plantation_3_stars':
+    case 'flor_de_cana_extra_dry_4_year':
+    case 'banks_5_island':
+      return { aging: ['light'] }
+    case 'ron_del_barrilito_3_star':
+      return { aging: ['light', 'medium'] }
+    case 'coruba':
+    case 'cruzan_blackstrap':
+    case 'goslings_black_seal':
+      return { black: true }
+    default:
+      return {}
+  }
 }
