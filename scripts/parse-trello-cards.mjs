@@ -109,8 +109,6 @@ function fuzzIngredient(term) {
   return extract(term, ingredients, FUZZ_OPTIONS)
 }
 
-// TODO: Handle glass type
-// TODO: Handle shaken/stirred
 export function parseTrelloCards() {
   const trelloCards = readTrelloCards()
 
@@ -123,6 +121,7 @@ export function parseTrelloCards() {
     if (notes.length) spec.notes = notes.map((x) => x.note)
     if (ingredients.length) spec.ingredients = ingredients
 
+    spec.category ??= getCategory(spec)
     spec.glass ??= getGlass(spec)
     spec.mix ??= getMix(spec)
 
@@ -507,5 +506,43 @@ function getMix(spec) {
       return 'shaken'
     default:
       return 'stirred'
+  }
+}
+
+/**
+ * @param {Card} spec
+ * @returns {string}
+ */
+function getCategory(spec) {
+  switch (spec.list) {
+    case 'Spirited – Whiskey':
+    case 'Spirited – Manhattans':
+    case 'Spirited – Others':
+      return spec.ingredients.some(
+        (it) =>
+          (it.id.includes('wine') || it.id.includes('aperitivo')) &&
+          it.unit === 'oz' &&
+          (it.quantity ?? 0) >= 0.25,
+      )
+        ? 'martini'
+        : 'oldfashioned'
+    case 'Spirited – Gin':
+      return 'martini'
+    case 'Sours – Gin':
+    case 'Sours – Others':
+      return spec.ingredients.some(
+        (it) =>
+          (it.id === 'liqueur_orange' || it.id === 'liqueur_maraschino') &&
+          it.unit === 'oz' &&
+          (it.quantity ?? 0) > 0.5,
+      )
+        ? 'sidecar'
+        : 'daiquiri'
+    case 'Flips & Nogs':
+      return 'flip'
+    case 'Tropicals & Tiki':
+      return 'tiki'
+    case 'Highballs & Royales':
+      return 'highball'
   }
 }

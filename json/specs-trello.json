@@ -35,6 +35,7 @@
         "unit": "whole"
       }
     ],
+    "category": "oldfashioned",
     "glass": "rocks",
     "mix": "build"
   },
@@ -75,6 +76,7 @@
         "unit": "whole"
       }
     ],
+    "category": "oldfashioned",
     "glass": "rocks",
     "mix": "build"
   },
@@ -121,6 +123,7 @@
         "unit": "whole"
       }
     ],
+    "category": "oldfashioned",
     "glass": "rocks",
     "mix": "build"
   },
@@ -155,6 +158,7 @@
         "id": "spice_mint"
       }
     ],
+    "category": "oldfashioned",
     "glass": "rocks",
     "mix": "stirred"
   },
@@ -197,6 +201,7 @@
         "id": "liqueur_absinthe"
       }
     ],
+    "category": "oldfashioned",
     "glass": "rocks",
     "mix": "stirred"
   },
@@ -230,6 +235,7 @@
         "id": "bitters_aromatic"
       }
     ],
+    "category": "martini",
     "glass": "rocks",
     "mix": "stirred"
   },
@@ -264,6 +270,7 @@
         "id": "bitters_aromatic"
       }
     ],
+    "category": "martini",
     "glass": "rocks",
     "mix": "stirred"
   },
@@ -315,6 +322,7 @@
         "unit": "whole"
       }
     ],
+    "category": "oldfashioned",
     "glass": "rocks",
     "mix": "stirred"
   },
@@ -362,6 +370,7 @@
         "unit": "whole"
       }
     ],
+    "category": "oldfashioned",
     "glass": "rocks",
     "mix": "stirred"
   },
@@ -404,6 +413,7 @@
         "unit": "whole"
       }
     ],
+    "category": "martini",
     "glass": "rocks",
     "mix": "stirred"
   },
@@ -443,6 +453,7 @@
         "unit": "whole"
       }
     ],
+    "category": "martini",
     "mix": "stirred"
   },
   {
@@ -474,6 +485,7 @@
         "id": "liqueur_amaro_aperitivo"
       }
     ],
+    "category": "martini",
     "mix": "stirred"
   },
   {
@@ -508,6 +520,7 @@
         "unit": "whole"
       }
     ],
+    "category": "martini",
     "mix": "stirred"
   },
   {
@@ -550,6 +563,7 @@
         "id": "fruit_cherry"
       }
     ],
+    "category": "martini",
     "mix": "stirred"
   },
   {
@@ -581,6 +595,7 @@
         "id": "fortifiedwine_aperitif"
       }
     ],
+    "category": "martini",
     "mix": "stirred"
   },
   {
@@ -629,6 +644,7 @@
         "unit": "whole"
       }
     ],
+    "category": "martini",
     "mix": "stirred"
   },
   {
@@ -670,6 +686,7 @@
         "unit": "whole"
       }
     ],
+    "category": "martini",
     "mix": "stirred"
   },
   {
@@ -719,6 +736,7 @@
         "unit": "whole"
       }
     ],
+    "category": "martini",
     "mix": "stirred"
   },
   {
@@ -759,6 +777,7 @@
         "unit": "whole"
       }
     ],
+    "category": "martini",
     "glass": "rocks",
     "mix": "stirred"
   },
@@ -788,6 +807,7 @@
         "unit": "whole"
       }
     ],
+    "category": "oldfashioned",
     "glass": "rocks",
     "mix": "stirred"
   },
@@ -818,6 +838,7 @@
         "id": "juice_pineapple"
       }
     ],
+    "category": "martini",
     "glass": "rocks",
     "mix": "stirred"
   },
@@ -851,6 +872,7 @@
         "id": "juice_pineapple"
       }
     ],
+    "category": "martini",
     "glass": "rocks",
     "mix": "stirred"
   },
@@ -884,6 +906,7 @@
         "unit": "whole"
       }
     ],
+    "category": "oldfashioned",
     "glass": "rocks",
     "mix": "stirred"
   },
@@ -912,6 +935,7 @@
         "id": "syrup_honey"
       }
     ],
+    "category": "oldfashioned",
     "glass": "rocks",
     "mix": "stirred"
   },
@@ -939,6 +963,7 @@
         "id": "syrup_simple"
       }
     ],
+    "category": "oldfashioned",
     "glass": "rocks",
     "mix": "stirred"
   },
@@ -989,6 +1014,7 @@
         "unit": "whole"
       }
     ],
+    "category": "oldfashioned",
     "glass": "rocks",
     "mix": "stirred"
   },
@@ -1042,6 +1068,7 @@
         "unit": "whole"
       }
     ],
+    "category": "oldfashioned",
     "glass": "rocks",
     "mix": "stirred"
   },
@@ -1072,6 +1099,7 @@
         "id": "liqueur_herbal"
       }
     ],
+    "category": "oldfashioned",
     "glass": "rocks",
     "mix": "stirred"
   },
@@ -1105,6 +1133,7 @@
         "unit": "whole"
       }
     ],
+    "category": "oldfashioned",
     "glass": "rocks",
     "mix": "stirred"
   },
@@ -1152,6 +1181,7 @@
         "unit": "whole"
       }
     ],
+    "category": "martini",
     "glass": "rocks",
     "mix": "stirred"
   },
@@ -1191,6 +1221,7 @@
         "id": "bitters_creole"
       }
     ],
+    "category": "oldfashioned",
     "glass": "coupe",
     "mix": "stirred"
   },
@@ -1224,6 +1255,7 @@
         "id": "fruit_cherry"
       }
     ],
+    "category": "martini",
     "glass": "coupe",
     "mix": "stirred"
   },
@@ -1258,6 +1290,7 @@
         "id": "fruit_cherry"
       }
     ],
+    "category": "martini",
     "glass": "coupe",
     "mix": "stirred"
   },
@@ -1297,6 +1330,7 @@
         "id": "fruit_cherry"
       }
     ],
+    "category": "martini",
     "glass": "coupe",
     "mix": "stirred"
   },
@@ -1331,6 +1365,7 @@
         "id": "fruit_cherry"
       }
     ],
+    "category": "martini",
     "glass": "coupe",
     "mix": "stirred"
   },
@@ -1368,6 +1403,7 @@
         "id": "fruit_cherry"
       }
     ],
+    "category": "martini",
     "glass": "coupe",
     "mix": "stirred"
   },
@@ -1413,6 +1449,7 @@
         "unit": "whole"
       }
     ],
+    "category": "martini",
     "glass": "coupe",
     "mix": "stirred"
   },
@@ -1442,6 +1479,7 @@
         "id": "bitters_orange"
       }
     ],
+    "category": "martini",
     "glass": "coupe",
     "mix": "stirred"
   },
@@ -1493,6 +1531,7 @@
         "unit": "whole"
       }
     ],
+    "category": "martini",
     "glass": "coupe",
     "mix": "stirred"
   },
@@ -1528,6 +1567,7 @@
         "unit": "whole"
       }
     ],
+    "category": "martini",
     "glass": "coupe",
     "mix": "stirred"
   },
@@ -1564,6 +1604,7 @@
         "id": "liqueur_amaro_medium"
       }
     ],
+    "category": "martini",
     "glass": "coupe",
     "mix": "stirred"
   },
@@ -1606,6 +1647,7 @@
         "unit": "whole"
       }
     ],
+    "category": "martini",
     "glass": "coupe",
     "mix": "stirred"
   },
@@ -1634,6 +1676,7 @@
         "id": "liqueur_herbal"
       }
     ],
+    "category": "martini",
     "glass": "coupe",
     "mix": "stirred"
   },
@@ -1678,6 +1721,7 @@
         "id": "bitters_orange"
       }
     ],
+    "category": "martini",
     "glass": "coupe",
     "mix": "stirred"
   },
@@ -1710,6 +1754,7 @@
         "id": "bitters_orange"
       }
     ],
+    "category": "martini",
     "glass": "coupe",
     "mix": "stirred"
   },
@@ -1743,6 +1788,7 @@
         "id": "bitters_aromatic"
       }
     ],
+    "category": "martini",
     "glass": "coupe",
     "mix": "stirred"
   },
@@ -1794,6 +1840,7 @@
         "id": "liqueur_herbal"
       }
     ],
+    "category": "martini",
     "glass": "coupe",
     "mix": "build"
   },
@@ -1841,6 +1888,7 @@
         "id": "fruit_cherry"
       }
     ],
+    "category": "martini",
     "glass": "coupe",
     "mix": "stirred"
   },
@@ -1882,6 +1930,7 @@
         "unit": "whole"
       }
     ],
+    "category": "martini",
     "glass": "coupe",
     "mix": "stirred"
   },
@@ -1933,6 +1982,7 @@
         "unit": "whole"
       }
     ],
+    "category": "martini",
     "glass": "coupe",
     "mix": "stirred"
   },
@@ -1968,6 +2018,7 @@
         "id": "liqueur_orange"
       }
     ],
+    "category": "martini",
     "glass": "coupe",
     "mix": "stirred"
   },
@@ -1998,6 +2049,7 @@
         "id": "liqueur_maraschino"
       }
     ],
+    "category": "martini",
     "glass": "coupe",
     "mix": "stirred"
   },
@@ -2039,6 +2091,7 @@
         "id": "bitters_aromatic"
       }
     ],
+    "category": "martini",
     "glass": "coupe",
     "mix": "stirred"
   },
@@ -2080,6 +2133,7 @@
         "id": "bitters_orange"
       }
     ],
+    "category": "martini",
     "glass": "coupe",
     "mix": "stirred"
   },
@@ -2109,6 +2163,7 @@
         "id": "liqueur_amaro_carciofo"
       }
     ],
+    "category": "martini",
     "glass": "coupe",
     "mix": "stirred"
   },
@@ -2150,6 +2205,7 @@
         "id": "fruit_cherry"
       }
     ],
+    "category": "martini",
     "glass": "coupe",
     "mix": "stirred"
   },
@@ -2215,6 +2271,7 @@
         "unit": "whole"
       }
     ],
+    "category": "oldfashioned",
     "glass": "coupe",
     "mix": "stirred"
   },
@@ -2257,6 +2314,7 @@
         "id": "fruit_cherry"
       }
     ],
+    "category": "martini",
     "glass": "coupe",
     "mix": "stirred"
   },
@@ -2294,6 +2352,7 @@
         "id": "liqueur_amaro_medium"
       }
     ],
+    "category": "martini",
     "glass": "coupe",
     "mix": "stirred"
   },
@@ -2326,6 +2385,7 @@
         "id": "bitters_aromatic"
       }
     ],
+    "category": "martini",
     "glass": "coupe",
     "mix": "stirred"
   },
@@ -2369,6 +2429,7 @@
         "unit": "whole"
       }
     ],
+    "category": "martini",
     "glass": "coupe",
     "mix": "stirred"
   },
@@ -2410,6 +2471,7 @@
         "unit": "whole"
       }
     ],
+    "category": "martini",
     "glass": "coupe",
     "mix": "stirred"
   },
@@ -2445,6 +2507,7 @@
         "id": "bitters_orange"
       }
     ],
+    "category": "martini",
     "glass": "coupe",
     "mix": "stirred"
   },
@@ -2479,6 +2542,7 @@
         "id": "bitters_aromatic"
       }
     ],
+    "category": "martini",
     "glass": "coupe",
     "mix": "stirred"
   },
@@ -2518,6 +2582,7 @@
         "unit": "whole"
       }
     ],
+    "category": "martini",
     "glass": "coupe",
     "mix": "stirred"
   },
@@ -2553,6 +2618,7 @@
         "unit": "whole"
       }
     ],
+    "category": "martini",
     "glass": "coupe",
     "mix": "stirred"
   },
@@ -2601,6 +2667,7 @@
         "unit": "whole"
       }
     ],
+    "category": "martini",
     "glass": "coupe",
     "mix": "stirred"
   },
@@ -2634,6 +2701,7 @@
         "id": "bitters_orange"
       }
     ],
+    "category": "martini",
     "glass": "coupe",
     "mix": "stirred"
   },
@@ -2659,6 +2727,7 @@
         "id": "liqueur_herbal"
       }
     ],
+    "category": "martini",
     "glass": "coupe",
     "mix": "stirred"
   },
@@ -2700,6 +2769,7 @@
         "unit": "whole"
       }
     ],
+    "category": "martini",
     "glass": "coupe",
     "mix": "stirred"
   },
@@ -2721,6 +2791,7 @@
         "id": "fortifiedwine_sherry_fino"
       }
     ],
+    "category": "martini",
     "glass": "coupe",
     "mix": "stirred"
   },
@@ -2761,6 +2832,7 @@
         "unit": "whole"
       }
     ],
+    "category": "martini",
     "glass": "coupe",
     "mix": "stirred"
   },
@@ -2796,6 +2868,7 @@
         "id": "juice_orange"
       }
     ],
+    "category": "martini",
     "glass": "coupe",
     "mix": "stirred"
   },
@@ -2838,6 +2911,7 @@
         "id": "bitters_aromatic"
       }
     ],
+    "category": "martini",
     "glass": "coupe",
     "mix": "stirred"
   },
@@ -2874,6 +2948,7 @@
         "unit": "whole"
       }
     ],
+    "category": "martini",
     "glass": "coupe",
     "mix": "stirred"
   },
@@ -2916,6 +2991,7 @@
         "id": "bitters_orange"
       }
     ],
+    "category": "martini",
     "glass": "coupe",
     "mix": "stirred"
   },
@@ -2952,6 +3028,7 @@
         "id": "liqueur_apricot"
       }
     ],
+    "category": "martini",
     "glass": "coupe",
     "mix": "stirred"
   },
@@ -2993,6 +3070,7 @@
         "unit": "whole"
       }
     ],
+    "category": "martini",
     "glass": "coupe",
     "mix": "stirred"
   },
@@ -3021,6 +3099,7 @@
         "id": "bitters_orange"
       }
     ],
+    "category": "martini",
     "glass": "coupe",
     "mix": "stirred"
   },
@@ -3062,6 +3141,7 @@
         "unit": "whole"
       }
     ],
+    "category": "martini",
     "glass": "coupe",
     "mix": "stirred"
   },
@@ -3107,6 +3187,7 @@
         "id": "liqueur_amaro_aperitivo"
       }
     ],
+    "category": "martini",
     "glass": "coupe",
     "mix": "stirred"
   },
@@ -3146,6 +3227,7 @@
         "unit": "whole"
       }
     ],
+    "category": "martini",
     "glass": "coupe",
     "mix": "stirred"
   },
@@ -3185,6 +3267,7 @@
         "unit": "whole"
       }
     ],
+    "category": "martini",
     "glass": "coupe",
     "mix": "stirred"
   },
@@ -3225,6 +3308,7 @@
         "unit": "whole"
       }
     ],
+    "category": "martini",
     "glass": "coupe",
     "mix": "stirred"
   },
@@ -3269,6 +3353,7 @@
         "unit": "whole"
       }
     ],
+    "category": "martini",
     "glass": "coupe",
     "mix": "stirred"
   },
@@ -3313,6 +3398,7 @@
         "id": "spice_salt"
       }
     ],
+    "category": "martini",
     "glass": "coupe",
     "mix": "stirred"
   },
@@ -3355,6 +3441,7 @@
         "unit": "whole"
       }
     ],
+    "category": "martini",
     "glass": "coupe",
     "mix": "stirred"
   },
@@ -3397,6 +3484,7 @@
         "id": "bitters_tiki"
       }
     ],
+    "category": "martini",
     "glass": "coupe",
     "mix": "stirred"
   },
@@ -3424,6 +3512,7 @@
         "id": "fortifiedwine_dryvermouth"
       }
     ],
+    "category": "martini",
     "glass": "coupe",
     "mix": "stirred"
   },
@@ -3451,6 +3540,7 @@
         "id": "liqueur_absinthe"
       }
     ],
+    "category": "martini",
     "glass": "coupe",
     "mix": "stirred"
   },
@@ -3487,6 +3577,7 @@
         "unit": "whole"
       }
     ],
+    "category": "martini",
     "glass": "coupe",
     "mix": "build"
   },
@@ -3526,6 +3617,7 @@
         "unit": "whole"
       }
     ],
+    "category": "martini",
     "glass": "rocks",
     "mix": "stirred"
   },
@@ -3564,6 +3656,7 @@
         "id": "liqueur_maraschino"
       }
     ],
+    "category": "martini",
     "glass": "coupe",
     "mix": "stirred"
   },
@@ -3607,6 +3700,7 @@
         "unit": "whole"
       }
     ],
+    "category": "martini",
     "glass": "coupe",
     "mix": "stirred"
   },
@@ -3637,6 +3731,7 @@
         "id": "liqueur_amaro_carciofo"
       }
     ],
+    "category": "martini",
     "glass": "coupe",
     "mix": "stirred"
   },
@@ -3683,6 +3778,7 @@
         "unit": "whole"
       }
     ],
+    "category": "martini",
     "glass": "coupe",
     "mix": "stirred"
   },
@@ -3718,6 +3814,7 @@
         "id": "spice_nutmeg"
       }
     ],
+    "category": "oldfashioned",
     "glass": "rocks",
     "mix": "build"
   },
@@ -3753,6 +3850,7 @@
         "unit": "whole"
       }
     ],
+    "category": "oldfashioned",
     "glass": "coupe",
     "mix": "stirred"
   },
@@ -3794,6 +3892,7 @@
         "id": "fruit_cherry"
       }
     ],
+    "category": "oldfashioned",
     "glass": "coupe",
     "mix": "stirred"
   },
@@ -3833,6 +3932,7 @@
         "unit": "whole"
       }
     ],
+    "category": "martini",
     "glass": "coupe",
     "mix": "stirred"
   },
@@ -3868,6 +3968,7 @@
         "unit": "whole"
       }
     ],
+    "category": "martini",
     "glass": "coupe",
     "mix": "stirred"
   },
@@ -3893,6 +3994,7 @@
         "id": "liqueur_cremedementhe"
       }
     ],
+    "category": "oldfashioned",
     "glass": "coupe",
     "mix": "stirred"
   },
@@ -3929,6 +4031,7 @@
         "id": "syrup_grenadine"
       }
     ],
+    "category": "martini",
     "glass": "coupe",
     "mix": "stirred"
   },
@@ -3972,6 +4075,7 @@
         "unit": "whole"
       }
     ],
+    "category": "martini",
     "glass": "coupe",
     "mix": "stirred"
   },
@@ -3999,6 +4103,7 @@
         "id": "brandy_apple"
       }
     ],
+    "category": "oldfashioned",
     "glass": "coupe",
     "mix": "stirred"
   },
@@ -4023,6 +4128,7 @@
         "id": "liqueur_amaretto"
       }
     ],
+    "category": "oldfashioned",
     "glass": "coupe",
     "mix": "build"
   },
@@ -4070,6 +4176,7 @@
         "unit": "whole"
       }
     ],
+    "category": "martini",
     "glass": "coupe",
     "mix": "stirred"
   },
@@ -4106,6 +4213,7 @@
         "id": "liqueur_amaro_fernet"
       }
     ],
+    "category": "martini",
     "glass": "coupe",
     "mix": "stirred"
   },
@@ -4142,6 +4250,7 @@
         "unit": "whole"
       }
     ],
+    "category": "oldfashioned",
     "glass": "coupe",
     "mix": "stirred"
   },
@@ -4203,6 +4312,7 @@
         "unit": "whole"
       }
     ],
+    "category": "oldfashioned",
     "glass": "rocks",
     "mix": "stirred"
   },
@@ -4240,6 +4350,7 @@
         "id": "fruit_cherry"
       }
     ],
+    "category": "martini",
     "glass": "coupe",
     "mix": "stirred"
   },
@@ -4287,6 +4398,7 @@
         "unit": "whole"
       }
     ],
+    "category": "oldfashioned",
     "glass": "coupe",
     "mix": "stirred"
   },
@@ -4330,6 +4442,7 @@
         "id": "spice_mint"
       }
     ],
+    "category": "oldfashioned",
     "glass": "coupe",
     "mix": "stirred"
   },
@@ -4373,6 +4486,7 @@
         "id": "syrup_simple"
       }
     ],
+    "category": "martini",
     "glass": "rocks",
     "mix": "stirred"
   },
@@ -4411,6 +4525,7 @@
         "unit": "whole"
       }
     ],
+    "category": "martini",
     "glass": "rocks",
     "mix": "stirred"
   },
@@ -4454,6 +4569,7 @@
         "unit": "whole"
       }
     ],
+    "category": "martini",
     "glass": "rocks",
     "mix": "stirred"
   },
@@ -4485,6 +4601,7 @@
         "id": "egg_white"
       }
     ],
+    "category": "daiquiri",
     "glass": "coupe",
     "mix": "shaken"
   },
@@ -4516,6 +4633,7 @@
         "id": "egg_white"
       }
     ],
+    "category": "daiquiri",
     "glass": "coupe",
     "mix": "shaken"
   },
@@ -4552,6 +4670,7 @@
         "id": "bitters_aromatic"
       }
     ],
+    "category": "daiquiri",
     "glass": "coupe",
     "mix": "shaken"
   },
@@ -4592,6 +4711,7 @@
         "id": "spice_mint"
       }
     ],
+    "category": "daiquiri",
     "glass": "coupe",
     "mix": "shaken"
   },
@@ -4626,6 +4746,7 @@
         "unit": "whole"
       }
     ],
+    "category": "daiquiri",
     "glass": "coupe",
     "mix": "shaken"
   },
@@ -4655,6 +4776,7 @@
         "id": "syrup_honey"
       }
     ],
+    "category": "daiquiri",
     "glass": "coupe",
     "mix": "shaken"
   },
@@ -4693,6 +4815,7 @@
         "unit": "whole"
       }
     ],
+    "category": "daiquiri",
     "glass": "coupe",
     "mix": "shaken"
   },
@@ -4732,6 +4855,7 @@
         "unit": "whole"
       }
     ],
+    "category": "daiquiri",
     "glass": "coupe",
     "mix": "shaken"
   },
@@ -4772,6 +4896,7 @@
         "unit": "whole"
       }
     ],
+    "category": "sidecar",
     "glass": "coupe",
     "mix": "shaken"
   },
@@ -4823,6 +4948,7 @@
         "id": "fruit_cherry"
       }
     ],
+    "category": "daiquiri",
     "glass": "coupe",
     "mix": "shaken"
   },
@@ -4867,6 +4993,7 @@
         "id": "egg_white"
       }
     ],
+    "category": "daiquiri",
     "glass": "coupe",
     "mix": "shaken"
   },
@@ -4906,6 +5033,7 @@
         "id": "egg_white"
       }
     ],
+    "category": "sidecar",
     "glass": "coupe",
     "mix": "shaken"
   },
@@ -4944,6 +5072,7 @@
         "id": "bitters_orange"
       }
     ],
+    "category": "sidecar",
     "glass": "coupe",
     "mix": "shaken"
   },
@@ -4983,6 +5112,7 @@
         "id": "liqueur_absinthe"
       }
     ],
+    "category": "sidecar",
     "glass": "coupe",
     "mix": "shaken"
   },
@@ -5020,6 +5150,7 @@
         "id": "egg_white"
       }
     ],
+    "category": "sidecar",
     "glass": "coupe",
     "mix": "shaken"
   },
@@ -5068,6 +5199,7 @@
         "unit": "whole"
       }
     ],
+    "category": "daiquiri",
     "glass": "coupe",
     "mix": "shaken"
   },
@@ -5108,6 +5240,7 @@
         "id": "liqueur_absinthe"
       }
     ],
+    "category": "sidecar",
     "glass": "coupe",
     "mix": "shaken"
   },
@@ -5143,6 +5276,7 @@
         "id": "juice_lemon"
       }
     ],
+    "category": "daiquiri",
     "glass": "coupe",
     "mix": "shaken"
   },
@@ -5177,6 +5311,7 @@
         "id": "liqueur_absinthe"
       }
     ],
+    "category": "daiquiri",
     "glass": "coupe",
     "mix": "shaken"
   },
@@ -5224,6 +5359,7 @@
         "unit": "whole"
       }
     ],
+    "category": "daiquiri",
     "glass": "coupe",
     "mix": "shaken"
   },
@@ -5260,6 +5396,7 @@
         "id": "bitters_aromatic"
       }
     ],
+    "category": "daiquiri",
     "glass": "coupe",
     "mix": "shaken"
   },
@@ -5303,6 +5440,7 @@
         "id": "egg_white"
       }
     ],
+    "category": "daiquiri",
     "glass": "coupe",
     "mix": "shaken"
   },
@@ -5338,6 +5476,7 @@
         "id": "juice_lime"
       }
     ],
+    "category": "sidecar",
     "glass": "coupe",
     "mix": "shaken"
   },
@@ -5373,6 +5512,7 @@
         "id": "juice_lemon"
       }
     ],
+    "category": "sidecar",
     "glass": "coupe",
     "mix": "shaken"
   },
@@ -5416,6 +5556,7 @@
         "id": "spice_mint"
       }
     ],
+    "category": "daiquiri",
     "glass": "coupe",
     "mix": "shaken"
   },
@@ -5451,6 +5592,7 @@
         "id": "juice_lemon"
       }
     ],
+    "category": "daiquiri",
     "glass": "coupe",
     "mix": "shaken"
   },
@@ -5478,6 +5620,7 @@
         "id": "juice_lime"
       }
     ],
+    "category": "daiquiri",
     "glass": "coupe",
     "mix": "shaken"
   },
@@ -5511,6 +5654,7 @@
         "id": "juice_lemon"
       }
     ],
+    "category": "sidecar",
     "glass": "coupe",
     "mix": "shaken"
   },
@@ -5556,6 +5700,7 @@
         "unit": "whole"
       }
     ],
+    "category": "daiquiri",
     "glass": "coupe",
     "mix": "shaken"
   },
@@ -5604,6 +5749,7 @@
         "unit": "whole"
       }
     ],
+    "category": "daiquiri",
     "glass": "coupe",
     "mix": "shaken"
   },
@@ -5647,6 +5793,7 @@
         "id": "fruit_cherry"
       }
     ],
+    "category": "daiquiri",
     "glass": "rocks",
     "mix": "shaken"
   },
@@ -5694,6 +5841,7 @@
         "id": "fruit_cucumber"
       }
     ],
+    "category": "daiquiri",
     "glass": "coupe",
     "mix": "shaken"
   },
@@ -5731,6 +5879,7 @@
         "id": "juice_lemon"
       }
     ],
+    "category": "daiquiri",
     "glass": "coupe",
     "mix": "shaken"
   },
@@ -5764,6 +5913,7 @@
         "id": "syrup_grenadine"
       }
     ],
+    "category": "daiquiri",
     "glass": "coupe",
     "mix": "shaken"
   },
@@ -5794,6 +5944,7 @@
         "id": "egg_white"
       }
     ],
+    "category": "daiquiri",
     "glass": "coupe",
     "mix": "shaken"
   },
@@ -5829,6 +5980,7 @@
         "id": "syrup_orgeat"
       }
     ],
+    "category": "daiquiri",
     "glass": "coupe",
     "mix": "shaken"
   },
@@ -5867,6 +6019,7 @@
         "id": "liqueur_absinthe"
       }
     ],
+    "category": "daiquiri",
     "glass": "coupe",
     "mix": "shaken"
   },
@@ -5899,6 +6052,7 @@
         "id": "juice_lemon"
       }
     ],
+    "category": "daiquiri",
     "glass": "rocks",
     "mix": "shaken"
   },
@@ -5927,6 +6081,7 @@
         "id": "syrup_grenadine"
       }
     ],
+    "category": "daiquiri",
     "glass": "coupe",
     "mix": "shaken"
   },
@@ -5961,6 +6116,7 @@
         "id": "juice_lemon"
       }
     ],
+    "category": "daiquiri",
     "glass": "coupe",
     "mix": "shaken"
   },
@@ -6001,6 +6157,7 @@
         "unit": "whole"
       }
     ],
+    "category": "sidecar",
     "glass": "coupe",
     "mix": "shaken"
   },
@@ -6048,6 +6205,7 @@
         "unit": "whole"
       }
     ],
+    "category": "sidecar",
     "glass": "coupe",
     "mix": "shaken"
   },
@@ -6094,6 +6252,7 @@
         "unit": "whole"
       }
     ],
+    "category": "daiquiri",
     "glass": "coupe",
     "mix": "shaken"
   },
@@ -6127,6 +6286,7 @@
         "id": "syrup_maple"
       }
     ],
+    "category": "daiquiri",
     "glass": "coupe",
     "mix": "shaken"
   },
@@ -6173,6 +6333,7 @@
         "unit": "whole"
       }
     ],
+    "category": "daiquiri",
     "glass": "coupe",
     "mix": "shaken"
   },
@@ -6201,6 +6362,7 @@
         "id": "juice_lime"
       }
     ],
+    "category": "daiquiri",
     "glass": "coupe",
     "mix": "shaken"
   },
@@ -6237,6 +6399,7 @@
         "id": "bitters_aromatic"
       }
     ],
+    "category": "daiquiri",
     "glass": "coupe",
     "mix": "shaken"
   },
@@ -6285,6 +6448,7 @@
         "unit": "whole"
       }
     ],
+    "category": "daiquiri",
     "glass": "coupe",
     "mix": "shaken"
   },
@@ -6321,6 +6485,7 @@
         "id": "liqueur_absinthe"
       }
     ],
+    "category": "sidecar",
     "glass": "coupe",
     "mix": "shaken"
   },
@@ -6370,6 +6535,7 @@
         "unit": "whole"
       }
     ],
+    "category": "daiquiri",
     "glass": "highball",
     "mix": "shaken"
   },
@@ -6399,6 +6565,7 @@
         "id": "juice_lime"
       }
     ],
+    "category": "daiquiri",
     "glass": "coupe",
     "mix": "shaken"
   },
@@ -6430,6 +6597,7 @@
         "id": "syrup_honey"
       }
     ],
+    "category": "daiquiri",
     "glass": "coupe",
     "mix": "shaken"
   },
@@ -6468,6 +6636,7 @@
         "id": "syrup_honey"
       }
     ],
+    "category": "daiquiri",
     "glass": "coupe",
     "mix": "shaken"
   },
@@ -6512,6 +6681,7 @@
         "id": "bitters_celery"
       }
     ],
+    "category": "daiquiri",
     "glass": "coupe",
     "mix": "shaken"
   },
@@ -6561,6 +6731,7 @@
         "id": "spice_mint"
       }
     ],
+    "category": "daiquiri",
     "glass": "coupe",
     "mix": "shaken"
   },
@@ -6595,6 +6766,7 @@
         "id": "bitters_aromatic"
       }
     ],
+    "category": "daiquiri",
     "glass": "coupe",
     "mix": "shaken"
   },
@@ -6645,6 +6817,7 @@
         "id": "spice_mint"
       }
     ],
+    "category": "daiquiri",
     "glass": "coupe",
     "mix": "shaken"
   },
@@ -6682,6 +6855,7 @@
         "unit": "whole"
       }
     ],
+    "category": "tiki",
     "glass": "tiki",
     "mix": "shaken"
   },
@@ -6722,6 +6896,7 @@
         "unit": "whole"
       }
     ],
+    "category": "tiki",
     "glass": "tiki",
     "mix": "shaken"
   },
@@ -6766,6 +6941,7 @@
         "unit": "whole"
       }
     ],
+    "category": "tiki",
     "glass": "tiki",
     "mix": "shaken"
   },
@@ -6809,6 +6985,7 @@
         "id": "syrup_simple"
       }
     ],
+    "category": "tiki",
     "glass": "tiki",
     "mix": "shaken"
   },
@@ -6869,6 +7046,7 @@
         "id": "spice_mint"
       }
     ],
+    "category": "tiki",
     "glass": "highball",
     "mix": "shaken"
   },
@@ -6923,6 +7101,7 @@
         "id": "egg_white"
       }
     ],
+    "category": "tiki",
     "glass": "tiki",
     "mix": "shaken"
   },
@@ -6972,6 +7151,7 @@
         "unit": "whole"
       }
     ],
+    "category": "tiki",
     "glass": "tiki",
     "mix": "shaken"
   },
@@ -7038,6 +7218,7 @@
         "id": "fruit_cherry"
       }
     ],
+    "category": "tiki",
     "glass": "highball",
     "mix": "shaken"
   },
@@ -7075,6 +7256,7 @@
         "id": "syrup_grenadine"
       }
     ],
+    "category": "tiki",
     "glass": "tiki",
     "mix": "shaken"
   },
@@ -7118,6 +7300,7 @@
         "unit": "whole"
       }
     ],
+    "category": "tiki",
     "glass": "coupe",
     "mix": "shaken"
   },
@@ -7167,6 +7350,7 @@
         "unit": "whole"
       }
     ],
+    "category": "tiki",
     "glass": "coupe",
     "mix": "shaken"
   },
@@ -7213,6 +7397,7 @@
         "unit": "whole"
       }
     ],
+    "category": "tiki",
     "glass": "tiki",
     "mix": "shaken"
   },
@@ -7275,6 +7460,7 @@
         "id": "spice_mint"
       }
     ],
+    "category": "tiki",
     "glass": "rocks",
     "mix": "shaken"
   },
@@ -7324,6 +7510,7 @@
         "id": "syrup_orgeat"
       }
     ],
+    "category": "tiki",
     "glass": "rocks",
     "mix": "shaken"
   },
@@ -7399,6 +7586,7 @@
         "id": "spice_mint"
       }
     ],
+    "category": "tiki",
     "glass": "rocks",
     "mix": "shaken"
   },
@@ -7439,6 +7627,7 @@
         "id": "fruit_lime"
       }
     ],
+    "category": "tiki",
     "glass": "rocks",
     "mix": "build"
   },
@@ -7481,6 +7670,7 @@
         "id": "bitters_aromatic"
       }
     ],
+    "category": "tiki",
     "glass": "tiki",
     "mix": "shaken"
   },
@@ -7521,6 +7711,7 @@
         "id": "syrup_simple"
       }
     ],
+    "category": "tiki",
     "glass": "tiki",
     "mix": "shaken"
   },
@@ -7552,6 +7743,7 @@
         "id": "sugar_demerara"
       }
     ],
+    "category": "tiki",
     "glass": "rocks",
     "mix": "shaken"
   },
@@ -7589,6 +7781,7 @@
         "id": "juice_lime"
       }
     ],
+    "category": "tiki",
     "glass": "tiki",
     "mix": "shaken"
   },
@@ -7629,6 +7822,7 @@
         "id": "juice_pineapple"
       }
     ],
+    "category": "tiki",
     "glass": "rocks",
     "mix": "shaken"
   },
@@ -7662,6 +7856,7 @@
         "id": "bitters_aromatic"
       }
     ],
+    "category": "highball",
     "glass": "highball",
     "mix": "stirred"
   },
@@ -7691,6 +7886,7 @@
         "id": "juice_lime"
       }
     ],
+    "category": "highball",
     "glass": "highball",
     "mix": "stirred"
   },
@@ -7723,6 +7919,7 @@
         "id": "liqueur_absinthe"
       }
     ],
+    "category": "highball",
     "glass": "highball",
     "mix": "stirred"
   },
@@ -7759,6 +7956,7 @@
         "unit": "whole"
       }
     ],
+    "category": "highball",
     "glass": "highball",
     "mix": "stirred"
   },
@@ -7796,6 +7994,7 @@
         "unit": "whole"
       }
     ],
+    "category": "highball",
     "glass": "highball",
     "mix": "build"
   },
@@ -7829,6 +8028,7 @@
         "id": "soda_club"
       }
     ],
+    "category": "highball",
     "glass": "highball",
     "mix": "stirred"
   },
@@ -7877,6 +8077,7 @@
         "id": "soda_club"
       }
     ],
+    "category": "highball",
     "glass": "highball",
     "mix": "stirred"
   },
@@ -7934,6 +8135,7 @@
         "id": "soda_club"
       }
     ],
+    "category": "highball",
     "glass": "highball",
     "mix": "stirred"
   },
@@ -7981,6 +8183,7 @@
         "unit": "whole"
       }
     ],
+    "category": "highball",
     "glass": "highball",
     "mix": "stirred"
   },
@@ -8021,6 +8224,7 @@
         "unit": "whole"
       }
     ],
+    "category": "highball",
     "glass": "highball",
     "mix": "stirred"
   },
@@ -8073,6 +8277,7 @@
         "id": "spice_mint"
       }
     ],
+    "category": "highball",
     "glass": "highball",
     "mix": "stirred"
   },
@@ -8099,6 +8304,7 @@
         "id": "wine_sparkling"
       }
     ],
+    "category": "highball",
     "glass": "highball",
     "mix": "stirred"
   },
@@ -8138,6 +8344,7 @@
         "id": "wine_sparkling"
       }
     ],
+    "category": "highball",
     "glass": "coupe",
     "mix": "stirred"
   },
@@ -8176,6 +8383,7 @@
         "id": "wine_sparkling"
       }
     ],
+    "category": "highball",
     "glass": "highball",
     "mix": "stirred"
   },
@@ -8219,6 +8427,7 @@
         "unit": "whole"
       }
     ],
+    "category": "highball",
     "glass": "rocks",
     "mix": "stirred"
   },
@@ -8267,6 +8476,7 @@
         "id": "wine_sparkling"
       }
     ],
+    "category": "highball",
     "glass": "highball",
     "mix": "stirred"
   },
@@ -8305,6 +8515,7 @@
         "unit": "whole"
       }
     ],
+    "category": "highball",
     "glass": "highball",
     "mix": "stirred"
   },
@@ -8359,6 +8570,7 @@
         "id": "liqueur_amaro_aperitivo"
       }
     ],
+    "category": "highball",
     "glass": "highball",
     "mix": "stirred"
   },
@@ -8400,6 +8612,7 @@
         "unit": "whole"
       }
     ],
+    "category": "highball",
     "glass": "highball",
     "mix": "stirred"
   },
@@ -8443,6 +8656,7 @@
         "id": "soda_tonic"
       }
     ],
+    "category": "highball",
     "glass": "highball",
     "mix": "stirred"
   },
@@ -8480,6 +8694,7 @@
         "id": "spice_nutmeg"
       }
     ],
+    "category": "flip",
     "glass": "coupe",
     "mix": "shaken"
   },
@@ -8512,6 +8727,7 @@
         "id": "egg_white"
       }
     ],
+    "category": "flip",
     "glass": "coupe",
     "mix": "shaken"
   },
@@ -8557,6 +8773,7 @@
         "id": "spice_cinnamon"
       }
     ],
+    "category": "flip",
     "glass": "coupe",
     "mix": "shaken"
   },
@@ -8592,6 +8809,7 @@
         "id": "egg_white"
       }
     ],
+    "category": "flip",
     "glass": "coupe",
     "mix": "shaken"
   },
@@ -8613,6 +8831,7 @@
         "id": "egg_white"
       }
     ],
+    "category": "flip",
     "glass": "coupe",
     "mix": "shaken"
   },
@@ -8640,6 +8859,7 @@
         "id": "cream_heavy"
       }
     ],
+    "category": "flip",
     "glass": "coupe",
     "mix": "shaken"
   },
@@ -8701,6 +8921,7 @@
         "id": "spice_nutmeg"
       }
     ],
+    "category": "flip",
     "glass": "coupe",
     "mix": "shaken"
   }
