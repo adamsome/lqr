@@ -4,12 +4,7 @@
     "name": "Old Fashioned",
     "year": 1806,
     "reference": "Proulx, Theodore. (1888). *Bartender's Manual, The.* Refers to Columbia Repository, 1806.",
-    "modifiedAt": "2017-06-11T02:03:16.813Z",
-    "list": "Spirited – Whiskey",
-    "notes": [
-      "Muddle sugar w/ bitters",
-      "Build in rocks glass"
-    ],
+    "notes": "Muddle sugar w/ bitters. Build in rocks glass.",
     "ingredients": [
       {
         "quantity": 2,
@@ -37,7 +32,9 @@
     ],
     "category": "oldfashioned",
     "glass": "rocks",
-    "mix": "build"
+    "mix": "build",
+    "createdAt": "2017-06-11T02:03:16.813Z",
+    "updatedAt": "2017-06-11T02:03:16.813Z"
   },
   {
     "id": "toronto",
@@ -45,12 +42,7 @@
     "year": 1922,
     "reference": "Vermeire, Robert. (1922). *Cocktails: How to Mix Them.*",
     "basis": "old_fashioned",
-    "modifiedAt": "2017-06-11T02:03:16.813Z",
-    "list": "Spirited – Whiskey",
-    "notes": [
-      "Muddle sugar w/ fernet",
-      "Build in rocks glass"
-    ],
+    "notes": "Muddle sugar w/ fernet. Build in rocks glass.",
     "ingredients": [
       {
         "quantity": 2,
@@ -78,7 +70,9 @@
     ],
     "category": "oldfashioned",
     "glass": "rocks",
-    "mix": "build"
+    "mix": "build",
+    "createdAt": "2017-06-11T02:03:16.813Z",
+    "updatedAt": "2017-06-11T02:03:16.813Z"
   },
   {
     "id": "oaxaca",
@@ -86,12 +80,7 @@
     "year": 2007,
     "reference": "Ward, Phil. Death + Co, New York (2007).",
     "basis": "old_fashioned",
-    "modifiedAt": "2017-06-11T02:03:16.813Z",
-    "list": "Spirited – Whiskey",
-    "notes": [
-      "Muddle sugar w/ bitters",
-      "Build in rocks glass"
-    ],
+    "notes": "Muddle sugar w/ bitters. Build in rocks glass.",
     "ingredients": [
       {
         "quantity": 1.5,
@@ -125,21 +114,16 @@
     ],
     "category": "oldfashioned",
     "glass": "rocks",
-    "mix": "build"
+    "mix": "build",
+    "createdAt": "2017-06-11T02:03:16.813Z",
+    "updatedAt": "2017-06-11T02:03:16.813Z"
   },
   {
     "id": "mint_julep",
     "name": "Mint Julep",
     "year": 1862,
     "reference": "Thomas, Jerry. (1862). *Bar-Tender's Guide.*",
-    "modifiedAt": "2016-02-03T00:52:34.035Z",
-    "list": "Spirited – Whiskey",
-    "notes": [
-      "Muddle mint w/ syrup in julep cup",
-      "Add bourbon",
-      "Swizzle & top w/ pebble ice",
-      "Garnish w/ 3 mint sprigs garnish"
-    ],
+    "notes": "Muddle mint w/ syrup in julep cup. Add bourbon. Swizzle & top w/ pebble ice. Garnish w/ 3 mint sprigs garnish.",
     "ingredients": [
       {
         "quantity": 2.5,
@@ -160,18 +144,16 @@
     ],
     "category": "oldfashioned",
     "glass": "rocks",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2016-02-03T00:52:34.035Z",
+    "updatedAt": "2016-02-03T00:52:34.035Z"
   },
   {
     "id": "improved_whiskey_cocktail",
     "name": "Improved Whiskey Cocktail",
     "year": 1876,
     "reference": "Thomas, Jerry. (1876). *Bar-Tender's Guide.*",
-    "modifiedAt": "2016-02-03T00:26:47.945Z",
-    "list": "Spirited – Whiskey",
-    "notes": [
-      "Strain into rocks glass w/ large cube"
-    ],
+    "notes": "Strain into rocks glass w/ large cube.",
     "ingredients": [
       {
         "quantity": 2,
@@ -203,15 +185,15 @@
     ],
     "category": "oldfashioned",
     "glass": "rocks",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2016-02-03T00:26:47.945Z",
+    "updatedAt": "2016-02-03T00:26:47.945Z"
   },
   {
     "id": "brain_duster",
     "name": "Brain Duster",
     "year": 1895,
     "reference": "Kappeler, George J. (1895). *Modern American Drinks.*",
-    "modifiedAt": "2017-06-11T02:04:10.544Z",
-    "list": "Spirited – Whiskey",
     "ingredients": [
       {
         "quantity": 1,
@@ -237,7 +219,9 @@
     ],
     "category": "martini",
     "glass": "rocks",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2017-06-11T02:04:10.544Z",
+    "updatedAt": "2017-06-11T02:04:10.544Z"
   },
   {
     "id": "hearns",
@@ -245,8 +229,6 @@
     "year": 1920,
     "reference": "McGarry, Jack. The Dead Rabbit, New York (2007).",
     "basis": "brain_duster",
-    "modifiedAt": "2017-06-11T02:04:10.544Z",
-    "list": "Spirited – Whiskey",
     "ingredients": [
       {
         "quantity": 1,
@@ -272,21 +254,16 @@
     ],
     "category": "martini",
     "glass": "rocks",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2017-06-11T02:04:10.544Z",
+    "updatedAt": "2017-06-11T02:04:10.544Z"
   },
   {
     "id": "sazerac",
     "name": "Sazerac",
     "year": 1908,
     "reference": "Boothby, William. (1908). *World's Drinks and How to Mix Them.*",
-    "modifiedAt": "2017-06-11T03:22:56.904Z",
-    "list": "Spirited – Whiskey",
-    "notes": [
-      "Muddle sugar w/ bitters",
-      "Add whiskey and ice",
-      "Stir, strain into rocks glass",
-      "Express lemon twist & discard"
-    ],
+    "notes": "Muddle sugar w/ bitters. Add whiskey and ice. Stir, strain into rocks glass. Express lemon twist & discard.",
     "ingredients": [
       {
         "quantity": 2,
@@ -324,7 +301,9 @@
     ],
     "category": "oldfashioned",
     "glass": "rocks",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2017-06-11T03:22:56.904Z",
+    "updatedAt": "2017-06-11T03:22:56.904Z"
   },
   {
     "id": "carthusian",
@@ -332,11 +311,7 @@
     "year": 2014,
     "reference": "(2014). [Spice Kitchen & Bar](http://spicekitchenandbar.com/).",
     "basis": "sazerac",
-    "modifiedAt": "2017-06-11T03:22:56.904Z",
-    "list": "Spirited – Whiskey",
-    "notes": [
-      "Express lemon twist & discard"
-    ],
+    "notes": "Express lemon twist & discard.",
     "ingredients": [
       {
         "quantity": 2.5,
@@ -372,15 +347,15 @@
     ],
     "category": "oldfashioned",
     "glass": "rocks",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2017-06-11T03:22:56.904Z",
+    "updatedAt": "2017-06-11T03:22:56.904Z"
   },
   {
     "id": "up_to_date",
     "name": "Up To Date",
     "year": 1916,
     "reference": "Enslin, Hugo. (1916). *Recipe for Mixed Drinks.*",
-    "modifiedAt": "2016-02-03T01:42:51.062Z",
-    "list": "Spirited – Whiskey",
     "ingredients": [
       {
         "quantity": 2,
@@ -415,19 +390,17 @@
     ],
     "category": "martini",
     "glass": "rocks",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2016-02-03T01:42:51.062Z",
+    "updatedAt": "2016-02-03T01:42:51.062Z"
   },
   {
     "id": "boulevardier",
     "name": "Boulevardier",
     "year": 1922,
     "reference": "McElhone, Harry. (1922). *ABC of Mixing Cocktails.* Gwynne, Erskine (creator).",
-    "modifiedAt": "2023-  01-08T03:38:11.282Z",
-    "list": "Spirited – Whiskey",
     "glass": "coupe",
-    "notes": [
-      "Coupe or rocks glass w/ ice"
-    ],
+    "notes": "Coupe or rocks glass w/ ice.",
     "ingredients": [
       {
         "quantity": 1,
@@ -454,7 +427,9 @@
       }
     ],
     "category": "martini",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2023-  01-08T03:38:11.282Z",
+    "updatedAt": "2023-  01-08T03:38:11.282Z"
   },
   {
     "id": "old_pal",
@@ -462,8 +437,6 @@
     "year": 1922,
     "reference": "McElhone, Harry. (1922). *ABC of Mixing Cocktails.* Robertson, Sparrow (creator).",
     "basis": "boulevardier",
-    "modifiedAt": "2023-01-08T03:38:11.282Z",
-    "list": "Spirited – Whiskey",
     "glass": "coupe",
     "ingredients": [
       {
@@ -486,14 +459,14 @@
       }
     ],
     "category": "martini",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2023-01-08T03:38:11.282Z",
+    "updatedAt": "2023-01-08T03:38:11.282Z"
   },
   {
     "id": "new_friend",
     "name": "New Friend",
     "basis": "boulevardier",
-    "modifiedAt": "2023-01-08T03:38:11.282Z",
-    "list": "Spirited – Whiskey",
     "glass": "coupe",
     "ingredients": [
       {
@@ -521,7 +494,9 @@
       }
     ],
     "category": "martini",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2023-01-08T03:38:11.282Z",
+    "updatedAt": "2023-01-08T03:38:11.282Z"
   },
   {
     "id": "left_hand",
@@ -529,8 +504,6 @@
     "year": 2007,
     "reference": "Ross, Sam (2007). Milk & Honey, New York.",
     "basis": "boulevardier",
-    "modifiedAt": "2023-01-08T03:38:11.282Z",
-    "list": "Spirited – Whiskey",
     "glass": "coupe",
     "ingredients": [
       {
@@ -564,7 +537,9 @@
       }
     ],
     "category": "martini",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2023-01-08T03:38:11.282Z",
+    "updatedAt": "2023-01-08T03:38:11.282Z"
   },
   {
     "id": "brown_bomber",
@@ -572,8 +547,6 @@
     "year": 2008,
     "reference": "Meehan, Jim. (2008, Spring).",
     "basis": "boulevardier",
-    "modifiedAt": "2023-01-08T03:38:11.282Z",
-    "list": "Spirited – Whiskey",
     "glass": "coupe",
     "ingredients": [
       {
@@ -596,7 +569,9 @@
       }
     ],
     "category": "martini",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2023-01-08T03:38:11.282Z",
+    "updatedAt": "2023-01-08T03:38:11.282Z"
   },
   {
     "id": "man_about_town",
@@ -604,8 +579,6 @@
     "year": 2012,
     "reference": "Pelegrin, Victor. (2012). New York.",
     "basis": "boulevardier",
-    "modifiedAt": "2023-01-08T03:38:11.282Z",
-    "list": "Spirited – Whiskey",
     "glass": "coupe",
     "ingredients": [
       {
@@ -645,7 +618,9 @@
       }
     ],
     "category": "martini",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2023-01-08T03:38:11.282Z",
+    "updatedAt": "2023-01-08T03:38:11.282Z"
   },
   {
     "id": "banana_boulevardier",
@@ -653,8 +628,6 @@
     "year": 2022,
     "reference": "Suderman, Peter. (2022). *Cocktails With Suderman.*",
     "basis": "boulevardier",
-    "modifiedAt": "2023-01-08T03:38:11.282Z",
-    "list": "Spirited – Whiskey",
     "glass": "coupe",
     "ingredients": [
       {
@@ -687,7 +660,9 @@
       }
     ],
     "category": "martini",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2023-01-08T03:38:11.282Z",
+    "updatedAt": "2023-01-08T03:38:11.282Z"
   },
   {
     "id": "fielding_mellish",
@@ -695,8 +670,6 @@
     "year": 2022,
     "reference": "Suderman, Peter. (2022). *Cocktails With Suderman.*",
     "basis": "boulevardier",
-    "modifiedAt": "2023-01-08T03:38:11.282Z",
-    "list": "Spirited – Whiskey",
     "glass": "coupe",
     "ingredients": [
       {
@@ -737,15 +710,15 @@
       }
     ],
     "category": "martini",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2023-01-08T03:38:11.282Z",
+    "updatedAt": "2023-01-08T03:38:11.282Z"
   },
   {
     "id": "blood_and_sand",
     "name": "Blood and Sand",
     "year": 1930,
     "reference": "Meehan, Jim. (2011). *PDT Cocktail Book, The.*",
-    "modifiedAt": "2016-02-04T22:03:12.710Z",
-    "list": "Spirited – Whiskey",
     "ingredients": [
       {
         "quantity": 1.5,
@@ -779,15 +752,15 @@
     ],
     "category": "martini",
     "glass": "rocks",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2016-02-04T22:03:12.710Z",
+    "updatedAt": "2016-02-04T22:03:12.710Z"
   },
   {
     "id": "frisco",
     "name": "Frisco",
     "year": 1908,
     "reference": "Boothby, William. (1908). *Boothby's World's Drinks.*",
-    "modifiedAt": "2016-02-03T00:51:44.752Z",
-    "list": "Spirited – Whiskey",
     "ingredients": [
       {
         "quantity": 2,
@@ -809,18 +782,16 @@
     ],
     "category": "oldfashioned",
     "glass": "rocks",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2016-02-03T00:51:44.752Z",
+    "updatedAt": "2016-02-03T00:51:44.752Z"
   },
   {
     "id": "algonquin",
     "name": "Algonquin",
     "year": 1935,
     "reference": "Fougner, Selmer. (1935). *Along the Wine Trail.*",
-    "modifiedAt": "2016-02-05T01:55:12.599Z",
-    "list": "Spirited – Whiskey",
-    "notes": [
-      "Stir, serve up"
-    ],
+    "notes": "Stir, serve up.",
     "ingredients": [
       {
         "quantity": 2,
@@ -840,7 +811,9 @@
     ],
     "category": "martini",
     "glass": "rocks",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2016-02-05T01:55:12.599Z",
+    "updatedAt": "2016-02-05T01:55:12.599Z"
   },
   {
     "id": "field_cocktail",
@@ -848,11 +821,7 @@
     "year": 2010,
     "reference": "Meehan, Jim. (2010. Spring). \"Tribute to Colin Peter Field, (manager), Hemingway Bar, Ritz Hotel, Paris.\"",
     "basis": "algonquin",
-    "modifiedAt": "2016-02-05T01:55:12.599Z",
-    "list": "Spirited – Whiskey",
-    "notes": [
-      "Pineapple leaf"
-    ],
+    "notes": "Pineapple leaf.",
     "ingredients": [
       {
         "quantity": 2,
@@ -874,15 +843,15 @@
     ],
     "category": "martini",
     "glass": "rocks",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2016-02-05T01:55:12.599Z",
+    "updatedAt": "2016-02-05T01:55:12.599Z"
   },
   {
     "id": "blinker",
     "name": "Blinker",
     "year": 1935,
     "reference": "Duffy, Patrick Gavin. (1934). *Official Mixer’s Manual, The.*",
-    "modifiedAt": "2016-02-05T00:01:21.706Z",
-    "list": "Spirited – Whiskey",
     "ingredients": [
       {
         "quantity": 2,
@@ -908,7 +877,9 @@
     ],
     "category": "oldfashioned",
     "glass": "rocks",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2016-02-05T00:01:21.706Z",
+    "updatedAt": "2016-02-05T00:01:21.706Z"
   },
   {
     "id": "brown_derby",
@@ -916,8 +887,6 @@
     "year": 1930,
     "reference": "Buzza, & Cardozo. (1930s). *Hollywood Cocktails.*",
     "basis": "blinker",
-    "modifiedAt": "2016-02-05T00:01:21.706Z",
-    "list": "Spirited – Whiskey",
     "ingredients": [
       {
         "quantity": 2,
@@ -937,15 +906,15 @@
     ],
     "category": "oldfashioned",
     "glass": "rocks",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2016-02-05T00:01:21.706Z",
+    "updatedAt": "2016-02-05T00:01:21.706Z"
   },
   {
     "id": "blushing_betty",
     "name": "Blushing Betty",
     "reference": "Unknown. (n.d.)",
     "basis": "blinker",
-    "modifiedAt": "2016-02-05T00:01:21.706Z",
-    "list": "Spirited – Whiskey",
     "ingredients": [
       {
         "quantity": 1.5,
@@ -965,19 +934,16 @@
     ],
     "category": "oldfashioned",
     "glass": "rocks",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2016-02-05T00:01:21.706Z",
+    "updatedAt": "2016-02-05T00:01:21.706Z"
   },
   {
     "id": "monte_carlo",
     "name": "Monte Carlo",
     "year": 1948,
     "reference": "Embury, David. (1948). *Fine Art of Mixing Drinks, The.*",
-    "modifiedAt": "2020-12-21T02:01:17.793Z",
-    "list": "Spirited – Whiskey",
-    "notes": [
-      "Shaken",
-      "Rocks glass w/ ice"
-    ],
+    "notes": "Shaken. Rocks glass w/ ice.",
     "ingredients": [
       {
         "quantity": 2,
@@ -1016,7 +982,9 @@
     ],
     "category": "oldfashioned",
     "glass": "rocks",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2020-12-21T02:01:17.793Z",
+    "updatedAt": "2020-12-21T02:01:17.793Z"
   },
   {
     "id": "dead_rabbits_whiskey_cocktail",
@@ -1024,8 +992,6 @@
     "year": 2015,
     "reference": "Muldoon, Sean; McGarry, Jack; Schaffer, Ben. (2015). *Dead Rabbit Drinks Manual, The.*",
     "basis": "monte_carlo",
-    "modifiedAt": "2020-12-21T02:01:17.793Z",
-    "list": "Spirited – Whiskey",
     "ingredients": [
       {
         "quantity": 2,
@@ -1070,15 +1036,15 @@
     ],
     "category": "oldfashioned",
     "glass": "rocks",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2020-12-21T02:01:17.793Z",
+    "updatedAt": "2020-12-21T02:01:17.793Z"
   },
   {
     "id": "diamondback",
     "name": "Diamondback",
     "year": 1951,
     "reference": "Saucier, Ted. (1951). *Bottoms Up.* Lord Baltimore Hotel, Baltimore.",
-    "modifiedAt": "2016-02-04T03:20:55.391Z",
-    "list": "Spirited – Whiskey",
     "ingredients": [
       {
         "quantity": 2,
@@ -1101,15 +1067,15 @@
     ],
     "category": "oldfashioned",
     "glass": "rocks",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2016-02-04T03:20:55.391Z",
+    "updatedAt": "2016-02-04T03:20:55.391Z"
   },
   {
     "id": "revolver",
     "name": "Revolver",
     "year": 2007,
     "reference": "Santer, Joe. (2007). Bourbon and Branch, New York.",
-    "modifiedAt": "2016-02-04T03:01:40.825Z",
-    "list": "Spirited – Whiskey",
     "ingredients": [
       {
         "quantity": 2,
@@ -1135,15 +1101,15 @@
     ],
     "category": "oldfashioned",
     "glass": "rocks",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2016-02-04T03:01:40.825Z",
+    "updatedAt": "2016-02-04T03:01:40.825Z"
   },
   {
     "id": "harvest_moon",
     "name": "Harvest Moon",
     "year": 2007,
     "reference": "Eun, Daniel. (2007, Winter). PDT, New York.",
-    "modifiedAt": "2016-02-02T19:22:46.205Z",
-    "list": "Spirited – Whiskey",
     "ingredients": [
       {
         "quantity": 1.5,
@@ -1183,18 +1149,16 @@
     ],
     "category": "martini",
     "glass": "rocks",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2016-02-02T19:22:46.205Z",
+    "updatedAt": "2016-02-02T19:22:46.205Z"
   },
   {
     "id": "shruffs_end",
     "name": "Shruff’s End",
     "year": 2008,
     "reference": "Ward, Phil. Death + Co, New York (2008).",
-    "modifiedAt": "2023-04-28T04:32:05.116Z",
-    "list": "Spirited – Whiskey",
-    "notes": [
-      "Coupe"
-    ],
+    "notes": "Coupe.",
     "ingredients": [
       {
         "quantity": 1,
@@ -1223,15 +1187,15 @@
     ],
     "category": "oldfashioned",
     "glass": "coupe",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2023-04-28T04:32:05.116Z",
+    "updatedAt": "2023-04-28T04:32:05.116Z"
   },
   {
     "id": "manhattan",
     "name": "Manhattan",
     "year": 1884,
     "reference": "Byron, O. H. (1884). *Modern Bartender's Guide.*",
-    "modifiedAt": "2021-10-06T23:59:12.796Z",
-    "list": "Spirited – Manhattans",
     "ingredients": [
       {
         "quantity": 2,
@@ -1257,15 +1221,15 @@
     ],
     "category": "martini",
     "glass": "coupe",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2021-10-06T23:59:12.796Z",
+    "updatedAt": "2021-10-06T23:59:12.796Z"
   },
   {
     "id": "dry_manhattan",
     "name": "Dry Manhattan",
     "year": 1884,
     "basis": "manhattan",
-    "modifiedAt": "2021-10-06T23:59:12.796Z",
-    "list": "Spirited – Manhattans",
     "ingredients": [
       {
         "quantity": 2,
@@ -1292,15 +1256,15 @@
     ],
     "category": "martini",
     "glass": "coupe",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2021-10-06T23:59:12.796Z",
+    "updatedAt": "2021-10-06T23:59:12.796Z"
   },
   {
     "id": "perfect_manhattan",
     "name": "Perfect Manhattan",
     "year": 1884,
     "basis": "manhattan",
-    "modifiedAt": "2021-10-06T23:59:12.796Z",
-    "list": "Spirited – Manhattans",
     "ingredients": [
       {
         "quantity": 2,
@@ -1332,7 +1296,9 @@
     ],
     "category": "martini",
     "glass": "coupe",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2021-10-06T23:59:12.796Z",
+    "updatedAt": "2021-10-06T23:59:12.796Z"
   },
   {
     "id": "harvard",
@@ -1340,8 +1306,6 @@
     "year": 1895,
     "reference": "Kappeler, George. (1895). *Modern American Drinks.*",
     "basis": "manhattan",
-    "modifiedAt": "2021-10-06T23:59:12.796Z",
-    "list": "Spirited – Manhattans",
     "ingredients": [
       {
         "quantity": 2,
@@ -1367,14 +1331,14 @@
     ],
     "category": "martini",
     "glass": "coupe",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2021-10-06T23:59:12.796Z",
+    "updatedAt": "2021-10-06T23:59:12.796Z"
   },
   {
     "id": "saratoga",
     "name": "Saratoga",
     "basis": "manhattan",
-    "modifiedAt": "2021-10-06T23:59:12.796Z",
-    "list": "Spirited – Manhattans",
     "ingredients": [
       {
         "quantity": 1,
@@ -1405,15 +1369,15 @@
     ],
     "category": "martini",
     "glass": "coupe",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2021-10-06T23:59:12.796Z",
+    "updatedAt": "2021-10-06T23:59:12.796Z"
   },
   {
     "id": "hecklinger",
     "name": "Hecklinger",
     "year": 2014,
     "basis": "manhattan",
-    "modifiedAt": "2021-10-06T23:59:12.796Z",
-    "list": "Spirited – Manhattans",
     "ingredients": [
       {
         "quantity": 1,
@@ -1451,15 +1415,15 @@
     ],
     "category": "martini",
     "glass": "coupe",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2021-10-06T23:59:12.796Z",
+    "updatedAt": "2021-10-06T23:59:12.796Z"
   },
   {
     "id": "rob_roy",
     "name": "Rob Roy",
     "year": 1900,
     "reference": "*Cocktail Book, The: A Sideboard Manual for Gentlemen.* (1900). Old Waldorf Hotel bar.",
-    "modifiedAt": "2023-01-08T03:53:40.726Z",
-    "list": "Spirited – Manhattans",
     "ingredients": [
       {
         "quantity": 2.5,
@@ -1481,7 +1445,9 @@
     ],
     "category": "martini",
     "glass": "coupe",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2023-01-08T03:53:40.726Z",
+    "updatedAt": "2023-01-08T03:53:40.726Z"
   },
   {
     "id": "smoky_grove",
@@ -1489,11 +1455,7 @@
     "year": 2007,
     "reference": "Pogash, Jonathan. (2007). PDT, New York.",
     "basis": "rob_roy",
-    "modifiedAt": "2023-01-08T03:53:40.726Z",
-    "list": "Spirited – Manhattans",
-    "notes": [
-      "For orange bitters, use 1/2 Fee Brothers, 1/2 Regan's"
-    ],
+    "notes": "For orange bitters, use 1/2 Fee Brothers, 1/2 Regan's.",
     "ingredients": [
       {
         "quantity": 2,
@@ -1533,15 +1495,15 @@
     ],
     "category": "martini",
     "glass": "coupe",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2023-01-08T03:53:40.726Z",
+    "updatedAt": "2023-01-08T03:53:40.726Z"
   },
   {
     "id": "bobby_burns",
     "name": "Bobby Burns",
     "year": 1902,
     "reference": "*Fancy Drinks.* (1902).",
-    "modifiedAt": "2016-02-03T00:13:21.962Z",
-    "list": "Spirited – Manhattans",
     "ingredients": [
       {
         "quantity": 2,
@@ -1569,15 +1531,15 @@
     ],
     "category": "martini",
     "glass": "coupe",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2016-02-03T00:13:21.962Z",
+    "updatedAt": "2016-02-03T00:13:21.962Z"
   },
   {
     "id": "brooklyn",
     "name": "Brooklyn",
     "year": 1910,
     "reference": "Grohusko, Jack. (1910). *Jack's Manual.*",
-    "modifiedAt": "2018-03-05T05:34:33.847Z",
-    "list": "Spirited – Manhattans",
     "ingredients": [
       {
         "quantity": 2,
@@ -1606,15 +1568,15 @@
     ],
     "category": "martini",
     "glass": "coupe",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2018-03-05T05:34:33.847Z",
+    "updatedAt": "2018-03-05T05:34:33.847Z"
   },
   {
     "id": "deshler",
     "name": "Deshler",
     "year": 1916,
     "reference": "Enslin, Hugo. (1916). *Recipe for Mixed Drinks.*",
-    "modifiedAt": "2016-02-03T00:32:02.619Z",
-    "list": "Spirited – Manhattans",
     "ingredients": [
       {
         "quantity": 1.5,
@@ -1649,15 +1611,15 @@
     ],
     "category": "martini",
     "glass": "coupe",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2016-02-03T00:32:02.619Z",
+    "updatedAt": "2016-02-03T00:32:02.619Z"
   },
   {
     "id": "tipperary",
     "name": "Tipperary",
     "year": 1916,
     "reference": "Ensslin, Hugo. (1916). *Recipes for Mixed Drinks.*",
-    "modifiedAt": "2018-03-05T05:34:14.411Z",
-    "list": "Spirited – Manhattans",
     "ingredients": [
       {
         "quantity": 2,
@@ -1678,7 +1640,9 @@
     ],
     "category": "martini",
     "glass": "coupe",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2018-03-05T05:34:14.411Z",
+    "updatedAt": "2018-03-05T05:34:14.411Z"
   },
   {
     "id": "dead_rabbit",
@@ -1686,8 +1650,6 @@
     "year": 2016,
     "reference": "Muldoon, Sean. (2016). [Dead Rabbit](http://www.deadrabbitnyc.com), New York City",
     "basis": "tipperary",
-    "modifiedAt": "2018-03-05T05:34:14.411Z",
-    "list": "Spirited – Manhattans",
     "ingredients": [
       {
         "quantity": 1.5,
@@ -1723,15 +1685,15 @@
     ],
     "category": "martini",
     "glass": "coupe",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2018-03-05T05:34:14.411Z",
+    "updatedAt": "2018-03-05T05:34:14.411Z"
   },
   {
     "id": "affinity",
     "name": "Affinity",
     "year": 1930,
     "reference": "Craddock, Harry. (1930). *Savoy Cocktail Book, The.*",
-    "modifiedAt": "2016-02-03T00:13:15.323Z",
-    "list": "Spirited – Manhattans",
     "ingredients": [
       {
         "quantity": 1,
@@ -1756,15 +1718,15 @@
     ],
     "category": "martini",
     "glass": "coupe",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2016-02-03T00:13:15.323Z",
+    "updatedAt": "2016-02-03T00:13:15.323Z"
   },
   {
     "id": "waldorf",
     "name": "Waldorf",
     "year": 1935,
     "reference": "Crockett, A. S. (1935). *Old Waldorf-Astoria Bar Book, The.*",
-    "modifiedAt": "2017-06-11T02:07:23.223Z",
-    "list": "Spirited – Manhattans",
     "ingredients": [
       {
         "quantity": 2,
@@ -1790,18 +1752,16 @@
     ],
     "category": "martini",
     "glass": "coupe",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2017-06-11T02:07:23.223Z",
+    "updatedAt": "2017-06-11T02:07:23.223Z"
   },
   {
     "id": "vieux_carre",
     "name": "Vieux Carre",
     "year": 1937,
     "reference": "Arthur, Stanley Clisby. (1937). *Famous New Orleans Drinks.* Bergeron, Walter (bartender), Hotel Monteleone, New Orleans.",
-    "modifiedAt": "2018-03-01T02:11:28.090Z",
-    "list": "Spirited – Manhattans",
-    "notes": [
-      "Build in-glass"
-    ],
+    "notes": "Build in-glass.",
     "ingredients": [
       {
         "quantity": 1,
@@ -1842,15 +1802,15 @@
     ],
     "category": "martini",
     "glass": "coupe",
-    "mix": "build"
+    "mix": "build",
+    "createdAt": "2018-03-01T02:11:28.090Z",
+    "updatedAt": "2018-03-01T02:11:28.090Z"
   },
   {
     "id": "de_la_louisiane",
     "name": "De La Louisiane",
     "year": 1937,
     "reference": "Arthur, Stanley Clisby. (1937). *Famous New Orleans Drinks.*",
-    "modifiedAt": "2023-05-29T03:09:54.401Z",
-    "list": "Spirited – Manhattans",
     "ingredients": [
       {
         "quantity": 2,
@@ -1890,15 +1850,15 @@
     ],
     "category": "martini",
     "glass": "coupe",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2023-05-29T03:09:54.401Z",
+    "updatedAt": "2023-05-29T03:09:54.401Z"
   },
   {
     "id": "remember_the_maine",
     "name": "Remember the Maine",
     "year": 1937,
     "reference": "Baker, Jr, Charles H. (1937). *The Gentleman's Companion: An Exotic Drinking Book.*",
-    "modifiedAt": "2016-02-03T00:31:58.751Z",
-    "list": "Spirited – Manhattans",
     "ingredients": [
       {
         "quantity": 2,
@@ -1932,15 +1892,15 @@
     ],
     "category": "martini",
     "glass": "coupe",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2016-02-03T00:31:58.751Z",
+    "updatedAt": "2016-02-03T00:31:58.751Z"
   },
   {
     "id": "fourth_regiment",
     "name": "Fourth Regiment",
     "year": 1937,
     "reference": "Baker, Jr, Charles H. (1937). *The Gentleman's Companion: An Exotic Drinking Book.*",
-    "modifiedAt": "2016-02-05T01:40:56.513Z",
-    "list": "Spirited – Manhattans",
     "ingredients": [
       {
         "quantity": 1.5,
@@ -1984,15 +1944,15 @@
     ],
     "category": "martini",
     "glass": "coupe",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2016-02-05T01:40:56.513Z",
+    "updatedAt": "2016-02-05T01:40:56.513Z"
   },
   {
     "id": "harlem_renessaince",
     "name": "Harlem Renessaince",
     "year": 2000,
     "reference": "(c. 2000).",
-    "modifiedAt": "2017-06-11T02:08:02.069Z",
-    "list": "Spirited – Manhattans",
     "ingredients": [
       {
         "quantity": 2,
@@ -2020,15 +1980,15 @@
     ],
     "category": "martini",
     "glass": "coupe",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2017-06-11T02:08:02.069Z",
+    "updatedAt": "2017-06-11T02:08:02.069Z"
   },
   {
     "id": "red_hook",
     "name": "Red Hook",
     "year": 2000,
     "reference": "Siegal, T. J. (c. 2000). Milk & Honey, New York.",
-    "modifiedAt": "2017-06-11T02:08:13.219Z",
-    "list": "Spirited – Manhattans",
     "ingredients": [
       {
         "quantity": 2,
@@ -2051,15 +2011,15 @@
     ],
     "category": "martini",
     "glass": "coupe",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2017-06-11T02:08:13.219Z",
+    "updatedAt": "2017-06-11T02:08:13.219Z"
   },
   {
     "id": "armistice",
     "name": "Armistice",
     "year": 2000,
     "reference": "Hakkinen, Erik. (c. 2000). Zig Zag Café, Seattle.",
-    "modifiedAt": "2018-03-05T05:37:18.056Z",
-    "list": "Spirited – Manhattans",
     "ingredients": [
       {
         "quantity": 1.5,
@@ -2093,15 +2053,15 @@
     ],
     "category": "martini",
     "glass": "coupe",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2018-03-05T05:37:18.056Z",
+    "updatedAt": "2018-03-05T05:37:18.056Z"
   },
   {
     "id": "greenpoint",
     "name": "Greenpoint",
     "year": 2005,
     "reference": "McIlroy, Michael. (2005). New York.",
-    "modifiedAt": "2017-06-11T02:03:06.870Z",
-    "list": "Spirited – Manhattans",
     "ingredients": [
       {
         "quantity": 1.75,
@@ -2135,15 +2095,15 @@
     ],
     "category": "martini",
     "glass": "coupe",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2017-06-11T02:03:06.870Z",
+    "updatedAt": "2017-06-11T02:03:06.870Z"
   },
   {
     "id": "little_italy",
     "name": "Little Italy",
     "year": 2005,
     "reference": "Saunders, Audrey. Pegu Club, NY.",
-    "modifiedAt": "2023-04-14T22:25:15.784Z",
-    "list": "Spirited – Manhattans",
     "ingredients": [
       {
         "quantity": 2,
@@ -2165,15 +2125,15 @@
     ],
     "category": "martini",
     "glass": "coupe",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2023-04-14T22:25:15.784Z",
+    "updatedAt": "2023-04-14T22:25:15.784Z"
   },
   {
     "id": "bensonhurst",
     "name": "Bensonhurst",
     "year": 2006,
     "reference": "Solomon, Chad. (2006). Brooklyn, New York",
-    "modifiedAt": "2016-02-03T00:32:07.102Z",
-    "list": "Spirited – Manhattans",
     "ingredients": [
       {
         "quantity": 2,
@@ -2207,15 +2167,15 @@
     ],
     "category": "martini",
     "glass": "coupe",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2016-02-03T00:32:07.102Z",
+    "updatedAt": "2016-02-03T00:32:07.102Z"
   },
   {
     "id": "conference",
     "name": "Conference",
     "year": 2008,
     "reference": "Miller, Brian. (2008). Death & Co. New York.",
-    "modifiedAt": "2018-10-03T14:13:41.340Z",
-    "list": "Spirited – Manhattans",
     "ingredients": [
       {
         "quantity": 1,
@@ -2273,17 +2233,15 @@
     ],
     "category": "oldfashioned",
     "glass": "coupe",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2018-10-03T14:13:41.340Z",
+    "updatedAt": "2018-10-03T14:13:41.340Z"
   },
   {
     "id": "modern_manhattan",
     "name": "Modern Manhattan",
     "year": 2012,
-    "modifiedAt": "2018-10-03T14:19:38.608Z",
-    "list": "Spirited – Manhattans",
-    "notes": [
-      "Altier, Marshall. (2012). Jbird. New York."
-    ],
+    "notes": "Altier, Marshall. (2012). Jbird. New York.",
     "ingredients": [
       {
         "quantity": 2,
@@ -2316,18 +2274,16 @@
     ],
     "category": "martini",
     "glass": "coupe",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2018-10-03T14:19:38.608Z",
+    "updatedAt": "2018-10-03T14:19:38.608Z"
   },
   {
     "id": "bushwick",
     "name": "Bushwick",
     "year": 2019,
     "reference": "Ward, Phil. (c. 2000s). Death + Company, New York.",
-    "modifiedAt": "2023-01-08T03:40:56.641Z",
-    "list": "Spirited – Manhattans",
-    "notes": [
-      "No garnish"
-    ],
+    "notes": "No garnish.",
     "ingredients": [
       {
         "quantity": 2,
@@ -2354,14 +2310,14 @@
     ],
     "category": "martini",
     "glass": "coupe",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2023-01-08T03:40:56.641Z",
+    "updatedAt": "2023-01-08T03:40:56.641Z"
   },
   {
     "id": "gin_cocktail",
     "name": "Gin Cocktail",
     "year": 1800,
-    "modifiedAt": "2017-06-11T02:09:26.661Z",
-    "list": "Spirited – Gin",
     "ingredients": [
       {
         "quantity": 2,
@@ -2387,14 +2343,14 @@
     ],
     "category": "martini",
     "glass": "coupe",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2017-06-11T02:09:26.661Z",
+    "updatedAt": "2017-06-11T02:09:26.661Z"
   },
   {
     "id": "improved_gin_cocktail",
     "name": "Improved Gin Cocktail",
     "year": 1800,
-    "modifiedAt": "2017-06-11T02:09:26.661Z",
-    "list": "Spirited – Gin",
     "ingredients": [
       {
         "quantity": 2,
@@ -2431,15 +2387,15 @@
     ],
     "category": "martini",
     "glass": "coupe",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2017-06-11T02:09:26.661Z",
+    "updatedAt": "2017-06-11T02:09:26.661Z"
   },
   {
     "id": "martinez",
     "name": "Martinez",
     "year": 1884,
     "reference": "Byron, O. H. (1884). *Modern Bartenders Guide.*",
-    "modifiedAt": "2016-02-02T22:28:43.290Z",
-    "list": "Spirited – Gin",
     "ingredients": [
       {
         "quantity": 1.5,
@@ -2473,15 +2429,15 @@
     ],
     "category": "martini",
     "glass": "coupe",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2016-02-02T22:28:43.290Z",
+    "updatedAt": "2016-02-02T22:28:43.290Z"
   },
   {
     "id": "bijou",
     "name": "Bijou",
     "year": 1895,
     "reference": "Lawlor, C. F. (1885). *The Mixicologist.*",
-    "modifiedAt": "2021-05-22T03:03:29.117Z",
-    "list": "Spirited – Gin",
     "ingredients": [
       {
         "quantity": 1,
@@ -2509,14 +2465,14 @@
     ],
     "category": "martini",
     "glass": "coupe",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2021-05-22T03:03:29.117Z",
+    "updatedAt": "2021-05-22T03:03:29.117Z"
   },
   {
     "id": "amber_dream",
     "name": "Amber Dream",
     "basis": "bijou",
-    "modifiedAt": "2021-05-22T03:03:29.117Z",
-    "list": "Spirited – Gin",
     "ingredients": [
       {
         "quantity": 2,
@@ -2544,15 +2500,15 @@
     ],
     "category": "martini",
     "glass": "coupe",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2021-05-22T03:03:29.117Z",
+    "updatedAt": "2021-05-22T03:03:29.117Z"
   },
   {
     "id": "ford_cocktail",
     "name": "Ford Cocktail",
     "year": 1895,
     "reference": "Kappeler, George J. (1895). *Modern American Drinks.*",
-    "modifiedAt": "2016-02-02T23:15:56.255Z",
-    "list": "Spirited – Gin",
     "ingredients": [
       {
         "quantity": 1,
@@ -2584,15 +2540,15 @@
     ],
     "category": "martini",
     "glass": "coupe",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2016-02-02T23:15:56.255Z",
+    "updatedAt": "2016-02-02T23:15:56.255Z"
   },
   {
     "id": "martini",
     "name": "Martini",
     "year": 1904,
     "reference": "Newman, Frank. (1904). _American Bar._",
-    "modifiedAt": "2023-04-08T02:39:02.502Z",
-    "list": "Spirited – Gin",
     "ingredients": [
       {
         "quantity": 2,
@@ -2620,7 +2576,9 @@
     ],
     "category": "martini",
     "glass": "coupe",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2023-04-08T02:39:02.502Z",
+    "updatedAt": "2023-04-08T02:39:02.502Z"
   },
   {
     "id": "tuxedo",
@@ -2628,11 +2586,7 @@
     "year": 1900,
     "reference": "Johnson, Harry. (1900). _Bartender's Manual._",
     "basis": "martini",
-    "modifiedAt": "2023-04-08T02:39:02.502Z",
-    "list": "Spirited – Gin",
-    "notes": [
-      "Modern take: use 2 1/4 oz gin, 3/4 oz vermouth, and add 2 dashes orange bitters."
-    ],
+    "notes": "Modern take: use 2 1/4 oz gin, 3/4 oz vermouth, and add 2 dashes orange bitters.",
     "ingredients": [
       {
         "quantity": 2,
@@ -2669,7 +2623,9 @@
     ],
     "category": "martini",
     "glass": "coupe",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2023-04-08T02:39:02.502Z",
+    "updatedAt": "2023-04-08T02:39:02.502Z"
   },
   {
     "id": "gibson",
@@ -2677,11 +2633,7 @@
     "year": 1908,
     "reference": "Boothby, William. (1908). _World's Drinks and How to Mix Them._",
     "basis": "martini",
-    "modifiedAt": "2023-04-08T02:39:02.502Z",
-    "list": "Spirited – Gin",
-    "notes": [
-      "Garnish with a cocktail onion."
-    ],
+    "notes": "Garnish with a cocktail onion.",
     "ingredients": [
       {
         "quantity": 2,
@@ -2703,7 +2655,9 @@
     ],
     "category": "martini",
     "glass": "coupe",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2023-04-08T02:39:02.502Z",
+    "updatedAt": "2023-04-08T02:39:02.502Z"
   },
   {
     "id": "alaska",
@@ -2711,8 +2665,6 @@
     "year": 1930,
     "reference": "Craddock, Harry. (1930). _Savoy Cocktail Book, The._",
     "basis": "martini",
-    "modifiedAt": "2023-04-08T02:39:02.502Z",
-    "list": "Spirited – Gin",
     "ingredients": [
       {
         "quantity": 2,
@@ -2729,7 +2681,9 @@
     ],
     "category": "martini",
     "glass": "coupe",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2023-04-08T02:39:02.502Z",
+    "updatedAt": "2023-04-08T02:39:02.502Z"
   },
   {
     "id": "vesper",
@@ -2737,8 +2691,6 @@
     "year": 1953,
     "reference": "Fleming, Ian. (1953). _Casino Royale._",
     "basis": "martini",
-    "modifiedAt": "2023-04-08T02:39:02.502Z",
-    "list": "Spirited – Gin",
     "ingredients": [
       {
         "quantity": 1.25,
@@ -2771,14 +2723,14 @@
     ],
     "category": "martini",
     "glass": "coupe",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2023-04-08T02:39:02.502Z",
+    "updatedAt": "2023-04-08T02:39:02.502Z"
   },
   {
     "id": "sherry_martini",
     "name": "Sherry Martini",
     "basis": "martini",
-    "modifiedAt": "2023-04-08T02:39:02.502Z",
-    "list": "Spirited – Gin",
     "ingredients": [
       {
         "quantity": 2,
@@ -2793,7 +2745,9 @@
     ],
     "category": "martini",
     "glass": "coupe",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2023-04-08T02:39:02.502Z",
+    "updatedAt": "2023-04-08T02:39:02.502Z"
   },
   {
     "id": "curious_george",
@@ -2801,8 +2755,6 @@
     "year": 2022,
     "reference": "Suderman, Peter. (2022). _Cocktails With Suderman._",
     "basis": "martini",
-    "modifiedAt": "2023-04-08T02:39:02.502Z",
-    "list": "Spirited – Gin",
     "ingredients": [
       {
         "quantity": 2,
@@ -2834,15 +2786,15 @@
     ],
     "category": "martini",
     "glass": "coupe",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2023-04-08T02:39:02.502Z",
+    "updatedAt": "2023-04-08T02:39:02.502Z"
   },
   {
     "id": "bronx",
     "name": "Bronx",
     "year": 1908,
     "reference": "Boothby, William. (1908). *World's Drinks and How to Mix Them.* Solon, Johnnie (bartender). Big Brass Rail, Waldorf-Astoria Hotel, New York.",
-    "modifiedAt": "2016-02-04T22:57:41.624Z",
-    "list": "Spirited – Gin",
     "ingredients": [
       {
         "quantity": 2,
@@ -2870,7 +2822,9 @@
     ],
     "category": "martini",
     "glass": "coupe",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2016-02-04T22:57:41.624Z",
+    "updatedAt": "2016-02-04T22:57:41.624Z"
   },
   {
     "id": "income_tax",
@@ -2878,8 +2832,6 @@
     "year": 1900,
     "reference": "Anonymous. (n.d.)",
     "basis": "bronx",
-    "modifiedAt": "2016-02-04T22:57:41.624Z",
-    "list": "Spirited – Gin",
     "ingredients": [
       {
         "quantity": 2,
@@ -2913,15 +2865,15 @@
     ],
     "category": "martini",
     "glass": "coupe",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2016-02-04T22:57:41.624Z",
+    "updatedAt": "2016-02-04T22:57:41.624Z"
   },
   {
     "id": "hanky_panky",
     "name": "Hanky Panky",
     "year": 1930,
     "reference": "Craddock, Harry. (1930). *Savoy Cocktail Book, The.* Coleman, Ada (bartender), Savoy Hotel Bar (1902–26), London.",
-    "modifiedAt": "2016-02-02T22:29:39.176Z",
-    "list": "Spirited – Gin",
     "ingredients": [
       {
         "quantity": 2,
@@ -2950,15 +2902,15 @@
     ],
     "category": "martini",
     "glass": "coupe",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2016-02-02T22:29:39.176Z",
+    "updatedAt": "2016-02-02T22:29:39.176Z"
   },
   {
     "id": "satans_whiskers",
     "name": "Satan's Whiskers",
     "year": 1930,
     "reference": "Craddock, Harry. (1930). *Savoy Cocktail Book, The.*",
-    "modifiedAt": "2016-02-05T01:52:20.454Z",
-    "list": "Spirited – Gin",
     "ingredients": [
       {
         "quantity": 0.5,
@@ -2993,15 +2945,15 @@
     ],
     "category": "martini",
     "glass": "coupe",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2016-02-05T01:52:20.454Z",
+    "updatedAt": "2016-02-05T01:52:20.454Z"
   },
   {
     "id": "claridge",
     "name": "Claridge",
     "year": 1930,
     "reference": "Craddock, Harry. (1930). *Savoy Cocktail Book, The.*",
-    "modifiedAt": "2016-02-04T02:20:54.627Z",
-    "list": "Spirited – Gin",
     "ingredients": [
       {
         "quantity": 1,
@@ -3030,15 +2982,15 @@
     ],
     "category": "martini",
     "glass": "coupe",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2016-02-04T02:20:54.627Z",
+    "updatedAt": "2016-02-04T02:20:54.627Z"
   },
   {
     "id": "lucien_gaudin",
     "name": "Lucien Gaudin",
     "year": 1930,
     "reference": "Haign, Ted. (2009). _Vintage Spirits and Forgotten Cocktails._ Anonymous (bartender), c. 1930.",
-    "modifiedAt": "2023-04-23T03:52:52.575Z",
-    "list": "Spirited – Gin",
     "ingredients": [
       {
         "quantity": 1,
@@ -3072,15 +3024,15 @@
     ],
     "category": "martini",
     "glass": "coupe",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2023-04-23T03:52:52.575Z",
+    "updatedAt": "2023-04-23T03:52:52.575Z"
   },
   {
     "id": "dorflinger",
     "name": "Dorflinger",
     "year": 1935,
     "reference": "Crockett, A. S. (1935). *Old Waldorf-Astoria Bar Book, The.*",
-    "modifiedAt": "2017-06-11T02:28:20.016Z",
-    "list": "Spirited – Gin",
     "ingredients": [
       {
         "quantity": 2,
@@ -3101,15 +3053,15 @@
     ],
     "category": "martini",
     "glass": "coupe",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2017-06-11T02:28:20.016Z",
+    "updatedAt": "2017-06-11T02:28:20.016Z"
   },
   {
     "id": "caprice",
     "name": "Caprice",
     "year": 1940,
     "reference": "Gale, Hyman, Marco, Abe. (1940). *The How & When*",
-    "modifiedAt": "2016-02-02T22:29:47.213Z",
-    "list": "Spirited – Gin",
     "ingredients": [
       {
         "quantity": 1.5,
@@ -3143,14 +3095,14 @@
     ],
     "category": "martini",
     "glass": "coupe",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2016-02-02T22:29:47.213Z",
+    "updatedAt": "2016-02-02T22:29:47.213Z"
   },
   {
     "id": "tailspin",
     "name": "Tailspin",
     "year": 1940,
-    "modifiedAt": "2023-04-28T04:52:34.235Z",
-    "list": "Spirited – Gin",
     "ingredients": [
       {
         "quantity": 1.5,
@@ -3189,18 +3141,16 @@
     ],
     "category": "martini",
     "glass": "coupe",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2023-04-28T04:52:34.235Z",
+    "updatedAt": "2023-04-28T04:52:34.235Z"
   },
   {
     "id": "negroni",
     "name": "Negroni",
     "year": 1943,
     "reference": "Brucart, J. S. (1943). *Cien Cocktails.*",
-    "modifiedAt": "2022-09-28T23:14:45.424Z",
-    "list": "Spirited – Gin",
-    "notes": [
-      "Coupe or rocks glass w/ ice"
-    ],
+    "notes": "Coupe or rocks glass w/ ice.",
     "ingredients": [
       {
         "quantity": 1,
@@ -3229,7 +3179,9 @@
     ],
     "category": "martini",
     "glass": "coupe",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2022-09-28T23:14:45.424Z",
+    "updatedAt": "2022-09-28T23:14:45.424Z"
   },
   {
     "id": "white_negroni",
@@ -3237,11 +3189,7 @@
     "year": 2002,
     "reference": "Collins, Wayne. (2002). London.",
     "basis": "negroni",
-    "modifiedAt": "2022-09-28T23:14:45.424Z",
-    "list": "Spirited – Gin",
-    "notes": [
-      "Can use Salers or Gran Classico for the aperitivo and Lillet Blanc for the aperitif."
-    ],
+    "notes": "Can use Salers or Gran Classico for the aperitivo and Lillet Blanc for the aperitif.",
     "ingredients": [
       {
         "quantity": 2,
@@ -3269,15 +3217,15 @@
     ],
     "category": "martini",
     "glass": "coupe",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2022-09-28T23:14:45.424Z",
+    "updatedAt": "2022-09-28T23:14:45.424Z"
   },
   {
     "id": "charente_white_negroni",
     "name": "Charente White Negroni",
     "reference": "Lataille, Matthias; Difford, Simon. (2014). Cabinet Room, London.",
     "basis": "negroni",
-    "modifiedAt": "2022-09-28T23:14:45.424Z",
-    "list": "Spirited – Gin",
     "ingredients": [
       {
         "quantity": 1,
@@ -3310,7 +3258,9 @@
     ],
     "category": "martini",
     "glass": "coupe",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2022-09-28T23:14:45.424Z",
+    "updatedAt": "2022-09-28T23:14:45.424Z"
   },
   {
     "id": "kingston_negroni",
@@ -3318,11 +3268,7 @@
     "year": 2009,
     "reference": "Simo, Joaquin. (2009). Death & Company, New York.",
     "basis": "negroni",
-    "modifiedAt": "2022-09-28T23:14:45.424Z",
-    "list": "Spirited – Gin",
-    "notes": [
-      "Coupe or rocks glass w/ ice"
-    ],
+    "notes": "Coupe or rocks glass w/ ice.",
     "ingredients": [
       {
         "quantity": 1,
@@ -3355,18 +3301,15 @@
     ],
     "category": "martini",
     "glass": "coupe",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2022-09-28T23:14:45.424Z",
+    "updatedAt": "2022-09-28T23:14:45.424Z"
   },
   {
     "id": "mezcal_negroni",
     "name": "Mezcal Negroni",
     "basis": "negroni",
-    "modifiedAt": "2022-09-28T23:14:45.424Z",
-    "list": "Spirited – Gin",
-    "notes": [
-      "Coupe or rocks glass w/ ice",
-      "Can use 4 drops of saline solution instead of salt."
-    ],
+    "notes": "Coupe or rocks glass w/ ice. Can use 4 drops of saline solution instead of salt.",
     "ingredients": [
       {
         "quantity": 1,
@@ -3400,7 +3343,9 @@
     ],
     "category": "martini",
     "glass": "coupe",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2022-09-28T23:14:45.424Z",
+    "updatedAt": "2022-09-28T23:14:45.424Z"
   },
   {
     "id": "lucky",
@@ -3408,8 +3353,6 @@
     "year": 2015,
     "reference": "Bunni, Mony. (2015). [Sable Kitchen & Bar](http://www.sablechicago.com), Chicago.",
     "basis": "negroni",
-    "modifiedAt": "2022-09-28T23:14:45.424Z",
-    "list": "Spirited – Gin",
     "ingredients": [
       {
         "quantity": 1.5,
@@ -3443,17 +3386,15 @@
     ],
     "category": "martini",
     "glass": "coupe",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2022-09-28T23:14:45.424Z",
+    "updatedAt": "2022-09-28T23:14:45.424Z"
   },
   {
     "id": "mustachioid",
     "name": "Mustachioid",
     "basis": "negroni",
-    "modifiedAt": "2022-09-28T23:14:45.424Z",
-    "list": "Spirited – Gin",
-    "notes": [
-      "Can substitute with Cynar and Gran Classico."
-    ],
+    "notes": "Can substitute with Cynar and Gran Classico.",
     "ingredients": [
       {
         "quantity": 1,
@@ -3486,14 +3427,14 @@
     ],
     "category": "martini",
     "glass": "coupe",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2022-09-28T23:14:45.424Z",
+    "updatedAt": "2022-09-28T23:14:45.424Z"
   },
   {
     "id": "youth_and_treachery",
     "name": "Youth and Treachery",
     "basis": "negroni",
-    "modifiedAt": "2022-09-28T23:14:45.424Z",
-    "list": "Spirited – Gin",
     "ingredients": [
       {
         "quantity": 1,
@@ -3514,15 +3455,15 @@
     ],
     "category": "martini",
     "glass": "coupe",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2022-09-28T23:14:45.424Z",
+    "updatedAt": "2022-09-28T23:14:45.424Z"
   },
   {
     "id": "obituary",
     "name": "Obituary",
     "year": null,
     "reference": "Anonymous. (n.d.). Lafitte's Blacksmith Shop Bar, New Orleans.",
-    "modifiedAt": "2023-04-21T05:44:19.591Z",
-    "list": "Spirited – Gin",
     "ingredients": [
       {
         "quantity": 2,
@@ -3542,18 +3483,16 @@
     ],
     "category": "martini",
     "glass": "coupe",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2023-04-21T05:44:19.591Z",
+    "updatedAt": "2023-04-21T05:44:19.591Z"
   },
   {
     "id": "dreamy_dorini_smoky_martini",
     "name": "Dreamy Dorini Smoky Martini",
     "year": 2002,
     "reference": "Degroff, Dale. (2002). *Craft of the Cocktail.*",
-    "modifiedAt": "2017-08-30T12:29:54.926Z",
-    "list": "Spirited – Gin",
-    "notes": [
-      "Build in glass"
-    ],
+    "notes": "Build in glass.",
     "ingredients": [
       {
         "quantity": 2.5,
@@ -3579,18 +3518,16 @@
     ],
     "category": "martini",
     "glass": "coupe",
-    "mix": "build"
+    "mix": "build",
+    "createdAt": "2017-08-30T12:29:54.926Z",
+    "updatedAt": "2017-08-30T12:29:54.926Z"
   },
   {
     "id": "berlioni",
     "name": "Berlioni",
     "year": 2004,
     "reference": "de Sousa Monteiro, Gonçalo. (2004). Victoria Bar, Berlin.",
-    "modifiedAt": "2016-02-02T22:30:12.829Z",
-    "list": "Spirited – Gin",
-    "notes": [
-      "Stir, strain into rocks w/ 1 large cube"
-    ],
+    "notes": "Stir, strain into rocks w/ 1 large cube.",
     "ingredients": [
       {
         "quantity": 1.5,
@@ -3619,17 +3556,15 @@
     ],
     "category": "martini",
     "glass": "rocks",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2016-02-02T22:30:12.829Z",
+    "updatedAt": "2016-02-02T22:30:12.829Z"
   },
   {
     "id": "yeoman_warder",
     "name": "Yeoman Warder",
     "year": 2008,
-    "modifiedAt": "2023-04-28T04:05:32.268Z",
-    "list": "Spirited – Gin",
-    "notes": [
-      "Coupe"
-    ],
+    "notes": "Coupe.",
     "ingredients": [
       {
         "quantity": 2,
@@ -3658,17 +3593,15 @@
     ],
     "category": "martini",
     "glass": "coupe",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2023-04-28T04:05:32.268Z",
+    "updatedAt": "2023-04-28T04:05:32.268Z"
   },
   {
     "id": "the_joy_division",
     "name": "The Joy Division",
     "year": 2008,
-    "modifiedAt": "2023-04-28T04:01:35.031Z",
-    "list": "Spirited – Gin",
-    "notes": [
-      "Coupe"
-    ],
+    "notes": "Coupe.",
     "ingredients": [
       {
         "quantity": 2,
@@ -3702,15 +3635,15 @@
     ],
     "category": "martini",
     "glass": "coupe",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2023-04-28T04:01:35.031Z",
+    "updatedAt": "2023-04-28T04:01:35.031Z"
   },
   {
     "id": "cynartown",
     "name": "Cynartown",
     "year": 2008,
     "reference": "Ward, Phil. Death + Company, New York.",
-    "modifiedAt": "2023-04-14T22:27:35.078Z",
-    "list": "Spirited – Gin",
     "ingredients": [
       {
         "quantity": 2,
@@ -3733,19 +3666,16 @@
     ],
     "category": "martini",
     "glass": "coupe",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2023-04-14T22:27:35.078Z",
+    "updatedAt": "2023-04-14T22:27:35.078Z"
   },
   {
     "id": "grand_street",
     "name": "Grand Street",
     "year": 2009,
     "reference": "Day, Alex. Death + Co, New York (2009).",
-    "modifiedAt": "2023-04-28T03:59:08.382Z",
-    "list": "Spirited – Gin",
-    "notes": [
-      "Coupe",
-      "Muddle the grapefruit peel before stirring."
-    ],
+    "notes": "Coupe. Muddle the grapefruit peel before stirring.",
     "ingredients": [
       {
         "quantity": 2,
@@ -3780,18 +3710,16 @@
     ],
     "category": "martini",
     "glass": "coupe",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2023-04-28T03:59:08.382Z",
+    "updatedAt": "2023-04-28T03:59:08.382Z"
   },
   {
     "id": "bumbo",
     "name": "Bumbo",
     "year": 1700,
     "reference": "Washington, George. (1758). Presidential campaign. Anonymous (creator), pirates, c. 1600.",
-    "modifiedAt": "2016-02-05T00:48:38.160Z",
-    "list": "Spirited – Others",
-    "notes": [
-      "Build in rocks glass w/ ice"
-    ],
+    "notes": "Build in rocks glass w/ ice.",
     "ingredients": [
       {
         "quantity": 2,
@@ -3816,15 +3744,15 @@
     ],
     "category": "oldfashioned",
     "glass": "rocks",
-    "mix": "build"
+    "mix": "build",
+    "createdAt": "2016-02-05T00:48:38.160Z",
+    "updatedAt": "2016-02-05T00:48:38.160Z"
   },
   {
     "id": "japanese",
     "name": "Japanese",
     "year": 1862,
     "reference": "Thomas, Jerry. (1862). *Bar-Tenders Guide.*",
-    "modifiedAt": "2016-02-02T20:12:58.848Z",
-    "list": "Spirited – Others",
     "ingredients": [
       {
         "quantity": 2,
@@ -3852,15 +3780,15 @@
     ],
     "category": "oldfashioned",
     "glass": "coupe",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2016-02-02T20:12:58.848Z",
+    "updatedAt": "2016-02-02T20:12:58.848Z"
   },
   {
     "id": "widows_kiss",
     "name": "Widow's Kiss",
     "year": 1895,
     "reference": "Kappeler, George. (1895). *Modern American Drinks.*",
-    "modifiedAt": "2018-03-01T03:35:03.234Z",
-    "list": "Spirited – Others",
     "ingredients": [
       {
         "quantity": 2,
@@ -3894,15 +3822,15 @@
     ],
     "category": "oldfashioned",
     "glass": "coupe",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2018-03-01T03:35:03.234Z",
+    "updatedAt": "2018-03-01T03:35:03.234Z"
   },
   {
     "id": "palmetto",
     "name": "Palmetto",
     "year": 1914,
     "reference": "Straub, Jacques. (1914). *Drinks.*",
-    "modifiedAt": "2017-09-27T01:51:48.017Z",
-    "list": "Spirited – Others",
     "ingredients": [
       {
         "quantity": 2.25,
@@ -3934,15 +3862,15 @@
     ],
     "category": "martini",
     "glass": "coupe",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2017-09-27T01:51:48.017Z",
+    "updatedAt": "2017-09-27T01:51:48.017Z"
   },
   {
     "id": "chrysanthemum",
     "name": "Chrysanthemum",
     "year": 1916,
     "reference": "Ensslin, Hugo. (1916). *Recipes for Mixed Drinks.*",
-    "modifiedAt": "2016-02-02T21:27:24.544Z",
-    "list": "Spirited – Others",
     "ingredients": [
       {
         "quantity": 2,
@@ -3970,18 +3898,16 @@
     ],
     "category": "martini",
     "glass": "coupe",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2016-02-02T21:27:24.544Z",
+    "updatedAt": "2016-02-02T21:27:24.544Z"
   },
   {
     "id": "stinger",
     "name": "Stinger",
     "year": 1917,
     "reference": " Bullock, Tom. (1917). *The Ideal Bartender*.",
-    "modifiedAt": "2017-06-11T03:36:09.928Z",
-    "list": "Spirited – Others",
-    "notes": [
-      "Shaken"
-    ],
+    "notes": "Shaken.",
     "ingredients": [
       {
         "quantity": 2.25,
@@ -3996,15 +3922,15 @@
     ],
     "category": "oldfashioned",
     "glass": "coupe",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2017-06-11T03:36:09.928Z",
+    "updatedAt": "2017-06-11T03:36:09.928Z"
   },
   {
     "id": "el_presidente",
     "name": "El Presidente",
     "year": 1930,
     "reference": "Craddock, Harry. (1930). *Savoy Cocktail Book, The.*",
-    "modifiedAt": "2016-02-04T23:39:36.181Z",
-    "list": "Spirited – Others",
     "ingredients": [
       {
         "quantity": 1.5,
@@ -4033,14 +3959,14 @@
     ],
     "category": "martini",
     "glass": "coupe",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2016-02-04T23:39:36.181Z",
+    "updatedAt": "2016-02-04T23:39:36.181Z"
   },
   {
     "id": "el_presidente_david_wondrich",
     "name": "El Presidente (David Wondrich)",
     "basis": "el_presidente",
-    "modifiedAt": "2016-02-04T23:39:36.181Z",
-    "list": "Spirited – Others",
     "ingredients": [
       {
         "quantity": 1.5,
@@ -4077,18 +4003,16 @@
     ],
     "category": "martini",
     "glass": "coupe",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2016-02-04T23:39:36.181Z",
+    "updatedAt": "2016-02-04T23:39:36.181Z"
   },
   {
     "id": "savoy_tango",
     "name": "Savoy Tango",
     "year": 1930,
     "reference": "Craddock, Harry. (1930). *Savoy Cocktail Book, The.*",
-    "modifiedAt": "2016-04-30T03:48:49.801Z",
-    "list": "Spirited – Others",
-    "notes": [
-      "Shaken"
-    ],
+    "notes": "Shaken.",
     "ingredients": [
       {
         "quantity": 1.5,
@@ -4105,17 +4029,15 @@
     ],
     "category": "oldfashioned",
     "glass": "coupe",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2016-04-30T03:48:49.801Z",
+    "updatedAt": "2016-04-30T03:48:49.801Z"
   },
   {
     "id": "french_connection",
     "name": "French Connection",
     "year": 1950,
-    "modifiedAt": "2017-06-11T03:34:54.605Z",
-    "list": "Spirited – Others",
-    "notes": [
-      "Build in-glass"
-    ],
+    "notes": "Build in-glass.",
     "ingredients": [
       {
         "quantity": 2,
@@ -4130,15 +4052,15 @@
     ],
     "category": "oldfashioned",
     "glass": "coupe",
-    "mix": "build"
+    "mix": "build",
+    "createdAt": "2017-06-11T03:34:54.605Z",
+    "updatedAt": "2017-06-11T03:34:54.605Z"
   },
   {
     "id": "rosita",
     "name": "Rosita",
     "year": 1974,
     "reference": "*Mr. Boston: Official Bartender's Guide.* (1974).",
-    "modifiedAt": "2016-02-03T03:13:40.560Z",
-    "list": "Spirited – Others",
     "ingredients": [
       {
         "quantity": 1.5,
@@ -4178,15 +4100,15 @@
     ],
     "category": "martini",
     "glass": "coupe",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2016-02-03T03:13:40.560Z",
+    "updatedAt": "2016-02-03T03:13:40.560Z"
   },
   {
     "id": "newark",
     "name": "Newark",
     "year": 2007,
     "reference": "Meehan, Jim, & Deragon, John. (2007, Fall). PDT, New York.",
-    "modifiedAt": "2016-02-02T21:29:54.419Z",
-    "list": "Spirited – Others",
     "ingredients": [
       {
         "quantity": 2,
@@ -4215,15 +4137,15 @@
     ],
     "category": "martini",
     "glass": "coupe",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2016-02-02T21:29:54.419Z",
+    "updatedAt": "2016-02-02T21:29:54.419Z"
   },
   {
     "id": "montgomery_smith",
     "name": "Montgomery Smith",
     "year": 2007,
     "reference": "Dumas, Nate. (2007). PDT, New York",
-    "modifiedAt": "2016-02-02T20:44:49.118Z",
-    "list": "Spirited – Others",
     "ingredients": [
       {
         "quantity": 2,
@@ -4252,19 +4174,16 @@
     ],
     "category": "oldfashioned",
     "glass": "coupe",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2016-02-02T20:44:49.118Z",
+    "updatedAt": "2016-02-02T20:44:49.118Z"
   },
   {
     "id": "nth_degree",
     "name": "Nth Degree",
     "year": 2008,
     "reference": "Dumas, Nate. (2008, Winter). PDT, New York",
-    "modifiedAt": "2016-02-02T23:19:32.671Z",
-    "list": "Spirited – Others",
-    "notes": [
-      "Muddle sugar w/ bitters",
-      "Add rest, stir, strain into rocks glass"
-    ],
+    "notes": "Muddle sugar w/ bitters. Add rest, stir, strain into rocks glass.",
     "ingredients": [
       {
         "quantity": 1,
@@ -4314,17 +4233,15 @@
     ],
     "category": "oldfashioned",
     "glass": "rocks",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2016-02-02T23:19:32.671Z",
+    "updatedAt": "2016-02-02T23:19:32.671Z"
   },
   {
     "id": "augie_march",
     "name": "Augie March",
     "year": 2008,
-    "modifiedAt": "2023-04-28T04:18:21.187Z",
-    "list": "Spirited – Others",
-    "notes": [
-      "Coupe"
-    ],
+    "notes": "Coupe.",
     "ingredients": [
       {
         "quantity": 2,
@@ -4352,15 +4269,15 @@
     ],
     "category": "martini",
     "glass": "coupe",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2023-04-28T04:18:21.187Z",
+    "updatedAt": "2023-04-28T04:18:21.187Z"
   },
   {
     "id": "improved_tequila_cocktail",
     "name": "Improved Tequila Cocktail",
     "year": 2011,
     "reference": "Heugel, Bobby. (2011). Anvil Bar & Refuge, Houston, TX.",
-    "modifiedAt": "2022-05-30T00:33:37.727Z",
-    "list": "Spirited – Others",
     "ingredients": [
       {
         "quantity": 2,
@@ -4400,19 +4317,16 @@
     ],
     "category": "oldfashioned",
     "glass": "coupe",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2022-05-30T00:33:37.727Z",
+    "updatedAt": "2022-05-30T00:33:37.727Z"
   },
   {
     "id": "as_one_does",
     "name": "As One Does",
     "year": 2013,
     "reference": "Simó, Joaquín. (2013). Pouring Ribbons, NYC",
-    "modifiedAt": "2022-05-30T00:29:50.917Z",
-    "list": "Spirited – Others",
-    "notes": [
-      "Crushed ice, swizzle.",
-      "Garnish with mint."
-    ],
+    "notes": "Crushed ice, swizzle. Garnish with mint.",
     "ingredients": [
       {
         "quantity": 1.5,
@@ -4444,19 +4358,16 @@
     ],
     "category": "oldfashioned",
     "glass": "coupe",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2022-05-30T00:29:50.917Z",
+    "updatedAt": "2022-05-30T00:29:50.917Z"
   },
   {
     "id": "reggatta_de_blanc",
     "name": "Reggatta de Blanc",
     "year": 2015,
     "reference": "Difford, Simon. (2015). Cabinet Room, London",
-    "modifiedAt": "2018-03-05T04:23:17.383Z",
-    "list": "Spirited – Others",
-    "notes": [
-      "Stir into rocks w/ ice",
-      "Garnish with grapes"
-    ],
+    "notes": "Stir into rocks w/ ice. Garnish with grapes.",
     "ingredients": [
       {
         "quantity": 1,
@@ -4488,19 +4399,16 @@
     ],
     "category": "martini",
     "glass": "rocks",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2018-03-05T04:23:17.383Z",
+    "updatedAt": "2018-03-05T04:23:17.383Z"
   },
   {
     "id": "maximilano",
     "name": "Maximilano",
     "year": 2015,
     "reference": "Xoxocotla, Julio. (2015). Ward III, New York",
-    "modifiedAt": "2018-03-05T04:26:50.022Z",
-    "list": "Spirited – Others",
-    "notes": [
-      "Pinch salt",
-      "Stir into rocks w/ ice"
-    ],
+    "notes": "Pinch salt. Stir into rocks w/ ice.",
     "ingredients": [
       {
         "quantity": 1.25,
@@ -4527,17 +4435,15 @@
     ],
     "category": "martini",
     "glass": "rocks",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2018-03-05T04:26:50.022Z",
+    "updatedAt": "2018-03-05T04:26:50.022Z"
   },
   {
     "id": "terrible_love",
     "name": "Terrible Love",
     "year": 2013,
-    "modifiedAt": "2023-04-28T04:56:22.798Z",
-    "list": "Spirited – Others",
-    "notes": [
-      "Rocks"
-    ],
+    "notes": "Rocks.",
     "ingredients": [
       {
         "quantity": 1.5,
@@ -4571,14 +4477,14 @@
     ],
     "category": "martini",
     "glass": "rocks",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2023-04-28T04:56:22.798Z",
+    "updatedAt": "2023-04-28T04:56:22.798Z"
   },
   {
     "id": "clover_club",
     "name": "Clover Club",
     "year": 1909,
-    "modifiedAt": "2017-06-11T03:28:49.628Z",
-    "list": "Sours – Gin",
     "ingredients": [
       {
         "quantity": 2,
@@ -4603,13 +4509,13 @@
     ],
     "category": "daiquiri",
     "glass": "coupe",
-    "mix": "shaken"
+    "mix": "shaken",
+    "createdAt": "2017-06-11T03:28:49.628Z",
+    "updatedAt": "2017-06-11T03:28:49.628Z"
   },
   {
     "id": "gin_sour",
     "name": "Gin Sour",
-    "modifiedAt": "2017-11-26T08:21:16.175Z",
-    "list": "Sours – Gin",
     "ingredients": [
       {
         "quantity": 2,
@@ -4635,14 +4541,14 @@
     ],
     "category": "daiquiri",
     "glass": "coupe",
-    "mix": "shaken"
+    "mix": "shaken",
+    "createdAt": "2017-11-26T08:21:16.175Z",
+    "updatedAt": "2017-11-26T08:21:16.175Z"
   },
   {
     "id": "fitzgerald",
     "name": "Fitzgerald",
     "basis": "gin_sour",
-    "modifiedAt": "2017-11-26T08:21:16.175Z",
-    "list": "Sours – Gin",
     "ingredients": [
       {
         "quantity": 2,
@@ -4672,7 +4578,9 @@
     ],
     "category": "daiquiri",
     "glass": "coupe",
-    "mix": "shaken"
+    "mix": "shaken",
+    "createdAt": "2017-11-26T08:21:16.175Z",
+    "updatedAt": "2017-11-26T08:21:16.175Z"
   },
   {
     "id": "southside",
@@ -4680,8 +4588,6 @@
     "year": 1916,
     "reference": "Ensslin, Hugo. (1916). *Recipes for Mixed Drinks.*",
     "basis": "gin_sour",
-    "modifiedAt": "2017-11-26T08:21:16.175Z",
-    "list": "Sours – Gin",
     "ingredients": [
       {
         "quantity": 2,
@@ -4713,15 +4619,15 @@
     ],
     "category": "daiquiri",
     "glass": "coupe",
-    "mix": "shaken"
+    "mix": "shaken",
+    "createdAt": "2017-11-26T08:21:16.175Z",
+    "updatedAt": "2017-11-26T08:21:16.175Z"
   },
   {
     "id": "gimlet",
     "name": "Gimlet",
     "year": 1922,
     "basis": "gin_sour",
-    "modifiedAt": "2017-11-26T08:21:16.175Z",
-    "list": "Sours – Gin",
     "ingredients": [
       {
         "quantity": 2,
@@ -4748,7 +4654,9 @@
     ],
     "category": "daiquiri",
     "glass": "coupe",
-    "mix": "shaken"
+    "mix": "shaken",
+    "createdAt": "2017-11-26T08:21:16.175Z",
+    "updatedAt": "2017-11-26T08:21:16.175Z"
   },
   {
     "id": "bees_knees",
@@ -4756,8 +4664,6 @@
     "year": 1937,
     "reference": "Meier, Frank. (1937). *Artistry of Mixing Drinks.*",
     "basis": "gin_sour",
-    "modifiedAt": "2017-11-26T08:21:16.175Z",
-    "list": "Sours – Gin",
     "ingredients": [
       {
         "quantity": 2,
@@ -4778,15 +4684,15 @@
     ],
     "category": "daiquiri",
     "glass": "coupe",
-    "mix": "shaken"
+    "mix": "shaken",
+    "createdAt": "2017-11-26T08:21:16.175Z",
+    "updatedAt": "2017-11-26T08:21:16.175Z"
   },
   {
     "id": "aviation",
     "name": "Aviation",
     "year": 1916,
     "reference": "Ensslin, Hugo. (1916). *Recipes for Mixed Drinks.*",
-    "modifiedAt": "2022-08-24T04:46:51.711Z",
-    "list": "Sours – Gin",
     "ingredients": [
       {
         "quantity": 2,
@@ -4817,7 +4723,9 @@
     ],
     "category": "daiquiri",
     "glass": "coupe",
-    "mix": "shaken"
+    "mix": "shaken",
+    "createdAt": "2022-08-24T04:46:51.711Z",
+    "updatedAt": "2022-08-24T04:46:51.711Z"
   },
   {
     "id": "the_casino",
@@ -4825,8 +4733,6 @@
     "year": 1930,
     "reference": "Craddock, Harry. (1930). *Savoy Cocktail Book, The.*",
     "basis": "aviation",
-    "modifiedAt": "2022-08-24T04:46:51.711Z",
-    "list": "Sours – Gin",
     "ingredients": [
       {
         "quantity": 2,
@@ -4857,7 +4763,9 @@
     ],
     "category": "daiquiri",
     "glass": "coupe",
-    "mix": "shaken"
+    "mix": "shaken",
+    "createdAt": "2022-08-24T04:46:51.711Z",
+    "updatedAt": "2022-08-24T04:46:51.711Z"
   },
   {
     "id": "water_lily",
@@ -4865,8 +4773,6 @@
     "year": 2007,
     "reference": "Boccato, Richard. (2007). PDT, New York.",
     "basis": "aviation",
-    "modifiedAt": "2022-08-24T04:46:51.711Z",
-    "list": "Sours – Gin",
     "ingredients": [
       {
         "quantity": 0.75,
@@ -4898,7 +4804,9 @@
     ],
     "category": "sidecar",
     "glass": "coupe",
-    "mix": "shaken"
+    "mix": "shaken",
+    "createdAt": "2022-08-24T04:46:51.711Z",
+    "updatedAt": "2022-08-24T04:46:51.711Z"
   },
   {
     "id": "flying_dutchman",
@@ -4906,8 +4814,6 @@
     "year": 2009,
     "reference": "Meehan, Jim. (2009, Winter). PDT, New York.",
     "basis": "aviation",
-    "modifiedAt": "2022-08-24T04:46:51.711Z",
-    "list": "Sours – Gin",
     "ingredients": [
       {
         "quantity": 0.75,
@@ -4950,15 +4856,15 @@
     ],
     "category": "daiquiri",
     "glass": "coupe",
-    "mix": "shaken"
+    "mix": "shaken",
+    "createdAt": "2022-08-24T04:46:51.711Z",
+    "updatedAt": "2022-08-24T04:46:51.711Z"
   },
   {
     "id": "pink_lady",
     "name": "Pink Lady",
     "year": 1922,
     "reference": "McElhone, Harry. (1922). *ABC of Mixing Cocktails.*",
-    "modifiedAt": "2016-02-02T23:49:59.560Z",
-    "list": "Sours – Gin",
     "ingredients": [
       {
         "quantity": 1.5,
@@ -4995,15 +4901,15 @@
     ],
     "category": "daiquiri",
     "glass": "coupe",
-    "mix": "shaken"
+    "mix": "shaken",
+    "createdAt": "2016-02-02T23:49:59.560Z",
+    "updatedAt": "2016-02-02T23:49:59.560Z"
   },
   {
     "id": "white_lady",
     "name": "White Lady",
     "year": 1922,
     "reference": "McElhone, Harry. (1922). *ABC of Mixing Cocktails.*",
-    "modifiedAt": "2017-06-11T03:30:28.467Z",
-    "list": "Sours – Gin",
     "ingredients": [
       {
         "quantity": 2,
@@ -5035,15 +4941,15 @@
     ],
     "category": "sidecar",
     "glass": "coupe",
-    "mix": "shaken"
+    "mix": "shaken",
+    "createdAt": "2017-06-11T03:30:28.467Z",
+    "updatedAt": "2017-06-11T03:30:28.467Z"
   },
   {
     "id": "pegu_club",
     "name": "Pegu Club",
     "year": 1927,
     "reference": "McElhone, Harry. (1927). *Barflies and Cocktails.*",
-    "modifiedAt": "2023-04-21T18:18:41.030Z",
-    "list": "Sours – Gin",
     "ingredients": [
       {
         "quantity": 2,
@@ -5074,15 +4980,15 @@
     ],
     "category": "sidecar",
     "glass": "coupe",
-    "mix": "shaken"
+    "mix": "shaken",
+    "createdAt": "2023-04-21T18:18:41.030Z",
+    "updatedAt": "2023-04-21T18:18:41.030Z"
   },
   {
     "id": "corpse_reviver_2",
     "name": "Corpse Reviver # 2",
     "year": 1930,
     "reference": "Craddock, Harry. (1930). *Savoy Cocktail Book, The.*",
-    "modifiedAt": "2017-06-11T03:31:16.607Z",
-    "list": "Sours – Gin",
     "ingredients": [
       {
         "quantity": 0.75,
@@ -5114,14 +5020,14 @@
     ],
     "category": "sidecar",
     "glass": "coupe",
-    "mix": "shaken"
+    "mix": "shaken",
+    "createdAt": "2017-06-11T03:31:16.607Z",
+    "updatedAt": "2017-06-11T03:31:16.607Z"
   },
   {
     "id": "hoop_la",
     "name": "Hoop La!",
     "basis": "corpse_reviver_2",
-    "modifiedAt": "2017-06-11T03:31:16.607Z",
-    "list": "Sours – Gin",
     "ingredients": [
       {
         "quantity": 1,
@@ -5152,14 +5058,14 @@
     ],
     "category": "sidecar",
     "glass": "coupe",
-    "mix": "shaken"
+    "mix": "shaken",
+    "createdAt": "2017-06-11T03:31:16.607Z",
+    "updatedAt": "2017-06-11T03:31:16.607Z"
   },
   {
     "id": "hipster_reviver_2",
     "name": "Hipster Reviver #2",
     "basis": "corpse_reviver_2",
-    "modifiedAt": "2017-06-11T03:31:16.607Z",
-    "list": "Sours – Gin",
     "ingredients": [
       {
         "quantity": 2,
@@ -5201,7 +5107,9 @@
     ],
     "category": "daiquiri",
     "glass": "coupe",
-    "mix": "shaken"
+    "mix": "shaken",
+    "createdAt": "2017-06-11T03:31:16.607Z",
+    "updatedAt": "2017-06-11T03:31:16.607Z"
   },
   {
     "id": "creeping_death",
@@ -5209,8 +5117,6 @@
     "year": 2012,
     "reference": "*Savoy Stomp.* (2012). Easter, Trevor (bartender).",
     "basis": "corpse_reviver_2",
-    "modifiedAt": "2017-06-11T03:31:16.607Z",
-    "list": "Sours – Gin",
     "ingredients": [
       {
         "quantity": 0.75,
@@ -5242,15 +5148,15 @@
     ],
     "category": "sidecar",
     "glass": "coupe",
-    "mix": "shaken"
+    "mix": "shaken",
+    "createdAt": "2017-06-11T03:31:16.607Z",
+    "updatedAt": "2017-06-11T03:31:16.607Z"
   },
   {
     "id": "20th_century",
     "name": "20th Century",
     "year": 1937,
     "reference": "Tarling, W. J. (1937). *Café Royale Cocktail Book.*",
-    "modifiedAt": "2016-02-18T00:32:17.458Z",
-    "list": "Sours – Gin",
     "ingredients": [
       {
         "quantity": 1.5,
@@ -5278,7 +5184,9 @@
     ],
     "category": "daiquiri",
     "glass": "coupe",
-    "mix": "shaken"
+    "mix": "shaken",
+    "createdAt": "2016-02-18T00:32:17.458Z",
+    "updatedAt": "2016-02-18T00:32:17.458Z"
   },
   {
     "id": "21st_century",
@@ -5286,8 +5194,6 @@
     "year": 2007,
     "reference": "Meehan, Jim. (2007). Pegu Club, New York.",
     "basis": "20th_century",
-    "modifiedAt": "2016-02-18T00:32:17.458Z",
-    "list": "Sours – Gin",
     "ingredients": [
       {
         "quantity": 2,
@@ -5313,18 +5219,16 @@
     ],
     "category": "daiquiri",
     "glass": "coupe",
-    "mix": "shaken"
+    "mix": "shaken",
+    "createdAt": "2016-02-18T00:32:17.458Z",
+    "updatedAt": "2016-02-18T00:32:17.458Z"
   },
   {
     "id": "jubilant",
     "name": "Jubilant",
     "year": 1937,
     "reference": "Perosino, J. (Tarling, W. J.). Café Royal Cocktail Book.",
-    "modifiedAt": "2023-04-29T05:53:15.505Z",
-    "list": "Sours – Gin",
-    "notes": [
-      "Coupe"
-    ],
+    "notes": "Coupe.",
     "ingredients": [
       {
         "quantity": 1.5,
@@ -5361,18 +5265,16 @@
     ],
     "category": "daiquiri",
     "glass": "coupe",
-    "mix": "shaken"
+    "mix": "shaken",
+    "createdAt": "2023-04-29T05:53:15.505Z",
+    "updatedAt": "2023-04-29T05:53:15.505Z"
   },
   {
     "id": "army_navy",
     "name": "Army & Navy",
     "year": 1948,
     "reference": "Embury, David. (1948). *Fine Art of Mixing Drinks, The.*",
-    "modifiedAt": "2020-10-23T17:52:31.539Z",
-    "list": "Sours – Gin",
-    "notes": [
-      "shaken"
-    ],
+    "notes": "shaken.",
     "ingredients": [
       {
         "quantity": 2,
@@ -5398,14 +5300,14 @@
     ],
     "category": "daiquiri",
     "glass": "coupe",
-    "mix": "shaken"
+    "mix": "shaken",
+    "createdAt": "2020-10-23T17:52:31.539Z",
+    "updatedAt": "2020-10-23T17:52:31.539Z"
   },
   {
     "id": "aruba",
     "name": "Aruba",
     "basis": "army_navy",
-    "modifiedAt": "2020-10-23T17:52:31.539Z",
-    "list": "Sours – Gin",
     "ingredients": [
       {
         "quantity": 2,
@@ -5442,15 +5344,15 @@
     ],
     "category": "daiquiri",
     "glass": "coupe",
-    "mix": "shaken"
+    "mix": "shaken",
+    "createdAt": "2020-10-23T17:52:31.539Z",
+    "updatedAt": "2020-10-23T17:52:31.539Z"
   },
   {
     "id": "the_last_word",
     "name": "The Last Word",
     "year": 1951,
     "reference": "Saucier, Ted. (1951). *Bottoms Up.* Detroit Athletic Club, Detroit. Stenson, Murray (bartender, rediscovered), Zig Zag Café, Seattle.",
-    "modifiedAt": "2017-06-11T02:02:45.612Z",
-    "list": "Sours – Gin",
     "ingredients": [
       {
         "quantity": 0.75,
@@ -5478,7 +5380,9 @@
     ],
     "category": "sidecar",
     "glass": "coupe",
-    "mix": "shaken"
+    "mix": "shaken",
+    "createdAt": "2017-06-11T02:02:45.612Z",
+    "updatedAt": "2017-06-11T02:02:45.612Z"
   },
   {
     "id": "final_ward",
@@ -5486,8 +5390,6 @@
     "year": 2000,
     "reference": "Ward, Phil. (c. 2000s). Death + Company, New York.",
     "basis": "the_last_word",
-    "modifiedAt": "2017-06-11T02:02:45.612Z",
-    "list": "Sours – Gin",
     "ingredients": [
       {
         "quantity": 0.75,
@@ -5514,7 +5416,9 @@
     ],
     "category": "sidecar",
     "glass": "coupe",
-    "mix": "shaken"
+    "mix": "shaken",
+    "createdAt": "2017-06-11T02:02:45.612Z",
+    "updatedAt": "2017-06-11T02:02:45.612Z"
   },
   {
     "id": "may_daisy",
@@ -5522,11 +5426,7 @@
     "year": 2007,
     "reference": "Ward, Phil. (2007, Summer). Death + Company, New York.",
     "basis": "the_last_word",
-    "modifiedAt": "2017-06-11T02:02:45.612Z",
-    "list": "Sours – Gin",
-    "notes": [
-      "White wine glass w/ ice"
-    ],
+    "notes": "White wine glass w/ ice.",
     "ingredients": [
       {
         "quantity": 2,
@@ -5558,7 +5458,9 @@
     ],
     "category": "daiquiri",
     "glass": "coupe",
-    "mix": "shaken"
+    "mix": "shaken",
+    "createdAt": "2017-06-11T02:02:45.612Z",
+    "updatedAt": "2017-06-11T02:02:45.612Z"
   },
   {
     "id": "industry_sour",
@@ -5566,8 +5468,6 @@
     "year": 2011,
     "reference": "Kilgore, Ted. (2011). Taste, St. Louis.",
     "basis": "the_last_word",
-    "modifiedAt": "2017-06-11T02:02:45.612Z",
-    "list": "Sours – Gin",
     "ingredients": [
       {
         "quantity": 0.75,
@@ -5594,14 +5494,14 @@
     ],
     "category": "daiquiri",
     "glass": "coupe",
-    "mix": "shaken"
+    "mix": "shaken",
+    "createdAt": "2017-06-11T02:02:45.612Z",
+    "updatedAt": "2017-06-11T02:02:45.612Z"
   },
   {
     "id": "green_ghost",
     "name": "Green Ghost",
     "basis": "the_last_word",
-    "modifiedAt": "2017-06-11T02:02:45.612Z",
-    "list": "Sours – Gin",
     "ingredients": [
       {
         "quantity": 2,
@@ -5622,14 +5522,14 @@
     ],
     "category": "daiquiri",
     "glass": "coupe",
-    "mix": "shaken"
+    "mix": "shaken",
+    "createdAt": "2017-06-11T02:02:45.612Z",
+    "updatedAt": "2017-06-11T02:02:45.612Z"
   },
   {
     "id": "next_to_last_word",
     "name": "Next to Last Word",
     "basis": "the_last_word",
-    "modifiedAt": "2017-06-11T02:02:45.612Z",
-    "list": "Sours – Gin",
     "ingredients": [
       {
         "quantity": 0.75,
@@ -5656,15 +5556,15 @@
     ],
     "category": "sidecar",
     "glass": "coupe",
-    "mix": "shaken"
+    "mix": "shaken",
+    "createdAt": "2017-06-11T02:02:45.612Z",
+    "updatedAt": "2017-06-11T02:02:45.612Z"
   },
   {
     "id": "cloister",
     "name": "Cloister",
     "year": 1971,
     "reference": "Mario, Thomas. (1971). *Playboy's Host & Bar Book.*",
-    "modifiedAt": "2016-02-03T03:11:46.811Z",
-    "list": "Sours – Gin",
     "ingredients": [
       {
         "quantity": 1.5,
@@ -5702,18 +5602,16 @@
     ],
     "category": "daiquiri",
     "glass": "coupe",
-    "mix": "shaken"
+    "mix": "shaken",
+    "createdAt": "2016-02-03T03:11:46.811Z",
+    "updatedAt": "2016-02-03T03:11:46.811Z"
   },
   {
     "id": "chingon",
     "name": "Chingon",
     "year": 2008,
     "reference": "Miller, Brian. Death + Co, New York (2009).",
-    "modifiedAt": "2023-04-28T04:13:29.828Z",
-    "list": "Sours – Gin",
-    "notes": [
-      "Coupe"
-    ],
+    "notes": "Coupe.",
     "ingredients": [
       {
         "quantity": 2,
@@ -5751,19 +5649,16 @@
     ],
     "category": "daiquiri",
     "glass": "coupe",
-    "mix": "shaken"
+    "mix": "shaken",
+    "createdAt": "2023-04-28T04:13:29.828Z",
+    "updatedAt": "2023-04-28T04:13:29.828Z"
   },
   {
     "id": "cherry_pop",
     "name": "Cherry Pop",
     "year": 2009,
     "reference": "Danger, Jane. (2009, Spring).",
-    "modifiedAt": "2016-02-02T17:03:39.088Z",
-    "list": "Sours – Gin",
-    "notes": [
-      "Muddle cherries w/ sugar",
-      "Strain into rocks glass w/ pebble ice"
-    ],
+    "notes": "Muddle cherries w/ sugar. Strain into rocks glass w/ pebble ice.",
     "ingredients": [
       {
         "quantity": 2,
@@ -5795,19 +5690,16 @@
     ],
     "category": "daiquiri",
     "glass": "rocks",
-    "mix": "shaken"
+    "mix": "shaken",
+    "createdAt": "2016-02-02T17:03:39.088Z",
+    "updatedAt": "2016-02-02T17:03:39.088Z"
   },
   {
     "id": "that_green_drink",
     "name": "That Green Drink",
     "year": 2013,
     "reference": "Cerretani, Michael. (2013). *Imbibe*.",
-    "modifiedAt": "2017-06-11T03:44:22.490Z",
-    "list": "Sours – Gin",
-    "notes": [
-      "Muddle 2 cucumber slices with the syrup",
-      "Add a long cucumber peel for garnish"
-    ],
+    "notes": "Muddle 2 cucumber slices with the syrup. Add a long cucumber peel for garnish.",
     "ingredients": [
       {
         "quantity": 2,
@@ -5843,18 +5735,16 @@
     ],
     "category": "daiquiri",
     "glass": "coupe",
-    "mix": "shaken"
+    "mix": "shaken",
+    "createdAt": "2017-06-11T03:44:22.490Z",
+    "updatedAt": "2017-06-11T03:44:22.490Z"
   },
   {
     "id": "brandy_crusta",
     "name": "Brandy Crusta",
     "year": 1862,
     "reference": "Thomas, Jerry. (1862). *Bar-Tender's Guide.*",
-    "modifiedAt": "2022-01-09T07:10:30.117Z",
-    "list": "Sours – Others",
-    "notes": [
-      "Stir and strain into a chilled, sugar-rimmed wine glass filled with an entire lemon and orange peel."
-    ],
+    "notes": "Stir and strain into a chilled, sugar-rimmed wine glass filled with an entire lemon and orange peel.",
     "ingredients": [
       {
         "quantity": 2,
@@ -5881,15 +5771,15 @@
     ],
     "category": "daiquiri",
     "glass": "coupe",
-    "mix": "shaken"
+    "mix": "shaken",
+    "createdAt": "2022-01-09T07:10:30.117Z",
+    "updatedAt": "2022-01-09T07:10:30.117Z"
   },
   {
     "id": "ward_eight",
     "name": "Ward Eight",
     "year": 1913,
     "reference": "*Cocktail Book, The: A Sideboard Manual for Gentlemen.* (1900).",
-    "modifiedAt": "2020-12-30T06:10:35.456Z",
-    "list": "Sours – Others",
     "ingredients": [
       {
         "quantity": 2,
@@ -5915,13 +5805,13 @@
     ],
     "category": "daiquiri",
     "glass": "coupe",
-    "mix": "shaken"
+    "mix": "shaken",
+    "createdAt": "2020-12-30T06:10:35.456Z",
+    "updatedAt": "2020-12-30T06:10:35.456Z"
   },
   {
     "id": "whiskey_sour",
     "name": "Whiskey Sour",
-    "modifiedAt": "2017-06-11T23:10:58.407Z",
-    "list": "Sours – Others",
     "ingredients": [
       {
         "quantity": 2,
@@ -5946,7 +5836,9 @@
     ],
     "category": "daiquiri",
     "glass": "coupe",
-    "mix": "shaken"
+    "mix": "shaken",
+    "createdAt": "2017-06-11T23:10:58.407Z",
+    "updatedAt": "2017-06-11T23:10:58.407Z"
   },
   {
     "id": "camerons_kick",
@@ -5954,8 +5846,6 @@
     "year": 1922,
     "reference": "McElhone, Harry. (1922). *ABC of Mixing Cocktails.*",
     "basis": "whiskey_sour",
-    "modifiedAt": "2017-06-11T23:10:58.407Z",
-    "list": "Sours – Others",
     "ingredients": [
       {
         "quantity": 1,
@@ -5982,7 +5872,9 @@
     ],
     "category": "daiquiri",
     "glass": "coupe",
-    "mix": "shaken"
+    "mix": "shaken",
+    "createdAt": "2017-06-11T23:10:58.407Z",
+    "updatedAt": "2017-06-11T23:10:58.407Z"
   },
   {
     "id": "rattlesnake",
@@ -5990,8 +5882,6 @@
     "year": 1930,
     "reference": "Craddock, Harry. (1930). *Savoy Cocktail Book, The.*",
     "basis": "whiskey_sour",
-    "modifiedAt": "2017-06-11T23:10:58.407Z",
-    "list": "Sours – Others",
     "ingredients": [
       {
         "quantity": 2,
@@ -6021,7 +5911,9 @@
     ],
     "category": "daiquiri",
     "glass": "coupe",
-    "mix": "shaken"
+    "mix": "shaken",
+    "createdAt": "2017-06-11T23:10:58.407Z",
+    "updatedAt": "2017-06-11T23:10:58.407Z"
   },
   {
     "id": "gold_rush",
@@ -6029,11 +5921,7 @@
     "year": 2000,
     "reference": "Siegal, T. J. (c. 2000). Milk & Honey, New York.",
     "basis": "whiskey_sour",
-    "modifiedAt": "2017-06-11T23:10:58.407Z",
-    "list": "Sours – Others",
-    "notes": [
-      "Rocks glass w/ large cube"
-    ],
+    "notes": "Rocks glass w/ large cube.",
     "ingredients": [
       {
         "quantity": 2,
@@ -6054,15 +5942,15 @@
     ],
     "category": "daiquiri",
     "glass": "rocks",
-    "mix": "shaken"
+    "mix": "shaken",
+    "createdAt": "2017-06-11T23:10:58.407Z",
+    "updatedAt": "2017-06-11T23:10:58.407Z"
   },
   {
     "id": "jack_rose",
     "name": "Jack Rose",
     "year": 1908,
     "reference": "Boothby, William. (1908). *World's Drinks and How to Mix Them.*",
-    "modifiedAt": "2016-04-30T03:49:28.350Z",
-    "list": "Sours – Others",
     "ingredients": [
       {
         "quantity": 2,
@@ -6083,15 +5971,15 @@
     ],
     "category": "daiquiri",
     "glass": "coupe",
-    "mix": "shaken"
+    "mix": "shaken",
+    "createdAt": "2016-04-30T03:49:28.350Z",
+    "updatedAt": "2016-04-30T03:49:28.350Z"
   },
   {
     "id": "honeymoon_cocktail",
     "name": "Honeymoon Cocktail",
     "year": 1916,
     "reference": "Ensslin, Hugo. (1916). *Recipes for Mixed Drinks.*",
-    "modifiedAt": "2016-02-03T02:48:21.666Z",
-    "list": "Sours – Others",
     "ingredients": [
       {
         "quantity": 2,
@@ -6118,15 +6006,15 @@
     ],
     "category": "daiquiri",
     "glass": "coupe",
-    "mix": "shaken"
+    "mix": "shaken",
+    "createdAt": "2016-02-03T02:48:21.666Z",
+    "updatedAt": "2016-02-03T02:48:21.666Z"
   },
   {
     "id": "sidecar",
     "name": "Sidecar",
     "year": 1922,
     "reference": "Vermeire, Robert. (1922). *Cocktails: How to Mix Them.*",
-    "modifiedAt": "2018-03-04T13:45:50.198Z",
-    "list": "Sours – Others",
     "ingredients": [
       {
         "quantity": 1.5,
@@ -6159,7 +6047,9 @@
     ],
     "category": "sidecar",
     "glass": "coupe",
-    "mix": "shaken"
+    "mix": "shaken",
+    "createdAt": "2018-03-04T13:45:50.198Z",
+    "updatedAt": "2018-03-04T13:45:50.198Z"
   },
   {
     "id": "deauville",
@@ -6167,8 +6057,6 @@
     "year": 1930,
     "reference": "Craddock, Harry. (1930). *Savoy Cocktail Book, The*.",
     "basis": "sidecar",
-    "modifiedAt": "2018-03-04T13:45:50.198Z",
-    "list": "Sours – Others",
     "ingredients": [
       {
         "quantity": 0.75,
@@ -6207,18 +6095,16 @@
     ],
     "category": "sidecar",
     "glass": "coupe",
-    "mix": "shaken"
+    "mix": "shaken",
+    "createdAt": "2018-03-04T13:45:50.198Z",
+    "updatedAt": "2018-03-04T13:45:50.198Z"
   },
   {
     "id": "scofflaw",
     "name": "Scofflaw",
     "year": 1927,
     "reference": "McElhone, Harry. (1927). *Barflies and Cocktails.*",
-    "modifiedAt": "2023-03-25T03:09:34.913Z",
-    "list": "Sours – Others",
-    "notes": [
-      "Pinch of salt"
-    ],
+    "notes": "Pinch of salt.",
     "ingredients": [
       {
         "quantity": 1.5,
@@ -6254,15 +6140,15 @@
     ],
     "category": "daiquiri",
     "glass": "coupe",
-    "mix": "shaken"
+    "mix": "shaken",
+    "createdAt": "2023-03-25T03:09:34.913Z",
+    "updatedAt": "2023-03-25T03:09:34.913Z"
   },
   {
     "id": "applejack_rabbit",
     "name": "Applejack Rabbit",
     "year": 1927,
     "reference": "Judge Jr. (1927). *Here's How.*",
-    "modifiedAt": "2016-02-03T03:06:32.762Z",
-    "list": "Sours – Others",
     "ingredients": [
       {
         "quantity": 2,
@@ -6288,15 +6174,15 @@
     ],
     "category": "daiquiri",
     "glass": "coupe",
-    "mix": "shaken"
+    "mix": "shaken",
+    "createdAt": "2016-02-03T03:06:32.762Z",
+    "updatedAt": "2016-02-03T03:06:32.762Z"
   },
   {
     "id": "champselysees",
     "name": "Champs-Élysées",
     "year": 1930,
     "reference": "Craddock, Harry. (1930). *Savoy Cocktail Book, The*.",
-    "modifiedAt": "2018-10-19T04:13:01.404Z",
-    "list": "Sours – Others",
     "ingredients": [
       {
         "quantity": 2,
@@ -6335,15 +6221,15 @@
     ],
     "category": "daiquiri",
     "glass": "coupe",
-    "mix": "shaken"
+    "mix": "shaken",
+    "createdAt": "2018-10-19T04:13:01.404Z",
+    "updatedAt": "2018-10-19T04:13:01.404Z"
   },
   {
     "id": "frisco_sour",
     "name": "Frisco Sour",
     "year": 1930,
     "reference": "Boothby, William. (1930). *Boothby's World Drinks.*",
-    "modifiedAt": "2018-03-01T02:11:52.265Z",
-    "list": "Sours – Others",
     "ingredients": [
       {
         "quantity": 2,
@@ -6364,7 +6250,9 @@
     ],
     "category": "daiquiri",
     "glass": "coupe",
-    "mix": "shaken"
+    "mix": "shaken",
+    "createdAt": "2018-03-01T02:11:52.265Z",
+    "updatedAt": "2018-03-01T02:11:52.265Z"
   },
   {
     "id": "junior",
@@ -6372,8 +6260,6 @@
     "year": 1937,
     "reference": "Wondrich, David. (2002). *Esquire Drinks.* *Esquire* (orig), 1937.",
     "basis": "frisco_sour",
-    "modifiedAt": "2018-03-01T02:11:52.265Z",
-    "list": "Sours – Others",
     "ingredients": [
       {
         "quantity": 2,
@@ -6401,15 +6287,15 @@
     ],
     "category": "daiquiri",
     "glass": "coupe",
-    "mix": "shaken"
+    "mix": "shaken",
+    "createdAt": "2018-03-01T02:11:52.265Z",
+    "updatedAt": "2018-03-01T02:11:52.265Z"
   },
   {
     "id": "twelve_mile_limit",
     "name": "Twelve Mile Limit",
     "year": 1934,
     "reference": "Haigh, Ted. (2009). *Vintage Spirits and Forgotten Cocktails.* Fairfax Millard, Thomas Franklin (creator), 1934.",
-    "modifiedAt": "2016-02-04T03:37:31.121Z",
-    "list": "Sours – Others",
     "ingredients": [
       {
         "quantity": 1,
@@ -6450,14 +6336,14 @@
     ],
     "category": "daiquiri",
     "glass": "coupe",
-    "mix": "shaken"
+    "mix": "shaken",
+    "createdAt": "2016-02-04T03:37:31.121Z",
+    "updatedAt": "2016-02-04T03:37:31.121Z"
   },
   {
     "id": "astor_hotel_special",
     "name": "Astor Hotel Special",
     "year": 1939,
-    "modifiedAt": "2023-01-01T02:27:58.053Z",
-    "list": "Sours – Others",
     "ingredients": [
       {
         "quantity": 2,
@@ -6487,19 +6373,16 @@
     ],
     "category": "sidecar",
     "glass": "coupe",
-    "mix": "shaken"
+    "mix": "shaken",
+    "createdAt": "2023-01-01T02:27:58.053Z",
+    "updatedAt": "2023-01-01T02:27:58.053Z"
   },
   {
     "id": "pimms_cup",
     "name": "Pimms Cup",
     "year": 1946,
     "reference": "Beebe, Lucius, (1946). *Stork Club Bar Book, The*",
-    "modifiedAt": "2016-02-03T02:48:40.154Z",
-    "list": "Sours – Others",
-    "notes": [
-      "Muddle cucumber w/ syrup",
-      "Add rest, shake, strain into Collins glass w/ ice"
-    ],
+    "notes": "Muddle cucumber w/ syrup. Add rest, shake, strain into Collins glass w/ ice.",
     "ingredients": [
       {
         "quantity": 2,
@@ -6537,15 +6420,15 @@
     ],
     "category": "daiquiri",
     "glass": "highball",
-    "mix": "shaken"
+    "mix": "shaken",
+    "createdAt": "2016-02-03T02:48:40.154Z",
+    "updatedAt": "2016-02-03T02:48:40.154Z"
   },
   {
     "id": "charlie_chaplin",
     "name": "Charlie Chaplin",
     "year": 1948,
     "reference": "Embury, David. (1948). *Fine Art of Mixing Drinks, The.*",
-    "modifiedAt": "2016-02-05T00:38:26.236Z",
-    "list": "Sours – Others",
     "ingredients": [
       {
         "quantity": 1,
@@ -6567,15 +6450,15 @@
     ],
     "category": "daiquiri",
     "glass": "coupe",
-    "mix": "shaken"
+    "mix": "shaken",
+    "createdAt": "2016-02-05T00:38:26.236Z",
+    "updatedAt": "2016-02-05T00:38:26.236Z"
   },
   {
     "id": "honey_bee",
     "name": "Honey Bee",
     "year": 1948,
     "reference": "Embury, David. (1948). *The Fine Art of Mixing Drinks*",
-    "modifiedAt": "2017-06-11T23:20:24.735Z",
-    "list": "Sours – Others",
     "ingredients": [
       {
         "quantity": 2,
@@ -6599,7 +6482,9 @@
     ],
     "category": "daiquiri",
     "glass": "coupe",
-    "mix": "shaken"
+    "mix": "shaken",
+    "createdAt": "2017-06-11T23:20:24.735Z",
+    "updatedAt": "2017-06-11T23:20:24.735Z"
   },
   {
     "id": "swarm",
@@ -6607,8 +6492,6 @@
     "year": 2013,
     "reference": "Giles, Autumn. (2013). [Serious Eats](http://www.seriouseats.com/recipes/2013/04/the-swarm-honey-bee-cocktail-with-cynar-easy-rum-drink-recipe.html).",
     "basis": "honey_bee",
-    "modifiedAt": "2017-06-11T23:20:24.735Z",
-    "list": "Sours – Others",
     "ingredients": [
       {
         "quantity": 2,
@@ -6638,15 +6521,15 @@
     ],
     "category": "daiquiri",
     "glass": "coupe",
-    "mix": "shaken"
+    "mix": "shaken",
+    "createdAt": "2017-06-11T23:20:24.735Z",
+    "updatedAt": "2017-06-11T23:20:24.735Z"
   },
   {
     "id": "loop_tonic",
     "name": "Loop Tonic",
     "year": 2009,
     "reference": "Ward, Philip. (2009). [Mayahuel](http://www.mayahuelny.com/).",
-    "modifiedAt": "2017-06-11T23:22:59.835Z",
-    "list": "Sours – Others",
     "ingredients": [
       {
         "quantity": 2,
@@ -6683,19 +6566,16 @@
     ],
     "category": "daiquiri",
     "glass": "coupe",
-    "mix": "shaken"
+    "mix": "shaken",
+    "createdAt": "2017-06-11T23:22:59.835Z",
+    "updatedAt": "2017-06-11T23:22:59.835Z"
   },
   {
     "id": "talbott_leaf",
     "name": "Talbott Leaf",
     "year": 2009,
     "reference": "Corcoran, Gerry. (2009, Spring). PDT, New York.",
-    "modifiedAt": "2016-02-03T23:50:15.107Z",
-    "list": "Sours – Others",
-    "notes": [
-      "Muddle mint w/ Cynar",
-      "Mint leaf"
-    ],
+    "notes": "Muddle mint w/ Cynar. Mint leaf.",
     "ingredients": [
       {
         "quantity": 2,
@@ -6733,15 +6613,15 @@
     ],
     "category": "daiquiri",
     "glass": "coupe",
-    "mix": "shaken"
+    "mix": "shaken",
+    "createdAt": "2016-02-03T23:50:15.107Z",
+    "updatedAt": "2016-02-03T23:50:15.107Z"
   },
   {
     "id": "port_of_spain",
     "name": "Port of Spain",
     "year": 2013,
     "reference": " Alling, Dominic. (2013). Beretta, San Francisco.",
-    "modifiedAt": "2020-10-23T17:40:37.961Z",
-    "list": "Sours – Others",
     "ingredients": [
       {
         "quantity": 1.5,
@@ -6768,15 +6648,15 @@
     ],
     "category": "daiquiri",
     "glass": "coupe",
-    "mix": "shaken"
+    "mix": "shaken",
+    "createdAt": "2020-10-23T17:40:37.961Z",
+    "updatedAt": "2020-10-23T17:40:37.961Z"
   },
   {
     "id": "smokescreen",
     "name": "Smokescreen",
     "year": 2018,
     "reference": "Day, Alex. (2018). _Cocktail Codex_. Death + Co, New York.",
-    "modifiedAt": "2023-04-23T22:37:17.534Z",
-    "list": "Sours – Others",
     "ingredients": [
       {
         "quantity": 1,
@@ -6819,15 +6699,15 @@
     ],
     "category": "daiquiri",
     "glass": "coupe",
-    "mix": "shaken"
+    "mix": "shaken",
+    "createdAt": "2023-04-23T22:37:17.534Z",
+    "updatedAt": "2023-04-23T22:37:17.534Z"
   },
   {
     "id": "daiquiri",
     "name": "Daiquiri",
     "year": 1914,
     "reference": "Straub, Jacques. (1914). *Drinks.*",
-    "modifiedAt": "2017-06-11T23:19:09.478Z",
-    "list": "Tropicals & Tiki",
     "ingredients": [
       {
         "quantity": 2,
@@ -6857,14 +6737,14 @@
     ],
     "category": "tiki",
     "glass": "tiki",
-    "mix": "shaken"
+    "mix": "shaken",
+    "createdAt": "2017-06-11T23:19:09.478Z",
+    "updatedAt": "2017-06-11T23:19:09.478Z"
   },
   {
     "id": "planters_punch",
     "name": "Planter's Punch",
     "basis": "daiquiri",
-    "modifiedAt": "2017-06-11T23:19:09.478Z",
-    "list": "Tropicals & Tiki",
     "ingredients": [
       {
         "quantity": 2,
@@ -6898,7 +6778,9 @@
     ],
     "category": "tiki",
     "glass": "tiki",
-    "mix": "shaken"
+    "mix": "shaken",
+    "createdAt": "2017-06-11T23:19:09.478Z",
+    "updatedAt": "2017-06-11T23:19:09.478Z"
   },
   {
     "id": "hemingway_daiquiri",
@@ -6906,8 +6788,6 @@
     "year": 1939,
     "reference": "*Bar La Florida Cocktail Book.* (1939). \"Daiquiri #3\" (original name).",
     "basis": "daiquiri",
-    "modifiedAt": "2017-06-11T23:19:09.478Z",
-    "list": "Tropicals & Tiki",
     "ingredients": [
       {
         "quantity": 2,
@@ -6943,7 +6823,9 @@
     ],
     "category": "tiki",
     "glass": "tiki",
-    "mix": "shaken"
+    "mix": "shaken",
+    "createdAt": "2017-06-11T23:19:09.478Z",
+    "updatedAt": "2017-06-11T23:19:09.478Z"
   },
   {
     "id": "beachcomber",
@@ -6951,8 +6833,6 @@
     "year": 1947,
     "reference": "Bergeron, Jules. (1947). *Trader Vic's Bartender's Guide.*",
     "basis": "daiquiri",
-    "modifiedAt": "2017-06-11T23:19:09.478Z",
-    "list": "Tropicals & Tiki",
     "ingredients": [
       {
         "quantity": 1.5,
@@ -6987,7 +6867,9 @@
     ],
     "category": "tiki",
     "glass": "tiki",
-    "mix": "shaken"
+    "mix": "shaken",
+    "createdAt": "2017-06-11T23:19:09.478Z",
+    "updatedAt": "2017-06-11T23:19:09.478Z"
   },
   {
     "id": "queens_park_swizzle",
@@ -6995,12 +6877,7 @@
     "year": 1947,
     "reference": "Bergeron, Jules. (1947). *Trader Vic's Bartender's Guide.*",
     "basis": "daiquiri",
-    "modifiedAt": "2017-06-11T23:19:09.478Z",
-    "list": "Tropicals & Tiki",
-    "notes": [
-      "Muddle mint w/ syrup in Collins glass",
-      "Add rest, add pebble ice, swizzle, add pebble ice"
-    ],
+    "notes": "Muddle mint w/ syrup in Collins glass. Add rest, add pebble ice, swizzle, add pebble ice.",
     "ingredients": [
       {
         "quantity": 2,
@@ -7048,7 +6925,9 @@
     ],
     "category": "tiki",
     "glass": "highball",
-    "mix": "shaken"
+    "mix": "shaken",
+    "createdAt": "2017-06-11T23:19:09.478Z",
+    "updatedAt": "2017-06-11T23:19:09.478Z"
   },
   {
     "id": "conquistador",
@@ -7056,8 +6935,6 @@
     "year": 2008,
     "reference": "Ross, Sam. (2008). New York.",
     "basis": "rum_sours_daiquiri",
-    "modifiedAt": "2017-06-11T23:19:09.478Z",
-    "list": "Tropicals & Tiki",
     "ingredients": [
       {
         "quantity": 1,
@@ -7103,15 +6980,15 @@
     ],
     "category": "tiki",
     "glass": "tiki",
-    "mix": "shaken"
+    "mix": "shaken",
+    "createdAt": "2017-06-11T23:19:09.478Z",
+    "updatedAt": "2017-06-11T23:19:09.478Z"
   },
   {
     "id": "east_india_cocktail",
     "name": "East India Cocktail",
     "year": 1900,
     "reference": "Johnson, Harry. (1900). *Bartender's Manual.*",
-    "modifiedAt": "2016-02-03T03:02:45.450Z",
-    "list": "Tropicals & Tiki",
     "ingredients": [
       {
         "quantity": 1.75,
@@ -7153,19 +7030,16 @@
     ],
     "category": "tiki",
     "glass": "tiki",
-    "mix": "shaken"
+    "mix": "shaken",
+    "createdAt": "2016-02-03T03:02:45.450Z",
+    "updatedAt": "2016-02-03T03:02:45.450Z"
   },
   {
     "id": "singapore_sling",
     "name": "Singapore Sling",
     "year": 1915,
     "reference": "*Sloppy Joe's*. (1931). Ngiam Tong Boon (bartender), Long Bar, Raffles Hotel, Singapore, 1915.",
-    "modifiedAt": "2016-02-03T03:03:38.910Z",
-    "list": "Tropicals & Tiki",
-    "notes": [
-      "Collins glass w/ ice",
-      "Pineapple slice"
-    ],
+    "notes": "Collins glass w/ ice. Pineapple slice.",
     "ingredients": [
       {
         "quantity": 2,
@@ -7220,15 +7094,15 @@
     ],
     "category": "tiki",
     "glass": "highball",
-    "mix": "shaken"
+    "mix": "shaken",
+    "createdAt": "2016-02-03T03:03:38.910Z",
+    "updatedAt": "2016-02-03T03:03:38.910Z"
   },
   {
     "id": "mary_pickford",
     "name": "Mary Pickford",
     "year": 1928,
     "reference": "Chicote, Pedro. (1928). *Cocktails.*",
-    "modifiedAt": "2016-02-04T23:32:21.165Z",
-    "list": "Tropicals & Tiki",
     "ingredients": [
       {
         "quantity": 2,
@@ -7258,19 +7132,16 @@
     ],
     "category": "tiki",
     "glass": "tiki",
-    "mix": "shaken"
+    "mix": "shaken",
+    "createdAt": "2016-02-04T23:32:21.165Z",
+    "updatedAt": "2016-02-04T23:32:21.165Z"
   },
   {
     "id": "margarita",
     "name": "Margarita",
     "year": 1937,
     "reference": "Tarling, W. J. (1937). *Café Royal Cocktail Book.* \"Picador Cocktail\" (orig).",
-    "modifiedAt": "2022-05-30T00:25:55.791Z",
-    "list": "Tropicals & Tiki",
-    "notes": [
-      "Salt",
-      "Rocks glass w/ ice or coupe"
-    ],
+    "notes": "Salt. Rocks glass w/ ice or coupe.",
     "ingredients": [
       {
         "quantity": 2,
@@ -7302,7 +7173,9 @@
     ],
     "category": "tiki",
     "glass": "coupe",
-    "mix": "shaken"
+    "mix": "shaken",
+    "createdAt": "2022-05-30T00:25:55.791Z",
+    "updatedAt": "2022-05-30T00:25:55.791Z"
   },
   {
     "id": "bronco_buster",
@@ -7310,12 +7183,7 @@
     "year": 1951,
     "reference": "Saucier, Ted. (1951). *Bottoms Up.* Arizona Biltmore Hotel, Phoenix.",
     "basis": "margarita",
-    "modifiedAt": "2022-05-30T00:25:55.791Z",
-    "list": "Tropicals & Tiki",
-    "notes": [
-      "Salt",
-      "Rocks glass w/ ice or coupe"
-    ],
+    "notes": "Salt. Rocks glass w/ ice or coupe.",
     "ingredients": [
       {
         "quantity": 1,
@@ -7352,15 +7220,15 @@
     ],
     "category": "tiki",
     "glass": "coupe",
-    "mix": "shaken"
+    "mix": "shaken",
+    "createdAt": "2022-05-30T00:25:55.791Z",
+    "updatedAt": "2022-05-30T00:25:55.791Z"
   },
   {
     "id": "royal_bermuda_yacht_club",
     "name": "Royal Bermuda Yacht Club",
     "year": 1945,
     "reference": "Gaige, Crosby. (1945). *Cocktail Guide and Ladies' Companion.*",
-    "modifiedAt": "2016-02-03T00:45:24.136Z",
-    "list": "Tropicals & Tiki",
     "ingredients": [
       {
         "quantity": 2,
@@ -7399,18 +7267,16 @@
     ],
     "category": "tiki",
     "glass": "tiki",
-    "mix": "shaken"
+    "mix": "shaken",
+    "createdAt": "2016-02-03T00:45:24.136Z",
+    "updatedAt": "2016-02-03T00:45:24.136Z"
   },
   {
     "id": "beachbum_berrys_mai_tai",
     "name": "Beachbum Berry’s Mai Tai",
     "year": 1947,
     "reference": "Bergeron, Jules. (1947). *Trader Vic's Bartender's Guide.*",
-    "modifiedAt": "2023-01-08T03:36:30.640Z",
-    "list": "Tropicals & Tiki",
-    "notes": [
-      "Rocks glass w/ pebble ice"
-    ],
+    "notes": "Rocks glass w/ pebble ice.",
     "ingredients": [
       {
         "quantity": 1,
@@ -7462,19 +7328,16 @@
     ],
     "category": "tiki",
     "glass": "rocks",
-    "mix": "shaken"
+    "mix": "shaken",
+    "createdAt": "2023-01-08T03:36:30.640Z",
+    "updatedAt": "2023-01-08T03:36:30.640Z"
   },
   {
     "id": "smugglers_cove_mai_tai",
     "name": "Smuggler’s Cove Mai Tai",
     "reference": "Cate, Martin. (2000s). Smuggier's Cove, San Francisco.",
     "basis": "beachbum_berrys_mai_tai",
-    "modifiedAt": "2023-01-08T03:36:30.640Z",
-    "list": "Tropicals & Tiki",
-    "notes": [
-      "Shake w/ crushed ice, pour unstrained into rocks glass",
-      "Garnish w/ spent lime hull & a mint sprig"
-    ],
+    "notes": "Shake w/ crushed ice, pour unstrained into rocks glass. Garnish w/ spent lime hull & a mint sprig.",
     "ingredients": [
       {
         "quantity": 2,
@@ -7512,7 +7375,9 @@
     ],
     "category": "tiki",
     "glass": "rocks",
-    "mix": "shaken"
+    "mix": "shaken",
+    "createdAt": "2023-01-08T03:36:30.640Z",
+    "updatedAt": "2023-01-08T03:36:30.640Z"
   },
   {
     "id": "lost_lakes_mai_tai",
@@ -7520,12 +7385,7 @@
     "year": 2022,
     "reference": "Suderman, Peter. (2022). *Cocktails With Suderman.*",
     "basis": "beachbum_berrys_mai_tai",
-    "modifiedAt": "2023-01-08T03:36:30.640Z",
-    "list": "Tropicals & Tiki",
-    "notes": [
-      "Shake w/ lime hull",
-      "Rocks glass w/ pebble ice"
-    ],
+    "notes": "Shake w/ lime hull. Rocks glass w/ pebble ice.",
     "ingredients": [
       {
         "quantity": 0.5,
@@ -7588,19 +7448,16 @@
     ],
     "category": "tiki",
     "glass": "rocks",
-    "mix": "shaken"
+    "mix": "shaken",
+    "createdAt": "2023-01-08T03:36:30.640Z",
+    "updatedAt": "2023-01-08T03:36:30.640Z"
   },
   {
     "id": "corn_n_oil",
     "name": "Corn 'n Oil",
     "year": 1900,
     "reference": "Anonymous, Barbados. (c. 1900).",
-    "modifiedAt": "2016-02-04T19:59:11.693Z",
-    "list": "Tropicals & Tiki",
-    "notes": [
-      "Build in rocks glass w/ ice.",
-      "Squeeze 1/4 lime on top."
-    ],
+    "notes": "Build in rocks glass w/ ice. Squeeze 1/4 lime on top.",
     "ingredients": [
       {
         "quantity": 2,
@@ -7629,18 +7486,16 @@
     ],
     "category": "tiki",
     "glass": "rocks",
-    "mix": "build"
+    "mix": "build",
+    "createdAt": "2016-02-04T19:59:11.693Z",
+    "updatedAt": "2016-02-04T19:59:11.693Z"
   },
   {
     "id": "pisco_sour",
     "name": "Pisco Sour",
     "year": 1951,
     "reference": "Baker, Jr, Charles H., (1951). *South American Gentleman's Companion, The.*",
-    "modifiedAt": "2016-02-02T23:52:00.883Z",
-    "list": "Tropicals & Tiki",
-    "notes": [
-      "Garnish with 4 dashes of Angostura bitters"
-    ],
+    "notes": "Garnish with 4 dashes of Angostura bitters.",
     "ingredients": [
       {
         "quantity": 2,
@@ -7672,15 +7527,15 @@
     ],
     "category": "tiki",
     "glass": "tiki",
-    "mix": "shaken"
+    "mix": "shaken",
+    "createdAt": "2016-02-02T23:52:00.883Z",
+    "updatedAt": "2016-02-02T23:52:00.883Z"
   },
   {
     "id": "jungle_bird",
     "name": "Jungle Bird",
     "year": 1978,
     "reference": "Ross, Sam. (2012) Milk + Honey, New York.",
-    "modifiedAt": "2016-02-05T00:17:55.343Z",
-    "list": "Tropicals & Tiki",
     "ingredients": [
       {
         "quantity": 1.5,
@@ -7713,18 +7568,16 @@
     ],
     "category": "tiki",
     "glass": "tiki",
-    "mix": "shaken"
+    "mix": "shaken",
+    "createdAt": "2016-02-05T00:17:55.343Z",
+    "updatedAt": "2016-02-05T00:17:55.343Z"
   },
   {
     "id": "caipirinha",
     "name": "Caipirinha",
     "year": 1989,
     "reference": "Schumann, Charles. (1989). *Tropical Bar Book*.",
-    "modifiedAt": "2016-02-02T17:45:00.527Z",
-    "list": "Tropicals & Tiki",
-    "notes": [
-      "Cut 1/2 of a lime into wedges, then muddle w/ 2 demerara sugar cubes and shake, pour unstrained into rocks glass"
-    ],
+    "notes": "Cut 1/2 of a lime into wedges, then muddle w/ 2 demerara sugar cubes and shake, pour unstrained into rocks glass.",
     "ingredients": [
       {
         "quantity": 2,
@@ -7745,18 +7598,16 @@
     ],
     "category": "tiki",
     "glass": "rocks",
-    "mix": "shaken"
+    "mix": "shaken",
+    "createdAt": "2016-02-02T17:45:00.527Z",
+    "updatedAt": "2016-02-02T17:45:00.527Z"
   },
   {
     "id": "barbados",
     "name": "Barbados",
     "year": 2011,
     "reference": "Rathbun, A.J. (2011). *Ginger Bliss and The Violet Fizz*.",
-    "modifiedAt": "2017-06-11T23:24:10.206Z",
-    "list": "Tropicals & Tiki",
-    "notes": [
-      "Crushed ice"
-    ],
+    "notes": "Crushed ice.",
     "ingredients": [
       {
         "quantity": 1.5,
@@ -7783,18 +7634,15 @@
     ],
     "category": "tiki",
     "glass": "tiki",
-    "mix": "shaken"
+    "mix": "shaken",
+    "createdAt": "2017-06-11T23:24:10.206Z",
+    "updatedAt": "2017-06-11T23:24:10.206Z"
   },
   {
     "id": "lust_for_life",
     "name": "Lust For Life",
     "year": 2013,
-    "modifiedAt": "2020-12-21T02:52:01.075Z",
-    "list": "Tropicals & Tiki",
-    "notes": [
-      "Shake, strain over rocks",
-      "Dust w/ cocoa powder"
-    ],
+    "notes": "Shake, strain over rocks. Dust w/ cocoa powder.",
     "ingredients": [
       {
         "quantity": 1.5,
@@ -7824,13 +7672,13 @@
     ],
     "category": "tiki",
     "glass": "rocks",
-    "mix": "shaken"
+    "mix": "shaken",
+    "createdAt": "2020-12-21T02:52:01.075Z",
+    "updatedAt": "2020-12-21T02:52:01.075Z"
   },
   {
     "id": "gin_tonic",
     "name": "Gin & Tonic",
-    "modifiedAt": "2020-12-30T05:36:46.183Z",
-    "list": "Highballs & Royales",
     "ingredients": [
       {
         "quantity": 2,
@@ -7858,14 +7706,14 @@
     ],
     "category": "highball",
     "glass": "highball",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2020-12-30T05:36:46.183Z",
+    "updatedAt": "2020-12-30T05:36:46.183Z"
   },
   {
     "id": "dark_stormy",
     "name": "Dark & Stormy",
     "year": null,
-    "modifiedAt": "2020-12-30T05:36:46.183Z",
-    "list": "Highballs & Royales",
     "ingredients": [
       {
         "quantity": 2,
@@ -7888,15 +7736,15 @@
     ],
     "category": "highball",
     "glass": "highball",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2020-12-30T05:36:46.183Z",
+    "updatedAt": "2020-12-30T05:36:46.183Z"
   },
   {
     "id": "monkey_gland",
     "name": "Monkey Gland",
     "year": 1922,
     "reference": "McElhone, Harry. (1922). *ABC of Mixing Cocktails.* Ciro's Club, London.",
-    "modifiedAt": "2020-12-30T05:36:46.183Z",
-    "list": "Highballs & Royales",
     "ingredients": [
       {
         "quantity": 2,
@@ -7921,18 +7769,16 @@
     ],
     "category": "highball",
     "glass": "highball",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2020-12-30T05:36:46.183Z",
+    "updatedAt": "2020-12-30T05:36:46.183Z"
   },
   {
     "id": "moscow_mule",
     "name": "Moscow Mule",
     "year": 1946,
     "reference": "Beebe, Lucius. (1946). *Stork Club Bar Book, The.* Morgan, Jack (bartender) Cock 'n' Bull, Los Angeles.",
-    "modifiedAt": "2020-12-30T05:36:46.183Z",
-    "list": "Highballs & Royales",
-    "notes": [
-      "Shake, strain into mule cup w/ ice"
-    ],
+    "notes": "Shake, strain into mule cup w/ ice.",
     "ingredients": [
       {
         "quantity": 1.5,
@@ -7958,18 +7804,16 @@
     ],
     "category": "highball",
     "glass": "highball",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2020-12-30T05:36:46.183Z",
+    "updatedAt": "2020-12-30T05:36:46.183Z"
   },
   {
     "id": "paloma",
     "name": "Paloma",
     "year": 2005,
     "reference": "Wondrich, David. (2005). *Killer Cocktails.*",
-    "modifiedAt": "2020-12-30T05:36:46.183Z",
-    "list": "Highballs & Royales",
-    "notes": [
-      "Build in salt-rimmed Collins glass w/ ice"
-    ],
+    "notes": "Build in salt-rimmed Collins glass w/ ice.",
     "ingredients": [
       {
         "quantity": 2,
@@ -7996,14 +7840,14 @@
     ],
     "category": "highball",
     "glass": "highball",
-    "mix": "build"
+    "mix": "build",
+    "createdAt": "2020-12-30T05:36:46.183Z",
+    "updatedAt": "2020-12-30T05:36:46.183Z"
   },
   {
     "id": "tom_collins",
     "name": "Gin Fizzes: Tom Collins",
     "year": 1876,
-    "modifiedAt": "2016-02-05T01:25:38.293Z",
-    "list": "Highballs & Royales",
     "ingredients": [
       {
         "quantity": 2,
@@ -8030,15 +7874,15 @@
     ],
     "category": "highball",
     "glass": "highball",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2016-02-05T01:25:38.293Z",
+    "updatedAt": "2016-02-05T01:25:38.293Z"
   },
   {
     "id": "morning_glory",
     "name": "Morning Glory",
     "year": 1876,
     "reference": "Thomas, Jerry. (1876). *Bar-Tender's Guide.*",
-    "modifiedAt": "2018-03-05T05:32:09.902Z",
-    "list": "Highballs & Royales",
     "ingredients": [
       {
         "quantity": 1,
@@ -8079,18 +7923,16 @@
     ],
     "category": "highball",
     "glass": "highball",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2018-03-05T05:32:09.902Z",
+    "updatedAt": "2018-03-05T05:32:09.902Z"
   },
   {
     "id": "ramos_gin_fizz",
     "name": "Ramos Gin Fizz",
     "year": 1895,
     "reference": "Kappeler, George, (1895). *Modern American Drinks.*",
-    "modifiedAt": "2016-02-03T01:14:44.188Z",
-    "list": "Highballs & Royales",
-    "notes": [
-      "Collins glass"
-    ],
+    "notes": "Collins glass.",
     "ingredients": [
       {
         "quantity": 2,
@@ -8137,15 +7979,15 @@
     ],
     "category": "highball",
     "glass": "highball",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2016-02-03T01:14:44.188Z",
+    "updatedAt": "2016-02-03T01:14:44.188Z"
   },
   {
     "id": "seelbach",
     "name": "Seelbach",
     "year": 1917,
     "reference": "Haigh, Ted. (2003). *Vintage Spirits and Forgotten Cocktails.* Seelbach Hotel Bar, Louisville, 1917.",
-    "modifiedAt": "2016-02-03T00:58:30.825Z",
-    "list": "Highballs & Royales",
     "ingredients": [
       {
         "quantity": 1,
@@ -8185,15 +8027,15 @@
     ],
     "category": "highball",
     "glass": "highball",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2016-02-03T00:58:30.825Z",
+    "updatedAt": "2016-02-03T00:58:30.825Z"
   },
   {
     "id": "french_75",
     "name": "French 75",
     "year": 1927,
     "reference": "Judge Jr. (1927). *Here's How.*",
-    "modifiedAt": "2016-02-03T01:16:18.909Z",
-    "list": "Highballs & Royales",
     "ingredients": [
       {
         "quantity": 1,
@@ -8226,20 +8068,16 @@
     ],
     "category": "highball",
     "glass": "highball",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2016-02-03T01:16:18.909Z",
+    "updatedAt": "2016-02-03T01:16:18.909Z"
   },
   {
     "id": "mojito",
     "name": "Mojito",
     "year": 1929,
     "reference": "Lasa, Juan A. (1929). *Libro de Cocktail.* \"Rum Mojo\" (orig).",
-    "modifiedAt": "2016-02-02T20:38:47.766Z",
-    "list": "Highballs & Royales",
-    "notes": [
-      "Muddle mint w/ syrup in mixing glass",
-      "Add rest, shake",
-      "Fine-strain into Collins glass w/ ice"
-    ],
+    "notes": "Muddle mint w/ syrup in mixing glass. Add rest, shake. Fine-strain into Collins glass w/ ice.",
     "ingredients": [
       {
         "quantity": 2,
@@ -8279,18 +8117,16 @@
     ],
     "category": "highball",
     "glass": "highball",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2016-02-02T20:38:47.766Z",
+    "updatedAt": "2016-02-02T20:38:47.766Z"
   },
   {
     "id": "death_in_the_afternoon",
     "name": "Death in the Afternoon",
     "year": 1935,
     "reference": "Hemingway, Ernest. (1935) \"Death in the Afternoon\". *So Red the Nose, or Breath in the Afternoon.*",
-    "modifiedAt": "2016-02-02T20:43:39.349Z",
-    "list": "Highballs & Royales",
-    "notes": [
-      "Champagne flute"
-    ],
+    "notes": "Champagne flute.",
     "ingredients": [
       {
         "quantity": 1.5,
@@ -8306,19 +8142,16 @@
     ],
     "category": "highball",
     "glass": "highball",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2016-02-02T20:43:39.349Z",
+    "updatedAt": "2016-02-02T20:43:39.349Z"
   },
   {
     "id": "jimmie_roosevelt",
     "name": "Jimmie Roosevelt",
     "year": 1937,
     "reference": "Rea, Brian",
-    "modifiedAt": "2017-06-11T01:55:06.051Z",
-    "list": "Highballs & Royales",
-    "notes": [
-      "Shake cognac, chartreuse, bitters w/ ice",
-      "coupe"
-    ],
+    "notes": "Shake cognac, chartreuse, bitters w/ ice. coupe.",
     "ingredients": [
       {
         "quantity": 1.5,
@@ -8346,14 +8179,14 @@
     ],
     "category": "highball",
     "glass": "coupe",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2017-06-11T01:55:06.051Z",
+    "updatedAt": "2017-06-11T01:55:06.051Z"
   },
   {
     "id": "airmail",
     "name": "Airmail",
     "year": 1941,
-    "modifiedAt": "2016-02-02T19:54:48.469Z",
-    "list": "Highballs & Royales",
     "ingredients": [
       {
         "quantity": 2,
@@ -8385,19 +8218,16 @@
     ],
     "category": "highball",
     "glass": "highball",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2016-02-02T19:54:48.469Z",
+    "updatedAt": "2016-02-02T19:54:48.469Z"
   },
   {
     "id": "el_diablo",
     "name": "El Diablo",
     "year": 1947,
     "reference": "Bergeron, Jules. (1947). *Trader Vic's Bartender's Guide.*",
-    "modifiedAt": "2016-02-02T19:54:51.037Z",
-    "list": "Highballs & Royales",
-    "notes": [
-      "Strain into rocks glass w/ ice",
-      "Garnish w/ candied ginger"
-    ],
+    "notes": "Strain into rocks glass w/ ice. Garnish w/ candied ginger.",
     "ingredients": [
       {
         "quantity": 2,
@@ -8429,15 +8259,15 @@
     ],
     "category": "highball",
     "glass": "rocks",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2016-02-02T19:54:51.037Z",
+    "updatedAt": "2016-02-02T19:54:51.037Z"
   },
   {
     "id": "old_cuban",
     "name": "Old Cuban",
     "year": 2000,
     "reference": "Saunders, Audrey. (c. 2000). Pegu Club, New York.",
-    "modifiedAt": "2016-02-03T01:01:14.437Z",
-    "list": "Highballs & Royales",
     "ingredients": [
       {
         "quantity": 6,
@@ -8478,18 +8308,16 @@
     ],
     "category": "highball",
     "glass": "highball",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2016-02-03T01:01:14.437Z",
+    "updatedAt": "2016-02-03T01:01:14.437Z"
   },
   {
     "id": "212",
     "name": "212",
     "year": 2008,
     "reference": "Sharpe, Aisha, & Shine, WIlly. (2008). Contemporary Cocktails, New York",
-    "modifiedAt": "2016-02-03T03:12:29.470Z",
-    "list": "Highballs & Royales",
-    "notes": [
-      "Shake, strain into Collins glass w/ ice"
-    ],
+    "notes": "Shake, strain into Collins glass w/ ice.",
     "ingredients": [
       {
         "quantity": 2,
@@ -8517,18 +8345,16 @@
     ],
     "category": "highball",
     "glass": "highball",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2016-02-03T03:12:29.470Z",
+    "updatedAt": "2016-02-03T03:12:29.470Z"
   },
   {
     "id": "white_birch_fizz",
     "name": "White Birch Fizz",
     "year": 2009,
     "reference": "deBary, John. (2009, Fall). PDT, New York.",
-    "modifiedAt": "2016-02-03T02:01:08.162Z",
-    "list": "Highballs & Royales",
-    "notes": [
-      "Collins glass"
-    ],
+    "notes": "Collins glass.",
     "ingredients": [
       {
         "quantity": 1.5,
@@ -8572,15 +8398,15 @@
     ],
     "category": "highball",
     "glass": "highball",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2016-02-03T02:01:08.162Z",
+    "updatedAt": "2016-02-03T02:01:08.162Z"
   },
   {
     "id": "aide_memoir",
     "name": "Aide Memoir",
     "year": 2014,
     "reference": "(2014). [Bea](http://www.beanyc.com/)",
-    "modifiedAt": "2017-06-11T03:28:08.423Z",
-    "list": "Highballs & Royales",
     "ingredients": [
       {
         "quantity": 1.5,
@@ -8614,18 +8440,16 @@
     ],
     "category": "highball",
     "glass": "highball",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2017-06-11T03:28:08.423Z",
+    "updatedAt": "2017-06-11T03:28:08.423Z"
   },
   {
     "id": "lovage",
     "name": "Lovage",
     "year": 2019,
     "reference": "(2019). OK Omens, Portland, OR.",
-    "modifiedAt": "2022-08-30T03:57:55.944Z",
-    "list": "Highballs & Royales",
-    "notes": [
-      "Salt"
-    ],
+    "notes": "Salt.",
     "ingredients": [
       {
         "quantity": 0.75,
@@ -8658,15 +8482,15 @@
     ],
     "category": "highball",
     "glass": "highball",
-    "mix": "stirred"
+    "mix": "stirred",
+    "createdAt": "2022-08-30T03:57:55.944Z",
+    "updatedAt": "2022-08-30T03:57:55.944Z"
   },
   {
     "id": "coffee_cocktail",
     "name": "Coffee Cocktail",
     "year": 1887,
     "reference": "Thomas, Jerry. (1887). *Bar-Tenders Guide.*",
-    "modifiedAt": "2016-02-02T19:54:58.214Z",
-    "list": "Flips & Nogs",
     "ingredients": [
       {
         "quantity": 1.5,
@@ -8696,13 +8520,13 @@
     ],
     "category": "flip",
     "glass": "coupe",
-    "mix": "shaken"
+    "mix": "shaken",
+    "createdAt": "2016-02-02T19:54:58.214Z",
+    "updatedAt": "2016-02-02T19:54:58.214Z"
   },
   {
     "id": "ft_washington_flip",
     "name": "Ft. Washington Flip",
-    "modifiedAt": "2020-12-21T02:19:08.482Z",
-    "list": "Flips & Nogs",
     "ingredients": [
       {
         "quantity": 1.5,
@@ -8729,13 +8553,13 @@
     ],
     "category": "flip",
     "glass": "coupe",
-    "mix": "shaken"
+    "mix": "shaken",
+    "createdAt": "2020-12-21T02:19:08.482Z",
+    "updatedAt": "2020-12-21T02:19:08.482Z"
   },
   {
     "id": "colleen_bawn_flip",
     "name": "Colleen Bawn Flip",
-    "modifiedAt": "2018-03-01T02:12:19.698Z",
-    "list": "Flips & Nogs",
     "ingredients": [
       {
         "quantity": 1,
@@ -8775,16 +8599,14 @@
     ],
     "category": "flip",
     "glass": "coupe",
-    "mix": "shaken"
+    "mix": "shaken",
+    "createdAt": "2018-03-01T02:12:19.698Z",
+    "updatedAt": "2018-03-01T02:12:19.698Z"
   },
   {
     "id": "fernet_flip",
     "name": "Fernet Flip",
-    "modifiedAt": "2013-08-28T00:57:00.582Z",
-    "list": "Flips & Nogs",
-    "notes": [
-      "Sugar"
-    ],
+    "notes": "Sugar.",
     "ingredients": [
       {
         "quantity": 1,
@@ -8811,13 +8633,13 @@
     ],
     "category": "flip",
     "glass": "coupe",
-    "mix": "shaken"
+    "mix": "shaken",
+    "createdAt": "2013-08-28T00:57:00.582Z",
+    "updatedAt": "2013-08-28T00:57:00.582Z"
   },
   {
     "id": "cynar_flip",
     "name": "Cynar Flip",
-    "modifiedAt": "2013-08-28T00:55:00.182Z",
-    "list": "Flips & Nogs",
     "ingredients": [
       {
         "quantity": 2.5,
@@ -8833,13 +8655,13 @@
     ],
     "category": "flip",
     "glass": "coupe",
-    "mix": "shaken"
+    "mix": "shaken",
+    "createdAt": "2013-08-28T00:55:00.182Z",
+    "updatedAt": "2013-08-28T00:55:00.182Z"
   },
   {
     "id": "grasshopper",
     "name": "Grasshopper",
-    "modifiedAt": "2013-08-28T01:21:08.646Z",
-    "list": "Flips & Nogs",
     "ingredients": [
       {
         "quantity": 1,
@@ -8861,18 +8683,16 @@
     ],
     "category": "flip",
     "glass": "coupe",
-    "mix": "shaken"
+    "mix": "shaken",
+    "createdAt": "2013-08-28T01:21:08.646Z",
+    "updatedAt": "2013-08-28T01:21:08.646Z"
   },
   {
     "id": "coda",
     "name": "Coda",
     "year": 2008,
     "reference": "Eun, Daniel. (2008, Spring).",
-    "modifiedAt": "2016-02-02T17:43:33.334Z",
-    "list": "Flips & Nogs",
-    "notes": [
-      "Fizz glass"
-    ],
+    "notes": "Fizz glass.",
     "ingredients": [
       {
         "quantity": 1,
@@ -8923,6 +8743,8 @@
     ],
     "category": "flip",
     "glass": "coupe",
-    "mix": "shaken"
+    "mix": "shaken",
+    "createdAt": "2016-02-02T17:43:33.334Z",
+    "updatedAt": "2016-02-02T17:43:33.334Z"
   }
 ]

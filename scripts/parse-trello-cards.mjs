@@ -114,16 +114,26 @@ export function parseTrelloCards() {
 
   const specs = trelloCards.map((card) => {
     const its = parseCard(card)
-    const [notes, ingredients] = partition((it) => it.note, its)
+    const [noteObjs, ingredients] = partition((it) => it.note, its)
+    const notes = noteObjs.map(({ note }) => note).filter(Boolean)
 
-    const { lines, ...rest } = card
+    const { lines, list, modifiedAt, ...rest } = card
     const spec = { ...rest }
-    if (notes.length) spec.notes = notes.map((x) => x.note)
-    if (ingredients.length) spec.ingredients = ingredients
 
-    spec.category ??= getCategory(spec)
-    spec.glass ??= getGlass(spec)
-    spec.mix ??= getMix(spec)
+    if (notes.length) {
+      spec.notes = notes.map((n) => (n.endsWith('.') ? n : n + '.')).join(' ')
+    }
+
+    spec.ingredients = ingredients
+
+    if (!spec.ingredients) throw new Error(`No ingredients (${spec.name})`)
+
+    spec.category ??= getCategory(spec, list)
+    spec.glass ??= getGlass(spec, list)
+    spec.mix ??= getMix(spec, list)
+
+    spec.createdAt = modifiedAt
+    spec.updatedAt = modifiedAt
 
     return spec
   })
@@ -468,53 +478,11 @@ function addRumCategories(id) {
 
 /**
  * @param {Card} spec
+ * @param {string} list
  * @returns {string}
  */
-function getGlass(spec) {
-  const notes = spec.notes ?? []
-  const allNotes = notes.map((n) => n.toLowerCase()).join(' ')
-  if (allNotes.includes('coupe')) return 'coupe'
-  else if (allNotes.includes('rocks')) return 'rocks'
-  else if (allNotes.includes('collins')) return 'highball'
-
-  switch (spec.list) {
-    case 'Spirited – Whiskey':
-      return 'rocks'
-    case 'Tropicals & Tiki':
-      return 'tiki'
-    case 'Highballs & Royales':
-      return 'highball'
-    default:
-      return 'coupe'
-  }
-}
-
-/**
- * @param {Card} spec
- * @returns {string}
- */
-function getMix(spec) {
-  const notes = spec.notes ?? []
-  const allNotes = notes.map((n) => n.toLowerCase()).join(' ')
-  if (allNotes.includes('build')) return 'build'
-
-  switch (spec.list) {
-    case 'Tropicals & Tiki':
-    case 'Sours – Gin':
-    case 'Sours – Others':
-    case 'Flips & Nogs':
-      return 'shaken'
-    default:
-      return 'stirred'
-  }
-}
-
-/**
- * @param {Card} spec
- * @returns {string}
- */
-function getCategory(spec) {
-  switch (spec.list) {
+function getCategory(spec, list) {
+  switch (list) {
     case 'Spirited – Whiskey':
     case 'Spirited – Manhattans':
     case 'Spirited – Others':
@@ -544,5 +512,47 @@ function getCategory(spec) {
       return 'tiki'
     case 'Highballs & Royales':
       return 'highball'
+  }
+}
+/**
+ * @param {Card} spec
+ * @param {string} list
+ * @returns {string}
+ */
+function getGlass(spec, list) {
+  const notes = spec.notes?.toLowerCase() ?? ''
+  if (notes.includes('coupe')) return 'coupe'
+  else if (notes.includes('rocks')) return 'rocks'
+  else if (notes.includes('collins')) return 'highball'
+
+  switch (list) {
+    case 'Spirited – Whiskey':
+      return 'rocks'
+    case 'Tropicals & Tiki':
+      return 'tiki'
+    case 'Highballs & Royales':
+      return 'highball'
+    default:
+      return 'coupe'
+  }
+}
+
+/**
+ * @param {Card} spec
+ * @param {string} list
+ * @returns {string}
+ */
+function getMix(spec, list) {
+  const notes = spec.notes?.toLowerCase() ?? ''
+  if (notes.includes('build')) return 'build'
+
+  switch (list) {
+    case 'Tropicals & Tiki':
+    case 'Sours – Gin':
+    case 'Sours – Others':
+    case 'Flips & Nogs':
+      return 'shaken'
+    default:
+      return 'stirred'
   }
 }

@@ -104,8 +104,10 @@ export interface Spec {
   mix?: MixType
   notes?: string
   bar?: string
+  reference?: string
   source?: string
   sourcePage?: number
+  basis?: string
   stock?: SpecStock
 }
 
