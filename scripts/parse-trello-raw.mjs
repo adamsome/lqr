@@ -1,9 +1,9 @@
 import { readFileSync, writeFileSync } from 'fs'
 import { dirname, join } from 'path'
+import { partition } from 'ramda'
 import { fileURLToPath } from 'url'
 
 import { slugify } from './slugify.mjs'
-import { partition } from 'ramda'
 
 /**
  * @typedef {{

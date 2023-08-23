@@ -1,6 +1,7 @@
 # TODO
 
 - [SPECS] Add from Trello
+- Add specs filters search params to local storage so Specs restores: if empty params, redirect to saved. else set local storage. clear clears local storage
 
 ## Redesign
 

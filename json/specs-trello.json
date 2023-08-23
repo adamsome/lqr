@@ -1,0 +1,8141 @@
+[
+  {
+    "id": "old_fashioned",
+    "name": "Old Fashioned",
+    "year": 1806,
+    "reference": "Proulx, Theodore. (1888). *Bartender's Manual, The.* Refers to Columbia Repository, 1806.",
+    "modifiedAt": "2017-06-11T02:03:16.813Z",
+    "list": "Spirited – Whiskey",
+    "notes": [
+      "Muddle sugar w/ bitters",
+      "Build in rocks glass"
+    ],
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "bottleID": "wild_turkey",
+        "id": "grain_whiskey_rye"
+      },
+      {
+        "quantity": 1,
+        "unit": "whole",
+        "id": "sugar_demerara"
+      },
+      {
+        "quantity": 2,
+        "unit": "dash",
+        "bottleID": "angostura",
+        "id": "bitters_aromatic"
+      },
+      {
+        "quantity": 1,
+        "usage": "twist",
+        "id": "fruit_lemon",
+        "unit": "whole"
+      }
+    ]
+  },
+  {
+    "id": "toronto",
+    "name": "Toronto",
+    "year": 1922,
+    "reference": "Vermeire, Robert. (1922). *Cocktails: How to Mix Them.*",
+    "basis": "old_fashioned",
+    "modifiedAt": "2017-06-11T02:03:16.813Z",
+    "list": "Spirited – Whiskey",
+    "notes": [
+      "Muddle sugar w/ fernet",
+      "Build in rocks glass"
+    ],
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "bottleID": "wild_turkey",
+        "id": "grain_whiskey_rye"
+      },
+      {
+        "quantity": 1,
+        "unit": "whole",
+        "id": "sugar_demerara"
+      },
+      {
+        "quantity": 0.25,
+        "unit": "oz",
+        "bottleID": "fernetbranca",
+        "id": "liqueur_amaro_fernet"
+      },
+      {
+        "quantity": 1,
+        "usage": "twist",
+        "id": "fruit_orange",
+        "unit": "whole"
+      }
+    ]
+  },
+  {
+    "id": "oaxaca",
+    "name": "Oaxaca",
+    "year": 2007,
+    "reference": "Ward, Phil. Death + Co, New York (2007).",
+    "basis": "old_fashioned",
+    "modifiedAt": "2017-06-11T02:03:16.813Z",
+    "list": "Spirited – Whiskey",
+    "notes": [
+      "Muddle sugar w/ bitters",
+      "Build in rocks glass"
+    ],
+    "ingredients": [
+      {
+        "quantity": 1.5,
+        "unit": "oz",
+        "bottleID": "el_tesoro_reposado",
+        "id": "agave_tequila_reposado"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "bottleID": "del_maguey_san_luis_del_rio",
+        "id": "agave_mezcal"
+      },
+      {
+        "quantity": 1,
+        "unit": "tsp",
+        "id": "syrup_agave"
+      },
+      {
+        "quantity": 2,
+        "unit": "dash",
+        "bottleID": "angostura",
+        "id": "bitters_aromatic"
+      },
+      {
+        "quantity": 1,
+        "usage": "twist",
+        "id": "fruit_orange",
+        "unit": "whole"
+      }
+    ]
+  },
+  {
+    "id": "mint_julep",
+    "name": "Mint Julep",
+    "year": 1862,
+    "reference": "Thomas, Jerry. (1862). *Bar-Tender's Guide.*",
+    "modifiedAt": "2016-02-03T00:52:34.035Z",
+    "list": "Spirited – Whiskey",
+    "notes": [
+      "Muddle mint w/ syrup in julep cup",
+      "Add bourbon",
+      "Swizzle & top w/ pebble ice",
+      "Garnish w/ 3 mint sprigs garnish"
+    ],
+    "ingredients": [
+      {
+        "quantity": 2.5,
+        "unit": "oz",
+        "bottleID": "bookers",
+        "id": "grain_whiskey_bourbon"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "id": "syrup_simple"
+      },
+      {
+        "quantity": 8,
+        "unit": "whole",
+        "id": "spice_mint"
+      }
+    ]
+  },
+  {
+    "id": "improved_whiskey_cocktail",
+    "name": "Improved Whiskey Cocktail",
+    "year": 1876,
+    "reference": "Thomas, Jerry. (1876). *Bar-Tender's Guide.*",
+    "modifiedAt": "2016-02-03T00:26:47.945Z",
+    "list": "Spirited – Whiskey",
+    "notes": [
+      "Strain into rocks glass w/ large cube"
+    ],
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "bottleID": "rittenhouse",
+        "id": "grain_whiskey_rye"
+      },
+      {
+        "quantity": 0.25,
+        "unit": "oz",
+        "bottleID": "luxardo_maraschino_liqueur",
+        "id": "liqueur_maraschino"
+      },
+      {
+        "quantity": 0.25,
+        "unit": "oz",
+        "id": "syrup_simple"
+      },
+      {
+        "quantity": 2,
+        "unit": "dash",
+        "bottleID": "angostura",
+        "id": "bitters_aromatic"
+      },
+      {
+        "usage": "rinse",
+        "id": "liqueur_absinthe"
+      }
+    ]
+  },
+  {
+    "id": "brain_duster",
+    "name": "Brain Duster",
+    "year": 1895,
+    "reference": "Kappeler, George J. (1895). *Modern American Drinks.*",
+    "modifiedAt": "2017-06-11T02:04:10.544Z",
+    "list": "Spirited – Whiskey",
+    "ingredients": [
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "id": "grain_whiskey_rye"
+      },
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "id": "liqueur_absinthe"
+      },
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "id": "fortifiedwine_sweetvermouth"
+      },
+      {
+        "quantity": 1,
+        "unit": "dash",
+        "bottleID": "angostura",
+        "id": "bitters_aromatic"
+      }
+    ]
+  },
+  {
+    "id": "hearns",
+    "name": "Hearn's",
+    "year": 1920,
+    "reference": "McGarry, Jack. The Dead Rabbit, New York (2007).",
+    "basis": "brain_duster",
+    "modifiedAt": "2017-06-11T02:04:10.544Z",
+    "list": "Spirited – Whiskey",
+    "ingredients": [
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "id": "grain_whiskey_irish"
+      },
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "id": "liqueur_absinthe"
+      },
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "id": "fortifiedwine_sweetvermouth"
+      },
+      {
+        "quantity": 1,
+        "unit": "dash",
+        "bottleID": "angostura",
+        "id": "bitters_aromatic"
+      }
+    ]
+  },
+  {
+    "id": "sazerac",
+    "name": "Sazerac",
+    "year": 1908,
+    "reference": "Boothby, William. (1908). *World's Drinks and How to Mix Them.*",
+    "modifiedAt": "2017-06-11T03:22:56.904Z",
+    "list": "Spirited – Whiskey",
+    "notes": [
+      "Muddle sugar w/ bitters",
+      "Add whiskey and ice",
+      "Stir, strain into rocks glass",
+      "Express lemon twist & discard"
+    ],
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "bottleID": "rittenhouse",
+        "id": "grain_whiskey_rye"
+      },
+      {
+        "quantity": 3,
+        "unit": "dash",
+        "bottleID": "peychauds",
+        "id": "bitters_creole"
+      },
+      {
+        "quantity": 2,
+        "unit": "dash",
+        "bottleID": "angostura",
+        "id": "bitters_aromatic"
+      },
+      {
+        "quantity": 1,
+        "unit": "whole",
+        "id": "sugar_demerara"
+      },
+      {
+        "usage": "rinse",
+        "id": "liqueur_absinthe"
+      },
+      {
+        "quantity": 1,
+        "usage": "twist",
+        "id": "fruit_lemon",
+        "unit": "whole"
+      }
+    ]
+  },
+  {
+    "id": "carthusian",
+    "name": "Carthusian",
+    "year": 2014,
+    "reference": "(2014). [Spice Kitchen & Bar](http://spicekitchenandbar.com/).",
+    "basis": "sazerac",
+    "modifiedAt": "2017-06-11T03:22:56.904Z",
+    "list": "Spirited – Whiskey",
+    "notes": [
+      "Express lemon twist & discard"
+    ],
+    "ingredients": [
+      {
+        "quantity": 2.5,
+        "unit": "oz",
+        "id": "grain_whiskey_rye"
+      },
+      {
+        "quantity": 0.25,
+        "unit": "oz",
+        "bottleID": "green_chartreuse",
+        "id": "liqueur_herbal"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "tsp",
+        "id": "syrup_simple"
+      },
+      {
+        "usage": "rinse",
+        "id": "liqueur_absinthe"
+      },
+      {
+        "quantity": 2,
+        "unit": "dash",
+        "id": "bitters_lemon"
+      },
+      {
+        "quantity": 1,
+        "usage": "twist",
+        "id": "fruit_lemon",
+        "unit": "whole"
+      }
+    ]
+  },
+  {
+    "id": "up_to_date",
+    "name": "Up To Date",
+    "year": 1916,
+    "reference": "Enslin, Hugo. (1916). *Recipe for Mixed Drinks.*",
+    "modifiedAt": "2016-02-03T01:42:51.062Z",
+    "list": "Spirited – Whiskey",
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "bottleID": "wild_turkey",
+        "id": "grain_whiskey_rye"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "bottleID": "lustau_don_nuno_oloroso",
+        "id": "fortifiedwine_sherry_oloroso"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "bottleID": "grand_marnier",
+        "id": "liqueur_orange"
+      },
+      {
+        "quantity": 2,
+        "unit": "dash",
+        "bottleID": "angostura",
+        "id": "bitters_aromatic"
+      },
+      {
+        "quantity": 1,
+        "usage": "twist",
+        "id": "fruit_lemon",
+        "unit": "whole"
+      }
+    ]
+  },
+  {
+    "id": "boulevardier",
+    "name": "Boulevardier",
+    "year": 1922,
+    "reference": "McElhone, Harry. (1922). *ABC of Mixing Cocktails.* Gwynne, Erskine (creator).",
+    "modifiedAt": "2023-  01-08T03:38:11.282Z",
+    "list": "Spirited – Whiskey",
+    "notes": [
+      "Coupe or rocks glass w/ ice"
+    ],
+    "ingredients": [
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "bottleID": "old_overholt",
+        "id": "grain_whiskey_rye"
+      },
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "bottleID": "campari",
+        "id": "liqueur_amaro_aperitivo"
+      },
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "id": "fortifiedwine_sweetvermouth"
+      },
+      {
+        "quantity": 1,
+        "usage": "twist",
+        "id": "fruit_orange",
+        "unit": "whole"
+      }
+    ]
+  },
+  {
+    "id": "old_pal",
+    "name": "Old Pal",
+    "year": 1922,
+    "reference": "McElhone, Harry. (1922). *ABC of Mixing Cocktails.* Robertson, Sparrow (creator).",
+    "basis": "boulevardier",
+    "modifiedAt": "2023-01-08T03:38:11.282Z",
+    "list": "Spirited – Whiskey",
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "bottleID": "old_overholt",
+        "id": "grain_whiskey_rye"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "bottleID": "dolin_dry",
+        "id": "fortifiedwine_dryvermouth"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "bottleID": "campari",
+        "id": "liqueur_amaro_aperitivo"
+      }
+    ]
+  },
+  {
+    "id": "new_friend",
+    "name": "New Friend",
+    "basis": "boulevardier",
+    "modifiedAt": "2023-01-08T03:38:11.282Z",
+    "list": "Spirited – Whiskey",
+    "ingredients": [
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "id": "grain_whiskey_rye"
+      },
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "bottleID": "aperol",
+        "id": "liqueur_amaro_aperitivo"
+      },
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "bottleID": "cocchi_americano_bianco",
+        "id": "fortifiedwine_aperitif"
+      },
+      {
+        "quantity": 1,
+        "usage": "twist",
+        "id": "fruit_orange",
+        "unit": "whole"
+      }
+    ]
+  },
+  {
+    "id": "left_hand",
+    "name": "Left Hand",
+    "year": 2007,
+    "reference": "Ross, Sam (2007). Milk & Honey, New York.",
+    "basis": "boulevardier",
+    "modifiedAt": "2023-01-08T03:38:11.282Z",
+    "list": "Spirited – Whiskey",
+    "ingredients": [
+      {
+        "quantity": 1.5,
+        "unit": "oz",
+        "bottleID": "elijah_craig_12year",
+        "id": "grain_whiskey_bourbon"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "bottleID": "campari",
+        "id": "liqueur_amaro_aperitivo"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "bottleID": "carpano_antica_formula",
+        "id": "fortifiedwine_sweetvermouth"
+      },
+      {
+        "quantity": 2,
+        "unit": "dash",
+        "bottleID": "bittermens_xocolatl_mole_bitters",
+        "id": "bitters_mole"
+      },
+      {
+        "quantity": 3,
+        "unit": "whole",
+        "id": "fruit_cherry"
+      }
+    ]
+  },
+  {
+    "id": "brown_bomber",
+    "name": "Brown Bomber",
+    "year": 2008,
+    "reference": "Meehan, Jim. (2008, Spring).",
+    "basis": "boulevardier",
+    "modifiedAt": "2023-01-08T03:38:11.282Z",
+    "list": "Spirited – Whiskey",
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "bottleID": "george_dickel",
+        "id": "grain_whiskey_rye"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "bottleID": "suze",
+        "id": "liqueur_amaro_aperitivo"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "bottleID": "lillet_blanc",
+        "id": "fortifiedwine_aperitif"
+      }
+    ]
+  },
+  {
+    "id": "man_about_town",
+    "name": "Man about Town",
+    "year": 2012,
+    "reference": "Pelegrin, Victor. (2012). New York.",
+    "basis": "boulevardier",
+    "modifiedAt": "2023-01-08T03:38:11.282Z",
+    "list": "Spirited – Whiskey",
+    "ingredients": [
+      {
+        "quantity": 1.5,
+        "unit": "oz",
+        "bottleID": "rittenhouse",
+        "id": "grain_whiskey_rye"
+      },
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "bottleID": "aperol",
+        "id": "liqueur_amaro_aperitivo"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "bottleID": "amaro_montenegro",
+        "id": "liqueur_amaro_light"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "bottleID": "dolin_dry",
+        "id": "fortifiedwine_dryvermouth"
+      },
+      {
+        "quantity": 2,
+        "unit": "dash",
+        "id": "bitters_orange"
+      },
+      {
+        "quantity": 1,
+        "usage": "twist",
+        "id": "fruit_orange",
+        "unit": "whole"
+      }
+    ]
+  },
+  {
+    "id": "banana_boulevardier",
+    "name": "Banana Boulevardier",
+    "year": 2022,
+    "reference": "Suderman, Peter. (2022). *Cocktails With Suderman.*",
+    "basis": "boulevardier",
+    "modifiedAt": "2023-01-08T03:38:11.282Z",
+    "list": "Spirited – Whiskey",
+    "ingredients": [
+      {
+        "quantity": 1.5,
+        "unit": "oz",
+        "id": "grain_whiskey_rye"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "id": "fortifiedwine_sweetvermouth"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "bottleID": "campari",
+        "id": "liqueur_amaro_aperitivo"
+      },
+      {
+        "quantity": 0.25,
+        "unit": "oz",
+        "bottleID": "giffard_banane_du_bresil",
+        "id": "liqueur_banana"
+      },
+      {
+        "quantity": 1,
+        "usage": "twist",
+        "id": "fruit_orange",
+        "unit": "whole"
+      }
+    ]
+  },
+  {
+    "id": "fielding_mellish",
+    "name": "Fielding Mellish",
+    "year": 2022,
+    "reference": "Suderman, Peter. (2022). *Cocktails With Suderman.*",
+    "basis": "boulevardier",
+    "modifiedAt": "2023-01-08T03:38:11.282Z",
+    "list": "Spirited – Whiskey",
+    "ingredients": [
+      {
+        "quantity": 1.5,
+        "unit": "oz",
+        "bottleID": "rittenhouse",
+        "id": "grain_whiskey_rye"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "bottleID": "carpano_antica_formula",
+        "id": "fortifiedwine_sweetvermouth"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "bottleID": "cynar",
+        "id": "liqueur_amaro_carciofo"
+      },
+      {
+        "quantity": 1,
+        "unit": "tsp",
+        "bottleID": "giffard_banane_du_bresil",
+        "id": "liqueur_banana"
+      },
+      {
+        "quantity": 4,
+        "unit": "oz",
+        "bottleID": "bittermens_xocolatl_mole_bitters",
+        "id": "bitters_mole"
+      },
+      {
+        "quantity": 1,
+        "usage": "twist",
+        "id": "fruit_orange",
+        "unit": "whole"
+      }
+    ]
+  },
+  {
+    "id": "blood_and_sand",
+    "name": "Blood and Sand",
+    "year": 1930,
+    "reference": "Meehan, Jim. (2011). *PDT Cocktail Book, The.*",
+    "modifiedAt": "2016-02-04T22:03:12.710Z",
+    "list": "Spirited – Whiskey",
+    "ingredients": [
+      {
+        "quantity": 1.5,
+        "unit": "oz",
+        "bottleID": "famous_grouse",
+        "id": "grain_whiskey_scotch_blended"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "id": "juice_orange"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "bottleID": "cherry_heering",
+        "id": "liqueur_cherry"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "bottleID": "carpano_antica_formula",
+        "id": "fortifiedwine_sweetvermouth"
+      },
+      {
+        "quantity": 1,
+        "usage": "twist",
+        "id": "fruit_orange",
+        "unit": "whole"
+      }
+    ]
+  },
+  {
+    "id": "frisco",
+    "name": "Frisco",
+    "year": 1908,
+    "reference": "Boothby, William. (1908). *Boothby's World's Drinks.*",
+    "modifiedAt": "2016-02-03T00:51:44.752Z",
+    "list": "Spirited – Whiskey",
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "id": "grain_whiskey_rye"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "bottleID": "benedictine",
+        "id": "liqueur_herbal"
+      },
+      {
+        "quantity": 1,
+        "usage": "twist",
+        "id": "fruit_lemon",
+        "unit": "whole"
+      }
+    ]
+  },
+  {
+    "id": "algonquin",
+    "name": "Algonquin",
+    "year": 1935,
+    "reference": "Fougner, Selmer. (1935). *Along the Wine Trail.*",
+    "modifiedAt": "2016-02-05T01:55:12.599Z",
+    "list": "Spirited – Whiskey",
+    "notes": [
+      "Stir, serve up"
+    ],
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "id": "grain_whiskey_rye"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "id": "fortifiedwine_dryvermouth"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "id": "juice_pineapple"
+      }
+    ]
+  },
+  {
+    "id": "field_cocktail",
+    "name": "Field Cocktail",
+    "year": 2010,
+    "reference": "Meehan, Jim. (2010. Spring). \"Tribute to Colin Peter Field, (manager), Hemingway Bar, Ritz Hotel, Paris.\"",
+    "basis": "algonquin",
+    "modifiedAt": "2016-02-05T01:55:12.599Z",
+    "list": "Spirited – Whiskey",
+    "notes": [
+      "Pineapple leaf"
+    ],
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "bottleID": "pierre_ferrand_ambre",
+        "id": "brandy_grape_cognac"
+      },
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "bottleID": "noilly_prat_extra_dry",
+        "id": "fortifiedwine_dryvermouth"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "id": "juice_pineapple"
+      }
+    ]
+  },
+  {
+    "id": "blinker",
+    "name": "Blinker",
+    "year": 1935,
+    "reference": "Duffy, Patrick Gavin. (1934). *Official Mixer’s Manual, The.*",
+    "modifiedAt": "2016-02-05T00:01:21.706Z",
+    "list": "Spirited – Whiskey",
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "id": "grain_whiskey_rye"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "id": "juice_grapefruit"
+      },
+      {
+        "quantity": 1,
+        "unit": "tsp",
+        "id": "syrup_grenadine"
+      },
+      {
+        "quantity": 1,
+        "usage": "twist",
+        "id": "fruit_grapefruit",
+        "unit": "whole"
+      }
+    ]
+  },
+  {
+    "id": "brown_derby",
+    "name": "Brown Derby",
+    "year": 1930,
+    "reference": "Buzza, & Cardozo. (1930s). *Hollywood Cocktails.*",
+    "basis": "blinker",
+    "modifiedAt": "2016-02-05T00:01:21.706Z",
+    "list": "Spirited – Whiskey",
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "id": "grain_whiskey_bourbon"
+      },
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "id": "juice_grapefruit"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "id": "syrup_honey"
+      }
+    ]
+  },
+  {
+    "id": "blushing_betty",
+    "name": "Blushing Betty",
+    "reference": "Unknown. (n.d.)",
+    "basis": "blinker",
+    "modifiedAt": "2016-02-05T00:01:21.706Z",
+    "list": "Spirited – Whiskey",
+    "ingredients": [
+      {
+        "quantity": 1.5,
+        "unit": "oz",
+        "id": "grain_whiskey_bourbon"
+      },
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "id": "juice_grapefruit"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "id": "syrup_simple"
+      }
+    ]
+  },
+  {
+    "id": "monte_carlo",
+    "name": "Monte Carlo",
+    "year": 1948,
+    "reference": "Embury, David. (1948). *Fine Art of Mixing Drinks, The.*",
+    "modifiedAt": "2020-12-21T02:01:17.793Z",
+    "list": "Spirited – Whiskey",
+    "notes": [
+      "Shaken",
+      "Rocks glass w/ ice"
+    ],
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "id": "grain_whiskey_rye"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "bottleID": "benedictine",
+        "id": "liqueur_herbal"
+      },
+      {
+        "quantity": 1,
+        "unit": "dash",
+        "bottleID": "angostura",
+        "id": "bitters_aromatic"
+      },
+      {
+        "quantity": 1,
+        "unit": "dash",
+        "bottleID": "peychauds",
+        "id": "bitters_creole"
+      },
+      {
+        "quantity": 1,
+        "unit": "whole",
+        "id": "fruit_cherry"
+      },
+      {
+        "quantity": 1,
+        "usage": "twist",
+        "id": "fruit_lemon",
+        "unit": "whole"
+      }
+    ]
+  },
+  {
+    "id": "dead_rabbits_whiskey_cocktail",
+    "name": "Dead Rabbit's Whiskey Cocktail",
+    "year": 2015,
+    "reference": "Muldoon, Sean; McGarry, Jack; Schaffer, Ben. (2015). *Dead Rabbit Drinks Manual, The.*",
+    "basis": "monte_carlo",
+    "modifiedAt": "2020-12-21T02:01:17.793Z",
+    "list": "Spirited – Whiskey",
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "bottleID": "old_overholt",
+        "id": "grain_whiskey_rye"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "bottleID": "benedictine",
+        "id": "liqueur_herbal"
+      },
+      {
+        "quantity": 0.25,
+        "unit": "oz",
+        "id": "liqueur_orange"
+      },
+      {
+        "quantity": 3,
+        "unit": "dash",
+        "bottleID": "angostura",
+        "id": "bitters_aromatic"
+      },
+      {
+        "quantity": 3,
+        "unit": "dash",
+        "bottleID": "peychauds",
+        "id": "bitters_creole"
+      },
+      {
+        "quantity": 3,
+        "unit": "dash",
+        "id": "liqueur_absinthe"
+      },
+      {
+        "quantity": 1,
+        "usage": "twist",
+        "id": "fruit_orange",
+        "unit": "whole"
+      }
+    ]
+  },
+  {
+    "id": "diamondback",
+    "name": "Diamondback",
+    "year": 1951,
+    "reference": "Saucier, Ted. (1951). *Bottoms Up.* Lord Baltimore Hotel, Baltimore.",
+    "modifiedAt": "2016-02-04T03:20:55.391Z",
+    "list": "Spirited – Whiskey",
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "bottleID": "rittenhouse",
+        "id": "grain_whiskey_rye"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "bottleID": "lairds_bonded",
+        "id": "brandy_apple"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "bottleID": "yellow_chartreuse",
+        "id": "liqueur_herbal"
+      }
+    ]
+  },
+  {
+    "id": "revolver",
+    "name": "Revolver",
+    "year": 2007,
+    "reference": "Santer, Joe. (2007). Bourbon and Branch, New York.",
+    "modifiedAt": "2016-02-04T03:01:40.825Z",
+    "list": "Spirited – Whiskey",
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "id": "grain_whiskey_bourbon"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "id": "liqueur_coffeebean"
+      },
+      {
+        "quantity": 3,
+        "unit": "dash",
+        "id": "bitters_orange"
+      },
+      {
+        "quantity": 1,
+        "usage": "twist",
+        "id": "fruit_orange",
+        "unit": "whole"
+      }
+    ]
+  },
+  {
+    "id": "harvest_moon",
+    "name": "Harvest Moon",
+    "year": 2007,
+    "reference": "Eun, Daniel. (2007, Winter). PDT, New York.",
+    "modifiedAt": "2016-02-02T19:22:46.205Z",
+    "list": "Spirited – Whiskey",
+    "ingredients": [
+      {
+        "quantity": 1.5,
+        "unit": "oz",
+        "bottleID": "wild_turkey",
+        "id": "grain_whiskey_rye"
+      },
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "bottleID": "cocchi_americano_bianco",
+        "id": "fortifiedwine_aperitif"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "bottleID": "lairds_bonded",
+        "id": "brandy_apple"
+      },
+      {
+        "quantity": 0.25,
+        "unit": "oz",
+        "bottleID": "green_chartreuse",
+        "id": "liqueur_herbal"
+      },
+      {
+        "quantity": 3,
+        "unit": "dash",
+        "id": "bitters_aromatic"
+      },
+      {
+        "quantity": 1,
+        "usage": "twist",
+        "id": "fruit_orange",
+        "unit": "whole"
+      }
+    ]
+  },
+  {
+    "id": "shruffs_end",
+    "name": "Shruff’s End",
+    "year": 2008,
+    "reference": "Ward, Phil. Death + Co, New York (2008).",
+    "modifiedAt": "2023-04-28T04:32:05.116Z",
+    "list": "Spirited – Whiskey",
+    "notes": [
+      "Coupe"
+    ],
+    "ingredients": [
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "bottleID": "laphroaig_10year",
+        "id": "grain_whiskey_scotch"
+      },
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "bottleID": "lairds_bonded",
+        "id": "brandy_apple"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "bottleID": "benedictine",
+        "id": "liqueur_herbal"
+      },
+      {
+        "quantity": 2,
+        "unit": "dash",
+        "bottleID": "peychauds",
+        "id": "bitters_creole"
+      }
+    ]
+  },
+  {
+    "id": "manhattan",
+    "name": "Manhattan",
+    "year": 1884,
+    "reference": "Byron, O. H. (1884). *Modern Bartender's Guide.*",
+    "modifiedAt": "2021-10-06T23:59:12.796Z",
+    "list": "Spirited – Manhattans",
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "id": "grain_whiskey_rye"
+      },
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "id": "fortifiedwine_sweetvermouth"
+      },
+      {
+        "quantity": 2,
+        "unit": "dash",
+        "bottleID": "angostura",
+        "id": "bitters_aromatic"
+      },
+      {
+        "quantity": 3,
+        "unit": "whole",
+        "id": "fruit_cherry"
+      }
+    ]
+  },
+  {
+    "id": "dry_manhattan",
+    "name": "Dry Manhattan",
+    "year": 1884,
+    "basis": "manhattan",
+    "modifiedAt": "2021-10-06T23:59:12.796Z",
+    "list": "Spirited – Manhattans",
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "id": "grain_whiskey_rye"
+      },
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "bottleID": "dolin_dry",
+        "id": "fortifiedwine_dryvermouth"
+      },
+      {
+        "quantity": 2,
+        "unit": "dash",
+        "bottleID": "angostura",
+        "id": "bitters_aromatic"
+      },
+      {
+        "quantity": 3,
+        "unit": "whole",
+        "id": "fruit_cherry"
+      }
+    ]
+  },
+  {
+    "id": "perfect_manhattan",
+    "name": "Perfect Manhattan",
+    "year": 1884,
+    "basis": "manhattan",
+    "modifiedAt": "2021-10-06T23:59:12.796Z",
+    "list": "Spirited – Manhattans",
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "id": "grain_whiskey_rye"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "bottleID": "dolin_dry",
+        "id": "fortifiedwine_dryvermouth"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "id": "fortifiedwine_sweetvermouth"
+      },
+      {
+        "quantity": 2,
+        "unit": "dash",
+        "bottleID": "angostura",
+        "id": "bitters_aromatic"
+      },
+      {
+        "quantity": 3,
+        "unit": "whole",
+        "id": "fruit_cherry"
+      }
+    ]
+  },
+  {
+    "id": "harvard",
+    "name": "Harvard",
+    "year": 1895,
+    "reference": "Kappeler, George. (1895). *Modern American Drinks.*",
+    "basis": "manhattan",
+    "modifiedAt": "2021-10-06T23:59:12.796Z",
+    "list": "Spirited – Manhattans",
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "id": "brandy_grape_cognac"
+      },
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "id": "fortifiedwine_sweetvermouth"
+      },
+      {
+        "quantity": 2,
+        "unit": "dash",
+        "bottleID": "angostura",
+        "id": "bitters_aromatic"
+      },
+      {
+        "quantity": 3,
+        "unit": "whole",
+        "id": "fruit_cherry"
+      }
+    ]
+  },
+  {
+    "id": "saratoga",
+    "name": "Saratoga",
+    "basis": "manhattan",
+    "modifiedAt": "2021-10-06T23:59:12.796Z",
+    "list": "Spirited – Manhattans",
+    "ingredients": [
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "id": "grain_whiskey_rye"
+      },
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "id": "brandy_grape_cognac"
+      },
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "id": "fortifiedwine_sweetvermouth"
+      },
+      {
+        "quantity": 2,
+        "unit": "dash",
+        "bottleID": "angostura",
+        "id": "bitters_aromatic"
+      },
+      {
+        "quantity": 3,
+        "unit": "whole",
+        "id": "fruit_cherry"
+      }
+    ]
+  },
+  {
+    "id": "hecklinger",
+    "name": "Hecklinger",
+    "year": 2014,
+    "basis": "manhattan",
+    "modifiedAt": "2021-10-06T23:59:12.796Z",
+    "list": "Spirited – Manhattans",
+    "ingredients": [
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "id": "grain_whiskey_rye"
+      },
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "bottleID": "amaro_meletti",
+        "id": "liqueur_amaro_light"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "bottleID": "bonal_gentianequina",
+        "id": "fortifiedwine_aperitif"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "id": "fortifiedwine_dryvermouth"
+      },
+      {
+        "quantity": 4,
+        "unit": "dash",
+        "id": "bitters_thai"
+      },
+      {
+        "quantity": 1,
+        "usage": "twist",
+        "id": "fruit_lemon",
+        "unit": "whole"
+      }
+    ]
+  },
+  {
+    "id": "rob_roy",
+    "name": "Rob Roy",
+    "year": 1900,
+    "reference": "*Cocktail Book, The: A Sideboard Manual for Gentlemen.* (1900). Old Waldorf Hotel bar.",
+    "modifiedAt": "2023-01-08T03:53:40.726Z",
+    "list": "Spirited – Manhattans",
+    "ingredients": [
+      {
+        "quantity": 2.5,
+        "unit": "oz",
+        "bottleID": "famous_grouse",
+        "id": "grain_whiskey_scotch_blended"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "bottleID": "dolin_rouge",
+        "id": "fortifiedwine_sweetvermouth"
+      },
+      {
+        "quantity": 2,
+        "unit": "dash",
+        "id": "bitters_orange"
+      }
+    ]
+  },
+  {
+    "id": "smoky_grove",
+    "name": "Smoky Grove",
+    "year": 2007,
+    "reference": "Pogash, Jonathan. (2007). PDT, New York.",
+    "basis": "rob_roy",
+    "modifiedAt": "2023-01-08T03:53:40.726Z",
+    "list": "Spirited – Manhattans",
+    "notes": [
+      "For orange bitters, use 1/2 Fee Brothers, 1/2 Regan's"
+    ],
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "bottleID": "compass_box_peat_monster",
+        "id": "grain_whiskey_scotch_islay"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "bottleID": "carpano_antica_formula",
+        "id": "fortifiedwine_sweetvermouth"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "bottleID": "dolin_dry",
+        "id": "fortifiedwine_dryvermouth"
+      },
+      {
+        "quantity": 1,
+        "unit": "dash",
+        "bottleID": "angostura",
+        "id": "bitters_aromatic"
+      },
+      {
+        "quantity": 1,
+        "unit": "dash",
+        "id": "bitters_orange"
+      },
+      {
+        "quantity": 1,
+        "usage": "twist",
+        "id": "fruit_orange",
+        "unit": "whole"
+      }
+    ]
+  },
+  {
+    "id": "bobby_burns",
+    "name": "Bobby Burns",
+    "year": 1902,
+    "reference": "*Fancy Drinks.* (1902).",
+    "modifiedAt": "2016-02-03T00:13:21.962Z",
+    "list": "Spirited – Manhattans",
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "bottleID": "benromach_12year",
+        "id": "grain_whiskey_scotch_speyside"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "id": "fortifiedwine_sweetvermouth"
+      },
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "bottleID": "benedictine",
+        "id": "liqueur_herbal"
+      },
+      {
+        "quantity": 1,
+        "usage": "twist",
+        "id": "fruit_lemon",
+        "unit": "whole"
+      }
+    ]
+  },
+  {
+    "id": "brooklyn",
+    "name": "Brooklyn",
+    "year": 1910,
+    "reference": "Grohusko, Jack. (1910). *Jack's Manual.*",
+    "modifiedAt": "2018-03-05T05:34:33.847Z",
+    "list": "Spirited – Manhattans",
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "bottleID": "rittenhouse",
+        "id": "grain_whiskey_rye"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "bottleID": "dolin_dry",
+        "id": "fortifiedwine_dryvermouth"
+      },
+      {
+        "quantity": 0.25,
+        "unit": "oz",
+        "bottleID": "luxardo_maraschino_liqueur",
+        "id": "liqueur_maraschino"
+      },
+      {
+        "quantity": 0.25,
+        "unit": "oz",
+        "bottleID": "bigallet_chinachina_amer",
+        "id": "liqueur_amaro_medium"
+      }
+    ]
+  },
+  {
+    "id": "deshler",
+    "name": "Deshler",
+    "year": 1916,
+    "reference": "Enslin, Hugo. (1916). *Recipe for Mixed Drinks.*",
+    "modifiedAt": "2016-02-03T00:32:02.619Z",
+    "list": "Spirited – Manhattans",
+    "ingredients": [
+      {
+        "quantity": 1.5,
+        "unit": "oz",
+        "bottleID": "rittenhouse",
+        "id": "grain_whiskey_rye"
+      },
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "bottleID": "byrrh",
+        "id": "fortifiedwine_aperitif"
+      },
+      {
+        "quantity": 0.25,
+        "unit": "oz",
+        "bottleID": "cointreau",
+        "id": "liqueur_orange"
+      },
+      {
+        "quantity": 2,
+        "unit": "dash",
+        "bottleID": "peychauds",
+        "id": "bitters_creole"
+      },
+      {
+        "quantity": 1,
+        "usage": "twist",
+        "id": "fruit_orange",
+        "unit": "whole"
+      }
+    ]
+  },
+  {
+    "id": "tipperary",
+    "name": "Tipperary",
+    "year": 1916,
+    "reference": "Ensslin, Hugo. (1916). *Recipes for Mixed Drinks.*",
+    "modifiedAt": "2018-03-05T05:34:14.411Z",
+    "list": "Spirited – Manhattans",
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "bottleID": "redbreast_12year",
+        "id": "grain_whiskey_irish"
+      },
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "id": "fortifiedwine_sweetvermouth"
+      },
+      {
+        "usage": "rinse",
+        "bottleID": "green_chartreuse",
+        "id": "liqueur_herbal"
+      }
+    ]
+  },
+  {
+    "id": "dead_rabbit",
+    "name": "Dead Rabbit",
+    "year": 2016,
+    "reference": "Muldoon, Sean. (2016). [Dead Rabbit](http://www.deadrabbitnyc.com), New York City",
+    "basis": "tipperary",
+    "modifiedAt": "2018-03-05T05:34:14.411Z",
+    "list": "Spirited – Manhattans",
+    "ingredients": [
+      {
+        "quantity": 1.5,
+        "unit": "oz",
+        "id": "grain_whiskey_irish"
+      },
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "id": "fortifiedwine_sweetvermouth"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "bottleID": "green_chartreuse",
+        "id": "liqueur_herbal"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "id": "water_flat"
+      },
+      {
+        "quantity": 1,
+        "unit": "tsp",
+        "id": "syrup_simple"
+      },
+      {
+        "quantity": 2,
+        "unit": "dash",
+        "id": "bitters_orange"
+      }
+    ]
+  },
+  {
+    "id": "affinity",
+    "name": "Affinity",
+    "year": 1930,
+    "reference": "Craddock, Harry. (1930). *Savoy Cocktail Book, The.*",
+    "modifiedAt": "2016-02-03T00:13:15.323Z",
+    "list": "Spirited – Manhattans",
+    "ingredients": [
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "id": "grain_whiskey_scotch_blended"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "id": "fortifiedwine_sweetvermouth"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "id": "fortifiedwine_dryvermouth"
+      },
+      {
+        "quantity": 2,
+        "unit": "dash",
+        "id": "bitters_orange"
+      }
+    ]
+  },
+  {
+    "id": "waldorf",
+    "name": "Waldorf",
+    "year": 1935,
+    "reference": "Crockett, A. S. (1935). *Old Waldorf-Astoria Bar Book, The.*",
+    "modifiedAt": "2017-06-11T02:07:23.223Z",
+    "list": "Spirited – Manhattans",
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "id": "grain_whiskey_rye"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "id": "fortifiedwine_sweetvermouth"
+      },
+      {
+        "quantity": 0.25,
+        "unit": "oz",
+        "id": "liqueur_absinthe"
+      },
+      {
+        "quantity": 4,
+        "unit": "dash",
+        "bottleID": "angostura",
+        "id": "bitters_aromatic"
+      }
+    ]
+  },
+  {
+    "id": "vieux_carre",
+    "name": "Vieux Carre",
+    "year": 1937,
+    "reference": "Arthur, Stanley Clisby. (1937). *Famous New Orleans Drinks.* Bergeron, Walter (bartender), Hotel Monteleone, New Orleans.",
+    "modifiedAt": "2018-03-01T02:11:28.090Z",
+    "list": "Spirited – Manhattans",
+    "notes": [
+      "Build in-glass"
+    ],
+    "ingredients": [
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "bottleID": "wild_turkey",
+        "id": "grain_whiskey_rye"
+      },
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "bottleID": "hine_h_vsop",
+        "id": "brandy_grape_cognac"
+      },
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "bottleID": "carpano_antica_formula",
+        "id": "fortifiedwine_sweetvermouth"
+      },
+      {
+        "quantity": 1,
+        "unit": "dash",
+        "bottleID": "angostura",
+        "id": "bitters_aromatic"
+      },
+      {
+        "quantity": 1,
+        "unit": "dash",
+        "bottleID": "peychauds",
+        "id": "bitters_creole"
+      },
+      {
+        "quantity": 0.25,
+        "unit": "oz",
+        "bottleID": "benedictine",
+        "id": "liqueur_herbal"
+      }
+    ]
+  },
+  {
+    "id": "de_la_louisiane",
+    "name": "De La Louisiane",
+    "year": 1937,
+    "reference": "Arthur, Stanley Clisby. (1937). *Famous New Orleans Drinks.*",
+    "modifiedAt": "2023-05-29T03:09:54.401Z",
+    "list": "Spirited – Manhattans",
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "bottleID": "wild_turkey",
+        "id": "grain_whiskey_rye"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "bottleID": "benedictine",
+        "id": "liqueur_herbal"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "bottleID": "dolin_rouge",
+        "id": "fortifiedwine_sweetvermouth"
+      },
+      {
+        "quantity": 3,
+        "unit": "dash",
+        "bottleID": "st_george_dry_rye",
+        "id": "grain_gin_contemporary"
+      },
+      {
+        "quantity": 3,
+        "unit": "dash",
+        "bottleID": "peychauds",
+        "id": "bitters_creole"
+      },
+      {
+        "quantity": 1,
+        "unit": "whole",
+        "id": "fruit_cherry"
+      }
+    ]
+  },
+  {
+    "id": "remember_the_maine",
+    "name": "Remember the Maine",
+    "year": 1937,
+    "reference": "Baker, Jr, Charles H. (1937). *The Gentleman's Companion: An Exotic Drinking Book.*",
+    "modifiedAt": "2016-02-03T00:31:58.751Z",
+    "list": "Spirited – Manhattans",
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "bottleID": "wild_turkey",
+        "id": "grain_whiskey_rye"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "bottleID": "carpano_antica_formula",
+        "id": "fortifiedwine_sweetvermouth"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "bottleID": "cherry_heering",
+        "id": "liqueur_cherry"
+      },
+      {
+        "quantity": 1,
+        "unit": "tsp",
+        "id": "liqueur_absinthe"
+      },
+      {
+        "quantity": 1,
+        "usage": "twist",
+        "id": "fruit_lemon",
+        "unit": "whole"
+      }
+    ]
+  },
+  {
+    "id": "fourth_regiment",
+    "name": "Fourth Regiment",
+    "year": 1937,
+    "reference": "Baker, Jr, Charles H. (1937). *The Gentleman's Companion: An Exotic Drinking Book.*",
+    "modifiedAt": "2016-02-05T01:40:56.513Z",
+    "list": "Spirited – Manhattans",
+    "ingredients": [
+      {
+        "quantity": 1.5,
+        "unit": "oz",
+        "bottleID": "rittenhouse",
+        "id": "grain_whiskey_rye"
+      },
+      {
+        "quantity": 1.5,
+        "unit": "oz",
+        "bottleID": "carpano_antica_formula",
+        "id": "fortifiedwine_sweetvermouth"
+      },
+      {
+        "quantity": 0.25,
+        "unit": "oz",
+        "id": "liqueur_orange"
+      },
+      {
+        "quantity": 2,
+        "unit": "dash",
+        "bottleID": "angostura",
+        "id": "bitters_aromatic"
+      },
+      {
+        "quantity": 2,
+        "unit": "dash",
+        "id": "bitters_orange"
+      },
+      {
+        "quantity": 2,
+        "unit": "dash",
+        "id": "bitters_celery"
+      },
+      {
+        "quantity": 1,
+        "usage": "twist",
+        "id": "fruit_orange",
+        "unit": "whole"
+      }
+    ]
+  },
+  {
+    "id": "harlem_renessaince",
+    "name": "Harlem Renessaince",
+    "year": 2000,
+    "reference": "(c. 2000).",
+    "modifiedAt": "2017-06-11T02:08:02.069Z",
+    "list": "Spirited – Manhattans",
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "bottleID": "wild_turkey",
+        "id": "grain_whiskey_rye"
+      },
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "bottleID": "dolin_dry",
+        "id": "fortifiedwine_dryvermouth"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "bottleID": "gran_classico_bitter",
+        "id": "liqueur_amaro_aperitivo"
+      },
+      {
+        "usage": "rinse",
+        "bottleID": "cointreau",
+        "id": "liqueur_orange"
+      }
+    ]
+  },
+  {
+    "id": "red_hook",
+    "name": "Red Hook",
+    "year": 2000,
+    "reference": "Siegal, T. J. (c. 2000). Milk & Honey, New York.",
+    "modifiedAt": "2017-06-11T02:08:13.219Z",
+    "list": "Spirited – Manhattans",
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "bottleID": "wild_turkey",
+        "id": "grain_whiskey_rye"
+      },
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "bottleID": "punt_e_mes",
+        "id": "fortifiedwine_sweetvermouth"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "bottleID": "luxardo_maraschino_liqueur",
+        "id": "liqueur_maraschino"
+      }
+    ]
+  },
+  {
+    "id": "armistice",
+    "name": "Armistice",
+    "year": 2000,
+    "reference": "Hakkinen, Erik. (c. 2000). Zig Zag Café, Seattle.",
+    "modifiedAt": "2018-03-05T05:37:18.056Z",
+    "list": "Spirited – Manhattans",
+    "ingredients": [
+      {
+        "quantity": 1.5,
+        "unit": "oz",
+        "bottleID": "rittenhouse",
+        "id": "grain_whiskey_rye"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "bottleID": "noilly_prat_extra_dry",
+        "id": "fortifiedwine_dryvermouth"
+      },
+      {
+        "quantity": 0.25,
+        "unit": "oz",
+        "bottleID": "green_chartreuse",
+        "id": "liqueur_herbal"
+      },
+      {
+        "quantity": 0.25,
+        "unit": "oz",
+        "bottleID": "luxardo_maraschino_liqueur",
+        "id": "liqueur_maraschino"
+      },
+      {
+        "quantity": 2,
+        "unit": "dash",
+        "id": "bitters_aromatic"
+      }
+    ]
+  },
+  {
+    "id": "greenpoint",
+    "name": "Greenpoint",
+    "year": 2005,
+    "reference": "McIlroy, Michael. (2005). New York.",
+    "modifiedAt": "2017-06-11T02:03:06.870Z",
+    "list": "Spirited – Manhattans",
+    "ingredients": [
+      {
+        "quantity": 1.75,
+        "unit": "oz",
+        "bottleID": "rittenhouse",
+        "id": "grain_whiskey_rye"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "bottleID": "punt_e_mes",
+        "id": "fortifiedwine_sweetvermouth"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "bottleID": "yellow_chartreuse",
+        "id": "liqueur_herbal"
+      },
+      {
+        "quantity": 2,
+        "unit": "dash",
+        "bottleID": "angostura",
+        "id": "bitters_aromatic"
+      },
+      {
+        "quantity": 1,
+        "unit": "dash",
+        "id": "bitters_orange"
+      }
+    ]
+  },
+  {
+    "id": "little_italy",
+    "name": "Little Italy",
+    "year": 2005,
+    "reference": "Saunders, Audrey. Pegu Club, NY.",
+    "modifiedAt": "2023-04-14T22:25:15.784Z",
+    "list": "Spirited – Manhattans",
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "bottleID": "rittenhouse",
+        "id": "grain_whiskey_rye"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "id": "fortifiedwine_sweetvermouth"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "bottleID": "cynar",
+        "id": "liqueur_amaro_carciofo"
+      }
+    ]
+  },
+  {
+    "id": "bensonhurst",
+    "name": "Bensonhurst",
+    "year": 2006,
+    "reference": "Solomon, Chad. (2006). Brooklyn, New York",
+    "modifiedAt": "2016-02-03T00:32:07.102Z",
+    "list": "Spirited – Manhattans",
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "bottleID": "rittenhouse",
+        "id": "grain_whiskey_rye"
+      },
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "bottleID": "dolin_dry",
+        "id": "fortifiedwine_dryvermouth"
+      },
+      {
+        "quantity": 0.25,
+        "unit": "oz",
+        "bottleID": "luxardo_maraschino_liqueur",
+        "id": "liqueur_maraschino"
+      },
+      {
+        "quantity": 0.125,
+        "unit": "oz",
+        "bottleID": "cynar",
+        "id": "liqueur_amaro_carciofo"
+      },
+      {
+        "quantity": 1,
+        "unit": "whole",
+        "id": "fruit_cherry"
+      }
+    ]
+  },
+  {
+    "id": "conference",
+    "name": "Conference",
+    "year": 2008,
+    "reference": "Miller, Brian. (2008). Death & Co. New York.",
+    "modifiedAt": "2018-10-03T14:13:41.340Z",
+    "list": "Spirited – Manhattans",
+    "ingredients": [
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "bottleID": "rittenhouse",
+        "id": "grain_whiskey_rye"
+      },
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "bottleID": "buffalo_trace",
+        "id": "grain_whiskey_bourbon"
+      },
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "bottleID": "lemorton_selection_calvados_domfrontais",
+        "id": "brandy_apple"
+      },
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "bottleID": "pierre_ferrand_1840",
+        "id": "brandy_grape_cognac"
+      },
+      {
+        "quantity": 1,
+        "unit": "tsp",
+        "id": "syrup_demerara"
+      },
+      {
+        "quantity": 2,
+        "unit": "dash",
+        "bottleID": "angostura",
+        "id": "bitters_aromatic"
+      },
+      {
+        "quantity": 1,
+        "unit": "dash",
+        "bottleID": "bittermens_xocolatl_mole_bitters",
+        "id": "bitters_mole"
+      },
+      {
+        "quantity": 1,
+        "usage": "twist",
+        "id": "fruit_lemon",
+        "unit": "whole"
+      },
+      {
+        "quantity": 1,
+        "usage": "twist",
+        "id": "fruit_orange",
+        "unit": "whole"
+      }
+    ]
+  },
+  {
+    "id": "modern_manhattan",
+    "name": "Modern Manhattan",
+    "year": 2012,
+    "modifiedAt": "2018-10-03T14:19:38.608Z",
+    "list": "Spirited – Manhattans",
+    "notes": [
+      "Altier, Marshall. (2012). Jbird. New York."
+    ],
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "bottleID": "rittenhouse",
+        "id": "grain_whiskey_rye"
+      },
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "bottleID": "carpano_antica_formula",
+        "id": "fortifiedwine_sweetvermouth"
+      },
+      {
+        "quantity": 1,
+        "unit": "tsp",
+        "id": "fortifiedwine_sherry_oloroso"
+      },
+      {
+        "quantity": 6,
+        "unit": "dash",
+        "bottleID": "bittermens_xocolatl_mole_bitters",
+        "id": "bitters_mole"
+      },
+      {
+        "quantity": 1,
+        "unit": "whole",
+        "id": "fruit_cherry"
+      }
+    ]
+  },
+  {
+    "id": "bushwick",
+    "name": "Bushwick",
+    "year": 2019,
+    "reference": "Ward, Phil. (c. 2000s). Death + Company, New York.",
+    "modifiedAt": "2023-01-08T03:40:56.641Z",
+    "list": "Spirited – Manhattans",
+    "notes": [
+      "No garnish"
+    ],
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "id": "grain_whiskey_rye"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "id": "fortifiedwine_sweetvermouth"
+      },
+      {
+        "quantity": 0.25,
+        "unit": "oz",
+        "bottleID": "luxardo_maraschino_liqueur",
+        "id": "liqueur_maraschino"
+      },
+      {
+        "quantity": 0.25,
+        "unit": "oz",
+        "bottleID": "amaro_ciociaro",
+        "id": "liqueur_amaro_medium"
+      }
+    ]
+  },
+  {
+    "id": "gin_cocktail",
+    "name": "Gin Cocktail",
+    "year": 1800,
+    "modifiedAt": "2017-06-11T02:09:26.661Z",
+    "list": "Spirited – Gin",
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "id": "grain_gin"
+      },
+      {
+        "quantity": 1,
+        "unit": "whole",
+        "id": "sugar_demerara"
+      },
+      {
+        "quantity": 1,
+        "unit": "tsp",
+        "id": "water_flat"
+      },
+      {
+        "quantity": 2,
+        "unit": "dash",
+        "bottleID": "angostura",
+        "id": "bitters_aromatic"
+      }
+    ]
+  },
+  {
+    "id": "improved_gin_cocktail",
+    "name": "Improved Gin Cocktail",
+    "year": 1800,
+    "modifiedAt": "2017-06-11T02:09:26.661Z",
+    "list": "Spirited – Gin",
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "id": "grain_gin"
+      },
+      {
+        "quantity": 1,
+        "unit": "whole",
+        "id": "sugar_demerara"
+      },
+      {
+        "quantity": 1,
+        "unit": "tsp",
+        "id": "liqueur_orange"
+      },
+      {
+        "quantity": 1,
+        "unit": "tsp",
+        "id": "water_flat"
+      },
+      {
+        "quantity": 2,
+        "unit": "dash",
+        "bottleID": "angostura",
+        "id": "bitters_aromatic"
+      },
+      {
+        "quantity": 1,
+        "usage": "twist",
+        "id": "fruit_lemon",
+        "unit": "whole"
+      }
+    ]
+  },
+  {
+    "id": "martinez",
+    "name": "Martinez",
+    "year": 1884,
+    "reference": "Byron, O. H. (1884). *Modern Bartenders Guide.*",
+    "modifiedAt": "2016-02-02T22:28:43.290Z",
+    "list": "Spirited – Gin",
+    "ingredients": [
+      {
+        "quantity": 1.5,
+        "unit": "oz",
+        "bottleID": "haymans_old_tom",
+        "id": "grain_gin_oldtom"
+      },
+      {
+        "quantity": 1.5,
+        "unit": "oz",
+        "bottleID": "dolin_rouge",
+        "id": "fortifiedwine_sweetvermouth"
+      },
+      {
+        "quantity": 0.25,
+        "unit": "oz",
+        "bottleID": "luxardo_maraschino_liqueur",
+        "id": "liqueur_maraschino"
+      },
+      {
+        "quantity": 2,
+        "unit": "dash",
+        "id": "bitters_aromatic"
+      },
+      {
+        "quantity": 1,
+        "usage": "twist",
+        "id": "fruit_orange",
+        "unit": "whole"
+      }
+    ]
+  },
+  {
+    "id": "bijou",
+    "name": "Bijou",
+    "year": 1895,
+    "reference": "Lawlor, C. F. (1885). *The Mixicologist.*",
+    "modifiedAt": "2021-05-22T03:03:29.117Z",
+    "list": "Spirited – Gin",
+    "ingredients": [
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "bottleID": "tanqueray",
+        "id": "grain_gin_londondry"
+      },
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "bottleID": "dolin_rouge",
+        "id": "fortifiedwine_sweetvermouth"
+      },
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "bottleID": "green_chartreuse",
+        "id": "liqueur_herbal"
+      },
+      {
+        "quantity": 1,
+        "unit": "dash",
+        "id": "bitters_orange"
+      }
+    ]
+  },
+  {
+    "id": "amber_dream",
+    "name": "Amber Dream",
+    "basis": "bijou",
+    "modifiedAt": "2021-05-22T03:03:29.117Z",
+    "list": "Spirited – Gin",
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "bottleID": "tanqueray",
+        "id": "grain_gin_londondry"
+      },
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "bottleID": "dolin_rouge",
+        "id": "fortifiedwine_sweetvermouth"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "bottleID": "green_chartreuse",
+        "id": "liqueur_herbal"
+      },
+      {
+        "quantity": 1,
+        "unit": "dash",
+        "id": "bitters_aromatic"
+      }
+    ]
+  },
+  {
+    "id": "ford_cocktail",
+    "name": "Ford Cocktail",
+    "year": 1895,
+    "reference": "Kappeler, George J. (1895). *Modern American Drinks.*",
+    "modifiedAt": "2016-02-02T23:15:56.255Z",
+    "list": "Spirited – Gin",
+    "ingredients": [
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "id": "grain_gin_oldtom"
+      },
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "id": "fortifiedwine_dryvermouth"
+      },
+      {
+        "quantity": 3,
+        "unit": "dash",
+        "bottleID": "benedictine",
+        "id": "liqueur_herbal"
+      },
+      {
+        "quantity": 3,
+        "unit": "dash",
+        "id": "bitters_orange"
+      },
+      {
+        "quantity": 1,
+        "usage": "twist",
+        "id": "fruit_orange",
+        "unit": "whole"
+      }
+    ]
+  },
+  {
+    "id": "martini",
+    "name": "Martini",
+    "year": 1904,
+    "reference": "Newman, Frank. (1904). _American Bar._",
+    "modifiedAt": "2023-04-08T02:39:02.502Z",
+    "list": "Spirited – Gin",
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "bottleID": "plymouth",
+        "id": "grain_gin_plymouth"
+      },
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "bottleID": "dolin_dry",
+        "id": "fortifiedwine_dryvermouth"
+      },
+      {
+        "quantity": 1,
+        "unit": "dash",
+        "id": "bitters_orange"
+      },
+      {
+        "quantity": 1,
+        "usage": "twist",
+        "id": "fruit_lemon",
+        "unit": "whole"
+      }
+    ]
+  },
+  {
+    "id": "tuxedo",
+    "name": "Tuxedo",
+    "year": 1900,
+    "reference": "Johnson, Harry. (1900). _Bartender's Manual._",
+    "basis": "martini",
+    "modifiedAt": "2023-04-08T02:39:02.502Z",
+    "list": "Spirited – Gin",
+    "notes": [
+      "Modern take: use 2 1/4 oz gin, 3/4 oz vermouth, and add 2 dashes orange bitters."
+    ],
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "bottleID": "plymouth",
+        "id": "grain_gin_plymouth"
+      },
+      {
+        "quantity": 1.5,
+        "unit": "oz",
+        "id": "fortifiedwine_dryvermouth"
+      },
+      {
+        "quantity": 0.25,
+        "unit": "oz",
+        "bottleID": "luxardo_maraschino_liqueur",
+        "id": "liqueur_maraschino"
+      },
+      {
+        "usage": "rinse",
+        "id": "liqueur_absinthe"
+      },
+      {
+        "quantity": 1,
+        "unit": "whole",
+        "id": "fruit_cherry"
+      },
+      {
+        "quantity": 1,
+        "usage": "twist",
+        "id": "fruit_lemon",
+        "unit": "whole"
+      }
+    ]
+  },
+  {
+    "id": "gibson",
+    "name": "Gibson",
+    "year": 1908,
+    "reference": "Boothby, William. (1908). _World's Drinks and How to Mix Them._",
+    "basis": "martini",
+    "modifiedAt": "2023-04-08T02:39:02.502Z",
+    "list": "Spirited – Gin",
+    "notes": [
+      "Garnish with a cocktail onion."
+    ],
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "bottleID": "plymouth",
+        "id": "grain_gin_plymouth"
+      },
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "bottleID": "dolin_dry",
+        "id": "fortifiedwine_dryvermouth"
+      },
+      {
+        "quantity": 1,
+        "unit": "dash",
+        "id": "bitters_orange"
+      }
+    ]
+  },
+  {
+    "id": "alaska",
+    "name": "Alaska",
+    "year": 1930,
+    "reference": "Craddock, Harry. (1930). _Savoy Cocktail Book, The._",
+    "basis": "martini",
+    "modifiedAt": "2023-04-08T02:39:02.502Z",
+    "list": "Spirited – Gin",
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "bottleID": "plymouth",
+        "id": "grain_gin_plymouth"
+      },
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "bottleID": "yellow_chartreuse",
+        "id": "liqueur_herbal"
+      }
+    ]
+  },
+  {
+    "id": "vesper",
+    "name": "Vesper",
+    "year": 1953,
+    "reference": "Fleming, Ian. (1953). _Casino Royale._",
+    "basis": "martini",
+    "modifiedAt": "2023-04-08T02:39:02.502Z",
+    "list": "Spirited – Gin",
+    "ingredients": [
+      {
+        "quantity": 1.25,
+        "unit": "oz",
+        "bottleID": "plymouth",
+        "id": "grain_gin_plymouth"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "id": "grain_vodka"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "bottleID": "lillet_blanc",
+        "id": "fortifiedwine_aperitif"
+      },
+      {
+        "quantity": 1,
+        "unit": "dash",
+        "id": "bitters_orange"
+      },
+      {
+        "quantity": 1,
+        "usage": "twist",
+        "id": "fruit_lemon",
+        "unit": "whole"
+      }
+    ]
+  },
+  {
+    "id": "sherry_martini",
+    "name": "Sherry Martini",
+    "basis": "martini",
+    "modifiedAt": "2023-04-08T02:39:02.502Z",
+    "list": "Spirited – Gin",
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "id": "grain_gin"
+      },
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "id": "fortifiedwine_sherry_fino"
+      }
+    ]
+  },
+  {
+    "id": "curious_george",
+    "name": "Curious George",
+    "year": 2022,
+    "reference": "Suderman, Peter. (2022). _Cocktails With Suderman._",
+    "basis": "martini",
+    "modifiedAt": "2023-04-08T02:39:02.502Z",
+    "list": "Spirited – Gin",
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "id": "grain_gin"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "id": "fortifiedwine_dryvermouth"
+      },
+      {
+        "quantity": 0.25,
+        "unit": "oz",
+        "bottleID": "giffard_banane_du_bresil",
+        "id": "liqueur_banana"
+      },
+      {
+        "quantity": 2,
+        "unit": "dash",
+        "id": "bitters_orange"
+      },
+      {
+        "quantity": 1,
+        "usage": "twist",
+        "id": "fruit_orange",
+        "unit": "whole"
+      }
+    ]
+  },
+  {
+    "id": "bronx",
+    "name": "Bronx",
+    "year": 1908,
+    "reference": "Boothby, William. (1908). *World's Drinks and How to Mix Them.* Solon, Johnnie (bartender). Big Brass Rail, Waldorf-Astoria Hotel, New York.",
+    "modifiedAt": "2016-02-04T22:57:41.624Z",
+    "list": "Spirited – Gin",
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "bottleID": "beefeater",
+        "id": "grain_gin_londondry"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "bottleID": "dolin_dry",
+        "id": "fortifiedwine_dryvermouth"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "bottleID": "carpano_antica_formula",
+        "id": "fortifiedwine_sweetvermouth"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "id": "juice_orange"
+      }
+    ]
+  },
+  {
+    "id": "income_tax",
+    "name": "Income Tax",
+    "year": 1900,
+    "reference": "Anonymous. (n.d.)",
+    "basis": "bronx",
+    "modifiedAt": "2016-02-04T22:57:41.624Z",
+    "list": "Spirited – Gin",
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "bottleID": "beefeater",
+        "id": "grain_gin_londondry"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "bottleID": "dolin_dry",
+        "id": "fortifiedwine_dryvermouth"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "bottleID": "carpano_antica_formula",
+        "id": "fortifiedwine_sweetvermouth"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "id": "juice_orange"
+      },
+      {
+        "quantity": 2,
+        "unit": "dash",
+        "bottleID": "angostura",
+        "id": "bitters_aromatic"
+      }
+    ]
+  },
+  {
+    "id": "hanky_panky",
+    "name": "Hanky Panky",
+    "year": 1930,
+    "reference": "Craddock, Harry. (1930). *Savoy Cocktail Book, The.* Coleman, Ada (bartender), Savoy Hotel Bar (1902–26), London.",
+    "modifiedAt": "2016-02-02T22:29:39.176Z",
+    "list": "Spirited – Gin",
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "bottleID": "beefeater",
+        "id": "grain_gin_londondry"
+      },
+      {
+        "quantity": 1.5,
+        "unit": "oz",
+        "bottleID": "carpano_antica_formula",
+        "id": "fortifiedwine_sweetvermouth"
+      },
+      {
+        "quantity": 0.25,
+        "unit": "oz",
+        "bottleID": "fernetbranca",
+        "id": "liqueur_amaro_fernet"
+      },
+      {
+        "quantity": 1,
+        "usage": "twist",
+        "id": "fruit_orange",
+        "unit": "whole"
+      }
+    ]
+  },
+  {
+    "id": "satans_whiskers",
+    "name": "Satan's Whiskers",
+    "year": 1930,
+    "reference": "Craddock, Harry. (1930). *Savoy Cocktail Book, The.*",
+    "modifiedAt": "2016-02-05T01:52:20.454Z",
+    "list": "Spirited – Gin",
+    "ingredients": [
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "id": "grain_gin_londondry"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "id": "fortifiedwine_dryvermouth"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "id": "fortifiedwine_sweetvermouth"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "id": "juice_orange"
+      },
+      {
+        "quantity": 2,
+        "unit": "tsp",
+        "id": "liqueur_orange"
+      },
+      {
+        "quantity": 1,
+        "unit": "tsp",
+        "id": "bitters_orange"
+      }
+    ]
+  },
+  {
+    "id": "claridge",
+    "name": "Claridge",
+    "year": 1930,
+    "reference": "Craddock, Harry. (1930). *Savoy Cocktail Book, The.*",
+    "modifiedAt": "2016-02-04T02:20:54.627Z",
+    "list": "Spirited – Gin",
+    "ingredients": [
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "bottleID": "tanqueray",
+        "id": "grain_gin_londondry"
+      },
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "bottleID": "dolin_dry",
+        "id": "fortifiedwine_dryvermouth"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "bottleID": "cointreau",
+        "id": "liqueur_orange"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "bottleID": "rothman_winter_orchard_apricot_liqueur",
+        "id": "liqueur_apricot"
+      }
+    ]
+  },
+  {
+    "id": "lucien_gaudin",
+    "name": "Lucien Gaudin",
+    "year": 1930,
+    "reference": "Haign, Ted. (2009). _Vintage Spirits and Forgotten Cocktails._ Anonymous (bartender), c. 1930.",
+    "modifiedAt": "2023-04-23T03:52:52.575Z",
+    "list": "Spirited – Gin",
+    "ingredients": [
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "id": "grain_gin"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "bottleID": "campari",
+        "id": "liqueur_amaro_aperitivo"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "bottleID": "dolin_dry",
+        "id": "fortifiedwine_dryvermouth"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "bottleID": "cointreau",
+        "id": "liqueur_orange"
+      },
+      {
+        "quantity": 1,
+        "usage": "twist",
+        "id": "fruit_orange",
+        "unit": "whole"
+      }
+    ]
+  },
+  {
+    "id": "dorflinger",
+    "name": "Dorflinger",
+    "year": 1935,
+    "reference": "Crockett, A. S. (1935). *Old Waldorf-Astoria Bar Book, The.*",
+    "modifiedAt": "2017-06-11T02:28:20.016Z",
+    "list": "Spirited – Gin",
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "bottleID": "plymouth",
+        "id": "grain_gin_plymouth"
+      },
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "id": "liqueur_absinthe"
+      },
+      {
+        "quantity": 1,
+        "unit": "dash",
+        "id": "bitters_orange"
+      }
+    ]
+  },
+  {
+    "id": "caprice",
+    "name": "Caprice",
+    "year": 1940,
+    "reference": "Gale, Hyman, Marco, Abe. (1940). *The How & When*",
+    "modifiedAt": "2016-02-02T22:29:47.213Z",
+    "list": "Spirited – Gin",
+    "ingredients": [
+      {
+        "quantity": 1.5,
+        "unit": "oz",
+        "bottleID": "beefeater",
+        "id": "grain_gin_londondry"
+      },
+      {
+        "quantity": 1.5,
+        "unit": "oz",
+        "bottleID": "dolin_dry",
+        "id": "fortifiedwine_dryvermouth"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "bottleID": "benedictine",
+        "id": "liqueur_herbal"
+      },
+      {
+        "quantity": 1,
+        "unit": "dash",
+        "id": "bitters_orange"
+      },
+      {
+        "quantity": 1,
+        "usage": "twist",
+        "id": "fruit_orange",
+        "unit": "whole"
+      }
+    ]
+  },
+  {
+    "id": "tailspin",
+    "name": "Tailspin",
+    "year": 1940,
+    "modifiedAt": "2023-04-28T04:52:34.235Z",
+    "list": "Spirited – Gin",
+    "ingredients": [
+      {
+        "quantity": 1.5,
+        "unit": "oz",
+        "bottleID": "beefeater",
+        "id": "grain_gin_londondry"
+      },
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "bottleID": "carpano_antica_formula",
+        "id": "fortifiedwine_sweetvermouth"
+      },
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "bottleID": "green_chartreuse",
+        "id": "liqueur_herbal"
+      },
+      {
+        "quantity": 1,
+        "unit": "dash",
+        "id": "bitters_orange"
+      },
+      {
+        "quantity": 1,
+        "usage": "twist",
+        "id": "fruit_lemon",
+        "unit": "whole"
+      },
+      {
+        "usage": "rinse",
+        "bottleID": "campari",
+        "id": "liqueur_amaro_aperitivo"
+      }
+    ]
+  },
+  {
+    "id": "negroni",
+    "name": "Negroni",
+    "year": 1943,
+    "reference": "Brucart, J. S. (1943). *Cien Cocktails.*",
+    "modifiedAt": "2022-09-28T23:14:45.424Z",
+    "list": "Spirited – Gin",
+    "notes": [
+      "Coupe or rocks glass w/ ice"
+    ],
+    "ingredients": [
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "bottleID": "beefeater",
+        "id": "grain_gin_londondry"
+      },
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "bottleID": "campari",
+        "id": "liqueur_amaro_aperitivo"
+      },
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "bottleID": "dolin_dry",
+        "id": "fortifiedwine_dryvermouth"
+      },
+      {
+        "quantity": 1,
+        "usage": "twist",
+        "id": "fruit_orange",
+        "unit": "whole"
+      }
+    ]
+  },
+  {
+    "id": "white_negroni",
+    "name": "White Negroni",
+    "year": 2002,
+    "reference": "Collins, Wayne. (2002). London.",
+    "basis": "negroni",
+    "modifiedAt": "2022-09-28T23:14:45.424Z",
+    "list": "Spirited – Gin",
+    "notes": [
+      "Can use Salers or Gran Classico for the aperitivo and Lillet Blanc for the aperitif."
+    ],
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "id": "grain_gin"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "bottleID": "suze",
+        "id": "liqueur_amaro_aperitivo"
+      },
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "bottleID": "cocchi_americano_bianco",
+        "id": "fortifiedwine_aperitif"
+      },
+      {
+        "quantity": 1,
+        "usage": "twist",
+        "id": "fruit_grapefruit",
+        "unit": "whole"
+      }
+    ]
+  },
+  {
+    "id": "charente_white_negroni",
+    "name": "Charente White Negroni",
+    "reference": "Lataille, Matthias; Difford, Simon. (2014). Cabinet Room, London.",
+    "basis": "negroni",
+    "modifiedAt": "2022-09-28T23:14:45.424Z",
+    "list": "Spirited – Gin",
+    "ingredients": [
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "id": "grain_gin"
+      },
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "id": "brandy_grape_cognac"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "bottleID": "suze",
+        "id": "liqueur_amaro_aperitivo"
+      },
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "bottleID": "cocchi_americano_bianco",
+        "id": "fortifiedwine_aperitif"
+      },
+      {
+        "quantity": 1,
+        "usage": "twist",
+        "id": "fruit_grapefruit",
+        "unit": "whole"
+      }
+    ]
+  },
+  {
+    "id": "kingston_negroni",
+    "name": "Kingston Negroni",
+    "year": 2009,
+    "reference": "Simo, Joaquin. (2009). Death & Company, New York.",
+    "basis": "negroni",
+    "modifiedAt": "2022-09-28T23:14:45.424Z",
+    "list": "Spirited – Gin",
+    "notes": [
+      "Coupe or rocks glass w/ ice"
+    ],
+    "ingredients": [
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "bottleID": "smith_cross_navy_strength",
+        "id": "cane_rum_jamaican"
+      },
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "bottleID": "campari",
+        "id": "liqueur_amaro_aperitivo"
+      },
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "bottleID": "dolin_rouge",
+        "id": "fortifiedwine_sweetvermouth"
+      },
+      {
+        "quantity": 1,
+        "usage": "twist",
+        "id": "fruit_orange",
+        "unit": "whole"
+      }
+    ]
+  },
+  {
+    "id": "mezcal_negroni",
+    "name": "Mezcal Negroni",
+    "basis": "negroni",
+    "modifiedAt": "2022-09-28T23:14:45.424Z",
+    "list": "Spirited – Gin",
+    "notes": [
+      "Coupe or rocks glass w/ ice",
+      "Can use 4 drops of saline solution instead of salt."
+    ],
+    "ingredients": [
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "bottleID": "del_maguey_vida",
+        "id": "agave_mezcal"
+      },
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "bottleID": "cynar",
+        "id": "liqueur_amaro_carciofo"
+      },
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "bottleID": "dolin_rouge",
+        "id": "fortifiedwine_sweetvermouth"
+      },
+      {
+        "quantity": 1,
+        "usage": "twist",
+        "id": "fruit_orange",
+        "unit": "whole"
+      },
+      {
+        "quantity": 1,
+        "unit": "dash",
+        "id": "spice_salt"
+      }
+    ]
+  },
+  {
+    "id": "lucky",
+    "name": "Lucky",
+    "year": 2015,
+    "reference": "Bunni, Mony. (2015). [Sable Kitchen & Bar](http://www.sablechicago.com), Chicago.",
+    "basis": "negroni",
+    "modifiedAt": "2022-09-28T23:14:45.424Z",
+    "list": "Spirited – Gin",
+    "ingredients": [
+      {
+        "quantity": 1.5,
+        "unit": "oz",
+        "bottleID": "st_george_terroir",
+        "id": "grain_gin_contemporary"
+      },
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "bottleID": "salers_gentien_aperitif",
+        "id": "liqueur_amaro_aperitivo"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "bottleID": "green_chartreuse",
+        "id": "liqueur_herbal"
+      },
+      {
+        "quantity": 2,
+        "unit": "dash",
+        "id": "bitters_celery"
+      },
+      {
+        "quantity": 1,
+        "usage": "twist",
+        "id": "fruit_lemon",
+        "unit": "whole"
+      }
+    ]
+  },
+  {
+    "id": "mustachioid",
+    "name": "Mustachioid",
+    "basis": "negroni",
+    "modifiedAt": "2022-09-28T23:14:45.424Z",
+    "list": "Spirited – Gin",
+    "notes": [
+      "Can substitute with Cynar and Gran Classico."
+    ],
+    "ingredients": [
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "id": "grain_gin"
+      },
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "id": "grain_whiskey_rye"
+      },
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "bottleID": "bonal_gentianequina",
+        "id": "fortifiedwine_aperitif"
+      },
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "bottleID": "amaro_meletti",
+        "id": "liqueur_amaro_light"
+      },
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "bottleID": "bittermens_elemakule_tiki_bitters",
+        "id": "bitters_tiki"
+      }
+    ]
+  },
+  {
+    "id": "youth_and_treachery",
+    "name": "Youth and Treachery",
+    "basis": "negroni",
+    "modifiedAt": "2022-09-28T23:14:45.424Z",
+    "list": "Spirited – Gin",
+    "ingredients": [
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "id": "agave_tequila_blanco"
+      },
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "bottleID": "suze",
+        "id": "liqueur_amaro_aperitivo"
+      },
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "id": "fortifiedwine_dryvermouth"
+      }
+    ]
+  },
+  {
+    "id": "obituary",
+    "name": "Obituary",
+    "year": null,
+    "reference": "Anonymous. (n.d.). Lafitte's Blacksmith Shop Bar, New Orleans.",
+    "modifiedAt": "2023-04-21T05:44:19.591Z",
+    "list": "Spirited – Gin",
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "id": "grain_gin"
+      },
+      {
+        "quantity": 0.25,
+        "unit": "oz",
+        "id": "fortifiedwine_dryvermouth"
+      },
+      {
+        "quantity": 0.25,
+        "unit": "oz",
+        "id": "liqueur_absinthe"
+      }
+    ]
+  },
+  {
+    "id": "dreamy_dorini_smoky_martini",
+    "name": "Dreamy Dorini Smoky Martini",
+    "year": 2002,
+    "reference": "Degroff, Dale. (2002). *Craft of the Cocktail.*",
+    "modifiedAt": "2017-08-30T12:29:54.926Z",
+    "list": "Spirited – Gin",
+    "notes": [
+      "Build in glass"
+    ],
+    "ingredients": [
+      {
+        "quantity": 2.5,
+        "unit": "oz",
+        "id": "grain_gin"
+      },
+      {
+        "quantity": 4,
+        "unit": "dash",
+        "bottleID": "laphroaig_10year",
+        "id": "grain_whiskey_scotch"
+      },
+      {
+        "usage": "rinse",
+        "id": "liqueur_absinthe"
+      },
+      {
+        "quantity": 1,
+        "usage": "twist",
+        "id": "fruit_lemon",
+        "unit": "whole"
+      }
+    ]
+  },
+  {
+    "id": "berlioni",
+    "name": "Berlioni",
+    "year": 2004,
+    "reference": "de Sousa Monteiro, Gonçalo. (2004). Victoria Bar, Berlin.",
+    "modifiedAt": "2016-02-02T22:30:12.829Z",
+    "list": "Spirited – Gin",
+    "notes": [
+      "Stir, strain into rocks w/ 1 large cube"
+    ],
+    "ingredients": [
+      {
+        "quantity": 1.5,
+        "unit": "oz",
+        "bottleID": "tanqueray",
+        "id": "grain_gin_londondry"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "bottleID": "cynar",
+        "id": "liqueur_amaro_carciofo"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "bottleID": "noilly_prat_extra_dry",
+        "id": "fortifiedwine_dryvermouth"
+      },
+      {
+        "quantity": 1,
+        "usage": "twist",
+        "id": "fruit_orange",
+        "unit": "whole"
+      }
+    ]
+  },
+  {
+    "id": "yeoman_warder",
+    "name": "Yeoman Warder",
+    "year": 2008,
+    "modifiedAt": "2023-04-28T04:05:32.268Z",
+    "list": "Spirited – Gin",
+    "notes": [
+      "Coupe"
+    ],
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "bottleID": "beefeater",
+        "id": "grain_gin_londondry"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "bottleID": "dolin_dry",
+        "id": "fortifiedwine_dryvermouth"
+      },
+      {
+        "quantity": 0.25,
+        "unit": "oz",
+        "bottleID": "cynar",
+        "id": "liqueur_amaro_carciofo"
+      },
+      {
+        "quantity": 0.25,
+        "unit": "oz",
+        "bottleID": "luxardo_maraschino_liqueur",
+        "id": "liqueur_maraschino"
+      }
+    ]
+  },
+  {
+    "id": "the_joy_division",
+    "name": "The Joy Division",
+    "year": 2008,
+    "modifiedAt": "2023-04-28T04:01:35.031Z",
+    "list": "Spirited – Gin",
+    "notes": [
+      "Coupe"
+    ],
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "bottleID": "beefeater",
+        "id": "grain_gin_londondry"
+      },
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "bottleID": "dolin_dry",
+        "id": "fortifiedwine_dryvermouth"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "bottleID": "cointreau",
+        "id": "liqueur_orange"
+      },
+      {
+        "quantity": 3,
+        "unit": "dash",
+        "id": "liqueur_absinthe"
+      },
+      {
+        "quantity": 1,
+        "usage": "twist",
+        "id": "fruit_lemon",
+        "unit": "whole"
+      }
+    ]
+  },
+  {
+    "id": "cynartown",
+    "name": "Cynartown",
+    "year": 2008,
+    "reference": "Ward, Phil. Death + Company, New York.",
+    "modifiedAt": "2023-04-14T22:27:35.078Z",
+    "list": "Spirited – Gin",
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "bottleID": "beefeater",
+        "id": "grain_gin_londondry"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "bottleID": "carpano_antica_formula",
+        "id": "fortifiedwine_sweetvermouth"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "bottleID": "cynar",
+        "id": "liqueur_amaro_carciofo"
+      }
+    ]
+  },
+  {
+    "id": "grand_street",
+    "name": "Grand Street",
+    "year": 2009,
+    "reference": "Day, Alex. Death + Co, New York (2009).",
+    "modifiedAt": "2023-04-28T03:59:08.382Z",
+    "list": "Spirited – Gin",
+    "notes": [
+      "Coupe",
+      "Muddle the grapefruit peel before stirring."
+    ],
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "bottleID": "beefeater",
+        "id": "grain_gin_londondry"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "bottleID": "punt_e_mes",
+        "id": "fortifiedwine_sweetvermouth"
+      },
+      {
+        "quantity": 0.25,
+        "unit": "oz",
+        "bottleID": "cynar",
+        "id": "liqueur_amaro_carciofo"
+      },
+      {
+        "quantity": 1,
+        "unit": "tsp",
+        "bottleID": "luxardo_maraschino_liqueur",
+        "id": "liqueur_maraschino"
+      },
+      {
+        "quantity": 1,
+        "usage": "twist",
+        "id": "fruit_grapefruit",
+        "unit": "whole"
+      }
+    ]
+  },
+  {
+    "id": "bumbo",
+    "name": "Bumbo",
+    "year": 1700,
+    "reference": "Washington, George. (1758). Presidential campaign. Anonymous (creator), pirates, c. 1600.",
+    "modifiedAt": "2016-02-05T00:48:38.160Z",
+    "list": "Spirited – Others",
+    "notes": [
+      "Build in rocks glass w/ ice"
+    ],
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "bottleID": "el_dorado_8_year",
+        "id": "cane_rum_demerara"
+      },
+      {
+        "quantity": 0.25,
+        "unit": "oz",
+        "id": "syrup_demerara"
+      },
+      {
+        "usage": "grated",
+        "id": "spice_nutmeg"
+      }
+    ]
+  },
+  {
+    "id": "japanese",
+    "name": "Japanese",
+    "year": 1862,
+    "reference": "Thomas, Jerry. (1862). *Bar-Tenders Guide.*",
+    "modifiedAt": "2016-02-02T20:12:58.848Z",
+    "list": "Spirited – Others",
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "bottleID": "hine_h_vsop",
+        "id": "brandy_grape_cognac"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "id": "syrup_orgeat"
+      },
+      {
+        "quantity": 3,
+        "unit": "dash",
+        "bottleID": "angostura",
+        "id": "bitters_aromatic"
+      },
+      {
+        "quantity": 1,
+        "usage": "twist",
+        "id": "fruit_lemon",
+        "unit": "whole"
+      }
+    ]
+  },
+  {
+    "id": "widows_kiss",
+    "name": "Widow's Kiss",
+    "year": 1895,
+    "reference": "Kappeler, George. (1895). *Modern American Drinks.*",
+    "modifiedAt": "2018-03-01T03:35:03.234Z",
+    "list": "Spirited – Others",
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "bottleID": "lairds_bonded",
+        "id": "brandy_apple"
+      },
+      {
+        "quantity": 0.25,
+        "unit": "oz",
+        "bottleID": "yellow_chartreuse",
+        "id": "liqueur_herbal"
+      },
+      {
+        "quantity": 0.25,
+        "unit": "oz",
+        "bottleID": "benedictine",
+        "id": "liqueur_herbal"
+      },
+      {
+        "quantity": 2,
+        "unit": "dash",
+        "bottleID": "angostura",
+        "id": "bitters_aromatic"
+      },
+      {
+        "quantity": 1,
+        "unit": "whole",
+        "id": "fruit_cherry"
+      }
+    ]
+  },
+  {
+    "id": "palmetto",
+    "name": "Palmetto",
+    "year": 1914,
+    "reference": "Straub, Jacques. (1914). *Drinks.*",
+    "modifiedAt": "2017-09-27T01:51:48.017Z",
+    "list": "Spirited – Others",
+    "ingredients": [
+      {
+        "quantity": 2.25,
+        "unit": "oz",
+        "bottleID": "appleton_estate_signature_blend",
+        "id": "cane_rum_jamaican"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "id": "fortifiedwine_sweetvermouth"
+      },
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "id": "bitters_orange"
+      },
+      {
+        "quantity": 1,
+        "usage": "twist",
+        "id": "fruit_orange",
+        "unit": "whole"
+      }
+    ]
+  },
+  {
+    "id": "chrysanthemum",
+    "name": "Chrysanthemum",
+    "year": 1916,
+    "reference": "Ensslin, Hugo. (1916). *Recipes for Mixed Drinks.*",
+    "modifiedAt": "2016-02-02T21:27:24.544Z",
+    "list": "Spirited – Others",
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "bottleID": "dolin_dry",
+        "id": "fortifiedwine_dryvermouth"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "bottleID": "benedictine",
+        "id": "liqueur_herbal"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "id": "liqueur_absinthe"
+      },
+      {
+        "quantity": 1,
+        "usage": "twist",
+        "id": "fruit_orange",
+        "unit": "whole"
+      }
+    ]
+  },
+  {
+    "id": "stinger",
+    "name": "Stinger",
+    "year": 1917,
+    "reference": " Bullock, Tom. (1917). *The Ideal Bartender*.",
+    "modifiedAt": "2017-06-11T03:36:09.928Z",
+    "list": "Spirited – Others",
+    "notes": [
+      "Shaken"
+    ],
+    "ingredients": [
+      {
+        "quantity": 2.25,
+        "unit": "oz",
+        "id": "brandy_grape_cognac"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "id": "liqueur_cremedementhe"
+      }
+    ]
+  },
+  {
+    "id": "el_presidente",
+    "name": "El Presidente",
+    "year": 1930,
+    "reference": "Craddock, Harry. (1930). *Savoy Cocktail Book, The.*",
+    "modifiedAt": "2016-02-04T23:39:36.181Z",
+    "list": "Spirited – Others",
+    "ingredients": [
+      {
+        "quantity": 1.5,
+        "unit": "oz",
+        "bottleID": "plantation_3_stars",
+        "id": "cane_rum"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "id": "fortifiedwine_dryvermouth"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "id": "liqueur_orange"
+      },
+      {
+        "quantity": 1,
+        "unit": "dash",
+        "id": "syrup_grenadine"
+      }
+    ]
+  },
+  {
+    "id": "el_presidente_david_wondrich",
+    "name": "El Presidente (David Wondrich)",
+    "basis": "el_presidente",
+    "modifiedAt": "2016-02-04T23:39:36.181Z",
+    "list": "Spirited – Others",
+    "ingredients": [
+      {
+        "quantity": 1.5,
+        "unit": "oz",
+        "bottleID": "plantation_3_stars",
+        "id": "cane_rum"
+      },
+      {
+        "quantity": 1.5,
+        "unit": "oz",
+        "bottleID": "dolin_blanc",
+        "id": "fortifiedwine_blancvermouth"
+      },
+      {
+        "quantity": 1,
+        "unit": "tsp",
+        "bottleID": "cointreau",
+        "id": "liqueur_orange"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "tsp",
+        "id": "syrup_grenadine"
+      },
+      {
+        "quantity": 1,
+        "usage": "twist",
+        "id": "fruit_orange",
+        "unit": "whole"
+      }
+    ]
+  },
+  {
+    "id": "savoy_tango",
+    "name": "Savoy Tango",
+    "year": 1930,
+    "reference": "Craddock, Harry. (1930). *Savoy Cocktail Book, The.*",
+    "modifiedAt": "2016-04-30T03:48:49.801Z",
+    "list": "Spirited – Others",
+    "notes": [
+      "Shaken"
+    ],
+    "ingredients": [
+      {
+        "quantity": 1.5,
+        "unit": "oz",
+        "bottleID": "plymouth",
+        "id": "grain_gin_plymouth"
+      },
+      {
+        "quantity": 1.5,
+        "unit": "oz",
+        "bottleID": "lairds_bonded",
+        "id": "brandy_apple"
+      }
+    ]
+  },
+  {
+    "id": "french_connection",
+    "name": "French Connection",
+    "year": 1950,
+    "modifiedAt": "2017-06-11T03:34:54.605Z",
+    "list": "Spirited – Others",
+    "notes": [
+      "Build in-glass"
+    ],
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "id": "brandy_grape_cognac"
+      },
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "id": "liqueur_amaretto"
+      }
+    ]
+  },
+  {
+    "id": "rosita",
+    "name": "Rosita",
+    "year": 1974,
+    "reference": "*Mr. Boston: Official Bartender's Guide.* (1974).",
+    "modifiedAt": "2016-02-03T03:13:40.560Z",
+    "list": "Spirited – Others",
+    "ingredients": [
+      {
+        "quantity": 1.5,
+        "unit": "oz",
+        "bottleID": "tapatio_reposado",
+        "id": "agave_tequila_reposado"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "id": "fortifiedwine_sweetvermouth"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "bottleID": "dolin_dry",
+        "id": "fortifiedwine_dryvermouth"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "bottleID": "campari",
+        "id": "liqueur_amaro_aperitivo"
+      },
+      {
+        "quantity": 1,
+        "unit": "dash",
+        "bottleID": "angostura",
+        "id": "bitters_aromatic"
+      },
+      {
+        "quantity": 1,
+        "usage": "twist",
+        "id": "fruit_orange",
+        "unit": "whole"
+      }
+    ]
+  },
+  {
+    "id": "newark",
+    "name": "Newark",
+    "year": 2007,
+    "reference": "Meehan, Jim, & Deragon, John. (2007, Fall). PDT, New York.",
+    "modifiedAt": "2016-02-02T21:29:54.419Z",
+    "list": "Spirited – Others",
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "bottleID": "lairds_bonded",
+        "id": "brandy_apple"
+      },
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "bottleID": "carpano_antica_formula",
+        "id": "fortifiedwine_sweetvermouth"
+      },
+      {
+        "quantity": 0.25,
+        "unit": "oz",
+        "bottleID": "luxardo_maraschino_liqueur",
+        "id": "liqueur_maraschino"
+      },
+      {
+        "quantity": 0.25,
+        "unit": "oz",
+        "bottleID": "fernetbranca",
+        "id": "liqueur_amaro_fernet"
+      }
+    ]
+  },
+  {
+    "id": "montgomery_smith",
+    "name": "Montgomery Smith",
+    "year": 2007,
+    "reference": "Dumas, Nate. (2007). PDT, New York",
+    "modifiedAt": "2016-02-02T20:44:49.118Z",
+    "list": "Spirited – Others",
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "bottleID": "hine_h_vsop",
+        "id": "brandy_grape_cognac"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "bottleID": "benedictine",
+        "id": "liqueur_herbal"
+      },
+      {
+        "quantity": 0.25,
+        "unit": "oz",
+        "bottleID": "fernetbranca",
+        "id": "liqueur_amaro_fernet"
+      },
+      {
+        "quantity": 1,
+        "usage": "twist",
+        "id": "fruit_lemon",
+        "unit": "whole"
+      }
+    ]
+  },
+  {
+    "id": "nth_degree",
+    "name": "Nth Degree",
+    "year": 2008,
+    "reference": "Dumas, Nate. (2008, Winter). PDT, New York",
+    "modifiedAt": "2016-02-02T23:19:32.671Z",
+    "list": "Spirited – Others",
+    "notes": [
+      "Muddle sugar w/ bitters",
+      "Add rest, stir, strain into rocks glass"
+    ],
+    "ingredients": [
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "bottleID": "clement_vsop",
+        "id": "cane_rum_agricole"
+      },
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "bottleID": "lairds_bonded",
+        "id": "brandy_apple"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "bottleID": "green_chartreuse",
+        "id": "liqueur_herbal"
+      },
+      {
+        "quantity": 1,
+        "unit": "whole",
+        "id": "sugar_demerara"
+      },
+      {
+        "quantity": 2,
+        "unit": "dash",
+        "id": "bitters_aromatic"
+      },
+      {
+        "quantity": 1,
+        "usage": "twist",
+        "id": "fruit_orange",
+        "unit": "whole"
+      },
+      {
+        "quantity": 1,
+        "usage": "twist",
+        "id": "fruit_lemon",
+        "unit": "whole"
+      }
+    ]
+  },
+  {
+    "id": "augie_march",
+    "name": "Augie March",
+    "year": 2008,
+    "modifiedAt": "2023-04-28T04:18:21.187Z",
+    "list": "Spirited – Others",
+    "notes": [
+      "Coupe"
+    ],
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "bottleID": "el_tesoro_reposado",
+        "id": "agave_tequila_reposado"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "bottleID": "carpano_antica_formula",
+        "id": "fortifiedwine_sweetvermouth"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "bottleID": "cynar",
+        "id": "liqueur_amaro_carciofo"
+      },
+      {
+        "quantity": 1,
+        "unit": "whole",
+        "id": "fruit_cherry"
+      }
+    ]
+  },
+  {
+    "id": "improved_tequila_cocktail",
+    "name": "Improved Tequila Cocktail",
+    "year": 2011,
+    "reference": "Heugel, Bobby. (2011). Anvil Bar & Refuge, Houston, TX.",
+    "modifiedAt": "2022-05-30T00:33:37.727Z",
+    "list": "Spirited – Others",
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "bottleID": "siete_leguas_blanco",
+        "id": "agave_tequila_blanco"
+      },
+      {
+        "quantity": 1,
+        "unit": "tsp",
+        "bottleID": "luxardo_maraschino_liqueur",
+        "id": "liqueur_maraschino"
+      },
+      {
+        "quantity": 2,
+        "unit": "dash",
+        "bottleID": "bittermens_xocolatl_mole_bitters",
+        "id": "bitters_mole"
+      },
+      {
+        "quantity": 1,
+        "unit": "dash",
+        "bottleID": "angostura",
+        "id": "bitters_aromatic"
+      },
+      {
+        "quantity": 1,
+        "unit": "tsp",
+        "id": "syrup_agave"
+      },
+      {
+        "quantity": 1,
+        "usage": "twist",
+        "id": "fruit_lemon",
+        "unit": "whole"
+      }
+    ]
+  },
+  {
+    "id": "as_one_does",
+    "name": "As One Does",
+    "year": 2013,
+    "reference": "Simó, Joaquín. (2013). Pouring Ribbons, NYC",
+    "modifiedAt": "2022-05-30T00:29:50.917Z",
+    "list": "Spirited – Others",
+    "notes": [
+      "Crushed ice, swizzle.",
+      "Garnish with mint."
+    ],
+    "ingredients": [
+      {
+        "quantity": 1.5,
+        "unit": "oz",
+        "bottleID": "cynar",
+        "id": "liqueur_amaro_carciofo"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "id": "agave_tequila_blanco"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "tsp",
+        "id": "liqueur_amaro_fernet"
+      },
+      {
+        "quantity": 1,
+        "unit": "dash",
+        "bottleID": "bittermens_xocolatl_mole_bitters",
+        "id": "bitters_mole"
+      },
+      {
+        "quantity": 5,
+        "unit": "whole",
+        "id": "spice_mint"
+      }
+    ]
+  },
+  {
+    "id": "reggatta_de_blanc",
+    "name": "Reggatta de Blanc",
+    "year": 2015,
+    "reference": "Difford, Simon. (2015). Cabinet Room, London",
+    "modifiedAt": "2018-03-05T04:23:17.383Z",
+    "list": "Spirited – Others",
+    "notes": [
+      "Stir into rocks w/ ice",
+      "Garnish with grapes"
+    ],
+    "ingredients": [
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "id": "brandy_grape_pisco"
+      },
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "bottleID": "lemorton_selection_calvados_domfrontais",
+        "id": "brandy_apple"
+      },
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "id": "wine_white_riesling"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "bottleID": "suze",
+        "id": "liqueur_amaro_aperitivo"
+      },
+      {
+        "quantity": 1,
+        "unit": "tsp",
+        "id": "syrup_simple"
+      }
+    ]
+  },
+  {
+    "id": "maximilano",
+    "name": "Maximilano",
+    "year": 2015,
+    "reference": "Xoxocotla, Julio. (2015). Ward III, New York",
+    "modifiedAt": "2018-03-05T04:26:50.022Z",
+    "list": "Spirited – Others",
+    "notes": [
+      "Pinch salt",
+      "Stir into rocks w/ ice"
+    ],
+    "ingredients": [
+      {
+        "quantity": 1.25,
+        "unit": "oz",
+        "id": "agave_mezcal"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "bottleID": "suze",
+        "id": "liqueur_amaro_aperitivo"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "id": "fortifiedwine_dryvermouth"
+      },
+      {
+        "quantity": 1,
+        "usage": "twist",
+        "id": "fruit_lemon",
+        "unit": "whole"
+      }
+    ]
+  },
+  {
+    "id": "terrible_love",
+    "name": "Terrible Love",
+    "year": 2013,
+    "modifiedAt": "2023-04-28T04:56:22.798Z",
+    "list": "Spirited – Others",
+    "notes": [
+      "Rocks"
+    ],
+    "ingredients": [
+      {
+        "quantity": 1.5,
+        "unit": "oz",
+        "bottleID": "del_maguey_chichicapa",
+        "id": "agave_mezcal"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "bottleID": "suze",
+        "id": "liqueur_amaro_aperitivo"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "bottleID": "stgermain_elderflower_liqueur",
+        "id": "liqueur_elderflower"
+      },
+      {
+        "quantity": 1,
+        "unit": "dash",
+        "id": "bitters_orange"
+      },
+      {
+        "quantity": 1,
+        "usage": "twist",
+        "id": "fruit_grapefruit",
+        "unit": "whole"
+      }
+    ]
+  },
+  {
+    "id": "clover_club",
+    "name": "Clover Club",
+    "year": 1909,
+    "modifiedAt": "2017-06-11T03:28:49.628Z",
+    "list": "Sours – Gin",
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "id": "grain_gin"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "id": "juice_lemon"
+      },
+      {
+        "quantity": 2,
+        "unit": "tsp",
+        "id": "syrup_grenadine"
+      },
+      {
+        "quantity": 1,
+        "unit": "whole",
+        "id": "egg_white"
+      }
+    ]
+  },
+  {
+    "id": "gin_sour",
+    "name": "Gin Sour",
+    "modifiedAt": "2017-11-26T08:21:16.175Z",
+    "list": "Sours – Gin",
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "bottleID": "plymouth",
+        "id": "grain_gin_plymouth"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "id": "juice_lemon"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "id": "syrup_simple"
+      },
+      {
+        "quantity": 1,
+        "unit": "whole",
+        "id": "egg_white"
+      }
+    ]
+  },
+  {
+    "id": "fitzgerald",
+    "name": "Fitzgerald",
+    "basis": "gin_sour",
+    "modifiedAt": "2017-11-26T08:21:16.175Z",
+    "list": "Sours – Gin",
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "id": "grain_gin"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "id": "juice_lemon"
+      },
+      {
+        "quantity": 2,
+        "unit": "tsp",
+        "id": "syrup_grenadine"
+      },
+      {
+        "quantity": 1,
+        "unit": "whole",
+        "id": "egg_white"
+      },
+      {
+        "quantity": 1,
+        "unit": "dash",
+        "id": "bitters_aromatic"
+      }
+    ]
+  },
+  {
+    "id": "southside",
+    "name": "Southside",
+    "year": 1916,
+    "reference": "Ensslin, Hugo. (1916). *Recipes for Mixed Drinks.*",
+    "basis": "gin_sour",
+    "modifiedAt": "2017-11-26T08:21:16.175Z",
+    "list": "Sours – Gin",
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "bottleID": "plymouth",
+        "id": "grain_gin_plymouth"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "id": "juice_lemon"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "id": "syrup_simple"
+      },
+      {
+        "quantity": 1,
+        "unit": "whole",
+        "id": "egg_white"
+      },
+      {
+        "quantity": 4,
+        "unit": "whole",
+        "usage": "muddled",
+        "id": "spice_mint"
+      }
+    ]
+  },
+  {
+    "id": "gimlet",
+    "name": "Gimlet",
+    "year": 1922,
+    "basis": "gin_sour",
+    "modifiedAt": "2017-11-26T08:21:16.175Z",
+    "list": "Sours – Gin",
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "bottleID": "plymouth",
+        "id": "grain_gin_plymouth"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "id": "juice_lime"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "id": "cordial_keylime"
+      },
+      {
+        "quantity": 1,
+        "usage": "wheel",
+        "id": "fruit_lime",
+        "unit": "whole"
+      }
+    ]
+  },
+  {
+    "id": "bees_knees",
+    "name": "Bee's Knees",
+    "year": 1937,
+    "reference": "Meier, Frank. (1937). *Artistry of Mixing Drinks.*",
+    "basis": "gin_sour",
+    "modifiedAt": "2017-11-26T08:21:16.175Z",
+    "list": "Sours – Gin",
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "bottleID": "plymouth",
+        "id": "grain_gin_plymouth"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "id": "juice_lemon"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "id": "syrup_honey"
+      }
+    ]
+  },
+  {
+    "id": "aviation",
+    "name": "Aviation",
+    "year": 1916,
+    "reference": "Ensslin, Hugo. (1916). *Recipes for Mixed Drinks.*",
+    "modifiedAt": "2022-08-24T04:46:51.711Z",
+    "list": "Sours – Gin",
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "id": "grain_gin"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "id": "juice_lemon"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "id": "liqueur_maraschino"
+      },
+      {
+        "quantity": 0.25,
+        "unit": "oz",
+        "id": "liqueur_cremedeviolette"
+      },
+      {
+        "quantity": 1,
+        "usage": "twist",
+        "id": "fruit_lemon",
+        "unit": "whole"
+      }
+    ]
+  },
+  {
+    "id": "the_casino",
+    "name": "The Casino",
+    "year": 1930,
+    "reference": "Craddock, Harry. (1930). *Savoy Cocktail Book, The.*",
+    "basis": "aviation",
+    "modifiedAt": "2022-08-24T04:46:51.711Z",
+    "list": "Sours – Gin",
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "id": "grain_gin"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "id": "juice_lemon"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "id": "liqueur_maraschino"
+      },
+      {
+        "quantity": 3,
+        "unit": "dash",
+        "id": "bitters_orange"
+      },
+      {
+        "quantity": 1,
+        "usage": "twist",
+        "id": "fruit_lemon",
+        "unit": "whole"
+      }
+    ]
+  },
+  {
+    "id": "water_lily",
+    "name": "Water Lily",
+    "year": 2007,
+    "reference": "Boccato, Richard. (2007). PDT, New York.",
+    "basis": "aviation",
+    "modifiedAt": "2022-08-24T04:46:51.711Z",
+    "list": "Sours – Gin",
+    "ingredients": [
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "id": "grain_gin"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "id": "juice_lemon"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "bottleID": "cointreau",
+        "id": "liqueur_orange"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "id": "liqueur_cremedeviolette"
+      },
+      {
+        "quantity": 1,
+        "usage": "twist",
+        "id": "fruit_orange",
+        "unit": "whole"
+      }
+    ]
+  },
+  {
+    "id": "flying_dutchman",
+    "name": "Flying Dutchman",
+    "year": 2009,
+    "reference": "Meehan, Jim. (2009, Winter). PDT, New York.",
+    "basis": "aviation",
+    "modifiedAt": "2022-08-24T04:46:51.711Z",
+    "list": "Sours – Gin",
+    "ingredients": [
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "bottleID": "clear_creek_blue_plum_brandy",
+        "id": "brandy_plum"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "bottleID": "bols_genever",
+        "id": "grain_gin_genever"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "id": "liqueur_cremedeviolette"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "id": "juice_lemon"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "id": "juice_pineapple"
+      },
+      {
+        "quantity": 1,
+        "unit": "tsp",
+        "bottleID": "luxardo_maraschino_liqueur",
+        "id": "liqueur_maraschino"
+      },
+      {
+        "quantity": 1,
+        "unit": "whole",
+        "id": "fruit_cherry"
+      }
+    ]
+  },
+  {
+    "id": "pink_lady",
+    "name": "Pink Lady",
+    "year": 1922,
+    "reference": "McElhone, Harry. (1922). *ABC of Mixing Cocktails.*",
+    "modifiedAt": "2016-02-02T23:49:59.560Z",
+    "list": "Sours – Gin",
+    "ingredients": [
+      {
+        "quantity": 1.5,
+        "unit": "oz",
+        "bottleID": "plymouth",
+        "id": "grain_gin_plymouth"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "id": "juice_lemon"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "bottleID": "lairds_bonded",
+        "id": "brandy_apple"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "id": "syrup_simple"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "id": "syrup_grenadine"
+      },
+      {
+        "quantity": 1,
+        "unit": "whole",
+        "id": "egg_white"
+      }
+    ]
+  },
+  {
+    "id": "white_lady",
+    "name": "White Lady",
+    "year": 1922,
+    "reference": "McElhone, Harry. (1922). *ABC of Mixing Cocktails.*",
+    "modifiedAt": "2017-06-11T03:30:28.467Z",
+    "list": "Sours – Gin",
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "bottleID": "beefeater",
+        "id": "grain_gin_londondry"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "bottleID": "cointreau",
+        "id": "liqueur_orange"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "id": "juice_lemon"
+      },
+      {
+        "quantity": 0.25,
+        "unit": "oz",
+        "id": "syrup_simple"
+      },
+      {
+        "quantity": 1,
+        "unit": "whole",
+        "id": "egg_white"
+      }
+    ]
+  },
+  {
+    "id": "pegu_club",
+    "name": "Pegu Club",
+    "year": 1927,
+    "reference": "McElhone, Harry. (1927). *Barflies and Cocktails.*",
+    "modifiedAt": "2023-04-21T18:18:41.030Z",
+    "list": "Sours – Gin",
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "id": "grain_gin"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "id": "liqueur_orange"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "id": "juice_lime"
+      },
+      {
+        "quantity": 1,
+        "unit": "dash",
+        "bottleID": "angostura",
+        "id": "bitters_aromatic"
+      },
+      {
+        "quantity": 1,
+        "unit": "dash",
+        "id": "bitters_orange"
+      }
+    ]
+  },
+  {
+    "id": "corpse_reviver_2",
+    "name": "Corpse Reviver # 2",
+    "year": 1930,
+    "reference": "Craddock, Harry. (1930). *Savoy Cocktail Book, The.*",
+    "modifiedAt": "2017-06-11T03:31:16.607Z",
+    "list": "Sours – Gin",
+    "ingredients": [
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "bottleID": "plymouth",
+        "id": "grain_gin_plymouth"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "bottleID": "cointreau",
+        "id": "liqueur_orange"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "bottleID": "cocchi_americano_bianco",
+        "id": "fortifiedwine_aperitif"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "id": "juice_lemon"
+      },
+      {
+        "usage": "rinse",
+        "id": "liqueur_absinthe"
+      }
+    ]
+  },
+  {
+    "id": "hoop_la",
+    "name": "Hoop La!",
+    "basis": "corpse_reviver_2",
+    "modifiedAt": "2017-06-11T03:31:16.607Z",
+    "list": "Sours – Gin",
+    "ingredients": [
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "id": "brandy_grape_cognac"
+      },
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "bottleID": "cointreau",
+        "id": "liqueur_orange"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "id": "fortifiedwine_dryvermouth"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "id": "juice_lemon"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "id": "egg_white"
+      }
+    ]
+  },
+  {
+    "id": "hipster_reviver_2",
+    "name": "Hipster Reviver #2",
+    "basis": "corpse_reviver_2",
+    "modifiedAt": "2017-06-11T03:31:16.607Z",
+    "list": "Sours – Gin",
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "id": "grain_gin"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "bottleID": "cointreau",
+        "id": "liqueur_orange"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "bottleID": "cocchi_americano_bianco",
+        "id": "fortifiedwine_aperitif"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "id": "fortifiedwine_dryvermouth"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "id": "juice_lemon"
+      },
+      {
+        "usage": "rinse",
+        "id": "liqueur_absinthe"
+      },
+      {
+        "quantity": 1,
+        "usage": "twist",
+        "id": "fruit_lemon",
+        "unit": "whole"
+      }
+    ]
+  },
+  {
+    "id": "creeping_death",
+    "name": "Creeping Death",
+    "year": 2012,
+    "reference": "*Savoy Stomp.* (2012). Easter, Trevor (bartender).",
+    "basis": "corpse_reviver_2",
+    "modifiedAt": "2017-06-11T03:31:16.607Z",
+    "list": "Sours – Gin",
+    "ingredients": [
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "bottleID": "plymouth",
+        "id": "grain_gin_plymouth"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "bottleID": "cointreau",
+        "id": "liqueur_orange"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "bottleID": "cynar",
+        "id": "liqueur_amaro_carciofo"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "id": "juice_lemon"
+      },
+      {
+        "usage": "rinse",
+        "id": "liqueur_absinthe"
+      }
+    ]
+  },
+  {
+    "id": "20th_century",
+    "name": "20th Century",
+    "year": 1937,
+    "reference": "Tarling, W. J. (1937). *Café Royale Cocktail Book.*",
+    "modifiedAt": "2016-02-18T00:32:17.458Z",
+    "list": "Sours – Gin",
+    "ingredients": [
+      {
+        "quantity": 1.5,
+        "unit": "oz",
+        "bottleID": "plymouth",
+        "id": "grain_gin_plymouth"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "bottleID": "cocchi_americano_bianco",
+        "id": "fortifiedwine_aperitif"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "bottleID": "marie_brizard_white_creme_de_cacao",
+        "id": "liqueur_cremedecacao"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "id": "juice_lemon"
+      }
+    ]
+  },
+  {
+    "id": "21st_century",
+    "name": "21st Century",
+    "year": 2007,
+    "reference": "Meehan, Jim. (2007). Pegu Club, New York.",
+    "basis": "20th_century",
+    "modifiedAt": "2016-02-18T00:32:17.458Z",
+    "list": "Sours – Gin",
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "bottleID": "siete_leguas_blanco",
+        "id": "agave_tequila_blanco"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "bottleID": "marie_brizard_white_creme_de_cacao",
+        "id": "liqueur_cremedecacao"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "id": "juice_lemon"
+      },
+      {
+        "usage": "rinse",
+        "id": "liqueur_absinthe"
+      }
+    ]
+  },
+  {
+    "id": "jubilant",
+    "name": "Jubilant",
+    "year": 1937,
+    "reference": "Perosino, J. (Tarling, W. J.). Café Royal Cocktail Book.",
+    "modifiedAt": "2023-04-29T05:53:15.505Z",
+    "list": "Sours – Gin",
+    "notes": [
+      "Coupe"
+    ],
+    "ingredients": [
+      {
+        "quantity": 1.5,
+        "unit": "oz",
+        "id": "grain_gin"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "bottleID": "benedictine",
+        "id": "liqueur_herbal"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "id": "juice_orange"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "id": "juice_lemon"
+      },
+      {
+        "quantity": 1,
+        "unit": "whole",
+        "id": "egg_white"
+      },
+      {
+        "quantity": 1,
+        "usage": "twist",
+        "id": "fruit_orange",
+        "unit": "whole"
+      }
+    ]
+  },
+  {
+    "id": "army_navy",
+    "name": "Army & Navy",
+    "year": 1948,
+    "reference": "Embury, David. (1948). *Fine Art of Mixing Drinks, The.*",
+    "modifiedAt": "2020-10-23T17:52:31.539Z",
+    "list": "Sours – Gin",
+    "notes": [
+      "shaken"
+    ],
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "id": "grain_gin"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "id": "juice_lemon"
+      },
+      {
+        "quantity": 0.25,
+        "unit": "oz",
+        "id": "syrup_orgeat"
+      },
+      {
+        "quantity": 1,
+        "unit": "dash",
+        "bottleID": "angostura",
+        "id": "bitters_aromatic"
+      }
+    ]
+  },
+  {
+    "id": "aruba",
+    "name": "Aruba",
+    "basis": "army_navy",
+    "modifiedAt": "2020-10-23T17:52:31.539Z",
+    "list": "Sours – Gin",
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "id": "grain_gin"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "id": "juice_lemon"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "id": "syrup_orgeat"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "bottleID": "cointreau",
+        "id": "liqueur_orange"
+      },
+      {
+        "quantity": 1,
+        "unit": "dash",
+        "bottleID": "angostura",
+        "id": "bitters_aromatic"
+      },
+      {
+        "quantity": 1,
+        "unit": "whole",
+        "id": "egg_white"
+      }
+    ]
+  },
+  {
+    "id": "the_last_word",
+    "name": "The Last Word",
+    "year": 1951,
+    "reference": "Saucier, Ted. (1951). *Bottoms Up.* Detroit Athletic Club, Detroit. Stenson, Murray (bartender, rediscovered), Zig Zag Café, Seattle.",
+    "modifiedAt": "2017-06-11T02:02:45.612Z",
+    "list": "Sours – Gin",
+    "ingredients": [
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "bottleID": "tanqueray",
+        "id": "grain_gin_londondry"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "bottleID": "green_chartreuse",
+        "id": "liqueur_herbal"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "bottleID": "luxardo_maraschino_liqueur",
+        "id": "liqueur_maraschino"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "id": "juice_lime"
+      }
+    ]
+  },
+  {
+    "id": "final_ward",
+    "name": "Final Ward",
+    "year": 2000,
+    "reference": "Ward, Phil. (c. 2000s). Death + Company, New York.",
+    "basis": "the_last_word",
+    "modifiedAt": "2017-06-11T02:02:45.612Z",
+    "list": "Sours – Gin",
+    "ingredients": [
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "id": "grain_whiskey_rye"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "bottleID": "green_chartreuse",
+        "id": "liqueur_herbal"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "bottleID": "luxardo_maraschino_liqueur",
+        "id": "liqueur_maraschino"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "id": "juice_lemon"
+      }
+    ]
+  },
+  {
+    "id": "may_daisy",
+    "name": "May Daisy",
+    "year": 2007,
+    "reference": "Ward, Phil. (2007, Summer). Death + Company, New York.",
+    "basis": "the_last_word",
+    "modifiedAt": "2017-06-11T02:02:45.612Z",
+    "list": "Sours – Gin",
+    "notes": [
+      "White wine glass w/ ice"
+    ],
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "bottleID": "hine_h_vsop",
+        "id": "brandy_grape_cognac"
+      },
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "id": "juice_lemon"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "bottleID": "green_chartreuse",
+        "id": "liqueur_herbal"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "id": "syrup_simple"
+      },
+      {
+        "quantity": 1,
+        "unit": "whole",
+        "id": "spice_mint"
+      }
+    ]
+  },
+  {
+    "id": "industry_sour",
+    "name": "Industry Sour",
+    "year": 2011,
+    "reference": "Kilgore, Ted. (2011). Taste, St. Louis.",
+    "basis": "the_last_word",
+    "modifiedAt": "2017-06-11T02:02:45.612Z",
+    "list": "Sours – Gin",
+    "ingredients": [
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "bottleID": "fernetbranca",
+        "id": "liqueur_amaro_fernet"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "bottleID": "green_chartreuse",
+        "id": "liqueur_herbal"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "id": "syrup_simple"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "id": "juice_lemon"
+      }
+    ]
+  },
+  {
+    "id": "green_ghost",
+    "name": "Green Ghost",
+    "basis": "the_last_word",
+    "modifiedAt": "2017-06-11T02:02:45.612Z",
+    "list": "Sours – Gin",
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "id": "grain_gin"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "bottleID": "green_chartreuse",
+        "id": "liqueur_herbal"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "id": "juice_lime"
+      }
+    ]
+  },
+  {
+    "id": "next_to_last_word",
+    "name": "Next to Last Word",
+    "basis": "the_last_word",
+    "modifiedAt": "2017-06-11T02:02:45.612Z",
+    "list": "Sours – Gin",
+    "ingredients": [
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "id": "grain_gin"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "bottleID": "stgermain_elderflower_liqueur",
+        "id": "liqueur_elderflower"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "bottleID": "luxardo_maraschino_liqueur",
+        "id": "liqueur_maraschino"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "id": "juice_lemon"
+      }
+    ]
+  },
+  {
+    "id": "cloister",
+    "name": "Cloister",
+    "year": 1971,
+    "reference": "Mario, Thomas. (1971). *Playboy's Host & Bar Book.*",
+    "modifiedAt": "2016-02-03T03:11:46.811Z",
+    "list": "Sours – Gin",
+    "ingredients": [
+      {
+        "quantity": 1.5,
+        "unit": "oz",
+        "bottleID": "tanqueray",
+        "id": "grain_gin_londondry"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "bottleID": "yellow_chartreuse",
+        "id": "liqueur_herbal"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "id": "juice_grapefruit"
+      },
+      {
+        "quantity": 0.25,
+        "unit": "oz",
+        "id": "juice_lemon"
+      },
+      {
+        "quantity": 0.25,
+        "unit": "oz",
+        "id": "syrup_simple"
+      },
+      {
+        "quantity": 1,
+        "usage": "twist",
+        "id": "fruit_grapefruit",
+        "unit": "whole"
+      }
+    ]
+  },
+  {
+    "id": "chingon",
+    "name": "Chingon",
+    "year": 2008,
+    "reference": "Miller, Brian. Death + Co, New York (2009).",
+    "modifiedAt": "2023-04-28T04:13:29.828Z",
+    "list": "Sours – Gin",
+    "notes": [
+      "Coupe"
+    ],
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "bottleID": "siete_leguas_blanco",
+        "id": "agave_tequila_blanco"
+      },
+      {
+        "quantity": 0.25,
+        "unit": "oz",
+        "bottleID": "benedictine",
+        "id": "liqueur_herbal"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "id": "juice_orange"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "id": "juice_lime"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "id": "syrup_orgeat"
+      },
+      {
+        "quantity": 1,
+        "usage": "twist",
+        "id": "fruit_orange",
+        "unit": "whole"
+      }
+    ]
+  },
+  {
+    "id": "cherry_pop",
+    "name": "Cherry Pop",
+    "year": 2009,
+    "reference": "Danger, Jane. (2009, Spring).",
+    "modifiedAt": "2016-02-02T17:03:39.088Z",
+    "list": "Sours – Gin",
+    "notes": [
+      "Muddle cherries w/ sugar",
+      "Strain into rocks glass w/ pebble ice"
+    ],
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "bottleID": "plymouth",
+        "id": "grain_gin_plymouth"
+      },
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "id": "juice_lemon"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "bottleID": "luxardo_maraschino_liqueur",
+        "id": "liqueur_maraschino"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "id": "syrup_simple"
+      },
+      {
+        "quantity": 3,
+        "unit": "whole",
+        "id": "fruit_cherry"
+      }
+    ]
+  },
+  {
+    "id": "that_green_drink",
+    "name": "That Green Drink",
+    "year": 2013,
+    "reference": "Cerretani, Michael. (2013). *Imbibe*.",
+    "modifiedAt": "2017-06-11T03:44:22.490Z",
+    "list": "Sours – Gin",
+    "notes": [
+      "Muddle 2 cucumber slices with the syrup",
+      "Add a long cucumber peel for garnish"
+    ],
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "id": "grain_gin"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "id": "fortifiedwine_dryvermouth"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "bottleID": "green_chartreuse",
+        "id": "liqueur_herbal"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "id": "juice_lime"
+      },
+      {
+        "quantity": 0.3333333333333333,
+        "unit": "oz",
+        "id": "syrup_simple"
+      },
+      {
+        "quantity": 1,
+        "unit": "whole",
+        "id": "fruit_cucumber"
+      }
+    ]
+  },
+  {
+    "id": "brandy_crusta",
+    "name": "Brandy Crusta",
+    "year": 1862,
+    "reference": "Thomas, Jerry. (1862). *Bar-Tender's Guide.*",
+    "modifiedAt": "2022-01-09T07:10:30.117Z",
+    "list": "Sours – Others",
+    "notes": [
+      "Stir and strain into a chilled, sugar-rimmed wine glass filled with an entire lemon and orange peel."
+    ],
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "bottleID": "hine_h_vsop",
+        "id": "brandy_grape_cognac"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "bottleID": "luxardo_maraschino_liqueur",
+        "id": "liqueur_maraschino"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "id": "liqueur_orange"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "id": "juice_lemon"
+      }
+    ]
+  },
+  {
+    "id": "ward_eight",
+    "name": "Ward Eight",
+    "year": 1913,
+    "reference": "*Cocktail Book, The: A Sideboard Manual for Gentlemen.* (1900).",
+    "modifiedAt": "2020-12-30T06:10:35.456Z",
+    "list": "Sours – Others",
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "bottleID": "rittenhouse",
+        "id": "grain_whiskey_rye"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "id": "juice_lemon"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "id": "juice_orange"
+      },
+      {
+        "quantity": 1,
+        "unit": "tsp",
+        "id": "syrup_grenadine"
+      }
+    ]
+  },
+  {
+    "id": "whiskey_sour",
+    "name": "Whiskey Sour",
+    "modifiedAt": "2017-06-11T23:10:58.407Z",
+    "list": "Sours – Others",
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "id": "grain_whiskey_bourbon"
+      },
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "id": "juice_lemon"
+      },
+      {
+        "quantity": 1,
+        "unit": "tsp",
+        "id": "sugar_brown"
+      },
+      {
+        "quantity": 1,
+        "unit": "whole",
+        "id": "egg_white"
+      }
+    ]
+  },
+  {
+    "id": "camerons_kick",
+    "name": "Cameron's Kick",
+    "year": 1922,
+    "reference": "McElhone, Harry. (1922). *ABC of Mixing Cocktails.*",
+    "basis": "whiskey_sour",
+    "modifiedAt": "2017-06-11T23:10:58.407Z",
+    "list": "Sours – Others",
+    "ingredients": [
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "bottleID": "famous_grouse",
+        "id": "grain_whiskey_scotch_blended"
+      },
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "bottleID": "jameson_irish_whiskey",
+        "id": "grain_whiskey_irish"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "id": "juice_lemon"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "id": "syrup_orgeat"
+      }
+    ]
+  },
+  {
+    "id": "rattlesnake",
+    "name": "Rattlesnake",
+    "year": 1930,
+    "reference": "Craddock, Harry. (1930). *Savoy Cocktail Book, The.*",
+    "basis": "whiskey_sour",
+    "modifiedAt": "2017-06-11T23:10:58.407Z",
+    "list": "Sours – Others",
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "bottleID": "rittenhouse",
+        "id": "grain_whiskey_rye"
+      },
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "id": "juice_lemon"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "id": "syrup_simple"
+      },
+      {
+        "quantity": 1,
+        "unit": "whole",
+        "id": "egg_white"
+      },
+      {
+        "usage": "rinse",
+        "id": "liqueur_absinthe"
+      }
+    ]
+  },
+  {
+    "id": "gold_rush",
+    "name": "Gold Rush",
+    "year": 2000,
+    "reference": "Siegal, T. J. (c. 2000). Milk & Honey, New York.",
+    "basis": "whiskey_sour",
+    "modifiedAt": "2017-06-11T23:10:58.407Z",
+    "list": "Sours – Others",
+    "notes": [
+      "Rocks glass w/ large cube"
+    ],
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "bottleID": "elijah_craig_12year",
+        "id": "grain_whiskey_bourbon"
+      },
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "id": "syrup_honey"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "id": "juice_lemon"
+      }
+    ]
+  },
+  {
+    "id": "jack_rose",
+    "name": "Jack Rose",
+    "year": 1908,
+    "reference": "Boothby, William. (1908). *World's Drinks and How to Mix Them.*",
+    "modifiedAt": "2016-04-30T03:49:28.350Z",
+    "list": "Sours – Others",
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "bottleID": "lairds_bonded",
+        "id": "brandy_apple"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "id": "juice_lemon"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "id": "syrup_grenadine"
+      }
+    ]
+  },
+  {
+    "id": "honeymoon_cocktail",
+    "name": "Honeymoon Cocktail",
+    "year": 1916,
+    "reference": "Ensslin, Hugo. (1916). *Recipes for Mixed Drinks.*",
+    "modifiedAt": "2016-02-03T02:48:21.666Z",
+    "list": "Sours – Others",
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "bottleID": "lairds_bonded",
+        "id": "brandy_apple"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "id": "liqueur_orange"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "bottleID": "benedictine",
+        "id": "liqueur_herbal"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "id": "juice_lemon"
+      }
+    ]
+  },
+  {
+    "id": "sidecar",
+    "name": "Sidecar",
+    "year": 1922,
+    "reference": "Vermeire, Robert. (1922). *Cocktails: How to Mix Them.*",
+    "modifiedAt": "2018-03-04T13:45:50.198Z",
+    "list": "Sours – Others",
+    "ingredients": [
+      {
+        "quantity": 1.5,
+        "unit": "oz",
+        "bottleID": "hine_h_vsop",
+        "id": "brandy_grape_cognac"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "bottleID": "grand_marnier",
+        "id": "liqueur_orange"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "id": "juice_lemon"
+      },
+      {
+        "quantity": 1,
+        "unit": "tsp",
+        "id": "syrup_demerara"
+      },
+      {
+        "quantity": 1,
+        "usage": "twist",
+        "id": "fruit_orange",
+        "unit": "whole"
+      }
+    ]
+  },
+  {
+    "id": "deauville",
+    "name": "Deauville",
+    "year": 1930,
+    "reference": "Craddock, Harry. (1930). *Savoy Cocktail Book, The*.",
+    "basis": "sidecar",
+    "modifiedAt": "2018-03-04T13:45:50.198Z",
+    "list": "Sours – Others",
+    "ingredients": [
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "bottleID": "hine_h_vsop",
+        "id": "brandy_grape_cognac"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "bottleID": "lairds_bonded",
+        "id": "brandy_apple"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "bottleID": "grand_marnier",
+        "id": "liqueur_orange"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "id": "juice_lemon"
+      },
+      {
+        "quantity": 1,
+        "unit": "tsp",
+        "id": "syrup_demerara"
+      },
+      {
+        "quantity": 1,
+        "usage": "twist",
+        "id": "fruit_orange",
+        "unit": "whole"
+      }
+    ]
+  },
+  {
+    "id": "scofflaw",
+    "name": "Scofflaw",
+    "year": 1927,
+    "reference": "McElhone, Harry. (1927). *Barflies and Cocktails.*",
+    "modifiedAt": "2023-03-25T03:09:34.913Z",
+    "list": "Sours – Others",
+    "notes": [
+      "Pinch of salt"
+    ],
+    "ingredients": [
+      {
+        "quantity": 1.5,
+        "unit": "oz",
+        "id": "grain_whiskey_rye"
+      },
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "id": "fortifiedwine_dryvermouth"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "id": "juice_lemon"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "id": "syrup_grenadine"
+      },
+      {
+        "quantity": 1,
+        "unit": "dash",
+        "id": "bitters_orange"
+      },
+      {
+        "quantity": 1,
+        "usage": "twist",
+        "id": "fruit_lemon",
+        "unit": "whole"
+      }
+    ]
+  },
+  {
+    "id": "applejack_rabbit",
+    "name": "Applejack Rabbit",
+    "year": 1927,
+    "reference": "Judge Jr. (1927). *Here's How.*",
+    "modifiedAt": "2016-02-03T03:06:32.762Z",
+    "list": "Sours – Others",
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "bottleID": "lairds_bonded",
+        "id": "brandy_apple"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "id": "juice_lemon"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "id": "juice_orange"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "id": "syrup_maple"
+      }
+    ]
+  },
+  {
+    "id": "champselysees",
+    "name": "Champs-Élysées",
+    "year": 1930,
+    "reference": "Craddock, Harry. (1930). *Savoy Cocktail Book, The*.",
+    "modifiedAt": "2018-10-19T04:13:01.404Z",
+    "list": "Sours – Others",
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "bottleID": "hine_h_vsop",
+        "id": "brandy_grape_cognac"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "bottleID": "green_chartreuse",
+        "id": "liqueur_herbal"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "id": "juice_lemon"
+      },
+      {
+        "quantity": 0.25,
+        "unit": "oz",
+        "id": "syrup_simple"
+      },
+      {
+        "quantity": 1,
+        "unit": "dash",
+        "bottleID": "angostura",
+        "id": "bitters_aromatic"
+      },
+      {
+        "quantity": 1,
+        "usage": "twist",
+        "id": "fruit_lemon",
+        "unit": "whole"
+      }
+    ]
+  },
+  {
+    "id": "frisco_sour",
+    "name": "Frisco Sour",
+    "year": 1930,
+    "reference": "Boothby, William. (1930). *Boothby's World Drinks.*",
+    "modifiedAt": "2018-03-01T02:11:52.265Z",
+    "list": "Sours – Others",
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "id": "grain_whiskey_rye"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "bottleID": "benedictine",
+        "id": "liqueur_herbal"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "id": "juice_lime"
+      }
+    ]
+  },
+  {
+    "id": "junior",
+    "name": "Junior",
+    "year": 1937,
+    "reference": "Wondrich, David. (2002). *Esquire Drinks.* *Esquire* (orig), 1937.",
+    "basis": "frisco_sour",
+    "modifiedAt": "2018-03-01T02:11:52.265Z",
+    "list": "Sours – Others",
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "bottleID": "rittenhouse",
+        "id": "grain_whiskey_rye"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "id": "juice_lime"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "bottleID": "benedictine",
+        "id": "liqueur_herbal"
+      },
+      {
+        "quantity": 2,
+        "unit": "dash",
+        "bottleID": "angostura",
+        "id": "bitters_aromatic"
+      }
+    ]
+  },
+  {
+    "id": "twelve_mile_limit",
+    "name": "Twelve Mile Limit",
+    "year": 1934,
+    "reference": "Haigh, Ted. (2009). *Vintage Spirits and Forgotten Cocktails.* Fairfax Millard, Thomas Franklin (creator), 1934.",
+    "modifiedAt": "2016-02-04T03:37:31.121Z",
+    "list": "Sours – Others",
+    "ingredients": [
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "bottleID": "flor_de_cana_extra_dry_4_year",
+        "id": "cane_rum"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "bottleID": "hine_h_vsop",
+        "id": "brandy_grape_cognac"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "id": "grain_whiskey_rye"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "id": "juice_lemon"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "id": "syrup_grenadine"
+      },
+      {
+        "quantity": 1,
+        "usage": "twist",
+        "id": "fruit_lemon",
+        "unit": "whole"
+      }
+    ]
+  },
+  {
+    "id": "astor_hotel_special",
+    "name": "Astor Hotel Special",
+    "year": 1939,
+    "modifiedAt": "2023-01-01T02:27:58.053Z",
+    "list": "Sours – Others",
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "id": "brandy_grape_cognac"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "id": "juice_lemon"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "bottleID": "luxardo_maraschino_liqueur",
+        "id": "liqueur_maraschino"
+      },
+      {
+        "quantity": 1,
+        "unit": "whole",
+        "id": "egg_white"
+      },
+      {
+        "usage": "rinse",
+        "id": "liqueur_absinthe"
+      }
+    ]
+  },
+  {
+    "id": "pimms_cup",
+    "name": "Pimms Cup",
+    "year": 1946,
+    "reference": "Beebe, Lucius, (1946). *Stork Club Bar Book, The*",
+    "modifiedAt": "2016-02-03T02:48:40.154Z",
+    "list": "Sours – Others",
+    "notes": [
+      "Muddle cucumber w/ syrup",
+      "Add rest, shake, strain into Collins glass w/ ice"
+    ],
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "bottleID": "pimms",
+        "id": "liqueur_pimms"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "id": "juice_lemon"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "id": "syrup_simple"
+      },
+      {
+        "quantity": 2,
+        "unit": "whole",
+        "id": "fruit_cucumber"
+      },
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "usage": "top",
+        "id": "soda_ginger"
+      },
+      {
+        "quantity": 1,
+        "usage": "wheel",
+        "id": "fruit_cucumber",
+        "unit": "whole"
+      }
+    ]
+  },
+  {
+    "id": "charlie_chaplin",
+    "name": "Charlie Chaplin",
+    "year": 1948,
+    "reference": "Embury, David. (1948). *Fine Art of Mixing Drinks, The.*",
+    "modifiedAt": "2016-02-05T00:38:26.236Z",
+    "list": "Sours – Others",
+    "ingredients": [
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "bottleID": "haymans_old_tom",
+        "id": "grain_gin_oldtom"
+      },
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "bottleID": "rothman_winter_orchard_apricot_liqueur",
+        "id": "liqueur_apricot"
+      },
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "id": "juice_lime"
+      }
+    ]
+  },
+  {
+    "id": "honey_bee",
+    "name": "Honey Bee",
+    "year": 1948,
+    "reference": "Embury, David. (1948). *The Fine Art of Mixing Drinks*",
+    "modifiedAt": "2017-06-11T23:20:24.735Z",
+    "list": "Sours – Others",
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "bottleID": "plantation_3_stars",
+        "id": "cane_rum"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "id": "juice_lemon"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "id": "syrup_honey"
+      }
+    ]
+  },
+  {
+    "id": "swarm",
+    "name": "Swarm",
+    "year": 2013,
+    "reference": "Giles, Autumn. (2013). [Serious Eats](http://www.seriouseats.com/recipes/2013/04/the-swarm-honey-bee-cocktail-with-cynar-easy-rum-drink-recipe.html).",
+    "basis": "honey_bee",
+    "modifiedAt": "2017-06-11T23:20:24.735Z",
+    "list": "Sours – Others",
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "bottleID": "plantation_3_stars",
+        "id": "cane_rum"
+      },
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "bottleID": "cynar",
+        "id": "liqueur_amaro_carciofo"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "id": "juice_lemon"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "id": "syrup_honey"
+      }
+    ]
+  },
+  {
+    "id": "loop_tonic",
+    "name": "Loop Tonic",
+    "year": 2009,
+    "reference": "Ward, Philip. (2009). [Mayahuel](http://www.mayahuelny.com/).",
+    "modifiedAt": "2017-06-11T23:22:59.835Z",
+    "list": "Sours – Others",
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "id": "agave_tequila_blanco"
+      },
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "bottleID": "dolin_dry",
+        "id": "fortifiedwine_dryvermouth"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "id": "juice_lime"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "id": "syrup_simple"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "bottleID": "green_chartreuse",
+        "id": "liqueur_herbal"
+      },
+      {
+        "quantity": 1,
+        "unit": "dash",
+        "id": "bitters_celery"
+      }
+    ]
+  },
+  {
+    "id": "talbott_leaf",
+    "name": "Talbott Leaf",
+    "year": 2009,
+    "reference": "Corcoran, Gerry. (2009, Spring). PDT, New York.",
+    "modifiedAt": "2016-02-03T23:50:15.107Z",
+    "list": "Sours – Others",
+    "notes": [
+      "Muddle mint w/ Cynar",
+      "Mint leaf"
+    ],
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "bottleID": "old_granddad_bonded",
+        "id": "grain_whiskey_bourbon"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "id": "juice_lemon"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "bottleID": "green_chartreuse",
+        "id": "liqueur_herbal"
+      },
+      {
+        "quantity": 0.25,
+        "unit": "oz",
+        "bottleID": "cynar",
+        "id": "liqueur_amaro_carciofo"
+      },
+      {
+        "quantity": 1,
+        "unit": "tsp",
+        "id": "syrup_grenadine"
+      },
+      {
+        "quantity": 6,
+        "unit": "whole",
+        "id": "spice_mint"
+      }
+    ]
+  },
+  {
+    "id": "port_of_spain",
+    "name": "Port of Spain",
+    "year": 2013,
+    "reference": " Alling, Dominic. (2013). Beretta, San Francisco.",
+    "modifiedAt": "2020-10-23T17:40:37.961Z",
+    "list": "Sours – Others",
+    "ingredients": [
+      {
+        "quantity": 1.5,
+        "unit": "oz",
+        "bottleID": "del_maguey_vida",
+        "id": "agave_mezcal"
+      },
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "id": "syrup_orgeat"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "id": "juice_lime"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "bottleID": "angostura",
+        "id": "bitters_aromatic"
+      }
+    ]
+  },
+  {
+    "id": "smokescreen",
+    "name": "Smokescreen",
+    "year": 2018,
+    "reference": "Day, Alex. (2018). _Cocktail Codex_. Death + Co, New York.",
+    "modifiedAt": "2023-04-23T22:37:17.534Z",
+    "list": "Sours – Others",
+    "ingredients": [
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "bottleID": "famous_grouse",
+        "id": "grain_whiskey_scotch_blended"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "bottleID": "laphroaig_10year",
+        "id": "grain_whiskey_scotch"
+      },
+      {
+        "quantity": 0.25,
+        "unit": "oz",
+        "bottleID": "green_chartreuse",
+        "id": "liqueur_herbal"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "id": "syrup_simple"
+      },
+      {
+        "quantity": 4,
+        "unit": "whole",
+        "id": "spice_mint"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "id": "juice_lemon"
+      },
+      {
+        "quantity": 1,
+        "unit": "whole",
+        "id": "spice_mint"
+      }
+    ]
+  },
+  {
+    "id": "daiquiri",
+    "name": "Daiquiri",
+    "year": 1914,
+    "reference": "Straub, Jacques. (1914). *Drinks.*",
+    "modifiedAt": "2017-06-11T23:19:09.478Z",
+    "list": "Tropicals & Tiki",
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "bottleID": "banks_5_island",
+        "id": "cane_rum"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "id": "juice_lime"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "id": "syrup_simple"
+      },
+      {
+        "quantity": 1,
+        "usage": "wheel",
+        "id": "fruit_lime",
+        "unit": "whole"
+      }
+    ]
+  },
+  {
+    "id": "planters_punch",
+    "name": "Planter's Punch",
+    "basis": "daiquiri",
+    "modifiedAt": "2017-06-11T23:19:09.478Z",
+    "list": "Tropicals & Tiki",
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "bottleID": "coruba",
+        "id": "cane_rum_jamaican"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "id": "juice_lime"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "id": "syrup_simple"
+      },
+      {
+        "quantity": 3,
+        "unit": "dash",
+        "bottleID": "angostura",
+        "id": "bitters_aromatic"
+      },
+      {
+        "quantity": 1,
+        "usage": "wheel",
+        "id": "fruit_lime",
+        "unit": "whole"
+      }
+    ]
+  },
+  {
+    "id": "hemingway_daiquiri",
+    "name": "Hemingway Daiquiri",
+    "year": 1939,
+    "reference": "*Bar La Florida Cocktail Book.* (1939). \"Daiquiri #3\" (original name).",
+    "basis": "daiquiri",
+    "modifiedAt": "2017-06-11T23:19:09.478Z",
+    "list": "Tropicals & Tiki",
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "bottleID": "banks_5_island",
+        "id": "cane_rum"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "id": "juice_lime"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "bottleID": "luxardo_maraschino_liqueur",
+        "id": "liqueur_maraschino"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "id": "juice_grapefruit"
+      },
+      {
+        "quantity": 1,
+        "usage": "wheel",
+        "id": "fruit_lime",
+        "unit": "whole"
+      }
+    ]
+  },
+  {
+    "id": "beachcomber",
+    "name": "Beachcomber",
+    "year": 1947,
+    "reference": "Bergeron, Jules. (1947). *Trader Vic's Bartender's Guide.*",
+    "basis": "daiquiri",
+    "modifiedAt": "2017-06-11T23:19:09.478Z",
+    "list": "Tropicals & Tiki",
+    "ingredients": [
+      {
+        "quantity": 1.5,
+        "unit": "oz",
+        "bottleID": "plantation_3_stars",
+        "id": "cane_rum"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "id": "liqueur_orange"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "id": "juice_lime"
+      },
+      {
+        "quantity": 0.25,
+        "unit": "oz",
+        "bottleID": "luxardo_maraschino_liqueur",
+        "id": "liqueur_maraschino"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "tsp",
+        "id": "syrup_simple"
+      }
+    ]
+  },
+  {
+    "id": "queens_park_swizzle",
+    "name": "Queens Park Swizzle",
+    "year": 1947,
+    "reference": "Bergeron, Jules. (1947). *Trader Vic's Bartender's Guide.*",
+    "basis": "daiquiri",
+    "modifiedAt": "2017-06-11T23:19:09.478Z",
+    "list": "Tropicals & Tiki",
+    "notes": [
+      "Muddle mint w/ syrup in Collins glass",
+      "Add rest, add pebble ice, swizzle, add pebble ice"
+    ],
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "bottleID": "rhum_barbancourt_5_star",
+        "id": "cane_rum_agricole"
+      },
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "id": "juice_lime"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "id": "syrup_demerara"
+      },
+      {
+        "quantity": 8,
+        "unit": "whole",
+        "id": "spice_mint"
+      },
+      {
+        "quantity": 2,
+        "unit": "dash",
+        "bottleID": "peychauds",
+        "id": "bitters_creole"
+      },
+      {
+        "quantity": 2,
+        "unit": "dash",
+        "bottleID": "angostura",
+        "id": "bitters_aromatic"
+      },
+      {
+        "quantity": 1,
+        "unit": "whole",
+        "id": "spice_mint"
+      }
+    ]
+  },
+  {
+    "id": "conquistador",
+    "name": "Conquistador",
+    "year": 2008,
+    "reference": "Ross, Sam. (2008). New York.",
+    "basis": "rum_sours_daiquiri",
+    "modifiedAt": "2017-06-11T23:19:09.478Z",
+    "list": "Tropicals & Tiki",
+    "ingredients": [
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "bottleID": "ron_del_barrilito_3_star",
+        "id": "cane_rum"
+      },
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "bottleID": "siembra_azul_blanco",
+        "id": "agave_tequila_blanco"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "id": "syrup_simple"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "id": "juice_lemon"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "id": "juice_lime"
+      },
+      {
+        "quantity": 2,
+        "unit": "dash",
+        "id": "bitters_orange"
+      },
+      {
+        "quantity": 1,
+        "unit": "whole",
+        "id": "egg_white"
+      }
+    ]
+  },
+  {
+    "id": "east_india_cocktail",
+    "name": "East India Cocktail",
+    "year": 1900,
+    "reference": "Johnson, Harry. (1900). *Bartender's Manual.*",
+    "modifiedAt": "2016-02-03T03:02:45.450Z",
+    "list": "Tropicals & Tiki",
+    "ingredients": [
+      {
+        "quantity": 1.75,
+        "unit": "oz",
+        "bottleID": "hine_h_vsop",
+        "id": "brandy_grape_cognac"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "id": "liqueur_orange"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "id": "juice_pineapple"
+      },
+      {
+        "quantity": 0.25,
+        "unit": "oz",
+        "bottleID": "pampero_anniversario",
+        "id": "cane_rum"
+      },
+      {
+        "quantity": 2,
+        "unit": "dash",
+        "id": "bitters_orange"
+      },
+      {
+        "quantity": 1,
+        "usage": "twist",
+        "id": "fruit_orange",
+        "unit": "whole"
+      }
+    ]
+  },
+  {
+    "id": "singapore_sling",
+    "name": "Singapore Sling",
+    "year": 1915,
+    "reference": "*Sloppy Joe's*. (1931). Ngiam Tong Boon (bartender), Long Bar, Raffles Hotel, Singapore, 1915.",
+    "modifiedAt": "2016-02-03T03:03:38.910Z",
+    "list": "Tropicals & Tiki",
+    "notes": [
+      "Collins glass w/ ice",
+      "Pineapple slice"
+    ],
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "id": "juice_pineapple"
+      },
+      {
+        "quantity": 1.5,
+        "unit": "oz",
+        "bottleID": "plymouth",
+        "id": "grain_gin_plymouth"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "bottleID": "cherry_heering",
+        "id": "liqueur_cherry"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "id": "syrup_grenadine"
+      },
+      {
+        "quantity": 0.25,
+        "unit": "oz",
+        "bottleID": "cointreau",
+        "id": "liqueur_orange"
+      },
+      {
+        "quantity": 0.25,
+        "unit": "oz",
+        "bottleID": "benedictine",
+        "id": "liqueur_herbal"
+      },
+      {
+        "quantity": 0.25,
+        "unit": "oz",
+        "id": "juice_lime"
+      },
+      {
+        "quantity": 1,
+        "unit": "dash",
+        "bottleID": "angostura",
+        "id": "bitters_aromatic"
+      },
+      {
+        "quantity": 1,
+        "unit": "whole",
+        "id": "fruit_cherry"
+      }
+    ]
+  },
+  {
+    "id": "mary_pickford",
+    "name": "Mary Pickford",
+    "year": 1928,
+    "reference": "Chicote, Pedro. (1928). *Cocktails.*",
+    "modifiedAt": "2016-02-04T23:32:21.165Z",
+    "list": "Tropicals & Tiki",
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "bottleID": "banks_5_island",
+        "id": "cane_rum"
+      },
+      {
+        "quantity": 0.25,
+        "unit": "oz",
+        "bottleID": "luxardo_maraschino_liqueur",
+        "id": "liqueur_maraschino"
+      },
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "id": "juice_pineapple"
+      },
+      {
+        "quantity": 1,
+        "unit": "tsp",
+        "id": "syrup_grenadine"
+      }
+    ]
+  },
+  {
+    "id": "margarita",
+    "name": "Margarita",
+    "year": 1937,
+    "reference": "Tarling, W. J. (1937). *Café Royal Cocktail Book.* \"Picador Cocktail\" (orig).",
+    "modifiedAt": "2022-05-30T00:25:55.791Z",
+    "list": "Tropicals & Tiki",
+    "notes": [
+      "Salt",
+      "Rocks glass w/ ice or coupe"
+    ],
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "bottleID": "el_tesoro_blanco",
+        "id": "agave_tequila_blanco"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "id": "liqueur_orange"
+      },
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "id": "juice_lime"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "id": "syrup_agave"
+      },
+      {
+        "quantity": 1,
+        "usage": "wheel",
+        "id": "fruit_lime",
+        "unit": "whole"
+      }
+    ]
+  },
+  {
+    "id": "bronco_buster",
+    "name": "Bronco Buster",
+    "year": 1951,
+    "reference": "Saucier, Ted. (1951). *Bottoms Up.* Arizona Biltmore Hotel, Phoenix.",
+    "basis": "margarita",
+    "modifiedAt": "2022-05-30T00:25:55.791Z",
+    "list": "Tropicals & Tiki",
+    "notes": [
+      "Salt",
+      "Rocks glass w/ ice or coupe"
+    ],
+    "ingredients": [
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "id": "grain_whiskey_rye"
+      },
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "bottleID": "lairds_bonded",
+        "id": "brandy_apple"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "id": "liqueur_orange"
+      },
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "id": "juice_lemon"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "id": "syrup_agave"
+      },
+      {
+        "quantity": 1,
+        "usage": "wheel",
+        "id": "fruit_lime",
+        "unit": "whole"
+      }
+    ]
+  },
+  {
+    "id": "royal_bermuda_yacht_club",
+    "name": "Royal Bermuda Yacht Club",
+    "year": 1945,
+    "reference": "Gaige, Crosby. (1945). *Cocktail Guide and Ladies' Companion.*",
+    "modifiedAt": "2016-02-03T00:45:24.136Z",
+    "list": "Tropicals & Tiki",
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "bottleID": "mount_gay_eclipse",
+        "id": "cane_rum"
+      },
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "id": "juice_lime"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "bottleID": "cointreau",
+        "id": "liqueur_orange"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "bottleID": "john_d_taylors_velvet_falernum",
+        "id": "liqueur_herbal"
+      },
+      {
+        "quantity": 1,
+        "usage": "wheel",
+        "id": "fruit_lime",
+        "unit": "whole"
+      }
+    ]
+  },
+  {
+    "id": "beachbum_berrys_mai_tai",
+    "name": "Beachbum Berry’s Mai Tai",
+    "year": 1947,
+    "reference": "Bergeron, Jules. (1947). *Trader Vic's Bartender's Guide.*",
+    "modifiedAt": "2023-01-08T03:36:30.640Z",
+    "list": "Tropicals & Tiki",
+    "notes": [
+      "Rocks glass w/ pebble ice"
+    ],
+    "ingredients": [
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "bottleID": "appleton_estate_signature_blend",
+        "id": "cane_rum_jamaican"
+      },
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "bottleID": "clement_vsop",
+        "id": "cane_rum_agricole"
+      },
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "id": "juice_lime"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "id": "liqueur_orange"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "id": "syrup_orgeat"
+      },
+      {
+        "quantity": 0.25,
+        "unit": "oz",
+        "id": "syrup_simple"
+      },
+      {
+        "quantity": 1,
+        "unit": "whole",
+        "id": "spice_mint"
+      }
+    ]
+  },
+  {
+    "id": "smugglers_cove_mai_tai",
+    "name": "Smuggler’s Cove Mai Tai",
+    "reference": "Cate, Martin. (2000s). Smuggier's Cove, San Francisco.",
+    "basis": "beachbum_berrys_mai_tai",
+    "modifiedAt": "2023-01-08T03:36:30.640Z",
+    "list": "Tropicals & Tiki",
+    "notes": [
+      "Shake w/ crushed ice, pour unstrained into rocks glass",
+      "Garnish w/ spent lime hull & a mint sprig"
+    ],
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "bottleID": "denizen",
+        "id": "cane_rum"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "id": "juice_lime"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "bottleID": "pierre_ferrand_dry_curacao",
+        "id": "liqueur_orange"
+      },
+      {
+        "quantity": 0.25,
+        "unit": "oz",
+        "id": "syrup_demerara"
+      },
+      {
+        "quantity": 0.25,
+        "unit": "oz",
+        "id": "syrup_orgeat"
+      }
+    ]
+  },
+  {
+    "id": "lost_lakes_mai_tai",
+    "name": "Lost Lake’s Mai Tai",
+    "year": 2022,
+    "reference": "Suderman, Peter. (2022). *Cocktails With Suderman.*",
+    "basis": "beachbum_berrys_mai_tai",
+    "modifiedAt": "2023-01-08T03:36:30.640Z",
+    "list": "Tropicals & Tiki",
+    "notes": [
+      "Shake w/ lime hull",
+      "Rocks glass w/ pebble ice"
+    ],
+    "ingredients": [
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "bottleID": "plantation_xaymaca",
+        "id": "cane_rum_jamaican"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "bottleID": "smith_cross_navy_strength",
+        "id": "cane_rum_jamaican"
+      },
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "bottleID": "neisson_eleve_sous_bois",
+        "id": "cane_rum_agricole"
+      },
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "id": "juice_lime"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "bottleID": "pierre_ferrand_dry_curacao",
+        "id": "liqueur_orange"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "id": "syrup_orgeat"
+      },
+      {
+        "quantity": 0.25,
+        "unit": "oz",
+        "id": "syrup_demerara"
+      },
+      {
+        "quantity": 1,
+        "unit": "whole",
+        "id": "spice_mint"
+      }
+    ]
+  },
+  {
+    "id": "corn_n_oil",
+    "name": "Corn 'n Oil",
+    "year": 1900,
+    "reference": "Anonymous, Barbados. (c. 1900).",
+    "modifiedAt": "2016-02-04T19:59:11.693Z",
+    "list": "Tropicals & Tiki",
+    "notes": [
+      "Build in rocks glass w/ ice.",
+      "Squeeze 1/4 lime on top."
+    ],
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "bottleID": "coruba",
+        "id": "cane_rum_jamaican"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "bottleID": "john_d_taylors_velvet_falernum",
+        "id": "liqueur_herbal"
+      },
+      {
+        "quantity": 3,
+        "unit": "dash",
+        "bottleID": "angostura",
+        "id": "bitters_aromatic"
+      },
+      {
+        "quantity": 1,
+        "unit": "whole",
+        "id": "fruit_lime"
+      }
+    ]
+  },
+  {
+    "id": "pisco_sour",
+    "name": "Pisco Sour",
+    "year": 1951,
+    "reference": "Baker, Jr, Charles H., (1951). *South American Gentleman's Companion, The.*",
+    "modifiedAt": "2016-02-02T23:52:00.883Z",
+    "list": "Tropicals & Tiki",
+    "notes": [
+      "Garnish with 4 dashes of Angostura bitters"
+    ],
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "bottleID": "barsol_pisco",
+        "id": "brandy_grape_pisco"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "id": "juice_lime"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "id": "syrup_simple"
+      },
+      {
+        "quantity": 1,
+        "unit": "whole",
+        "id": "egg_white"
+      },
+      {
+        "quantity": 4,
+        "unit": "dash",
+        "bottleID": "angostura",
+        "id": "bitters_aromatic"
+      }
+    ]
+  },
+  {
+    "id": "jungle_bird",
+    "name": "Jungle Bird",
+    "year": 1978,
+    "reference": "Ross, Sam. (2012) Milk + Honey, New York.",
+    "modifiedAt": "2016-02-05T00:17:55.343Z",
+    "list": "Tropicals & Tiki",
+    "ingredients": [
+      {
+        "quantity": 1.5,
+        "unit": "oz",
+        "bottleID": "cruzan_blackstrap",
+        "id": "cane_rum"
+      },
+      {
+        "quantity": 1.5,
+        "unit": "oz",
+        "id": "juice_pineapple"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "bottleID": "campari",
+        "id": "liqueur_amaro_aperitivo"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "id": "juice_lime"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "id": "syrup_simple"
+      }
+    ]
+  },
+  {
+    "id": "caipirinha",
+    "name": "Caipirinha",
+    "year": 1989,
+    "reference": "Schumann, Charles. (1989). *Tropical Bar Book*.",
+    "modifiedAt": "2016-02-02T17:45:00.527Z",
+    "list": "Tropicals & Tiki",
+    "notes": [
+      "Cut 1/2 of a lime into wedges, then muddle w/ 2 demerara sugar cubes and shake, pour unstrained into rocks glass"
+    ],
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "id": "cane_cachaca"
+      },
+      {
+        "quantity": 1,
+        "usage": "wedge",
+        "id": "fruit_lime",
+        "unit": "whole"
+      },
+      {
+        "quantity": 2,
+        "unit": "whole",
+        "id": "sugar_demerara"
+      }
+    ]
+  },
+  {
+    "id": "barbados",
+    "name": "Barbados",
+    "year": 2011,
+    "reference": "Rathbun, A.J. (2011). *Ginger Bliss and The Violet Fizz*.",
+    "modifiedAt": "2017-06-11T23:24:10.206Z",
+    "list": "Tropicals & Tiki",
+    "notes": [
+      "Crushed ice"
+    ],
+    "ingredients": [
+      {
+        "quantity": 1.5,
+        "unit": "oz",
+        "bottleID": "appleton_estate_signature_blend",
+        "id": "cane_rum_jamaican"
+      },
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "bottleID": "john_d_taylors_velvet_falernum",
+        "id": "liqueur_herbal"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "id": "juice_lime"
+      }
+    ]
+  },
+  {
+    "id": "lust_for_life",
+    "name": "Lust For Life",
+    "year": 2013,
+    "modifiedAt": "2020-12-21T02:52:01.075Z",
+    "list": "Tropicals & Tiki",
+    "notes": [
+      "Shake, strain over rocks",
+      "Dust w/ cocoa powder"
+    ],
+    "ingredients": [
+      {
+        "quantity": 1.5,
+        "unit": "oz",
+        "id": "agave_mezcal"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "id": "fortifiedwine_sherry_palocortado"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "id": "syrup_orgeat"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "id": "juice_lemon"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "id": "juice_pineapple"
+      }
+    ]
+  },
+  {
+    "id": "gin_tonic",
+    "name": "Gin & Tonic",
+    "modifiedAt": "2020-12-30T05:36:46.183Z",
+    "list": "Highballs & Royales",
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "id": "grain_gin"
+      },
+      {
+        "quantity": 4,
+        "unit": "oz",
+        "usage": "top",
+        "id": "soda_tonic"
+      },
+      {
+        "quantity": 1,
+        "usage": "wedge",
+        "id": "fruit_lime",
+        "unit": "whole"
+      },
+      {
+        "quantity": 1,
+        "unit": "dash",
+        "bottleID": "angostura",
+        "id": "bitters_aromatic"
+      }
+    ]
+  },
+  {
+    "id": "dark_stormy",
+    "name": "Dark & Stormy",
+    "year": null,
+    "modifiedAt": "2020-12-30T05:36:46.183Z",
+    "list": "Highballs & Royales",
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "bottleID": "goslings_black_seal",
+        "id": "cane_rum"
+      },
+      {
+        "quantity": 4,
+        "unit": "oz",
+        "usage": "top",
+        "id": "soda_ginger"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "id": "juice_lime"
+      }
+    ]
+  },
+  {
+    "id": "monkey_gland",
+    "name": "Monkey Gland",
+    "year": 1922,
+    "reference": "McElhone, Harry. (1922). *ABC of Mixing Cocktails.* Ciro's Club, London.",
+    "modifiedAt": "2020-12-30T05:36:46.183Z",
+    "list": "Highballs & Royales",
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "bottleID": "beefeater",
+        "id": "grain_gin_londondry"
+      },
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "id": "juice_orange"
+      },
+      {
+        "quantity": 1,
+        "unit": "tsp",
+        "id": "syrup_grenadine"
+      },
+      {
+        "usage": "rinse",
+        "id": "liqueur_absinthe"
+      }
+    ]
+  },
+  {
+    "id": "moscow_mule",
+    "name": "Moscow Mule",
+    "year": 1946,
+    "reference": "Beebe, Lucius. (1946). *Stork Club Bar Book, The.* Morgan, Jack (bartender) Cock 'n' Bull, Los Angeles.",
+    "modifiedAt": "2020-12-30T05:36:46.183Z",
+    "list": "Highballs & Royales",
+    "notes": [
+      "Shake, strain into mule cup w/ ice"
+    ],
+    "ingredients": [
+      {
+        "quantity": 1.5,
+        "unit": "oz",
+        "id": "grain_vodka"
+      },
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "id": "soda_ginger"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "id": "juice_lime"
+      },
+      {
+        "quantity": 1,
+        "usage": "wheel",
+        "id": "fruit_lime",
+        "unit": "whole"
+      }
+    ]
+  },
+  {
+    "id": "paloma",
+    "name": "Paloma",
+    "year": 2005,
+    "reference": "Wondrich, David. (2005). *Killer Cocktails.*",
+    "modifiedAt": "2020-12-30T05:36:46.183Z",
+    "list": "Highballs & Royales",
+    "notes": [
+      "Build in salt-rimmed Collins glass w/ ice"
+    ],
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "id": "agave_tequila_blanco"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "id": "juice_lime"
+      },
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "usage": "top",
+        "id": "soda_grapefruit"
+      },
+      {
+        "quantity": 1,
+        "usage": "wheel",
+        "id": "fruit_grapefruit",
+        "unit": "whole"
+      }
+    ]
+  },
+  {
+    "id": "tom_collins",
+    "name": "Gin Fizzes: Tom Collins",
+    "year": 1876,
+    "modifiedAt": "2016-02-05T01:25:38.293Z",
+    "list": "Highballs & Royales",
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "bottleID": "plymouth",
+        "id": "grain_gin_plymouth"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "id": "juice_lemon"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "id": "syrup_simple"
+      },
+      {
+        "quantity": 3,
+        "unit": "oz",
+        "usage": "top",
+        "id": "soda_club"
+      }
+    ]
+  },
+  {
+    "id": "morning_glory",
+    "name": "Morning Glory",
+    "year": 1876,
+    "reference": "Thomas, Jerry. (1876). *Bar-Tender's Guide.*",
+    "modifiedAt": "2018-03-05T05:32:09.902Z",
+    "list": "Highballs & Royales",
+    "ingredients": [
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "id": "grain_whiskey_rye"
+      },
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "id": "brandy_grape_cognac"
+      },
+      {
+        "quantity": 0.25,
+        "unit": "oz",
+        "id": "liqueur_orange"
+      },
+      {
+        "quantity": 1,
+        "unit": "dash",
+        "id": "syrup_simple"
+      },
+      {
+        "quantity": 1,
+        "unit": "dash",
+        "bottleID": "angostura",
+        "id": "bitters_aromatic"
+      },
+      {
+        "usage": "rinse",
+        "id": "liqueur_absinthe"
+      },
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "usage": "top",
+        "id": "soda_club"
+      }
+    ]
+  },
+  {
+    "id": "ramos_gin_fizz",
+    "name": "Ramos Gin Fizz",
+    "year": 1895,
+    "reference": "Kappeler, George, (1895). *Modern American Drinks.*",
+    "modifiedAt": "2016-02-03T01:14:44.188Z",
+    "list": "Highballs & Royales",
+    "notes": [
+      "Collins glass"
+    ],
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "bottleID": "beefeater",
+        "id": "grain_gin_londondry"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "id": "cream_heavy"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "id": "syrup_simple"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "id": "juice_lime"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "id": "juice_lemon"
+      },
+      {
+        "quantity": 1,
+        "unit": "whole",
+        "id": "egg_white"
+      },
+      {
+        "quantity": 5,
+        "unit": "dash",
+        "id": "water_orangeflower"
+      },
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "usage": "top",
+        "id": "soda_club"
+      }
+    ]
+  },
+  {
+    "id": "seelbach",
+    "name": "Seelbach",
+    "year": 1917,
+    "reference": "Haigh, Ted. (2003). *Vintage Spirits and Forgotten Cocktails.* Seelbach Hotel Bar, Louisville, 1917.",
+    "modifiedAt": "2016-02-03T00:58:30.825Z",
+    "list": "Highballs & Royales",
+    "ingredients": [
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "id": "grain_whiskey_bourbon"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "bottleID": "cointreau",
+        "id": "liqueur_orange"
+      },
+      {
+        "quantity": 7,
+        "unit": "dash",
+        "bottleID": "peychauds",
+        "id": "bitters_creole"
+      },
+      {
+        "quantity": 7,
+        "unit": "dash",
+        "bottleID": "angostura",
+        "id": "bitters_aromatic"
+      },
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "usage": "top",
+        "id": "wine_sparkling"
+      },
+      {
+        "quantity": 1,
+        "usage": "twist",
+        "id": "fruit_orange",
+        "unit": "whole"
+      }
+    ]
+  },
+  {
+    "id": "french_75",
+    "name": "French 75",
+    "year": 1927,
+    "reference": "Judge Jr. (1927). *Here's How.*",
+    "modifiedAt": "2016-02-03T01:16:18.909Z",
+    "list": "Highballs & Royales",
+    "ingredients": [
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "bottleID": "tanqueray",
+        "id": "grain_gin_londondry"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "id": "juice_lemon"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "id": "syrup_simple"
+      },
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "usage": "top",
+        "id": "wine_sparkling"
+      },
+      {
+        "quantity": 1,
+        "usage": "twist",
+        "id": "fruit_lemon",
+        "unit": "whole"
+      }
+    ]
+  },
+  {
+    "id": "mojito",
+    "name": "Mojito",
+    "year": 1929,
+    "reference": "Lasa, Juan A. (1929). *Libro de Cocktail.* \"Rum Mojo\" (orig).",
+    "modifiedAt": "2016-02-02T20:38:47.766Z",
+    "list": "Highballs & Royales",
+    "notes": [
+      "Muddle mint w/ syrup in mixing glass",
+      "Add rest, shake",
+      "Fine-strain into Collins glass w/ ice"
+    ],
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "bottleID": "banks_5_island",
+        "id": "cane_rum"
+      },
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "id": "syrup_simple"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "id": "juice_lime"
+      },
+      {
+        "quantity": 8,
+        "unit": "whole",
+        "id": "spice_mint"
+      },
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "usage": "top",
+        "id": "soda_club"
+      },
+      {
+        "quantity": 1,
+        "unit": "whole",
+        "id": "spice_mint"
+      }
+    ]
+  },
+  {
+    "id": "death_in_the_afternoon",
+    "name": "Death in the Afternoon",
+    "year": 1935,
+    "reference": "Hemingway, Ernest. (1935) \"Death in the Afternoon\". *So Red the Nose, or Breath in the Afternoon.*",
+    "modifiedAt": "2016-02-02T20:43:39.349Z",
+    "list": "Highballs & Royales",
+    "notes": [
+      "Champagne flute"
+    ],
+    "ingredients": [
+      {
+        "quantity": 1.5,
+        "unit": "oz",
+        "id": "liqueur_absinthe"
+      },
+      {
+        "quantity": 4,
+        "unit": "oz",
+        "usage": "top",
+        "id": "wine_sparkling"
+      }
+    ]
+  },
+  {
+    "id": "jimmie_roosevelt",
+    "name": "Jimmie Roosevelt",
+    "year": 1937,
+    "reference": "Rea, Brian",
+    "modifiedAt": "2017-06-11T01:55:06.051Z",
+    "list": "Highballs & Royales",
+    "notes": [
+      "Shake cognac, chartreuse, bitters w/ ice",
+      "coupe"
+    ],
+    "ingredients": [
+      {
+        "quantity": 1.5,
+        "unit": "oz",
+        "bottleID": "pierre_ferrand_1840",
+        "id": "brandy_grape_cognac"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "bottleID": "green_chartreuse",
+        "id": "liqueur_herbal"
+      },
+      {
+        "quantity": 2,
+        "unit": "dash",
+        "id": "bitters_aromatic"
+      },
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "usage": "top",
+        "id": "wine_sparkling"
+      }
+    ]
+  },
+  {
+    "id": "airmail",
+    "name": "Airmail",
+    "year": 1941,
+    "modifiedAt": "2016-02-02T19:54:48.469Z",
+    "list": "Highballs & Royales",
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "bottleID": "appleton_estate_signature_blend",
+        "id": "cane_rum_jamaican"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "id": "juice_lime"
+      },
+      {
+        "quantity": 2,
+        "unit": "tsp",
+        "id": "syrup_honey"
+      },
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "usage": "top",
+        "id": "wine_sparkling"
+      }
+    ]
+  },
+  {
+    "id": "el_diablo",
+    "name": "El Diablo",
+    "year": 1947,
+    "reference": "Bergeron, Jules. (1947). *Trader Vic's Bartender's Guide.*",
+    "modifiedAt": "2016-02-02T19:54:51.037Z",
+    "list": "Highballs & Royales",
+    "notes": [
+      "Strain into rocks glass w/ ice",
+      "Garnish w/ candied ginger"
+    ],
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "bottleID": "siembra_azul_blanco",
+        "id": "agave_tequila_blanco"
+      },
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "id": "soda_ginger"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "id": "liqueur_cremedecassis"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "id": "juice_lemon"
+      },
+      {
+        "quantity": 1,
+        "usage": "wheel",
+        "id": "fruit_lemon",
+        "unit": "whole"
+      }
+    ]
+  },
+  {
+    "id": "old_cuban",
+    "name": "Old Cuban",
+    "year": 2000,
+    "reference": "Saunders, Audrey. (c. 2000). Pegu Club, New York.",
+    "modifiedAt": "2016-02-03T01:01:14.437Z",
+    "list": "Highballs & Royales",
+    "ingredients": [
+      {
+        "quantity": 6,
+        "unit": "whole",
+        "id": "spice_mint"
+      },
+      {
+        "quantity": 1,
+        "unit": "tsp",
+        "id": "sugar_brown"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "id": "juice_lime"
+      },
+      {
+        "quantity": 1.5,
+        "unit": "oz",
+        "bottleID": "bacardi_8",
+        "id": "cane_rum"
+      },
+      {
+        "quantity": 2,
+        "unit": "dash",
+        "bottleID": "angostura",
+        "id": "bitters_aromatic"
+      },
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "id": "wine_sparkling"
+      }
+    ]
+  },
+  {
+    "id": "212",
+    "name": "212",
+    "year": 2008,
+    "reference": "Sharpe, Aisha, & Shine, WIlly. (2008). Contemporary Cocktails, New York",
+    "modifiedAt": "2016-02-03T03:12:29.470Z",
+    "list": "Highballs & Royales",
+    "notes": [
+      "Shake, strain into Collins glass w/ ice"
+    ],
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "bottleID": "tapatio_reposado",
+        "id": "agave_tequila_reposado"
+      },
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "bottleID": "aperol",
+        "id": "liqueur_amaro_aperitivo"
+      },
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "id": "juice_grapefruit"
+      },
+      {
+        "quantity": 1,
+        "usage": "twist",
+        "id": "fruit_orange",
+        "unit": "whole"
+      }
+    ]
+  },
+  {
+    "id": "white_birch_fizz",
+    "name": "White Birch Fizz",
+    "year": 2009,
+    "reference": "deBary, John. (2009, Fall). PDT, New York.",
+    "modifiedAt": "2016-02-03T02:01:08.162Z",
+    "list": "Highballs & Royales",
+    "notes": [
+      "Collins glass"
+    ],
+    "ingredients": [
+      {
+        "quantity": 1.5,
+        "unit": "oz",
+        "bottleID": "plymouth",
+        "id": "grain_gin_plymouth"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "id": "juice_lemon"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "bottleID": "strega",
+        "id": "liqueur_herbal"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "bottleID": "rothman_winter_orchard_apricot_liqueur",
+        "id": "liqueur_apricot"
+      },
+      {
+        "quantity": 1,
+        "unit": "whole",
+        "id": "egg_white"
+      },
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "usage": "top",
+        "id": "soda_club"
+      },
+      {
+        "usage": "rinse",
+        "bottleID": "suze",
+        "id": "liqueur_amaro_aperitivo"
+      }
+    ]
+  },
+  {
+    "id": "aide_memoir",
+    "name": "Aide Memoir",
+    "year": 2014,
+    "reference": "(2014). [Bea](http://www.beanyc.com/)",
+    "modifiedAt": "2017-06-11T03:28:08.423Z",
+    "list": "Highballs & Royales",
+    "ingredients": [
+      {
+        "quantity": 1.5,
+        "unit": "oz",
+        "bottleID": "carpano_antica_formula",
+        "id": "fortifiedwine_sweetvermouth"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "bottleID": "yellow_chartreuse",
+        "id": "liqueur_herbal"
+      },
+      {
+        "quantity": 1,
+        "unit": "dash",
+        "id": "bitters_orange"
+      },
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "usage": "top",
+        "id": "wine_sparkling"
+      },
+      {
+        "quantity": 1,
+        "usage": "twist",
+        "id": "fruit_orange",
+        "unit": "whole"
+      }
+    ]
+  },
+  {
+    "id": "lovage",
+    "name": "Lovage",
+    "year": 2019,
+    "reference": "(2019). OK Omens, Portland, OR.",
+    "modifiedAt": "2022-08-30T03:57:55.944Z",
+    "list": "Highballs & Royales",
+    "notes": [
+      "Salt"
+    ],
+    "ingredients": [
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "bottleID": "suze",
+        "id": "liqueur_amaro_aperitivo"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "bottleID": "cocchi_americano_bianco",
+        "id": "fortifiedwine_aperitif"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "id": "liqueur_orange"
+      },
+      {
+        "quantity": 0.25,
+        "unit": "oz",
+        "id": "juice_lemon"
+      },
+      {
+        "quantity": 2,
+        "unit": "oz",
+        "usage": "top",
+        "id": "soda_tonic"
+      }
+    ]
+  },
+  {
+    "id": "coffee_cocktail",
+    "name": "Coffee Cocktail",
+    "year": 1887,
+    "reference": "Thomas, Jerry. (1887). *Bar-Tenders Guide.*",
+    "modifiedAt": "2016-02-02T19:54:58.214Z",
+    "list": "Flips & Nogs",
+    "ingredients": [
+      {
+        "quantity": 1.5,
+        "unit": "oz",
+        "bottleID": "hine_h_vsop",
+        "id": "brandy_grape_cognac"
+      },
+      {
+        "quantity": 1.5,
+        "unit": "oz",
+        "id": "fortifiedwine_port"
+      },
+      {
+        "quantity": 0.25,
+        "unit": "oz",
+        "id": "syrup_simple"
+      },
+      {
+        "quantity": 1,
+        "unit": "whole",
+        "id": "egg_whole"
+      },
+      {
+        "usage": "grated",
+        "id": "spice_nutmeg"
+      }
+    ]
+  },
+  {
+    "id": "ft_washington_flip",
+    "name": "Ft. Washington Flip",
+    "modifiedAt": "2020-12-21T02:19:08.482Z",
+    "list": "Flips & Nogs",
+    "ingredients": [
+      {
+        "quantity": 1.5,
+        "unit": "oz",
+        "bottleID": "lairds_bonded",
+        "id": "brandy_apple"
+      },
+      {
+        "quantity": 0.75,
+        "unit": "oz",
+        "bottleID": "benedictine",
+        "id": "liqueur_herbal"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "id": "syrup_maple"
+      },
+      {
+        "quantity": 1,
+        "unit": "whole",
+        "id": "egg_white"
+      }
+    ]
+  },
+  {
+    "id": "colleen_bawn_flip",
+    "name": "Colleen Bawn Flip",
+    "modifiedAt": "2018-03-01T02:12:19.698Z",
+    "list": "Flips & Nogs",
+    "ingredients": [
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "id": "grain_whiskey_rye"
+      },
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "bottleID": "benedictine",
+        "id": "liqueur_herbal"
+      },
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "bottleID": "green_chartreuse",
+        "id": "liqueur_herbal"
+      },
+      {
+        "quantity": 1,
+        "unit": "whole",
+        "id": "egg_white"
+      },
+      {
+        "quantity": 1,
+        "unit": "tsp",
+        "id": "sugar_brown"
+      },
+      {
+        "usage": "grated",
+        "id": "spice_nutmeg"
+      },
+      {
+        "usage": "grated",
+        "id": "spice_cinnamon"
+      }
+    ]
+  },
+  {
+    "id": "fernet_flip",
+    "name": "Fernet Flip",
+    "modifiedAt": "2013-08-28T00:57:00.582Z",
+    "list": "Flips & Nogs",
+    "notes": [
+      "Sugar"
+    ],
+    "ingredients": [
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "bottleID": "fernetbranca",
+        "id": "liqueur_amaro_fernet"
+      },
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "bottleID": "carpano_antica_formula",
+        "id": "fortifiedwine_sweetvermouth"
+      },
+      {
+        "quantity": 2,
+        "unit": "dash",
+        "id": "bitters_chocolate"
+      },
+      {
+        "quantity": 1,
+        "unit": "whole",
+        "id": "egg_white"
+      }
+    ]
+  },
+  {
+    "id": "cynar_flip",
+    "name": "Cynar Flip",
+    "modifiedAt": "2013-08-28T00:55:00.182Z",
+    "list": "Flips & Nogs",
+    "ingredients": [
+      {
+        "quantity": 2.5,
+        "unit": "oz",
+        "bottleID": "cynar",
+        "id": "liqueur_amaro_carciofo"
+      },
+      {
+        "quantity": 1,
+        "unit": "whole",
+        "id": "egg_white"
+      }
+    ]
+  },
+  {
+    "id": "grasshopper",
+    "name": "Grasshopper",
+    "modifiedAt": "2013-08-28T01:21:08.646Z",
+    "list": "Flips & Nogs",
+    "ingredients": [
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "bottleID": "tempus_fugit_creme_de_menthe",
+        "id": "liqueur_cremedementhe"
+      },
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "bottleID": "marie_brizard_white_creme_de_cacao",
+        "id": "liqueur_cremedecacao"
+      },
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "id": "cream_heavy"
+      }
+    ]
+  },
+  {
+    "id": "coda",
+    "name": "Coda",
+    "year": 2008,
+    "reference": "Eun, Daniel. (2008, Spring).",
+    "modifiedAt": "2016-02-02T17:43:33.334Z",
+    "list": "Flips & Nogs",
+    "notes": [
+      "Fizz glass"
+    ],
+    "ingredients": [
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "bottleID": "pampero_anniversario",
+        "id": "cane_rum"
+      },
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "bottleID": "neisson_le_rhum",
+        "id": "cane_rum_agricole"
+      },
+      {
+        "quantity": 1,
+        "unit": "oz",
+        "id": "juice_lime"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "bottleID": "st_elizabeth_allspice_dram",
+        "id": "liqueur_herbal"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "oz",
+        "id": "syrup_demerara"
+      },
+      {
+        "quantity": 1,
+        "unit": "whole",
+        "id": "egg_whole"
+      },
+      {
+        "usage": "grated",
+        "id": "spice_nutmeg"
+      }
+    ]
+  }
+]

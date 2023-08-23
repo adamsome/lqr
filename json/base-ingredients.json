@@ -994,6 +994,11 @@
     "category": "bitters"
   },
   {
+    "id": "bitters_lemon",
+    "name": "Lemon",
+    "category": "bitters"
+  },
+  {
     "id": "bitters_mole",
     "name": "Mole",
     "category": "bitters"

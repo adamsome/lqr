@@ -3513,6 +3513,19 @@
     ]
   },
   {
+    "id": "compass_box_peat_monster",
+    "ordinal": 3424,
+    "name": "Compass Box Peat Monster",
+    "category": "grain",
+    "parent": "grain_whiskey_scotch_islay",
+    "productionMethod": "pot",
+    "aging": "medium",
+    "origin": "Scotland",
+    "references": [
+      "D+C: Codex"
+    ]
+  },
+  {
     "id": "compass_box_great_king_street_glasgow",
     "ordinal": 3425,
     "name": "Compass Box Great King Street Glasgow",
@@ -3678,6 +3691,20 @@
     "name": "Highland Park 12-year",
     "category": "grain",
     "parent": "grain_whiskey_scotch",
+    "productionMethod": "pot",
+    "aging": "medium",
+    "origin": "Scotland",
+    "references": [
+      "D+C: WH",
+      "D+C: Codex"
+    ]
+  },
+  {
+    "id": "benromach_12year",
+    "ordinal": 3504,
+    "name": "Benromach 10-year",
+    "category": "grain",
+    "parent": "grain_whiskey_scotch_speyside",
     "productionMethod": "pot",
     "aging": "medium",
     "origin": "Scotland",
