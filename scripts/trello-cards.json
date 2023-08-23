@@ -178,7 +178,8 @@
     ],
     "reference": "McElhone, Harry. (1922). *ABC of Mixing Cocktails.* Gwynne, Erskine (creator).",
     "modifiedAt": "2023-  01-08T03:38:11.282Z",
-    "list": "Spirited – Whiskey"
+    "list": "Spirited – Whiskey",
+    "glass": "coupe"
   },
   {
     "id": "old_pal",
@@ -192,7 +193,8 @@
     "reference": "McElhone, Harry. (1922). *ABC of Mixing Cocktails.* Robertson, Sparrow (creator).",
     "basis": "boulevardier",
     "modifiedAt": "2023-01-08T03:38:11.282Z",
-    "list": "Spirited – Whiskey"
+    "list": "Spirited – Whiskey",
+    "glass": "coupe"
   },
   {
     "id": "new_friend",
@@ -205,7 +207,8 @@
     ],
     "basis": "boulevardier",
     "modifiedAt": "2023-01-08T03:38:11.282Z",
-    "list": "Spirited – Whiskey"
+    "list": "Spirited – Whiskey",
+    "glass": "coupe"
   },
   {
     "id": "left_hand",
@@ -221,7 +224,8 @@
     "reference": "Ross, Sam (2007). Milk & Honey, New York.",
     "basis": "boulevardier",
     "modifiedAt": "2023-01-08T03:38:11.282Z",
-    "list": "Spirited – Whiskey"
+    "list": "Spirited – Whiskey",
+    "glass": "coupe"
   },
   {
     "id": "brown_bomber",
@@ -235,7 +239,8 @@
     "reference": "Meehan, Jim. (2008, Spring).",
     "basis": "boulevardier",
     "modifiedAt": "2023-01-08T03:38:11.282Z",
-    "list": "Spirited – Whiskey"
+    "list": "Spirited – Whiskey",
+    "glass": "coupe"
   },
   {
     "id": "man_about_town",
@@ -252,7 +257,8 @@
     "reference": "Pelegrin, Victor. (2012). New York.",
     "basis": "boulevardier",
     "modifiedAt": "2023-01-08T03:38:11.282Z",
-    "list": "Spirited – Whiskey"
+    "list": "Spirited – Whiskey",
+    "glass": "coupe"
   },
   {
     "id": "banana_boulevardier",
@@ -268,7 +274,8 @@
     "reference": "Suderman, Peter. (2022). *Cocktails With Suderman.*",
     "basis": "boulevardier",
     "modifiedAt": "2023-01-08T03:38:11.282Z",
-    "list": "Spirited – Whiskey"
+    "list": "Spirited – Whiskey",
+    "glass": "coupe"
   },
   {
     "id": "fielding_mellish",
@@ -285,7 +292,8 @@
     "reference": "Suderman, Peter. (2022). *Cocktails With Suderman.*",
     "basis": "boulevardier",
     "modifiedAt": "2023-01-08T03:38:11.282Z",
-    "list": "Spirited – Whiskey"
+    "list": "Spirited – Whiskey",
+    "glass": "coupe"
   },
   {
     "id": "blood_and_sand",

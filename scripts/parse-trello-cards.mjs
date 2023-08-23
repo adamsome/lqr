@@ -10,13 +10,24 @@ let printIdx = 0
  * @typedef {{
  * id: string,
  * name: string,
+ * userID?: string,
+ * username?: string,
+ * userDisplayName?: string,
  * year?: number,
  * lines: string[],
+ * ingredients?: SpecIngredient[],
  * reference?: string
+ * source?: string
  * basis?: string
  * modifiedAt: string
+ * updatedAt: string
+ * createdAt: string
  * error?: string
  * list: string
+ * glass?: string
+ * mix?: string
+ * category?: string
+ * notes?: string[]
  * }} Card
  */
 
@@ -111,6 +122,10 @@ export function parseTrelloCards() {
     const spec = { ...rest }
     if (notes.length) spec.notes = notes.map((x) => x.note)
     if (ingredients.length) spec.ingredients = ingredients
+
+    spec.glass ??= getGlass(spec)
+    spec.mix ??= getMix(spec)
+
     return spec
   })
 
@@ -315,7 +330,6 @@ function parseCardLine(origLine) {
   const raw = words.slice(amtEndIdx + 1).join(' ')
 
   return buildIt({ quantity, unit, raw })
-  // TODO: Set 'glass' if in note line or default by list name
 }
 
 /** * @param {Ingredient[]} ingredients */
@@ -450,5 +464,48 @@ function addRumCategories(id) {
       return { black: true }
     default:
       return {}
+  }
+}
+
+/**
+ * @param {Card} spec
+ * @returns {string}
+ */
+function getGlass(spec) {
+  const notes = spec.notes ?? []
+  const allNotes = notes.map((n) => n.toLowerCase()).join(' ')
+  if (allNotes.includes('coupe')) return 'coupe'
+  else if (allNotes.includes('rocks')) return 'rocks'
+  else if (allNotes.includes('collins')) return 'highball'
+
+  switch (spec.list) {
+    case 'Spirited – Whiskey':
+      return 'rocks'
+    case 'Tropicals & Tiki':
+      return 'tiki'
+    case 'Highballs & Royales':
+      return 'highball'
+    default:
+      return 'coupe'
+  }
+}
+
+/**
+ * @param {Card} spec
+ * @returns {string}
+ */
+function getMix(spec) {
+  const notes = spec.notes ?? []
+  const allNotes = notes.map((n) => n.toLowerCase()).join(' ')
+  if (allNotes.includes('build')) return 'build'
+
+  switch (spec.list) {
+    case 'Tropicals & Tiki':
+    case 'Sours – Gin':
+    case 'Sours – Others':
+    case 'Flips & Nogs':
+      return 'shaken'
+    default:
+      return 'stirred'
   }
 }

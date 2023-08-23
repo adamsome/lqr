@@ -1,10 +1,11 @@
-export const MIX_TYPES = ['stirred', 'shaken'] as const
+export const MIX_TYPES = ['stirred', 'shaken', 'build'] as const
 
 export type MixType = (typeof MIX_TYPES)[number]
 
 const LABEL_DICT: Record<MixType, string> = {
   stirred: 'Stirred',
   shaken: 'Shaken',
+  build: 'Build in glass',
 }
 
 export function getMixTypeLabel(value: MixType): string {
