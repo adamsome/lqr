@@ -1110,7 +1110,7 @@
         "quantity": 1,
         "unit": "oz",
         "bottleID": "laphroaig_10year",
-        "id": "grain_whiskey_scotch"
+        "id": "grain_whiskey_scotch_islay"
       },
       {
         "quantity": 1,
@@ -3294,7 +3294,7 @@
         "quantity": 4,
         "unit": "dash",
         "bottleID": "laphroaig_10year",
-        "id": "grain_whiskey_scotch"
+        "id": "grain_whiskey_scotch_islay"
       },
       {
         "usage": "rinse",
@@ -6272,7 +6272,7 @@
         "quantity": 0.5,
         "unit": "oz",
         "bottleID": "laphroaig_10year",
-        "id": "grain_whiskey_scotch"
+        "id": "grain_whiskey_scotch_islay"
       },
       {
         "quantity": 0.25,

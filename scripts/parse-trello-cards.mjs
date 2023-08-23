@@ -98,7 +98,6 @@ function fuzzIngredient(term) {
   return extract(term, ingredients, FUZZ_OPTIONS)
 }
 
-// TODO: Handle scotch, peated subcategories
 // TODO: Handle glass type
 // TODO: Handle shaken/stirred
 export function parseTrelloCards() {
