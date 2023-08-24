@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "parse": "node parse-all.mjs",
-    "upload-specs": "node upload-specs.mjs"
+    "upload-specs": "node upload-specs.mjs",
+    "upload-trello-specs": "node upload-trello-specs.mjs"
   },
   "dependencies": {
     "date-fns": "^2.30.0",
