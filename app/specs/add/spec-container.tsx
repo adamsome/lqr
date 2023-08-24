@@ -31,7 +31,7 @@ export function SpecContainer() {
     <SpecForm
       mutating={mutating}
       onSubmit={handleSubmit}
-      onClose={handleClose}
+      onClose={() => handleClose()}
     />
   )
 }
