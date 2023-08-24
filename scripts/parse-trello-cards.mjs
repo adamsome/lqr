@@ -237,18 +237,12 @@ function parseCardLine(origLine) {
       it = { ...it, ...addRumCategories(it.bottleID) }
     }
 
-    if (!it.unit && it.quantity) {
-      if (
-        it.id &&
-        (it.id.startsWith('sugar') ||
-          it.id.startsWith('fruit') ||
-          it.id.startsWith('egg') ||
-          it.id.startsWith('spice'))
-      ) {
-        it.unit = 'whole'
-      } else {
-        it.unit = 'oz'
-      }
+    if (
+      !it.unit &&
+      it.quantity &&
+      !['sugar', 'fruit', 'egg', 'spice'].some((s) => it.id?.startsWith(s))
+    ) {
+      it.unit = 'oz'
     }
 
     if (btl && !it.bottleID) it.bottleID = 'XXX'

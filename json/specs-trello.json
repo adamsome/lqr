@@ -14,7 +14,6 @@
       },
       {
         "quantity": 1,
-        "unit": "whole",
         "id": "sugar_demerara"
       },
       {
@@ -26,8 +25,7 @@
       {
         "quantity": 1,
         "usage": "twist",
-        "id": "fruit_lemon",
-        "unit": "whole"
+        "id": "fruit_lemon"
       }
     ],
     "category": "oldfashioned",
@@ -55,7 +53,6 @@
       },
       {
         "quantity": 1,
-        "unit": "whole",
         "id": "sugar_demerara"
       },
       {
@@ -67,8 +64,7 @@
       {
         "quantity": 1,
         "usage": "twist",
-        "id": "fruit_orange",
-        "unit": "whole"
+        "id": "fruit_orange"
       }
     ],
     "category": "oldfashioned",
@@ -114,8 +110,7 @@
       {
         "quantity": 1,
         "usage": "twist",
-        "id": "fruit_orange",
-        "unit": "whole"
+        "id": "fruit_orange"
       }
     ],
     "category": "oldfashioned",
@@ -147,7 +142,6 @@
       },
       {
         "quantity": 8,
-        "unit": "whole",
         "id": "spice_mint"
       }
     ],
@@ -306,7 +300,6 @@
       },
       {
         "quantity": 1,
-        "unit": "whole",
         "id": "sugar_demerara"
       },
       {
@@ -316,8 +309,7 @@
       {
         "quantity": 1,
         "usage": "twist",
-        "id": "fruit_lemon",
-        "unit": "whole"
+        "id": "fruit_lemon"
       }
     ],
     "category": "oldfashioned",
@@ -365,8 +357,7 @@
       {
         "quantity": 1,
         "usage": "twist",
-        "id": "fruit_lemon",
-        "unit": "whole"
+        "id": "fruit_lemon"
       }
     ],
     "category": "oldfashioned",
@@ -411,8 +402,7 @@
       {
         "quantity": 1,
         "usage": "twist",
-        "id": "fruit_lemon",
-        "unit": "whole"
+        "id": "fruit_lemon"
       }
     ],
     "category": "martini",
@@ -452,8 +442,7 @@
       {
         "quantity": 1,
         "usage": "twist",
-        "id": "fruit_orange",
-        "unit": "whole"
+        "id": "fruit_orange"
       }
     ],
     "category": "martini",
@@ -525,8 +514,7 @@
       {
         "quantity": 1,
         "usage": "twist",
-        "id": "fruit_orange",
-        "unit": "whole"
+        "id": "fruit_orange"
       }
     ],
     "category": "martini",
@@ -571,7 +559,6 @@
       },
       {
         "quantity": 3,
-        "unit": "whole",
         "id": "fruit_cherry"
       }
     ],
@@ -658,8 +645,7 @@
       {
         "quantity": 1,
         "usage": "twist",
-        "id": "fruit_orange",
-        "unit": "whole"
+        "id": "fruit_orange"
       }
     ],
     "category": "martini",
@@ -703,8 +689,7 @@
       {
         "quantity": 1,
         "usage": "twist",
-        "id": "fruit_orange",
-        "unit": "whole"
+        "id": "fruit_orange"
       }
     ],
     "category": "martini",
@@ -756,8 +741,7 @@
       {
         "quantity": 1,
         "usage": "twist",
-        "id": "fruit_orange",
-        "unit": "whole"
+        "id": "fruit_orange"
       }
     ],
     "category": "martini",
@@ -800,8 +784,7 @@
       {
         "quantity": 1,
         "usage": "twist",
-        "id": "fruit_orange",
-        "unit": "whole"
+        "id": "fruit_orange"
       }
     ],
     "category": "martini",
@@ -833,8 +816,7 @@
       {
         "quantity": 1,
         "usage": "twist",
-        "id": "fruit_lemon",
-        "unit": "whole"
+        "id": "fruit_lemon"
       }
     ],
     "category": "oldfashioned",
@@ -937,8 +919,7 @@
       {
         "quantity": 1,
         "usage": "twist",
-        "id": "fruit_grapefruit",
-        "unit": "whole"
+        "id": "fruit_grapefruit"
       }
     ],
     "category": "oldfashioned",
@@ -1045,14 +1026,12 @@
       },
       {
         "quantity": 1,
-        "unit": "whole",
         "id": "fruit_cherry"
       },
       {
         "quantity": 1,
         "usage": "twist",
-        "id": "fruit_lemon",
-        "unit": "whole"
+        "id": "fruit_lemon"
       }
     ],
     "category": "oldfashioned",
@@ -1108,8 +1087,7 @@
       {
         "quantity": 1,
         "usage": "twist",
-        "id": "fruit_orange",
-        "unit": "whole"
+        "id": "fruit_orange"
       }
     ],
     "category": "oldfashioned",
@@ -1179,8 +1157,7 @@
       {
         "quantity": 1,
         "usage": "twist",
-        "id": "fruit_orange",
-        "unit": "whole"
+        "id": "fruit_orange"
       }
     ],
     "category": "oldfashioned",
@@ -1230,8 +1207,7 @@
       {
         "quantity": 1,
         "usage": "twist",
-        "id": "fruit_orange",
-        "unit": "whole"
+        "id": "fruit_orange"
       }
     ],
     "category": "martini",
@@ -1308,7 +1284,6 @@
       },
       {
         "quantity": 3,
-        "unit": "whole",
         "id": "fruit_cherry"
       }
     ],
@@ -1346,7 +1321,6 @@
       },
       {
         "quantity": 3,
-        "unit": "whole",
         "id": "fruit_cherry"
       }
     ],
@@ -1389,7 +1363,6 @@
       },
       {
         "quantity": 3,
-        "unit": "whole",
         "id": "fruit_cherry"
       }
     ],
@@ -1427,7 +1400,6 @@
       },
       {
         "quantity": 3,
-        "unit": "whole",
         "id": "fruit_cherry"
       }
     ],
@@ -1468,7 +1440,6 @@
       },
       {
         "quantity": 3,
-        "unit": "whole",
         "id": "fruit_cherry"
       }
     ],
@@ -1517,8 +1488,7 @@
       {
         "quantity": 1,
         "usage": "twist",
-        "id": "fruit_lemon",
-        "unit": "whole"
+        "id": "fruit_lemon"
       }
     ],
     "category": "martini",
@@ -1603,8 +1573,7 @@
       {
         "quantity": 1,
         "usage": "twist",
-        "id": "fruit_orange",
-        "unit": "whole"
+        "id": "fruit_orange"
       }
     ],
     "category": "martini",
@@ -1642,8 +1611,7 @@
       {
         "quantity": 1,
         "usage": "twist",
-        "id": "fruit_lemon",
-        "unit": "whole"
+        "id": "fruit_lemon"
       }
     ],
     "category": "martini",
@@ -1728,8 +1696,7 @@
       {
         "quantity": 1,
         "usage": "twist",
-        "id": "fruit_orange",
-        "unit": "whole"
+        "id": "fruit_orange"
       }
     ],
     "category": "martini",
@@ -1985,7 +1952,6 @@
       },
       {
         "quantity": 1,
-        "unit": "whole",
         "id": "fruit_cherry"
       }
     ],
@@ -2030,8 +1996,7 @@
       {
         "quantity": 1,
         "usage": "twist",
-        "id": "fruit_lemon",
-        "unit": "whole"
+        "id": "fruit_lemon"
       }
     ],
     "category": "martini",
@@ -2085,8 +2050,7 @@
       {
         "quantity": 1,
         "usage": "twist",
-        "id": "fruit_orange",
-        "unit": "whole"
+        "id": "fruit_orange"
       }
     ],
     "category": "martini",
@@ -2326,7 +2290,6 @@
       },
       {
         "quantity": 1,
-        "unit": "whole",
         "id": "fruit_cherry"
       }
     ],
@@ -2389,14 +2352,12 @@
       {
         "quantity": 1,
         "usage": "twist",
-        "id": "fruit_lemon",
-        "unit": "whole"
+        "id": "fruit_lemon"
       },
       {
         "quantity": 1,
         "usage": "twist",
-        "id": "fruit_orange",
-        "unit": "whole"
+        "id": "fruit_orange"
       }
     ],
     "category": "oldfashioned",
@@ -2439,7 +2400,6 @@
       },
       {
         "quantity": 1,
-        "unit": "whole",
         "id": "fruit_cherry"
       }
     ],
@@ -2503,7 +2463,6 @@
       },
       {
         "quantity": 1,
-        "unit": "whole",
         "id": "sugar_demerara"
       },
       {
@@ -2539,7 +2498,6 @@
       },
       {
         "quantity": 1,
-        "unit": "whole",
         "id": "sugar_demerara"
       },
       {
@@ -2561,8 +2519,7 @@
       {
         "quantity": 1,
         "usage": "twist",
-        "id": "fruit_lemon",
-        "unit": "whole"
+        "id": "fruit_lemon"
       }
     ],
     "category": "martini",
@@ -2606,8 +2563,7 @@
       {
         "quantity": 1,
         "usage": "twist",
-        "id": "fruit_orange",
-        "unit": "whole"
+        "id": "fruit_orange"
       }
     ],
     "category": "martini",
@@ -2726,8 +2682,7 @@
       {
         "quantity": 1,
         "usage": "twist",
-        "id": "fruit_orange",
-        "unit": "whole"
+        "id": "fruit_orange"
       }
     ],
     "category": "martini",
@@ -2765,8 +2720,7 @@
       {
         "quantity": 1,
         "usage": "twist",
-        "id": "fruit_lemon",
-        "unit": "whole"
+        "id": "fruit_lemon"
       }
     ],
     "category": "martini",
@@ -2809,14 +2763,12 @@
       },
       {
         "quantity": 1,
-        "unit": "whole",
         "id": "fruit_cherry"
       },
       {
         "quantity": 1,
         "usage": "twist",
-        "id": "fruit_lemon",
-        "unit": "whole"
+        "id": "fruit_lemon"
       }
     ],
     "category": "martini",
@@ -2924,8 +2876,7 @@
       {
         "quantity": 1,
         "usage": "twist",
-        "id": "fruit_lemon",
-        "unit": "whole"
+        "id": "fruit_lemon"
       }
     ],
     "category": "martini",
@@ -2993,8 +2944,7 @@
       {
         "quantity": 1,
         "usage": "twist",
-        "id": "fruit_orange",
-        "unit": "whole"
+        "id": "fruit_orange"
       }
     ],
     "category": "martini",
@@ -3118,8 +3068,7 @@
       {
         "quantity": 1,
         "usage": "twist",
-        "id": "fruit_orange",
-        "unit": "whole"
+        "id": "fruit_orange"
       }
     ],
     "category": "martini",
@@ -3249,8 +3198,7 @@
       {
         "quantity": 1,
         "usage": "twist",
-        "id": "fruit_orange",
-        "unit": "whole"
+        "id": "fruit_orange"
       }
     ],
     "category": "martini",
@@ -3326,8 +3274,7 @@
       {
         "quantity": 1,
         "usage": "twist",
-        "id": "fruit_orange",
-        "unit": "whole"
+        "id": "fruit_orange"
       }
     ],
     "category": "martini",
@@ -3370,8 +3317,7 @@
       {
         "quantity": 1,
         "usage": "twist",
-        "id": "fruit_lemon",
-        "unit": "whole"
+        "id": "fruit_lemon"
       },
       {
         "usage": "rinse",
@@ -3416,8 +3362,7 @@
       {
         "quantity": 1,
         "usage": "twist",
-        "id": "fruit_orange",
-        "unit": "whole"
+        "id": "fruit_orange"
       }
     ],
     "category": "martini",
@@ -3457,8 +3402,7 @@
       {
         "quantity": 1,
         "usage": "twist",
-        "id": "fruit_grapefruit",
-        "unit": "whole"
+        "id": "fruit_grapefruit"
       }
     ],
     "category": "martini",
@@ -3501,8 +3445,7 @@
       {
         "quantity": 1,
         "usage": "twist",
-        "id": "fruit_grapefruit",
-        "unit": "whole"
+        "id": "fruit_grapefruit"
       }
     ],
     "category": "martini",
@@ -3547,8 +3490,7 @@
       {
         "quantity": 1,
         "usage": "twist",
-        "id": "fruit_orange",
-        "unit": "whole"
+        "id": "fruit_orange"
       }
     ],
     "category": "martini",
@@ -3587,8 +3529,7 @@
       {
         "quantity": 1,
         "usage": "twist",
-        "id": "fruit_orange",
-        "unit": "whole"
+        "id": "fruit_orange"
       },
       {
         "quantity": 1,
@@ -3638,8 +3579,7 @@
       {
         "quantity": 1,
         "usage": "twist",
-        "id": "fruit_lemon",
-        "unit": "whole"
+        "id": "fruit_lemon"
       }
     ],
     "category": "martini",
@@ -3782,8 +3722,7 @@
       {
         "quantity": 1,
         "usage": "twist",
-        "id": "fruit_lemon",
-        "unit": "whole"
+        "id": "fruit_lemon"
       }
     ],
     "category": "martini",
@@ -3823,8 +3762,7 @@
       {
         "quantity": 1,
         "usage": "twist",
-        "id": "fruit_orange",
-        "unit": "whole"
+        "id": "fruit_orange"
       }
     ],
     "category": "martini",
@@ -3908,8 +3846,7 @@
       {
         "quantity": 1,
         "usage": "twist",
-        "id": "fruit_lemon",
-        "unit": "whole"
+        "id": "fruit_lemon"
       }
     ],
     "category": "martini",
@@ -3989,8 +3926,7 @@
       {
         "quantity": 1,
         "usage": "twist",
-        "id": "fruit_grapefruit",
-        "unit": "whole"
+        "id": "fruit_grapefruit"
       }
     ],
     "category": "martini",
@@ -4065,8 +4001,7 @@
       {
         "quantity": 1,
         "usage": "twist",
-        "id": "fruit_lemon",
-        "unit": "whole"
+        "id": "fruit_lemon"
       }
     ],
     "category": "oldfashioned",
@@ -4110,7 +4045,6 @@
       },
       {
         "quantity": 1,
-        "unit": "whole",
         "id": "fruit_cherry"
       }
     ],
@@ -4153,8 +4087,7 @@
       {
         "quantity": 1,
         "usage": "twist",
-        "id": "fruit_orange",
-        "unit": "whole"
+        "id": "fruit_orange"
       }
     ],
     "category": "martini",
@@ -4192,8 +4125,7 @@
       {
         "quantity": 1,
         "usage": "twist",
-        "id": "fruit_orange",
-        "unit": "whole"
+        "id": "fruit_orange"
       }
     ],
     "category": "martini",
@@ -4306,8 +4238,7 @@
       {
         "quantity": 1,
         "usage": "twist",
-        "id": "fruit_orange",
-        "unit": "whole"
+        "id": "fruit_orange"
       }
     ],
     "category": "martini",
@@ -4412,8 +4343,7 @@
       {
         "quantity": 1,
         "usage": "twist",
-        "id": "fruit_orange",
-        "unit": "whole"
+        "id": "fruit_orange"
       }
     ],
     "category": "martini",
@@ -4492,8 +4422,7 @@
       {
         "quantity": 1,
         "usage": "twist",
-        "id": "fruit_lemon",
-        "unit": "whole"
+        "id": "fruit_lemon"
       }
     ],
     "category": "oldfashioned",
@@ -4537,7 +4466,6 @@
       },
       {
         "quantity": 1,
-        "unit": "whole",
         "id": "sugar_demerara"
       },
       {
@@ -4548,14 +4476,12 @@
       {
         "quantity": 1,
         "usage": "twist",
-        "id": "fruit_orange",
-        "unit": "whole"
+        "id": "fruit_orange"
       },
       {
         "quantity": 1,
         "usage": "twist",
-        "id": "fruit_lemon",
-        "unit": "whole"
+        "id": "fruit_lemon"
       }
     ],
     "category": "oldfashioned",
@@ -4593,7 +4519,6 @@
       },
       {
         "quantity": 1,
-        "unit": "whole",
         "id": "fruit_cherry"
       }
     ],
@@ -4644,8 +4569,7 @@
       {
         "quantity": 1,
         "usage": "twist",
-        "id": "fruit_lemon",
-        "unit": "whole"
+        "id": "fruit_lemon"
       }
     ],
     "category": "oldfashioned",
@@ -4688,7 +4612,6 @@
       },
       {
         "quantity": 5,
-        "unit": "whole",
         "id": "spice_mint"
       }
     ],
@@ -4771,8 +4694,7 @@
       {
         "quantity": 1,
         "usage": "twist",
-        "id": "fruit_lemon",
-        "unit": "whole"
+        "id": "fruit_lemon"
       }
     ],
     "category": "martini",
@@ -4816,8 +4738,7 @@
       {
         "quantity": 1,
         "usage": "twist",
-        "id": "fruit_grapefruit",
-        "unit": "whole"
+        "id": "fruit_grapefruit"
       }
     ],
     "category": "martini",
@@ -4851,7 +4772,6 @@
       },
       {
         "quantity": 1,
-        "unit": "whole",
         "id": "egg_white"
       }
     ],
@@ -4886,7 +4806,6 @@
       },
       {
         "quantity": 1,
-        "unit": "whole",
         "id": "egg_white"
       }
     ],
@@ -4921,7 +4840,6 @@
       },
       {
         "quantity": 1,
-        "unit": "whole",
         "id": "egg_white"
       },
       {
@@ -4964,12 +4882,10 @@
       },
       {
         "quantity": 1,
-        "unit": "whole",
         "id": "egg_white"
       },
       {
         "quantity": 4,
-        "unit": "whole",
         "usage": "muddled",
         "id": "spice_mint"
       }
@@ -5008,8 +4924,7 @@
       {
         "quantity": 1,
         "usage": "wheel",
-        "id": "fruit_lime",
-        "unit": "whole"
+        "id": "fruit_lime"
       }
     ],
     "category": "daiquiri",
@@ -5083,8 +4998,7 @@
       {
         "quantity": 1,
         "usage": "twist",
-        "id": "fruit_lemon",
-        "unit": "whole"
+        "id": "fruit_lemon"
       }
     ],
     "category": "daiquiri",
@@ -5126,8 +5040,7 @@
       {
         "quantity": 1,
         "usage": "twist",
-        "id": "fruit_lemon",
-        "unit": "whole"
+        "id": "fruit_lemon"
       }
     ],
     "category": "daiquiri",
@@ -5170,8 +5083,7 @@
       {
         "quantity": 1,
         "usage": "twist",
-        "id": "fruit_orange",
-        "unit": "whole"
+        "id": "fruit_orange"
       }
     ],
     "category": "sidecar",
@@ -5225,7 +5137,6 @@
       },
       {
         "quantity": 1,
-        "unit": "whole",
         "id": "fruit_cherry"
       }
     ],
@@ -5273,7 +5184,6 @@
       },
       {
         "quantity": 1,
-        "unit": "whole",
         "id": "egg_white"
       }
     ],
@@ -5316,7 +5226,6 @@
       },
       {
         "quantity": 1,
-        "unit": "whole",
         "id": "egg_white"
       }
     ],
@@ -5494,8 +5403,7 @@
       {
         "quantity": 1,
         "usage": "twist",
-        "id": "fruit_lemon",
-        "unit": "whole"
+        "id": "fruit_lemon"
       }
     ],
     "category": "daiquiri",
@@ -5658,14 +5566,12 @@
       },
       {
         "quantity": 1,
-        "unit": "whole",
         "id": "egg_white"
       },
       {
         "quantity": 1,
         "usage": "twist",
-        "id": "fruit_orange",
-        "unit": "whole"
+        "id": "fruit_orange"
       }
     ],
     "category": "daiquiri",
@@ -5749,7 +5655,6 @@
       },
       {
         "quantity": 1,
-        "unit": "whole",
         "id": "egg_white"
       }
     ],
@@ -5872,7 +5777,6 @@
       },
       {
         "quantity": 1,
-        "unit": "whole",
         "id": "spice_mint"
       }
     ],
@@ -6028,8 +5932,7 @@
       {
         "quantity": 1,
         "usage": "twist",
-        "id": "fruit_grapefruit",
-        "unit": "whole"
+        "id": "fruit_grapefruit"
       }
     ],
     "category": "daiquiri",
@@ -6078,8 +5981,7 @@
       {
         "quantity": 1,
         "usage": "twist",
-        "id": "fruit_orange",
-        "unit": "whole"
+        "id": "fruit_orange"
       }
     ],
     "category": "daiquiri",
@@ -6122,7 +6024,6 @@
       },
       {
         "quantity": 3,
-        "unit": "whole",
         "id": "fruit_cherry"
       }
     ],
@@ -6170,7 +6071,6 @@
       },
       {
         "quantity": 1,
-        "unit": "whole",
         "id": "fruit_cucumber"
       }
     ],
@@ -6280,7 +6180,6 @@
       },
       {
         "quantity": 1,
-        "unit": "whole",
         "id": "egg_white"
       }
     ],
@@ -6357,7 +6256,6 @@
       },
       {
         "quantity": 1,
-        "unit": "whole",
         "id": "egg_white"
       },
       {
@@ -6509,8 +6407,7 @@
       {
         "quantity": 1,
         "usage": "twist",
-        "id": "fruit_orange",
-        "unit": "whole"
+        "id": "fruit_orange"
       }
     ],
     "category": "sidecar",
@@ -6560,8 +6457,7 @@
       {
         "quantity": 1,
         "usage": "twist",
-        "id": "fruit_orange",
-        "unit": "whole"
+        "id": "fruit_orange"
       }
     ],
     "category": "sidecar",
@@ -6608,8 +6504,7 @@
       {
         "quantity": 1,
         "usage": "twist",
-        "id": "fruit_lemon",
-        "unit": "whole"
+        "id": "fruit_lemon"
       }
     ],
     "category": "daiquiri",
@@ -6695,8 +6590,7 @@
       {
         "quantity": 1,
         "usage": "twist",
-        "id": "fruit_lemon",
-        "unit": "whole"
+        "id": "fruit_lemon"
       }
     ],
     "category": "daiquiri",
@@ -6819,8 +6713,7 @@
       {
         "quantity": 1,
         "usage": "twist",
-        "id": "fruit_lemon",
-        "unit": "whole"
+        "id": "fruit_lemon"
       }
     ],
     "category": "daiquiri",
@@ -6855,7 +6748,6 @@
       },
       {
         "quantity": 1,
-        "unit": "whole",
         "id": "egg_white"
       },
       {
@@ -6897,7 +6789,6 @@
       },
       {
         "quantity": 2,
-        "unit": "whole",
         "id": "fruit_cucumber"
       },
       {
@@ -6909,8 +6800,7 @@
       {
         "quantity": 1,
         "usage": "wheel",
-        "id": "fruit_cucumber",
-        "unit": "whole"
+        "id": "fruit_cucumber"
       }
     ],
     "category": "daiquiri",
@@ -7117,7 +7007,6 @@
       },
       {
         "quantity": 6,
-        "unit": "whole",
         "id": "spice_mint"
       }
     ],
@@ -7199,7 +7088,6 @@
       },
       {
         "quantity": 4,
-        "unit": "whole",
         "id": "spice_mint"
       },
       {
@@ -7209,7 +7097,6 @@
       },
       {
         "quantity": 1,
-        "unit": "whole",
         "id": "spice_mint"
       }
     ],
@@ -7250,8 +7137,7 @@
       {
         "quantity": 1,
         "usage": "wheel",
-        "id": "fruit_lime",
-        "unit": "whole"
+        "id": "fruit_lime"
       }
     ],
     "category": "tiki",
@@ -7294,8 +7180,7 @@
       {
         "quantity": 1,
         "usage": "wheel",
-        "id": "fruit_lime",
-        "unit": "whole"
+        "id": "fruit_lime"
       }
     ],
     "category": "tiki",
@@ -7342,8 +7227,7 @@
       {
         "quantity": 1,
         "usage": "wheel",
-        "id": "fruit_lime",
-        "unit": "whole"
+        "id": "fruit_lime"
       }
     ],
     "category": "tiki",
@@ -7433,7 +7317,6 @@
       },
       {
         "quantity": 8,
-        "unit": "whole",
         "id": "spice_mint"
       },
       {
@@ -7450,7 +7333,6 @@
       },
       {
         "quantity": 1,
-        "unit": "whole",
         "id": "spice_mint"
       }
     ],
@@ -7508,7 +7390,6 @@
       },
       {
         "quantity": 1,
-        "unit": "whole",
         "id": "egg_white"
       }
     ],
@@ -7561,8 +7442,7 @@
       {
         "quantity": 1,
         "usage": "twist",
-        "id": "fruit_orange",
-        "unit": "whole"
+        "id": "fruit_orange"
       }
     ],
     "category": "tiki",
@@ -7628,7 +7508,6 @@
       },
       {
         "quantity": 1,
-        "unit": "whole",
         "id": "fruit_cherry"
       }
     ],
@@ -7713,8 +7592,7 @@
       {
         "quantity": 1,
         "usage": "wheel",
-        "id": "fruit_lime",
-        "unit": "whole"
+        "id": "fruit_lime"
       }
     ],
     "category": "tiki",
@@ -7763,8 +7641,7 @@
       {
         "quantity": 1,
         "usage": "wheel",
-        "id": "fruit_lime",
-        "unit": "whole"
+        "id": "fruit_lime"
       }
     ],
     "category": "tiki",
@@ -7813,8 +7690,7 @@
       {
         "quantity": 1,
         "usage": "wheel",
-        "id": "fruit_lime",
-        "unit": "whole"
+        "id": "fruit_lime"
       }
     ],
     "category": "tiki",
@@ -7877,7 +7753,6 @@
       },
       {
         "quantity": 1,
-        "unit": "whole",
         "id": "spice_mint"
       }
     ],
@@ -8003,7 +7878,6 @@
       },
       {
         "quantity": 1,
-        "unit": "whole",
         "id": "spice_mint"
       }
     ],
@@ -8044,7 +7918,6 @@
       },
       {
         "quantity": 1,
-        "unit": "whole",
         "id": "fruit_lime"
       }
     ],
@@ -8082,7 +7955,6 @@
       },
       {
         "quantity": 1,
-        "unit": "whole",
         "id": "egg_white"
       },
       {
@@ -8160,12 +8032,10 @@
       {
         "quantity": 1,
         "usage": "wedge",
-        "id": "fruit_lime",
-        "unit": "whole"
+        "id": "fruit_lime"
       },
       {
         "quantity": 2,
-        "unit": "whole",
         "id": "sugar_demerara"
       }
     ],
@@ -8276,8 +8146,7 @@
       {
         "quantity": 1,
         "usage": "wedge",
-        "id": "fruit_lime",
-        "unit": "whole"
+        "id": "fruit_lime"
       },
       {
         "quantity": 1,
@@ -8389,8 +8258,7 @@
       {
         "quantity": 1,
         "usage": "wheel",
-        "id": "fruit_lime",
-        "unit": "whole"
+        "id": "fruit_lime"
       }
     ],
     "category": "highball",
@@ -8428,8 +8296,7 @@
       {
         "quantity": 1,
         "usage": "wheel",
-        "id": "fruit_grapefruit",
-        "unit": "whole"
+        "id": "fruit_grapefruit"
       }
     ],
     "category": "highball",
@@ -8565,7 +8432,6 @@
       },
       {
         "quantity": 1,
-        "unit": "whole",
         "id": "egg_white"
       },
       {
@@ -8627,8 +8493,7 @@
       {
         "quantity": 1,
         "usage": "twist",
-        "id": "fruit_orange",
-        "unit": "whole"
+        "id": "fruit_orange"
       }
     ],
     "category": "highball",
@@ -8671,8 +8536,7 @@
       {
         "quantity": 1,
         "usage": "twist",
-        "id": "fruit_lemon",
-        "unit": "whole"
+        "id": "fruit_lemon"
       }
     ],
     "category": "highball",
@@ -8712,7 +8576,6 @@
       },
       {
         "quantity": 8,
-        "unit": "whole",
         "id": "spice_mint"
       },
       {
@@ -8723,7 +8586,6 @@
       },
       {
         "quantity": 1,
-        "unit": "whole",
         "id": "spice_mint"
       }
     ],
@@ -8877,8 +8739,7 @@
       {
         "quantity": 1,
         "usage": "wheel",
-        "id": "fruit_lemon",
-        "unit": "whole"
+        "id": "fruit_lemon"
       }
     ],
     "category": "highball",
@@ -8898,7 +8759,6 @@
     "ingredients": [
       {
         "quantity": 6,
-        "unit": "whole",
         "id": "spice_mint"
       },
       {
@@ -8969,8 +8829,7 @@
       {
         "quantity": 1,
         "usage": "twist",
-        "id": "fruit_orange",
-        "unit": "whole"
+        "id": "fruit_orange"
       }
     ],
     "category": "highball",
@@ -9014,7 +8873,6 @@
       },
       {
         "quantity": 1,
-        "unit": "whole",
         "id": "egg_white"
       },
       {
@@ -9070,8 +8928,7 @@
       {
         "quantity": 1,
         "usage": "twist",
-        "id": "fruit_orange",
-        "unit": "whole"
+        "id": "fruit_orange"
       }
     ],
     "category": "highball",
@@ -9152,7 +9009,6 @@
       },
       {
         "quantity": 1,
-        "unit": "whole",
         "id": "egg_whole"
       },
       {
@@ -9192,7 +9048,6 @@
       },
       {
         "quantity": 1,
-        "unit": "whole",
         "id": "egg_white"
       }
     ],
@@ -9228,7 +9083,6 @@
       },
       {
         "quantity": 1,
-        "unit": "whole",
         "id": "egg_white"
       },
       {
@@ -9278,7 +9132,6 @@
       },
       {
         "quantity": 1,
-        "unit": "whole",
         "id": "egg_white"
       }
     ],
@@ -9303,7 +9156,6 @@
       },
       {
         "quantity": 1,
-        "unit": "whole",
         "id": "egg_white"
       }
     ],
@@ -9393,7 +9245,6 @@
       },
       {
         "quantity": 1,
-        "unit": "whole",
         "id": "egg_whole"
       },
       {
