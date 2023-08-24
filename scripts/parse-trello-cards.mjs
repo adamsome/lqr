@@ -135,6 +135,10 @@ export function parseTrelloCards() {
     spec.createdAt = modifiedAt
     spec.updatedAt = modifiedAt
 
+    spec.username = 'classics'
+    spec.userID = 'user_classics'
+    spec.userDisplayName = 'Classics'
+
     return spec
   })
 
