@@ -1,7 +1,8 @@
 'use client'
 
 import { zodResolver } from '@hookform/resolvers/zod'
-import { useForm } from 'react-hook-form'
+import { useEffect } from 'react'
+import { FieldErrors, useForm } from 'react-hook-form'
 import * as z from 'zod'
 
 import { IngredientsForm } from '@/app/specs/[id]/edit/ingredients-form'
@@ -30,7 +31,7 @@ import { specSchema } from '@/lib/schema/spec'
 import { getSpecCategoryItems } from '@/lib/spec-category'
 import { Spec } from '@/lib/types'
 import { cn } from '@/lib/utils'
-import { useEffect } from 'react'
+import { useToast } from '@/components/ui/use-toast'
 
 type Schema = z.infer<typeof specSchema>
 
@@ -55,6 +56,7 @@ export function SpecForm({
   onClose,
   onDelete,
 }: Props) {
+  const { toast } = useToast()
   const form = useForm<Schema>({
     resolver: zodResolver(specSchema),
     defaultValues: spec ?? {
@@ -68,11 +70,16 @@ export function SpecForm({
     form.setFocus('name')
   }, [form])
 
+  function handleInvalid(err: FieldErrors<Schema>) {
+    console.error(err)
+    toast({ title: `Invalid Spec`, variant: 'destructive' })
+  }
+
   return (
     <FullScreen onlySm>
       <Form {...form}>
         <form
-          onSubmit={form.handleSubmit(onSubmit)}
+          onSubmit={form.handleSubmit(onSubmit, handleInvalid)}
           className="flex flex-col gap-6 py-4 md:py-6"
         >
           <div
