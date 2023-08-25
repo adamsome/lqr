@@ -1,14 +1,12 @@
 # TODO
 
-- [SPECS] Add from Trello
-- Add specs filters search params to local storage so Specs restores: if empty params, redirect to saved. else set local storage. clear clears local storage
-
 ## Redesign
 
 - Specs filters as sidebar on desktop, drawer on mobile
 - Specs compact cards
 - Spec bigger text on desktop
 - Move user button under dropdown
+- Colors! BG! Look & feel!
 - Add specs loading page
 
 ## Home & following
@@ -28,6 +26,7 @@
 
 ## QoL
 
+- Add specs filters search params to local storage so Specs restores: if empty params, redirect to saved. else set local storage. clear clears local storage
 - Improve specs perf. (use fetch w/ cache tags? Client-side filtering)
 - Spec modified at ([Intl.RelativeTimeFormat](https://stackoverflow.com/questions/61911591/react-intl-with-relativetime-formatting))
 - Category/Glass/Mix type icons

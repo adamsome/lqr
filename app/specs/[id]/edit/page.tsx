@@ -3,6 +3,7 @@ import invariant from 'tiny-invariant'
 
 import { SpecContainer } from '@/app/specs/[id]/edit/spec-container'
 import { getSpec } from '@/lib/model/spec'
+import { Container } from '@/components/ui/container'
 
 export const revalidate = 0
 
@@ -18,7 +19,9 @@ export default async function Page({ params }: Props) {
   invariant(spec, `No spec found with id '${id}'`)
   return (
     <Suspense>
-      <SpecContainer spec={spec} />
+      <Container>
+        <SpecContainer spec={spec} />
+      </Container>
     </Suspense>
   )
 }

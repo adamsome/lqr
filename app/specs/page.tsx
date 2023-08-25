@@ -15,6 +15,7 @@ import { Grid } from '@/app/specs/grid'
 import { sortSpecs } from '@/app/specs/sort-specs'
 import { Toolbar } from '@/app/specs/toolbar'
 import { Button } from '@/components/ui/button'
+import { FullWidthContainer } from '@/components/ui/container'
 import { H1 } from '@/components/ui/h1'
 import { getAllSpecsData } from '@/lib/model/spec-data'
 import { head } from '@/lib/utils'
@@ -50,7 +51,7 @@ export default async function Page({ searchParams }: Props) {
   )
 
   return (
-    <section className="relative my-8 flex flex-col gap-4">
+    <FullWidthContainer className="relative my-8 flex flex-col gap-4">
       <div className="flex items-center gap-4">
         <H1 className="flex-1 flex items-baseline gap-3">
           Specs <Count count={count} total={allSpecs.length} />
@@ -62,19 +63,18 @@ export default async function Page({ searchParams }: Props) {
       <div className="flex flex-col gap-6">
         <Toolbar search={filters.search} sort={sort} desc={desc} />
         <div className="flex gap-6">
-          <div className="w-60">
-            <Filters
-              data={data}
-              categories={filters.categories}
-              users={userStates}
-              ingredients={filters.ingredients}
-            />
-          </div>
+          <Filters
+            className="w-60 hidden sm:block"
+            data={data}
+            categories={filters.categories}
+            users={userStates}
+            ingredients={filters.ingredients}
+          />
           <div className="flex flex-1 flex-col gap-4">
             <Grid data={data} specs={specs} limit={limit} count={count} />
           </div>
         </div>
       </div>
-    </section>
+    </FullWidthContainer>
   )
 }

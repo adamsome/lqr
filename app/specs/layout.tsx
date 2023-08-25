@@ -12,9 +12,5 @@ type Props = {
 
 export default async function Layout({ children }: Props) {
   const data = await getIngredientData()
-  return (
-    <IngredientDataProvider {...data}>
-      <Container>{children}</Container>
-    </IngredientDataProvider>
-  )
+  return <IngredientDataProvider {...data}>{children}</IngredientDataProvider>
 }

@@ -13,6 +13,7 @@ import { useRouterSearchParams } from '@/hooks/use-router-search-params'
 import { getIngredientName as makeGetIngredientName } from '@/lib/ingredient/get-ingredient-name'
 import { getSpecCategoryItems } from '@/lib/spec-category'
 import { IngredientData, SpecIngredient, User } from '@/lib/types'
+import { cn } from '@/lib/utils'
 
 const SPEC_CATEGORY_ITEMS = getSpecCategoryItems()
 
@@ -21,13 +22,20 @@ export type UserState = User & {
 }
 
 type Props = {
+  className?: string
   data: IngredientData
   categories: string[]
   users: UserState[]
   ingredients: SpecIngredient[]
 }
 
-export function Filters({ data, categories, users, ingredients }: Props) {
+export function Filters({
+  className,
+  data,
+  categories,
+  users,
+  ingredients,
+}: Props) {
   const { searchParams, append, clear } = useRouterSearchParams()
 
   const { dict } = data
@@ -38,7 +46,7 @@ export function Filters({ data, categories, users, ingredients }: Props) {
   }
 
   return (
-    <div className="flex flex-col gap-6">
+    <div className={cn('flex flex-col gap-6', className)}>
       <FilterSection name="Category">
         {SPEC_CATEGORY_ITEMS.map(({ value, label }) => (
           <CheckboxLabel
