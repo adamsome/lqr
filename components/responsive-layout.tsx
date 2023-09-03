@@ -122,7 +122,8 @@ function Footer({ children, status }: FooterProps) {
     <footer
       className={cn(
         'fixed bottom-0 grid w-full place-content-center',
-        'grid-cols-[1fr] [&>*]:[grid-area:1/1]',
+        // 'grid-cols-[1fr] [&>*]:[grid-area:1/1]',
+        'grid-cols-[var(--px)_1fr_var(--px)] [&>*]:[grid-area:2/2]',
         'h-16 pb-4 z-30',
         'backdrop-blur border-t border-transparent transition-colors',
         'border-border/40 sm:hidden',

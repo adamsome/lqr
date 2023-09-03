@@ -4,7 +4,6 @@
 - Omit certain garnishes from in-stock % (flowers, pineapple leaf)
 - Fix Bar Add Rum category showing as Rum (Add Blackstrap)
 - Fix getSpecData multiple (Queen's Park Swizzle)
-- Fix footer px
 - AppCommand null/skeleton when loading
 
 - Edit/Add spec, reference

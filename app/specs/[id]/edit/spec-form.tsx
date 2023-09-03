@@ -286,7 +286,7 @@ export function SpecForm({
             </Button>
             <Button
               type="submit"
-              className="h-8 gap-1.5 me-4 ps-2 pe-3"
+              className="h-8 gap-1.5 me-2 ps-2 pe-3"
               variant="default"
               size="xs"
               disabled={mutating}
