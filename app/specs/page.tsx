@@ -67,7 +67,7 @@ export default async function Page({ searchParams }: Props) {
           <Link href="/specs/add">
             <Button size="sm">
               <PlusIcon />
-              <span className="ps-1 pe-1">Add Spec</span>
+              <span className="ps-1 pe-1">Add</span>
             </Button>
           </Link>
         </Layout.Actions>

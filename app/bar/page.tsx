@@ -262,7 +262,10 @@ export default async function Page() {
           <Layout.Back href={HOME} user={user} />
           <Layout.Actions>
             {/* TODO: Hide when logged in */}
-            <AddCommand stocked={allStocked} />
+            <AddCommand size="sm" stocked={allStocked}>
+              <PlusIcon />
+              <span className="ps-1 pe-1">Add</span>
+            </AddCommand>
           </Layout.Actions>
         </Layout.Header>
 

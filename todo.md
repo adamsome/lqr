@@ -6,7 +6,6 @@
 - Fix getSpecData multiple (Queen's Park Swizzle)
 - Fix footer px
 - AppCommand null/skeleton when loading
-- Add + to Add Ingredient
 
 - Edit/Add spec, reference
 
