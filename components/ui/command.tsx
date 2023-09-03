@@ -1,12 +1,17 @@
 'use client'
 
 import { DialogProps } from '@radix-ui/react-dialog'
+import { MagnifyingGlassIcon } from '@radix-ui/react-icons'
 import { Command as CommandPrimitive } from 'cmdk'
 import * as React from 'react'
 
-import { Dialog, DialogContent } from '@/components/ui/dialog'
+import {
+  Dialog,
+  DialogContent,
+  DialogContentProps,
+} from '@/components/ui/dialog'
 import { cn } from '@/lib/utils'
-import { MagnifyingGlassIcon } from '@radix-ui/react-icons'
+import { KbdShortcut } from '@/components/ui/kbd'
 
 const Command = React.forwardRef<
   React.ElementRef<typeof CommandPrimitive>,
@@ -15,7 +20,7 @@ const Command = React.forwardRef<
   <CommandPrimitive
     ref={ref}
     className={cn(
-      'flex h-full w-full flex-col overflow-hidden rounded-md bg-popover text-popover-foreground',
+      'flex h-full w-full flex-col overflow-hidden rounded-md bg-popover/75 backdrop-blur-md text-popover-foreground',
       className,
     )}
     {...props}
@@ -29,14 +34,28 @@ interface CommandDialogProps extends DialogProps {
 
 const CommandDialog = ({
   children,
+  value,
+  showClose,
+  onValueChange,
   onKeyDown,
   ...props
-}: CommandDialogProps) => {
+}: CommandDialogProps &
+  DialogContentProps &
+  Pick<
+    React.ComponentPropsWithoutRef<typeof CommandPrimitive>,
+    'value' | 'onValueChange'
+  >) => {
   return (
     <Dialog {...props}>
-      <DialogContent className="overflow-hidden p-0 shadow-2xl">
+      <DialogContent
+        className="p-0 bg-transparent shadow-xl overflow-hidden"
+        showClose={showClose}
+        overlay={{ className: 'bg-transparent backdrop-blur-0' }}
+      >
         <Command
           className="[&_[cmdk-group-heading]]:px-2 [&_[cmdk-group-heading]]:font-medium [&_[cmdk-group-heading]]:text-muted-foreground [&_[cmdk-group]:not([hidden])_~[cmdk-group]]:pt-0 [&_[cmdk-group]]:px-1 [&_[cmdk-input-wrapper]_svg]:h-5 [&_[cmdk-input-wrapper]_svg]:w-5 [&_[cmdk-input]]:h-12 [&_[cmdk-item]]:px-2 [&_[cmdk-item]]:py-2"
+          value={value}
+          onValueChange={onValueChange}
           onKeyDown={onKeyDown}
         >
           {children}
@@ -46,12 +65,18 @@ const CommandDialog = ({
   )
 }
 
+type CommandInputProps = React.ComponentPropsWithoutRef<
+  typeof CommandPrimitive.Input
+> & {
+  shortcut?: string
+}
+
 const CommandInput = React.forwardRef<
   React.ElementRef<typeof CommandPrimitive.Input>,
-  React.ComponentPropsWithoutRef<typeof CommandPrimitive.Input>
->(({ className, ...props }, ref) => (
-  <div className="flex items-center border-b px-3" cmdk-input-wrapper="">
-    <MagnifyingGlassIcon className="mr-1 shrink-0 opacity-50" />
+  CommandInputProps
+>(({ className, shortcut, ...props }, ref) => (
+  <div className="flex items-center gap-1 border-b px-3" cmdk-input-wrapper="">
+    <MagnifyingGlassIcon className="shrink-0 opacity-50" />
     <CommandPrimitive.Input
       ref={ref}
       className={cn(
@@ -60,6 +85,9 @@ const CommandInput = React.forwardRef<
       )}
       {...props}
     />
+    {shortcut && (
+      <KbdShortcut className="relative -top-px shrink-0" shortcut={shortcut} />
+    )}
   </div>
 ))
 
@@ -133,8 +161,41 @@ const CommandItem = React.forwardRef<
     {...props}
   />
 ))
-
 CommandItem.displayName = CommandPrimitive.Item.displayName
+
+type CommandIconItemProps = {
+  name?: string
+  desc?: string
+  icon?: React.ReactNode
+}
+
+const CommandIconItem = React.forwardRef<
+  React.ElementRef<typeof CommandPrimitive.Item>,
+  React.ComponentPropsWithoutRef<typeof CommandPrimitive.Item> &
+    CommandIconItemProps
+>(({ className, children, name, desc, icon, ...props }, ref) => (
+  <CommandPrimitive.Item
+    ref={ref}
+    className={cn(
+      'relative flex cursor-default select-none items-center gap-2 overflow-hidden rounded-sm px-2 py-1.5 text-sm outline-none aria-selected:bg-accent aria-selected:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-30',
+      props.disabled && 'opacity-30',
+      className,
+    )}
+    {...props}
+  >
+    {children}
+    {(name || desc || icon) && (
+      <>
+        {icon}
+        <span className="flex-1 overflow-hidden text-ellipsis whitespace-nowrap">
+          {name}
+          {desc && <span className="text-muted-foreground"> ({desc})</span>}
+        </span>
+      </>
+    )}
+  </CommandPrimitive.Item>
+))
+CommandIconItem.displayName = 'CommandIconItem'
 
 const CommandShortcut = ({
   className,
@@ -155,11 +216,12 @@ CommandShortcut.displayName = 'CommandShortcut'
 export {
   Command,
   CommandDialog,
-  CommandInput,
-  CommandList,
   CommandEmpty,
   CommandGroup,
+  CommandIconItem,
+  CommandInput,
   CommandItem,
-  CommandShortcut,
+  CommandList,
   CommandSeparator,
+  CommandShortcut,
 }

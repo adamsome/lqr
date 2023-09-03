@@ -1,17 +1,32 @@
 # TODO
 
+- Fix Edit Spec infusion not showing
+- Omit certain garnishes from in-stock % (flowers, pineapple leaf)
+- Fix Bar Add Rum category showing as Rum (Add Blackstrap)
+- Fix getSpecData multiple (Queen's Park Swizzle)
+- Fix footer px
+- AppCommand null/skeleton when loading
+- Add + to Add Ingredient
+
+- Edit/Add spec, reference
+
 ## Redesign
 
-- Specs filters as sidebar on desktop, drawer on mobile
 - Specs compact cards
 - Spec bigger text on desktop
-- Move user button under dropdown
 - Colors! BG! Look & feel!
 - Add specs loading page
+- Add kbd tooltips, command input hints
+- Revamp bar style (buttons smaller, tabs, colored bg?, grid areas?)
+- Combine Bar & Research
 
 ## Home & following
 
 - Prepend `/u/` user segment in front of all routes
+- Allow signed-out to view pages
+- App command sign-in
+- Hide Actions when signed-out
+- Spec Edit is when its yours, Clone when not?
 - Avatar & name (use Clerk pictureUrl)
 - My Bar: Count of bottles, Low stocked
 - Favorite specs (In Stock sort incl. favorite)
@@ -26,8 +41,10 @@
 
 ## QoL
 
+- Hide Salt from Bar (should be implicit)
 - Add specs filters search params to local storage so Specs restores: if empty params, redirect to saved. else set local storage. clear clears local storage
 - Improve specs perf. (use fetch w/ cache tags? Client-side filtering)
+- Cmd-P to search specs
 - Spec modified at ([Intl.RelativeTimeFormat](https://stackoverflow.com/questions/61911591/react-intl-with-relativetime-formatting))
 - Category/Glass/Mix type icons
 - Add source & source link
@@ -45,3 +62,5 @@
 
   - Carousel
   - Beach Goth
+  - Outrigger
+  - Lust for Life

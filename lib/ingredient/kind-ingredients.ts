@@ -25,6 +25,7 @@ export const KIND_INGREDIENT_DICT: Record<IngredientKind, SpecIngredient[]> = {
     { id: 'bitters_aromatic', bottleID: 'angostura' },
     { id: 'bitters_creole', bottleID: 'peychauds' },
     { id: 'bitters_orange' },
+    { id: 'spice_salt' },
   ],
   syrup: [
     { id: 'syrup_simple' },
@@ -111,7 +112,7 @@ export const KIND_INGREDIENT_DICT: Record<IngredientKind, SpecIngredient[]> = {
 
 export const KIND_MORE_INGREDIENT_TYPES: [
   IngredientKind,
-  Partial<Ingredient>[]
+  Partial<Ingredient>[],
 ][] = [
   [
     'bitters',

@@ -1,11 +1,19 @@
+import { cn } from '@/lib/utils'
+
 type Props = {
+  className?: string
   count: number
-  total: number
+  total?: number
 }
 
-export function Count({ count, total }: Props) {
+export function Count({ className, count, total = count }: Props) {
   return (
-    <div className="flex items-baseline text-lg font-medium tracking-normal text-muted-foreground">
+    <div
+      className={cn(
+        'inline-flex items-baseline font-medium tracking-normal text-muted-foreground',
+        className,
+      )}
+    >
       <span>{count}</span>
       {total > count && (
         <span className="text-muted-foreground/60">

@@ -1,15 +1,19 @@
 'use client'
 
-import { SpecIngredientCommandDialogButton } from '@/components/spec-ingredient-command/command-dialog-button'
-import { useMutate } from '@/hooks/use-mutate'
-import { SpecIngredient } from '@/lib/types'
+import { ReactNode } from 'react'
 import invariant from 'tiny-invariant'
 
-type Props = {
+import { SpecIngredientCommandDialogButton } from '@/components/spec-ingredient-command/command-dialog-button'
+import { Props as ButtonProps } from '@/components/ui/button'
+import { useMutate } from '@/hooks/use-mutate'
+import { SpecIngredient } from '@/lib/types'
+
+type Props = Omit<ButtonProps, 'children'> & {
+  children?: ReactNode
   stocked?: Set<string>
 }
 
-export function AddCommand({ stocked }: Props) {
+export function AddCommand({ children, stocked, ...props }: Props) {
   const { mutating, mutate } = useMutate('/api/stock')
 
   function handleSelect({ id, bottleID }: SpecIngredient) {
@@ -20,13 +24,14 @@ export function AddCommand({ stocked }: Props) {
 
   return (
     <SpecIngredientCommandDialogButton
+      {...props}
       submit="ingredient"
       stocked={stocked}
       disabled={mutating}
       hideCustom
       onSelect={handleSelect}
     >
-      Add Ingredient
+      {children ?? 'Add Ingredient'}
     </SpecIngredientCommandDialogButton>
   )
 }

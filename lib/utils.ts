@@ -69,3 +69,19 @@ export function head<T>(arrayOrElement?: T | T[] | null): T | undefined {
   const array = asArray<T>(arrayOrElement)
   return array != null && array.length ? array[0] : undefined
 }
+
+export function toIDMap<T, TKey extends string | number | symbol = string>(
+  arr: T[] | undefined | null,
+  idAccessor?: (it: T) => TKey,
+): Record<TKey, T> {
+  const keyFn =
+    idAccessor ??
+    ((it: T) => ((it as Record<string, unknown>).id ?? String(it)) as TKey)
+  return (arr ?? []).reduce(
+    (acc, it) => {
+      acc[keyFn(it)] = it
+      return acc
+    },
+    {} as Record<TKey, T>,
+  )
+}

@@ -3,8 +3,8 @@ import './globals.css'
 import { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 
+import { AppCommand } from '@/app/app-command'
 import { AuthProvider } from '@/components/auth-provider'
-import { Header } from '@/components/header'
 import { TailwindIndicator } from '@/components/tailwind-indicator'
 import { themeEffect } from '@/components/theme-effect'
 import { Toaster } from '@/components/ui/toaster'
@@ -53,7 +53,7 @@ export default function Layout({ children }: Props) {
         <body className="min-h-screen">
           <TooltipProvider>
             <div className="relative flex min-h-screen flex-col">
-              <Header />
+              <AppCommand />
               <div className="flex-1">{children}</div>
             </div>
             <Toaster />

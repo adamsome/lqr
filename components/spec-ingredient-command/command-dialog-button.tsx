@@ -8,7 +8,7 @@ import {
 import { useKindByIngredient } from '@/components/spec-ingredient-command/use-kind-by-ingredient'
 import { Button, Props as ButtonProps } from '@/components/ui/button'
 import { CommandDialog } from '@/components/ui/command'
-import { NameDialog } from '@/components/ui/custom-dialog'
+import { NameDialog } from '@/components/ui/name-dialog'
 import { Amount, SpecIngredient } from '@/lib/types'
 
 type Props = Omit<ButtonProps, 'onSelect'> & {

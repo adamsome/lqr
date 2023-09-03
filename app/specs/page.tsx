@@ -1,5 +1,8 @@
+import { auth, clerkClient } from '@clerk/nextjs'
+import { PlusIcon } from '@radix-ui/react-icons'
 import Link from 'next/link'
 import { sortBy } from 'ramda'
+import invariant from 'tiny-invariant'
 
 import {
   DEFAULT_LIMIT,
@@ -10,14 +13,17 @@ import {
 } from '@/app/specs/consts'
 import { Count } from '@/app/specs/count'
 import { filterSpecs, parseFilterParams } from '@/app/specs/filter-specs'
+import { FilterTrigger } from '@/app/specs/filter-trigger'
 import { Filters, UserState } from '@/app/specs/filters'
 import { Grid } from '@/app/specs/grid'
 import { sortSpecs } from '@/app/specs/sort-specs'
 import { Toolbar } from '@/app/specs/toolbar'
+import * as Layout from '@/components/responsive-layout'
 import { Button } from '@/components/ui/button'
 import { FullWidthContainer } from '@/components/ui/container'
 import { H1 } from '@/components/ui/h1'
 import { getAllSpecsData } from '@/lib/model/spec-data'
+import { HOME } from '@/lib/routes'
 import { head } from '@/lib/utils'
 
 type Props = {
@@ -25,7 +31,12 @@ type Props = {
 }
 
 export default async function Page({ searchParams }: Props) {
-  const { specs: allSpecs, userDict, data } = await getAllSpecsData()
+  const { userId: userID } = auth()
+  // TODO: User URL `u` param to get specs
+  invariant(userID, 'Must be logged in to view specs.')
+  const { specs: allSpecs, userDict, data } = await getAllSpecsData(userID)
+  const { username } = await clerkClient.users.getUser(userID)
+  const user = userDict[username ?? '']
 
   // Sort & limit params
   const sort = head(searchParams[SORT_KEY] as SpecSort | SpecSort[] | undefined)
@@ -39,42 +50,81 @@ export default async function Page({ searchParams }: Props) {
   specs = sortSpecs(specs, sort, desc).slice(0, limit)
 
   const checkedUserDict = filters.users.reduce<Record<string, UserState>>(
-    (acc, username) => {
-      acc[username] = { ...userDict[username], checked: true }
-      return acc
-    },
+    (acc, u) => ({ ...acc, [u]: { ...userDict[u], checked: true } }),
     { ...userDict },
   )
   const userStates = sortBy(
     (u) => u.username,
-    Object.keys(checkedUserDict).map((username) => checkedUserDict[username]),
+    Object.keys(checkedUserDict).map((u) => checkedUserDict[u]),
   )
 
   return (
-    <FullWidthContainer className="relative my-8 flex flex-col gap-4">
-      <div className="flex items-center gap-4">
-        <H1 className="flex-1 flex items-baseline gap-3">
-          Specs <Count count={count} total={allSpecs.length} />
+    <Layout.Root>
+      <Layout.Header title="Specs">
+        <Layout.Back href={HOME} user={user} />
+        <Layout.Actions>
+          {/* TODO: Hide when logged in */}
+          <Link href="/specs/add">
+            <Button size="sm">
+              <PlusIcon />
+              <span className="ps-1 pe-1">Add Spec</span>
+            </Button>
+          </Link>
+        </Layout.Actions>
+      </Layout.Header>
+
+      <FullWidthContainer className="my-4 sm:my-6 flex flex-col gap-4">
+        <H1 className="flex items-baseline gap-3">
+          Specs{' '}
+          <Count
+            className="text-[75%] hidden sm:inline"
+            count={count}
+            total={allSpecs.length}
+          />
         </H1>
-        <Link href="/specs/add">
-          <Button>Add Spec</Button>
-        </Link>
-      </div>
-      <div className="flex flex-col gap-6">
-        <Toolbar search={filters.search} sort={sort} desc={desc} />
-        <div className="flex gap-6">
+
+        <div className="flex flex-col gap-6">
+          <Toolbar search={filters.search} sort={sort} desc={desc} />
+
+          <div className="flex gap-6">
+            <Filters
+              className="sticky top-18 self-stretch w-60 hidden sm:flex"
+              data={data}
+              categories={filters.categories}
+              users={userStates}
+              ingredients={filters.ingredients}
+              clearSpacer
+            />
+            <div className="flex flex-1 flex-col gap-4">
+              <Grid data={data} specs={specs} limit={limit} count={count} />
+            </div>
+          </div>
+        </div>
+      </FullWidthContainer>
+
+      <Layout.Footer
+        status={
+          <span>
+            <Count count={count} total={allSpecs.length} /> specs
+          </span>
+        }
+      >
+        <FilterTrigger>
           <Filters
-            className="w-60 hidden sm:block"
+            className="w-full"
             data={data}
             categories={filters.categories}
             users={userStates}
             ingredients={filters.ingredients}
           />
-          <div className="flex flex-1 flex-col gap-4">
-            <Grid data={data} specs={specs} limit={limit} count={count} />
-          </div>
-        </div>
-      </div>
-    </FullWidthContainer>
+        </FilterTrigger>
+        {/* TODO: Hide when logged in */}
+        <Link href="/specs/add">
+          <Button className="w-11 h-11" variant="link" size="xs">
+            <PlusIcon className="w-6 h-6" />
+          </Button>
+        </Link>
+      </Layout.Footer>
+    </Layout.Root>
   )
 }

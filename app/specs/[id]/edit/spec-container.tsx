@@ -5,17 +5,17 @@ import { useRouter } from 'next/navigation'
 import { SpecForm } from '@/app/specs/[id]/edit/spec-form'
 import { useMutate } from '@/hooks/use-mutate'
 import { SPECS, toSpec } from '@/lib/routes'
-import { Spec } from '@/lib/types'
-import { useUser } from '@/hooks/use-user'
+import { Spec, User } from '@/lib/types'
 
 type Props = {
   spec: Spec
+  user: User
 }
 
-export function SpecContainer({ spec }: Props) {
+export function SpecContainer({ spec, user }: Props) {
   const { id } = spec
 
-  const { id: userID, admin } = useUser()
+  const { id: userID, admin } = user
   const router = useRouter()
   const { mutating, mutate } = useMutate(`/api/specs/${id}`)
 

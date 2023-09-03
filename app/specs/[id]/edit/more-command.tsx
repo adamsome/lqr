@@ -14,7 +14,7 @@ import {
   CommandItem,
   CommandList,
 } from '@/components/ui/command'
-import { NameDialog } from '@/components/ui/custom-dialog'
+import { NameDialog } from '@/components/ui/name-dialog'
 import { SpecIngredient } from '@/lib/types'
 import { cn } from '@/lib/utils'
 
@@ -91,7 +91,7 @@ export function MoreCommand({
         <CommandList
           className={cn(
             '[--padding:theme(spacing.12)]',
-            'max-h-[calc(100vh-var(--padding)-theme(spacing.24)-3px)]'
+            'max-h-[calc(100vh-var(--padding)-theme(spacing.24)-3px)]',
           )}
         >
           <CommandEmpty>No results found.</CommandEmpty>
