@@ -1,9 +1,11 @@
 # TODO
 
+- Don't open keyboard on app command mobile
 - Fix Edit Spec infusion not showing
 - Omit certain garnishes from in-stock % (flowers, pineapple leaf)
 - Fix Bar Add Rum category showing as Rum (Add Blackstrap)
 - Fix getSpecData multiple (Queen's Park Swizzle)
+  - Mary Pickford
 - AppCommand null/skeleton when loading
 
 - Edit/Add spec, reference

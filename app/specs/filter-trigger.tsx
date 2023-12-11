@@ -15,11 +15,7 @@ export function FilterTrigger({ children }: Props) {
   const [open, setOpen] = useState(false)
 
   return (
-    <Drawer.Root
-      open={open}
-      experimentalSafariThemeAnimation
-      onOpenChange={setOpen}
-    >
+    <Drawer.Root open={open} onOpenChange={setOpen}>
       <Drawer.Trigger asChild>
         <Button className="w-11 h-11" variant="link" size="xs">
           <ListFilter className="w-6 h-6" />

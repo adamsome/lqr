@@ -103,7 +103,7 @@ export const KIND_INGREDIENT_DICT: Record<IngredientKind, SpecIngredient[]> = {
     { id: 'spice_salt', usage: 'rim' },
     { id: 'sugar_white', usage: 'rim' },
     { id: 'spice_nutmeg', usage: 'grated' },
-    { id: 'spice_cinnamon', usage: 'grated' },
+    { id: 'spice_cinnamon' },
     { id: 'spice_ginger', usage: 'grated' },
     { id: 'spice_cloves', usage: 'grated' },
     { id: 'coffee_bean', usage: 'whole' },

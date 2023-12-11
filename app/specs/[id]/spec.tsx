@@ -47,7 +47,7 @@ export function Spec({ spec, data, user }: Props) {
           {(admin || userID === spec.userID) && (
             /* TODO: Hide when logged in */
             <Link href={toSpecEdit(id)}>
-              <Button className="gap-1.5" size="sm">
+              <Button className="gap-2" size="sm">
                 <Pencil2Icon />
                 <span className="pe-1">Edit</span>
               </Button>
