@@ -124,7 +124,8 @@ export function SpecForm({
               />
               <div
                 className={cn(
-                  'grid gap-6',
+                  'grid gap-6 w-full',
+                  'grid-cols-1',
                   "[grid-template-areas:'meta'_'list'_'notes']",
                   "md:[grid-template-areas:'list_meta'_'list_notes']",
                   'md:grid-cols-[1fr,1fr]',

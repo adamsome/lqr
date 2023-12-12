@@ -1,4 +1,5 @@
 import { Control, useFieldArray } from 'react-hook-form'
+import { z } from 'zod'
 
 import { Ingredient } from '@/app/specs/[id]/edit/ingredient'
 import { SpecIngredientCommandDialogButton } from '@/components/spec-ingredient-command/command-dialog-button'
@@ -6,7 +7,6 @@ import { Label } from '@/components/ui/label'
 import { specSchema } from '@/lib/schema/spec'
 import { SpecIngredient } from '@/lib/types'
 import { cn } from '@/lib/utils'
-import { z } from 'zod'
 
 type Schema = z.infer<typeof specSchema>
 
@@ -20,11 +20,11 @@ export function IngredientsForm({ className, control }: Props) {
   const { fields: ingredients, append, remove, update, move } = field
   const error = control.getFieldState('ingredients')?.error?.message
   return (
-    <div className={cn('flex flex-col gap-4', className)}>
+    <div className={cn('flex flex-col gap-4 w-full', className)}>
       <Label>Ingredients</Label>
       {error && <div className="text-destructive text-sm">{error}</div>}
       {ingredients.length > 0 && (
-        <div className="flex flex-col gap-3">
+        <div className="flex flex-col gap-3 w-full">
           {ingredients.map((ingredient, i) => (
             <Ingredient
               key={`${i}_${ingredient.name ?? ingredient.id}`}
@@ -39,17 +39,17 @@ export function IngredientsForm({ className, control }: Props) {
         </div>
       )}
       <SpecIngredientCommandDialogButton
-        className="self-start"
+        className="self-start max-w-full text-sm text-muted-foreground"
         variant="secondary"
         openOnKey={(e) => (e.metaKey || e.ctrlKey) && e.key === 'j'}
         onSelect={append}
       >
-        <p className="flex gap-2 text-sm text-muted-foreground">
+        <span className="flex-1 overflow-hidden text-ellipsis whitespace-nowrap">
           Add Ingredient
-          <kbd className="pointer-events-none inline-flex h-5 select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium text-muted-foreground opacity-100">
-            <span className="text-xs">⌘</span>J
-          </kbd>
-        </p>
+        </span>
+        <kbd className="pointer-events-none inline-flex h-5 select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium text-muted-foreground opacity-100">
+          <span className="text-xs">⌘</span>J
+        </kbd>
       </SpecIngredientCommandDialogButton>
     </div>
   )

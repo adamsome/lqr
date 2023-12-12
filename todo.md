@@ -1,8 +1,5 @@
 # TODO
 
-- Move actions from app header to page header
-- Move sort by to '888 items {caret-down}'
-- Fix Edit Spec infusion not showing
 - Omit certain garnishes from in-stock % (flowers, pineapple leaf)
 - Fix Bar Add Rum category showing as Rum (Add Blackstrap)
 - Fix getSpecData multiple (Queen's Park Swizzle)
@@ -11,6 +8,10 @@
 - Edit/Add spec, reference
 
 ## Redesign
+
+- Page header
+  - Move actions from app header to page header
+  - Move sort by to '888 items {caret-down}'
 
 - Specs compact cards
 - Spec bigger text on desktop

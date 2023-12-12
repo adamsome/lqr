@@ -31,10 +31,11 @@ export function Ingredient({
   const { dict } = useIngredientData()
   const { amount, category, name, infusion } = getIngredientView(
     dict,
-    ingredient
+    ingredient,
   )
+  const label = [amount[0], infusion, name, amount[1]].filter(Boolean).join(' ')
   return (
-    <div className="flex items-end gap-1">
+    <div className="flex items-end gap-1 w-full">
       <div className="flex gap-px">
         <Button
           type="button"
@@ -57,25 +58,21 @@ export function Ingredient({
           <ArrowDownIcon />
         </Button>
       </div>
-      <div className="flex flex-col items-start gap-1 leading-snug">
+      <div className="flex flex-col flex-1 items-start gap-1 w-[calc(100%-55px)] leading-snug">
         {category && (
-          <div className="ml-1.5 text-xs leading-none text-muted-foreground">
+          <div className="w-full ml-1.5 text-xs leading-none text-muted-foreground">
             {category}
           </div>
         )}
-        <div className="flex items-center gap-1">
+        <div className="flex-1 flex items-center gap-1 w-full">
           <SpecIngredientCommandDialogButton
+            className="block justify-start overflow-hidden text-ellipsis whitespace-nowrap"
             variant="secondary"
             size="xs"
             ingredient={ingredient}
             onSelect={onUpdate}
           >
-            <div className="flex items-baseline gap-1.5">
-              {amount[0] && <span>{amount[0]}</span>}
-              {infusion && <span>{infusion} </span>}
-              <span>{name}</span>
-              {amount[1] && <span>{amount[1]}</span>}
-            </div>
+            {label}
           </SpecIngredientCommandDialogButton>
           <MoreCommand
             className="text-muted-foreground"
