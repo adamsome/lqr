@@ -38,7 +38,7 @@ function Root({ children, className, scrolledPx = 50 }: Props) {
     <Context.Provider value={{ scrolled }}>
       <div
         className={cn(
-          'relative pb-16 min-h-screen [--px:theme(spacing.2)]',
+          'relative pb-16 min-h-screen overflow-x-clip [--px:theme(spacing.2)]',
           className,
         )}
       >

@@ -11,7 +11,7 @@ export function Container({ children, className, skip }: Props) {
     <div
       className={cn(
         !skip &&
-          'grid grid-cols-[1fr_var(--container-width)_1fr] [--container-padding:theme(spacing.4)] [--container-w-max:1200px] [--container-width:min(var(--container-w-max),calc(100%-2*var(--container-padding)))] sm:[--container-padding:theme(spacing.6)] [&>*]:col-[2/auto]',
+          'grid grid-cols-[1fr_var(--container-width)_1fr] gap-y-6 sm:gap-y-8 [--container-padding:theme(spacing.4)] [--container-w-max:1200px] [--container-width:min(var(--container-w-max),calc(100%-2*var(--container-padding)))] sm:[--container-padding:theme(spacing.6)] [&>*]:col-[2/auto]',
         className,
       )}
     >

@@ -1,6 +1,5 @@
 import { auth } from '@clerk/nextjs'
 import { ReactNode } from 'react'
-import invariant from 'tiny-invariant'
 
 import { IngredientDataProvider } from '@/components/data-provider'
 import * as ResponsiveLayout from '@/components/responsive-layout'
@@ -26,11 +25,9 @@ export default async function Layout({ children }: Props) {
         <ResponsiveLayout.Header title="Research">
           <ResponsiveLayout.Back href={HOME} user={user} />
         </ResponsiveLayout.Header>
-        <Container className="relative py-4 sm:py-6">
-          <section className="flex flex-col gap-5">
-            <H1>Research</H1>
-            {children}
-          </section>
+        <Container className="py-4 sm:py-6 gap-y-4 sm:gap-y-4">
+          <H1>Research</H1>
+          {children}
         </Container>
       </ResponsiveLayout.Root>
     </IngredientDataProvider>

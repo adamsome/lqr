@@ -275,39 +275,37 @@ export default async function Page() {
         </Layout.Header>
 
         <Container className="relative py-4 sm:py-6">
-          <section className="flex flex-col gap-6 sm:gap-8">
-            <div className="flex flex-col gap-4">
-              <H1 className="flex items-baseline gap-3">
-                Bar{' '}
-                <Count className="text-[75%] hidden sm:inline" count={count} />
-              </H1>
+          <div className="flex flex-col gap-4">
+            <H1 className="flex items-baseline gap-3">
+              Bar{' '}
+              <Count className="text-[75%] hidden sm:inline" count={count} />
+            </H1>
 
-              <div
-                className={cn(
-                  'grid gap-x-4 gap-y-4 lg:gap-x-6 lg:gap-y-8',
-                  'grid-cols-[repeat(auto-fill,minmax(theme(spacing.64),1fr))]',
-                )}
-              >
-                {spiritCategories.map((c, i) => (
-                  <Category key={c.name ?? i} category={c} muteItems />
-                ))}
-              </div>
+            <div
+              className={cn(
+                'grid gap-x-4 gap-y-4 lg:gap-x-6 lg:gap-y-8',
+                'grid-cols-[repeat(auto-fill,minmax(theme(spacing.64),1fr))]',
+              )}
+            >
+              {spiritCategories.map((c, i) => (
+                <Category key={c.name ?? i} category={c} muteItems />
+              ))}
             </div>
+          </div>
 
-            <div className="flex flex-col gap-4">
-              <H2>Non-alcoholic</H2>
-              <div
-                className={cn(
-                  'grid gap-x-4 gap-y-4 lg:gap-x-6 lg:gap-y-8',
-                  'grid-cols-[repeat(auto-fill,minmax(theme(spacing.64),1fr))]',
-                )}
-              >
-                {ingredientCategories.map((c, i) => (
-                  <Category key={c.name ?? i} category={c} />
-                ))}
-              </div>
+          <div className="flex flex-col gap-4">
+            <H2>Non-alcoholic</H2>
+            <div
+              className={cn(
+                'grid gap-x-4 gap-y-4 lg:gap-x-6 lg:gap-y-8',
+                'grid-cols-[repeat(auto-fill,minmax(theme(spacing.64),1fr))]',
+              )}
+            >
+              {ingredientCategories.map((c, i) => (
+                <Category key={c.name ?? i} category={c} />
+              ))}
             </div>
-          </section>
+          </div>
         </Container>
 
         <Layout.Footer

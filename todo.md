@@ -1,6 +1,5 @@
 # TODO
 
-- Fix x-overflow on Research page in mobile
 - Move actions from app header to page header
 - Improve footer (less pb, darker? lighter?)
 - Fix Edit Spec infusion not showing

@@ -51,7 +51,9 @@ export function DataTableFacetFilterButton<TData, TValue>({
       <PopoverTrigger asChild>
         <Button variant="outline" size="sm" className="h-8 border">
           {icon}
-          {title}
+          <span className="overflow-hidden overflow-ellipsis whitespace-nowrap">
+            {title}
+          </span>
           {selected?.size > 0 && (
             <>
               <Separator orientation="vertical" className="mx-2 h-4" />
@@ -152,7 +154,7 @@ function Item({ item, column, selected, facets }: ItemProps) {
           'mr-2 flex h-4 w-4 items-center justify-center rounded-sm border border-primary',
           isSelected
             ? 'bg-primary text-primary-foreground'
-            : 'opacity-50 [&_svg]:invisible'
+            : 'opacity-50 [&_svg]:invisible',
         )}
       >
         <CheckIcon />

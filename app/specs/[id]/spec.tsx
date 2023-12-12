@@ -57,35 +57,33 @@ export function Spec({ spec, data, user, showEdit }: Props) {
       </Layout.Header>
 
       <Container className="py-8 [--container-w-max:800px]">
-        <div className="flex flex-1 flex-col gap-y-6">
-          <div className="flex flex-col gap-y-1">
-            <div className="mb-3 text-4xl font-semibold leading-none tracking-tight">
-              {name}
-              {year && <span className="text-muted-foreground"> ({year})</span>}
-            </div>
-            {(userDisplayName || username) && (
-              <div className="text-xl">{userDisplayName ?? username}</div>
-            )}
-            {(category || mix || glass) && (
-              <DotSeparator className="font-semibold text-muted-foreground">
-                {category && <div>{getSpecCategoryLabel(category)}</div>}
-                {mix && <div>{getMixTypeLabel(mix)}</div>}
-                {glass && <div>{getGlassTypeLabel(glass)} Glass</div>}
-              </DotSeparator>
-            )}
+        <div className="flex flex-col gap-y-1">
+          <div className="mb-3 text-4xl font-semibold leading-none tracking-tight">
+            {name}
+            {year && <span className="text-muted-foreground"> ({year})</span>}
           </div>
-          <div className="flex flex-col gap-2">
-            {ingredients.map((ingredient, i) => (
-              <Ingredient
-                key={`${i}_${ingredient.name ?? ingredient.id}`}
-                data={data}
-                ingredient={ingredient}
-                stock={stock?.ingredients[i]}
-              />
-            ))}
-          </div>
-          {notes && <div className="text-muted-foreground">{notes}</div>}
+          {(userDisplayName || username) && (
+            <div className="text-xl">{userDisplayName ?? username}</div>
+          )}
+          {(category || mix || glass) && (
+            <DotSeparator className="font-semibold text-muted-foreground">
+              {category && <div>{getSpecCategoryLabel(category)}</div>}
+              {mix && <div>{getMixTypeLabel(mix)}</div>}
+              {glass && <div>{getGlassTypeLabel(glass)} Glass</div>}
+            </DotSeparator>
+          )}
         </div>
+        <div className="flex flex-col gap-2">
+          {ingredients.map((ingredient, i) => (
+            <Ingredient
+              key={`${i}_${ingredient.name ?? ingredient.id}`}
+              data={data}
+              ingredient={ingredient}
+              stock={stock?.ingredients[i]}
+            />
+          ))}
+        </div>
+        {notes && <div className="text-muted-foreground">{notes}</div>}
       </Container>
 
       <Layout.Footer status={lastUpdated}>

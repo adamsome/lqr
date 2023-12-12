@@ -24,11 +24,11 @@ export function Table() {
       columns={createColumns(dict)}
       data={items}
       render={(table, columns) => (
-        <div className="flex flex-col gap-4">
+        <>
           <Toolbar table={table} />
           <DataTable table={table} columns={columns} />
           <DataTablePagination table={table} />
-        </div>
+        </>
       )}
     />
   )
