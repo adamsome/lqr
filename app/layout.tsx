@@ -44,6 +44,10 @@ export default function Layout({ children }: Props) {
         suppressHydrationWarning={true}
       >
         <head>
+          <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, maximum-scale=1"
+          />
           <script
             dangerouslySetInnerHTML={{
               __html: `(${themeEffect.toString()})();`,
