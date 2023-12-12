@@ -1,9 +1,6 @@
 # TODO
 
-- Make command 'x' button touch area bigger
-- Ensure app-command 'x' button or close method
 - Fix x-overflow on Research page in mobile
-- Hide kbd cmd on mobile
 - Move actions from app header to page header
 - Improve footer (less pb, darker? lighter?)
 - Fix Edit Spec infusion not showing

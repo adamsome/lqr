@@ -10,8 +10,8 @@ import {
   DialogContent,
   DialogContentProps,
 } from '@/components/ui/dialog'
-import { cn } from '@/lib/utils'
 import { KbdShortcut } from '@/components/ui/kbd'
+import { cn } from '@/lib/utils'
 
 const Command = React.forwardRef<
   React.ElementRef<typeof CommandPrimitive>,
@@ -86,7 +86,10 @@ const CommandInput = React.forwardRef<
       {...props}
     />
     {shortcut && (
-      <KbdShortcut className="relative -top-px shrink-0" shortcut={shortcut} />
+      <KbdShortcut
+        className="relative -top-px shrink-0 hidden sm:block"
+        shortcut={shortcut}
+      />
     )}
   </div>
 ))
