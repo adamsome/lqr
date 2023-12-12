@@ -30,7 +30,7 @@ export type Props = {
   clearSpacer?: boolean
 }
 
-export function Filters({
+export function SidebarFilters({
   className,
   data,
   categories,

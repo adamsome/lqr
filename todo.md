@@ -1,6 +1,11 @@
 # TODO
 
-- Don't open keyboard on app command mobile
+- Make command 'x' button touch area bigger
+- Ensure app-command 'x' button or close method
+- Prevent flash of Sign In button
+- Fix x-overflow on Research page in mobile
+- Hide kbd cmd on mobile
+- Improve footer (less pb, darker? lighter?)
 - Fix Edit Spec infusion not showing
 - Omit certain garnishes from in-stock % (flowers, pineapple leaf)
 - Fix Bar Add Rum category showing as Rum (Add Blackstrap)

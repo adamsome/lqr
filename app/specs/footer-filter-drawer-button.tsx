@@ -11,7 +11,7 @@ type Props = {
   children: ReactNode
 }
 
-export function FilterTrigger({ children }: Props) {
+export function FooterFilterDrawerButton({ children }: Props) {
   const [open, setOpen] = useState(false)
 
   return (

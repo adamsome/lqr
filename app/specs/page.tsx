@@ -13,9 +13,9 @@ import {
 } from '@/app/specs/consts'
 import { Count } from '@/app/specs/count'
 import { filterSpecs, parseFilterParams } from '@/app/specs/filter-specs'
-import { FilterTrigger } from '@/app/specs/filter-trigger'
-import { Filters, UserState } from '@/app/specs/filters'
+import { FooterFilterDrawerButton } from '@/app/specs/footer-filter-drawer-button'
 import { Grid } from '@/app/specs/grid'
+import { SidebarFilters, UserState } from '@/app/specs/sidebar-filters'
 import { sortSpecs } from '@/app/specs/sort-specs'
 import { Toolbar } from '@/app/specs/toolbar'
 import * as Layout from '@/components/responsive-layout'
@@ -87,7 +87,7 @@ export default async function Page({ searchParams }: Props) {
           <Toolbar search={filters.search} sort={sort} desc={desc} />
 
           <div className="flex gap-6">
-            <Filters
+            <SidebarFilters
               className="sticky top-18 self-stretch w-60 hidden sm:flex"
               data={data}
               categories={filters.categories}
@@ -109,15 +109,15 @@ export default async function Page({ searchParams }: Props) {
           </span>
         }
       >
-        <FilterTrigger>
-          <Filters
+        <FooterFilterDrawerButton>
+          <SidebarFilters
             className="w-full"
             data={data}
             categories={filters.categories}
             users={userStates}
             ingredients={filters.ingredients}
           />
-        </FilterTrigger>
+        </FooterFilterDrawerButton>
         {/* TODO: Hide when logged in */}
         <Link href="/specs/add">
           <Button className="w-11 h-11" variant="link" size="xs">
