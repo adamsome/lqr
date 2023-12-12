@@ -1,7 +1,7 @@
 # TODO
 
 - Move actions from app header to page header
-- Improve footer (less pb, darker? lighter?)
+- Move sort by to '888 items {caret-down}'
 - Fix Edit Spec infusion not showing
 - Omit certain garnishes from in-stock % (flowers, pineapple leaf)
 - Fix Bar Add Rum category showing as Rum (Add Blackstrap)

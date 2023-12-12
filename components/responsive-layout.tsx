@@ -59,17 +59,26 @@ function Header({ children, title }: HeaderProps) {
     <header
       className={cn(
         'sticky top-0 grid w-full place-content-center',
-        'grid-cols-[var(--px)_1fr_var(--px)] [&>*]:[grid-area:2/2]',
+        'grid-cols-[var(--px)_1fr_var(--px)] grid-rows-1 [&>*]:row-[1]',
         'h-[3.25rem] sm:h-[3.75rem] z-30',
-        'backdrop-blur border-b border-transparent transition-colors',
-        { 'border-border/4': scrolled },
+        'border-b border-transparent transition-colors',
+        { 'border-border/40': scrolled },
       )}
     >
+      <div
+        className={cn(
+          'absolute inset-0 col-span-full pointer-events-none',
+          '[--extend:theme(spacing.32)] bottom-[calc(-1*var(--extend))]',
+          '[--cutoff:calc(100%-var(--extend))]',
+          '[-webkit-mask-image:linear-gradient(to_bottom,black_0,black_var(--cutoff),transparent_var(--cutoff))]',
+          'backdrop-blur-lg',
+        )}
+      />
       {title && (
         <div
           className={cn(
-            'flex items-center justify-center justify-self-center',
-            'max-w-[calc(100%-theme(spacing.28))]',
+            'relative flex items-center justify-center justify-self-center',
+            'max-w-[calc(100%-theme(spacing.28))] col-[2]',
             'opacity-0 transition-opacity',
             { 'opacity-100': scrolled },
           )}
@@ -79,7 +88,9 @@ function Header({ children, title }: HeaderProps) {
           </H2>
         </div>
       )}
-      {children && <Level className="justify-between">{children}</Level>}
+      {children && (
+        <Level className="relative justify-between col-[2]">{children}</Level>
+      )}
     </header>
   )
 }
@@ -122,19 +133,33 @@ function Footer({ children, status }: FooterProps) {
     <footer
       className={cn(
         'fixed bottom-0 grid w-full place-content-center',
-        // 'grid-cols-[1fr] [&>*]:[grid-area:1/1]',
-        'grid-cols-[var(--px)_1fr_var(--px)] [&>*]:[grid-area:2/2]',
-        'h-16 pb-4 z-30',
-        'backdrop-blur border-t border-transparent transition-colors',
-        'border-border/40 sm:hidden',
+        'grid-cols-[var(--px)_1fr_var(--px)] grid-rows-1 [&>*]:row-[1]',
+        'h-14 pb-0 z-30 sm:hidden',
+        'border-t border-border/40',
       )}
     >
+      <div
+        className={cn(
+          'absolute inset-0 col-span-full pointer-events-none',
+          '[--extend:theme(spacing.32)] top-[calc(-1*var(--extend))]',
+          '[--cutoff:calc(100%-var(--extend))]',
+          '[-webkit-mask-image:linear-gradient(to_top,black_0,black_var(--cutoff),transparent_var(--cutoff))]',
+          'backdrop-blur-lg',
+        )}
+      />
       {status && (
-        <div className="flex items-center justify-center justify-self-center text-sm text-muted-foreground">
+        <div
+          className={cn(
+            'relative flex items-center justify-center justify-self-center col-[2]',
+            'text-sm text-muted-foreground',
+          )}
+        >
           {status}
         </div>
       )}
-      {children && <Level className="justify-between">{children}</Level>}
+      {children && (
+        <Level className="relative col-[2] justify-between">{children}</Level>
+      )}
     </footer>
   )
 }
