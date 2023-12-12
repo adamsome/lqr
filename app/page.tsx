@@ -13,9 +13,10 @@ export const revalidate = 0
 
 export default async function Page() {
   const { userId: userID } = auth()
-  // TODO: User URL `u` param to get specs
-  invariant(userID, 'Must be logged in to view specs.')
   const user = await getOneUser(userID)
+
+  // TODO: Show non-signed-in homepage if no user
+
   return (
     <ResponsiveLayout.Root>
       <ResponsiveLayout.Header title={<UserAvatar user={user} />} />

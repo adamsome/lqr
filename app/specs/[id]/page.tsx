@@ -11,11 +11,24 @@ type Props = {
 }
 
 export default async function Page({ params }: Props) {
-  const { id } = params
-  const { userId: userID } = auth()
-  // TODO: User URL `u` param to get specs
-  invariant(userID, 'Must be logged in to view specs.')
+  const { userId: currentUserID } = auth()
+  // TODO: Use URL `u` param to get user spec
+  const userID = currentUserID
   const user = await getOneUser(userID)
+
+  const { id } = params
   const [spec, data] = await getSpecData(id)
-  return <Spec spec={spec} data={data} user={user} />
+
+  // TODO: Show "User not found"
+  invariant(user, `User not found.`)
+
+  return (
+    <Spec
+      spec={spec}
+      data={data}
+      user={user}
+      // TODO: Check if current user is admin
+      showEdit={user.admin || userID === currentUserID}
+    />
+  )
 }

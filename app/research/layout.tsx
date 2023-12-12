@@ -18,8 +18,6 @@ type Props = {
 
 export default async function Layout({ children }: Props) {
   const { userId: userID } = auth()
-  // TODO: User URL `u` param to get specs
-  invariant(userID, 'Must be logged in to view specs.')
   const user = await getOneUser(userID)
   const data = await getIngredientData()
   return (

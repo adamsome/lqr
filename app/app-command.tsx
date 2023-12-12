@@ -34,7 +34,7 @@ export function AppCommand() {
   const [profileOpen, setProfileOpen] = useState(false)
   const [value, setValue] = useState(HOME)
   const router = useRouter()
-  const { user } = useUser()
+  const { user, isLoaded } = useUser()
   const { signOut } = useClerk()
 
   useEffect(() => {
@@ -44,6 +44,8 @@ export function AppCommand() {
     document.addEventListener('keydown', handleKeydown)
     return () => document.removeEventListener('keydown', handleKeydown)
   }, [setOpen])
+
+  if (!isLoaded) return null
 
   if (!user) {
     return (

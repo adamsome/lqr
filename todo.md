@@ -2,16 +2,15 @@
 
 - Make command 'x' button touch area bigger
 - Ensure app-command 'x' button or close method
-- Prevent flash of Sign In button
 - Fix x-overflow on Research page in mobile
 - Hide kbd cmd on mobile
+- Move actions from app header to page header
 - Improve footer (less pb, darker? lighter?)
 - Fix Edit Spec infusion not showing
 - Omit certain garnishes from in-stock % (flowers, pineapple leaf)
 - Fix Bar Add Rum category showing as Rum (Add Blackstrap)
 - Fix getSpecData multiple (Queen's Park Swizzle)
   - Mary Pickford
-- AppCommand null/skeleton when loading
 
 - Edit/Add spec, reference
 
@@ -46,6 +45,7 @@
 
 ## QoL
 
+- Show app-command skeleton when auth client loading
 - Hide Salt from Bar (should be implicit)
 - Add specs filters search params to local storage so Specs restores: if empty params, redirect to saved. else set local storage. clear clears local storage
 - Improve specs perf. (use fetch w/ cache tags? Client-side filtering)

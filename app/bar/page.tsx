@@ -228,10 +228,14 @@ const createCategoryParser = (data: IngredientData) => {
 }
 
 export default async function Page() {
-  const { userId: userID } = auth()
-  // TODO: User URL `u` param to get specs
-  invariant(userID, 'Must be logged in to view specs.')
+  const { userId: currentUserID } = auth()
+  // TODO: Use URL `u` param to get user bar
+  const userID = currentUserID
   const user = await getOneUser(userID)
+
+  // TODO: Show "User not found"
+  invariant(user, `User not found.`)
+
   const data = await getIngredientData()
   const { dict } = data
 
@@ -261,11 +265,12 @@ export default async function Page() {
         <Layout.Header title="Bar">
           <Layout.Back href={HOME} user={user} />
           <Layout.Actions>
-            {/* TODO: Hide when logged in */}
-            <AddCommand size="sm" stocked={allStocked}>
-              <PlusIcon />
-              <span className="ps-1 pe-1">Add</span>
-            </AddCommand>
+            {userID === currentUserID && (
+              <AddCommand size="sm" stocked={allStocked}>
+                <PlusIcon />
+                <span className="ps-1 pe-1">Add</span>
+              </AddCommand>
+            )}
           </Layout.Actions>
         </Layout.Header>
 
@@ -313,15 +318,16 @@ export default async function Page() {
           }
         >
           <div />
-          {/* TODO: Hide when logged in */}
-          <AddCommand
-            className="w-11 h-11"
-            variant="link"
-            size="xs"
-            stocked={allStocked}
-          >
-            <PlusIcon className="w-6 h-6" />
-          </AddCommand>
+          {userID === currentUserID && (
+            <AddCommand
+              className="w-11 h-11"
+              variant="link"
+              size="xs"
+              stocked={allStocked}
+            >
+              <PlusIcon className="w-6 h-6" />
+            </AddCommand>
+          )}
         </Layout.Footer>
       </Layout.Root>
     </IngredientDataProvider>

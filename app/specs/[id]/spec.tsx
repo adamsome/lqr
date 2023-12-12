@@ -17,9 +17,10 @@ type Props = {
   spec: Spec
   data: IngredientData
   user: User
+  showEdit: boolean
 }
 
-export function Spec({ spec, data, user }: Props) {
+export function Spec({ spec, data, user, showEdit }: Props) {
   const {
     id,
     name,
@@ -44,8 +45,7 @@ export function Spec({ spec, data, user }: Props) {
       <Layout.Header title={name}>
         <Layout.Back href={SPECS} user={user} />
         <Layout.Actions>
-          {(admin || userID === spec.userID) && (
-            /* TODO: Hide when logged in */
+          {showEdit && (
             <Link href={toSpecEdit(id)}>
               <Button className="gap-2" size="sm">
                 <Pencil2Icon />
@@ -90,8 +90,7 @@ export function Spec({ spec, data, user }: Props) {
 
       <Layout.Footer status={lastUpdated}>
         <span />
-        {(admin || userID === spec.userID) && (
-          /* TODO: Hide when logged in */
+        {showEdit && (
           <Link href={toSpecEdit(id)}>
             <Button className="w-11 h-11" variant="link" size="xs">
               <Pencil2Icon className="w-6 h-6" />

@@ -1,4 +1,4 @@
-import { auth, clerkClient } from '@clerk/nextjs'
+import { auth, clerkClient, currentUser } from '@clerk/nextjs'
 import { PlusIcon } from '@radix-ui/react-icons'
 import Link from 'next/link'
 import { sortBy } from 'ramda'
@@ -31,9 +31,10 @@ type Props = {
 }
 
 export default async function Page({ searchParams }: Props) {
-  const { userId: userID } = auth()
-  // TODO: User URL `u` param to get specs
-  invariant(userID, 'Must be logged in to view specs.')
+  const { userId: currentUserID } = auth()
+  const userID = currentUserID
+  // TODO: Use URL `u` param to get user specs
+  invariant(userID, 'User ID needed to view specs.')
   const { specs: allSpecs, userDict, data } = await getAllSpecsData(userID)
   const { username } = await clerkClient.users.getUser(userID)
   const user = userDict[username ?? '']
@@ -63,13 +64,14 @@ export default async function Page({ searchParams }: Props) {
       <Layout.Header title="Specs">
         <Layout.Back href={HOME} user={user} />
         <Layout.Actions>
-          {/* TODO: Hide when logged in */}
-          <Link href="/specs/add">
-            <Button size="sm">
-              <PlusIcon />
-              <span className="ps-1 pe-1">Add</span>
-            </Button>
-          </Link>
+          {userID === currentUserID && (
+            <Link href="/specs/add">
+              <Button size="sm">
+                <PlusIcon />
+                <span className="ps-1 pe-1">Add</span>
+              </Button>
+            </Link>
+          )}
         </Layout.Actions>
       </Layout.Header>
 
@@ -118,12 +120,13 @@ export default async function Page({ searchParams }: Props) {
             ingredients={filters.ingredients}
           />
         </FooterFilterDrawerButton>
-        {/* TODO: Hide when logged in */}
-        <Link href="/specs/add">
-          <Button className="w-11 h-11" variant="link" size="xs">
-            <PlusIcon className="w-6 h-6" />
-          </Button>
-        </Link>
+        {userID === currentUserID && (
+          <Link href="/specs/add">
+            <Button className="w-11 h-11" variant="link" size="xs">
+              <PlusIcon className="w-6 h-6" />
+            </Button>
+          </Link>
+        )}
       </Layout.Footer>
     </Layout.Root>
   )

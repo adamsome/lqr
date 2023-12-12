@@ -57,7 +57,8 @@ export async function getManyUsers(userIDs: string[]): Promise<User[]> {
   return [...systemUsers, ...users]
 }
 
-export async function getOneUser(userID: string): Promise<User> {
+export async function getOneUser(userID?: string | null): Promise<User | null> {
+  if (!userID) return null
   const users = await getManyUsers([userID])
   invariant(users[0], `No user found with ID '${userID}'`)
   return users[0]
