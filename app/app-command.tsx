@@ -50,13 +50,13 @@ export function AppCommand() {
   if (!user) {
     return (
       <Sticky>
-        <div className="flex items-center gap-2 sm:gap-4">
-          <Link className="pt-[0.22rem]" href={SIGN_IN}>
+        <div className="flex items-center gap-2 [&>*]:pt-[0.22rem] sm:gap-4">
+          <Link href={SIGN_IN}>
             <Button variant="outline" size="sm">
               Sign In
             </Button>
           </Link>
-          <Link className="pt-[0.22rem]" href={SIGN_UP}>
+          <Link href={SIGN_UP}>
             <Button size="sm">Sign Up</Button>
           </Link>
         </div>

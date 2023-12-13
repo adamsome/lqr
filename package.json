@@ -43,6 +43,7 @@
     "eslint-config-prettier": "^8.10.0",
     "immer": "^10.0.2",
     "lucide-react": "^0.263.1",
+    "micromark": "^4.0.0",
     "mongodb": "^5.7.0",
     "next": "^13.4.13-canary.16",
     "next-themes": "^0.2.1",

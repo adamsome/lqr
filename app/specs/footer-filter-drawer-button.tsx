@@ -4,7 +4,7 @@ import { ListFilter } from 'lucide-react'
 import { ReactNode, useState } from 'react'
 import { Drawer } from 'vaul'
 
-import { Button } from '@/components/ui/button'
+import { Button, IconButton } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 
 type Props = {
@@ -17,9 +17,9 @@ export function FooterFilterDrawerButton({ children }: Props) {
   return (
     <Drawer.Root open={open} onOpenChange={setOpen}>
       <Drawer.Trigger asChild>
-        <Button className="w-11 h-11" variant="link" size="xs">
+        <IconButton>
           <ListFilter className="w-6 h-6" />
-        </Button>
+        </IconButton>
       </Drawer.Trigger>
       <Drawer.Portal>
         <Drawer.Overlay className="fixed inset-0 bg-black/50 z-40" />

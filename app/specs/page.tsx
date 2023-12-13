@@ -1,5 +1,5 @@
-import { auth, clerkClient, currentUser } from '@clerk/nextjs'
-import { PlusIcon } from '@radix-ui/react-icons'
+import { auth, clerkClient } from '@clerk/nextjs'
+import { Pencil2Icon } from '@radix-ui/react-icons'
 import Link from 'next/link'
 import { sortBy } from 'ramda'
 import invariant from 'tiny-invariant'
@@ -19,7 +19,7 @@ import { SidebarFilters, UserState } from '@/app/specs/sidebar-filters'
 import { sortSpecs } from '@/app/specs/sort-specs'
 import { Toolbar } from '@/app/specs/toolbar'
 import * as Layout from '@/components/responsive-layout'
-import { Button } from '@/components/ui/button'
+import { Button, IconButton } from '@/components/ui/button'
 import { FullWidthContainer } from '@/components/ui/container'
 import { H1 } from '@/components/ui/h1'
 import { getAllSpecsData } from '@/lib/model/spec-data'
@@ -67,8 +67,8 @@ export default async function Page({ searchParams }: Props) {
           {userID === currentUserID && (
             <Link href="/specs/add">
               <Button size="sm">
-                <PlusIcon />
-                <span className="ps-1 pe-1">Add</span>
+                <Pencil2Icon />
+                <span className="ps-1.5 pe-1">Create</span>
               </Button>
             </Link>
           )}
@@ -122,9 +122,9 @@ export default async function Page({ searchParams }: Props) {
         </FooterFilterDrawerButton>
         {userID === currentUserID && (
           <Link href="/specs/add">
-            <Button className="w-11 h-11" variant="link" size="xs">
-              <PlusIcon className="w-6 h-6" />
-            </Button>
+            <IconButton>
+              <Pencil2Icon className="w-6 h-6" />
+            </IconButton>
           </Link>
         )}
       </Layout.Footer>

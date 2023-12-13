@@ -1,4 +1,4 @@
-import { sortBy } from 'ramda'
+import { micromark } from 'micromark'
 import invariant from 'tiny-invariant'
 
 import { getSpecStock } from '@/lib/ingredient/get-spec-stock'
@@ -6,11 +6,11 @@ import { getIngredientData } from '@/lib/model/ingredient-data'
 import { getSpec, getSpecs } from '@/lib/model/spec'
 import { IngredientData, Spec, User } from '@/lib/types'
 
-import 'server-only'
-import { auth } from '@clerk/nextjs'
 import { getFolloweeIDs } from '@/lib/model/follow'
 import { getManyUsers } from '@/lib/model/user'
 import { toIDMap } from '@/lib/utils'
+import { auth } from '@clerk/nextjs'
+import 'server-only'
 
 export async function getSpecData(id: string): Promise<[Spec, IngredientData]> {
   const [data, spec] = await Promise.all([getIngredientData(), getSpec({ id })])
@@ -19,7 +19,14 @@ export async function getSpecData(id: string): Promise<[Spec, IngredientData]> {
   invariant(spec, `No spec data for id '${id}'`)
 
   const getStock = getSpecStock(dict, tree)
-  return [{ ...spec, stock: getStock(spec) }, data]
+  const enhancedSpec = { ...spec, stock: getStock(spec) }
+  if (spec.notes) {
+    enhancedSpec.notesHtml = micromark(spec.notes)
+  }
+  if (spec.reference) {
+    enhancedSpec.referenceHtml = micromark(`—${spec.reference}`)
+  }
+  return [enhancedSpec, data]
 }
 
 export async function getAllSpecsData(userID: string): Promise<{

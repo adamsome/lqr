@@ -268,7 +268,7 @@ export default async function Page() {
             {userID === currentUserID && (
               <AddCommand size="sm" stocked={allStocked}>
                 <PlusIcon />
-                <span className="ps-1 pe-1">Add</span>
+                <span className="ps-1.5 pe-1">Add</span>
               </AddCommand>
             )}
           </Layout.Actions>

@@ -32,7 +32,8 @@ export function Spec({ spec, data, user, showEdit }: Props) {
     category,
     mix,
     glass,
-    notes,
+    notesHtml,
+    referenceHtml,
     updatedAt,
   } = spec
   const { id: userID, admin } = user
@@ -47,10 +48,7 @@ export function Spec({ spec, data, user, showEdit }: Props) {
         <Layout.Actions>
           {showEdit && (
             <Link href={toSpecEdit(id)}>
-              <Button className="gap-2" size="sm">
-                <Pencil2Icon />
-                <span className="pe-1">Edit</span>
-              </Button>
+              <Button size="sm">Edit</Button>
             </Link>
           )}
         </Layout.Actions>
@@ -58,9 +56,14 @@ export function Spec({ spec, data, user, showEdit }: Props) {
 
       <Container className="py-8 [--container-w-max:800px]">
         <div className="flex flex-col gap-y-1">
-          <div className="mb-3 text-4xl font-semibold leading-none tracking-tight">
+          <div className="mb-3 text-4xl font-bold leading-none tracking-tight">
             {name}
-            {year && <span className="text-muted-foreground"> ({year})</span>}
+            {year && (
+              <span className="text-muted-foreground font-medium">
+                {' '}
+                ({year})
+              </span>
+            )}
           </div>
           {(userDisplayName || username) && (
             <div className="text-xl">{userDisplayName ?? username}</div>
@@ -83,15 +86,26 @@ export function Spec({ spec, data, user, showEdit }: Props) {
             />
           ))}
         </div>
-        {notes && <div className="text-muted-foreground">{notes}</div>}
+        {notesHtml && (
+          <div
+            className="text-muted-foreground"
+            dangerouslySetInnerHTML={{ __html: notesHtml }}
+          />
+        )}
+        {referenceHtml && (
+          <div
+            className="text-muted-foreground/50 text-xs font-medium"
+            dangerouslySetInnerHTML={{ __html: referenceHtml }}
+          />
+        )}
       </Container>
 
       <Layout.Footer status={lastUpdated}>
         <span />
         {showEdit && (
           <Link href={toSpecEdit(id)}>
-            <Button className="w-11 h-11" variant="link" size="xs">
-              <Pencil2Icon className="w-6 h-6" />
+            <Button className="text-base" variant="ghost">
+              Edit
             </Button>
           </Link>
         )}

@@ -104,8 +104,10 @@ export interface Spec {
   glass?: GlassType
   mix?: MixType
   notes?: string
+  notesHtml?: string
   bar?: string
   reference?: string
+  referenceHtml?: string
   source?: string
   sourcePage?: number
   basis?: string

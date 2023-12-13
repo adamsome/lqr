@@ -13,4 +13,5 @@ export const specSchema = z.object({
   glass: z.enum(GLASS_TYPES).optional(),
   ingredients: z.array(specIngredientSchema).min(1),
   notes: z.string().max(500).optional(),
+  reference: z.string().max(250).optional(),
 })

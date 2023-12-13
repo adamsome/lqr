@@ -8,7 +8,7 @@ import * as z from 'zod'
 
 import { IngredientsForm } from '@/app/specs/[id]/edit/ingredients-form'
 import * as Layout from '@/components/responsive-layout'
-import { Button } from '@/components/ui/button'
+import { Button, IconButton } from '@/components/ui/button'
 import { FullWidthContainer } from '@/components/ui/container'
 import {
   Form,
@@ -92,14 +92,8 @@ export function SpecForm({
               <span>Cancel</span>
             </Button>
             <Layout.Actions>
-              <Button
-                type="submit"
-                className="gap-1.5 ps-2 pe-3"
-                size="sm"
-                disabled={mutating}
-              >
-                <CheckIcon />
-                <span>Save</span>
+              <Button type="submit" size="sm" disabled={mutating}>
+                Save
               </Button>
             </Layout.Actions>
           </Layout.Header>
@@ -258,6 +252,23 @@ export function SpecForm({
                       </FormItem>
                     )}
                   />
+                  <FormField
+                    control={form.control}
+                    name="reference"
+                    render={({ field }) => (
+                      <FormItem className="flex flex-col gap-1">
+                        <FormLabel>Reference</FormLabel>
+                        <FormControl>
+                          <Input
+                            className=""
+                            placeholder="Name..."
+                            {...field}
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
                   {showDelete && (
                     <Button
                       variant="destructive"
@@ -277,22 +288,16 @@ export function SpecForm({
           </FullWidthContainer>
 
           <Layout.Footer>
-            <Button
-              className="w-11 h-11"
-              variant="link"
-              size="xs"
-              onClick={onClose}
-            >
+            <IconButton onClick={onClose}>
               <Cross2Icon className="w-6 h-6" />
-            </Button>
+            </IconButton>
             <Button
               type="submit"
-              className="h-8 gap-1.5 me-2 ps-2 pe-3"
+              className="h-8 gap-1.5 me-2 px-3 font-semibold"
               variant="default"
               size="xs"
               disabled={mutating}
             >
-              <CheckIcon />
               Save
             </Button>
           </Layout.Footer>

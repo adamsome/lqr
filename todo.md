@@ -1,10 +1,14 @@
 # TODO
 
-- Fix Bar Add Rum category showing as Rum (Add Blackstrap)
 - Fix getSpecData multiple (Queen's Park Swizzle)
-  - Mary Pickford
-
-- Edit/Add spec, reference
+  **Do after adding `/u/` user segment**
+  * 'el_presidente',
+  * 'twelve_mile_limit',
+  * 'planters_punch',
+  * 'queens_park_swizzle',
+  * 'singapore_sling',
+  * 'mary_pickford',
+  * 'jungle_bird'
 
 ## Redesign
 
