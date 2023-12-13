@@ -79,7 +79,7 @@ export interface SpecIngredient extends Amount {
 }
 
 export interface SpecIngredientStock {
-  type: 'bottle' | 'category' | 'custom'
+  type: 'bottle' | 'category' | 'custom' | 'ignore'
   stock: number
   bottles?: { id: string; stock: number }[]
 }
