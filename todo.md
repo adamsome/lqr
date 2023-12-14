@@ -26,7 +26,6 @@
 
 ## Home & following
 
-- Prepend `/u/` user segment in front of all routes
 - Allow signed-out to view pages
 - App command sign-in
 - Hide Actions when signed-out
@@ -48,6 +47,7 @@
 - Show app-command skeleton when auth client loading
 - Hide Salt from Bar (should be implicit)
 - Add specs filters search params to local storage so Specs restores: if empty params, redirect to saved. else set local storage. clear clears local storage
+- Empty states
 - Improve specs perf. (use fetch w/ cache tags? Client-side filtering)
 - Cmd-P to search specs
 - Spec modified at ([Intl.RelativeTimeFormat](https://stackoverflow.com/questions/61911591/react-intl-with-relativetime-formatting))

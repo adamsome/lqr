@@ -40,7 +40,6 @@ export interface User {
   displayName?: string
   imageUrl?: string
   ingredients?: Record<string, Partial<Ingredient>>
-  admin?: boolean
 }
 
 export interface Follow {

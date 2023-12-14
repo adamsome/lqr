@@ -47,11 +47,9 @@ const avatarVariants = cva([], {
 })
 
 export function UserAvatar({ className, user, size, hideName }: Props) {
-  if (!user) return null
+  const { displayName, username, imageUrl } = user ?? {}
 
-  const { displayName, username, imageUrl } = user
-
-  const name = displayName ?? username ?? '?'
+  const name = user ? displayName ?? username ?? '?' : ''
 
   const initials = name
     .split(' ')
@@ -62,7 +60,7 @@ export function UserAvatar({ className, user, size, hideName }: Props) {
   let avatar = (
     <Avatar className={cn('w-5 h-5', avatarVariants({ size }))}>
       {imageUrl && <AvatarImage src={imageUrl} alt={name} />}
-      <AvatarFallback>{initials}</AvatarFallback>
+      {user && <AvatarFallback>{initials}</AvatarFallback>}
     </Avatar>
   )
 
@@ -71,14 +69,14 @@ export function UserAvatar({ className, user, size, hideName }: Props) {
       className={cn(
         'flex items-center gap-1.5 font-semibold transition-all',
         usernameVariants({ size }),
-        { 'gap-0': hideName },
+        { 'gap-0': hideName || !user },
         className,
       )}
     >
       {avatar}
       <span
         className={cn('w-full overflow-hidden transition-all', {
-          'w-0 opacity-0': hideName,
+          'w-0 opacity-0': hideName || !user,
         })}
       >
         {name}

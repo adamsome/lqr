@@ -12,33 +12,41 @@ import { toIDMap } from '@/lib/utils'
 import { auth } from '@clerk/nextjs'
 import 'server-only'
 
-export async function getSpecData(id: string): Promise<[Spec, IngredientData]> {
-  const [data, spec] = await Promise.all([getIngredientData(), getSpec({ id })])
+export async function getSpecData(
+  userID?: string,
+  id?: string,
+): Promise<[Spec?, IngredientData?]> {
+  if (!userID || !id) return []
+
+  const [data, spec] = await Promise.all([
+    getIngredientData(),
+    getSpec({ id, userID }),
+  ])
   const { dict, tree } = data
 
-  invariant(spec, `No spec data for id '${id}'`)
+  if (!spec) return [spec, data]
 
   const getStock = getSpecStock(dict, tree)
   const enhancedSpec = { ...spec, stock: getStock(spec) }
-  if (spec.notes) {
+  if (spec?.notes) {
     enhancedSpec.notesHtml = micromark(spec.notes)
   }
-  if (spec.reference) {
+  if (spec?.reference) {
     enhancedSpec.referenceHtml = micromark(`—${spec.reference}`)
   }
   return [enhancedSpec, data]
 }
 
-export async function getAllSpecsData(userID: string): Promise<{
+export async function getAllSpecsData(user: User): Promise<{
   specs: Spec[]
   userDict: Record<string, User>
   data: IngredientData
 }> {
   const { userId: currentUserID } = auth()
 
-  const userIDs = [userID]
-  if (userID === currentUserID) {
-    const followees = await getFolloweeIDs(userID)
+  const userIDs = [user.id]
+  if (user.id === currentUserID) {
+    const followees = await getFolloweeIDs(user.id)
     userIDs.push(...followees)
   }
 

@@ -25,17 +25,19 @@ import {
 } from '@/components/ui/command'
 import { Dialog, DialogOverlay, DialogPortal } from '@/components/ui/dialog'
 import { UserAvatar } from '@/components/user-avatar'
-import { BAR, HOME, SIGN_IN, SIGN_UP, SPECS } from '@/lib/routes'
+import { SIGN_IN, SIGN_UP, toBar, toHome, toSpecs } from '@/lib/routes'
 import { cn } from '@/lib/utils'
 import Link from 'next/link'
 
 export function AppCommand() {
+  const router = useRouter()
+  const { signOut } = useClerk()
+  const { user, isLoaded } = useUser()
+  const username = user?.username
+
   const [open, setOpen] = useState(false)
   const [profileOpen, setProfileOpen] = useState(false)
-  const [value, setValue] = useState(HOME)
-  const router = useRouter()
-  const { user, isLoaded } = useUser()
-  const { signOut } = useClerk()
+  const [value, setValue] = useState(() => toHome(username))
 
   useEffect(() => {
     function handleKeydown(e: globalThis.KeyboardEvent) {
@@ -47,7 +49,7 @@ export function AppCommand() {
 
   if (!isLoaded) return null
 
-  if (!user) {
+  if (!user || !username) {
     return (
       <Sticky>
         <div className="flex items-center gap-2 [&>*]:pt-[0.22rem] sm:gap-4">
@@ -129,24 +131,25 @@ export function AppCommand() {
           className={cn('h-[404px] max-h-screen overscroll-contain')}
         >
           <CommandEmpty>No items found.</CommandEmpty>
+
           <CommandGroup heading="Links">
             <CommandIconItem
               name="Home"
-              value={HOME}
+              value={toHome(username)}
               icon={<HomeIcon />}
               onSelect={handleLink}
             />
             <CommandIconItem
               name="Specs"
               desc="Cocktail Recipes"
-              value={SPECS}
+              value={toSpecs(username)}
               icon={<CardStackIcon />}
               onSelect={handleLink}
             />
             <CommandIconItem
               name="Bar"
               desc="Bottles & Ingredients"
-              value={BAR}
+              value={toBar(username)}
               icon={<CubeIcon />}
               onSelect={handleLink}
             />

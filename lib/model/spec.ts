@@ -30,7 +30,7 @@ export async function getSpec(
       .collection<OptionalUnlessRequiredId<Spec>>('spec')
       .find(filter, NO_ID)
       .toArray()) ?? []
-  if (specs.length <= 1) console.log(filter)
+  if (specs.length !== 1) console.log(filter)
   invariant(specs.length <= 1, `Got multiple specs`)
   return specs[0]
 }

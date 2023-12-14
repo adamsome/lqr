@@ -1,9 +1,23 @@
-export const HOME = '/'
 export const SIGN_IN = '/sign-in'
 export const SIGN_UP = '/sign-up'
-export const SPECS = '/specs'
-export const BAR = '/bar'
-export const RESEARCH = '/research'
 
-export const toSpec = (id: string) => `${SPECS}/${id}`
-export const toSpecEdit = (id: string) => `${SPECS}/${id}/edit`
+const prefixUserHome =
+  (url: string = '') =>
+  (username?: string | null) =>
+    username ? `/u/${username}${url}` : '/'
+
+const prefixUserItem =
+  (fn: (username?: string | null) => string, url: string = '') =>
+  (username?: string | null, id?: string | null) => {
+    if (!username) return '/'
+    const userRoute = fn(username)
+    return id ? `${userRoute}/${id}${url}` : userRoute
+  }
+
+export const toHome = prefixUserHome()
+export const toBar = prefixUserHome('/bar')
+export const toSpecs = prefixUserHome('/specs')
+export const toSpecAdd = prefixUserHome('/specs/add')
+export const toSpecItem = prefixUserItem(toSpecs)
+export const toSpecEdit = prefixUserItem(toSpecs, '/edit')
+export const toResearch = prefixUserHome('/research')
