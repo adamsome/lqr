@@ -25,7 +25,6 @@ export function Back({ user: userProp }: Props) {
       try {
         res = await fetch(`/api/users/${username}`)
         const { user } = await res.json()
-        console.log('user', user)
         if (user) {
           setUser(user)
         }

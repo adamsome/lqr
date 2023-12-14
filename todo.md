@@ -1,14 +1,5 @@
 # TODO
 
-- Fix getSpecData multiple (Queen's Park Swizzle)
-  **Do after adding `/u/` user segment**
-  * 'el_presidente',
-  * 'twelve_mile_limit',
-  * 'planters_punch',
-  * 'queens_park_swizzle',
-  * 'singapore_sling',
-  * 'mary_pickford',
-  * 'jungle_bird'
 
 ## Redesign
 

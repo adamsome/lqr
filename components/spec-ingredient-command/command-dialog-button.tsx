@@ -36,7 +36,6 @@ export function SpecIngredientCommandDialogButton({
   if (kind) initialState.kind = kind
   if (ingredient) initialState.ingredient = ingredient
   if (isSpecial) initialState.special = 'allSpirits'
-  if (ingredient?.name) initialState.custom = true
   const [state, dispatch] = useIngredientCommandReducer(initialState)
   const { open, custom, search, ingredient: currIngredient } = state
 
@@ -83,7 +82,7 @@ export function SpecIngredientCommandDialogButton({
         {...props}
         type="button"
         onClick={(e) => {
-          dispatch({ type: 'toggleOpen' })
+          dispatch({ type: ingredient?.name ? 'openCustom' : 'toggleOpen' })
           onClick?.(e)
         }}
       >
