@@ -1,6 +1,9 @@
 'use client'
 
-import { DEFAULT_LIMIT, LIMIT_KEY } from '@/app/u/[username]/specs/consts'
+import {
+  DEFAULT_LIMIT,
+  LIMIT_KEY,
+} from '@/app/u/[username]/specs/_criteria/consts'
 import { LoaderButton } from '@/components/ui/loader-button'
 import { useRouterSearchParams } from '@/hooks/use-router-search-params'
 

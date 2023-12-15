@@ -6,10 +6,11 @@ import {
   CATEGORY_KEY,
   INGREDIENT_KEY,
   USER_KEY,
-} from '@/app/u/[username]/specs/consts'
+} from '@/app/u/[username]/specs/_criteria/consts'
+import { buildIngredientCriterion } from '@/app/u/[username]/specs/_criteria/ingredient-criterion'
+import { Criteria } from '@/app/u/[username]/specs/_criteria/types'
 import { FilterSection } from '@/app/u/[username]/specs/filter-section'
 import { IngredientFilter } from '@/app/u/[username]/specs/ingredient-filter'
-import { buildIngredientParam } from '@/app/u/[username]/specs/ingredient-param'
 import { SpecIngredientCommandDialogButton } from '@/components/spec-ingredient-command/command-dialog-button'
 import { Button } from '@/components/ui/button'
 import { CheckboxLabel } from '@/components/ui/checkbox-label'
@@ -28,27 +29,26 @@ export type UserState = User & {
 export type Props = {
   className?: string
   data: IngredientData
-  categories: string[]
+  criteria: Criteria
   users: UserState[]
-  ingredients: SpecIngredient[]
   clearSpacer?: boolean
 }
 
 export function SidebarFilters({
   className,
   data,
-  categories,
+  criteria,
   users,
-  ingredients,
   clearSpacer,
 }: Props) {
+  const { categories, ingredients } = criteria
   const { searchParams, append, clear } = useRouterSearchParams()
 
   const { dict } = data
   const getIngredientName = makeGetIngredientName(dict)
 
   function handleSelectIngredient(ingredient: SpecIngredient): void {
-    append(INGREDIENT_KEY, buildIngredientParam(ingredient))
+    append(INGREDIENT_KEY, buildIngredientCriterion(ingredient))
   }
 
   return (
@@ -99,7 +99,7 @@ export function SidebarFilters({
                   key={id || label}
                   name={label}
                   onClear={() =>
-                    clear(INGREDIENT_KEY, buildIngredientParam(it))
+                    clear(INGREDIENT_KEY, buildIngredientCriterion(it))
                   }
                 />
               )

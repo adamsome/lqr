@@ -13,7 +13,7 @@ import {
   SpecSort,
   getSpecSortItems,
   isSpecSortDefaultDesc,
-} from '@/app/u/[username]/specs/consts'
+} from '@/app/u/[username]/specs/_criteria/consts'
 import { Button } from '@/components/ui/button'
 import {
   DropdownMenu,

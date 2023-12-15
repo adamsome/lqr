@@ -1,15 +1,12 @@
 import { ascend, descend, sortWith } from 'ramda'
 
-import {
-  SpecSort,
-  isSpecSortDefaultDesc,
-} from '@/app/u/[username]/specs/consts'
+import { isSpecSortDefaultDesc } from '@/app/u/[username]/specs/_criteria/consts'
 import { Spec } from '@/lib/types'
+import { Criteria } from '@/app/u/[username]/specs/_criteria/types'
 
 export function sortSpecs(
   specs: Spec[],
-  sort: SpecSort = 'stock',
-  desc = false,
+  { sort = 'stock', desc }: Criteria,
 ): Spec[] {
   const actualDesc = isSpecSortDefaultDesc(sort) ? !desc : desc
   const order = actualDesc ? descend : ascend

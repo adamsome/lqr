@@ -1,10 +1,8 @@
-import { auth, clerkClient } from '@clerk/nextjs'
-import { OptionalUnlessRequiredId } from 'mongodb'
+import { clerkClient } from '@clerk/nextjs'
 import { partition } from 'ramda'
 import invariant from 'tiny-invariant'
 
-import { connectToDatabase } from '@/lib/mongodb'
-import { Ingredient, User } from '@/lib/types'
+import { User } from '@/lib/types'
 import { toIDMap } from '@/lib/utils'
 
 import 'server-only'
@@ -29,22 +27,6 @@ const SYSTEM_USERS = [
 
 const byID = toIDMap(SYSTEM_USERS, ({ id }) => id)
 const byUsername = toIDMap(SYSTEM_USERS, ({ username }) => username)
-
-export async function getUserIngredients(
-  userID?: string,
-): Promise<Record<string, Partial<Ingredient>>> {
-  const { userId: currentUserID } = auth()
-
-  const id = userID ?? currentUserID
-
-  if (!id) return {}
-
-  const { db } = await connectToDatabase()
-  const user = await db
-    .collection<OptionalUnlessRequiredId<User>>('user')
-    .findOne({ id }, { projection: { _id: false } })
-  return user?.ingredients ?? {}
-}
 
 export async function getManyUsers(userIDs: string[]): Promise<User[]> {
   const [systemIDs, ids] = partition((id) => byID[id] !== undefined, userIDs)

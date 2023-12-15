@@ -1,10 +1,9 @@
 import { auth } from '@clerk/nextjs'
 import invariant from 'tiny-invariant'
 
-import { Spec } from '@/app/u/[username]/specs/[id]/spec'
-import { getSpecData } from '@/lib/model/spec-data'
-import { getUser, getUserByID } from '@/lib/model/user'
+import { SpecContainer } from '@/app/u/[username]/specs/[id]/spec-container'
 import { isAdmin } from '@/lib/model/admin'
+import { getUser } from '@/lib/model/user'
 
 type Props = {
   params: {
@@ -19,19 +18,10 @@ export default async function Page({ params }: Props) {
   const { userId: currentUserID } = auth()
 
   const user = await getUser(username)
-  const [spec, data] = await getSpecData(user?.id, id)
 
   // TODO: Show "User not found"
   invariant(user, `User not found.`)
-  invariant(spec && data, `No spec with id '${id}'.`)
 
-  return (
-    <Spec
-      spec={spec}
-      data={data}
-      user={user}
-      // TODO: Check if current user is admin
-      showEdit={isAdmin(currentUserID) || user.id === currentUserID}
-    />
-  )
+  const showEdit = isAdmin(currentUserID) || user.id === currentUserID
+  return <SpecContainer specID={id} user={user} showEdit={showEdit} />
 }

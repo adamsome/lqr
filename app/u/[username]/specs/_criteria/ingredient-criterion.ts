@@ -18,30 +18,32 @@ const MODIFIERS: Record<keyof Pick<SpecIngredient, ModifierKeys>, string> = {
 
 const SEP = { MOD: '.', KV: '-' }
 
-export function buildIngredientParam(ingredient: SpecIngredient): string {
+export function buildIngredientCriterion(ingredient: SpecIngredient): string {
   const { id, bottleID, aging, productionMethod, black, overproof } = ingredient
   if (bottleID) return bottleID
-  let param = id
-  invariant(param, `Ingredient filter is empty '${JSON.stringify(ingredient)}'`)
+  let res = id
+  invariant(res, `Ingredient filter is empty '${JSON.stringify(ingredient)}'`)
   if (aging) {
-    param += `${SEP.MOD}${MODIFIERS.aging}${SEP.KV}${aging.join(SEP.KV)}`
+    res += `${SEP.MOD}${MODIFIERS.aging}${SEP.KV}${aging.join(SEP.KV)}`
   }
   if (productionMethod) {
-    param += `${SEP.MOD}${MODIFIERS.productionMethod}${SEP.KV}${productionMethod}`
+    res += `${SEP.MOD}${MODIFIERS.productionMethod}${SEP.KV}${productionMethod}`
   }
   if (black) {
-    param += `${SEP.MOD}${MODIFIERS.black}${SEP.KV}${black ? 1 : 0}`
+    res += `${SEP.MOD}${MODIFIERS.black}${SEP.KV}${black ? 1 : 0}`
   }
   if (overproof) {
-    param += `${SEP.MOD}${MODIFIERS.overproof}${SEP.KV}${overproof ? 1 : 0}`
+    res += `${SEP.MOD}${MODIFIERS.overproof}${SEP.KV}${overproof ? 1 : 0}`
   }
-  return param
+  return res
 }
 
-export function parseIngredientParam(param?: string): SpecIngredient | null {
-  if (!param) return null
-  const [id, ...modifiers] = param.split(SEP.MOD)
-  invariant(id, `No ID in ingredient filter param '${param}'`)
+export function parseIngredientCriterion(
+  criterion?: string,
+): SpecIngredient | null {
+  if (!criterion) return null
+  const [id, ...modifiers] = criterion.split(SEP.MOD)
+  invariant(id, `No ID in ingredient filter criterion '${criterion}'`)
   return modifiers.reduce<SpecIngredient>(parseModifier, { id })
 }
 

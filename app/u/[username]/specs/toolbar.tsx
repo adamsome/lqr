@@ -2,17 +2,11 @@
 
 import { FormEvent } from 'react'
 
-import { SpecSort } from '@/app/u/[username]/specs/consts'
+import { Criteria } from '@/app/u/[username]/specs/_criteria/types'
 import { Search } from '@/app/u/[username]/specs/search'
 import { SortSelect } from '@/app/u/[username]/specs/sort-select'
 
-type Props = {
-  search: string
-  sort?: SpecSort
-  desc?: boolean
-}
-
-export function Toolbar({ search, sort, desc }: Props) {
+export function Toolbar({ search, sort, desc }: Criteria) {
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
   }

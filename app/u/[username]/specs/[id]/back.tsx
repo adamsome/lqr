@@ -2,7 +2,7 @@
 
 import { useSearchParams } from 'next/navigation'
 
-import { USER_KEY } from '@/app/u/[username]/specs/consts'
+import { USER_KEY } from '@/app/u/[username]/specs/_criteria/consts'
 import * as Layout from '@/components/responsive-layout'
 import { toSpecs } from '@/lib/routes'
 import { User } from '@/lib/types'

@@ -5,7 +5,7 @@ import invariant from 'tiny-invariant'
 
 import { AddCommand } from '@/app/u/[username]/bar/add-command'
 import { BarCategory, Category } from '@/app/u/[username]/bar/category'
-import { Count } from '@/app/u/[username]/specs/count'
+import { Count } from '@/components/ui/count'
 import { IngredientDataProvider } from '@/components/data-provider'
 import * as Layout from '@/components/responsive-layout'
 import { Container } from '@/components/ui/container'

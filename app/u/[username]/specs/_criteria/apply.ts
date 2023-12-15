@@ -1,30 +1,20 @@
-import {
-  CATEGORY_KEY,
-  INGREDIENT_KEY,
-  SEARCH_KEY,
-  USER_KEY,
-} from '@/app/u/[username]/specs/consts'
-import { parseIngredientParam } from '@/app/u/[username]/specs/ingredient-param'
+import { Criteria } from '@/app/u/[username]/specs/_criteria/types'
+import { sortSpecs } from '@/app/u/[username]/specs/_criteria/sort'
 import {
   filterIngredientItems,
   testIngredientMethods,
 } from '@/lib/ingredient/filter-ingredient-items'
-import { IngredientData, Spec, SpecIngredient } from '@/lib/types'
-import { asArray, head, rejectNil } from '@/lib/utils'
+import { IngredientData, Spec } from '@/lib/types'
 
-type FilterParams = {
-  search: string
-  categories: string[]
-  users: string[]
-  ingredients: SpecIngredient[]
-}
-
-export function filterSpecs(
+export function applyCriteria(
   data: IngredientData,
   specs: Spec[],
-  { search, categories, users, ingredients }: FilterParams,
+  criteria: Criteria,
 ): Spec[] {
   let result = specs
+
+  const { search, categories, users, ingredients } = criteria
+
   if (search) {
     const words = search.toLowerCase().split(' ')
     result = result.filter((s) => {
@@ -62,20 +52,6 @@ export function filterSpecs(
       ),
     )
   }
-  return result
-}
 
-type SearchParams = {
-  [key: string]: string | string[] | undefined
-}
-
-export function parseFilterParams(searchParams: SearchParams): FilterParams {
-  return {
-    search: head(searchParams[SEARCH_KEY]) ?? '',
-    categories: asArray(searchParams[CATEGORY_KEY] ?? []),
-    users: asArray(searchParams[USER_KEY] ?? []),
-    ingredients: rejectNil(
-      asArray(searchParams[INGREDIENT_KEY] ?? []).map(parseIngredientParam),
-    ),
-  }
+  return sortSpecs(result, criteria)
 }

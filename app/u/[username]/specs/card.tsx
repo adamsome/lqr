@@ -1,5 +1,6 @@
 import { Ingredient } from '@/app/u/[username]/specs/[id]/ingredient'
 import { SpecStock } from '@/app/u/[username]/specs/[id]/spec-stock'
+import { Criteria } from '@/app/u/[username]/specs/_criteria/types'
 import {
   CardContent,
   CardDescription,
@@ -14,14 +15,16 @@ import { IngredientData, Spec } from '@/lib/types'
 type Props = {
   data: IngredientData
   spec: Spec
-  usernameParam?: string
+  criteria: Criteria
   showStock?: boolean
 }
 
-export function Card({ data, spec, usernameParam, showStock }: Props) {
+export function Card({ data, spec, criteria, showStock }: Props) {
   const { id, name, ingredients, source, stock, username } = spec
   const searchParams =
-    usernameParam && usernameParam !== username ? `?u=${usernameParam}` : ''
+    criteria.username && criteria.username !== username
+      ? `?u=${criteria.username}`
+      : ''
   return (
     <CardLink href={toSpecItem(username, id) + searchParams}>
       <CardHeader>

@@ -4,7 +4,7 @@ import { MagnifyingGlassIcon } from '@radix-ui/react-icons'
 import { useEffect, useState } from 'react'
 import { useDebounce } from 'react-use'
 
-import { SEARCH_KEY } from '@/app/u/[username]/specs/consts'
+import { SEARCH_KEY } from '@/app/u/[username]/specs/_criteria/consts'
 import { Input } from '@/components/ui/input'
 import { useRouterSearchParams } from '@/hooks/use-router-search-params'
 import { cn } from '@/lib/utils'
