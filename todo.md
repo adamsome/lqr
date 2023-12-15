@@ -1,7 +1,5 @@
 # TODO
 
-- When looking at another user's specs, include their followers
-
 ## Redesign
 
 - Page header
@@ -35,6 +33,7 @@
 
 ## QoL
 
+- Bar: Keep empty bottles
 - Show app-command skeleton when auth client loading
 - Hide Salt from Bar (should be implicit)
 - Add specs filters search params to local storage so Specs restores: if empty params, redirect to saved. else set local storage. clear clears local storage

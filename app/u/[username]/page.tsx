@@ -21,7 +21,7 @@ export default async function Page({ params }: Props) {
   return (
     <ResponsiveLayout.Root>
       <ResponsiveLayout.Header title={<UserAvatar user={user} />} />
-      <Container className="relative py-4 sm:py-6">
+      <Container className="relative py-4 sm:py-6 font-semibold">
         <UserAvatar user={user} size="3xl" />
         <CardGrid>
           <CardLink href={toSpecs(username)}>

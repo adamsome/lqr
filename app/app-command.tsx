@@ -153,11 +153,6 @@ export function AppCommand() {
               icon={<CubeIcon />}
               onSelect={handleLink}
             />
-            <CommandIconItem
-              name="User"
-              value="/user-profile"
-              onSelect={handleLink}
-            />
           </CommandGroup>
 
           <AppCommandTheme onSelect={() => setOpen(false)} />
