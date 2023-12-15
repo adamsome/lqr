@@ -2,7 +2,7 @@
 
 import { Cross1Icon } from '@radix-ui/react-icons'
 
-import { IngredientPathText } from '@/components/ingredient-path/text'
+import { IngredienFullName } from '@/components/ingredient-full-name'
 import { StockIcon as BaseStockIcon } from '@/components/stock-icon'
 import { Button } from '@/components/ui/button'
 import { DataTableColumnFilterInput } from '@/components/ui/data-table-column-filter-input'
@@ -15,7 +15,7 @@ import { DataTableHierarchicalFacetFilterButton } from '@/components/ui/data-tab
 import { DataTableMultiFacetFilterButton } from '@/components/ui/data-table-multi-facet-filter-button'
 import { DataTableViewOptions } from '@/components/ui/data-table-view-options'
 import { useGetIngredientPathName } from '@/hooks/use-get-ingredient-path-name'
-import { useFilterIngredientTree } from '@/hooks/use-hierarchical-spirits-root'
+import { useFilterIngredientTree } from '@/hooks/use-filter-ingredient-tree'
 import { useIsDataTableFiltered } from '@/hooks/use-is-data-table-filtered'
 import {
   AGING_DICT,
@@ -69,9 +69,11 @@ function transformCategoryFacets(facets: Map<any, number>) {
   return result
 }
 
-type Props = DataTableToolbarProps<WithPath<Ingredient>>
+type Props = DataTableToolbarProps<WithPath<Ingredient>> & {
+  showStock?: boolean
+}
 
-export function Toolbar({ table }: Props) {
+export function Toolbar({ table, showStock }: Props) {
   const isFiltered = useIsDataTableFiltered(table)
   const categoryRoot = useFilterIngredientTree('spirit', 'beerWine')
   const getIngredientPathName = useGetIngredientPathName()
@@ -84,7 +86,7 @@ export function Toolbar({ table }: Props) {
           placeholder="Filter Names..."
           table={table}
         />
-        {table.getColumn('stock') && (
+        {showStock && table.getColumn('stock') && (
           <DataTableFacetFilterButton
             column={table.getColumn('stock')}
             title="In Stock"
@@ -99,7 +101,7 @@ export function Toolbar({ table }: Props) {
             title="Category"
             root={categoryRoot}
             renderName={({ id, path }) => (
-              <IngredientPathText id={id} path={path} />
+              <IngredienFullName id={id} path={path} />
             )}
             getIngredientPathName={getIngredientPathName}
             transformFacetsFn={transformCategoryFacets}

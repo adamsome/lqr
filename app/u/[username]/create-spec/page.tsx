@@ -1,6 +1,6 @@
 import { Suspense } from 'react'
 
-import { SpecContainer } from '@/app/u/[username]/specs/add/spec-container'
+import { SpecContainer } from '@/app/u/[username]/create-spec/spec-container'
 
 export default function Page() {
   return (

@@ -1,9 +1,9 @@
 import { useIngredientData } from '@/components/data-provider'
-import { IngredientPathText } from '@/components/ingredient-path/text'
+import { IngredienFullName } from '@/components/ingredient-full-name'
 import { HierarchicalCommandList } from '@/components/ui/hierarchical-command-list'
 import { useGetIngredientName } from '@/hooks/use-get-ingredient-name'
 import { useGetIngredientPathName } from '@/hooks/use-get-ingredient-path-name'
-import { useFilterIngredientTree } from '@/hooks/use-hierarchical-spirits-root'
+import { useFilterIngredientTree } from '@/hooks/use-filter-ingredient-tree'
 import { CATEGORY_DICT, Category } from '@/lib/generated-consts'
 import { SpecIngredient } from '@/lib/types'
 
@@ -28,7 +28,7 @@ export function SpiritItems({ hasSearch, stocked, onSelect }: Props) {
       showBottles
       getIngredientPathName={getIngredientPathName}
       renderName={({ id, path, item }) => {
-        if (path) return <IngredientPathText id={id} path={path} />
+        if (path) return <IngredienFullName id={id} path={path} />
         if (item) return getName(item)
         if (!id) return 'Unknown Ingredient'
         return (

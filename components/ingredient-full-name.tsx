@@ -37,7 +37,7 @@ type Props = {
   path?: string[]
 }
 
-export function IngredientPathText({ id, path }: Props) {
+export function IngredienFullName({ id, path }: Props) {
   const { dict } = useIngredientData()
 
   if (!path) {

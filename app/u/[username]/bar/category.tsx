@@ -4,9 +4,9 @@ import { PlusIcon } from '@radix-ui/react-icons'
 
 import {
   Props as AddButtonProps,
-  BarAddIngredientCommandDialogButton,
-} from '@/components/bar-add-ingredient-command/command-dialog-button'
-import { BarIngredientCommandDialogButton } from '@/components/bar-ingredient-command/command-dialog-button'
+  AddIngredientCommandDialogButton,
+} from '@/app/u/[username]/bar/add-command-dialog-button'
+import { IngredientCommandDialogButton } from '@/app/u/[username]/bar/ingredient-command-dialog-button'
 import { StockIcon } from '@/components/stock-icon'
 import { SelectOptions } from '@/components/ui/hierarchical-command-list'
 import { useGetIngredientName } from '@/hooks/use-get-ingredient-name'
@@ -61,18 +61,20 @@ export function Category({
     >
       <div className="flex items-center justify-between border-b pb-1 font-semibold">
         {name ?? 'Unknown Category'}
-        <AddButton
-          className="text-muted-foreground"
-          variant="ghost"
-          size="xs"
-          {...addProps}
-        >
-          <PlusIcon />
-        </AddButton>
+        {isCurrentUser && (
+          <AddButton
+            className="text-muted-foreground"
+            variant="ghost"
+            size="xs"
+            {...addProps}
+          >
+            <PlusIcon />
+          </AddButton>
+        )}
       </div>
       <div className="flex flex-col flex-wrap items-start gap-2">
         {stocked.map((it) => (
-          <BarIngredientCommandDialogButton
+          <IngredientCommandDialogButton
             key={it.id}
             className="flex max-w-full items-center gap-2 overflow-hidden"
             variant="secondary"
@@ -85,9 +87,9 @@ export function Category({
             <span className="flex-1 overflow-hidden text-ellipsis whitespace-nowrap">
               {getIngredientName(it, { inclBottle: true })}
             </span>
-          </BarIngredientCommandDialogButton>
+          </IngredientCommandDialogButton>
         ))}
-        {stocked.length === 0 && (
+        {isCurrentUser && stocked.length === 0 && (
           <AddButton
             className="gap-1 border-dashed text-muted-foreground"
             variant="outline"
@@ -104,8 +106,8 @@ export function Category({
 
 function AddButton({ children, ...props }: AddButtonProps) {
   return (
-    <BarAddIngredientCommandDialogButton {...props}>
+    <AddIngredientCommandDialogButton {...props}>
       {children}
-    </BarAddIngredientCommandDialogButton>
+    </AddIngredientCommandDialogButton>
   )
 }

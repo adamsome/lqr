@@ -30,7 +30,7 @@ export default async function Page({ params }: Props) {
           <CardLink href={toBar(username)}>
             <CardHeader>Bar</CardHeader>
           </CardLink>
-          <CardLink href={toResearch(username)}>
+          <CardLink href={toResearch()}>
             <CardHeader>Research</CardHeader>
           </CardLink>
         </CardGrid>

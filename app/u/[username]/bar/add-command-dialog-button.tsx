@@ -1,7 +1,7 @@
 import { KeyboardEvent, useEffect, useState } from 'react'
 
 import { useIngredientData } from '@/components/data-provider'
-import { IngredientPathText } from '@/components/ingredient-path/text'
+import { IngredienFullName } from '@/components/ingredient-full-name'
 import { Button, Props as ButtonProps } from '@/components/ui/button'
 import {
   CommandDialog,
@@ -15,7 +15,7 @@ import {
 } from '@/components/ui/hierarchical-command-list'
 import { useGetIngredientName } from '@/hooks/use-get-ingredient-name'
 import { useGetIngredientPathName } from '@/hooks/use-get-ingredient-path-name'
-import { useFilterIngredientTree } from '@/hooks/use-hierarchical-spirits-root'
+import { useFilterIngredientTree } from '@/hooks/use-filter-ingredient-tree'
 import { CATEGORY_DICT, Category } from '@/lib/generated-consts'
 import { HierarchicalFilter } from '@/lib/hierarchical-filter'
 import { Ingredient } from '@/lib/types'
@@ -30,7 +30,7 @@ export type Props = Omit<ButtonProps, 'onSelect'> & {
   onSelect(selection: SelectOptions): void
 }
 
-export function BarAddIngredientCommandDialogButton({
+export function AddIngredientCommandDialogButton({
   children,
   topItems,
   root,
@@ -95,7 +95,7 @@ export function BarAddIngredientCommandDialogButton({
         <CommandList
           className={cn(
             '[--padding:theme(spacing.12)]',
-            'max-h-[calc(100vh-var(--padding)-theme(spacing.24)-3px)]'
+            'max-h-[calc(100vh-var(--padding)-theme(spacing.24)-3px)]',
           )}
         >
           <CommandEmpty>No results found.</CommandEmpty>
@@ -109,7 +109,7 @@ export function BarAddIngredientCommandDialogButton({
             rejectCheckedLeaves
             getIngredientPathName={getIngredientPathName}
             renderName={({ id, path, item }) => {
-              if (path) return <IngredientPathText id={id} path={path} />
+              if (path) return <IngredienFullName id={id} path={path} />
               if (item) return getName(item)
               if (!id) return 'Unknown Ingredient'
               return (

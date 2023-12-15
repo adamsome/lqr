@@ -9,9 +9,17 @@ type Props = {
   limit: number
   count: number
   usernameParam?: string
+  showStock?: boolean
 }
 
-export function Grid({ data, specs, limit, count, usernameParam }: Props) {
+export function Grid({
+  data,
+  specs,
+  limit,
+  count,
+  usernameParam,
+  showStock,
+}: Props) {
   if (!specs.length) {
     return <>No results</>
   }
@@ -24,6 +32,7 @@ export function Grid({ data, specs, limit, count, usernameParam }: Props) {
             data={data}
             spec={spec}
             usernameParam={usernameParam}
+            showStock={showStock}
           />
         ))}
       </CardGrid>

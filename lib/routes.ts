@@ -16,8 +16,8 @@ const prefixUserItem =
 
 export const toHome = prefixUserHome()
 export const toBar = prefixUserHome('/bar')
+export const toCreateSpec = prefixUserHome('/create-spec')
 export const toSpecs = prefixUserHome('/specs')
-export const toSpecAdd = prefixUserHome('/specs/add')
 export const toSpecItem = prefixUserItem(toSpecs)
 export const toSpecEdit = prefixUserItem(toSpecs, '/edit')
-export const toResearch = prefixUserHome('/research')
+export const toResearch = () => '/research'

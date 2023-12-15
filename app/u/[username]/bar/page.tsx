@@ -1,8 +1,12 @@
+import { auth } from '@clerk/nextjs'
+import { PlusIcon } from '@radix-ui/react-icons'
 import { uniq } from 'ramda'
+import invariant from 'tiny-invariant'
 
-import { Count } from '@/app/u/[username]/specs/count'
 import { AddCommand } from '@/app/u/[username]/bar/add-command'
 import { BarCategory, Category } from '@/app/u/[username]/bar/category'
+import { Count } from '@/app/u/[username]/specs/count'
+import { IngredientDataProvider } from '@/components/data-provider'
 import * as Layout from '@/components/responsive-layout'
 import { Container } from '@/components/ui/container'
 import { H1 } from '@/components/ui/h1'
@@ -23,9 +27,6 @@ import { getUser } from '@/lib/model/user'
 import { toHome } from '@/lib/routes'
 import { IngredientData } from '@/lib/types'
 import { cn, rejectNil } from '@/lib/utils'
-import { auth } from '@clerk/nextjs'
-import { PlusIcon } from '@radix-ui/react-icons'
-import invariant from 'tiny-invariant'
 
 export const revalidate = 0
 
@@ -243,15 +244,13 @@ export default async function Page({ params }: Props) {
 
   const isCurrentUser = user.id == currentUserID
 
-  const data = await getIngredientData()
+  const data = await getIngredientData(user.id)
   const { dict } = data
 
   const stocked = new Set<string>(
     Object.keys(dict).filter((id) => (dict[id].stock ?? -1) >= 0),
   )
-  const allStocked = new Set<string>(
-    Object.keys(dict).filter((id) => (dict[id].stock ?? -1) >= 0),
-  )
+  const allStocked = new Set(stocked)
   const count = allStocked.size
 
   const toCategory = createCategoryParser(data)
@@ -267,80 +266,83 @@ export default async function Page({ params }: Props) {
   })
 
   return (
-    <Layout.Root>
-      <Layout.Header title="Bar">
-        <Layout.Back href={toHome(username)} user={user} />
-        <Layout.Actions>
+    <IngredientDataProvider {...data}>
+      <Layout.Root>
+        <Layout.Header title="Bar">
+          <Layout.Back href={toHome(username)} user={user} />
+          <Layout.Actions>
+            {isCurrentUser && (
+              <AddCommand size="sm" stocked={allStocked}>
+                <PlusIcon />
+                <span className="ps-1.5 pe-1">Add</span>
+              </AddCommand>
+            )}
+          </Layout.Actions>
+        </Layout.Header>
+
+        <Container className="relative py-4 sm:py-6">
+          <div className="flex flex-col gap-4">
+            <H1 className="flex items-baseline gap-3">
+              Bar{' '}
+              <Count className="text-[75%] hidden sm:inline" count={count} />
+            </H1>
+
+            <div
+              className={cn(
+                'grid gap-x-4 gap-y-4 lg:gap-x-6 lg:gap-y-8',
+                'grid-cols-[repeat(auto-fill,minmax(theme(spacing.64),1fr))]',
+              )}
+            >
+              {spiritCategories.map((c, i) => (
+                <Category
+                  key={c.name ?? i}
+                  category={c}
+                  muteItems
+                  isCurrentUser={isCurrentUser}
+                />
+              ))}
+            </div>
+          </div>
+
+          <div className="flex flex-col gap-4">
+            <H2>Non-alcoholic</H2>
+            <div
+              className={cn(
+                'grid gap-x-4 gap-y-4 lg:gap-x-6 lg:gap-y-8',
+                'grid-cols-[repeat(auto-fill,minmax(theme(spacing.64),1fr))]',
+              )}
+            >
+              {ingredientCategories.map((c, i) => (
+                <Category
+                  key={c.name ?? i}
+                  category={c}
+                  isCurrentUser={isCurrentUser}
+                />
+              ))}
+            </div>
+          </div>
+        </Container>
+
+        <Layout.Footer
+          status={
+            <span>
+              <Count count={count} total={count} /> items
+            </span>
+          }
+        >
+          <div />
           {isCurrentUser && (
-            <AddCommand size="sm" stocked={allStocked}>
-              <PlusIcon />
-              <span className="ps-1.5 pe-1">Add</span>
+            <AddCommand
+              className="w-11 h-11"
+              variant="link"
+              size="xs"
+              stocked={allStocked}
+            >
+              <PlusIcon className="w-6 h-6" />
             </AddCommand>
           )}
-        </Layout.Actions>
-      </Layout.Header>
-
-      <Container className="relative py-4 sm:py-6">
-        <div className="flex flex-col gap-4">
-          <H1 className="flex items-baseline gap-3">
-            Bar <Count className="text-[75%] hidden sm:inline" count={count} />
-          </H1>
-
-          <div
-            className={cn(
-              'grid gap-x-4 gap-y-4 lg:gap-x-6 lg:gap-y-8',
-              'grid-cols-[repeat(auto-fill,minmax(theme(spacing.64),1fr))]',
-            )}
-          >
-            {spiritCategories.map((c, i) => (
-              <Category
-                key={c.name ?? i}
-                category={c}
-                muteItems
-                isCurrentUser={isCurrentUser}
-              />
-            ))}
-          </div>
-        </div>
-
-        <div className="flex flex-col gap-4">
-          <H2>Non-alcoholic</H2>
-          <div
-            className={cn(
-              'grid gap-x-4 gap-y-4 lg:gap-x-6 lg:gap-y-8',
-              'grid-cols-[repeat(auto-fill,minmax(theme(spacing.64),1fr))]',
-            )}
-          >
-            {ingredientCategories.map((c, i) => (
-              <Category
-                key={c.name ?? i}
-                category={c}
-                isCurrentUser={isCurrentUser}
-              />
-            ))}
-          </div>
-        </div>
-      </Container>
-
-      <Layout.Footer
-        status={
-          <span>
-            <Count count={count} total={count} /> items
-          </span>
-        }
-      >
-        <div />
-        {isCurrentUser && (
-          <AddCommand
-            className="w-11 h-11"
-            variant="link"
-            size="xs"
-            stocked={allStocked}
-          >
-            <PlusIcon className="w-6 h-6" />
-          </AddCommand>
-        )}
-      </Layout.Footer>
-    </Layout.Root>
+        </Layout.Footer>
+      </Layout.Root>
+    </IngredientDataProvider>
   )
 }

@@ -15,9 +15,10 @@ type Props = {
   data: IngredientData
   spec: Spec
   usernameParam?: string
+  showStock?: boolean
 }
 
-export function Card({ data, spec, usernameParam }: Props) {
+export function Card({ data, spec, usernameParam, showStock }: Props) {
   const { id, name, ingredients, source, stock, username } = spec
   const searchParams =
     usernameParam && usernameParam !== username ? `?u=${usernameParam}` : ''
@@ -35,13 +36,16 @@ export function Card({ data, spec, usernameParam }: Props) {
               data={data}
               ingredient={ingredient}
               stock={stock?.ingredients[i]}
+              showStock={showStock}
             />
           ))}
         </div>
       </CardContent>
-      <CardFooter>
-        <SpecStock stock={stock} />
-      </CardFooter>
+      {showStock && (
+        <CardFooter>
+          <SpecStock stock={stock} />
+        </CardFooter>
+      )}
     </CardLink>
   )
 }

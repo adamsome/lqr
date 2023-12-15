@@ -1,6 +1,6 @@
 'use client'
 
-import { StockIconButton } from '@/app/u/[username]/research/stock-icon-button'
+import { StockIconButton } from '@/app/research/stock-icon-button'
 import { useMutate } from '@/hooks/use-mutate'
 
 type Props = {

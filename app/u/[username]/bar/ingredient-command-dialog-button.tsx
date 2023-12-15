@@ -1,6 +1,6 @@
 import { KeyboardEvent, useEffect, useState } from 'react'
 
-import { StockItems } from '@/components/bar-ingredient-command/stock-items'
+import { StockItems } from '@/app/u/[username]/bar/stock-items'
 import { Button, Props as ButtonProps } from '@/components/ui/button'
 import {
   CommandDialog,
@@ -18,7 +18,7 @@ type Props = Omit<ButtonProps, 'onSelect'> & {
   onSelect?: (ingredient: Ingredient) => void
 }
 
-export function BarIngredientCommandDialogButton({
+export function IngredientCommandDialogButton({
   children,
   ingredient,
   onClick,
@@ -69,7 +69,7 @@ export function BarIngredientCommandDialogButton({
         <CommandList
           className={cn(
             '[--padding:theme(spacing.12)]',
-            'max-h-[calc(100vh-var(--padding)-theme(spacing.24)-3px)]'
+            'max-h-[calc(100vh-var(--padding)-theme(spacing.24)-3px)]',
           )}
         >
           <CommandEmpty>No results found.</CommandEmpty>

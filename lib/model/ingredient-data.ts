@@ -5,9 +5,11 @@ import { IngredientData } from '@/lib/types'
 
 import 'server-only'
 
-export async function getIngredientData(): Promise<IngredientData> {
+export async function getIngredientData(
+  userID?: string,
+): Promise<IngredientData> {
   const [userIngredients, staticData] = await Promise.all([
-    getUserIngredients(),
+    getUserIngredients(userID),
     getStaticData(),
   ])
   const { baseIngredients, ingredients, tree } = staticData

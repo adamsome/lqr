@@ -29,7 +29,7 @@ import { Button, IconButton } from '@/components/ui/button'
 import { FullWidthContainer } from '@/components/ui/container'
 import { H1 } from '@/components/ui/h1'
 import { getAllSpecsData } from '@/lib/model/spec-data'
-import { toHome, toSpecAdd } from '@/lib/routes'
+import { toHome, toCreateSpec } from '@/lib/routes'
 import { head } from '@/lib/utils'
 import { getUser } from '@/lib/model/user'
 
@@ -53,7 +53,7 @@ export default async function Page({ params, searchParams }: Props) {
   invariant(user, `User not found.`)
 
   const isCurrentUser = user.id == currentUserID
-  const addUrl = toSpecAdd(user.username)
+  const addUrl = toCreateSpec(user.username)
 
   const { specs: allSpecs, userDict, data } = await getAllSpecsData(user)
 
@@ -122,6 +122,7 @@ export default async function Page({ params, searchParams }: Props) {
                 limit={limit}
                 count={count}
                 usernameParam={username}
+                showStock={Boolean(currentUserID)}
               />
             </div>
           </div>

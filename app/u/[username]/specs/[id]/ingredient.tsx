@@ -12,9 +12,10 @@ type Props = {
   data: IngredientData
   ingredient: SpecIngredient
   stock?: SpecIngredientStock
+  showStock?: boolean
 }
 
-export function Ingredient({ data, ingredient, stock }: Props) {
+export function Ingredient({ data, ingredient, stock, showStock }: Props) {
   const { dict } = data
   const { bottleID } = ingredient
   const { amount, category, name, infusion } = getIngredientView(
@@ -30,9 +31,9 @@ export function Ingredient({ data, ingredient, stock }: Props) {
     <div
       className={cn(
         '-ms-2 flex flex-col items-start border-l-2 border-transparent ps-1.5 leading-snug',
-        { 'border-red-400 opacity-60': missing },
-        { 'border-sky-300 opacity-80': categoryMatch },
-        { 'border-muted-foreground/60 opacity-80': ignorable },
+        { 'border-red-400 opacity-60': showStock && missing },
+        { 'border-sky-300 opacity-80': showStock && categoryMatch },
+        { 'border-muted-foreground/60 opacity-80': showStock && ignorable },
       )}
     >
       {category && (

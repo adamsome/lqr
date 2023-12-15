@@ -1,7 +1,9 @@
 'use client'
 
-import { createColumns } from '@/app/u/[username]/research/columns'
-import { Toolbar } from '@/app/u/[username]/research/toolbar'
+import { useAuth } from '@clerk/nextjs'
+
+import { createColumns } from '@/app/research/columns'
+import { Toolbar } from '@/app/research/toolbar'
 import { useIngredientData } from '@/components/data-provider'
 import { DataTable } from '@/components/ui/data-table'
 import { DataTableContainer } from '@/components/ui/data-table-container'
@@ -10,6 +12,9 @@ import { getIngredientPath } from '@/lib/ingredient/get-ingredient-path'
 import { Ingredient, WithPath } from '@/lib/types'
 
 export function Table() {
+  const { isLoaded, isSignedIn } = useAuth()
+  const showStock = !isLoaded || isSignedIn
+
   const { dict } = useIngredientData()
   const items: WithPath<Ingredient>[] = []
   const getPath = getIngredientPath(dict)
@@ -21,11 +26,11 @@ export function Table() {
   }
   return (
     <DataTableContainer
-      columns={createColumns(dict)}
+      columns={createColumns(dict, { showStock })}
       data={items}
       render={(table, columns) => (
         <>
-          <Toolbar table={table} />
+          <Toolbar table={table} showStock={showStock} />
           <DataTable table={table} columns={columns} />
           <DataTablePagination table={table} />
         </>

@@ -2,9 +2,9 @@
 
 import { ColumnDef } from '@tanstack/react-table'
 
-import { ActionCell } from '@/app/u/[username]/research/action-cell'
-import { StockCell } from '@/app/u/[username]/research/stock-cell'
-import { IngredientPathText } from '@/components/ingredient-path/text'
+import { ActionCell } from '@/app/research/action-cell'
+import { StockCell } from '@/app/research/stock-cell'
+import { IngredienFullName } from '@/components/ingredient-full-name'
 import { StockIcon } from '@/components/stock-icon'
 import { DataTableColumnHeader as Header } from '@/components/ui/data-table-column-header'
 import { AGING_DICT, PRODUCTION_METHOD_DICT } from '@/lib/generated-consts'
@@ -18,30 +18,29 @@ type Column<T> = ColumnDef<T> & {
   className?: string
 }
 
+const STOCK_COL: Column<WithPath<Ingredient>> = {
+  accessorKey: 'stock',
+  accessorFn: (row) => row.stock ?? -1,
+  header: ({ column }) => (
+    <Header column={column} tooltip="In Stock">
+      <div className="-mr-2 flex h-8 w-8 items-center justify-center">
+        <StockIcon header />
+      </div>
+    </Header>
+  ),
+  cell: ({ row }) => (
+    <StockCell ingredientID={row.original.id} stock={row.getValue('stock')} />
+  ),
+  filterFn: (row, id, value) => value.includes(getStockState(row.getValue(id))),
+}
+
 export const createColumns = (
   dict: Record<string, Ingredient>,
+  { showStock }: { showStock?: boolean } = {},
 ): Column<WithPath<Ingredient>>[] => {
   const getPathName = getIngredientPathName(dict)
   return [
-    {
-      accessorKey: 'stock',
-      accessorFn: (row) => row.stock ?? -1,
-      header: ({ column }) => (
-        <Header column={column} tooltip="In Stock">
-          <div className="-mr-2 flex h-8 w-8 items-center justify-center">
-            <StockIcon header />
-          </div>
-        </Header>
-      ),
-      cell: ({ row }) => (
-        <StockCell
-          ingredientID={row.original.id}
-          stock={row.getValue('stock')}
-        />
-      ),
-      filterFn: (row, id, value) =>
-        value.includes(getStockState(row.getValue(id))),
-    },
+    ...(showStock ? [STOCK_COL] : []),
     {
       accessorKey: 'name',
       header: ({ column }) => <Header column={column}>Name</Header>,
@@ -58,7 +57,7 @@ export const createColumns = (
         )
       },
       header: ({ column }) => <Header column={column}>Category</Header>,
-      cell: ({ row }) => <IngredientPathText path={row.original.path} />,
+      cell: ({ row }) => <IngredienFullName path={row.original.path} />,
       filterFn: hierarchicalFilterFn((row) => row.original.path),
     },
     {

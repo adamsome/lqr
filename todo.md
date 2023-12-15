@@ -1,5 +1,6 @@
 # TODO
 
+- When looking at another user's specs, include their followers
 
 ## Redesign
 
@@ -17,15 +18,14 @@
 
 ## Home & following
 
-- Allow signed-out to view pages
-- App command sign-in
-- Hide Actions when signed-out
-- Spec Edit is when its yours, Clone when not?
-- Avatar & name (use Clerk pictureUrl)
 - My Bar: Count of bottles, Low stocked
 - Favorite specs (In Stock sort incl. favorite)
 - Recent specs
 - Following
+- Spec avatar & name (use Clerk pictureUrl)
+- Link from user avatars
+- Spec Edit is when its yours, Clone when not?
+- Specs filter users avatar
 
 ## Shop
 

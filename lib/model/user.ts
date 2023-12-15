@@ -30,11 +30,14 @@ const SYSTEM_USERS = [
 const byID = toIDMap(SYSTEM_USERS, ({ id }) => id)
 const byUsername = toIDMap(SYSTEM_USERS, ({ username }) => username)
 
-export async function getUserIngredients(): Promise<
-  Record<string, Partial<Ingredient>>
-> {
-  const { userId: id } = auth()
-  invariant(id, `User ID requried to get user data`)
+export async function getUserIngredients(
+  userID?: string,
+): Promise<Record<string, Partial<Ingredient>>> {
+  const { userId: currentUserID } = auth()
+
+  const id = userID ?? currentUserID
+
+  if (!id) return {}
 
   const { db } = await connectToDatabase()
   const user = await db
