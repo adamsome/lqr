@@ -17,13 +17,15 @@
 ## Home & following
 
 - My Bar: Count of bottles, Low stocked
-- Favorite specs (In Stock sort incl. favorite)
 - Recent specs
 - Following
+- Favorite specs (In Stock sort incl. favorite)
+
 - Spec avatar & name (use Clerk pictureUrl)
 - Link from user avatars
 - Spec Edit is when its yours, Clone when not?
 - Specs filter users avatar
+- If on current user home, don't show app-cmd, but have fn. available
 
 ## Shop
 

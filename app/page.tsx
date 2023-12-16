@@ -21,7 +21,7 @@ export default async function Page() {
     <ResponsiveLayout.Root>
       <ResponsiveLayout.Header title={<UserAvatar user={user} />} />
       <Container className="relative py-4 sm:py-6">
-        <UserAvatar user={user} size="3xl" />
+        <UserAvatar user={user} size="xl" />
         {username && (
           <CardGrid>
             <CardLink href={toSpecs(username)}>

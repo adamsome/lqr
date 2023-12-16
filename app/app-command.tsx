@@ -99,7 +99,7 @@ export function AppCommand() {
           className="rounded-full shadow-md overflow-hidden w-9 h-9 sm:w-11 sm:h-11"
           onClick={() => setOpen(true)}
         >
-          <UserAvatar user={user} size="3xl" hideName />
+          <UserAvatar user={user} size="lg" hideName />
         </button>
       </Sticky>
 

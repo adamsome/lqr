@@ -22,8 +22,8 @@ export function AuthProvider({ children }: Props) {
           colorInputText: 'hsl(213 31% 91%)',
           colorShimmer: 'rgba(255,255,255,0.36)',
           shadowShimmer: '1px 1px 2px rgba(0,0,0,0.36)',
-          colorPrimary: 'hsl(223 47% 8%)',
-          colorTextOnPrimaryBackground: 'hsl(216 34% 17%)',
+          colorPrimary: 'hsl(216deg 24% 36%)',
+          colorTextOnPrimaryBackground: 'hsl(216deg 24% 26%)',
         },
         elements: {
           formButtonPrimary:

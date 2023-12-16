@@ -1,6 +1,7 @@
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import { cn } from '@/lib/utils'
 import { VariantProps, cva } from 'class-variance-authority'
+import { ReactNode } from 'react'
 
 type User = {
   displayName?: string | null
@@ -8,7 +9,8 @@ type User = {
   imageUrl?: string | null
 }
 
-type Props = {
+export type Props = {
+  children?: ReactNode
   className?: string
   user?: User | null
   hideName?: boolean
@@ -19,10 +21,8 @@ const usernameVariants = cva(['gap-1.5'], {
     size: {
       sm: ['gap-1.5', 'text-sm'],
       md: ['gap-1.5'],
-      lg: ['gap-2', 'text-lg'],
-      xl: ['gap-2', 'text-xl'],
-      '2xl': ['gap-3', 'text-2xl'],
-      '3xl': ['gap-3', 'text-2xl', 'sm:text-3xl'],
+      lg: ['gap-3', 'text-2xl', 'sm:text-3xl'],
+      xl: ['gap-3', 'text-3xl', 'sm:text-3xl'],
     },
   },
   defaultVariants: {
@@ -35,10 +35,8 @@ const avatarVariants = cva([], {
     size: {
       sm: ['w-4', 'h-4'],
       md: ['w-5', 'h-5'],
-      lg: ['w-6', 'h-6'],
-      xl: ['w-7', 'h-7'],
-      '2xl': ['w-8', 'h-8'],
-      '3xl': ['w-9', 'h-9', 'sm:w-11', 'sm:h-11'],
+      lg: ['w-9', 'h-9', 'sm:w-11', 'sm:h-11'],
+      xl: ['w-11', 'h-11', 'sm:w-11', 'sm:h-11'],
     },
   },
   defaultVariants: {
@@ -46,7 +44,30 @@ const avatarVariants = cva([], {
   },
 })
 
-export function UserAvatar({ className, user, size, hideName }: Props) {
+const childrenVariants = cva(
+  ['flex', 'items-center', 'leading-tight', 'text-muted-foreground'],
+  {
+    variants: {
+      size: {
+        sm: ['text-xs'],
+        md: ['text-xs'],
+        lg: ['text-sm'],
+        xl: ['text-sm'],
+      },
+      defaultVartiants: {
+        size: 'md',
+      },
+    },
+  },
+)
+
+export function UserAvatar({
+  children,
+  className,
+  user,
+  size,
+  hideName,
+}: Props) {
   const { displayName, username, imageUrl } = user ?? {}
 
   const name = user ? displayName ?? username ?? '?' : ''
@@ -75,11 +96,15 @@ export function UserAvatar({ className, user, size, hideName }: Props) {
     >
       {avatar}
       <span
-        className={cn('w-full overflow-hidden transition-all', {
+        className={cn('flex flex-col w-full overflow-hidden transition-all', {
           'w-0 opacity-0': hideName || !user,
+          'leading-none': children,
         })}
       >
-        {name}
+        <span>{name}</span>
+        {children && (
+          <span className={cn(childrenVariants({ size }))}>{children}</span>
+        )}
       </span>
     </div>
   )
