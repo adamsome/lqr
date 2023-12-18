@@ -1,6 +1,6 @@
 import { Criteria } from '@/app/u/[username]/specs/_criteria/types'
-import { Card } from '@/app/u/[username]/specs/card'
 import { LoadMoreButton } from '@/app/u/[username]/specs/load-more-button'
+import { TallCard } from '@/app/u/[username]/specs/tall-card'
 import { CardGrid } from '@/components/ui/card-grid'
 import { IngredientData, Spec } from '@/lib/types'
 
@@ -21,7 +21,7 @@ export function Grid({ data, specs, criteria, count, showStock }: Props) {
     <>
       <CardGrid>
         {specs.slice(0, criteria.limit).map((spec) => (
-          <Card
+          <TallCard
             key={spec.id}
             data={data}
             spec={spec}

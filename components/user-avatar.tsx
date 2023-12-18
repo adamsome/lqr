@@ -14,21 +14,24 @@ export type Props = {
   className?: string
   user?: User | null
   hideName?: boolean
-} & VariantProps<typeof usernameVariants>
+} & VariantProps<typeof variants>
 
-const usernameVariants = cva(['gap-1.5'], {
-  variants: {
-    size: {
-      sm: ['gap-1.5', 'text-sm'],
-      md: ['gap-1.5'],
-      lg: ['gap-3', 'text-2xl', 'sm:text-3xl'],
-      xl: ['gap-3', 'text-3xl', 'sm:text-3xl'],
+const variants = cva(
+  ['flex', 'items-center', 'gap-1.5', 'transition-all', 'gap-1.5', 'font-bold'],
+  {
+    variants: {
+      size: {
+        sm: ['gap-1.5', 'text-sm'],
+        md: ['gap-1.5'],
+        lg: ['gap-3', 'text-2xl', 'sm:text-3xl'],
+        xl: ['gap-3', 'text-3xl', 'sm:text-3xl'],
+      },
+    },
+    defaultVariants: {
+      size: 'md',
     },
   },
-  defaultVariants: {
-    size: 'md',
-  },
-})
+)
 
 const avatarVariants = cva([], {
   variants: {
@@ -44,23 +47,6 @@ const avatarVariants = cva([], {
   },
 })
 
-const childrenVariants = cva(
-  ['flex', 'items-center', 'leading-tight', 'text-muted-foreground'],
-  {
-    variants: {
-      size: {
-        sm: ['text-xs'],
-        md: ['text-xs'],
-        lg: ['text-sm'],
-        xl: ['text-sm'],
-      },
-      defaultVartiants: {
-        size: 'md',
-      },
-    },
-  },
-)
-
 export function UserAvatar({
   children,
   className,
@@ -75,8 +61,8 @@ export function UserAvatar({
   const initials = name
     .split(' ')
     .slice(0, 2)
-    .map((s) => s[0] ?? '?')
-  if (initials.length < 2 && name[1]) initials.push(name[1])
+    .map((s) => s[0]?.toUpperCase() ?? '?')
+  if (initials.length < 2 && name[1]) initials.push(name[1].toUpperCase())
 
   let avatar = (
     <Avatar className={cn('w-5 h-5', avatarVariants({ size }))}>
@@ -88,8 +74,7 @@ export function UserAvatar({
   return (
     <div
       className={cn(
-        'flex items-center gap-1.5 font-semibold transition-all',
-        usernameVariants({ size }),
+        variants({ size }),
         { 'gap-0': hideName || !user },
         className,
       )}
@@ -101,10 +86,10 @@ export function UserAvatar({
           'leading-none': children,
         })}
       >
-        <span>{name}</span>
-        {children && (
-          <span className={cn(childrenVariants({ size }))}>{children}</span>
-        )}
+        <span className="tracking-tight overflow-hidden text-ellipsis whitespace-nowrap">
+          {name}
+        </span>
+        {children && <span>{children}</span>}
       </span>
     </div>
   )

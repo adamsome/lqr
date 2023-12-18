@@ -1,54 +1,48 @@
-import { Ingredient } from '@/app/u/[username]/specs/[id]/ingredient'
-import { SpecStock } from '@/app/u/[username]/specs/[id]/spec-stock'
-import { Criteria } from '@/app/u/[username]/specs/_criteria/types'
+import Link from 'next/link'
+import { ReactNode } from 'react'
+
 import {
   CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
-  CardLink,
   CardTitle,
 } from '@/components/ui/card'
-import { toSpecItem } from '@/lib/routes'
+import { getIngredientView as makeGetIngredientView } from '@/lib/ingredient/get-ingredient-view'
 import { IngredientData, Spec } from '@/lib/types'
+import { capitalize, rejectNil } from '@/lib/utils'
 
 type Props = {
   data: IngredientData
   spec: Spec
-  criteria: Criteria
-  showStock?: boolean
+  href: string
+  description?: ReactNode
 }
 
-export function Card({ data, spec, criteria, showStock }: Props) {
-  const { id, name, ingredients, source, stock, username } = spec
-  const searchParams =
-    criteria.username && criteria.username !== username
-      ? `?u=${criteria.username}`
-      : ''
+export function Card({ data, spec, href, description }: Props) {
+  const { name, year, ingredients } = spec
+  const getIngredientView = makeGetIngredientView(data.dict)
   return (
-    <CardLink href={toSpecItem(username, id) + searchParams}>
-      <CardHeader>
-        <CardTitle>{name}</CardTitle>
-        {source && <CardDescription>{source}</CardDescription>}
+    <Link
+      className="flex flex-col pt-1 pb-1.5 rounded transition-colors hover:bg-muted/50 focus:bg-muted active:bg-muted"
+      href={href}
+    >
+      <CardHeader className="px-2 py-0">
+        <CardTitle className="text-sm font-bold">
+          {name}
+          {year && (
+            <span className="text-muted-foreground font-medium"> ({year})</span>
+          )}
+        </CardTitle>
+        {description && <CardDescription>{description}</CardDescription>}
       </CardHeader>
-      <CardContent className="flex-1 text-sm">
-        <div className="flex flex-col gap-2">
-          {ingredients.map((ingredient, i) => (
-            <Ingredient
-              key={`${i}_${ingredient.name ?? ingredient.id}`}
-              data={data}
-              ingredient={ingredient}
-              stock={stock?.ingredients[i]}
-              showStock={showStock}
-            />
-          ))}
-        </div>
+      <CardContent className="px-2 py-0 text-xs text-muted-foreground font-medium line-clamp-2">
+        {ingredients
+          .map((it) => getIngredientView(it))
+          .map(({ name, infusion }) =>
+            rejectNil([infusion, capitalize(name)]).join(' '),
+          )
+          .join(', ')}
       </CardContent>
-      {showStock && (
-        <CardFooter>
-          <SpecStock stock={stock} />
-        </CardFooter>
-      )}
-    </CardLink>
+    </Link>
   )
 }

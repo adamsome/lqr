@@ -21,7 +21,7 @@ const SYSTEM_USERS = [
   {
     id: 'user_deathcowelcomehome',
     username: 'deathco_welcome_home',
-    displayName: 'Death & Co Welcome Home',
+    displayName: 'Death & Co: Welcome Home',
   },
 ]
 
@@ -31,13 +31,16 @@ const byUsername = toIDMap(SYSTEM_USERS, ({ username }) => username)
 export async function getManyUsers(userIDs: string[]): Promise<User[]> {
   const [systemIDs, ids] = partition((id) => byID[id] !== undefined, userIDs)
   const systemUsers = systemIDs.map((id) => byID[id])
-  const rawUsers = await clerkClient.users.getUserList({ userId: ids })
+
+  const rawUsers =
+    ids.length > 0 ? await clerkClient.users.getUserList({ userId: ids }) : []
   const users = rawUsers.map((u) => ({
     id: u.id,
     username: u.username ?? u.emailAddresses[0]?.emailAddress ?? 'Unknown',
     imageUrl: u.imageUrl,
   }))
-  return [...systemUsers, ...users]
+
+  return [...users, ...systemUsers]
 }
 
 export async function getUserByID(

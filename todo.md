@@ -7,6 +7,7 @@
   - Move sort by to '888 items {caret-down}'
 
 - Specs compact cards
+  - Description shows avatar [other] & sort message
 - Spec bigger text on desktop
 - Colors! BG! Look & feel!
 - Add specs loading page
@@ -16,10 +17,13 @@
 
 ## Home & following
 
-- My Bar: Count of bottles, Low stocked
+- Horizontal scroller
 - Recent specs
 - Following
 - Favorite specs (In Stock sort incl. favorite)
+
+- Header Bar & Shopping icon dropdowns
+- Explore Drawer bar/shopping list
 
 - Spec avatar & name (use Clerk pictureUrl)
 - Link from user avatars
@@ -35,6 +39,7 @@
 
 ## QoL
 
+- Specs grouping by sort
 - Bar: Keep empty bottles
 - Show app-command skeleton when auth client loading
 - Hide Salt from Bar (should be implicit)

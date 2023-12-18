@@ -6,6 +6,14 @@ import { Spec } from '@/lib/types'
 
 import 'server-only'
 
+export async function getSpecs(userIDs: string[]): Promise<Spec[]> {
+  const { db } = await connectToDatabase()
+  return db
+    .collection<OptionalUnlessRequiredId<Spec>>('spec')
+    .find({ userID: { $in: userIDs } }, { projection: { _id: false } })
+    .toArray()
+}
+
 export async function getSpec(
   filter: Filter<OptionalId<Spec>>,
 ): Promise<Spec | undefined> {
@@ -22,21 +30,17 @@ export async function getSpec(
 
 export async function updateSpec(spec: Spec) {
   const { db } = await connectToDatabase()
-  return await db
+  return db
     .collection<OptionalUnlessRequiredId<Spec>>('spec')
     .updateOne({ id: spec.id }, { $set: spec })
 }
 
 export async function addSpec(spec: Spec) {
   const { db } = await connectToDatabase()
-  return await db
-    .collection<OptionalUnlessRequiredId<Spec>>('spec')
-    .insertOne(spec)
+  return db.collection<OptionalUnlessRequiredId<Spec>>('spec').insertOne(spec)
 }
 
 export async function deleteSpec(filter: Filter<OptionalId<Spec>>) {
   const { db } = await connectToDatabase()
-  return await db
-    .collection<OptionalUnlessRequiredId<Spec>>('spec')
-    .deleteOne(filter)
+  return db.collection<OptionalUnlessRequiredId<Spec>>('spec').deleteOne(filter)
 }
