@@ -31,16 +31,9 @@ export type Props = {
   data: IngredientData
   criteria: Criteria
   users: UserState[]
-  clearSpacer?: boolean
 }
 
-export function SidebarFilters({
-  className,
-  data,
-  criteria,
-  users,
-  clearSpacer,
-}: Props) {
+export function SidebarFilters({ className, data, criteria, users }: Props) {
   const { categories, ingredients } = criteria
   const { searchParams, append, clear } = useRouterSearchParams()
 
@@ -52,9 +45,7 @@ export function SidebarFilters({
   }
 
   return (
-    <div
-      className={cn('self-stretch flex flex-col gap-4 max-h-screen', className)}
-    >
+    <div className={cn('flex flex-col gap-4 w-full max-h-screen', className)}>
       <div className="flex-initial flex flex-col gap-6 max-h-screen overflow-y-auto">
         <FilterSection name="Category">
           {SPEC_CATEGORY_ITEMS.map(({ value, label }) => (
@@ -119,11 +110,7 @@ export function SidebarFilters({
         </FilterSection>
       </div>
 
-      <div
-        className={cn('flex-grow flex-shrink-0 flex flex-col justify-end', {
-          'min-h-[132px]': clearSpacer,
-        })}
-      >
+      <div className="flex-grow flex-shrink-0 flex flex-col justify-end">
         <Button
           className="sticky bottom-4"
           variant="secondary"

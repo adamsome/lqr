@@ -88,8 +88,8 @@ export async function UserHome({ user }: Props) {
         <ShowAll href={toSpecs(user.username)} />
       </div>
       {followers.map((follower) => (
-        <div>
-          <div key={follower.id} className="flex flex-col gap-2">
+        <div key={follower.id}>
+          <div className="flex flex-col gap-2">
             <Link href={toHome(follower.username)}>
               <UserAvatar user={follower} size="md" />
             </Link>
