@@ -17,6 +17,7 @@ export function sortSpecs(
         [
           order((s) => (s.stock?.count ?? 0) / (s.stock?.total ?? 0)),
           descend((s) => s.updatedAt),
+          order((s) => s.createdAt),
         ],
         specs,
       )

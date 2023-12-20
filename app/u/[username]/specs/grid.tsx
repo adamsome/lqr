@@ -15,9 +15,17 @@ type Props = {
   userDict: Record<string, User>
   criteria: Criteria
   count: number
+  showStock?: boolean
 }
 
-export function Grid({ data, specs, userDict, criteria, count }: Props) {
+export function Grid({
+  data,
+  specs,
+  userDict,
+  criteria,
+  count,
+  showStock,
+}: Props) {
   if (!specs.length) {
     return <>No results</>
   }
@@ -45,7 +53,7 @@ export function Grid({ data, specs, userDict, criteria, count }: Props) {
                     user={userDict[spec.username]}
                   />
                 </Link>
-                {spec.stock && (
+                {showStock && spec.stock && (
                   <SpecStockText className="text-xs" stock={spec.stock} />
                 )}
               </div>

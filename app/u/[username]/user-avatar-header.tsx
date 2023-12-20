@@ -12,7 +12,7 @@ type Props = {
 
 export function UserAvatarHeader({ user, specCount, bottleCount }: Props) {
   return (
-    <UserAvatar user={user} size="xl">
+    <UserAvatar user={user} size="2xl">
       <div className="flex items-center gap-4 text-sm text-muted-foreground font-medium overflow-hidden">
         <Link className="whitespace-nowrap" href={toSpecs(user.username)}>
           <span className="text-foreground font-bold">{specCount}</span>{' '}

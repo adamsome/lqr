@@ -56,7 +56,7 @@ export async function UserHome({ user }: Props) {
 
   return (
     <>
-      <UserAvatar user={user} size="xl">
+      <UserAvatar user={user} size="2xl">
         <div className="flex items-center gap-4 text-sm text-muted-foreground font-medium">
           <Link href={toSpecs(user.username)}>
             <span className="text-foreground font-bold">{specCount}</span>{' '}

@@ -23,8 +23,9 @@ const variants = cva(
       size: {
         sm: ['gap-1.5', 'text-sm'],
         md: ['gap-1.5'],
-        lg: ['gap-3', 'text-2xl', 'sm:text-3xl'],
-        xl: ['gap-3', 'text-3xl', 'sm:text-3xl'],
+        lg: ['gap-1.5', 'text-lg'],
+        xl: ['gap-3', 'text-2xl', 'sm:text-3xl'],
+        '2xl': ['gap-3', 'text-3xl', 'sm:text-3xl'],
       },
     },
     defaultVariants: {
@@ -38,8 +39,9 @@ const avatarVariants = cva([], {
     size: {
       sm: ['w-4', 'h-4'],
       md: ['w-5', 'h-5'],
-      lg: ['w-9', 'h-9', 'sm:w-11', 'sm:h-11'],
-      xl: ['w-11', 'h-11', 'sm:w-11', 'sm:h-11'],
+      lg: ['w-7', 'h-7'],
+      xl: ['w-9', 'h-9', 'sm:w-11', 'sm:h-11'],
+      '2xl': ['w-11', 'h-11', 'sm:w-11', 'sm:h-11'],
     },
   },
   defaultVariants: {

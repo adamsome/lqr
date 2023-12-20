@@ -13,7 +13,6 @@
 
 ## Home & following
 
-- Spec avatar & name (use Clerk pictureUrl)
 - Following
 - Users to follow
 - Favorite specs (In Stock sort incl. favorite)

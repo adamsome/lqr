@@ -24,7 +24,7 @@ type Props = {
   criteria: Criteria
 }
 
-export async function SpecsContainer({ user, criteria }: Props) {
+export async function SpecsContainer({ user, criteria: criteriaProp }: Props) {
   const { userId: currentUserID } = auth()
 
   const [currentUser, userIDs, data] = await Promise.all([
@@ -43,6 +43,10 @@ export async function SpecsContainer({ user, criteria }: Props) {
   const { dict, tree } = data
   const getStock = getSpecStock(dict, tree)
   const allSpecs = rawSpecs.map((spec) => ({ ...spec, stock: getStock(spec) }))
+
+  const criteria = currentUser
+    ? criteriaProp
+    : { ...criteriaProp, sort: criteriaProp.sort ?? 'updated' }
 
   const specs = applyCriteria(data, allSpecs, criteria)
 
@@ -78,6 +82,7 @@ export async function SpecsContainer({ user, criteria }: Props) {
         userDict={userDict}
         criteria={criteria}
         count={specs.length}
+        showStock={Boolean(currentUser)}
       />
     </Specs>
   )
