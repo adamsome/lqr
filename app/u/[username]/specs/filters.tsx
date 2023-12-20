@@ -33,7 +33,7 @@ export type Props = {
   users: UserState[]
 }
 
-export function SidebarFilters({ className, data, criteria, users }: Props) {
+export function Filters({ className, data, criteria, users }: Props) {
   const { categories, ingredients } = criteria
   const { searchParams, append, clear } = useRouterSearchParams()
 
@@ -45,7 +45,7 @@ export function SidebarFilters({ className, data, criteria, users }: Props) {
   }
 
   return (
-    <div className={cn('flex flex-col gap-4 w-full max-h-screen', className)}>
+    <div className={cn('flex flex-col gap-4', className)}>
       <div className="flex-initial flex flex-col gap-6 max-h-screen overflow-y-auto">
         <FilterSection name="Category">
           {SPEC_CATEGORY_ITEMS.map(({ value, label }) => (

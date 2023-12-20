@@ -5,15 +5,15 @@ import { SpecsContainer } from '@/app/u/[username]/specs/specs-container'
 import { getUser } from '@/lib/model/user'
 
 type Props = {
-  params: {
-    username: string
+  params?: {
+    username?: string
   }
-  searchParams: {
+  searchParams?: {
     [key: string]: string | string[] | undefined
   }
 }
 
-export default async function Page({ params, searchParams }: Props) {
+export default async function Page({ params = {}, searchParams = {} }: Props) {
   const { username } = params
 
   const user = await getUser(username)
@@ -21,6 +21,6 @@ export default async function Page({ params, searchParams }: Props) {
   // TODO: Show "User not found"
   invariant(user, `User not found.`)
 
-  const criteria = parseCriteria(searchParams, username)
+  const criteria = parseCriteria(searchParams ?? {}, username)
   return <SpecsContainer user={user} criteria={criteria} />
 }

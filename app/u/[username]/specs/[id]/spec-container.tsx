@@ -14,8 +14,6 @@ type Props = {
 }
 
 export async function SpecContainer({ specID, user, showEdit }: Props) {
-  invariant(specID, `ID needed to show spec.`)
-
   const [data, spec] = await Promise.all([
     getIngredientData(),
     getSpec({ id: specID, userID: user.id }),

@@ -1,9 +1,10 @@
 import { clerkClient } from '@clerk/nextjs'
+import { type User as RawUser } from '@clerk/nextjs/dist/types/server'
 import { partition } from 'ramda'
 import invariant from 'tiny-invariant'
 
 import { User } from '@/lib/types'
-import { toIDMap } from '@/lib/utils'
+import { toDict } from '@/lib/utils'
 
 import 'server-only'
 
@@ -25,8 +26,14 @@ const SYSTEM_USERS = [
   },
 ]
 
-const byID = toIDMap(SYSTEM_USERS, ({ id }) => id)
-const byUsername = toIDMap(SYSTEM_USERS, ({ username }) => username)
+const byID = toDict(SYSTEM_USERS, ({ id }) => id)
+const byUsername = toDict(SYSTEM_USERS, ({ username }) => username)
+
+const toUser = ({ id, username, emailAddresses, imageUrl }: RawUser): User => ({
+  id,
+  username: username ?? emailAddresses[0]?.emailAddress ?? 'Unknown',
+  imageUrl,
+})
 
 export async function getManyUsers(userIDs: string[]): Promise<User[]> {
   const [systemIDs, ids] = partition((id) => byID[id] !== undefined, userIDs)
@@ -34,11 +41,7 @@ export async function getManyUsers(userIDs: string[]): Promise<User[]> {
 
   const rawUsers =
     ids.length > 0 ? await clerkClient.users.getUserList({ userId: ids }) : []
-  const users = rawUsers.map((u) => ({
-    id: u.id,
-    username: u.username ?? u.emailAddresses[0]?.emailAddress ?? 'Unknown',
-    imageUrl: u.imageUrl,
-  }))
+  const users = rawUsers.map(toUser)
 
   return [...users, ...systemUsers]
 }
@@ -47,9 +50,10 @@ export async function getUserByID(
   userID?: string | null,
 ): Promise<User | null> {
   if (!userID) return null
-  const users = await getManyUsers([userID])
-  invariant(users[0], `No user found with ID '${userID}'`)
-  return users[0]
+  if (byID[userID]) return byID[userID]
+  const rawUser = await clerkClient.users.getUser(userID)
+  invariant(rawUser, `No user found with ID '${userID}'`)
+  return toUser(rawUser)
 }
 
 export async function getUser(username?: string): Promise<User | null> {

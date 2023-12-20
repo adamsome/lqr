@@ -228,12 +228,12 @@ const createCategoryParser = (data: IngredientData) => {
 }
 
 type Props = {
-  params: {
-    username: string
+  params?: {
+    username?: string
   }
 }
 
-export default async function Page({ params }: Props) {
+export default async function Page({ params = {} }: Props) {
   const { userId: currentUserID } = auth()
 
   const { username } = params

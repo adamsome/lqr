@@ -1,6 +1,6 @@
 import { auth } from '@clerk/nextjs'
 
-import * as ResponsiveLayout from '@/components/responsive-layout'
+import * as Layout from '@/components/responsive-layout'
 import { CardHeader, CardLink } from '@/components/ui/card'
 import { CardGrid } from '@/components/ui/card-grid'
 import { Container } from '@/components/ui/container'
@@ -18,8 +18,8 @@ export default async function Page() {
   // TODO: Show non-signed-in homepage if no user
 
   return (
-    <ResponsiveLayout.Root>
-      <ResponsiveLayout.Header title={<UserAvatar user={user} />} />
+    <Layout.Root>
+      <Layout.Header title={<UserAvatar user={user} />} />
       <Container className="relative py-4 sm:py-6">
         <UserAvatar user={user} size="xl" />
         {username && (
@@ -36,6 +36,6 @@ export default async function Page() {
           </CardGrid>
         )}
       </Container>
-    </ResponsiveLayout.Root>
+    </Layout.Root>
   )
 }

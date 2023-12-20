@@ -26,10 +26,6 @@ const sortByRecentSpec = (
     users,
   ).reverse()
 
-const generateSpecHref = ({ username }: User, spec: Spec) =>
-  toSpecItem(username, spec.id) +
-  (username !== spec.username ? `?=${username}` : '')
-
 type Props = {
   user: User
 }
@@ -81,7 +77,7 @@ export async function UserHome({ user }: Props) {
                 key={spec.id}
                 data={data}
                 spec={spec}
-                href={generateSpecHref(user, spec)}
+                href={toSpecItem(spec, user.username)}
               />
             ))}
         </div>
@@ -101,7 +97,7 @@ export async function UserHome({ user }: Props) {
                     key={spec.id}
                     data={data}
                     spec={spec}
-                    href={generateSpecHref(follower, spec)}
+                    href={toSpecItem(spec, user.username)}
                   />
                 ))}
             </div>

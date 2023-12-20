@@ -1,21 +1,17 @@
 import { sortBy } from 'ramda'
 
 import { Criteria } from '@/app/u/[username]/specs/_criteria/types'
-import {
-  SidebarFilters,
-  UserState,
-} from '@/app/u/[username]/specs/sidebar-filters'
+import { Filters, UserState } from '@/app/u/[username]/specs/filters'
 import { IngredientData, User } from '@/lib/types'
-import { toIDMap } from '@/lib/utils'
+import { cn } from '@/lib/utils'
 
 type Props = {
-  users: User[]
+  userDict: Record<string, User>
   data: IngredientData
   criteria: Criteria
 }
 
-export function FiltersContainer({ users, data, criteria }: Props) {
-  const userDict = toIDMap(users, (u) => u.username)
+export function FiltersContainer({ userDict, data, criteria }: Props) {
   const checkedUserDict = criteria.users.reduce<Record<string, UserState>>(
     (acc, u) => ({ ...acc, [u]: { ...userDict[u], checked: true } }),
     { ...userDict },
@@ -25,8 +21,11 @@ export function FiltersContainer({ users, data, criteria }: Props) {
     Object.keys(checkedUserDict).map((u) => checkedUserDict[u]),
   )
   return (
-    <SidebarFilters
-      className="sm:sticky sm:top-18 sm:w-60 sm:[&>*:last-child]:min-h-[132px]"
+    <Filters
+      className={cn(
+        'w-full max-h-screen [&>*]:self-stretch',
+        'sm:sticky sm:top-18 sm:pt-1 sm:w-60 sm:[&>*:last-child]:min-h-[132px]',
+      )}
       data={data}
       criteria={criteria}
       users={userStates}

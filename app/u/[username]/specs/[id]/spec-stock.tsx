@@ -26,15 +26,27 @@ export function SpecStock({ className, stock }: Props) {
         </div>
       </TooltipTrigger>
       <TooltipContent>
-        <div className="flex items-center gap-1 text-muted-foreground">
-          <div className="flex items-center gap-1 text-muted-foreground">
-            <span>{count}</span>
-            <span className="text-muted-foreground/60">/</span>
-            <span>{total}</span>
-          </div>
-          <span>In Stock</span>
-        </div>
+        <SpecStockText stock={stock} />
       </TooltipContent>
     </Tooltip>
+  )
+}
+
+export function SpecStockText({ className, stock }: Props) {
+  const { count = 0, total = 0 } = stock ?? {}
+  return (
+    <div
+      className={cn(
+        'flex items-center gap-1 text-muted-foreground/60 font-medium',
+        className,
+      )}
+    >
+      <div className="flex items-center gap-px">
+        <span className="text-muted-foreground font-bold">{count}</span>
+        <span>/</span>
+        <span>{total}</span>
+      </div>
+      <span className="whitespace-nowrap">in stock</span>
+    </div>
   )
 }

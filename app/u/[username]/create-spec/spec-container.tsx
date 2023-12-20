@@ -15,7 +15,7 @@ export function SpecContainer() {
 
   function handleClose(id?: string) {
     return id
-      ? router.push(toSpecItem(username, id))
+      ? router.push(toSpecItem({ id, username }))
       : router.push(toSpecs(username))
   }
 

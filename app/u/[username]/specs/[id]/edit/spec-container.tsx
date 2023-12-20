@@ -5,7 +5,7 @@ import { useParams, useRouter } from 'next/navigation'
 import { SpecForm } from '@/app/u/[username]/specs/[id]/edit/spec-form'
 import { useMutate } from '@/hooks/use-mutate'
 import { toSpecItem, toSpecs } from '@/lib/routes'
-import { Spec, User } from '@/lib/types'
+import { Spec } from '@/lib/types'
 
 type Props = {
   spec: Spec
@@ -21,7 +21,7 @@ export function SpecContainer({ spec }: Props) {
   const username = params.username as string
 
   function handleClose() {
-    router.push(toSpecItem(username, id))
+    router.push(toSpecItem(spec))
   }
 
   async function handleDelete() {

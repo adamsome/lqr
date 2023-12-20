@@ -1,4 +1,4 @@
-import { type ClassValue, clsx } from 'clsx'
+import { clsx, type ClassValue } from 'clsx'
 import { twMerge } from 'tailwind-merge'
 
 export function cn(...inputs: ClassValue[]) {
@@ -70,12 +70,12 @@ export function head<T>(arrayOrElement?: T | T[] | null): T | undefined {
   return array != null && array.length ? array[0] : undefined
 }
 
-export function toIDMap<T, TKey extends string | number | symbol = string>(
+export function toDict<T, TKey extends string | number | symbol = string>(
   arr: T[] | undefined | null,
-  idAccessor?: (it: T) => TKey,
+  keyAccessor?: (it: T) => TKey,
 ): Record<TKey, T> {
   const keyFn =
-    idAccessor ??
+    keyAccessor ??
     ((it: T) => ((it as Record<string, unknown>).id ?? String(it)) as TKey)
   return (arr ?? []).reduce(
     (acc, it) => {

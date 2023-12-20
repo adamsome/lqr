@@ -1,68 +1,82 @@
-import { auth } from '@clerk/nextjs'
+import { Pencil2Icon } from '@radix-ui/react-icons'
+import Link from 'next/link'
 import { ReactNode } from 'react'
 
-import { Criteria } from '@/app/u/[username]/specs/_criteria/types'
-import { Grid } from '@/app/u/[username]/specs/grid'
-import { Toolbar } from '@/app/u/[username]/specs/toolbar'
-import { Wrapper } from '@/app/u/[username]/specs/wrapper'
-import { Count } from '@/components/ui/count'
-import { H1 } from '@/components/ui/h1'
-import { IngredientData, Spec, User } from '@/lib/types'
+import { FooterFilterDrawerButton } from '@/app/u/[username]/specs/footer-filter-drawer-button'
+import * as Layout from '@/components/responsive-layout'
+import { Button, IconButton } from '@/components/ui/button'
+import { FullWidthContainer } from '@/components/ui/container'
+import { UserAvatar } from '@/components/user-avatar'
+import { toCreateSpec, toHome } from '@/lib/routes'
+import { User } from '@/lib/types'
 
 type Props = {
-  specs: Spec[]
+  children?: ReactNode
+  header: ReactNode
+  toolbar: ReactNode
+  filters?: ReactNode
+  status?: ReactNode
   user: User
-  data: IngredientData
-  criteria: Criteria
-  total: number
-  filters: ReactNode
+  currentUser?: User | null
 }
 
-export async function Specs({
-  specs,
-  user,
-  data,
-  criteria,
-  total,
+export function Specs({
+  children,
+  header,
+  toolbar,
   filters,
+  status,
+  user,
+  currentUser,
 }: Props) {
-  const { userId: currentUserID } = auth()
+  const isCurrentUser = user.id === currentUser?.id
+  const addUrl = toCreateSpec(user?.username)
   return (
-    <Wrapper
-      user={user}
-      isCurrentUser={user.id === currentUserID}
-      filters={<div className="flex w-full [&>*]:self-stretch">{filters}</div>}
-      status={
-        <span>
-          <Count count={specs.length} total={total} /> specs
-        </span>
-      }
-    >
-      <H1 className="flex items-baseline gap-3">
-        Specs{' '}
-        <Count
-          className="text-[75%] hidden sm:inline"
-          count={specs.length}
-          total={total}
-        />
-      </H1>
+    <Layout.Root>
+      <Layout.Header title={<UserAvatar user={user} />}>
+        {!isCurrentUser ? (
+          <Layout.Back
+            href={toHome(currentUser?.username)}
+            user={currentUser}
+          />
+        ) : (
+          <div />
+        )}
+        <Layout.Actions>
+          {isCurrentUser && (
+            <Link href={addUrl}>
+              <Button size="sm">
+                <Pencil2Icon />
+                <span className="ps-1.5 pe-1">Create</span>
+              </Button>
+            </Link>
+          )}
+        </Layout.Actions>
+      </Layout.Header>
 
-      <div className="flex flex-col gap-6">
-        <Toolbar {...criteria} />
-
-        <div className="flex gap-6">
-          <div className="hidden sm:flex [&>*]:self-stretch">{filters}</div>
-          <div className="flex flex-1 flex-col gap-4">
-            <Grid
-              data={data}
-              specs={specs}
-              criteria={criteria}
-              count={specs.length}
-              showStock={Boolean(currentUserID)}
-            />
+      <FullWidthContainer className="my-4 sm:my-6 flex flex-col gap-4">
+        {header}
+        <div className="flex flex-col gap-3">
+          {toolbar}
+          <div className="flex gap-6">
+            <div className="hidden sm:flex">{filters}</div>
+            <div className="flex flex-1 flex-col gap-4 w-full">{children}</div>
           </div>
         </div>
-      </div>
-    </Wrapper>
+      </FullWidthContainer>
+
+      <Layout.Footer status={status}>
+        <FooterFilterDrawerButton>
+          <div className="flex w-full">{filters}</div>
+        </FooterFilterDrawerButton>
+        {isCurrentUser && (
+          <Link href={addUrl}>
+            <IconButton>
+              <Pencil2Icon className="w-6 h-6" />
+            </IconButton>
+          </Link>
+        )}
+      </Layout.Footer>
+    </Layout.Root>
   )
 }
