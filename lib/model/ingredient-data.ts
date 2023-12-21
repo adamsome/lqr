@@ -3,7 +3,7 @@ import { OptionalUnlessRequiredId } from 'mongodb'
 
 import { parseIngredients } from '@/lib/ingredient/parse-ingredients'
 import { getStaticData } from '@/lib/model/static-data'
-import { connectToDatabase } from '@/lib/mongodb'
+import { FIND_NO_ID, connectToDatabase } from '@/lib/mongodb'
 import { Ingredient, IngredientData, User } from '@/lib/types'
 
 import 'server-only'
@@ -20,7 +20,7 @@ async function getUserIngredients(
   const { db } = await connectToDatabase()
   const user = await db
     .collection<OptionalUnlessRequiredId<User>>('user')
-    .findOne({ id }, { projection: { _id: false } })
+    .findOne({ id }, FIND_NO_ID)
   return user?.ingredients ?? {}
 }
 

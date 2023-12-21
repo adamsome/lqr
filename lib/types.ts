@@ -45,6 +45,7 @@ export interface User {
 export interface Follow {
   follower: string
   followee: string
+  followedAt: string
 }
 
 export type Unit = 'oz' | 'tsp' | 'dash' | 'cube'

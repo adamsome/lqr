@@ -1,7 +1,7 @@
 import { Filter, OptionalId, OptionalUnlessRequiredId } from 'mongodb'
 import invariant from 'tiny-invariant'
 
-import { connectToDatabase } from '@/lib/mongodb'
+import { FIND_NO_ID, connectToDatabase } from '@/lib/mongodb'
 import { Spec } from '@/lib/types'
 
 import 'server-only'
@@ -10,7 +10,7 @@ export async function getSpecs(userIDs: string[]): Promise<Spec[]> {
   const { db } = await connectToDatabase()
   return db
     .collection<OptionalUnlessRequiredId<Spec>>('spec')
-    .find({ userID: { $in: userIDs } }, { projection: { _id: false } })
+    .find({ userID: { $in: userIDs } }, FIND_NO_ID)
     .toArray()
 }
 
@@ -21,7 +21,7 @@ export async function getSpec(
   const specs: Spec[] =
     (await db
       .collection<OptionalUnlessRequiredId<Spec>>('spec')
-      .find(filter, { projection: { _id: false } })
+      .find(filter, FIND_NO_ID)
       .toArray()) ?? []
   if (specs.length !== 1) console.log(filter)
   invariant(specs.length <= 1, `Got multiple specs`)

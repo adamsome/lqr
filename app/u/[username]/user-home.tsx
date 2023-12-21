@@ -32,7 +32,8 @@ type Props = {
 }
 
 export async function UserHome({ user }: Props) {
-  const userIDs = await getFolloweeIDs(user.id)
+  const follows = await getFolloweeIDs(user.id)
+  const userIDs = [user.id, ...follows.map(({ followee }) => followee)]
 
   const [users, data, rawSpecs] = await Promise.all([
     getManyUsers(userIDs),

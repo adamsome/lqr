@@ -17,6 +17,8 @@
 - User avatar popover to follow
 - Users to follow
   - User db actedAt to drive
+  - Follow db follow to include previously unfollowed
+  - Show on specs below load more
 - Favorite specs (In Stock sort incl. favorite)
 
 - Header Bar & Shopping icon dropdowns

@@ -4,13 +4,13 @@ const { MONGODB_URI, MONGODB_DB } = process.env
 
 if (!MONGODB_URI) {
   throw new Error(
-    'Please define the MONGODB_URI environment variable inside .env.local'
+    'Please define the MONGODB_URI environment variable inside .env.local',
   )
 }
 
 if (!MONGODB_DB) {
   throw new Error(
-    'Please define the MONGODB_DB environment variable inside .env.local'
+    'Please define the MONGODB_DB environment variable inside .env.local',
   )
 }
 
@@ -47,9 +47,11 @@ export async function connectToDatabase(): Promise<MongoClientDb> {
           client,
           db: client.db(MONGODB_DB),
         }
-      }
+      },
     )
   }
   cached.conn = await cached.promise
   return cached.conn
 }
+
+export const FIND_NO_ID = { projection: { _id: false } }
