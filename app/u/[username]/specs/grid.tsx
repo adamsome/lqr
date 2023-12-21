@@ -35,7 +35,7 @@ export function Grid({
       <div
         className={cn(
           'grid grid-cols-[repeat(auto-fill,minmax(min(theme(spacing.64),calc(100vw-1rem)),1fr))]',
-          'gap-1 lg:gap-2 -mx-2',
+          'gap-2 sm:gap-3 lg:gap-4 -mx-2',
         )}
       >
         {specs.slice(0, criteria.limit).map((spec) => (

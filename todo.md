@@ -14,7 +14,9 @@
 ## Home & following
 
 - Following
+- User avatar popover to follow
 - Users to follow
+  - User db actedAt to drive
 - Favorite specs (In Stock sort incl. favorite)
 
 - Header Bar & Shopping icon dropdowns

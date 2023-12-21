@@ -3,13 +3,14 @@ import { sortBy } from 'ramda'
 
 import { sortSpecs } from '@/app/u/[username]/specs/_criteria/sort'
 import { Card } from '@/app/u/[username]/specs/card'
+import { UserAvatarHeader } from '@/app/u/[username]/user-avatar-header'
 import { Button } from '@/components/ui/button'
 import { UserAvatar } from '@/components/user-avatar'
 import { getFolloweeIDs } from '@/lib/model/follow'
 import { getIngredientData } from '@/lib/model/ingredient-data'
 import { getSpecs } from '@/lib/model/spec'
 import { getManyUsers } from '@/lib/model/user'
-import { toBar, toHome, toSpecItem, toSpecs } from '@/lib/routes'
+import { toHome, toSpecItem, toSpecs } from '@/lib/routes'
 import { Ingredient, Spec, User } from '@/lib/types'
 
 export const revalidate = 0
@@ -56,18 +57,11 @@ export async function UserHome({ user }: Props) {
 
   return (
     <>
-      <UserAvatar user={user} size="2xl">
-        <div className="flex items-center gap-4 text-sm text-muted-foreground font-medium">
-          <Link href={toSpecs(user.username)}>
-            <span className="text-foreground font-bold">{specCount}</span>{' '}
-            {`spec${specCount !== 1 ? 's' : ''}`}
-          </Link>
-          <Link href={toBar(user.username)}>
-            <span className="text-foreground font-bold">{bottleCount}</span>{' '}
-            {`bottle${bottleCount !== 1 ? 's' : ''}`}
-          </Link>
-        </div>
-      </UserAvatar>
+      <UserAvatarHeader
+        user={user}
+        specCount={specCount}
+        bottleCount={bottleCount}
+      />
       <div>
         <div className="-mx-2">
           {specsByUsername[user.username]

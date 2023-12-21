@@ -1,6 +1,6 @@
 'use client'
 
-import { UserProfile, useClerk, useUser } from '@clerk/nextjs'
+import { UserProfile, useClerk } from '@clerk/nextjs'
 import { Content as DialogContent } from '@radix-ui/react-dialog'
 import {
   CardStackIcon,
@@ -8,6 +8,7 @@ import {
   ExitIcon,
   HomeIcon,
 } from '@radix-ui/react-icons'
+import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { KeyboardEvent, ReactNode, useEffect, useState } from 'react'
 
@@ -25,9 +26,10 @@ import {
 } from '@/components/ui/command'
 import { Dialog, DialogOverlay, DialogPortal } from '@/components/ui/dialog'
 import { UserAvatar } from '@/components/user-avatar'
+import { UserAvatarImage } from '@/components/user-avatar-image'
+import { useUser } from '@/lib/model/use-user'
 import { SIGN_IN, SIGN_UP, toBar, toHome, toSpecs } from '@/lib/routes'
 import { cn } from '@/lib/utils'
-import Link from 'next/link'
 
 export function AppCommand() {
   const router = useRouter()
@@ -99,7 +101,7 @@ export function AppCommand() {
           className="rounded-full shadow-md overflow-hidden w-9 h-9 sm:w-11 sm:h-11"
           onClick={() => setOpen(true)}
         >
-          <UserAvatar user={user} size="xl" hideName />
+          <UserAvatarImage user={user} size="xl" />
         </button>
       </Sticky>
 
@@ -160,7 +162,7 @@ export function AppCommand() {
           <CommandGroup heading="User">
             <CommandIconItem
               name="Profile"
-              icon={<UserAvatar user={user} size="sm" hideName />}
+              icon={<UserAvatarImage user={user} size="sm" />}
               onSelect={handleOpenProfile}
             />
             <CommandIconItem

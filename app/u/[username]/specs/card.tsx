@@ -17,7 +17,7 @@ export function Card({ data, spec, href, description }: Props) {
   const { name, year, ingredients } = spec
   const getIngredientView = makeGetIngredientView(data.dict)
   return (
-    <div className="isolate relative flex flex-col pt-1 pb-1.5 w-full rounded transition-colors hover:bg-muted/50 focus:bg-muted active:bg-muted">
+    <div className="isolate relative flex flex-col gap-0.5 pt-1 pb-1.5 w-full rounded transition-colors hover:bg-muted/50 focus:bg-muted active:bg-muted">
       <CardHeader className="px-2 py-0 w-full">
         <Link className="before:absolute before:inset-0 before:z-0" href={href}>
           <CardTitle className="text-sm sm:text-base font-bold whitespace-nowrap text-ellipsis overflow-hidden">

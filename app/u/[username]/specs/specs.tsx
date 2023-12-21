@@ -54,9 +54,9 @@ export function Specs({
         </Layout.Actions>
       </Layout.Header>
 
-      <FullWidthContainer className="my-4 sm:my-6 flex flex-col gap-4">
+      <FullWidthContainer className="my-4 sm:my-6 flex flex-col gap-5 sm:gap-6">
         {header}
-        <div className="flex flex-col gap-3">
+        <div className="flex flex-col gap-4 sm:gap-5">
           {toolbar}
           <div className="flex gap-6">
             <div className="hidden sm:flex">{filters}</div>

@@ -1,5 +1,4 @@
 import { clerkClient } from '@clerk/nextjs'
-import { type User as RawUser } from '@clerk/nextjs/dist/types/server'
 import { partition } from 'ramda'
 import invariant from 'tiny-invariant'
 
@@ -7,6 +6,7 @@ import { User } from '@/lib/types'
 import { toDict } from '@/lib/utils'
 
 import 'server-only'
+import { toUser } from '@/lib/model/to-user'
 
 const SYSTEM_USERS = [
   {
@@ -28,12 +28,6 @@ const SYSTEM_USERS = [
 
 const byID = toDict(SYSTEM_USERS, ({ id }) => id)
 const byUsername = toDict(SYSTEM_USERS, ({ username }) => username)
-
-const toUser = ({ id, username, emailAddresses, imageUrl }: RawUser): User => ({
-  id,
-  username: username ?? emailAddresses[0]?.emailAddress ?? 'Unknown',
-  imageUrl,
-})
 
 export async function getManyUsers(userIDs: string[]): Promise<User[]> {
   const [systemIDs, ids] = partition((id) => byID[id] !== undefined, userIDs)
