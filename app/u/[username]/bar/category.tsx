@@ -10,7 +10,7 @@ import { IngredientCommandDialogButton } from '@/app/u/[username]/bar/ingredient
 import { StockIcon } from '@/components/stock-icon'
 import { SelectOptions } from '@/components/ui/hierarchical-command-list'
 import { useGetIngredientName } from '@/hooks/use-get-ingredient-name'
-import { useMutate } from '@/hooks/use-mutate'
+import { useMutateStock } from '@/lib/api/use-mutate-stock'
 import { HierarchicalFilter } from '@/lib/hierarchical-filter'
 import { IngredientFilter } from '@/lib/ingredient/filter-ingredient-items'
 import { getStockState } from '@/lib/stock'
@@ -40,13 +40,13 @@ export function Category({
 }: Props) {
   const { name, stocked, topItems, root, rowSpan = 1 } = category
 
-  const { mutating, mutate } = useMutate('/api/stock')
+  const { mutating, mutate } = useMutateStock()
   const getIngredientName = useGetIngredientName()
 
   function onSelect({ item, id, path }: SelectOptions) {
     const ingredientID = item ? item.id : id ?? path?.[path.length - 1]
     invariant(ingredientID, `ID required to add an ingredient.`)
-    mutate({ method: 'PUT', body: JSON.stringify({ ingredientID, stock: 1 }) })
+    mutate(ingredientID, 1)
   }
 
   const addProps = { topItems, root, muteItems, mutating, onSelect }

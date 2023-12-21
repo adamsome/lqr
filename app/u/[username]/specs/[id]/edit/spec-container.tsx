@@ -3,7 +3,7 @@
 import { useParams, useRouter } from 'next/navigation'
 
 import { SpecForm } from '@/app/u/[username]/specs/[id]/edit/spec-form'
-import { useMutate } from '@/hooks/use-mutate'
+import { useMutate } from '@/lib/api/use-mutate'
 import { toSpecItem, toSpecs } from '@/lib/routes'
 import { Spec } from '@/lib/types'
 

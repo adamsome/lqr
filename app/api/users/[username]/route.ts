@@ -2,7 +2,7 @@ import { clerkClient } from '@clerk/nextjs'
 import { NextResponse, type NextRequest } from 'next/server'
 
 export async function GET(
-  request: NextRequest,
+  _req: NextRequest,
   { params }: { params: { username: string } },
 ) {
   const { username } = params

@@ -7,23 +7,17 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu'
-import { useMutate } from '@/hooks/use-mutate'
+import { useMutateStock } from '@/lib/api/use-mutate-stock'
 
 type Props = {
   ingredientID: string
 }
 
 export function ActionCell({ ingredientID }: Props) {
-  const { mutate } = useMutate('/api/stock')
+  const { mutate } = useMutateStock()
 
   async function handleClick() {
-    await mutate({
-      method: 'PUT',
-      body: JSON.stringify({
-        ingredientID,
-        stock: -1,
-      }),
-    })
+    await mutate(ingredientID, -1)
   }
 
   return (

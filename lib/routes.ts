@@ -1,5 +1,7 @@
 import { Spec } from '@/lib/types'
 
+export const API_STOCK = '/api/stock'
+
 export const SIGN_IN = '/sign-in'
 export const SIGN_UP = '/sign-up'
 

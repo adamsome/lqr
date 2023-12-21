@@ -1,9 +1,8 @@
-import { connectToDatabase } from '@/lib/mongodb'
 import { auth } from '@clerk/nextjs'
 import { OptionalUnlessRequiredId } from 'mongodb'
 import { NextRequest, NextResponse } from 'next/server'
-import invariant from 'tiny-invariant'
 
+import { connectToDatabase } from '@/lib/mongodb'
 import { User } from '@/lib/types'
 
 export async function PUT(req: NextRequest) {

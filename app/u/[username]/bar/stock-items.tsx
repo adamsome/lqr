@@ -1,6 +1,6 @@
 import { StockIcon } from '@/components/stock-icon'
 import { CommandGroup, CommandItem } from '@/components/ui/command'
-import { useMutate } from '@/hooks/use-mutate'
+import { useMutateStock } from '@/lib/api/use-mutate-stock'
 import {
   StockState,
   getStockLabel,
@@ -16,18 +16,10 @@ type Props = {
 
 export function StockItems({ ingredient, onComplete }: Props) {
   const stock = getStockState(ingredient.stock)
-  const { mutating, mutate } = useMutate('/api/stock', {
-    watchData: ingredient.stock,
-  })
+  const { mutating, mutate } = useMutateStock({ watchData: ingredient.stock })
 
   async function handleClick(stock: StockState) {
-    await mutate({
-      method: 'PUT',
-      body: JSON.stringify({
-        ingredientID: ingredient.id,
-        stock: getStockStateValue(stock),
-      }),
-    })
+    await mutate(ingredient.id, getStockStateValue(stock))
     onComplete()
   }
 
