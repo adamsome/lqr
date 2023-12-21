@@ -4,14 +4,14 @@ import { useParams, useRouter } from 'next/navigation'
 
 import { SpecForm } from '@/app/u/[username]/specs/[id]/edit/spec-form'
 import { useMutate } from '@/lib/api/use-mutate'
-import { toSpecItem, toSpecs } from '@/lib/routes'
+import { API_SPECS, toSpecItem, toSpecs } from '@/lib/routes'
 import { Spec } from '@/lib/types'
 
 export function SpecContainer() {
   const params = useParams()
   const username = params.username as string
   const router = useRouter()
-  const { mutating, mutate } = useMutate<Spec>(`/api/specs`)
+  const { mutating, mutate } = useMutate<Spec>(API_SPECS)
 
   function handleClose(id?: string) {
     return id
