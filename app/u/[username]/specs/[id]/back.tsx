@@ -4,7 +4,7 @@ import { useSearchParams } from 'next/navigation'
 
 import { USER_KEY } from '@/app/u/[username]/specs/_criteria/consts'
 import * as Layout from '@/components/responsive-layout'
-import { toSpecs } from '@/lib/routes'
+import { API_USERS, toSpecs } from '@/lib/routes'
 import { User } from '@/lib/types'
 import { useEffect, useState } from 'react'
 
@@ -23,7 +23,7 @@ export function Back({ user: userProp }: Props) {
       if (!username) return
       let res
       try {
-        res = await fetch(`/api/users/${username}`)
+        res = await fetch(`${API_USERS}/${username}`)
         const { user } = await res.json()
         if (user) {
           setUser(user)
