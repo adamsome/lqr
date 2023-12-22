@@ -1,5 +1,8 @@
 # TODO
 
+- Other user header bottle count shows current user
+- Signed out counts not correct
+
 ## Redesign
 
 - Spec Description shows avatar [other] & sort message
@@ -13,24 +16,26 @@
 
 ## Home & following
 
-- Following
-- User avatar popover to follow
+- Specs filter users avatar
 - Users to follow
   - User db actedAt to drive
   - Follow db follow to include previously unfollowed
-  - Show on specs below load more
+  - Show on specs below load more or horiz. scroll above search
+  - Show on right sidebar on desktop
+- User avatar popover to follow
 - Favorite specs (In Stock sort incl. favorite)
 
-- Header Bar & Shopping icon dropdowns
-- Explore Drawer bar/shopping list
+- Header Bar icon dropdowns
+  - Move actions down to page header (not app header)
+  - Explore Drawer bar/shopping list
 
 - Spec Edit is when its yours, Clone when not?
-- Specs filter users avatar
 - If on current user home, don't show app-cmd, but have fn. available
 
 ## Shop
 
 - Shopping page (low stock)
+  - Shopping icon dropdowns
 - Add to wishlist
 - Buy priority
 

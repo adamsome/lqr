@@ -28,7 +28,7 @@ export function Spec({ spec, data, userAvatar, updated, showStock }: Props) {
     referenceHtml,
   } = spec
   return (
-    <Container className="py-8 [--container-w-max:800px]">
+    <>
       <div className="flex flex-col gap-y-1">
         <div className="mb-3 text-4xl font-bold leading-none tracking-tight">
           {name}
@@ -75,6 +75,6 @@ export function Spec({ spec, data, userAvatar, updated, showStock }: Props) {
           dangerouslySetInnerHTML={{ __html: referenceHtml }}
         />
       )}
-    </Container>
+    </>
   )
 }

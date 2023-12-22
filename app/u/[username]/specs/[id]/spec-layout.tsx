@@ -1,9 +1,9 @@
-import { intlFormatDistance, parseISO } from 'date-fns/fp'
 import Link from 'next/link'
 import { ReactNode } from 'react'
 
 import * as Layout from '@/components/responsive-layout'
 import { Button } from '@/components/ui/button'
+import { Container } from '@/components/ui/container'
 import { toSpecEdit } from '@/lib/routes'
 import { Spec } from '@/lib/types'
 
@@ -30,7 +30,9 @@ export function SpecLayout({ children, back, spec, status, showEdit }: Props) {
           )}
         </Layout.Actions>
       </Layout.Header>
-      {children}
+      <Container className="py-8 [--container-w-max:800px]">
+        {children}
+      </Container>
       <Layout.Footer status={status}>
         <span />
         {showEdit && (

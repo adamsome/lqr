@@ -46,6 +46,7 @@ export interface Follow {
   follower: string
   followee: string
   followedAt: string
+  follows: boolean
 }
 
 export type Unit = 'oz' | 'tsp' | 'dash' | 'cube'

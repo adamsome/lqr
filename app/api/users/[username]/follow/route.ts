@@ -1,7 +1,7 @@
 import { auth } from '@clerk/nextjs'
 import { NextRequest, NextResponse } from 'next/server'
 
-import { addFollow, deleteFollow } from '@/lib/model/follow'
+import { upsertFollow } from '@/lib/model/follow'
 import { getUser } from '@/lib/model/user'
 
 export async function PUT(
@@ -27,10 +27,11 @@ export async function PUT(
   }
 
   return NextResponse.json(
-    await addFollow({
+    await upsertFollow({
       followee,
       follower,
       followedAt: new Date().toISOString(),
+      follows: true,
     }),
   )
 }
@@ -57,5 +58,12 @@ export async function DELETE(
     )
   }
 
-  return NextResponse.json(await deleteFollow({ followee, follower }))
+  return NextResponse.json(
+    await upsertFollow({
+      followee,
+      follower,
+      followedAt: new Date().toISOString(),
+      follows: false,
+    }),
+  )
 }

@@ -5,9 +5,20 @@ import { FIND_NO_ID, connectToDatabase } from '@/lib/mongodb'
 import { Spec } from '@/lib/types'
 
 import 'server-only'
+import { asArray } from '@/lib/utils'
 
-export async function getSpecs(userIDs: string[]): Promise<Spec[]> {
+export async function getSpecs(
+  userIDOrIDs: string | string[],
+): Promise<Spec[]> {
   const { db } = await connectToDatabase()
+  const userIDs = asArray(userIDOrIDs)
+  if (userIDs.length === 0) return []
+  if (userIDs.length === 1) {
+    return db
+      .collection<OptionalUnlessRequiredId<Spec>>('spec')
+      .find({ userID: userIDs[0] }, FIND_NO_ID)
+      .toArray()
+  }
   return db
     .collection<OptionalUnlessRequiredId<Spec>>('spec')
     .find({ userID: { $in: userIDs } }, FIND_NO_ID)

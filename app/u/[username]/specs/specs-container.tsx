@@ -1,5 +1,6 @@
 import { auth } from '@clerk/nextjs'
 
+import { FollowButton } from '@/app/u/[username]/follow-button'
 import { applyCriteria } from '@/app/u/[username]/specs/_criteria/apply'
 import { Criteria } from '@/app/u/[username]/specs/_criteria/types'
 import { FiltersContainer } from '@/app/u/[username]/specs/filters-container'
@@ -9,17 +10,13 @@ import { Toolbar } from '@/app/u/[username]/specs/toolbar'
 import { UserAvatarHeader } from '@/app/u/[username]/user-avatar-header'
 import { Count } from '@/components/ui/count'
 import { getSpecStock } from '@/lib/ingredient/get-spec-stock'
-import { getFollow, getFolloweeIDs } from '@/lib/model/follow'
+import { getFollow, getFollowsByFollower } from '@/lib/model/follow'
 import { getIngredientData } from '@/lib/model/ingredient-data'
 import { getSpecs } from '@/lib/model/spec'
 import { getManyUsers, getUserByID } from '@/lib/model/user'
-import { Ingredient, User } from '@/lib/types'
+import { getStockedBottleCount } from '@/lib/stock'
+import { User } from '@/lib/types'
 import { toDict } from '@/lib/utils'
-import { Button } from '@/components/ui/button'
-import { FollowButton } from '@/app/u/[username]/follow-button'
-
-const isStockedBottle = (dict: Record<string, Ingredient>) => (id: string) =>
-  dict[id].ordinal !== undefined && (dict[id].stock ?? -1) >= 0
 
 type Props = {
   user: User
@@ -31,7 +28,7 @@ export async function SpecsContainer({ user, criteria: criteriaProp }: Props) {
 
   const [currentUser, follows, userFollow, data] = await Promise.all([
     getUserByID(currentUserID),
-    getFolloweeIDs(user.id),
+    getFollowsByFollower(user.id),
     currentUserID && currentUserID !== user.id
       ? getFollow({ followee: user.id, follower: currentUserID })
       : Promise.resolve(null),
@@ -57,8 +54,9 @@ export async function SpecsContainer({ user, criteria: criteriaProp }: Props) {
 
   const specs = applyCriteria(data, allSpecs, criteria)
 
-  const bottleCount = Object.keys(dict).filter(isStockedBottle(dict)).length
+  const bottleCount = getStockedBottleCount(dict)
   const specCount = specs.filter(({ userID }) => userID === user.id).length
+  const followingCount = follows.filter(({ follows }) => follows).length
 
   const filters = (
     <FiltersContainer userDict={userDict} data={data} criteria={criteria} />
@@ -73,6 +71,7 @@ export async function SpecsContainer({ user, criteria: criteriaProp }: Props) {
           user={user}
           specCount={specCount}
           bottleCount={bottleCount}
+          followingCount={followingCount}
         >
           {currentUserID && currentUserID !== user.id && (
             <FollowButton username={user.username} follow={userFollow} />

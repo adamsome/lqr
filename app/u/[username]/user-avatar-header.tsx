@@ -3,7 +3,7 @@ import { ReactNode } from 'react'
 
 import { UserAvatar } from '@/components/user-avatar'
 import { UserAvatarImage } from '@/components/user-avatar-image'
-import { toBar, toSpecs } from '@/lib/routes'
+import { toBar, toFollowing, toSpecs } from '@/lib/routes'
 import { User } from '@/lib/types'
 import { cn } from '@/lib/utils'
 
@@ -13,6 +13,7 @@ type Props = {
   user: User
   specCount: number
   bottleCount: number
+  followingCount?: number
 }
 
 export function UserAvatarHeader({ children, className, ...props }: Props) {
@@ -49,19 +50,28 @@ function Name({ user }: Omit<Props, 'children'>) {
   )
 }
 
-function Counts({ user, specCount, bottleCount }: Omit<Props, 'children'>) {
+function Counts({
+  user,
+  specCount,
+  bottleCount,
+  followingCount = 0,
+}: Omit<Props, 'children'>) {
   return (
     <div className="flex items-center gap-4 text-sm text-muted-foreground font-medium overflow-hidden">
       <Link className="whitespace-nowrap" href={toSpecs(user.username)}>
         <span className="text-foreground font-bold">{specCount}</span>{' '}
         {`spec${specCount !== 1 ? 's' : ''}`}
       </Link>
-      <Link
-        className="whitespace-nowrap overflow-hidden text-ellipsis"
-        href={toBar(user.username)}
-      >
+      <Link className="whitespace-nowrap" href={toBar(user.username)}>
         <span className="text-foreground font-bold">{bottleCount}</span>{' '}
         {`bottle${bottleCount !== 1 ? 's' : ''}`}
+      </Link>
+      <Link
+        className="whitespace-nowrap overflow-hidden text-ellipsis"
+        href={toFollowing(user.username)}
+      >
+        <span className="text-foreground font-bold">{followingCount}</span>{' '}
+        following
       </Link>
     </div>
   )

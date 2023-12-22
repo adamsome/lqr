@@ -1,3 +1,5 @@
+import { Ingredient } from '@/lib/types'
+
 export type StockState = 'full' | 'low' | 'none'
 
 export function getNextStockValue(stock: number): number {
@@ -32,3 +34,10 @@ export function getStockLabel(state: StockState): string {
       return 'Empty'
   }
 }
+
+export const isStockedBottle =
+  (dict: Record<string, Ingredient>) => (id: string) =>
+    dict[id].ordinal !== undefined && (dict[id].stock ?? -1) >= 0
+
+export const getStockedBottleCount = (dict: Record<string, Ingredient>) =>
+  Object.keys(dict).filter(isStockedBottle(dict)).length
