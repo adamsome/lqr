@@ -1,8 +1,5 @@
 # TODO
 
-- Other user header bottle count shows current user
-- Signed out counts not correct
-
 ## Redesign
 
 - Spec Description shows avatar [other] & sort message
@@ -16,7 +13,6 @@
 
 ## Home & following
 
-- Specs filter users avatar
 - Users to follow
   - User db actedAt to drive
   - Follow db follow to include previously unfollowed

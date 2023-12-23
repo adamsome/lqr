@@ -14,6 +14,7 @@ import { IngredientFilter } from '@/app/u/[username]/specs/ingredient-filter'
 import { SpecIngredientCommandDialogButton } from '@/components/spec-ingredient-command/command-dialog-button'
 import { Button } from '@/components/ui/button'
 import { CheckboxLabel } from '@/components/ui/checkbox-label'
+import { UserAvatarImage } from '@/components/user-avatar-image'
 import { useRouterSearchParams } from '@/hooks/use-router-search-params'
 import { getIngredientName as makeGetIngredientName } from '@/lib/ingredient/get-ingredient-name'
 import { getSpecCategoryItems } from '@/lib/spec-category'
@@ -65,18 +66,26 @@ export function Filters({ className, data, criteria, users }: Props) {
         </FilterSection>
 
         <FilterSection name="Users">
-          {users.map(({ username, displayName, checked }) => (
-            <CheckboxLabel
-              key={username}
-              id={username}
-              checked={checked ?? false}
-              onCheckedChange={(value) =>
-                value ? append(USER_KEY, username) : clear(USER_KEY, username)
-              }
-            >
-              {displayName ?? username}
-            </CheckboxLabel>
-          ))}
+          {users.map((user) => {
+            const { username, displayName, checked } = user
+            return (
+              <CheckboxLabel
+                key={username}
+                id={username}
+                checked={checked ?? false}
+                onCheckedChange={(value) =>
+                  value ? append(USER_KEY, username) : clear(USER_KEY, username)
+                }
+              >
+                <span className="inline-flex items-center gap-1 w-full overflow-hidden">
+                  <UserAvatarImage user={user} size="sm" />
+                  <span className="overflow-hidden text-ellipsis whitespace-nowrap">
+                    {displayName ?? username}
+                  </span>
+                </span>
+              </CheckboxLabel>
+            )
+          })}
         </FilterSection>
 
         <FilterSection name="Ingredients">
