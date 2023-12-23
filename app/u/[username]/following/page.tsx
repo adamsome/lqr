@@ -4,11 +4,12 @@ import invariant from 'tiny-invariant'
 
 import { FollowButton } from '@/app/u/[username]/follow-button'
 import {
-  Following,
+  FollowingLayout,
   FollowingItem,
   FollowingItemProps,
   FollowingList,
-} from '@/app/u/[username]/following/following'
+  FollowingEmpty,
+} from '@/app/u/[username]/following/following-layout'
 import { UserAvatarHeader } from '@/app/u/[username]/user-avatar-header'
 import { getFollowsByFollower } from '@/lib/model/follow'
 import { getIngredientData } from '@/lib/model/ingredient-data'
@@ -39,7 +40,7 @@ export default async function Page({ params = {} }: Props) {
     currentUserID && currentUserID !== user.id
       ? getFollowsByFollower(currentUserID)
       : Promise.resolve(null),
-    getIngredientData(),
+    getIngredientData(user.id),
   ])
 
   const followByFollowee = toDict(
@@ -65,7 +66,7 @@ export default async function Page({ params = {} }: Props) {
   const followingCount = userFollows.filter(({ follows }) => follows).length
 
   return (
-    <Following
+    <FollowingLayout
       user={user}
       currentUser={currentUser}
       header={
@@ -97,7 +98,8 @@ export default async function Page({ params = {} }: Props) {
             </FollowingItem>
           )
         })}
+        {followees.length === 0 && <FollowingEmpty />}
       </FollowingList>
-    </Following>
+    </FollowingLayout>
   )
 }

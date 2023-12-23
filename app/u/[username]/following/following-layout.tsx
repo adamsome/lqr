@@ -1,14 +1,14 @@
 import { add, isPast, parseISO } from 'date-fns'
+import Link from 'next/link'
 import { ReactNode, forwardRef } from 'react'
 
 import * as Layout from '@/components/responsive-layout'
-import { Container, FullWidthContainer } from '@/components/ui/container'
+import { Container } from '@/components/ui/container'
 import { UserAvatar } from '@/components/user-avatar'
 import { UserAvatarImage } from '@/components/user-avatar-image'
 import { toHome } from '@/lib/routes'
 import { Follow, User } from '@/lib/types'
 import { cn } from '@/lib/utils'
-import Link from 'next/link'
 
 type Props = {
   user: User
@@ -17,7 +17,12 @@ type Props = {
   header: ReactNode
 }
 
-export function Following({ user, currentUser, children, header }: Props) {
+export function FollowingLayout({
+  user,
+  currentUser,
+  children,
+  header,
+}: Props) {
   return (
     <Layout.Root>
       <Layout.Header title={<UserAvatar user={user} />}>
@@ -83,3 +88,17 @@ export const FollowingItem = forwardRef<
   )
 })
 FollowingItem.displayName = 'FollowingItem'
+
+export const FollowingEmpty = forwardRef<
+  HTMLDivElement,
+  React.HTMLAttributes<HTMLDivElement>
+>(({ className, ...props }, ref) => (
+  <div
+    ref={ref}
+    className={cn('text-lg text-muted-foreground/50 font-semibold', className)}
+    {...props}
+  >
+    Not following any users
+  </div>
+))
+FollowingEmpty.displayName = 'FollowingEmpty'

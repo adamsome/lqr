@@ -26,14 +26,18 @@ type Props = {
 export async function SpecsContainer({ user, criteria: criteriaProp }: Props) {
   const { userId: currentUserID } = auth()
 
-  const [currentUser, follows, userFollow, data] = await Promise.all([
-    getUserByID(currentUserID),
-    getFollowsByFollower(user.id),
-    currentUserID && currentUserID !== user.id
-      ? getFollow({ followee: user.id, follower: currentUserID })
-      : Promise.resolve(null),
-    getIngredientData(),
-  ])
+  const [currentUser, follows, userFollow, userData, currentData] =
+    await Promise.all([
+      getUserByID(currentUserID),
+      getFollowsByFollower(user.id),
+      currentUserID && currentUserID !== user.id
+        ? getFollow({ followee: user.id, follower: currentUserID })
+        : Promise.resolve(null),
+      getIngredientData(user.id),
+      currentUserID && currentUserID !== user.id
+        ? getIngredientData()
+        : Promise.resolve(null),
+    ])
 
   const userIDs = [user.id, ...follows.map(({ followee }) => followee)]
 
@@ -44,8 +48,8 @@ export async function SpecsContainer({ user, criteria: criteriaProp }: Props) {
 
   const userDict = toDict(users, (u) => u.username)
 
-  const { dict, tree } = data
-  const getStock = getSpecStock(dict, tree)
+  const data = currentData ?? userData
+  const getStock = getSpecStock(data.dict, data.tree)
   const allSpecs = rawSpecs.map((spec) => ({ ...spec, stock: getStock(spec) }))
 
   const criteria = currentUser
@@ -54,7 +58,7 @@ export async function SpecsContainer({ user, criteria: criteriaProp }: Props) {
 
   const specs = applyCriteria(data, allSpecs, criteria)
 
-  const bottleCount = getStockedBottleCount(dict)
+  const bottleCount = getStockedBottleCount(userData.dict)
   const specCount = specs.filter(({ userID }) => userID === user.id).length
   const followingCount = follows.filter(({ follows }) => follows).length
 
