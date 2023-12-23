@@ -243,9 +243,7 @@ export function SpecForm({
                             placeholder="Instructions..."
                             rows={4}
                             {...field}
-                            onChange={(e) =>
-                              field.onChange(e.target.value || undefined)
-                            }
+                            onChange={(e) => field.onChange(e.target.value)}
                           />
                         </FormControl>
                         <FormMessage />

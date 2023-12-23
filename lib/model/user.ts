@@ -7,6 +7,8 @@ import { toDict } from '@/lib/utils'
 
 import 'server-only'
 import { toUser } from '@/lib/model/to-user'
+import { connectToDatabase } from '@/lib/mongodb'
+import { OptionalUnlessRequiredId } from 'mongodb'
 
 const SYSTEM_USERS = [
   {
@@ -56,4 +58,11 @@ export async function getUser(username?: string): Promise<User | null> {
   const users = await clerkClient.users.getUserList({ username: [username] })
   if (!users[0]) return null
   return getUserByID(users[0].id)
+}
+
+export async function updateUserActedAt(userID: string) {
+  const { db } = await connectToDatabase()
+  return await db
+    .collection<OptionalUnlessRequiredId<User>>('user')
+    .updateOne({ id: userID }, { $set: { actedAt: new Date().toISOString() } })
 }

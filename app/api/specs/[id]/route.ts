@@ -2,6 +2,7 @@ import { auth } from '@clerk/nextjs'
 import { NextRequest, NextResponse } from 'next/server'
 
 import { deleteSpec, getSpec, updateSpec } from '@/lib/model/spec'
+import { updateUserActedAt } from '@/lib/model/user'
 import { Spec } from '@/lib/types'
 
 export async function PUT(req: NextRequest) {
@@ -22,7 +23,12 @@ export async function PUT(req: NextRequest) {
     )
   }
 
-  return NextResponse.json(await updateSpec(spec))
+  const [res] = await Promise.all([
+    updateSpec(spec),
+    updateUserActedAt(spec.userID),
+  ])
+
+  return NextResponse.json(res)
 }
 
 export async function DELETE(req: NextRequest) {
@@ -58,5 +64,10 @@ export async function DELETE(req: NextRequest) {
     )
   }
 
-  return NextResponse.json(await deleteSpec({ id, userID }))
+  const [res] = await Promise.all([
+    deleteSpec({ id, userID }),
+    updateUserActedAt(spec.userID),
+  ])
+
+  return NextResponse.json(res)
 }

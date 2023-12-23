@@ -2,6 +2,7 @@ import { currentUser } from '@clerk/nextjs'
 import { NextRequest, NextResponse } from 'next/server'
 
 import { addSpec, getSpec } from '@/lib/model/spec'
+import { updateUserActedAt } from '@/lib/model/user'
 import { Spec } from '@/lib/types'
 import { slugify } from '@/lib/utils'
 
@@ -29,7 +30,7 @@ export async function POST(req: NextRequest) {
     )
   }
 
-  await addSpec(spec)
+  await Promise.all([addSpec(spec), updateUserActedAt(spec.userID)])
 
   return NextResponse.json(spec)
 }

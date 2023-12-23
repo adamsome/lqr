@@ -37,6 +37,8 @@
 
 ## QoL
 
+- Add avatars for system users
+- Specs mute ingredients not in stock
 - Specs grouping by sort
 - Bar: Keep empty bottles
 - Show app-command skeleton when auth client loading
