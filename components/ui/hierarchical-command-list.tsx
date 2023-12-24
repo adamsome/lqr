@@ -60,7 +60,7 @@ export function HierarchicalCommandList<T extends HasIDAndName>({
           <Fragment key={groupID}>
             {i > 0 && <CommandSeparator />}
             <CommandGroup
-              className="[&_[cmdk-group-heading]]:opacity-75"
+              className="[&_[cmdk-group-heading]]:font-semibold [&_[cmdk-group-heading]]:opacity-75"
               heading={renderName({ id: groupID })}
             >
               {children[groupID].childIDs.map((id) => {
@@ -90,6 +90,7 @@ export function HierarchicalCommandList<T extends HasIDAndName>({
 
 type ItemProps<T extends HasIDAndName> = Props<T> & {
   path: string[]
+  showSeparator?: boolean
 }
 
 function Item<T extends HasIDAndName>(props: ItemProps<T>) {
@@ -107,7 +108,14 @@ function Item<T extends HasIDAndName>(props: ItemProps<T>) {
 
   return (
     <>
-      <ItemContent {...props} />
+      <ItemContent
+        {...props}
+        showSeparator={
+          rest.showBottles &&
+          rest.muteItems &&
+          ((bottleIDs?.length ?? 0) > 0 || childIDs.length > 0)
+        }
+      />
       {rest.showBottles &&
         bottleIDs?.map((id) => (
           <Bottle {...rest} key={id} bottleID={id} path={path} />
@@ -157,6 +165,7 @@ function ItemContent<T extends HasIDAndName>({
   showCheckbox,
   groupTrunks,
   muteItems,
+  showSeparator,
   renderName,
   getIngredientPathName,
   onSelect,
@@ -172,38 +181,50 @@ function ItemContent<T extends HasIDAndName>({
   const path = [...prevPath, id]
 
   return (
-    <CommandItem
-      className={cn({ 'mt-2 !py-1': muteItems })}
-      value={getIngredientPathName(path)}
-      disabled={disabledIDs?.has(id)}
-      onSelect={() => onSelect({ path, checked })}
-    >
-      {showCheckbox && (
-        <Checkbox
-          className={cn('mr-2', {
-            'ml-6': !hasSearch && level === 1,
-            'ml-12': !hasSearch && level === 2,
-            'ml-18': !hasSearch && level >= 3,
+    <>
+      <CommandItem
+        className={cn({ 'mt-2.5 !py-0.5': muteItems })}
+        value={getIngredientPathName(path)}
+        disabled={disabledIDs?.has(id)}
+        onSelect={() => onSelect({ path, checked })}
+      >
+        {showCheckbox && (
+          <Checkbox
+            className={cn('mr-2', {
+              'ml-6': !hasSearch && level === 1,
+              'ml-12': !hasSearch && level === 2,
+              'ml-18': !hasSearch && level >= 3,
+            })}
+            checked={checked}
+          />
+        )}
+        <span
+          className={cn({
+            'text-muted-foreground font-semibold': muteItems,
+            'ml-6': !showCheckbox && !hasSearch && level === 1,
+            'ml-12': !showCheckbox && !hasSearch && level === 2,
+            'ml-18': !showCheckbox && !hasSearch && level >= 3,
           })}
-          checked={checked}
+        >
+          {hasSearch ? renderName({ path }) : renderName({ id })}
+        </span>
+        {count && (
+          <span className="ml-auto flex h-4 w-4 items-center justify-center font-mono text-xs">
+            {count}
+          </span>
+        )}
+      </CommandItem>
+      {showSeparator && (
+        <CommandSeparator
+          className={cn('mr-2 bg-border/60', {
+            'ml-2': !hasSearch && level === 0,
+            'ml-8': !hasSearch && level === 1,
+            'ml-14': !hasSearch && level === 2,
+            'ml-20': !hasSearch && level >= 3,
+          })}
         />
       )}
-      <span
-        className={cn({
-          'text-muted-foreground': muteItems,
-          'ml-6': !showCheckbox && !hasSearch && level === 1,
-          'ml-12': !showCheckbox && !hasSearch && level === 2,
-          'ml-18': !showCheckbox && !hasSearch && level >= 3,
-        })}
-      >
-        {hasSearch ? renderName({ path }) : renderName({ id })}
-      </span>
-      {count && (
-        <span className="ml-auto flex h-4 w-4 items-center justify-center font-mono text-xs">
-          {count}
-        </span>
-      )}
-    </CommandItem>
+    </>
   )
 }
 
