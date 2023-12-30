@@ -41,6 +41,9 @@ export function Filters({ className, data, criteria, users }: Props) {
   const { dict } = data
   const getIngredientName = makeGetIngredientName(dict)
 
+  const showUsers =
+    users.filter(({ username }) => username !== criteria.username).length > 0
+
   function handleSelectIngredient(ingredient: SpecIngredient): void {
     append(INGREDIENT_KEY, buildIngredientCriterion(ingredient))
   }
@@ -65,28 +68,32 @@ export function Filters({ className, data, criteria, users }: Props) {
           ))}
         </FilterSection>
 
-        <FilterSection name="Users">
-          {users.map((user) => {
-            const { username, displayName, checked } = user
-            return (
-              <CheckboxLabel
-                key={username}
-                id={username}
-                checked={checked ?? false}
-                onCheckedChange={(value) =>
-                  value ? append(USER_KEY, username) : clear(USER_KEY, username)
-                }
-              >
-                <span className="inline-flex items-center gap-1 w-full overflow-hidden">
-                  <UserAvatarImage user={user} size="sm" />
-                  <span className="overflow-hidden text-ellipsis whitespace-nowrap">
-                    {displayName ?? username}
+        {showUsers && (
+          <FilterSection name="Users">
+            {users.map((user) => {
+              const { username, displayName, checked } = user
+              return (
+                <CheckboxLabel
+                  key={username}
+                  id={username}
+                  checked={checked ?? false}
+                  onCheckedChange={(value) =>
+                    value
+                      ? append(USER_KEY, username)
+                      : clear(USER_KEY, username)
+                  }
+                >
+                  <span className="inline-flex items-center gap-1 w-full overflow-hidden">
+                    <UserAvatarImage user={user} size="sm" />
+                    <span className="overflow-hidden text-ellipsis whitespace-nowrap">
+                      {displayName ?? username}
+                    </span>
                   </span>
-                </span>
-              </CheckboxLabel>
-            )
-          })}
-        </FilterSection>
+                </CheckboxLabel>
+              )
+            })}
+          </FilterSection>
+        )}
 
         <FilterSection name="Ingredients">
           <div className="flex flex-col gap-1 empty:hidden">
