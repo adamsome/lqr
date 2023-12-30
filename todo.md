@@ -1,5 +1,7 @@
 # TODO
 
+Remove hard-coded system users
+
 ## Redesign
 
 - Spec Description shows avatar [other] & sort message
@@ -13,6 +15,7 @@
 
 ## Home & following
 
+- Bring back home; specs has no users to follow
 - Users to follow
   - User db actedAt to drive
   - Follow db follow to include previously unfollowed

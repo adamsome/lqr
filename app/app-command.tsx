@@ -203,7 +203,7 @@ export function AppCommand() {
           </div>
           <div className="flex items-center gap-2">
             <Button
-              className="flex items-center gap-2 font-semibold"
+              className="flex items-center gap-2"
               variant="ghost"
               size="xs"
               onClick={handleOpenProfile}

@@ -39,7 +39,7 @@ export function Ingredient({
       <div className="flex gap-px">
         <Button
           type="button"
-          className="rounded-ee-none rounded-se-none text-muted-foreground"
+          className="rounded-ee-none rounded-se-none text-muted-foreground font-normal"
           variant="secondary"
           size="xs"
           disabled={index === 0}
@@ -49,7 +49,7 @@ export function Ingredient({
         </Button>
         <Button
           type="button"
-          className="rounded-es-none rounded-ss-none text-muted-foreground"
+          className="rounded-es-none rounded-ss-none text-muted-foreground font-normal"
           variant="secondary"
           size="xs"
           disabled={index === total - 1}

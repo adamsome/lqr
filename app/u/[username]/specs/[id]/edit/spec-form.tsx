@@ -291,7 +291,7 @@ export function SpecForm({
             </IconButton>
             <Button
               type="submit"
-              className="h-8 gap-1.5 me-2 px-3 font-semibold"
+              className="h-8 gap-1.5 me-2 px-3"
               variant="default"
               size="xs"
               disabled={mutating}

@@ -14,7 +14,12 @@ export function IngredientFilter({ name, onClear }: Props) {
       className="flex w-full items-center justify-between text-sm"
     >
       {name}
-      <Button type="button" variant="secondary" size="xs">
+      <Button
+        className="font-normal"
+        type="button"
+        variant="secondary"
+        size="xs"
+      >
         <Cross1Icon onClick={onClear} />
       </Button>
     </div>
