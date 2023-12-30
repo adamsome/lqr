@@ -16,11 +16,6 @@ Remove hard-coded system users
 ## Home & following
 
 - Bring back home; specs has no users to follow
-- Users to follow
-  - User db actedAt to drive
-  - Follow db follow to include previously unfollowed
-  - Show on specs below load more or horiz. scroll above search
-  - Show on right sidebar on desktop
 - User avatar popover to follow
 - Favorite specs (In Stock sort incl. favorite)
 

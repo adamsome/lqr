@@ -5,10 +5,10 @@ import invariant from 'tiny-invariant'
 import { User } from '@/lib/types'
 import { toDict } from '@/lib/utils'
 
-import 'server-only'
 import { toUser } from '@/lib/model/to-user'
 import { connectToDatabase } from '@/lib/mongodb'
 import { OptionalUnlessRequiredId } from 'mongodb'
+import 'server-only'
 
 const SYSTEM_USERS = [
   {
@@ -62,7 +62,24 @@ export async function getUser(username?: string): Promise<User | null> {
 
 export async function updateUserActedAt(userID: string) {
   const { db } = await connectToDatabase()
-  return await db
+  return db
     .collection<OptionalUnlessRequiredId<User>>('user')
     .updateOne({ id: userID }, { $set: { actedAt: new Date().toISOString() } })
+}
+
+export async function getMostRecentActedUsers({
+  exclude = [],
+  limit = 5,
+}: {
+  exclude?: string[]
+  limit?: number
+} = {}) {
+  const { db } = await connectToDatabase()
+  const users = await db
+    .collection<OptionalUnlessRequiredId<User>>('user')
+    .find({ id: { $nin: exclude } }, { projection: { _id: 0, id: 1 } })
+    .sort({ actedAt: -1 })
+    .limit(limit)
+    .toArray()
+  return getManyUsers(users.map(({ id }) => id))
 }
