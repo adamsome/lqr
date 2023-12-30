@@ -1,7 +1,5 @@
 # TODO
 
-- Add avatars for system users
-
 Specs
 -----
 

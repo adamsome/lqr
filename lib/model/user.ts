@@ -15,16 +15,19 @@ const SYSTEM_USERS = [
     id: 'user_classics',
     username: 'classics',
     displayName: 'Classics',
+    imageUrl: '/avatars/classic.jpg',
   },
   {
     id: 'user_smugglerscove',
     username: 'smugglers_cove',
     displayName: "Smuggler's Cove",
+    imageUrl: '/avatars/smugglers-cove.jpg',
   },
   {
     id: 'user_deathcowelcomehome',
     username: 'deathco_welcome_home',
     displayName: 'Death & Co: Welcome Home',
+    imageUrl: '/avatars/deathco-welcome-home.jpg',
   },
 ]
 
