@@ -61,7 +61,7 @@ export async function SpecsContainer({ user, criteria: criteriaProp }: Props) {
   const [users, rawSpecs, usersToFollow] = await Promise.all([
     getManyUsers(userIDs),
     getSpecs(userIDs),
-    getMostRecentActedUsers({ exclude }),
+    currentUserID ? getMostRecentActedUsers({ exclude }) : Promise.resolve([]),
   ])
 
   const userDict = toDict(users, (u) => u.username)
