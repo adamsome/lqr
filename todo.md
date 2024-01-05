@@ -1,5 +1,24 @@
 # TODO
 
+Bar
+---
+
+### Shopping
+
+- Improve states, [[Full] [Out]] [[Buy] [Ignore]]
+  - I.e. Stocked, Low/Replace, Out/Replace, Out/Ignore, None
+  - Bar: Keep empty bottles
+- Shopping page (low stock)
+  - Shopping icon dropdowns
+- Add to wishlist
+- Buy priority
+
+### Trigger
+
+- Header Bar icon dropdowns
+- Move actions down to page header (not app header)
+- Explore Drawer bar/shopping list
+
 Specs
 -----
 
@@ -16,23 +35,6 @@ Specs
 - Save criteria to local storage
   - If empty params, redirect to saved; else set local storage
   - Clear clears local storage
-
-Bar
----
-
-- Header Bar icon dropdowns
-- Move actions down to page header (not app header)
-- Explore Drawer bar/shopping list
-
-### Shopping
-
-- Improve states, [[Full] [Out]] [[Buy] [Ignore]]
-  - I.e. Stocked, Low/Replace, Out/Replace, Out/Ignore, None
-  - Bar: Keep empty bottles
-- Shopping page (low stock)
-  - Shopping icon dropdowns
-- Add to wishlist
-- Buy priority
 
 Home
 ----
@@ -78,6 +80,7 @@ QoL
 - Improve IngredientCommand search sorting
   - E.g. can't find "Campari" currently
 - Show similar specs
+- Specs card ingredients, show simple ingredient names
 
 Chores
 ------

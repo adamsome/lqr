@@ -1,29 +1,20 @@
 'use client'
 
 import { PlusIcon } from '@radix-ui/react-icons'
+import invariant from 'tiny-invariant'
 
 import {
   Props as AddButtonProps,
   AddIngredientCommandDialogButton,
 } from '@/app/u/[username]/bar/add-command-dialog-button'
 import { IngredientCommandDialogButton } from '@/app/u/[username]/bar/ingredient-command-dialog-button'
+import { BarCategory } from '@/app/u/[username]/bar/types'
 import { StockIcon } from '@/components/stock-icon'
 import { SelectOptions } from '@/components/ui/hierarchical-command-list'
 import { useGetIngredientName } from '@/hooks/use-get-ingredient-name'
 import { useMutateStock } from '@/lib/api/use-mutate-stock'
-import { HierarchicalFilter } from '@/lib/hierarchical-filter'
-import { IngredientFilter } from '@/lib/ingredient/filter-ingredient-items'
 import { getStockState } from '@/lib/stock'
-import { Ingredient } from '@/lib/types'
 import { cn } from '@/lib/utils'
-import invariant from 'tiny-invariant'
-
-export type BarCategory = IngredientFilter & {
-  stocked: Ingredient[]
-  topItems?: Ingredient[]
-  root?: HierarchicalFilter
-  rowSpan?: number
-}
 
 type Props = {
   className?: string
@@ -32,7 +23,7 @@ type Props = {
   isCurrentUser?: boolean
 }
 
-export function Category({
+export function CategorySection({
   className,
   category,
   muteItems,
