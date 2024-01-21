@@ -1,8 +1,9 @@
 'use client'
 
 import { DialogProps } from '@radix-ui/react-dialog'
+import { Cross1Icon } from '@radix-ui/react-icons'
 import { useRouter } from 'next/navigation'
-import { ReactNode, useCallback, useEffect, useState } from 'react'
+import { ReactNode, useEffect, useState } from 'react'
 import { Drawer } from 'vaul'
 
 import { FullWidthContainer } from '@/components/layout/container'
@@ -10,7 +11,6 @@ import { useAboveBreakpoint } from '@/components/ui/use-above-breakpoint'
 import { useIsMounted } from '@/hooks/use-is-mounted'
 import { CompProps } from '@/lib/types'
 import { cn } from '@/lib/utils'
-import { Cross1Icon } from '@radix-ui/react-icons'
 
 type ContentWithSidebarProps = CompProps & {
   sidebar: ReactNode
@@ -60,6 +60,7 @@ type MobileDrawerProps = CompProps &
   DialogProps & {
     route?: string
     backTo?: string | null | false
+    closeTo?: string | null | false
     keepOpenOnBack?: boolean
   }
 
@@ -67,6 +68,7 @@ export function SidebarLayoutMobileDrawer({
   children,
   className,
   backTo,
+  closeTo,
   route,
   keepOpenOnBack,
   ...rest
@@ -80,21 +82,16 @@ export function SidebarLayoutMobileDrawer({
     if (route) setOpen(true)
   }, [route])
 
-  const handleClose = useCallback(
-    (open: boolean) => {
-      if (open) return
-      if (!keepOpenOnBack) setOpen(false)
-      backTo ? router.push(backTo, { scroll: false }) : router.back()
-    },
-    [router, backTo, keepOpenOnBack],
-  )
-
   return (
     <>
       <div className="hidden md:block">{children}</div>
       <Drawer.Root
         open={open && mounted && !isAboveMd}
-        onOpenChange={handleClose}
+        onOpenChange={(open) => {
+          if (open) return
+          setOpen(false)
+          closeTo ? router.push(closeTo, { scroll: false }) : router.back()
+        }}
         {...rest}
       >
         <Drawer.Portal>
@@ -104,6 +101,11 @@ export function SidebarLayoutMobileDrawer({
               'z-50 fixed bottom-0 left-0 right-0 flex flex-col gap-2 -mx-px max-h-[90%] bg-popover/50 backdrop-blur-md border border-b-0 border-border/50 rounded-t-2xl overflow-clip',
               className,
             )}
+            onPointerDownOutside={(e) => {
+              if (!open || !backTo || backTo === closeTo) return
+              e.preventDefault()
+              router.push(backTo, { scroll: false })
+            }}
           >
             <div className="flex-1 py-1.5 overflow-auto backdrop-blur [mask-image:linear-gradient(to_bottom,transparent,rgb(255_255_255_/_50%)_6px,white_20px,white)]">
               {children}

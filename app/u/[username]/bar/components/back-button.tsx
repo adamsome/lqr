@@ -1,20 +1,13 @@
-import { ArrowLeftIcon, ChevronLeftIcon } from '@radix-ui/react-icons'
+import { ChevronLeftIcon } from '@radix-ui/react-icons'
 import Link from 'next/link'
 
 import { getCabinetDef, getShelfDef } from '@/app/u/[username]/bar/lib/defs'
-import { CategoryKeys, GridCategoryDef } from '@/app/u/[username]/bar/lib/types'
+import { getBackKeys } from '@/app/u/[username]/bar/lib/get-back-keys'
+import { CategoryKeys } from '@/app/u/[username]/bar/lib/types'
+import { Level } from '@/components/layout/level'
 import { Button } from '@/components/ui/button'
 import { toBarCategory } from '@/lib/routes'
-import { Level } from '@/components/layout/level'
 import { cn } from '@/lib/utils'
-
-function getBackKeys(keys: CategoryKeys): CategoryKeys {
-  let result: CategoryKeys = { ...keys, category: undefined }
-  if (keys.category) return result
-  result = { ...result, shelf: undefined }
-  if (keys.shelf) return result
-  return { ...result, cabinet: undefined }
-}
 
 function getName(keys: CategoryKeys) {
   if (keys.shelf) return getShelfDef(keys).name
