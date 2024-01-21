@@ -1,3 +1,5 @@
+import { PropsWithChildren } from 'react'
+
 import { Aging, Category, ProductionMethod } from '@/lib/generated-consts'
 import { GlassType } from '@/lib/glass-type'
 import { HierarchicalFilter } from '@/lib/hierarchical-filter'
@@ -121,5 +123,19 @@ export type IngredientSpecifier<T extends HasIDAndName = HasIDAndName> = {
   item?: T
 }
 
+export type CompProps = PropsWithChildren<{ className?: string }>
+type SearchParam = string | string[] | undefined
+type PropsWithSearchParams = { searchParams?: { [key: string]: SearchParam } }
+export type LayoutProps<T = undefined> = T extends undefined
+  ? PropsWithChildren
+  : PropsWithChildren & { params?: T }
+export type PageProps<T = undefined> = T extends undefined
+  ? PropsWithSearchParams
+  : PropsWithSearchParams & { params?: T }
+
 export type HasIDAndName = { id: string; name: string }
 export type Option<T> = { label: string; value: T }
+
+export const BREAKPOINTS = ['xs', 'sm', 'md', 'lg', 'xl', '2xl'] as const
+
+export type Breakpoint = (typeof BREAKPOINTS)[number]

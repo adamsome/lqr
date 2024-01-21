@@ -13,12 +13,14 @@ const DialogTrigger = DialogPrimitive.Trigger
 const DialogPortal = ({
   className,
   children,
+  bottom,
   ...props
-}: DialogPrimitive.DialogPortalProps) => (
+}: DialogPrimitive.DialogPortalProps & { bottom?: boolean }) => (
   <DialogPrimitive.Portal {...props}>
     <div
       className={cn(
         'fixed inset-0 flex items-start justify-center z-50 sm:items-center',
+        bottom && 'items-end',
         className,
       )}
     >
@@ -47,36 +49,43 @@ export type DialogContentProps = React.ComponentPropsWithoutRef<
   typeof DialogPrimitive.Content
 > & {
   showClose?: boolean
+  bottom?: boolean
   overlay?: React.ComponentPropsWithoutRef<typeof DialogPrimitive.Overlay>
 }
 
 const DialogContent = React.forwardRef<
   React.ElementRef<typeof DialogPrimitive.Content>,
   DialogContentProps
->(({ className, children, showClose = true, overlay = {}, ...props }, ref) => (
-  <DialogPortal>
-    <DialogOverlay {...overlay} />
-    <DialogPrimitive.Content
-      ref={ref}
-      className={cn(
-        'fixed z-50 grid w-full gap-4 rounded-b-lg border bg-background p-6 shadow-lg animate-in data-[state=open]:fade-in-90 data-[state=open]:slide-in-from-bottom-10 sm:max-w-lg sm:rounded-lg sm:zoom-in-90 data-[state=open]:sm:slide-in-from-bottom-0',
-        className,
-      )}
-      {...props}
-    >
-      {children}
-      <DialogPrimitive.Close
+>(
+  (
+    { className, children, showClose = true, bottom, overlay = {}, ...props },
+    ref,
+  ) => (
+    <DialogPortal bottom={bottom}>
+      <DialogOverlay {...overlay} />
+      <DialogPrimitive.Content
+        ref={ref}
         className={cn(
-          'absolute right-4 top-4 -m-4 p-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground',
-          { 'sm:hidden': !showClose },
+          'fixed z-50 grid w-full gap-4 rounded-b-lg border bg-background p-6 shadow-lg animate-in data-[state=open]:fade-in-90 data-[state=open]:slide-in-from-bottom-10 sm:max-w-lg sm:rounded-lg sm:zoom-in-90 data-[state=open]:sm:slide-in-from-bottom-0',
+          bottom && 'rounded-t-lg rounded-b-none',
+          className,
         )}
+        {...props}
       >
-        <Cross1Icon />
-        <span className="sr-only">Close</span>
-      </DialogPrimitive.Close>
-    </DialogPrimitive.Content>
-  </DialogPortal>
-))
+        {children}
+        <DialogPrimitive.Close
+          className={cn(
+            'absolute right-4 top-4 -m-4 p-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground',
+            { 'sm:hidden': !showClose },
+          )}
+        >
+          <Cross1Icon />
+          <span className="sr-only">Close</span>
+        </DialogPrimitive.Close>
+      </DialogPrimitive.Content>
+    </DialogPortal>
+  ),
+)
 DialogContent.displayName = DialogPrimitive.Content.displayName
 
 const DialogHeader = ({

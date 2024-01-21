@@ -1,6 +1,7 @@
 'use client'
 
-import { CaretLeftIcon, GearIcon, PlusIcon } from '@radix-ui/react-icons'
+import { useAuth } from '@clerk/nextjs'
+import { CaretLeftIcon } from '@radix-ui/react-icons'
 import Link from 'next/link'
 import {
   ReactNode,
@@ -10,22 +11,20 @@ import {
   useState,
 } from 'react'
 
+import { FullWidthContainer } from '@/components/layout/container'
 import { Button } from '@/components/ui/button'
 import { H2 } from '@/components/ui/h2'
-import { cn } from '@/lib/utils'
 import { UserAvatar } from '@/components/user-avatar'
-import { User } from '@/lib/types'
-import { useAuth } from '@clerk/nextjs'
+import { CompProps, User } from '@/lib/types'
+import { cn } from '@/lib/utils'
 
 const Context = createContext({ scrolled: false })
 
-type Props = {
-  children: ReactNode
-  className?: string
+type Props = CompProps & {
   scrolledPx?: number
 }
 
-function Root({ children, className, scrolledPx = 50 }: Props) {
+export function AppLayout({ children, className, scrolledPx = 50 }: Props) {
   const [scrolled, setScrolled] = useState(false)
   useEffect(() => {
     window.addEventListener('scroll', () =>
@@ -38,7 +37,7 @@ function Root({ children, className, scrolledPx = 50 }: Props) {
     <Context.Provider value={{ scrolled }}>
       <div
         className={cn(
-          'relative pb-16 min-h-screen overflow-x-clip [--px:theme(spacing.2)]',
+          'isolate [--h-sticky:3.25rem] sm:[--h-sticky:3.75rem] [--px:theme(spacing.2)]',
           className,
         )}
       >
@@ -48,21 +47,20 @@ function Root({ children, className, scrolledPx = 50 }: Props) {
   )
 }
 
-type HeaderProps = {
-  children?: ReactNode
+type HeaderProps = CompProps & {
   title?: ReactNode
 }
 
-function Header({ children, title }: HeaderProps) {
+export function AppHeader({ children, className, title }: HeaderProps) {
   const { scrolled } = useContext(Context)
   return (
     <header
       className={cn(
-        'sticky top-0 grid w-full place-content-center',
+        'z-30 sticky top-0 grid w-full place-content-center',
         'grid-cols-[var(--px)_1fr_var(--px)] grid-rows-1 [&>*]:row-[1]',
-        'h-[3.25rem] sm:h-[3.75rem] z-30',
-        'border-b border-transparent transition-colors',
+        'h-[var(--h-sticky)] border-b border-transparent transition-colors',
         { 'border-border/40': scrolled },
+        className,
       )}
     >
       <div
@@ -95,16 +93,15 @@ function Header({ children, title }: HeaderProps) {
   )
 }
 
-type BackProps = {
+type BackProps = CompProps & {
   href: string
   user?: User | null
-  children?: ReactNode
 }
 
-function Back({ children, href, user }: BackProps) {
+export function AppBack({ children, className, href, user }: BackProps) {
   const { scrolled } = useContext(Context)
   return (
-    <Link href={href}>
+    <Link className={className} href={href}>
       <Button className="px-1" variant="ghost" size="sm">
         <CaretLeftIcon className="w-6 h-6 -me-0.5" />
         <UserAvatar className="pr-2.5" user={user} hideName={scrolled} />
@@ -114,21 +111,34 @@ function Back({ children, href, user }: BackProps) {
   )
 }
 
-function Actions({ children }: Props) {
+export function AppActions({ children, className }: CompProps) {
   const { isSignedIn } = useAuth()
   return (
-    <div className={cn('me-16 hidden sm:block', { 'me-48': !isSignedIn })}>
+    <div
+      className={cn(
+        'me-16 hidden sm:block',
+        { 'me-48': !isSignedIn },
+        className,
+      )}
+    >
       {children}
     </div>
   )
 }
 
-type FooterProps = {
-  children?: ReactNode
+export function AppContent({ children, className }: CompProps) {
+  return (
+    <FullWidthContainer className={cn('h-full', className)}>
+      {children}
+    </FullWidthContainer>
+  )
+}
+
+type FooterProps = CompProps & {
   status?: ReactNode
 }
 
-function Footer({ children, status }: FooterProps) {
+export function AppFooter({ children, className, status }: FooterProps) {
   return (
     <footer
       className={cn(
@@ -136,6 +146,7 @@ function Footer({ children, status }: FooterProps) {
         'grid-cols-[var(--px)_1fr_var(--px)] grid-rows-1 [&>*]:row-[1]',
         'h-14 pb-0 z-30 sm:hidden',
         'border-t border-border/40',
+        className,
       )}
     >
       <div
@@ -164,12 +175,10 @@ function Footer({ children, status }: FooterProps) {
   )
 }
 
-function Level({ children, className }: Props) {
+function Level({ children, className }: CompProps) {
   return (
     <div className={cn('flex items-center w-full gap-4', className)}>
       {children}
     </div>
   )
 }
-
-export { Actions, Header, Back, Root, Footer }

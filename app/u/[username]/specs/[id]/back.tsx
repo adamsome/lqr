@@ -3,7 +3,7 @@
 import { useSearchParams } from 'next/navigation'
 
 import { USER_KEY } from '@/app/u/[username]/specs/_criteria/consts'
-import * as Layout from '@/components/responsive-layout'
+import * as Layout from '@/components/layout/responsive-layout'
 import { API_USERS, toSpecs } from '@/lib/routes'
 import { User } from '@/lib/types'
 import { useEffect, useState } from 'react'

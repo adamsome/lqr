@@ -1,5 +1,6 @@
 import { CSSProperties, Children, ReactNode } from 'react'
 
+import { BREAKPOINTS, Breakpoint } from '@/lib/types'
 import { cn } from '@/lib/utils'
 
 type CountInView = [
@@ -10,10 +11,6 @@ type CountInView = [
   (number | null)?,
   (number | null)?,
 ]
-
-const breakpoints = ['xs', 'sm', 'md', 'lg', 'xl', '2xl'] as const
-
-type Breakpoint = (typeof breakpoints)[number]
 
 const parseOverhang = (overhang: Props['overhang']): string => {
   if (overhang === undefined) return '0px'
@@ -67,14 +64,14 @@ function Content({
   const style = countInView.reduce(
     (acc, n, i) => {
       if (n == null) return acc
-      const breakpoint = breakpoints[i]
+      const breakpoint = BREAKPOINTS[i]
       acc[`--hang-${breakpoint}`] = count > n ? 'var(--hang)' : '0px'
       acc[`--count-${breakpoint}`] = n
       return acc
     },
     { ['--hang']: overhang } as Record<string, string | number>,
   )
-  const maskIndex = breakpoints.findIndex((b) => b === maskAt)
+  const maskIndex = BREAKPOINTS.findIndex((b) => b === maskAt)
   return (
     <div
       style={style as CSSProperties}

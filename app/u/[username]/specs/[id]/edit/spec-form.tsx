@@ -7,9 +7,9 @@ import { FieldErrors, useForm } from 'react-hook-form'
 import * as z from 'zod'
 
 import { IngredientsForm } from '@/app/u/[username]/specs/[id]/edit/ingredients-form'
-import * as Layout from '@/components/responsive-layout'
+import * as Layout from '@/components/layout/responsive-layout'
 import { Button, IconButton } from '@/components/ui/button'
-import { FullWidthContainer } from '@/components/ui/container'
+import { FullWidthContainer } from '@/components/layout/container'
 import {
   Form,
   FormControl,

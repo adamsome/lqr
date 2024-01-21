@@ -72,6 +72,8 @@ const altBottleGroups: Record<string, string[][]> = {
 
 const similar = [
   ['grain_gin_londondry', 'grain_gin_plymouth', 'grain_gin_contemporary'],
+  ['brandy_grape_pommeau', 'brandy_grape_pineaudescharentes'],
+  ['brandy_grape_american', 'brandy_grape_cognac', 'brandy_grape_armagnac'],
   [
     'sugar_brown',
     'sugar_demerara',

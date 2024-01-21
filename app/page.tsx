@@ -1,9 +1,9 @@
 import { auth } from '@clerk/nextjs'
 
-import * as Layout from '@/components/responsive-layout'
+import * as Layout from '@/components/layout/responsive-layout'
 import { CardHeader, CardLink } from '@/components/ui/card'
-import { CardGrid } from '@/components/ui/card-grid'
-import { Container } from '@/components/ui/container'
+import { CardGrid } from '@/components/layout/card-grid'
+import { Container } from '@/components/layout/container'
 import { UserAvatar } from '@/components/user-avatar'
 import { getUserByID } from '@/lib/model/user'
 import { toBar, toResearch, toSpecs } from '@/lib/routes'

@@ -53,8 +53,15 @@ module.exports = {
         md: 'calc(var(--radius) - 2px)',
         sm: 'calc(var(--radius) - 4px)',
       },
+      opacity: {
+        2.5: '0.025',
+        7.5: '0.075',
+      },
       spacing: {
+        4.5: '1.125rem',
         18: '4.5rem',
+        112: '28rem',
+        128: '32rem',
       },
       keyframes: {
         'accordion-down': {

@@ -7,6 +7,7 @@ export default authMiddleware({
     '/research',
     '/u/([^/]*)',
     '/u/([^/]*/bar)',
+    '/u/([^/]*/bar/.*)',
     '/u/([^/]*/following)',
     '/u/([^/]*/specs)',
     '/u/([^/]*/specs/[^/]*)',

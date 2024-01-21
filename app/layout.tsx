@@ -54,11 +54,11 @@ export default function Layout({ children }: Props) {
             }}
           />
         </head>
-        <body className="min-h-screen">
+        <body>
           <TooltipProvider>
             <div className="relative flex min-h-screen flex-col">
               <AppCommand />
-              <div className="flex-1">{children}</div>
+              <div className="flex-1 min-w-0 overflow-clip">{children}</div>
             </div>
             <Toaster />
           </TooltipProvider>

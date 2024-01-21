@@ -13,7 +13,7 @@ import { FilterSection } from '@/app/u/[username]/specs/filter-section'
 import { IngredientFilter } from '@/app/u/[username]/specs/ingredient-filter'
 import { SpecIngredientCommandDialogButton } from '@/components/spec-ingredient-command/command-dialog-button'
 import { Button } from '@/components/ui/button'
-import { CheckboxLabel } from '@/components/ui/checkbox-label'
+import { CheckboxWithLabel } from '@/components/ui/checkbox-label'
 import { UserAvatarImage } from '@/components/user-avatar-image'
 import { useRouterSearchParams } from '@/hooks/use-router-search-params'
 import { getIngredientName as makeGetIngredientName } from '@/lib/ingredient/get-ingredient-name'
@@ -53,7 +53,7 @@ export function Filters({ className, data, criteria, users }: Props) {
       <div className="flex-initial flex flex-col gap-6 max-h-screen overflow-y-auto">
         <FilterSection name="Category">
           {SPEC_CATEGORY_ITEMS.map(({ value, label }) => (
-            <CheckboxLabel
+            <CheckboxWithLabel
               key={value}
               id={value}
               checked={categories.includes(value)}
@@ -64,7 +64,7 @@ export function Filters({ className, data, criteria, users }: Props) {
               }
             >
               {label}
-            </CheckboxLabel>
+            </CheckboxWithLabel>
           ))}
         </FilterSection>
 
@@ -73,7 +73,7 @@ export function Filters({ className, data, criteria, users }: Props) {
             {users.map((user) => {
               const { username, displayName, checked } = user
               return (
-                <CheckboxLabel
+                <CheckboxWithLabel
                   key={username}
                   id={username}
                   checked={checked ?? false}
@@ -89,7 +89,7 @@ export function Filters({ className, data, criteria, users }: Props) {
                       {displayName ?? username}
                     </span>
                   </span>
-                </CheckboxLabel>
+                </CheckboxWithLabel>
               )
             })}
           </FilterSection>

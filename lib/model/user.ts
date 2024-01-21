@@ -1,4 +1,4 @@
-import { clerkClient } from '@clerk/nextjs'
+import { auth, clerkClient } from '@clerk/nextjs'
 import { partition } from 'ramda'
 import invariant from 'tiny-invariant'
 
@@ -9,6 +9,7 @@ import { toUser } from '@/lib/model/to-user'
 import { connectToDatabase } from '@/lib/mongodb'
 import { OptionalUnlessRequiredId } from 'mongodb'
 import 'server-only'
+import { cache } from 'react'
 
 const SYSTEM_USERS = [
   {
@@ -45,30 +46,31 @@ export async function getManyUsers(userIDs: string[]): Promise<User[]> {
   return [...users, ...systemUsers]
 }
 
-export async function getUserByID(
-  userID?: string | null,
-): Promise<User | null> {
-  if (!userID) return null
-  if (byID[userID]) return byID[userID]
-  const rawUser = await clerkClient.users.getUser(userID)
-  invariant(rawUser, `No user found with ID '${userID}'`)
-  return toUser(rawUser)
-}
+export const getUserByID = cache(
+  async (userID?: string | null): Promise<User | null> => {
+    if (!userID) return null
+    if (byID[userID]) return byID[userID]
+    const rawUser = await clerkClient.users.getUser(userID)
+    invariant(rawUser, `No user found with ID '${userID}'`)
+    return toUser(rawUser)
+  },
+)
 
-export async function getUser(username?: string): Promise<User | null> {
-  if (!username) return null
-  if (byUsername[username]) return byUsername[username]
-  const users = await clerkClient.users.getUserList({ username: [username] })
-  if (!users[0]) return null
-  return getUserByID(users[0].id)
-}
+export const getUser = cache(
+  async (username?: string): Promise<User | null> => {
+    if (!username) return null
+    if (byUsername[username]) return byUsername[username]
+    const users = await clerkClient.users.getUserList({ username: [username] })
+    if (!users[0]) return null
+    return getUserByID(users[0].id)
+  },
+)
 
-export async function updateUserActedAt(userID: string) {
-  const { db } = await connectToDatabase()
-  return db
-    .collection<OptionalUnlessRequiredId<User>>('user')
-    .updateOne({ id: userID }, { $set: { actedAt: new Date().toISOString() } })
-}
+export const isCurrentUser = cache(async (username: string | undefined) => {
+  const { userId: currentUserID } = auth()
+  const user = await getUser(username)
+  return currentUserID != null && user?.id === currentUserID
+})
 
 export async function getMostRecentActedUsers({
   exclude = [],
@@ -85,4 +87,11 @@ export async function getMostRecentActedUsers({
     .limit(limit)
     .toArray()
   return getManyUsers(users.map(({ id }) => id))
+}
+
+export async function updateUserActedAt(userID: string) {
+  const { db } = await connectToDatabase()
+  return db
+    .collection<OptionalUnlessRequiredId<User>>('user')
+    .updateOne({ id: userID }, { $set: { actedAt: new Date().toISOString() } })
 }

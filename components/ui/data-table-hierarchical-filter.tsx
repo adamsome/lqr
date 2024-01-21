@@ -4,7 +4,7 @@ import { Column } from '@tanstack/react-table'
 import { produce } from 'immer'
 import { ReactNode } from 'react'
 
-import { CheckboxLabel } from '@/components/ui/checkbox-label'
+import { CheckboxWithLabel } from '@/components/ui/checkbox-label'
 import {
   Popover,
   PopoverContent,
@@ -35,7 +35,7 @@ export function DataTableHierarchicalFilter<TData>({
     column.setFilterValue(
       path.length > 0 || !checked
         ? produce(filter, updateHierarchicalFilter(path, checked))
-        : undefined
+        : undefined,
     )
   }
 
@@ -52,16 +52,16 @@ export function DataTableHierarchicalFilter<TData>({
         className={cn(
           '[--padding:theme(spacing.4)] lg:[--padding:theme(spacing.8)]',
           'max-h-[calc(var(--radix-popover-content-available-height)-var(--padding))]',
-          'space-y-2 overflow-auto'
+          'space-y-2 overflow-auto',
         )}
       >
-        <CheckboxLabel
+        <CheckboxWithLabel
           id="selectAll"
           checked={filter.checked}
           onCheckedChange={(checked) => handleCheckedChange([], checked)}
         >
           Select All
-        </CheckboxLabel>
+        </CheckboxWithLabel>
         <Separator />
         {filter.childIDs.map((id) => (
           <Item
@@ -101,13 +101,13 @@ function Item({
           'ml-18': level >= 3,
         })}
       >
-        <CheckboxLabel
+        <CheckboxWithLabel
           id={id}
           checked={checked}
           onCheckedChange={(checked) => onCheckedChange(path, checked)}
         >
           {renderName(path)}
-        </CheckboxLabel>
+        </CheckboxWithLabel>
       </div>
       {childIDs.map((childID) => (
         <Item

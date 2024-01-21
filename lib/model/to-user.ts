@@ -1,4 +1,4 @@
-import type { User as ServerUser } from '@clerk/nextjs/dist/types/server'
+import type { User as AuthUser } from '@clerk/nextjs/dist/types/server'
 import type { UserResource } from '@clerk/types'
 
 import { User } from '@/lib/types'
@@ -8,7 +8,7 @@ export const toUser = ({
   username,
   emailAddresses,
   imageUrl,
-}: ServerUser | UserResource): User => ({
+}: AuthUser | UserResource): User => ({
   id,
   username: username ?? emailAddresses[0]?.emailAddress ?? 'Unknown',
   imageUrl,

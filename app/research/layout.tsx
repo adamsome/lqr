@@ -1,13 +1,13 @@
+import { auth } from '@clerk/nextjs'
 import { ReactNode } from 'react'
 
-import * as ResponsiveLayout from '@/components/responsive-layout'
-import { Container } from '@/components/ui/container'
-import { H1 } from '@/components/ui/h1'
-import { getUser, getUserByID } from '@/lib/model/user'
-import { toHome } from '@/lib/routes'
 import { IngredientDataProvider } from '@/components/data-provider'
+import * as ResponsiveLayout from '@/components/layout/responsive-layout'
+import { Container } from '@/components/layout/container'
+import { H1 } from '@/components/ui/h1'
 import { getIngredientData } from '@/lib/model/ingredient-data'
-import { auth } from '@clerk/nextjs'
+import { getUserByID } from '@/lib/model/user'
+import { toHome } from '@/lib/routes'
 
 export const revalidate = 0
 

@@ -14,14 +14,20 @@ export async function PUT(req: NextRequest) {
     )
   }
 
-  const { ingredientID, stock } = await req.json()
+  const { ingredientIDs, stock } = await req.json()
+
+  const $set = (ingredientIDs as string[]).reduce(
+    (acc, iid) => {
+      acc[`ingredients.${iid}.stock`] = stock
+      return acc
+    },
+    {} as Record<string, number>,
+  )
+
   const { db } = await connectToDatabase()
   await db
     .collection<OptionalUnlessRequiredId<User>>('user')
-    .updateOne(
-      { id },
-      { $set: { [`ingredients.${ingredientID}.stock`]: stock } },
-    )
+    .updateOne({ id }, { $set })
 
   return NextResponse.json(true)
 }

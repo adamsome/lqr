@@ -53,18 +53,12 @@ export function slugify(
     .replace(/ +/g, replaceSpaces)
 }
 
-export function asArray<T>(arrayOrElement: T | T[]): T[]
-export function asArray<T>(
-  arrayOrElement: T | T[] | null | undefined,
-): T[] | undefined
-export function asArray<T>(
-  arrayOrElement: T | T[] | null | undefined,
-): T[] | undefined {
-  if (arrayOrElement != null) {
-    return Array.isArray(arrayOrElement) ? arrayOrElement : [arrayOrElement]
-  }
+export function asArray<T>(arrayOrElement: T | T[] | null | undefined): T[] {
+  if (!arrayOrElement) return []
+  return Array.isArray(arrayOrElement) ? arrayOrElement : [arrayOrElement]
 }
 
+export function head<T>(arrayOrElement: T | T[]): T
 export function head<T>(arrayOrElement?: T | T[] | null): T | undefined {
   const array = asArray<T>(arrayOrElement)
   return array != null && array.length ? array[0] : undefined

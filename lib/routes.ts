@@ -1,3 +1,4 @@
+import { CategoryKeys } from '@/app/u/[username]/bar/lib/types'
 import { Spec } from '@/lib/types'
 
 export const API_STOCK = '/api/stock'
@@ -21,7 +22,18 @@ const prefixUserItem =
   }
 
 export const toHome = prefixUserHome()
+
 export const toBar = prefixUserHome('/bar')
+export const toBarCategory = ({
+  username,
+  cabinet,
+  shelf,
+  category,
+}: { username?: string | null } & CategoryKeys) =>
+  [prefixUserHome('/bar')(username), cabinet, shelf, category]
+    .filter(Boolean)
+    .join('/')
+
 export const toCreateSpec = prefixUserHome('/create-spec')
 export const toFollowing = prefixUserHome('/following')
 export const toSpecs = prefixUserHome('/specs')

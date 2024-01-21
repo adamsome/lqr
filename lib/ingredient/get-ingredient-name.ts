@@ -73,14 +73,14 @@ const reverseByCategory: Partial<Record<Category, boolean>> = {
 }
 
 const reverseByID: Record<string, boolean> = {
-  coffee_bean: true,
   egg_white: true,
   egg_yolk: true,
 }
 
 const idMap: Record<string, string> = {
+  coffee_hot: 'Coffee',
   egg_white: 'Egg Whites',
-  syrup_tonic: 'Tonic Water',
+  soda_tonic: 'Tonic Water',
   spice_bay: 'Bay Leaf',
   flat_water: 'Water',
   brandy_applecider: 'Apple Cider Eau-de-vie',
@@ -131,7 +131,7 @@ export const getIngredientName = curry(
   (
     dict: Record<string, Ingredient>,
     ingredient: SpecIngredient | Ingredient,
-    { inclBottle, inclCategory, toLower }: Options = {}
+    { inclBottle, inclCategory, toLower }: Options = {},
   ): string => {
     const { id } = ingredient
 
@@ -258,5 +258,5 @@ export const getIngredientName = curry(
     }
 
     return name
-  }
+  },
 )

@@ -1,9 +1,9 @@
 import Link from 'next/link'
 import { ReactNode } from 'react'
 
-import * as Layout from '@/components/responsive-layout'
+import * as Layout from '@/components/layout/responsive-layout'
 import { Button } from '@/components/ui/button'
-import { Container } from '@/components/ui/container'
+import { Container } from '@/components/layout/container'
 import { toSpecEdit } from '@/lib/routes'
 import { Spec } from '@/lib/types'
 
