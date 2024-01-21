@@ -2,35 +2,28 @@ import { add, isPast, parseISO } from 'date-fns'
 import Link from 'next/link'
 import { ReactNode, forwardRef } from 'react'
 
-import * as Layout from '@/components/layout/responsive-layout'
 import { Container } from '@/components/layout/container'
+import * as Layout from '@/components/layout/responsive-layout'
 import { UserAvatar } from '@/components/user-avatar'
 import { UserAvatarImage } from '@/components/user-avatar-image'
+import { getCurrentUser } from '@/lib/model/user'
 import { toHome } from '@/lib/routes'
 import { Follow, User } from '@/lib/types'
 import { cn } from '@/lib/utils'
 
 type Props = {
-  user: User
-  currentUser?: User | null
   children?: ReactNode
   header: ReactNode
+  username?: string
 }
 
-export function FollowingLayout({
-  user,
-  currentUser,
-  children,
-  header,
-}: Props) {
+export async function FollowingLayout({ children, header, username }: Props) {
+  const { user, currentUser, isCurrentUser } = await getCurrentUser(username)
   return (
     <Layout.Root>
       <Layout.Header title={<UserAvatar user={user} />}>
-        {currentUser && user.id !== currentUser?.id && (
-          <Layout.Back
-            href={toHome(currentUser?.username)}
-            user={currentUser}
-          />
+        {currentUser && !isCurrentUser && (
+          <Layout.Back href={toHome(currentUser.username)} user={currentUser} />
         )}
       </Layout.Header>
 

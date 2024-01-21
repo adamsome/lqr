@@ -1,15 +1,13 @@
 import { auth } from '@clerk/nextjs'
 import { OptionalUnlessRequiredId } from 'mongodb'
-
-import { parseIngredients } from '@/lib/ingredient/parse-ingredients'
-import { getStaticData } from '@/lib/model/static-data'
-import { FIND_NO_ID, connectToDatabase } from '@/lib/mongodb'
-import { Ingredient, IngredientData, User } from '@/lib/types'
-
 import { cache } from 'react'
 import invariant from 'tiny-invariant'
 
+import { parseIngredients } from '@/lib/ingredient/parse-ingredients'
+import { getStaticData } from '@/lib/model/static-data'
 import { getUser } from '@/lib/model/user'
+import { FIND_NO_ID, connectToDatabase } from '@/lib/mongodb'
+import { Ingredient, IngredientData, UserEntity } from '@/lib/types'
 
 import 'server-only'
 
@@ -23,7 +21,7 @@ const getUserIngredients = cache(
 
     const { db } = await connectToDatabase()
     const user = await db
-      .collection<OptionalUnlessRequiredId<User>>('user')
+      .collection<OptionalUnlessRequiredId<UserEntity>>('user')
       .findOne({ id }, FIND_NO_ID)
     return user?.ingredients ?? {}
   },

@@ -52,16 +52,13 @@ export async function UserHome({ user }: Props) {
 
   const followers = sortByRecentSpec(specsByUsername, users.slice(1))
 
-  const { dict } = data
   const specCount = specsByUsername[user.username]?.length ?? 0
-  const bottleCount = Object.keys(dict).filter(isStockedBottle(dict)).length
 
   return (
     <>
       <UserAvatarHeader
-        user={user}
-        specCount={specCount}
-        bottleCount={bottleCount}
+        username={user.username}
+        counts={{ specs: specCount }}
       />
       <div>
         <div className="-mx-2">

@@ -41,6 +41,12 @@ export interface User {
   username: string
   displayName?: string
   imageUrl?: string
+}
+
+export interface UserEntity {
+  id: string
+  username: string
+  actedAt?: string
   ingredients?: Record<string, Partial<Ingredient>>
 }
 
@@ -49,6 +55,12 @@ export interface Follow {
   followee: string
   followedAt: string
   follows: boolean
+}
+
+export interface Counts {
+  specs: number
+  bottles: number
+  following: number
 }
 
 export type Unit = 'oz' | 'tsp' | 'dash' | 'cube'

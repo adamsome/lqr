@@ -1,15 +1,15 @@
 import { auth, clerkClient } from '@clerk/nextjs'
+import { OptionalUnlessRequiredId } from 'mongodb'
 import { partition } from 'ramda'
+import { cache } from 'react'
 import invariant from 'tiny-invariant'
-
-import { User } from '@/lib/types'
-import { toDict } from '@/lib/utils'
 
 import { toUser } from '@/lib/model/to-user'
 import { connectToDatabase } from '@/lib/mongodb'
-import { OptionalUnlessRequiredId } from 'mongodb'
+import { User, UserEntity } from '@/lib/types'
+import { toDict } from '@/lib/utils'
+
 import 'server-only'
-import { cache } from 'react'
 
 const SYSTEM_USERS = [
   {
@@ -62,9 +62,20 @@ export const getUser = cache(
     if (byUsername[username]) return byUsername[username]
     const users = await clerkClient.users.getUserList({ username: [username] })
     if (!users[0]) return null
-    return getUserByID(users[0].id)
+    return toUser(users[0])
   },
 )
+
+export const getCurrentUser = cache(async (username?: string) => {
+  const { userId: currentUserID } = auth()
+  const [user, currentUser] = await Promise.all([
+    getUser(username),
+    getUserByID(currentUserID),
+  ])
+  const isSignedIn = currentUser != null
+  const isCurrentUser = isSignedIn && user?.id === currentUser.id
+  return { user, currentUser, isSignedIn, isCurrentUser }
+})
 
 export const isCurrentUser = cache(async (username: string | undefined) => {
   const { userId: currentUserID } = auth()
@@ -81,7 +92,7 @@ export async function getMostRecentActedUsers({
 } = {}) {
   const { db } = await connectToDatabase()
   const users = await db
-    .collection<OptionalUnlessRequiredId<User>>('user')
+    .collection<OptionalUnlessRequiredId<UserEntity>>('user')
     .find({ id: { $nin: exclude } }, { projection: { _id: 0, id: 1 } })
     .sort({ actedAt: -1 })
     .limit(limit)
@@ -92,6 +103,6 @@ export async function getMostRecentActedUsers({
 export async function updateUserActedAt(userID: string) {
   const { db } = await connectToDatabase()
   return db
-    .collection<OptionalUnlessRequiredId<User>>('user')
+    .collection<OptionalUnlessRequiredId<UserEntity>>('user')
     .updateOne({ id: userID }, { $set: { actedAt: new Date().toISOString() } })
 }

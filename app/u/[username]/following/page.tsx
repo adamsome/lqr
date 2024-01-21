@@ -1,21 +1,17 @@
-import { auth } from '@clerk/nextjs'
 import { zipWith } from 'ramda'
 import invariant from 'tiny-invariant'
 
 import { FollowButton } from '@/app/u/[username]/follow-button'
 import {
-  FollowingLayout,
+  FollowingEmpty,
   FollowingItem,
   FollowingItemProps,
+  FollowingLayout,
   FollowingList,
-  FollowingEmpty,
 } from '@/app/u/[username]/following/following-layout'
 import { UserAvatarHeader } from '@/app/u/[username]/user-avatar-header'
 import { getFollowsByFollower } from '@/lib/model/follow'
-import { getIngredientData } from '@/lib/model/ingredient-data'
-import { getSpecs } from '@/lib/model/spec'
-import { getManyUsers, getUser, getUserByID } from '@/lib/model/user'
-import { getStockedBottleCount } from '@/lib/stock'
+import { getCurrentUser, getManyUsers } from '@/lib/model/user'
 import { toDict } from '@/lib/utils'
 
 type Props = {
@@ -27,20 +23,15 @@ type Props = {
 export default async function Page({ params = {} }: Props) {
   const { username } = params
 
-  const user = await getUser(username)
+  const { user, currentUser, isCurrentUser } = await getCurrentUser(username)
 
-  // TODO: Show "User not found"
   invariant(user, `User not found.`)
 
-  const { userId: currentUserID } = auth()
-
-  const [currentUser, userFollows, currentFollows, data] = await Promise.all([
-    getUserByID(currentUserID),
+  const [userFollows, currentFollows] = await Promise.all([
     getFollowsByFollower(user.id),
-    currentUserID && currentUserID !== user.id
-      ? getFollowsByFollower(currentUserID)
+    currentUser && !isCurrentUser
+      ? getFollowsByFollower(currentUser.id)
       : Promise.resolve(null),
-    getIngredientData(user.id),
   ])
 
   const followByFollowee = toDict(
@@ -50,10 +41,7 @@ export default async function Page({ params = {} }: Props) {
 
   const followeeIDs = userFollows.map(({ followee }) => followee)
 
-  const [followeeUsers, specs] = await Promise.all([
-    getManyUsers(followeeIDs),
-    getSpecs(user.id),
-  ])
+  const [followeeUsers] = await Promise.all([getManyUsers(followeeIDs)])
 
   const followees = zipWith(
     (user, follow): FollowingItemProps => ({ user, follow }),
@@ -61,22 +49,12 @@ export default async function Page({ params = {} }: Props) {
     userFollows,
   )
 
-  const bottleCount = getStockedBottleCount(data.dict)
-  const specCount = specs.filter(({ userID }) => userID === user.id).length
-  const followingCount = userFollows.filter(({ follows }) => follows).length
-
   return (
     <FollowingLayout
-      user={user}
-      currentUser={currentUser}
+      username={username}
       header={
-        <UserAvatarHeader
-          user={user}
-          specCount={specCount}
-          bottleCount={bottleCount}
-          followingCount={followingCount}
-        >
-          {currentUserID && currentUserID !== user.id && (
+        <UserAvatarHeader username={username}>
+          {currentUser && !isCurrentUser && (
             <FollowButton
               username={user.username}
               follow={followByFollowee[user.id]}
@@ -86,18 +64,16 @@ export default async function Page({ params = {} }: Props) {
       }
     >
       <FollowingList>
-        {followees.map((userFollow) => {
-          const { user } = userFollow
-          const { id, username } = user
-          const follow = followByFollowee[id]
-          return (
-            <FollowingItem key={id} {...userFollow}>
-              {currentUserID && (
-                <FollowButton username={username} follow={follow} />
-              )}
-            </FollowingItem>
-          )
-        })}
+        {followees.map((userFollow) => (
+          <FollowingItem key={userFollow.user.id} {...userFollow}>
+            {currentUser && (
+              <FollowButton
+                username={userFollow.user.username}
+                follow={followByFollowee[userFollow.user.id]}
+              />
+            )}
+          </FollowingItem>
+        ))}
         {followees.length === 0 && <FollowingEmpty />}
       </FollowingList>
     </FollowingLayout>

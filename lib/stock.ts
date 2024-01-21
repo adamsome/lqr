@@ -38,7 +38,8 @@ export function getStockLabel(state: StockState): string {
 }
 
 export const isStockedBottle =
-  (dict: Record<string, Ingredient>) => (id: string) =>
+  (dict: Record<string, Ingredient>) =>
+  (id: string): boolean =>
     dict[id]?.ordinal !== undefined && (dict[id]?.stock ?? -1) > 0
 
 export const getStockedBottleCount = (dict: Record<string, Ingredient>) =>

@@ -1,23 +1,28 @@
 import Link from 'next/link'
 import { ReactNode } from 'react'
 
-import { UserAvatar } from '@/components/user-avatar'
 import { UserAvatarImage } from '@/components/user-avatar-image'
+import { getCounts } from '@/lib/model/counts'
+import { getUser } from '@/lib/model/user'
 import { toBar, toFollowing, toSpecs } from '@/lib/routes'
-import { User } from '@/lib/types'
+import { Counts, User } from '@/lib/types'
 import { cn } from '@/lib/utils'
 
 type Props = {
   children?: ReactNode
   className?: string
-  user: User
-  specCount: number
-  bottleCount: number
-  followingCount?: number
+  username?: string
+  counts?: Partial<Counts>
 }
 
-export function UserAvatarHeader({ children, className, ...props }: Props) {
-  const { user } = props
+export async function UserAvatarHeader({
+  children,
+  className,
+  username,
+  counts: partialCounts,
+}: Props) {
+  const user = await getUser(username)
+  const counts = await getCounts(user?.id, partialCounts)
   return (
     <div className={cn('flex flex-col gap-1', className)}>
       <div className="flex items-center justify-between sm:justify-normal gap-3">
@@ -27,21 +32,21 @@ export function UserAvatarHeader({ children, className, ...props }: Props) {
           size="2xl"
         />
         <div className="hidden sm:flex flex-col flex-1 leading-none overflow-hidden">
-          <Name {...props} />
-          <Counts {...props} />
+          <Name user={user} />
+          <Counts username={username} counts={counts} />
         </div>
         {children}
       </div>
       <div className="sm:hidden flex flex-col flex-1 leading-none overflow-hidden">
-        <Name {...props} />
-        <Counts {...props} />
+        <Name user={user} />
+        <Counts username={username} counts={counts} />
       </div>
     </div>
   )
 }
 
-function Name({ user }: Omit<Props, 'children'>) {
-  const { displayName, username } = user
+function Name({ user }: { user: User | null }) {
+  const { displayName, username } = user ?? {}
   const name = user ? displayName ?? username ?? '?' : ''
   return (
     <div className="text-2xl sm:text-4xl font-bold tracking-tight overflow-hidden text-ellipsis whitespace-nowrap">
@@ -50,28 +55,23 @@ function Name({ user }: Omit<Props, 'children'>) {
   )
 }
 
-function Counts({
-  user,
-  specCount,
-  bottleCount,
-  followingCount = 0,
-}: Omit<Props, 'children'>) {
+function Counts({ username, counts }: Pick<Props, 'username' | 'counts'>) {
+  const { bottles = 0, specs = 0, following = 0 } = counts ?? {}
   return (
     <div className="flex items-center gap-4 text-sm text-muted-foreground font-medium overflow-hidden">
-      <Link className="whitespace-nowrap" href={toSpecs(user.username)}>
-        <span className="text-foreground font-bold">{specCount}</span>{' '}
-        {`spec${specCount !== 1 ? 's' : ''}`}
+      <Link className="whitespace-nowrap" href={toSpecs(username)}>
+        <span className="text-foreground font-bold">{specs}</span>{' '}
+        {`spec${specs !== 1 ? 's' : ''}`}
       </Link>
-      <Link className="whitespace-nowrap" href={toBar(user.username)}>
-        <span className="text-foreground font-bold">{bottleCount}</span>{' '}
-        {`bottle${bottleCount !== 1 ? 's' : ''}`}
+      <Link className="whitespace-nowrap" href={toBar(username)}>
+        <span className="text-foreground font-bold">{bottles}</span>{' '}
+        {`bottle${bottles !== 1 ? 's' : ''}`}
       </Link>
       <Link
         className="whitespace-nowrap overflow-hidden text-ellipsis"
-        href={toFollowing(user.username)}
+        href={toFollowing(username)}
       >
-        <span className="text-foreground font-bold">{followingCount}</span>{' '}
-        following
+        <span className="text-foreground font-bold">{following}</span> following
       </Link>
     </div>
   )

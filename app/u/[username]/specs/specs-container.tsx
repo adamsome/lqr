@@ -1,4 +1,4 @@
-import { auth } from '@clerk/nextjs'
+import invariant from 'tiny-invariant'
 
 import { FollowButton } from '@/app/u/[username]/follow-button'
 import { applyCriteria } from '@/app/u/[username]/specs/_criteria/apply'
@@ -18,29 +18,33 @@ import { getSpecs } from '@/lib/model/spec'
 import {
   getManyUsers,
   getMostRecentActedUsers,
-  getUserByID,
+  getCurrentUser,
 } from '@/lib/model/user'
-import { getStockedBottleCount } from '@/lib/stock'
-import { User } from '@/lib/types'
 import { toDict } from '@/lib/utils'
 
 type Props = {
-  user: User
+  username?: string
   criteria: Criteria
 }
 
-export async function SpecsContainer({ user, criteria: criteriaProp }: Props) {
-  const { userId: currentUserID } = auth()
+export async function SpecsContainer({
+  username,
+  criteria: criteriaProp,
+}: Props) {
+  const { user, currentUser, isCurrentUser } = await getCurrentUser(username)
 
-  const [currentUser, follows, currentUserFollows, userData, currentData] =
+  invariant(user && username, `User not found.`)
+
+  const { id: userID } = user
+
+  const [follows, currentUserFollows, userData, currentData] =
     await Promise.all([
-      getUserByID(currentUserID),
-      getFollowsByFollower(user.id),
-      currentUserID && currentUserID !== user.id
-        ? getFollowsByFollower(currentUserID)
+      getFollowsByFollower(userID),
+      currentUser && !isCurrentUser
+        ? getFollowsByFollower(currentUser?.id)
         : Promise.resolve(undefined),
-      getIngredientData(user.id),
-      currentUserID && currentUserID !== user.id
+      getIngredientData(userID),
+      currentUser && !isCurrentUser
         ? getIngredientData()
         : Promise.resolve(null),
     ])
@@ -48,20 +52,20 @@ export async function SpecsContainer({ user, criteria: criteriaProp }: Props) {
   const currentFollows = currentUserFollows ?? follows
 
   const userIDs = [
-    user.id,
+    userID,
     ...follows.filter(({ follows }) => follows).map(({ followee }) => followee),
   ]
   const currentFollowees = currentFollows
     .filter(({ follows }) => follows)
     .map(({ followee }) => followee)
-  const exclude = currentUserID
-    ? [currentUserID, user.id, ...currentFollowees]
+  const exclude = currentUser
+    ? [currentUser.id, userID, ...currentFollowees]
     : []
 
   const [users, rawSpecs, usersToFollow] = await Promise.all([
     getManyUsers(userIDs),
     getSpecs(userIDs),
-    currentUserID ? getMostRecentActedUsers({ exclude }) : Promise.resolve([]),
+    currentUser ? getMostRecentActedUsers({ exclude }) : Promise.resolve([]),
   ])
 
   const userDict = toDict(users, (u) => u.username)
@@ -76,9 +80,7 @@ export async function SpecsContainer({ user, criteria: criteriaProp }: Props) {
 
   const specs = applyCriteria(data, allSpecs, criteria)
 
-  const bottleCount = getStockedBottleCount(userData.dict)
-  const specCount = specs.filter(({ userID }) => userID === user.id).length
-  const followingCount = follows.filter(({ follows }) => follows).length
+  const specCount = rawSpecs.filter(({ userID }) => userID === userID).length
 
   const filters = (
     <FiltersContainer userDict={userDict} data={data} criteria={criteria} />
@@ -90,17 +92,12 @@ export async function SpecsContainer({ user, criteria: criteriaProp }: Props) {
       currentUser={currentUser}
       header={
         <>
-          <UserAvatarHeader
-            user={user}
-            specCount={specCount}
-            bottleCount={bottleCount}
-            followingCount={followingCount}
-          >
-            {currentUserID && currentUserID !== user.id && (
+          <UserAvatarHeader username={username} counts={{ specs: specCount }}>
+            {currentUser && !isCurrentUser && (
               <FollowButton
-                username={user.username}
+                username={username}
                 follow={currentFollows.find(
-                  ({ followee }) => followee === user.id,
+                  ({ followee }) => followee === userID,
                 )}
               />
             )}
@@ -112,7 +109,7 @@ export async function SpecsContainer({ user, criteria: criteriaProp }: Props) {
                 countInView={[2, 3, 4]}
               >
                 {usersToFollow.map((user) => (
-                  <UserAvatarFollow key={user.id} user={user} />
+                  <UserAvatarFollow key={userID} user={user} />
                 ))}
               </HorizontalScroller>
             </div>
@@ -125,7 +122,7 @@ export async function SpecsContainer({ user, criteria: criteriaProp }: Props) {
         usersToFollow.length > 0 && (
           <div className="flex flex-col gap-4">
             {usersToFollow.map((user) => (
-              <UserAvatarFollow key={user.id} user={user} />
+              <UserAvatarFollow key={userID} user={user} />
             ))}
           </div>
         )
