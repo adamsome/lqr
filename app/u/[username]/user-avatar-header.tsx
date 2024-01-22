@@ -1,31 +1,30 @@
 import Link from 'next/link'
-import { ReactNode } from 'react'
 
+import { FollowButtonContainer } from '@/app/u/[username]/follow-button-container'
+import { Level } from '@/components/layout/level'
+import { Stack } from '@/components/layout/stack'
 import { UserAvatarImage } from '@/components/user-avatar-image'
 import { getCounts } from '@/lib/model/counts'
-import { getUser } from '@/lib/model/user'
+import { getCurrentUser } from '@/lib/model/user'
 import { toBar, toFollowing, toSpecs } from '@/lib/routes'
 import { Counts, User } from '@/lib/types'
-import { cn } from '@/lib/utils'
 
 type Props = {
-  children?: ReactNode
   className?: string
   username?: string
   counts?: Partial<Counts>
 }
 
 export async function UserAvatarHeader({
-  children,
   className,
   username,
   counts: partialCounts,
 }: Props) {
-  const user = await getUser(username)
+  const { user, isCurrentUser } = await getCurrentUser(username)
   const counts = await getCounts(user?.id, partialCounts)
   return (
-    <div className={cn('flex flex-col gap-1', className)}>
-      <div className="flex items-center justify-between sm:justify-normal gap-3">
+    <Stack className={className} gap={1}>
+      <Level className="sm:justify-normal" justify="between" gap={3}>
         <UserAvatarImage
           className="text-4xl sm:text-5xl -ms-1"
           user={user}
@@ -35,13 +34,13 @@ export async function UserAvatarHeader({
           <Name user={user} />
           <Counts username={username} counts={counts} />
         </div>
-        {children}
-      </div>
-      <div className="sm:hidden flex flex-col flex-1 leading-none overflow-hidden">
+        {!isCurrentUser && <FollowButtonContainer username={username} />}
+      </Level>
+      <Stack className="sm:hidden flex-1 leading-none overflow-hidden" gap={0}>
         <Name user={user} />
         <Counts username={username} counts={counts} />
-      </div>
-    </div>
+      </Stack>
+    </Stack>
   )
 }
 
@@ -58,7 +57,10 @@ function Name({ user }: { user: User | null }) {
 function Counts({ username, counts }: Pick<Props, 'username' | 'counts'>) {
   const { bottles = 0, specs = 0, following = 0 } = counts ?? {}
   return (
-    <div className="flex items-center gap-4 text-sm text-muted-foreground font-medium overflow-hidden">
+    <Level
+      className="text-sm text-muted-foreground font-medium overflow-hidden"
+      gap={4}
+    >
       <Link className="whitespace-nowrap" href={toSpecs(username)}>
         <span className="text-foreground font-bold">{specs}</span>{' '}
         {`spec${specs !== 1 ? 's' : ''}`}
@@ -73,6 +75,6 @@ function Counts({ username, counts }: Pick<Props, 'username' | 'counts'>) {
       >
         <span className="text-foreground font-bold">{following}</span> following
       </Link>
-    </div>
+    </Level>
   )
 }

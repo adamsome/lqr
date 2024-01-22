@@ -8,9 +8,9 @@ import { UserAvatar } from '@/components/user-avatar'
 import { toHome, toSpecItem } from '@/lib/routes'
 import { IngredientData, Spec, User } from '@/lib/types'
 import { cn } from '@/lib/utils'
+import { getIngredientData } from '@/lib/model/ingredient-data'
 
 type Props = {
-  data: IngredientData
   specs: Spec[]
   userDict: Record<string, User>
   criteria: Criteria
@@ -18,8 +18,7 @@ type Props = {
   showStock?: boolean
 }
 
-export function Grid({
-  data,
+export async function Grid({
   specs,
   userDict,
   criteria,
@@ -29,6 +28,7 @@ export function Grid({
   if (!specs.length) {
     return <>No results</>
   }
+  const data = await getIngredientData()
   const { limit } = criteria
   return (
     <>

@@ -1,6 +1,7 @@
 'use client'
 
-import { CaretLeftIcon, GearIcon, PlusIcon } from '@radix-ui/react-icons'
+import { useAuth } from '@clerk/nextjs'
+import { CaretLeftIcon } from '@radix-ui/react-icons'
 import Link from 'next/link'
 import {
   ReactNode,
@@ -12,10 +13,9 @@ import {
 
 import { Button } from '@/components/ui/button'
 import { H2 } from '@/components/ui/h2'
-import { cn } from '@/lib/utils'
 import { UserAvatar } from '@/components/user-avatar'
 import { User } from '@/lib/types'
-import { useAuth } from '@clerk/nextjs'
+import { cn } from '@/lib/utils'
 
 const Context = createContext({ scrolled: false })
 
@@ -49,64 +49,9 @@ function Root({ children, className, scrolledPx = 50 }: Props) {
   )
 }
 
-function Root2({ children, scrolledPx = 50 }: Props) {
-  const [scrolled, setScrolled] = useState(false)
-  useEffect(() => {
-    window.addEventListener('scroll', () =>
-      setScrolled(window.scrollY > scrolledPx),
-    )
-    return () => window.removeEventListener('scroll', () => {})
-  }, [scrolledPx])
-
-  return <Context.Provider value={{ scrolled }}>{children}</Context.Provider>
-}
-
 type HeaderProps = {
   children?: ReactNode
   title?: ReactNode
-}
-
-function Header2({ children, title }: HeaderProps) {
-  const { scrolled } = useContext(Context)
-  return (
-    <header
-      className={cn(
-        '[--h-header:3.25rem] sm:[--h-header:3.75rem]',
-        '[--px:theme(spacing.2)]',
-        'z-30 grid w-full place-content-center',
-        'grid-cols-[var(--px)_1fr_var(--px)] grid-rows-1 [&>*]:row-[1]',
-        'h-[var(--h-header)] border-b border-transparent transition-colors',
-        { 'border-border/40': scrolled },
-      )}
-    >
-      <div
-        className={cn(
-          'absolute inset-0 col-span-full pointer-events-none',
-          '[--extend:theme(spacing.32)] bottom-[calc(-1*var(--extend))]',
-          '[--cutoff:calc(100%-var(--extend))]',
-          '[-webkit-mask-image:linear-gradient(to_bottom,black_0,black_var(--cutoff),transparent_var(--cutoff))]',
-          'backdrop-blur-lg',
-        )}
-      />
-      {title && (
-        <div
-          className={cn(
-            'relative flex items-center justify-center justify-self-center',
-            'max-w-[calc(100%-theme(spacing.28))] col-[2]',
-            'opacity-0 transition-opacity',
-            { 'opacity-100': scrolled },
-          )}
-        >
-          <H2 className="overflow-hidden whitespace-nowrap text-ellipsis">
-            {title}
-          </H2>
-        </div>
-      )}
-      {children && (
-        <Level className="relative justify-between col-[2]">{children}</Level>
-      )}
-    </header>
-  )
 }
 
 function Header({ children, title }: HeaderProps) {
@@ -227,4 +172,4 @@ function Level({ children, className }: Props) {
   )
 }
 
-export { Actions, Header, Header2, Back, Root, Root2, Footer }
+export { Actions, Back, Footer, Header, Root }

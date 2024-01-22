@@ -1,8 +1,8 @@
 import { OptionalUnlessRequiredId } from 'mongodb'
+import { cache } from 'react'
 
 import { FIND_NO_ID, connectToDatabase } from '@/lib/mongodb'
 import { Follow } from '@/lib/types'
-import { cache } from 'react'
 
 type FollowKeys = Pick<Follow, 'followee' | 'follower'>
 
@@ -22,8 +22,9 @@ export const getFollow = cache(
   },
 )
 
-export const getFollowsByFollower = cache(
-  async (userID: string): Promise<Follow[]> => {
+export const getAllFollowing = cache(
+  async (userID?: string): Promise<Follow[]> => {
+    if (!userID) return []
     const cn = await connect()
     return cn.find({ follower: userID }, FIND_NO_ID).toArray()
   },

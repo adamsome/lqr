@@ -3,13 +3,13 @@ import Link from 'next/link'
 import { ReactNode } from 'react'
 
 import { FooterFilterDrawerButton } from '@/app/u/[username]/specs/footer-filter-drawer-button'
+import { Container } from '@/components/layout/container'
 import * as Layout from '@/components/layout/responsive-layout'
 import { Button, IconButton } from '@/components/ui/button'
-import { Container } from '@/components/layout/container'
-import { UserAvatar } from '@/components/user-avatar'
-import { toCreateSpec, toHome } from '@/lib/routes'
-import { User } from '@/lib/types'
 import { H2 } from '@/components/ui/h2'
+import { UserAvatar } from '@/components/user-avatar'
+import { getCurrentUser } from '@/lib/model/user'
+import { toCreateSpec, toHome } from '@/lib/routes'
 
 type Props = {
   children?: ReactNode
@@ -18,21 +18,19 @@ type Props = {
   filters?: ReactNode
   sidebar?: ReactNode
   status?: ReactNode
-  user: User
-  currentUser?: User | null
+  username?: string
 }
 
-export function Specs({
+export async function Specs({
   children,
   header,
   toolbar,
   filters,
   sidebar,
   status,
-  user,
-  currentUser,
+  username,
 }: Props) {
-  const isCurrentUser = user.id === currentUser?.id
+  const { user, currentUser, isCurrentUser } = await getCurrentUser(username)
   const addUrl = toCreateSpec(user?.username)
   return (
     <Layout.Root>

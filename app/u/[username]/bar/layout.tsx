@@ -7,15 +7,13 @@ import { SidebarLayout } from '@/components/layout/sidebar-layout'
 import { getUserIngredientData } from '@/lib/model/ingredient-data'
 import { toHome } from '@/lib/routes'
 import { getStockedBottleCount } from '@/lib/stock'
+import { LayoutProps } from '@/lib/types'
 
 export const revalidate = 0
 
-type Props = {
-  children: ReactNode
-  params?: {
-    username?: string
-  }
-}
+type Props = LayoutProps<{
+  username?: string
+}>
 
 export default async function Layout({ children, params }: Props) {
   const { username } = params ?? {}

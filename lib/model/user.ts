@@ -66,16 +66,35 @@ export const getUser = cache(
   },
 )
 
-export const getCurrentUser = cache(async (username?: string) => {
+type CurrentUserWithUser = {
+  user: User | null
+  currentUser: User | null
+  isSignedIn: boolean
+  isCurrentUser: boolean
+}
+
+type CurrentUserOnly = Omit<CurrentUserWithUser, 'user' | 'isCurrentUser'>
+
+async function _getCurrentUser(): Promise<CurrentUserOnly>
+async function _getCurrentUser(
+  username: string | undefined,
+): Promise<CurrentUserWithUser>
+
+async function _getCurrentUser(
+  username?: string,
+): Promise<CurrentUserWithUser | CurrentUserOnly> {
   const { userId: currentUserID } = auth()
   const [user, currentUser] = await Promise.all([
     getUser(username),
     getUserByID(currentUserID),
   ])
   const isSignedIn = currentUser != null
+  if (username === undefined) return { currentUser, isSignedIn }
   const isCurrentUser = isSignedIn && user?.id === currentUser.id
   return { user, currentUser, isSignedIn, isCurrentUser }
-})
+}
+
+export const getCurrentUser = cache(_getCurrentUser)
 
 export const isCurrentUser = cache(async (username: string | undefined) => {
   const { userId: currentUserID } = auth()

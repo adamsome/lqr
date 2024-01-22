@@ -1,9 +1,11 @@
 import Link from 'next/link'
 
 import { FollowButton } from '@/app/u/[username]/follow-button'
+import { Level } from '@/components/layout/level'
+import { Stack } from '@/components/layout/stack'
 import { UserAvatarImage } from '@/components/user-avatar-image'
 import { toHome } from '@/lib/routes'
-import { Follow, User } from '@/lib/types'
+import { User } from '@/lib/types'
 import { cn } from '@/lib/utils'
 
 type Props = {
@@ -15,13 +17,14 @@ export function UserAvatarFollow({ className, user }: Props) {
   const { displayName, username } = user
   const name = user ? displayName ?? username ?? '?' : ''
   return (
-    <div
+    <Stack
       className={cn(
-        'isolate relative flex flex-col gap-1 p-2 bg-muted/50 text-muted-foreground rounded-md',
+        'isolate relative p-2 bg-muted/50 text-muted-foreground rounded-md',
         className,
       )}
+      gap={1}
     >
-      <div className="flex items-center justify-between gap-3">
+      <Level justify="between" gap={3}>
         <Link
           className="before:absolute before:inset-0 before:z-0"
           href={toHome(user.username)}
@@ -34,10 +37,10 @@ export function UserAvatarFollow({ className, user }: Props) {
           size="xs"
           username={user.username}
         />
-      </div>
+      </Level>
       <div className="text-sm font-bold tracking-tight overflow-hidden text-ellipsis whitespace-nowrap">
         {name}
       </div>
-    </div>
+    </Stack>
   )
 }

@@ -1,6 +1,6 @@
 import { cache } from 'react'
 
-import { getFollowsByFollower } from '@/lib/model/follow'
+import { getAllFollowing } from '@/lib/model/follow'
 import { getIngredientData } from '@/lib/model/ingredient-data'
 import { getSpecs } from '@/lib/model/spec'
 import { getStockedBottleCount } from '@/lib/stock'
@@ -15,7 +15,7 @@ export const getSpecCount = cache(async (userID: string) =>
 )
 
 export const getFollowingCount = cache(async (userID: string) =>
-  getFollowsByFollower(userID).then(
+  getAllFollowing(userID).then(
     (follows) => follows.filter(({ follows }) => follows).length,
   ),
 )

@@ -1,5 +1,7 @@
 # TODO
 
+- UserAvatar async getUser
+
 Bar
 ---
 

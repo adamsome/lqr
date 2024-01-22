@@ -6,7 +6,7 @@ import { Card } from '@/app/u/[username]/specs/card'
 import { UserAvatarHeader } from '@/app/u/[username]/user-avatar-header'
 import { Button } from '@/components/ui/button'
 import { UserAvatar } from '@/components/user-avatar'
-import { getFollowsByFollower } from '@/lib/model/follow'
+import { getAllFollowing } from '@/lib/model/follow'
 import { getIngredientData } from '@/lib/model/ingredient-data'
 import { getSpecs } from '@/lib/model/spec'
 import { getManyUsers } from '@/lib/model/user'
@@ -32,7 +32,7 @@ type Props = {
 }
 
 export async function UserHome({ user }: Props) {
-  const follows = await getFollowsByFollower(user.id)
+  const follows = await getAllFollowing(user.id)
   const userIDs = [user.id, ...follows.map(({ followee }) => followee)]
 
   const [users, data, rawSpecs] = await Promise.all([

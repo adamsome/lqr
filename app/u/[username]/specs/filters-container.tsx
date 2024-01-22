@@ -2,24 +2,28 @@ import { sortBy } from 'ramda'
 
 import { Criteria } from '@/app/u/[username]/specs/_criteria/types'
 import { Filters, UserState } from '@/app/u/[username]/specs/filters'
-import { IngredientData, User } from '@/lib/types'
+import { getIngredientData } from '@/lib/model/ingredient-data'
+import { User } from '@/lib/types'
 import { cn } from '@/lib/utils'
 
 type Props = {
   userDict: Record<string, User>
-  data: IngredientData
   criteria: Criteria
 }
 
-export function FiltersContainer({ userDict, data, criteria }: Props) {
+export async function FiltersContainer({ userDict, criteria }: Props) {
+  const data = await getIngredientData()
+
   const checkedUserDict = criteria.users.reduce<Record<string, UserState>>(
     (acc, u) => ({ ...acc, [u]: { ...userDict[u], checked: true } }),
     { ...userDict },
   )
+
   const userStates = sortBy(
     (u) => u.username,
     Object.keys(checkedUserDict).map((u) => checkedUserDict[u]),
   )
+
   return (
     <Filters
       className={cn(
