@@ -22,7 +22,7 @@ export async function POST(req: NextRequest) {
   if (!spec.userID) spec.userID = user.id
   if (!spec.username && user.username) spec.username = user.username
 
-  const existing = await getSpec({ id: spec.id, userID: spec.userID })
+  const existing = await getSpec(spec.id, spec.userID)
   if (existing) {
     return NextResponse.json(
       { data: `Spec already exists with name ${spec.name}.` },

@@ -1,5 +1,12 @@
 import invariant from 'tiny-invariant'
 
+import { UserAvatarHeader } from '@/app/components/user/user-avatar-header'
+import { getSpecStock } from '@/app/lib/ingredient/get-spec-stock'
+import { getAllFollowing } from '@/app/lib/model/follow'
+import { getIngredientData } from '@/app/lib/model/ingredient-data'
+import { getAllSpecs, getAllSpecsWithUserIDs } from '@/app/lib/model/spec'
+import { getCurrentUser, getAllUsers } from '@/app/lib/model/user'
+import { toDict } from '@/app/lib/utils'
 import { applyCriteria } from '@/app/u/[username]/specs/_criteria/apply'
 import { Criteria } from '@/app/u/[username]/specs/_criteria/types'
 import { Count } from '@/app/u/[username]/specs/count'
@@ -7,17 +14,10 @@ import { FiltersContainer } from '@/app/u/[username]/specs/filters-container'
 import { Grid } from '@/app/u/[username]/specs/grid'
 import { Specs } from '@/app/u/[username]/specs/specs'
 import { Toolbar } from '@/app/u/[username]/specs/toolbar'
-import { UserAvatarHeader } from '@/app/components/user/user-avatar-header'
 import {
   MdHorizontalScroller,
   UsersToFollow,
 } from '@/app/u/[username]/users-to-follow'
-import { getSpecStock } from '@/app/lib/ingredient/get-spec-stock'
-import { getAllFollowing } from '@/app/lib/model/follow'
-import { getIngredientData } from '@/app/lib/model/ingredient-data'
-import { getSpecs } from '@/app/lib/model/spec'
-import { getCurrentUser, getManyUsers } from '@/app/lib/model/user'
-import { toDict } from '@/app/lib/utils'
 
 type Props = {
   username?: string
@@ -45,8 +45,8 @@ export async function SpecsContainer({
   ]
 
   const [users, rawSpecs] = await Promise.all([
-    getManyUsers(userIDs),
-    getSpecs(userIDs),
+    getAllUsers(userIDs),
+    getAllSpecsWithUserIDs(userIDs),
   ])
 
   const getStock = getSpecStock(data.dict, data.tree)
@@ -58,8 +58,6 @@ export async function SpecsContainer({
 
   const specs = applyCriteria(data, allSpecs, criteria)
 
-  const specCount = allSpecs.filter(({ userID }) => userID === userID).length
-
   const userDict = toDict(users, (u) => u.username)
   const filters = <FiltersContainer userDict={userDict} criteria={criteria} />
 
@@ -68,7 +66,7 @@ export async function SpecsContainer({
       username={username}
       header={
         <>
-          <UserAvatarHeader username={username} counts={{ specs: specCount }} />
+          <UserAvatarHeader username={username} />
           <UsersToFollow username={username} Wrapper={MdHorizontalScroller} />
         </>
       }

@@ -1,17 +1,17 @@
 import Link from 'next/link'
 import { sortBy } from 'ramda'
 
-import { sortSpecs } from '@/app/u/[username]/specs/_criteria/sort'
-import { Card } from '@/app/u/[username]/specs/card'
-import { UserAvatarHeader } from '@/app/components/user/user-avatar-header'
 import { Button } from '@/app/components/ui/button'
 import { UserAvatar } from '@/app/components/user/user-avatar'
+import { UserAvatarHeader } from '@/app/components/user/user-avatar-header'
 import { getAllFollowing } from '@/app/lib/model/follow'
 import { getIngredientData } from '@/app/lib/model/ingredient-data'
-import { getSpecs } from '@/app/lib/model/spec'
-import { getManyUsers } from '@/app/lib/model/user'
+import { getAllSpecs, getAllSpecsWithUserIDs } from '@/app/lib/model/spec'
+import { getAllUsers } from '@/app/lib/model/user'
 import { toHome, toSpecItem, toSpecs } from '@/app/lib/routes'
 import { Ingredient, Spec, User } from '@/app/lib/types'
+import { sortSpecs } from '@/app/u/[username]/specs/_criteria/sort'
+import { Card } from '@/app/u/[username]/specs/card'
 
 export const revalidate = 0
 
@@ -36,9 +36,9 @@ export async function UserHome({ user }: Props) {
   const userIDs = [user.id, ...follows.map(({ followee }) => followee)]
 
   const [users, data, rawSpecs] = await Promise.all([
-    getManyUsers(userIDs),
+    getAllUsers(userIDs),
     getIngredientData(),
-    getSpecs(userIDs),
+    getAllSpecsWithUserIDs(userIDs),
   ])
 
   const specs = sortSpecs(rawSpecs)
@@ -52,14 +52,9 @@ export async function UserHome({ user }: Props) {
 
   const followers = sortByRecentSpec(specsByUsername, users.slice(1))
 
-  const specCount = specsByUsername[user.username]?.length ?? 0
-
   return (
     <>
-      <UserAvatarHeader
-        username={user.username}
-        counts={{ specs: specCount }}
-      />
+      <UserAvatarHeader username={user.username} />
       <div>
         <div className="-mx-2">
           {specsByUsername[user.username]

@@ -4,15 +4,15 @@ import { micromark } from 'micromark'
 import Link from 'next/link'
 import invariant from 'tiny-invariant'
 
-import { Back } from '@/app/u/[username]/specs/[id]/back'
-import { Spec } from '@/app/u/[username]/specs/[id]/spec'
-import { SpecLayout } from '@/app/u/[username]/specs/[id]/spec-layout'
 import { UserAvatar } from '@/app/components/user/user-avatar'
 import { getSpecStock } from '@/app/lib/ingredient/get-spec-stock'
 import { getIngredientData } from '@/app/lib/model/ingredient-data'
 import { getSpec } from '@/app/lib/model/spec'
 import { toHome } from '@/app/lib/routes'
 import { User } from '@/app/lib/types'
+import { Back } from '@/app/u/[username]/specs/[id]/back'
+import { Spec } from '@/app/u/[username]/specs/[id]/spec'
+import { SpecLayout } from '@/app/u/[username]/specs/[id]/spec-layout'
 
 type Props = {
   specID: string
@@ -24,7 +24,7 @@ export async function SpecContainer({ specID, user, showEdit }: Props) {
   const { userId: currentUserID } = auth()
   const [data, spec] = await Promise.all([
     getIngredientData(),
-    getSpec({ id: specID, userID: user.id }),
+    getSpec(specID, user.id),
   ])
 
   // TODO: Show No Spec found

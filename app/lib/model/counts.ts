@@ -2,7 +2,7 @@ import { cache } from 'react'
 
 import { getAllFollowing } from '@/app/lib/model/follow'
 import { getIngredientData } from '@/app/lib/model/ingredient-data'
-import { getSpecs } from '@/app/lib/model/spec'
+import { getAllSpecs } from '@/app/lib/model/spec'
 import { getStockedBottleCount } from '@/app/lib/stock'
 import { Counts } from '@/app/lib/types'
 
@@ -11,7 +11,7 @@ export const getBottleCount = cache(async (userID?: string) =>
 )
 
 export const getSpecCount = cache(async (userID: string) =>
-  getSpecs(userID).then((specs) => specs.length),
+  getAllSpecs(userID).then((specs) => specs.length),
 )
 
 export const getFollowingCount = cache(async (userID: string) =>
@@ -21,20 +21,12 @@ export const getFollowingCount = cache(async (userID: string) =>
 )
 
 export const getCounts = cache(
-  async (
-    userID: string | undefined,
-    partial: Partial<Counts> = {},
-  ): Promise<Counts> => {
+  async (userID: string | undefined): Promise<Counts> => {
+    if (!userID) return { bottles: 0, specs: 0, following: 0 }
     const [bottles, specs, following] = await Promise.all([
-      partial.bottles != null
-        ? Promise.resolve(partial.bottles)
-        : getBottleCount(userID),
-      partial.specs != null || !userID
-        ? Promise.resolve(partial.specs ?? 0)
-        : getSpecCount(userID),
-      partial.following != null || !userID
-        ? Promise.resolve(partial.following ?? 0)
-        : getFollowingCount(userID),
+      getBottleCount(userID),
+      getSpecCount(userID),
+      getFollowingCount(userID),
     ])
     return { bottles, specs, following }
   },

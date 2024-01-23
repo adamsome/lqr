@@ -49,7 +49,7 @@ export async function DELETE(req: NextRequest) {
     )
   }
 
-  const spec = await getSpec({ id })
+  const spec = await getSpec(id, userID)
 
   if (!spec) {
     return NextResponse.json(

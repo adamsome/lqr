@@ -1,8 +1,8 @@
 import Link from 'next/link'
 
-import { FollowButtonContainer } from '@/app/components/user/follow-button-container'
 import { Level } from '@/app/components/layout/level'
 import { Stack } from '@/app/components/layout/stack'
+import { FollowButtonContainer } from '@/app/components/user/follow-button-container'
 import { UserAvatarImage } from '@/app/components/user/user-avatar-image'
 import { getCounts } from '@/app/lib/model/counts'
 import { getCurrentUser } from '@/app/lib/model/user'
@@ -12,16 +12,11 @@ import { Counts, User } from '@/app/lib/types'
 type Props = {
   className?: string
   username?: string
-  counts?: Partial<Counts>
 }
 
-export async function UserAvatarHeader({
-  className,
-  username,
-  counts: partialCounts,
-}: Props) {
+export async function UserAvatarHeader({ className, username }: Props) {
   const { user, isCurrentUser } = await getCurrentUser(username)
-  const counts = await getCounts(user?.id, partialCounts)
+  const counts = await getCounts(user?.id)
   return (
     <Stack className={className} gap={1}>
       <Level className="sm:justify-normal" justify="between" gap={3}>
@@ -54,7 +49,12 @@ function Name({ user }: { user: User | null }) {
   )
 }
 
-function Counts({ username, counts }: Pick<Props, 'username' | 'counts'>) {
+type CountsProps = {
+  username?: string
+  counts?: Partial<Counts>
+}
+
+function Counts({ username, counts }: CountsProps) {
   const { bottles = 0, specs = 0, following = 0 } = counts ?? {}
   return (
     <Level

@@ -143,9 +143,6 @@ Content
 Chores
 ------
 
-- Move /components, /lib to /app
-- Move /hooks to /lib/*
-
 - `cache()` models
 - Add error boundaries (e.g. to handle user==null)
 

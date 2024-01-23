@@ -6,7 +6,7 @@ import { EnsureFollows } from '@/app/u/[username]/following/ensure-follows'
 import { UserAvatarRow } from '@/app/components/user/user-avatar-row'
 import { Stack } from '@/app/components/layout/stack'
 import { getAllFollowing } from '@/app/lib/model/follow'
-import { getCurrentUser, getManyUsers } from '@/app/lib/model/user'
+import { getCurrentUser, getAllUsers } from '@/app/lib/model/user'
 import { cn, toDict } from '@/app/lib/utils'
 
 type Props = {
@@ -21,7 +21,7 @@ export async function List({ className, username }: Props) {
 
   const userFollowing = await getAllFollowing(user.id)
   const userFollowingIDs = userFollowing.map(({ followee }) => followee)
-  const followingUsers = await getManyUsers(userFollowingIDs)
+  const followingUsers = await getAllUsers(userFollowingIDs)
 
   const currentUserFollowing = await getAllFollowing(currentUser?.id)
   const byFollowee = toDict(currentUserFollowing, ({ followee }) => followee)

@@ -8,29 +8,37 @@ import { asArray } from '@/app/lib/utils'
 import 'server-only'
 
 export async function getSpec(
-  filter: Filter<OptionalId<Spec>>,
+  id: string | undefined,
+  userID: string | undefined,
 ): Promise<Spec | undefined> {
+  if (!id || !userID) return undefined
   const { db } = await connectToDatabase()
   const specs: Spec[] =
     (await db
       .collection<OptionalUnlessRequiredId<Spec>>('spec')
-      .find(filter, FIND_NO_ID)
+      .find({ id }, FIND_NO_ID)
       .toArray()) ?? []
   invariant(specs.length <= 1, `Got multiple specs`)
   return specs[0]
 }
 
-export async function getSpecs(
-  userIDOrIDs: string | string[],
+export async function getAllSpecs(userID: string | undefined): Promise<Spec[]> {
+  const { db } = await connectToDatabase()
+  if (!userID) return []
+  return db
+    .collection<OptionalUnlessRequiredId<Spec>>('spec')
+    .find({ userID }, FIND_NO_ID)
+    .toArray()
+}
+
+export async function getAllSpecsWithUserIDs(
+  userIDOrIDs: string[],
 ): Promise<Spec[]> {
   const { db } = await connectToDatabase()
   const userIDs = asArray(userIDOrIDs)
   if (userIDs.length === 0) return []
   if (userIDs.length === 1) {
-    return db
-      .collection<OptionalUnlessRequiredId<Spec>>('spec')
-      .find({ userID: userIDs[0] }, FIND_NO_ID)
-      .toArray()
+    return getAllSpecs(userIDOrIDs[0])
   }
   return db
     .collection<OptionalUnlessRequiredId<Spec>>('spec')

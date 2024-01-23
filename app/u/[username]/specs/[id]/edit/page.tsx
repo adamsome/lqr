@@ -2,27 +2,26 @@ import { auth } from '@clerk/nextjs'
 import { Suspense } from 'react'
 import invariant from 'tiny-invariant'
 
-import { SpecContainer } from '@/app/u/[username]/specs/[id]/edit/spec-container'
 import { isAdmin } from '@/app/lib/model/admin'
 import { getSpec } from '@/app/lib/model/spec'
 import { getUser } from '@/app/lib/model/user'
+import { PageProps } from '@/app/lib/types'
+import { SpecContainer } from '@/app/u/[username]/specs/[id]/edit/spec-container'
 
 export const revalidate = 0
 
-type Props = {
-  params: {
-    username: string
-    id: string
-  }
-}
+type Props = PageProps<{
+  username: string
+  id: string
+}>
 
-export default async function Page({ params }: Props) {
+export default async function Page({ params = {} }: Props) {
   const { username, id } = params
 
   const { userId: currentUserID } = auth()
 
   const user = await getUser(username)
-  const spec = await getSpec({ id })
+  const spec = await getSpec(id, user?.id)
 
   // TODO: Show "User not found"
   invariant(user, `User not found.`)

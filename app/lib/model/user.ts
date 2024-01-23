@@ -35,7 +35,7 @@ const SYSTEM_USERS = [
 const byID = toDict(SYSTEM_USERS, ({ id }) => id)
 const byUsername = toDict(SYSTEM_USERS, ({ username }) => username)
 
-export async function getManyUsers(userIDs: string[]): Promise<User[]> {
+export async function getAllUsers(userIDs: string[]): Promise<User[]> {
   const [systemIDs, ids] = partition((id) => byID[id] !== undefined, userIDs)
   const systemUsers = systemIDs.map((id) => byID[id])
 
@@ -116,7 +116,7 @@ export async function getMostRecentActedUsers({
     .sort({ actedAt: -1 })
     .limit(limit)
     .toArray()
-  return getManyUsers(users.map(({ id }) => id))
+  return getAllUsers(users.map(({ id }) => id))
 }
 
 export async function updateUserActedAt(userID: string) {

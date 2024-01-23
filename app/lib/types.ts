@@ -141,9 +141,10 @@ type PropsWithSearchParams = { searchParams?: { [key: string]: SearchParam } }
 export type LayoutProps<T = undefined> = T extends undefined
   ? PropsWithChildren
   : PropsWithChildren & { params?: T }
-export type PageProps<T = undefined> = T extends undefined
-  ? PropsWithSearchParams
-  : PropsWithSearchParams & { params?: T }
+export type PageProps<T extends undefined | object = undefined> =
+  T extends undefined
+    ? PropsWithSearchParams
+    : PropsWithSearchParams & { params?: Partial<T> }
 
 export type HasIDAndName = { id: string; name: string }
 export type Option<T> = { label: string; value: T }
