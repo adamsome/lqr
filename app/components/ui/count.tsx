@@ -17,7 +17,7 @@ export function Count({ className, count, total = count }: Props) {
       <span>{count}</span>
       {total > count && (
         <span className="text-muted-foreground/60">
-          <span>/</span>
+          <span>&#x200A;/&#x200A;</span>
           <span>{total}</span>
         </span>
       )}
