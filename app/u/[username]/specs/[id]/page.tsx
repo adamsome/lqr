@@ -19,7 +19,6 @@ export default async function Page({ params = {} }: Props) {
 
   const user = await getUser(username)
 
-  // TODO: Show "User not found"
   invariant(user, `User not found.`)
   invariant(id, `ID needed to show spec.`)
 

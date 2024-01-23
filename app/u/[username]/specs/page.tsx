@@ -1,6 +1,6 @@
+import { PageProps } from '@/app/lib/types'
 import { parseCriteria } from '@/app/u/[username]/specs/_criteria/parse'
 import { SpecsContainer } from '@/app/u/[username]/specs/specs-container'
-import { PageProps } from '@/app/lib/types'
 
 type Props = PageProps<{
   username?: string

@@ -143,7 +143,6 @@ Content
 Chores
 ------
 
-- `cache()` models
 - Add error boundaries (e.g. to handle user==null)
 
 - Use LinkBox

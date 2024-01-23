@@ -27,7 +27,6 @@ export async function SpecContainer({ specID, user, showEdit }: Props) {
     getSpec(specID, user.id),
   ])
 
-  // TODO: Show No Spec found
   invariant(spec, `No spec with id '${specID}'.`)
 
   const { dict, tree } = data

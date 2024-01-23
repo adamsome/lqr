@@ -23,13 +23,8 @@ export default async function Page({ params = {} }: Props) {
   const user = await getUser(username)
   const spec = await getSpec(id, user?.id)
 
-  // TODO: Show "User not found"
   invariant(user, `User not found.`)
-
-  // TODO: Show "Spec not found"
   invariant(spec, `No spec found with id '${id}'.`)
-
-  // TODO: Cannot edit other user's specs
   invariant(
     isAdmin(currentUserID) || currentUserID === spec.userID,
     `Only creator of spec with id '${id}' can edit.`,
