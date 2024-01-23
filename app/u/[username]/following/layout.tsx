@@ -1,12 +1,12 @@
-import { FollowButtonContainer } from '@/app/u/[username]/follow-button-container'
-import { UserAvatarHeader } from '@/app/u/[username]/user-avatar-header'
-import { Container } from '@/components/layout/container'
-import { Back, Header, Root } from '@/components/layout/responsive-layout'
-import { Stack } from '@/components/layout/stack'
-import { UserAvatar } from '@/components/user-avatar'
-import { getCurrentUser } from '@/lib/model/user'
-import { toHome } from '@/lib/routes'
-import { LayoutProps } from '@/lib/types'
+import { FollowButtonContainer } from '@/app/components/user/follow-button-container'
+import { UserAvatarHeader } from '@/app/components/user/user-avatar-header'
+import { Container } from '@/app/components/layout/container'
+import { Back, Header, Root } from '@/app/components/layout/responsive-layout'
+import { Stack } from '@/app/components/layout/stack'
+import { UserAvatar } from '@/app/components/user/user-avatar'
+import { getCurrentUser } from '@/app/lib/model/user'
+import { toHome } from '@/app/lib/routes'
+import { LayoutProps } from '@/app/lib/types'
 
 export const revalidate = 0
 

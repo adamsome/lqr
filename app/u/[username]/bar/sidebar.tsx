@@ -1,6 +1,6 @@
 import { Bar } from '@/app/u/[username]/bar/bar'
-import { Stack } from '@/components/layout/stack'
-import { H2 } from '@/components/ui/h2'
+import { Stack } from '@/app/components/layout/stack'
+import { H2 } from '@/app/components/ui/h2'
 
 type Props = {
   username?: string

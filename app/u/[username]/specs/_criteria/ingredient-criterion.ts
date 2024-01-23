@@ -5,8 +5,8 @@ import {
   Aging,
   PRODUCTION_METHOD_DICT,
   ProductionMethod,
-} from '@/lib/generated-consts'
-import { SpecIngredient } from '@/lib/types'
+} from '@/app/lib/generated-consts'
+import { SpecIngredient } from '@/app/lib/types'
 
 type ModifierKeys = 'aging' | 'productionMethod' | 'black' | 'overproof'
 const MODIFIERS: Record<keyof Pick<SpecIngredient, ModifierKeys>, string> = {

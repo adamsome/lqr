@@ -2,9 +2,9 @@
 
 import { useSelectedLayoutSegments } from 'next/navigation'
 
-import { LinkBox } from '@/components/ui/link-box'
-import { CompProps } from '@/lib/types'
-import { cn } from '@/lib/utils'
+import { LinkBox } from '@/app/components/ui/link-box'
+import { CompProps } from '@/app/lib/types'
+import { cn } from '@/app/lib/utils'
 
 type Props = CompProps & {
   path: (string | undefined)[]

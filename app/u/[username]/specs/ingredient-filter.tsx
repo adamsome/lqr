@@ -1,6 +1,6 @@
 import { Cross1Icon } from '@radix-ui/react-icons'
 
-import { Button } from '@/components/ui/button'
+import { Button } from '@/app/components/ui/button'
 
 type Props = {
   name: string

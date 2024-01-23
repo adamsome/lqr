@@ -4,11 +4,11 @@ import { SpecStockText } from '@/app/u/[username]/specs/[id]/spec-stock'
 import { Criteria } from '@/app/u/[username]/specs/_criteria/types'
 import { Card } from '@/app/u/[username]/specs/card'
 import { LoadMoreButton } from '@/app/u/[username]/specs/load-more-button'
-import { UserAvatar } from '@/components/user-avatar'
-import { toHome, toSpecItem } from '@/lib/routes'
-import { IngredientData, Spec, User } from '@/lib/types'
-import { cn } from '@/lib/utils'
-import { getIngredientData } from '@/lib/model/ingredient-data'
+import { UserAvatar } from '@/app/components/user/user-avatar'
+import { toHome, toSpecItem } from '@/app/lib/routes'
+import { IngredientData, Spec, User } from '@/app/lib/types'
+import { cn } from '@/app/lib/utils'
+import { getIngredientData } from '@/app/lib/model/ingredient-data'
 
 type Props = {
   specs: Spec[]

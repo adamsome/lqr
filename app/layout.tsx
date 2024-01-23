@@ -3,12 +3,12 @@ import './globals.css'
 import { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 
-import { AppCommand } from '@/app/app-command'
-import { AuthProvider } from '@/components/auth-provider'
-import { TailwindIndicator } from '@/components/tailwind-indicator'
-import { themeEffect } from '@/components/theme-effect'
-import { Toaster } from '@/components/ui/toaster'
-import { TooltipProvider } from '@/components/ui/tooltip'
+import { AppCommand } from '@/app/components/app-command'
+import { AuthProvider } from '@/app/components/auth-provider'
+import { TailwindIndicator } from '@/app/components/tailwind-indicator'
+import { themeEffect } from '@/app/components/theme-effect'
+import { Toaster } from '@/app/components/ui/toaster'
+import { TooltipProvider } from '@/app/components/ui/tooltip'
 
 const inter = Inter({ subsets: ['latin'] })
 

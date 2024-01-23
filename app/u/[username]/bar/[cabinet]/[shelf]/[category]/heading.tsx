@@ -3,9 +3,9 @@
 import { BackButton } from '@/app/u/[username]/bar/components/back-button'
 import { getCategoryDef } from '@/app/u/[username]/bar/lib/defs'
 import { CategoryKeys } from '@/app/u/[username]/bar/lib/types'
-import { Stack } from '@/components/layout/stack'
-import { H1 } from '@/components/ui/h1'
-import { CompProps } from '@/lib/types'
+import { Stack } from '@/app/components/layout/stack'
+import { H1 } from '@/app/components/ui/h1'
+import { CompProps } from '@/app/lib/types'
 
 export const revalidate = 0
 

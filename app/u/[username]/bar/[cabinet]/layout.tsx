@@ -1,6 +1,6 @@
 import { MobileDrawer } from '@/app/u/[username]/bar/[cabinet]/mobile-drawer'
 import { CategoryKeys } from '@/app/u/[username]/bar/lib/types'
-import { LayoutProps } from '@/lib/types'
+import { LayoutProps } from '@/app/lib/types'
 
 type Props = LayoutProps<
   CategoryKeys & {

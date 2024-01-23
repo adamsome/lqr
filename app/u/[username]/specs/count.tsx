@@ -1,4 +1,4 @@
-import { Count as BaseCount } from '@/components/ui/count'
+import { Count as BaseCount } from '@/app/components/ui/count'
 
 type Props = {
   count: number

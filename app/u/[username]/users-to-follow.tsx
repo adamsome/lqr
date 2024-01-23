@@ -1,12 +1,12 @@
 import { FC, PropsWithChildren } from 'react'
 
-import { UserAvatarFollow } from '@/app/u/[username]/user-avatar-follow'
-import { Stack } from '@/components/layout/stack'
-import { HorizontalScroller } from '@/components/ui/horizontal-scroller'
-import { getAllFollowing } from '@/lib/model/follow'
-import { getCurrentUser, getMostRecentActedUsers } from '@/lib/model/user'
-import { CompProps } from '@/lib/types'
-import { cn } from '@/lib/utils'
+import { UserAvatarFollow } from '@/app/components/user/user-avatar-follow'
+import { Stack } from '@/app/components/layout/stack'
+import { HorizontalScroller } from '@/app/components/ui/horizontal-scroller'
+import { getAllFollowing } from '@/app/lib/model/follow'
+import { getCurrentUser, getMostRecentActedUsers } from '@/app/lib/model/user'
+import { CompProps } from '@/app/lib/types'
+import { cn } from '@/app/lib/utils'
 
 type Props = {
   username?: string

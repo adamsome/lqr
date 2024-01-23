@@ -1,6 +1,6 @@
 import { Ingredient } from '@/app/u/[username]/bar/[cabinet]/[shelf]/[category]/ingredient'
 import { CategoryKeys } from '@/app/u/[username]/bar/lib/types'
-import { toBarCategory } from '@/lib/routes'
+import { toBarCategory } from '@/app/lib/routes'
 import Link from 'next/link'
 
 type Props = CategoryKeys & {

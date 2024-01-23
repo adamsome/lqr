@@ -4,12 +4,12 @@ import { useAuth } from '@clerk/nextjs'
 
 import { createColumns } from '@/app/research/columns'
 import { Toolbar } from '@/app/research/toolbar'
-import { useIngredientData } from '@/components/data-provider'
-import { DataTable } from '@/components/ui/data-table'
-import { DataTableContainer } from '@/components/ui/data-table-container'
-import { DataTablePagination } from '@/components/ui/data-table-pagination'
-import { getIngredientPath } from '@/lib/ingredient/get-ingredient-path'
-import { Ingredient, WithPath } from '@/lib/types'
+import { useIngredientData } from '@/app/components/data-provider'
+import { DataTable } from '@/app/components/ui/data-table'
+import { DataTableContainer } from '@/app/components/ui/data-table-container'
+import { DataTablePagination } from '@/app/components/ui/data-table-pagination'
+import { getIngredientPath } from '@/app/lib/ingredient/get-ingredient-path'
+import { Ingredient, WithPath } from '@/app/lib/types'
 
 export function Table() {
   const { isLoaded, isSignedIn } = useAuth()

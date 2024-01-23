@@ -5,9 +5,9 @@ import { useEffect, useState } from 'react'
 import { useDebounce } from 'react-use'
 
 import { SEARCH_KEY } from '@/app/u/[username]/specs/_criteria/consts'
-import { Input } from '@/components/ui/input'
-import { useRouterSearchParams } from '@/hooks/use-router-search-params'
-import { cn } from '@/lib/utils'
+import { Input } from '@/app/components/ui/input'
+import { useRouterSearchParams } from '@/app/u/[username]/specs/use-router-search-params'
+import { cn } from '@/app/lib/utils'
 
 type Props = {
   className?: string

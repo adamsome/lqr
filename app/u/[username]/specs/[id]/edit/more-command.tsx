@@ -5,7 +5,7 @@ import {
 } from '@radix-ui/react-icons'
 import { KeyboardEvent, useEffect, useState } from 'react'
 
-import { Button, Props as ButtonProps } from '@/components/ui/button'
+import { Button, Props as ButtonProps } from '@/app/components/ui/button'
 import {
   CommandDialog,
   CommandEmpty,
@@ -13,10 +13,10 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
-} from '@/components/ui/command'
-import { NameDialog } from '@/components/ui/name-dialog'
-import { SpecIngredient } from '@/lib/types'
-import { cn } from '@/lib/utils'
+} from '@/app/components/ui/command'
+import { NameDialog } from '@/app/components/ui/name-dialog'
+import { SpecIngredient } from '@/app/lib/types'
+import { cn } from '@/app/lib/utils'
 
 type Props = Omit<ButtonProps, 'onSelect'> & {
   ingredient: SpecIngredient

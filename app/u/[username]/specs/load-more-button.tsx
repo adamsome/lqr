@@ -4,8 +4,8 @@ import {
   DEFAULT_LIMIT,
   LIMIT_KEY,
 } from '@/app/u/[username]/specs/_criteria/consts'
-import { LoaderButton } from '@/components/ui/loader-button'
-import { useRouterSearchParams } from '@/hooks/use-router-search-params'
+import { LoaderButton } from '@/app/components/ui/loader-button'
+import { useRouterSearchParams } from '@/app/u/[username]/specs/use-router-search-params'
 
 type Props = {
   limit: number

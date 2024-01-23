@@ -2,9 +2,9 @@ import { sortBy } from 'ramda'
 
 import { Criteria } from '@/app/u/[username]/specs/_criteria/types'
 import { Filters, UserState } from '@/app/u/[username]/specs/filters'
-import { getIngredientData } from '@/lib/model/ingredient-data'
-import { User } from '@/lib/types'
-import { cn } from '@/lib/utils'
+import { getIngredientData } from '@/app/lib/model/ingredient-data'
+import { User } from '@/app/lib/types'
+import { cn } from '@/app/lib/utils'
 
 type Props = {
   userDict: Record<string, User>

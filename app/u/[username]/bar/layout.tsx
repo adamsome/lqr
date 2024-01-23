@@ -1,13 +1,17 @@
 import { ReactNode } from 'react'
 
 import { Sidebar } from '@/app/u/[username]/bar/sidebar'
-import { IngredientDataProvider } from '@/components/data-provider'
-import { AppBack, AppHeader, AppLayout } from '@/components/layout/app-layout'
-import { SidebarLayout } from '@/components/layout/sidebar-layout'
-import { getUserIngredientData } from '@/lib/model/ingredient-data'
-import { toHome } from '@/lib/routes'
-import { getStockedBottleCount } from '@/lib/stock'
-import { LayoutProps } from '@/lib/types'
+import { IngredientDataProvider } from '@/app/components/data-provider'
+import {
+  AppBack,
+  AppHeader,
+  AppLayout,
+} from '@/app/components/layout/app-layout'
+import { SidebarLayout } from '@/app/components/layout/sidebar-layout'
+import { getUserIngredientData } from '@/app/lib/model/ingredient-data'
+import { toHome } from '@/app/lib/routes'
+import { getStockedBottleCount } from '@/app/lib/stock'
+import { LayoutProps } from '@/app/lib/types'
 
 export const revalidate = 0
 

@@ -6,9 +6,9 @@ import { AddIngredientLink } from '@/app/u/[username]/bar/[cabinet]/[shelf]/[cat
 import { Ingredient } from '@/app/u/[username]/bar/[cabinet]/[shelf]/[category]/ingredient'
 import { HeadingLink } from '@/app/u/[username]/bar/components/heading-link'
 import { BarCategory, GridCategoryDef } from '@/app/u/[username]/bar/lib/types'
-import { Stack } from '@/components/layout/stack'
-import { sortByStocked } from '@/lib/stock'
-import { cn } from '@/lib/utils'
+import { Stack } from '@/app/components/layout/stack'
+import { sortByStocked } from '@/app/lib/stock'
+import { cn } from '@/app/lib/utils'
 
 type Props = {
   className?: string

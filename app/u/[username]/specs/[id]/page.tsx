@@ -2,8 +2,8 @@ import { auth } from '@clerk/nextjs'
 import invariant from 'tiny-invariant'
 
 import { SpecContainer } from '@/app/u/[username]/specs/[id]/spec-container'
-import { isAdmin } from '@/lib/model/admin'
-import { getUser } from '@/lib/model/user'
+import { isAdmin } from '@/app/lib/model/admin'
+import { getUser } from '@/app/lib/model/user'
 
 type Props = {
   params?: {

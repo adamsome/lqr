@@ -4,8 +4,8 @@ import { ListFilter } from 'lucide-react'
 import { ReactNode, useState } from 'react'
 import { Drawer } from 'vaul'
 
-import { Button, IconButton } from '@/components/ui/button'
-import { cn } from '@/lib/utils'
+import { Button, IconButton } from '@/app/components/ui/button'
+import { cn } from '@/app/lib/utils'
 
 type Props = {
   children: ReactNode

@@ -3,13 +3,13 @@ import Link from 'next/link'
 import { ReactNode } from 'react'
 
 import { FooterFilterDrawerButton } from '@/app/u/[username]/specs/footer-filter-drawer-button'
-import { Container } from '@/components/layout/container'
-import * as Layout from '@/components/layout/responsive-layout'
-import { Button, IconButton } from '@/components/ui/button'
-import { H2 } from '@/components/ui/h2'
-import { UserAvatar } from '@/components/user-avatar'
-import { getCurrentUser } from '@/lib/model/user'
-import { toCreateSpec, toHome } from '@/lib/routes'
+import { Container } from '@/app/components/layout/container'
+import * as Layout from '@/app/components/layout/responsive-layout'
+import { Button, IconButton } from '@/app/components/ui/button'
+import { H2 } from '@/app/components/ui/h2'
+import { UserAvatar } from '@/app/components/user/user-avatar'
+import { getCurrentUser } from '@/app/lib/model/user'
+import { toCreateSpec, toHome } from '@/app/lib/routes'
 
 type Props = {
   children?: ReactNode

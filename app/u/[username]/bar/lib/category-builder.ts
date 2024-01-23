@@ -11,20 +11,20 @@ import {
   BarCategoryDef,
   CABINETS,
 } from '@/app/u/[username]/bar/lib/types'
-import { HierarchicalFilter } from '@/lib/hierarchical-filter'
+import { HierarchicalFilter } from '@/app/lib/hierarchical-filter'
 import {
   IngredientItem,
   filterIngredientItems,
-} from '@/lib/ingredient/filter-ingredient-items'
-import { getIngredientName } from '@/lib/ingredient/get-ingredient-name'
-import { INGREDIENT_KINDS } from '@/lib/ingredient/kind'
+} from '@/app/lib/ingredient/filter-ingredient-items'
+import { getIngredientName } from '@/app/lib/ingredient/get-ingredient-name'
+import { INGREDIENT_KINDS } from '@/app/lib/ingredient/kind'
 import {
   KIND_INGREDIENT_DICT,
   KIND_MORE_INGREDIENT_TYPES,
-} from '@/lib/ingredient/kind-ingredients'
-import { getUserIngredientData } from '@/lib/model/ingredient-data'
-import { IngredientData } from '@/lib/types'
-import { rejectNil } from '@/lib/utils'
+} from '@/app/lib/ingredient/kind-ingredients'
+import { getUserIngredientData } from '@/app/lib/model/ingredient-data'
+import { IngredientData } from '@/app/lib/types'
+import { rejectNil } from '@/app/lib/utils'
 
 function createTree(
   items: IngredientItem[],

@@ -3,7 +3,7 @@ import { Heading } from '@/app/u/[username]/bar/[cabinet]/[shelf]/heading'
 import { Heading as CabinetHeading } from '@/app/u/[username]/bar/[cabinet]/heading'
 import { getCabinetDef } from '@/app/u/[username]/bar/lib/defs'
 import { CABINETS } from '@/app/u/[username]/bar/lib/types'
-import { Stack } from '@/components/layout/stack'
+import { Stack } from '@/app/components/layout/stack'
 
 type Props = {
   username?: string

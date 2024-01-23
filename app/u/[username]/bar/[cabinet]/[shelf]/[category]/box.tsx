@@ -6,11 +6,11 @@ import { useRouter } from 'next/navigation'
 import { BoxButton } from '@/app/u/[username]/bar/[cabinet]/[shelf]/[category]/box-button'
 import { BoxLine } from '@/app/u/[username]/bar/[cabinet]/[shelf]/[category]/box-line'
 import { BarCategory, GridCategoryDef } from '@/app/u/[username]/bar/lib/types'
-import { Level } from '@/components/layout/level'
-import { useGetIngredientName } from '@/hooks/use-get-ingredient-name'
-import { useMutateStock } from '@/lib/api/use-mutate-stock'
-import { toBarCategory } from '@/lib/routes'
-import { sortByStocked } from '@/lib/stock'
+import { Level } from '@/app/components/layout/level'
+import { useGetIngredientName } from '@/app/lib/ingredient/use-get-ingredient-name'
+import { useMutateStock } from '@/app/api/stock/use-mutate-stock'
+import { toBarCategory } from '@/app/lib/routes'
+import { sortByStocked } from '@/app/lib/stock'
 
 type Props = {
   className?: string

@@ -1,11 +1,11 @@
 import { ReactNode } from 'react'
 
 import { Ingredient } from '@/app/u/[username]/specs/[id]/ingredient'
-import { DotSeparator } from '@/components/ui/dot-separator'
-import { getGlassTypeLabel } from '@/lib/glass-type'
-import { getMixTypeLabel } from '@/lib/mix-type'
-import { getSpecCategoryLabel } from '@/lib/spec-category'
-import { IngredientData, Spec } from '@/lib/types'
+import { DotSeparator } from '@/app/components/ui/dot-separator'
+import { getGlassTypeLabel } from '@/app/lib/glass-type'
+import { getMixTypeLabel } from '@/app/lib/mix-type'
+import { getSpecCategoryLabel } from '@/app/lib/spec-category'
+import { IngredientData, Spec } from '@/app/lib/types'
 
 type Props = {
   spec: Spec

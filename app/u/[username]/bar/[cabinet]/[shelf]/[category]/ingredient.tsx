@@ -2,14 +2,14 @@
 
 import { ArrowDownIcon } from '@radix-ui/react-icons'
 
-import { Level } from '@/components/layout/level'
-import { Button } from '@/components/ui/button'
-import { Checkbox } from '@/components/ui/checkbox'
-import { CheckboxLabel } from '@/components/ui/checkbox-label'
-import { useGetIngredientName } from '@/hooks/use-get-ingredient-name'
-import { useMutateStock } from '@/lib/api/use-mutate-stock'
-import { Ingredient } from '@/lib/types'
-import { cn } from '@/lib/utils'
+import { Level } from '@/app/components/layout/level'
+import { Button } from '@/app/components/ui/button'
+import { Checkbox } from '@/app/components/ui/checkbox'
+import { CheckboxLabel } from '@/app/components/ui/checkbox-label'
+import { useGetIngredientName } from '@/app/lib/ingredient/use-get-ingredient-name'
+import { useMutateStock } from '@/app/api/stock/use-mutate-stock'
+import { Ingredient } from '@/app/lib/types'
+import { cn } from '@/app/lib/utils'
 
 type Props = {
   className?: string

@@ -1,11 +1,11 @@
 import Link from 'next/link'
 import { ReactNode } from 'react'
 
-import * as Layout from '@/components/layout/responsive-layout'
-import { Button } from '@/components/ui/button'
-import { Container } from '@/components/layout/container'
-import { toSpecEdit } from '@/lib/routes'
-import { Spec } from '@/lib/types'
+import * as Layout from '@/app/components/layout/responsive-layout'
+import { Button } from '@/app/components/ui/button'
+import { Container } from '@/app/components/layout/container'
+import { toSpecEdit } from '@/app/lib/routes'
+import { Spec } from '@/app/lib/types'
 
 type Props = {
   children: ReactNode

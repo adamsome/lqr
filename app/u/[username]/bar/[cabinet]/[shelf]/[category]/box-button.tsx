@@ -3,9 +3,9 @@
 import { useSelectedLayoutSegments } from 'next/navigation'
 import { FormEventHandler } from 'react'
 
-import { useGetIngredientName } from '@/hooks/use-get-ingredient-name'
-import { CompProps } from '@/lib/types'
-import { cn } from '@/lib/utils'
+import { useGetIngredientName } from '@/app/lib/ingredient/use-get-ingredient-name'
+import { CompProps } from '@/app/lib/types'
+import { cn } from '@/app/lib/utils'
 import { CategoryKeys } from '@/app/u/[username]/bar/lib/types'
 
 type Props = CompProps & {

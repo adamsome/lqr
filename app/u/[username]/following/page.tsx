@@ -1,5 +1,5 @@
 import { List } from '@/app/u/[username]/following/list'
-import { PageProps } from '@/lib/types'
+import { PageProps } from '@/app/lib/types'
 
 type Props = PageProps<{
   username?: string

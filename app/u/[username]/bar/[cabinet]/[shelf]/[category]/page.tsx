@@ -3,9 +3,9 @@ import { IngredientList } from '@/app/u/[username]/bar/[cabinet]/[shelf]/[catego
 import { buildCategories } from '@/app/u/[username]/bar/lib/category-builder'
 import { getCategoryDef } from '@/app/u/[username]/bar/lib/defs'
 import { CategoryKeys } from '@/app/u/[username]/bar/lib/types'
-import { Container } from '@/components/layout/container'
-import { isCurrentUser } from '@/lib/model/user'
-import { PageProps } from '@/lib/types'
+import { Container } from '@/app/components/layout/container'
+import { isCurrentUser } from '@/app/lib/model/user'
+import { PageProps } from '@/app/lib/types'
 
 export const revalidate = 0
 

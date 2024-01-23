@@ -1,7 +1,7 @@
 import { ReactNode } from 'react'
 
-import { IngredientDataProvider } from '@/components/data-provider'
-import { getIngredientData } from '@/lib/model/ingredient-data'
+import { IngredientDataProvider } from '@/app/components/data-provider'
+import { getIngredientData } from '@/app/lib/model/ingredient-data'
 
 export const revalidate = 0
 

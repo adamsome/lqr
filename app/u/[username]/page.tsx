@@ -1,4 +1,4 @@
-import { toSpecs } from '@/lib/routes'
+import { toSpecs } from '@/app/lib/routes'
 import { redirect } from 'next/navigation'
 
 export const revalidate = 0

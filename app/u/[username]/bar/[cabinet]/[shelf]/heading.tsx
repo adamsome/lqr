@@ -5,11 +5,11 @@ import { ReactNode, useState } from 'react'
 import { HeadingLink } from '@/app/u/[username]/bar/components/heading-link'
 import { getShelfDef } from '@/app/u/[username]/bar/lib/defs'
 import { CategoryKeys } from '@/app/u/[username]/bar/lib/types'
-import { Container } from '@/components/layout/container'
-import { Stack } from '@/components/layout/stack'
-import { H1 } from '@/components/ui/h1'
-import { CompProps } from '@/lib/types'
-import { cn } from '@/lib/utils'
+import { Container } from '@/app/components/layout/container'
+import { Stack } from '@/app/components/layout/stack'
+import { H1 } from '@/app/components/ui/h1'
+import { CompProps } from '@/app/lib/types'
+import { cn } from '@/app/lib/utils'
 
 export const revalidate = 0
 

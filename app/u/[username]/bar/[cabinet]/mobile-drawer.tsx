@@ -4,8 +4,8 @@ import { useSelectedLayoutSegments } from 'next/navigation'
 import { PropsWithChildren } from 'react'
 
 import { getBackKeys } from '@/app/u/[username]/bar/lib/get-back-keys'
-import { SidebarLayoutMobileDrawer } from '@/components/layout/sidebar-layout'
-import { toBar, toBarCategory } from '@/lib/routes'
+import { SidebarLayoutMobileDrawer } from '@/app/components/layout/sidebar-layout'
+import { toBar, toBarCategory } from '@/app/lib/routes'
 
 type Props = PropsWithChildren<{
   username?: string

@@ -2,7 +2,7 @@ import { ascend, descend, sortWith } from 'ramda'
 
 import { isSpecSortDefaultDesc } from '@/app/u/[username]/specs/_criteria/consts'
 import { Criteria } from '@/app/u/[username]/specs/_criteria/types'
-import { Spec } from '@/lib/types'
+import { Spec } from '@/app/lib/types'
 
 export function sortSpecs(
   specs: Spec[],

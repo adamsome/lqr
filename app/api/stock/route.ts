@@ -2,8 +2,8 @@ import { auth } from '@clerk/nextjs'
 import { OptionalUnlessRequiredId } from 'mongodb'
 import { NextRequest, NextResponse } from 'next/server'
 
-import { connectToDatabase } from '@/lib/mongodb'
-import { User } from '@/lib/types'
+import { connectToDatabase } from '@/app/lib/mongodb'
+import { User } from '@/app/lib/types'
 
 export async function PUT(req: NextRequest) {
   const { userId: id } = auth()

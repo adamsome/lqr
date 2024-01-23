@@ -3,9 +3,9 @@ import { Suspense } from 'react'
 import invariant from 'tiny-invariant'
 
 import { SpecContainer } from '@/app/u/[username]/specs/[id]/edit/spec-container'
-import { isAdmin } from '@/lib/model/admin'
-import { getSpec } from '@/lib/model/spec'
-import { getUser } from '@/lib/model/user'
+import { isAdmin } from '@/app/lib/model/admin'
+import { getSpec } from '@/app/lib/model/spec'
+import { getUser } from '@/app/lib/model/user'
 
 export const revalidate = 0
 

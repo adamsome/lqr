@@ -1,6 +1,6 @@
 import { ArrowDownIcon } from '@radix-ui/react-icons'
 
-import { Level } from '@/components/layout/level'
+import { Level } from '@/app/components/layout/level'
 
 export function DestockSeparator() {
   return (

@@ -1,7 +1,5 @@
 # TODO
 
-- UserAvatar async getUser
-
 Bar
 ---
 
@@ -144,9 +142,6 @@ Content
 
 Chores
 ------
-
-- Use new layout for non-bar pages(?)
-  - Portal(?) to set Header and Footer
 
 - Move /components, /lib to /app
 - Move /hooks to /lib/*

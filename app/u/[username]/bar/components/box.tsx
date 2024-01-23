@@ -3,12 +3,12 @@ import Link from 'next/link'
 
 import { LitBox } from '@/app/u/[username]/bar/components/lit-box'
 import { CategoryKeys } from '@/app/u/[username]/bar/lib/types'
-import { Level } from '@/components/layout/level'
-import { Button } from '@/components/ui/button'
-import { isCurrentUser } from '@/lib/model/user'
-import { toBar } from '@/lib/routes'
-import { CompProps } from '@/lib/types'
-import { cn } from '@/lib/utils'
+import { Level } from '@/app/components/layout/level'
+import { Button } from '@/app/components/ui/button'
+import { isCurrentUser } from '@/app/lib/model/user'
+import { toBar } from '@/app/lib/routes'
+import { CompProps } from '@/app/lib/types'
+import { cn } from '@/app/lib/utils'
 
 type Props = CompProps &
   CategoryKeys & {

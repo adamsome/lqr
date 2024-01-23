@@ -1,7 +1,7 @@
 import { Box } from '@/app/u/[username]/bar/[cabinet]/box'
 import { getCabinetDef } from '@/app/u/[username]/bar/lib/defs'
 import { CABINETS } from '@/app/u/[username]/bar/lib/types'
-import { Stack } from '@/components/layout/stack'
+import { Stack } from '@/app/components/layout/stack'
 
 type Props = {
   username?: string

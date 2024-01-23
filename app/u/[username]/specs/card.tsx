@@ -1,10 +1,10 @@
 import Link from 'next/link'
 import { ReactNode } from 'react'
 
-import { CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { getIngredientView as makeGetIngredientView } from '@/lib/ingredient/get-ingredient-view'
-import { IngredientData, Spec } from '@/lib/types'
-import { capitalize, rejectNil } from '@/lib/utils'
+import { CardContent, CardHeader, CardTitle } from '@/app/components/ui/card'
+import { getIngredientView as makeGetIngredientView } from '@/app/lib/ingredient/get-ingredient-view'
+import { IngredientData, Spec } from '@/app/lib/types'
+import { capitalize, rejectNil } from '@/app/lib/utils'
 
 type Props = {
   data: IngredientData

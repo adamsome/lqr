@@ -1,5 +1,5 @@
 import { SpecSort } from '@/app/u/[username]/specs/_criteria/consts'
-import { SpecIngredient } from '@/lib/types'
+import { SpecIngredient } from '@/app/lib/types'
 
 export type SearchParams = {
   [key: string]: string | string[] | undefined

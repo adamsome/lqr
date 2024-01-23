@@ -2,29 +2,29 @@
 
 import { Cross1Icon } from '@radix-ui/react-icons'
 
-import { IngredienFullName } from '@/components/ingredient-full-name'
-import { StockIcon as BaseStockIcon } from '@/components/stock-icon'
-import { Button } from '@/components/ui/button'
-import { DataTableColumnFilterInput } from '@/components/ui/data-table-column-filter-input'
-import { DataTableToolbarProps } from '@/components/ui/data-table-container'
+import { IngredienFullName } from '@/app/components/ingredient-full-name'
+import { StockIcon as BaseStockIcon } from '@/app/components/stock-icon'
+import { Button } from '@/app/components/ui/button'
+import { DataTableColumnFilterInput } from '@/app/components/ui/data-table-column-filter-input'
+import { DataTableToolbarProps } from '@/app/components/ui/data-table-container'
 import {
   DataTableFacetFilterButton,
   DataTableFacetedFilterItem,
-} from '@/components/ui/data-table-facet-filter-button'
-import { DataTableHierarchicalFacetFilterButton } from '@/components/ui/data-table-hierarchical-facet-filter-button'
-import { DataTableMultiFacetFilterButton } from '@/components/ui/data-table-multi-facet-filter-button'
-import { DataTableViewOptions } from '@/components/ui/data-table-view-options'
-import { useGetIngredientPathName } from '@/hooks/use-get-ingredient-path-name'
-import { useFilterIngredientTree } from '@/hooks/use-filter-ingredient-tree'
-import { useIsDataTableFiltered } from '@/hooks/use-is-data-table-filtered'
+} from '@/app/components/ui/data-table-facet-filter-button'
+import { DataTableHierarchicalFacetFilterButton } from '@/app/components/ui/data-table-hierarchical-facet-filter-button'
+import { DataTableMultiFacetFilterButton } from '@/app/components/ui/data-table-multi-facet-filter-button'
+import { DataTableViewOptions } from '@/app/components/ui/data-table-view-options'
+import { useGetIngredientPathName } from '@/app/lib/ingredient/use-get-ingredient-path-name'
+import { useFilterIngredientTree } from '@/app/components/spec-ingredient-command/use-filter-ingredient-tree'
+import { useIsDataTableFiltered } from '@/app/research/use-is-data-table-filtered'
 import {
   AGING_DICT,
   Aging,
   PRODUCTION_METHOD_DICT,
   ProductionMethod,
-} from '@/lib/generated-consts'
-import { StockState, getStockState } from '@/lib/stock'
-import { Ingredient, WithPath } from '@/lib/types'
+} from '@/app/lib/generated-consts'
+import { StockState, getStockState } from '@/app/lib/stock'
+import { Ingredient, WithPath } from '@/app/lib/types'
 
 const STOCK_ITEMS: DataTableFacetedFilterItem[] = [
   { label: 'Full', value: 'full', icon: <StockIcon stock="full" /> },

@@ -7,13 +7,13 @@ import Link from 'next/link'
 import { FormEventHandler, ReactNode } from 'react'
 
 import { CategoryKeys } from '@/app/u/[username]/bar/lib/types'
-import { Level } from '@/components/layout/level'
-import { Button, IconButton } from '@/components/ui/button'
-import { H1 } from '@/components/ui/h1'
-import { H2 } from '@/components/ui/h2'
-import { toBarCategory } from '@/lib/routes'
-import { CompProps } from '@/lib/types'
-import { cn } from '@/lib/utils'
+import { Level } from '@/app/components/layout/level'
+import { Button, IconButton } from '@/app/components/ui/button'
+import { H1 } from '@/app/components/ui/h1'
+import { H2 } from '@/app/components/ui/h2'
+import { toBarCategory } from '@/app/lib/routes'
+import { CompProps } from '@/app/lib/types'
+import { cn } from '@/app/lib/utils'
 
 type Props = CompProps & {
   to: CategoryKeys & { username?: string }

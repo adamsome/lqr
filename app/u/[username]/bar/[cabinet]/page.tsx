@@ -1,4 +1,4 @@
-import { PageProps } from '@/lib/types'
+import { PageProps } from '@/app/lib/types'
 
 export const revalidate = 0
 

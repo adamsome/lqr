@@ -1,7 +1,7 @@
-import { StockIcon } from '@/components/stock-icon'
-import { Button } from '@/components/ui/button'
-import { getNextStockValue, getStockState } from '@/lib/stock'
-import { cn } from '@/lib/utils'
+import { StockIcon } from '@/app/components/stock-icon'
+import { Button } from '@/app/components/ui/button'
+import { getNextStockValue, getStockState } from '@/app/lib/stock'
+import { cn } from '@/app/lib/utils'
 
 type Props = {
   stock?: number

@@ -1,7 +1,7 @@
 'use client'
 
 import { StockIconButton } from '@/app/research/stock-icon-button'
-import { useMutateStock } from '@/lib/api/use-mutate-stock'
+import { useMutateStock } from '@/app/api/stock/use-mutate-stock'
 
 type Props = {
   ingredientID: string

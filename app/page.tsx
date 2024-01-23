@@ -1,27 +1,24 @@
-import { auth } from '@clerk/nextjs'
-
-import * as Layout from '@/components/layout/responsive-layout'
-import { CardHeader, CardLink } from '@/components/ui/card'
-import { CardGrid } from '@/components/layout/card-grid'
-import { Container } from '@/components/layout/container'
-import { UserAvatar } from '@/components/user-avatar'
-import { getUserByID } from '@/lib/model/user'
-import { toBar, toResearch, toSpecs } from '@/lib/routes'
+import { CardGrid } from '@/app/components/layout/card-grid'
+import { Container } from '@/app/components/layout/container'
+import * as Layout from '@/app/components/layout/responsive-layout'
+import { CardHeader, CardLink } from '@/app/components/ui/card'
+import { UserAvatar } from '@/app/components/user/user-avatar'
+import { getCurrentUser } from '@/app/lib/model/user'
+import { toBar, toResearch, toSpecs } from '@/app/lib/routes'
 
 export const revalidate = 0
 
 export default async function Page() {
-  const { userId: userID } = auth()
-  const user = await getUserByID(userID)
-  const username = user?.username
+  const { currentUser } = await getCurrentUser()
+  const { username } = currentUser ?? {}
 
   // TODO: Show non-signed-in homepage if no user
 
   return (
     <Layout.Root>
-      <Layout.Header title={<UserAvatar user={user} />} />
+      <Layout.Header title={<UserAvatar user={currentUser} />} />
       <Container className="relative py-4 sm:py-6">
-        <UserAvatar user={user} size="2xl" />
+        <UserAvatar user={currentUser} size="2xl" />
         {username && (
           <CardGrid>
             <CardLink href={toSpecs(username)}>

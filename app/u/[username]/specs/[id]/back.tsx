@@ -3,9 +3,9 @@
 import { useSearchParams } from 'next/navigation'
 
 import { USER_KEY } from '@/app/u/[username]/specs/_criteria/consts'
-import * as Layout from '@/components/layout/responsive-layout'
-import { API_USERS, toSpecs } from '@/lib/routes'
-import { User } from '@/lib/types'
+import * as Layout from '@/app/components/layout/responsive-layout'
+import { API_USERS, toSpecs } from '@/app/lib/routes'
+import { User } from '@/app/lib/types'
 import { useEffect, useState } from 'react'
 
 type Props = {

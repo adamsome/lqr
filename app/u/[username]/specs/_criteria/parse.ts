@@ -14,7 +14,7 @@ import {
   USER_KEY,
 } from '@/app/u/[username]/specs/_criteria/consts'
 import { parseIngredientCriterion } from '@/app/u/[username]/specs/_criteria/ingredient-criterion'
-import { asArray, head, rejectNil } from '@/lib/utils'
+import { asArray, head, rejectNil } from '@/app/lib/utils'
 
 export function parseCriteria(
   searchParams: SearchParams,

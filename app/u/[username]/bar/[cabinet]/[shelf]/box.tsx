@@ -5,8 +5,8 @@ import { getCategoryDef } from '@/app/u/[username]/bar/lib/defs'
 import { Box as CategoryBox } from '@/app/u/[username]/bar/[cabinet]/[shelf]/[category]/box'
 import { BoxLink } from '@/app/u/[username]/bar/components/box'
 import { ShelfDef } from '@/app/u/[username]/bar/lib/types'
-import { cn } from '@/lib/utils'
-import { isCurrentUser } from '@/lib/model/user'
+import { cn } from '@/app/lib/utils'
+import { isCurrentUser } from '@/app/lib/model/user'
 
 type Props = ShelfDef & {
   username?: string

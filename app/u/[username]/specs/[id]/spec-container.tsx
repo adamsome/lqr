@@ -1,18 +1,18 @@
+import { auth } from '@clerk/nextjs'
+import { intlFormatDistance, parseISO } from 'date-fns/fp'
 import { micromark } from 'micromark'
+import Link from 'next/link'
 import invariant from 'tiny-invariant'
 
 import { Back } from '@/app/u/[username]/specs/[id]/back'
 import { Spec } from '@/app/u/[username]/specs/[id]/spec'
 import { SpecLayout } from '@/app/u/[username]/specs/[id]/spec-layout'
-import { UserAvatar } from '@/components/user-avatar'
-import { getSpecStock } from '@/lib/ingredient/get-spec-stock'
-import { getIngredientData } from '@/lib/model/ingredient-data'
-import { getSpec } from '@/lib/model/spec'
-import { User } from '@/lib/types'
-import Link from 'next/link'
-import { toHome } from '@/lib/routes'
-import { intlFormatDistance, parseISO } from 'date-fns/fp'
-import { auth } from '@clerk/nextjs'
+import { UserAvatar } from '@/app/components/user/user-avatar'
+import { getSpecStock } from '@/app/lib/ingredient/get-spec-stock'
+import { getIngredientData } from '@/app/lib/model/ingredient-data'
+import { getSpec } from '@/app/lib/model/spec'
+import { toHome } from '@/app/lib/routes'
+import { User } from '@/app/lib/types'
 
 type Props = {
   specID: string

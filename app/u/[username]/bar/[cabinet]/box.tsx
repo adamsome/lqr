@@ -2,7 +2,7 @@ import { BoxLink } from '@/app/u/[username]/bar/components/box'
 import { Box as ShelfBox } from '@/app/u/[username]/bar/[cabinet]/[shelf]/box'
 import { getShelfDef } from '@/app/u/[username]/bar/lib/defs'
 import { CabinetDef } from '@/app/u/[username]/bar/lib/types'
-import { Stack } from '@/components/layout/stack'
+import { Stack } from '@/app/components/layout/stack'
 
 type Props = CabinetDef & {
   username?: string

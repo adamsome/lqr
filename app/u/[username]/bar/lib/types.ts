@@ -1,7 +1,7 @@
-import { HierarchicalFilter } from '@/lib/hierarchical-filter'
-import { IngredientFilter } from '@/lib/ingredient/filter-ingredient-items'
-import { IngredientKind } from '@/lib/ingredient/kind'
-import { Ingredient } from '@/lib/types'
+import { HierarchicalFilter } from '@/app/lib/hierarchical-filter'
+import { IngredientFilter } from '@/app/lib/ingredient/filter-ingredient-items'
+import { IngredientKind } from '@/app/lib/ingredient/kind'
+import { Ingredient } from '@/app/lib/types'
 
 export const CABINETS = ['essentials', 'tiki', 'liquors', 'liqueurs'] as const
 export type CabinetID = (typeof CABINETS)[number]

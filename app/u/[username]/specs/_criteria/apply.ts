@@ -3,8 +3,8 @@ import { sortSpecs } from '@/app/u/[username]/specs/_criteria/sort'
 import {
   filterIngredientItems,
   testIngredientMethods,
-} from '@/lib/ingredient/filter-ingredient-items'
-import { IngredientData, Spec } from '@/lib/types'
+} from '@/app/lib/ingredient/filter-ingredient-items'
+import { IngredientData, Spec } from '@/app/lib/types'
 
 export function applyCriteria(
   data: IngredientData,

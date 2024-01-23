@@ -4,15 +4,20 @@ import { ColumnDef } from '@tanstack/react-table'
 
 import { ActionCell } from '@/app/research/action-cell'
 import { StockCell } from '@/app/research/stock-cell'
-import { IngredienFullName } from '@/components/ingredient-full-name'
-import { StockIcon } from '@/components/stock-icon'
-import { DataTableColumnHeader as Header } from '@/components/ui/data-table-column-header'
-import { AGING_DICT, PRODUCTION_METHOD_DICT } from '@/lib/generated-consts'
-import { hierarchicalFilterFn } from '@/lib/hierarchical-filter'
-import { getIngredientPathName } from '@/lib/ingredient/get-ingredient-path-name'
-import { getStockState } from '@/lib/stock'
-import { Ingredient, WithPath } from '@/lib/types'
-import { compareBasic, getBoolValue, getDictValue, toString } from '@/lib/utils'
+import { IngredienFullName } from '@/app/components/ingredient-full-name'
+import { StockIcon } from '@/app/components/stock-icon'
+import { DataTableColumnHeader as Header } from '@/app/components/ui/data-table-column-header'
+import { AGING_DICT, PRODUCTION_METHOD_DICT } from '@/app/lib/generated-consts'
+import { hierarchicalFilterFn } from '@/app/lib/hierarchical-filter'
+import { getIngredientPathName } from '@/app/lib/ingredient/get-ingredient-path-name'
+import { getStockState } from '@/app/lib/stock'
+import { Ingredient, WithPath } from '@/app/lib/types'
+import {
+  compareBasic,
+  getBoolValue,
+  getDictValue,
+  toString,
+} from '@/app/lib/utils'
 
 type Column<T> = ColumnDef<T> & {
   className?: string

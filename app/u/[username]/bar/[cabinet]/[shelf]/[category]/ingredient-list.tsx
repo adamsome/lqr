@@ -5,11 +5,11 @@ import { useMemo } from 'react'
 import { DestockSeparator } from '@/app/u/[username]/bar/[cabinet]/[shelf]/[category]/destock-separator'
 import { Ingredient } from '@/app/u/[username]/bar/[cabinet]/[shelf]/[category]/ingredient'
 import { BarCategory } from '@/app/u/[username]/bar/lib/types'
-import { useIngredientData } from '@/components/data-provider'
-import { Stack } from '@/components/layout/stack'
-import { HierarchicalFilter } from '@/lib/hierarchical-filter'
-import { sortByStocked } from '@/lib/stock'
-import { Ingredient as IngredientType } from '@/lib/types'
+import { useIngredientData } from '@/app/components/data-provider'
+import { Stack } from '@/app/components/layout/stack'
+import { HierarchicalFilter } from '@/app/lib/hierarchical-filter'
+import { sortByStocked } from '@/app/lib/stock'
+import { Ingredient as IngredientType } from '@/app/lib/types'
 
 type Entity = {
   ingredient?: IngredientType

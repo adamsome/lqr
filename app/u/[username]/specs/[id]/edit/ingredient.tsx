@@ -5,11 +5,11 @@ import {
 } from '@radix-ui/react-icons'
 
 import { MoreCommand } from '@/app/u/[username]/specs/[id]/edit/more-command'
-import { useIngredientData } from '@/components/data-provider'
-import { SpecIngredientCommandDialogButton } from '@/components/spec-ingredient-command/command-dialog-button'
-import { Button } from '@/components/ui/button'
-import { getIngredientView } from '@/lib/ingredient/get-ingredient-view'
-import { SpecIngredient } from '@/lib/types'
+import { useIngredientData } from '@/app/components/data-provider'
+import { SpecIngredientCommandDialogButton } from '@/app/components/spec-ingredient-command/command-dialog-button'
+import { Button } from '@/app/components/ui/button'
+import { getIngredientView } from '@/app/lib/ingredient/get-ingredient-view'
+import { SpecIngredient } from '@/app/lib/types'
 
 type Props = {
   ingredient: SpecIngredient

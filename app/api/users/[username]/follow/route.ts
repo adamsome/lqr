@@ -1,8 +1,8 @@
 import { auth } from '@clerk/nextjs'
 import { NextRequest, NextResponse } from 'next/server'
 
-import { upsertFollow } from '@/lib/model/follow'
-import { getUser } from '@/lib/model/user'
+import { upsertFollow } from '@/app/lib/model/follow'
+import { getUser } from '@/app/lib/model/user'
 
 export async function PUT(
   _req: NextRequest,

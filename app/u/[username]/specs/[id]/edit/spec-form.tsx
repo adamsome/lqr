@@ -7,9 +7,9 @@ import { FieldErrors, useForm } from 'react-hook-form'
 import * as z from 'zod'
 
 import { IngredientsForm } from '@/app/u/[username]/specs/[id]/edit/ingredients-form'
-import * as Layout from '@/components/layout/responsive-layout'
-import { Button, IconButton } from '@/components/ui/button'
-import { FullWidthContainer } from '@/components/layout/container'
+import * as Layout from '@/app/components/layout/responsive-layout'
+import { Button, IconButton } from '@/app/components/ui/button'
+import { FullWidthContainer } from '@/app/components/layout/container'
 import {
   Form,
   FormControl,
@@ -17,23 +17,23 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from '@/components/ui/form'
-import { Input } from '@/components/ui/input'
+} from '@/app/components/ui/form'
+import { Input } from '@/app/components/ui/input'
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from '@/components/ui/select'
-import { Textarea } from '@/components/ui/textarea'
-import { useToast } from '@/components/ui/use-toast'
-import { getGlassTypeItems } from '@/lib/glass-type'
-import { getMixTypeItems } from '@/lib/mix-type'
-import { specSchema } from '@/lib/schema/spec'
-import { getSpecCategoryItems } from '@/lib/spec-category'
-import { Spec } from '@/lib/types'
-import { cn } from '@/lib/utils'
+} from '@/app/components/ui/select'
+import { Textarea } from '@/app/components/ui/textarea'
+import { useToast } from '@/app/components/ui/use-toast'
+import { getGlassTypeItems } from '@/app/lib/glass-type'
+import { getMixTypeItems } from '@/app/lib/mix-type'
+import { specSchema } from '@/app/lib/schema/spec'
+import { getSpecCategoryItems } from '@/app/lib/spec-category'
+import { Spec } from '@/app/lib/types'
+import { cn } from '@/app/lib/utils'
 
 type Schema = z.infer<typeof specSchema>
 

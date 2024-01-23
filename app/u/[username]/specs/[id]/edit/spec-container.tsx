@@ -3,9 +3,9 @@
 import { useParams, useRouter } from 'next/navigation'
 
 import { SpecForm } from '@/app/u/[username]/specs/[id]/edit/spec-form'
-import { useMutate } from '@/lib/api/use-mutate'
-import { API_SPECS, toSpecItem, toSpecs } from '@/lib/routes'
-import { Spec } from '@/lib/types'
+import { useMutate } from '@/app/api/use-mutate'
+import { API_SPECS, toSpecItem, toSpecs } from '@/app/lib/routes'
+import { Spec } from '@/app/lib/types'
 
 type Props = {
   spec: Spec

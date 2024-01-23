@@ -1,11 +1,11 @@
-import { CircleProgress } from '@/components/ui/circle-progress'
+import { CircleProgress } from '@/app/components/ui/circle-progress'
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from '@/components/ui/tooltip'
-import { SpecStock } from '@/lib/types'
-import { cn } from '@/lib/utils'
+} from '@/app/components/ui/tooltip'
+import { SpecStock } from '@/app/lib/types'
+import { cn } from '@/app/lib/utils'
 
 type Props = {
   className?: string

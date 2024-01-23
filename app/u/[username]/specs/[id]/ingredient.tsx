@@ -1,13 +1,13 @@
 import { complement } from 'ramda'
 
-import { getIngredientView } from '@/lib/ingredient/get-ingredient-view'
-import { isSpecIngredientStockIgnorable } from '@/lib/ingredient/spec-ingredient-stock'
+import { getIngredientView } from '@/app/lib/ingredient/get-ingredient-view'
+import { isSpecIngredientStockIgnorable } from '@/app/lib/ingredient/spec-ingredient-stock'
 import {
   IngredientData,
   SpecIngredient,
   SpecIngredientStock,
-} from '@/lib/types'
-import { cn } from '@/lib/utils'
+} from '@/app/lib/types'
+import { cn } from '@/app/lib/utils'
 
 type Props = {
   data: IngredientData

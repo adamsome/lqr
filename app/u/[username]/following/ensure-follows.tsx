@@ -1,7 +1,7 @@
 import { add, isPast, parseISO } from 'date-fns'
 import { PropsWithChildren } from 'react'
 
-import { Follow } from '@/lib/types'
+import { Follow } from '@/app/lib/types'
 
 export type Props = PropsWithChildren<{
   follow?: Follow | null

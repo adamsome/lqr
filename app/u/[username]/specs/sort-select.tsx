@@ -14,15 +14,15 @@ import {
   getSpecSortItems,
   isSpecSortDefaultDesc,
 } from '@/app/u/[username]/specs/_criteria/consts'
-import { Button } from '@/components/ui/button'
+import { Button } from '@/app/components/ui/button'
 import {
   DropdownMenu,
   DropdownMenuCheckboxItem,
   DropdownMenuContent,
   DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu'
-import { useRouterSearchParams } from '@/hooks/use-router-search-params'
-import { cn } from '@/lib/utils'
+} from '@/app/components/ui/dropdown-menu'
+import { useRouterSearchParams } from '@/app/u/[username]/specs/use-router-search-params'
+import { cn } from '@/app/lib/utils'
 
 const ITEMS = getSpecSortItems()
 

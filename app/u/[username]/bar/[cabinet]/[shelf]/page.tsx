@@ -2,7 +2,7 @@ import { CategoryList } from '@/app/u/[username]/bar/[cabinet]/[shelf]/category-
 import { Heading } from '@/app/u/[username]/bar/[cabinet]/[shelf]/heading'
 import { BackButton } from '@/app/u/[username]/bar/components/back-button'
 import { CategoryKeys } from '@/app/u/[username]/bar/lib/types'
-import { PageProps } from '@/lib/types'
+import { PageProps } from '@/app/lib/types'
 
 export const revalidate = 0
 

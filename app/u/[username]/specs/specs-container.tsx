@@ -7,17 +7,17 @@ import { FiltersContainer } from '@/app/u/[username]/specs/filters-container'
 import { Grid } from '@/app/u/[username]/specs/grid'
 import { Specs } from '@/app/u/[username]/specs/specs'
 import { Toolbar } from '@/app/u/[username]/specs/toolbar'
-import { UserAvatarHeader } from '@/app/u/[username]/user-avatar-header'
+import { UserAvatarHeader } from '@/app/components/user/user-avatar-header'
 import {
   MdHorizontalScroller,
   UsersToFollow,
 } from '@/app/u/[username]/users-to-follow'
-import { getSpecStock } from '@/lib/ingredient/get-spec-stock'
-import { getAllFollowing } from '@/lib/model/follow'
-import { getIngredientData } from '@/lib/model/ingredient-data'
-import { getSpecs } from '@/lib/model/spec'
-import { getCurrentUser, getManyUsers } from '@/lib/model/user'
-import { toDict } from '@/lib/utils'
+import { getSpecStock } from '@/app/lib/ingredient/get-spec-stock'
+import { getAllFollowing } from '@/app/lib/model/follow'
+import { getIngredientData } from '@/app/lib/model/ingredient-data'
+import { getSpecs } from '@/app/lib/model/spec'
+import { getCurrentUser, getManyUsers } from '@/app/lib/model/user'
+import { toDict } from '@/app/lib/utils'
 
 type Props = {
   username?: string

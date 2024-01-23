@@ -4,10 +4,10 @@ import Link from 'next/link'
 import { getCabinetDef, getShelfDef } from '@/app/u/[username]/bar/lib/defs'
 import { getBackKeys } from '@/app/u/[username]/bar/lib/get-back-keys'
 import { CategoryKeys } from '@/app/u/[username]/bar/lib/types'
-import { Level } from '@/components/layout/level'
-import { Button } from '@/components/ui/button'
-import { toBarCategory } from '@/lib/routes'
-import { cn } from '@/lib/utils'
+import { Level } from '@/app/components/layout/level'
+import { Button } from '@/app/components/ui/button'
+import { toBarCategory } from '@/app/lib/routes'
+import { cn } from '@/app/lib/utils'
 
 function getName(keys: CategoryKeys) {
   if (keys.shelf) return getShelfDef(keys).name

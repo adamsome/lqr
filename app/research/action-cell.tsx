@@ -1,13 +1,13 @@
 import { DotsHorizontalIcon } from '@radix-ui/react-icons'
 
-import { Button } from '@/components/ui/button'
+import { Button } from '@/app/components/ui/button'
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu'
-import { useMutateStock } from '@/lib/api/use-mutate-stock'
+} from '@/app/components/ui/dropdown-menu'
+import { useMutateStock } from '@/app/api/stock/use-mutate-stock'
 
 type Props = {
   ingredientID: string

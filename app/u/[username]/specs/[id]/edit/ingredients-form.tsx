@@ -2,11 +2,11 @@ import { Control, useFieldArray } from 'react-hook-form'
 import { z } from 'zod'
 
 import { Ingredient } from '@/app/u/[username]/specs/[id]/edit/ingredient'
-import { SpecIngredientCommandDialogButton } from '@/components/spec-ingredient-command/command-dialog-button'
-import { Label } from '@/components/ui/label'
-import { specSchema } from '@/lib/schema/spec'
-import { SpecIngredient } from '@/lib/types'
-import { cn } from '@/lib/utils'
+import { SpecIngredientCommandDialogButton } from '@/app/components/spec-ingredient-command/command-dialog-button'
+import { Label } from '@/app/components/ui/label'
+import { specSchema } from '@/app/lib/schema/spec'
+import { SpecIngredient } from '@/app/lib/types'
+import { cn } from '@/app/lib/utils'
 
 type Schema = z.infer<typeof specSchema>
 

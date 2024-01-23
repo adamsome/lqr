@@ -1,10 +1,10 @@
 import { currentUser } from '@clerk/nextjs'
 import { NextRequest, NextResponse } from 'next/server'
 
-import { addSpec, getSpec } from '@/lib/model/spec'
-import { updateUserActedAt } from '@/lib/model/user'
-import { Spec } from '@/lib/types'
-import { slugify } from '@/lib/utils'
+import { addSpec, getSpec } from '@/app/lib/model/spec'
+import { updateUserActedAt } from '@/app/lib/model/user'
+import { Spec } from '@/app/lib/types'
+import { slugify } from '@/app/lib/utils'
 
 export async function POST(req: NextRequest) {
   const body = await req.json()

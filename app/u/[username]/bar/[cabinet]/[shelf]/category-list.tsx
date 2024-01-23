@@ -2,9 +2,9 @@ import { CategoryItem } from '@/app/u/[username]/bar/[cabinet]/[shelf]/category-
 import { buildCategories } from '@/app/u/[username]/bar/lib/category-builder'
 import { getCategoryDef, getShelfDef } from '@/app/u/[username]/bar/lib/defs'
 import { CategoryKeys } from '@/app/u/[username]/bar/lib/types'
-import { Container } from '@/components/layout/container'
-import { Stack } from '@/components/layout/stack'
-import { isCurrentUser } from '@/lib/model/user'
+import { Container } from '@/app/components/layout/container'
+import { Stack } from '@/app/components/layout/stack'
+import { isCurrentUser } from '@/app/lib/model/user'
 
 type Props = CategoryKeys & {
   username?: string

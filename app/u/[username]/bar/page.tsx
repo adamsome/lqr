@@ -1,6 +1,6 @@
 import { List } from '@/app/u/[username]/bar/list'
-import { Stack } from '@/components/layout/stack'
-import { PageProps } from '@/lib/types'
+import { Stack } from '@/app/components/layout/stack'
+import { PageProps } from '@/app/lib/types'
 
 type Props = PageProps<{
   username?: string
