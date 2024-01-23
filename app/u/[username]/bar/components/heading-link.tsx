@@ -6,14 +6,18 @@ import {
 import Link from 'next/link'
 import { FormEventHandler, ReactNode } from 'react'
 
-import { CategoryKeys } from '@/app/u/[username]/bar/lib/types'
 import { Level } from '@/app/components/layout/level'
 import { Button, IconButton } from '@/app/components/ui/button'
 import { H1 } from '@/app/components/ui/h1'
 import { H2 } from '@/app/components/ui/h2'
+import {
+  LINK_BOX_CLASSNAME,
+  LINK_BOX_LINK_CLASSNAME,
+} from '@/app/components/ui/link-box'
 import { toBarCategory } from '@/app/lib/routes'
 import { CompProps } from '@/app/lib/types'
 import { cn } from '@/app/lib/utils'
+import { CategoryKeys } from '@/app/u/[username]/bar/lib/types'
 
 type Props = CompProps & {
   to: CategoryKeys & { username?: string }
@@ -33,7 +37,7 @@ export function HeadingLink({
   const Heading = size == 'md' ? H2 : HeadingLg
   return (
     <Level
-      className={cn('isolate relative -me-2', className)}
+      className={cn('-me-2', LINK_BOX_CLASSNAME, className)}
       justify="between"
     >
       <Link
@@ -55,7 +59,7 @@ export function HeadingLink({
         </Button>
       </Link>
       <IconButton
-        className="px-1 h-6 w-6 before:absolute before:inset-0 before:z-0"
+        className={cn('px-1 h-6 w-6', LINK_BOX_LINK_CLASSNAME)}
         onClick={onClick}
       >
         {collapse ? <ChevronUpIcon /> : <ChevronDownIcon />}

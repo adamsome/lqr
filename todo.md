@@ -143,8 +143,6 @@ Content
 Chores
 ------
 
-- Add error boundaries (e.g. to handle user==null)
-
 - Use LinkBox
 
 - Put hard-coded system users in Clerk

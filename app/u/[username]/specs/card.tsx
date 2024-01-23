@@ -1,10 +1,15 @@
-import Link from 'next/link'
 import { ReactNode } from 'react'
 
 import { CardContent, CardHeader, CardTitle } from '@/app/components/ui/card'
+import {
+  LINK_BOX_CLASSNAME,
+  LinkBox,
+  LinkBoxLink,
+} from '@/app/components/ui/link-box'
 import { getIngredientView as makeGetIngredientView } from '@/app/lib/ingredient/get-ingredient-view'
 import { IngredientData, Spec } from '@/app/lib/types'
-import { capitalize, rejectNil } from '@/app/lib/utils'
+import { capitalize, cn, rejectNil } from '@/app/lib/utils'
+import { Stack } from '@/app/components/layout/stack'
 
 type Props = {
   data: IngredientData
@@ -17,9 +22,15 @@ export function Card({ data, spec, href, description }: Props) {
   const { name, year, ingredients } = spec
   const getIngredientView = makeGetIngredientView(data.dict)
   return (
-    <div className="isolate relative flex flex-col gap-0.5 pt-1 pb-1.5 w-full rounded transition-colors hover:bg-muted/50 focus:bg-muted active:bg-muted">
+    <Stack
+      className={cn(
+        'pt-1 pb-1.5 w-full rounded transition-colors hover:bg-muted/50 focus:bg-muted active:bg-muted',
+        LINK_BOX_CLASSNAME,
+      )}
+      gap={0.5}
+    >
       <CardHeader className="px-2 py-0 w-full">
-        <Link className="before:absolute before:inset-0 before:z-0" href={href}>
+        <LinkBoxLink href={href}>
           <CardTitle className="text-sm sm:text-base font-bold whitespace-nowrap text-ellipsis overflow-hidden">
             {name}
             {year && (
@@ -29,7 +40,7 @@ export function Card({ data, spec, href, description }: Props) {
               </span>
             )}
           </CardTitle>
-        </Link>
+        </LinkBoxLink>
         {description}
       </CardHeader>
       <CardContent className="px-2 py-0 text-xs text-muted-foreground font-medium line-clamp-2">
@@ -40,6 +51,6 @@ export function Card({ data, spec, href, description }: Props) {
           )
           .join(', ')}
       </CardContent>
-    </div>
+    </Stack>
   )
 }
