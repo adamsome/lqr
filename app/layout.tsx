@@ -1,7 +1,6 @@
 import './globals.css'
 
 import { Metadata } from 'next'
-import { Inter } from 'next/font/google'
 
 import { AppCommand } from '@/app/components/app-command'
 import { AuthProvider } from '@/app/components/auth-provider'
@@ -9,8 +8,7 @@ import { TailwindIndicator } from '@/app/components/tailwind-indicator'
 import { themeEffect } from '@/app/components/theme-effect'
 import { Toaster } from '@/app/components/ui/toaster'
 import { TooltipProvider } from '@/app/components/ui/tooltip'
-
-const inter = Inter({ subsets: ['latin'] })
+import { cn } from '@/app/lib/utils'
 
 export const metadata: Metadata = {
   title: 'lqr',
@@ -40,7 +38,7 @@ export default function Layout({ children }: Props) {
     <AuthProvider>
       <html
         lang="en"
-        className={`${inter.className} antialiased font-sans`}
+        className={cn(`antialiased font-sans`)}
         suppressHydrationWarning={true}
       >
         <head>
