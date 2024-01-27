@@ -31,9 +31,9 @@ export function useMutate<T = unknown>(
 
   const handleError = useCallback(
     (err: any) => {
-      let msg = (err?.data ?? err) as string
+      let msg = (err?.error ?? err?.data ?? err) as string
       if (typeof msg !== 'string') msg = `Unknown error updating '${url}'`
-      console.error(msg, err?.data ?? err)
+      console.error(msg)
       toast({ title: msg, variant: 'destructive' })
       setError(msg)
       setMutating(false)

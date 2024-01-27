@@ -10,7 +10,7 @@ export async function PUT(req: NextRequest) {
   const spec: Spec = body.spec
   if (!spec?.id) {
     return NextResponse.json(
-      { data: `Spec ID required to update.` },
+      { error: `Spec ID required to update.` },
       { status: 400 },
     )
   }
@@ -18,7 +18,7 @@ export async function PUT(req: NextRequest) {
   const { userId: id } = auth()
   if (!id) {
     return NextResponse.json(
-      { data: `Must be signed in to update a spec.` },
+      { error: `Must be signed in to update a spec.` },
       { status: 401 },
     )
   }
@@ -36,7 +36,7 @@ export async function DELETE(req: NextRequest) {
   const id: string = body.id
   if (!id) {
     return NextResponse.json(
-      { data: `Spec ID required to delete.` },
+      { error: `Spec ID required to delete.` },
       { status: 400 },
     )
   }
@@ -44,7 +44,7 @@ export async function DELETE(req: NextRequest) {
   const { userId: userID } = auth()
   if (!userID) {
     return NextResponse.json(
-      { data: `Must be signed in to delete a spec.` },
+      { error: `Must be signed in to delete a spec.` },
       { status: 401 },
     )
   }
@@ -53,13 +53,13 @@ export async function DELETE(req: NextRequest) {
 
   if (!spec) {
     return NextResponse.json(
-      { data: `No spec with ID '${id}' to delete.` },
+      { error: `No spec with ID '${id}' to delete.` },
       { status: 400 },
     )
   }
   if (spec.userID !== userID) {
     return NextResponse.json(
-      { data: `Cannot delete spec that you did not create.` },
+      { error: `Cannot delete spec that you did not create.` },
       { status: 403 },
     )
   }

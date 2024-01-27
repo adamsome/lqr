@@ -1,38 +1,26 @@
-import { PropsWithChildren } from 'react'
+import { PropsWithChildren, ReactNode } from 'react'
 
-import { buildCategories } from '@/app/u/[username]/bar/lib/category-builder'
-import { getCategoryDef } from '@/app/u/[username]/bar/lib/defs'
-import { Box as CategoryBox } from '@/app/u/[username]/bar/[cabinet]/[shelf]/[category]/box'
+import { cn } from '@/app/lib/utils'
 import { BoxLink } from '@/app/u/[username]/bar/components/box'
 import { ShelfDef } from '@/app/u/[username]/bar/lib/types'
-import { cn } from '@/app/lib/utils'
-import { isCurrentUser } from '@/app/lib/model/user'
 
-type Props = ShelfDef & {
+type Props = {
+  children?: ReactNode
+  def: ShelfDef
   username?: string
+  hideHeading?: boolean
 }
 
-export async function Box({ username, keys, name, gridIDs, gridCols }: Props) {
-  const current = await isCurrentUser(username)
-  const categories = await buildCategories(username)
+export function Box({ children, username, def, hideHeading }: Props) {
+  const { keys, name, gridCols } = def
   return (
-    <BoxLink username={username} name={name} {...keys}>
-      <Grid cols={gridCols}>
-        {gridIDs.map((id) => {
-          const def = getCategoryDef({ ...keys, category: id })
-          const category = categories.get(id)
-          if (!category) return null
-          return (
-            <CategoryBox
-              key={id}
-              username={username}
-              def={def}
-              category={category}
-              isCurrentUser={current}
-            />
-          )
-        })}
-      </Grid>
+    <BoxLink
+      username={username}
+      name={name}
+      hideHeading={hideHeading}
+      {...keys}
+    >
+      <Grid cols={gridCols}>{children}</Grid>
     </BoxLink>
   )
 }

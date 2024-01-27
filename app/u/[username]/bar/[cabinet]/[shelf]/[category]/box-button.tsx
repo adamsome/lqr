@@ -14,6 +14,7 @@ type Props = CompProps & {
   colSpan?: number
   stocked?: boolean
   disabled?: boolean
+  readonly?: boolean
   onClick?: FormEventHandler<HTMLButtonElement>
 }
 
@@ -25,6 +26,7 @@ export function BoxButton({
   colSpan,
   stocked,
   disabled,
+  readonly,
   onClick,
 }: Props) {
   const getIngredientName = useGetIngredientName()
@@ -50,6 +52,7 @@ export function BoxButton({
         colSpan === 4 && 'col-span-4',
         colSpan === 5 && 'col-span-5',
         colSpan === 6 && 'col-span-6',
+        readonly && 'cursor-default',
         className,
       )}
       onClick={onClick}

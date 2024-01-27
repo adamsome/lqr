@@ -9,7 +9,7 @@ import {
   HomeIcon,
 } from '@radix-ui/react-icons'
 import Link from 'next/link'
-import { useRouter } from 'next/navigation'
+import { usePathname, useRouter } from 'next/navigation'
 import { KeyboardEvent, ReactNode, useEffect, useState } from 'react'
 
 import { AppCommandTheme } from '@/app/components/app-command-theme'
@@ -30,9 +30,11 @@ import { UserAvatarImage } from '@/app/components/user/user-avatar-image'
 import { useUser } from '@/app/lib/model/use-user'
 import { SIGN_IN, SIGN_UP, toBar, toHome, toSpecs } from '@/app/lib/routes'
 import { cn } from '@/app/lib/utils'
+import { Level } from '@/app/components/layout/level'
 
 export function AppCommand() {
   const router = useRouter()
+  const pathname = usePathname()
   const { signOut } = useClerk()
   const { user, isLoaded } = useUser()
   const username = user?.username
@@ -51,10 +53,10 @@ export function AppCommand() {
 
   if (!isLoaded) return null
 
-  if (!user || !username) {
+  if (pathname !== '/' && (!user || !username)) {
     return (
       <Sticky>
-        <div className="flex items-center gap-2 [&>*]:pt-[0.22rem] sm:gap-4">
+        <Level className="[&>*]:pt-[0.22rem] sm:gap-4" gap={3}>
           <Link href={SIGN_IN}>
             <Button variant="outline" size="sm">
               Sign In
@@ -63,7 +65,7 @@ export function AppCommand() {
           <Link href={SIGN_UP}>
             <Button size="sm">Sign Up</Button>
           </Link>
-        </div>
+        </Level>
       </Sticky>
     )
   }

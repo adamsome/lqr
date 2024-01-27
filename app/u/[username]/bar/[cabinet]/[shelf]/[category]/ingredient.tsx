@@ -96,7 +96,7 @@ export function Ingredient({
               onClick={() => handleChange(-1)}
             >
               <ArrowDownIcon className="w-3 h-3 -ms-0.5 me-0.5" />
-              Destock
+              Remove
             </Button>
           </div>
         )}

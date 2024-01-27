@@ -1,5 +1,12 @@
 # TODO
 
+FTUE
+----
+
+- Responsive landing page
+- Onboarding bar inventory
+- Follow classics on signup
+
 Bar
 ---
 
@@ -27,8 +34,6 @@ Bar
 
 Specs
 -----
-
-- Fix bottle count including filter
 
 ### Favorites
 
@@ -82,10 +87,10 @@ Redesign
 QoL
 ---
 
+- Empty states
 - Add theme changer when signed out
 - User avatar popover to follow
 - Show app-command skeleton when auth client loading
-- Empty states
 - Improve specs perf
   - Use fetch w/ cache tags? Client-side filtering?
 - Cmd-P to search Specs
@@ -142,7 +147,5 @@ Content
 
 Chores
 ------
-
-- Use LinkBox
 
 - Put hard-coded system users in Clerk

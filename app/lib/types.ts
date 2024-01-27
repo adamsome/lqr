@@ -46,6 +46,7 @@ export interface User {
 export interface UserEntity {
   id: string
   username: string
+  imageUrl?: string
   actedAt?: string
   ingredients?: Record<string, Partial<Ingredient>>
 }

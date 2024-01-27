@@ -21,19 +21,24 @@ const SYSTEM_USERS = [
   {
     id: 'user_smugglerscove',
     username: 'smugglers_cove',
-    displayName: "Smuggler's Cove",
+    displayName: 'smugglers_cove',
     imageUrl: '/avatars/smugglers-cove.jpg',
   },
   {
     id: 'user_deathcowelcomehome',
     username: 'deathco_welcome_home',
-    displayName: 'Death & Co: Welcome Home',
+    displayName: 'deathco',
     imageUrl: '/avatars/deathco-welcome-home.jpg',
   },
 ]
 
 const byID = toDict(SYSTEM_USERS, ({ id }) => id)
 const byUsername = toDict(SYSTEM_USERS, ({ username }) => username)
+
+const connect = async () =>
+  connectToDatabase().then(({ db }) =>
+    db.collection<OptionalUnlessRequiredId<UserEntity>>('user'),
+  )
 
 export async function getAllUsers(userIDs: string[]): Promise<User[]> {
   const [systemIDs, ids] = partition((id) => byID[id] !== undefined, userIDs)
@@ -109,9 +114,8 @@ export async function getMostRecentActedUsers({
   exclude?: string[]
   limit?: number
 } = {}) {
-  const { db } = await connectToDatabase()
-  const users = await db
-    .collection<OptionalUnlessRequiredId<UserEntity>>('user')
+  const cn = await connect()
+  const users = await cn
     .find({ id: { $nin: exclude } }, { projection: { _id: 0, id: 1 } })
     .sort({ actedAt: -1 })
     .limit(limit)
@@ -120,8 +124,14 @@ export async function getMostRecentActedUsers({
 }
 
 export async function updateUserActedAt(userID: string) {
-  const { db } = await connectToDatabase()
-  return db
-    .collection<OptionalUnlessRequiredId<UserEntity>>('user')
-    .updateOne({ id: userID }, { $set: { actedAt: new Date().toISOString() } })
+  const cn = await connect()
+  return cn.updateOne(
+    { id: userID },
+    { $set: { actedAt: new Date().toISOString() } },
+  )
+}
+
+export async function addUser(user: User) {
+  const cn = await connect()
+  return cn.insertOne(user)
 }

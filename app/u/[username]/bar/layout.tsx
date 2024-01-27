@@ -1,6 +1,3 @@
-import { ReactNode } from 'react'
-
-import { Sidebar } from '@/app/u/[username]/bar/sidebar'
 import { IngredientDataProvider } from '@/app/components/data-provider'
 import {
   AppBack,
@@ -12,6 +9,7 @@ import { getUserIngredientData } from '@/app/lib/model/ingredient-data'
 import { toHome } from '@/app/lib/routes'
 import { getStockedBottleCount } from '@/app/lib/stock'
 import { LayoutProps } from '@/app/lib/types'
+import { Sidebar } from '@/app/u/[username]/bar/sidebar'
 
 export const revalidate = 0
 
@@ -28,7 +26,7 @@ export default async function Layout({ children, params }: Props) {
     <IngredientDataProvider {...data}>
       <AppLayout>
         <AppHeader title="Bar">
-          <AppBack href={toHome(user.username)} user={user} />
+          <AppBack href={toHome(user?.username)} user={user} />
         </AppHeader>
         <SidebarLayout
           sidebar={

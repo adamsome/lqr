@@ -15,6 +15,7 @@ type Props = CompProps &
     username?: string
     name: string
     hideLink?: boolean
+    hideHeading?: boolean
   }
 
 export async function BoxLink({
@@ -23,6 +24,7 @@ export async function BoxLink({
   username,
   name,
   hideLink,
+  hideHeading,
   ...keys
 }: Props) {
   const current = await isCurrentUser(username)
@@ -37,11 +39,12 @@ export async function BoxLink({
           'gap-2 px-[7px] pt-1.5 pb-[7px] bg-muted/25 rounded-[11px]',
         path.length === 2 &&
           'z-10 gap-1 px-[7px] pt-1.5 pb-[3px] text-sm bg-muted/50 rounded-md',
+        hideHeading && 'pt-1',
         className,
       )}
       path={path}
     >
-      {!hideLink ? (
+      {!hideHeading && !hideLink && (
         <Link
           className={cn(
             'group p-3 -m-3 tracking-tight',
@@ -65,7 +68,8 @@ export async function BoxLink({
             )}
           </Level>
         </Link>
-      ) : (
+      )}
+      {!hideHeading && hideLink && (
         <span className={cn(path.length === 1 && 'ms-2')}>{name}</span>
       )}
       {children}

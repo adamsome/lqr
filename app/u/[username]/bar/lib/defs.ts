@@ -34,6 +34,102 @@ export function getCategoryDef(keys: CategoryKeys): GridCategoryDef {
   return { ...categoryDef, keys }
 }
 
+export const SAMPLE_DEFS: Record<CabinetID[0], Omit<CabinetDef, 'keys'>> = {
+  essentials: {
+    name: 'Bar Essentials',
+    gridIDs: ['core-spirits'],
+    listIDs: ['core-spirits'],
+    children: {
+      'core-spirits': {
+        name: 'Core Spirits',
+        gridCols: 12,
+        gridIDs: [
+          'rye-whiskey',
+          'dry-gin',
+          'sweet-vermouth',
+          'dry-vermouth',
+          'cognac',
+          'maraschino',
+          'angostura',
+          'campari',
+          'peychauds',
+        ],
+        listIDs: [],
+        children: {
+          'rye-whiskey': {
+            name: 'Rye Whiskey',
+            colSpan: 6,
+            items: 3,
+            include: [{ id: 'grain_whiskey_rye' }],
+          },
+          'dry-gin': {
+            name: 'Dry Gin',
+            colSpan: 6,
+            items: 3,
+            include: [
+              { id: 'grain_gin_londondry' },
+              { id: 'grain_gin_contemporary' },
+              { id: 'grain_gin_plymouth' },
+            ],
+          },
+          'sweet-vermouth': {
+            name: 'Sweet Vermouth',
+            colSpan: 6,
+            items: 1,
+            include: [{ id: 'fortifiedwine_sweetvermouth' }],
+          },
+          'dry-vermouth': {
+            name: 'Dry Vermouth',
+            colSpan: 6,
+            items: 1,
+            include: [{ id: 'fortifiedwine_dryvermouth' }],
+          },
+          cognac: {
+            name: 'Cognac/Brandy',
+            colSpan: 4,
+            items: 3,
+            include: [
+              { id: 'brandy_grape_cognac' },
+              { id: 'brandy_grape_armagnac' },
+              { id: 'brandy_grape_american' },
+            ],
+          },
+          maraschino: {
+            name: 'Maraschino',
+            include: [{ id: 'liqueur_maraschino' }],
+            colSpan: 4,
+            hideGridItems: true,
+          },
+          angostura: {
+            name: 'Angostura',
+            items: 1,
+            colSpan: 4,
+            ids: ['angostura'],
+            hideItems: true,
+          },
+          campari: {
+            name: 'Campari',
+            items: 1,
+            colSpan: 4,
+            ids: [
+              'campari',
+              'gran_classico_bitter',
+              'st_george_bruto_americano',
+            ],
+            hideGridItems: true,
+          },
+          peychauds: {
+            name: 'Peychauds',
+            colSpan: 4,
+            ids: ['peychauds'],
+            hideItems: true,
+          },
+        },
+      },
+    },
+  },
+}
+
 export const DEFS: Record<CabinetID, Omit<CabinetDef, 'keys'>> = {
   essentials: {
     name: 'Bar Essentials',

@@ -13,7 +13,7 @@ export async function PUT(
   const { id: followee } = followeeUser ?? {}
   if (!followee) {
     return NextResponse.json(
-      { data: `No user w/ username '${username}' found to follow.` },
+      { error: `No user w/ username '${username}' found to follow.` },
       { status: 400 },
     )
   }
@@ -21,7 +21,7 @@ export async function PUT(
   const { userId: follower } = auth()
   if (!follower) {
     return NextResponse.json(
-      { data: `Must be signed in to follow a user.` },
+      { error: `Must be signed in to follow a user.` },
       { status: 401 },
     )
   }
@@ -45,7 +45,7 @@ export async function DELETE(
   const { id: followee } = followeeUser ?? {}
   if (!followee) {
     return NextResponse.json(
-      { data: `No user w/ username '${username}' found to follow.` },
+      { error: `No user w/ username '${username}' found to follow.` },
       { status: 400 },
     )
   }
@@ -53,7 +53,7 @@ export async function DELETE(
   const { userId: follower } = auth()
   if (!follower) {
     return NextResponse.json(
-      { data: `Must be signed in to unfollow a user.` },
+      { error: `Must be signed in to unfollow a user.` },
       { status: 401 },
     )
   }

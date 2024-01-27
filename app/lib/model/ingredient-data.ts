@@ -1,7 +1,6 @@
 import { auth } from '@clerk/nextjs'
 import { OptionalUnlessRequiredId } from 'mongodb'
 import { cache } from 'react'
-import invariant from 'tiny-invariant'
 
 import { parseIngredients } from '@/app/lib/ingredient/parse-ingredients'
 import { getStaticData } from '@/app/lib/model/static-data'
@@ -42,7 +41,6 @@ export const getIngredientData = cache(
 
 export const getUserIngredientData = cache(async (username?: string) => {
   const user = await getUser(username)
-  invariant(user, `User not found.`)
-  const data = await getIngredientData(user.id)
+  const data = await getIngredientData(user?.id)
   return { user, data }
 })

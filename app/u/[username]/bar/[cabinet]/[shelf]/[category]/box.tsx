@@ -18,6 +18,7 @@ type Props = {
   def: GridCategoryDef
   category: BarCategory
   isCurrentUser?: boolean
+  readonly?: boolean
 }
 
 export function Box({
@@ -26,6 +27,7 @@ export function Box({
   def,
   category,
   isCurrentUser,
+  readonly,
 }: Props) {
   const { keys, items = 0 } = def
   const allStocked = sortByStocked(category.stocked)
@@ -46,7 +48,7 @@ export function Box({
   })
 
   const handleClick = async () => {
-    if (mutating) return
+    if (mutating || readonly) return
     if (
       !isCurrentUser ||
       (!isStocked && !hideItems) ||
@@ -70,6 +72,7 @@ export function Box({
       {...def}
       stocked={isStocked}
       disabled={mutating}
+      readonly={readonly}
       onClick={handleClick}
     >
       <BoxLine

@@ -1,16 +1,6 @@
 import { uniq } from 'ramda'
 import { cache } from 'react'
 
-import {
-  getCabinetDef,
-  getCategoryDef,
-  getShelfDef,
-} from '@/app/u/[username]/bar/lib/defs'
-import {
-  BarCategory,
-  BarCategoryDef,
-  CABINETS,
-} from '@/app/u/[username]/bar/lib/types'
 import { HierarchicalFilter } from '@/app/lib/hierarchical-filter'
 import {
   IngredientItem,
@@ -25,6 +15,16 @@ import {
 import { getUserIngredientData } from '@/app/lib/model/ingredient-data'
 import { IngredientData } from '@/app/lib/types'
 import { rejectNil } from '@/app/lib/utils'
+import {
+  getCabinetDef,
+  getCategoryDef,
+  getShelfDef,
+} from '@/app/u/[username]/bar/lib/defs'
+import {
+  BarCategory,
+  BarCategoryDef,
+  CABINETS,
+} from '@/app/u/[username]/bar/lib/types'
 
 function createTree(
   items: IngredientItem[],

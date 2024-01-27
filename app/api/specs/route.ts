@@ -13,7 +13,7 @@ export async function POST(req: NextRequest) {
   const user = await currentUser()
   if (!user) {
     return NextResponse.json(
-      { data: `Must be signed in to add a spec.` },
+      { error: `Must be signed in to add a spec.` },
       { status: 401 },
     )
   }
@@ -25,7 +25,7 @@ export async function POST(req: NextRequest) {
   const existing = await getSpec(spec.id, spec.userID)
   if (existing) {
     return NextResponse.json(
-      { data: `Spec already exists with name ${spec.name}.` },
+      { error: `Spec already exists with name ${spec.name}.` },
       { status: 422 },
     )
   }

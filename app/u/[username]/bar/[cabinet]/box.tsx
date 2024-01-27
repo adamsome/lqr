@@ -1,22 +1,20 @@
-import { BoxLink } from '@/app/u/[username]/bar/components/box'
-import { Box as ShelfBox } from '@/app/u/[username]/bar/[cabinet]/[shelf]/box'
-import { getShelfDef } from '@/app/u/[username]/bar/lib/defs'
-import { CabinetDef } from '@/app/u/[username]/bar/lib/types'
-import { Stack } from '@/app/components/layout/stack'
+import { ReactNode } from 'react'
 
-type Props = CabinetDef & {
+import { Stack } from '@/app/components/layout/stack'
+import { BoxLink } from '@/app/u/[username]/bar/components/box'
+import { CabinetDef } from '@/app/u/[username]/bar/lib/types'
+
+type Props = {
+  def: CabinetDef
+  children?: ReactNode
   username?: string
 }
 
-export function Box({ username, keys, name, gridIDs }: Props) {
+export function Box({ children, username, def }: Props) {
+  const { keys, name } = def
   return (
     <BoxLink username={username} name={name} {...keys} hideLink>
-      <Stack>
-        {gridIDs.map((shelf) => {
-          const def = getShelfDef({ ...keys, shelf })
-          return <ShelfBox key={shelf} username={username} {...def} />
-        })}
-      </Stack>
+      <Stack>{children}</Stack>
     </BoxLink>
   )
 }
