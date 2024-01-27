@@ -1,13 +1,10 @@
 import { SignIn } from '@clerk/nextjs'
 
-type Props = {
-  searchParams: { [key: string]: string | string[] | undefined }
-}
-
-export default function Page({ searchParams }: Props) {
+export default function Page() {
+  const url = '/u'
   return (
     <main className="flex h-[calc(100vh-theme(spacing.14))] flex-col items-center justify-center">
-      <SignIn />
+      <SignIn afterSignUpUrl={url} afterSignInUrl={url} />
     </main>
   )
 }
