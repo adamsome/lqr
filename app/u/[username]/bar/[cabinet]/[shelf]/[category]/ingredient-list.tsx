@@ -100,10 +100,14 @@ export function IngredientList({ category, isCurrentUser }: Props) {
         <Stack gap={0}>
           {unstockedItems.length + topItems.length > 0 && <DestockSeparator />}
           {topItems.map((ingredient) => (
-            <Ingredient key={ingredient.id} ingredient={ingredient} />
+            <Ingredient
+              key={ingredient.id}
+              ingredient={ingredient}
+              isCurrentUser
+            />
           ))}
           {unstockedItems.map((it) => (
-            <Ingredient key={it.ingredient!.id} {...it} />
+            <Ingredient key={it.ingredient!.id} {...it} isCurrentUser />
           ))}
         </Stack>
       )}
