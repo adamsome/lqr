@@ -1,6 +1,7 @@
 import { sortBy } from 'ramda'
 
 import { Ingredient } from '@/app/lib/types'
+import { CATEGORY_DICT, CategoryDef } from '@/app/lib/generated-consts'
 
 export type StockState = 'full' | 'low' | 'none'
 
@@ -37,10 +38,20 @@ export function getStockLabel(state: StockState): string {
   }
 }
 
+const STOCKED_CATEGORY_TYPES: Array<CategoryDef['type']> = [
+  'beerWine',
+  'bitters',
+  'spirit',
+]
+
 export const isStockedBottle =
   (dict: Record<string, Ingredient>) =>
-  (id: string): boolean =>
-    dict[id]?.ordinal !== undefined && (dict[id]?.stock ?? -1) > 0
+  (id: string): boolean => {
+    const it = dict[id]
+    if ((it?.stock ?? -1) <= 0) return false
+    if (it.ordinal != null) return true
+    return STOCKED_CATEGORY_TYPES.includes(CATEGORY_DICT[it.category].type)
+  }
 
 export const getStockedBottleCount = (dict: Record<string, Ingredient>) =>
   Object.keys(dict).filter(isStockedBottle(dict)).length
