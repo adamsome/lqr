@@ -2,13 +2,15 @@ import Link from 'next/link'
 
 import { SpecStockText } from '@/app/u/[username]/specs/[id]/spec-stock'
 import { Criteria } from '@/app/u/[username]/specs/_criteria/types'
-import { Card } from '@/app/u/[username]/specs/card'
+import { Card, CardDescription } from '@/app/u/[username]/specs/card'
 import { LoadMoreButton } from '@/app/u/[username]/specs/load-more-button'
 import { UserAvatar } from '@/app/components/user/user-avatar'
 import { toHome, toSpecItem } from '@/app/lib/routes'
 import { IngredientData, Spec, User } from '@/app/lib/types'
 import { cn } from '@/app/lib/utils'
 import { getIngredientData } from '@/app/lib/model/ingredient-data'
+import { Stack } from '@/app/components/layout/stack'
+import { Empty } from '@/app/components/empty'
 
 type Props = {
   specs: Spec[]
@@ -26,7 +28,13 @@ export async function Grid({
   showStock,
 }: Props) {
   if (!specs.length) {
-    return <>No results</>
+    return (
+      <Empty title="No specs in your library">
+        Create some cocktail specs or
+        <br />
+        follow some other users!
+      </Empty>
+    )
   }
   const data = await getIngredientData()
   const { limit } = criteria
@@ -45,7 +53,7 @@ export async function Grid({
             spec={spec}
             href={toSpecItem(spec, criteria.username)}
             description={
-              <div className="inline-flex items-center gap-4 py-px w-full text-muted-foreground overflow-hidden">
+              <CardDescription>
                 <Link className="relative" href={toHome(spec.username)}>
                   <UserAvatar
                     className="overflow-hidden"
@@ -56,7 +64,7 @@ export async function Grid({
                 {showStock && spec.stock && (
                   <SpecStockText className="text-xs" stock={spec.stock} />
                 )}
-              </div>
+              </CardDescription>
             }
           />
         ))}
