@@ -5,7 +5,7 @@ import { cache } from 'react'
 import invariant from 'tiny-invariant'
 
 import { toUser } from '@/app/lib/model/to-user'
-import { connectToDatabase } from '@/app/lib/mongodb'
+import { FIND_NO_ID, connectToDatabase } from '@/app/lib/mongodb'
 import { User, UserEntity } from '@/app/lib/types'
 import { toDict } from '@/app/lib/utils'
 
@@ -107,6 +107,12 @@ export const isCurrentUser = cache(async (username: string | undefined) => {
   return currentUserID != null && user?.id === currentUserID
 })
 
+export const getUserEntity = cache(async (userID?: string) => {
+  if (!userID) return null
+  const cn = await connect()
+  return cn.findOne({ id: userID }, FIND_NO_ID)
+})
+
 export async function getMostRecentActedUsers({
   exclude = [],
   limit = 5,
@@ -116,7 +122,10 @@ export async function getMostRecentActedUsers({
 } = {}) {
   const cn = await connect()
   const users = await cn
-    .find({ id: { $nin: exclude } }, { projection: { _id: 0, id: 1 } })
+    .find(
+      { id: { $nin: exclude }, specCount: { $gt: 3 } },
+      { projection: { _id: 0, id: 1 } },
+    )
     .sort({ actedAt: -1 })
     .limit(limit)
     .toArray()
@@ -134,4 +143,14 @@ export async function updateUserActedAt(userID: string) {
 export async function addUser(user: User) {
   const cn = await connect()
   return cn.insertOne(user)
+}
+
+export async function updateUserSpecCount(userID: string, count: number) {
+  const cn = await connect()
+  return cn.updateOne({ id: userID }, { $set: { specCount: count } })
+}
+
+export async function updateUserFollowingCount(userID: string, count: number) {
+  const cn = await connect()
+  return cn.updateOne({ id: userID }, { $set: { followingCount: count } })
 }

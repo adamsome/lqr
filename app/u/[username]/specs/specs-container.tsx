@@ -4,8 +4,8 @@ import { UserAvatarHeader } from '@/app/components/user/user-avatar-header'
 import { getSpecStock } from '@/app/lib/ingredient/get-spec-stock'
 import { getAllFollowing } from '@/app/lib/model/follow'
 import { getIngredientData } from '@/app/lib/model/ingredient-data'
-import { getAllSpecs, getAllSpecsWithUserIDs } from '@/app/lib/model/spec'
-import { getCurrentUser, getAllUsers } from '@/app/lib/model/user'
+import { getAllSpecsWithUserIDs } from '@/app/lib/model/spec'
+import { getAllUsers, getCurrentUser } from '@/app/lib/model/user'
 import { toDict } from '@/app/lib/utils'
 import { applyCriteria } from '@/app/u/[username]/specs/_criteria/apply'
 import { Criteria } from '@/app/u/[username]/specs/_criteria/types'
@@ -15,7 +15,7 @@ import { Grid } from '@/app/u/[username]/specs/grid'
 import { Specs } from '@/app/u/[username]/specs/specs'
 import { Toolbar } from '@/app/u/[username]/specs/toolbar'
 import {
-  MdHorizontalScroller,
+  MobileHorizontalScroller,
   UsersToFollow,
 } from '@/app/u/[username]/users-to-follow'
 
@@ -67,7 +67,10 @@ export async function SpecsContainer({
       header={
         <>
           <UserAvatarHeader username={username} />
-          <UsersToFollow username={username} Wrapper={MdHorizontalScroller} />
+          <UsersToFollow
+            username={username}
+            Wrapper={MobileHorizontalScroller}
+          />
         </>
       }
       toolbar={<Toolbar {...criteria} />}

@@ -2,14 +2,13 @@ import { Pencil2Icon } from '@radix-ui/react-icons'
 import Link from 'next/link'
 import { ReactNode } from 'react'
 
-import { FooterFilterDrawerButton } from '@/app/u/[username]/specs/footer-filter-drawer-button'
 import { Container } from '@/app/components/layout/container'
 import * as Layout from '@/app/components/layout/responsive-layout'
 import { Button, IconButton } from '@/app/components/ui/button'
-import { H2 } from '@/app/components/ui/h2'
 import { UserAvatar } from '@/app/components/user/user-avatar'
 import { getCurrentUser } from '@/app/lib/model/user'
 import { toCreateSpec, toHome } from '@/app/lib/routes'
+import { FooterFilterDrawerButton } from '@/app/u/[username]/specs/footer-filter-drawer-button'
 
 type Props = {
   children?: ReactNode
@@ -68,12 +67,7 @@ export async function Specs({
             </div>
           </div>
         </Container>
-        {sidebar ? (
-          <div className="hidden lg:flex flex-col gap-2 ps-2 pe-6 mt-14">
-            <H2 className="text-muted-foreground">Users to Follow</H2>
-            {sidebar}
-          </div>
-        ) : null}
+        {sidebar}
       </div>
 
       <Layout.Footer status={status}>

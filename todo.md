@@ -3,9 +3,8 @@
 FTUE
 ----
 
-- Fix: Users to follow 'test_01' no username
-- Responsive landing page
 - Filter users to follow to spec count > 3?
+- Responsive landing page
 - Onboarding bar inventory
 - Follow classics on signup
 
@@ -43,6 +42,11 @@ Specs
 - Specs, sort, In Stock, incl. favorite
 - Specs fetch incl. favorites from non-following
 
+### Users to Follow
+
+- Add counts
+- Move down in specs results (?)
+
 ### Criteria
 
 - Bar grid as ingredient filter
@@ -61,6 +65,13 @@ Spec
 ----
 
 - Spec Edit is when its yours, Clone when not
+
+Following
+---------
+
+- Add counts
+- Add users to follow
+- Add back button
 
 Ingredients
 -----------

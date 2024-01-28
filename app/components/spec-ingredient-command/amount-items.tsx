@@ -41,6 +41,8 @@ const kindAmountDict: Partial<
     { label: '5 dashes', value: { quantity: 5, unit: 'dash' } },
     { label: '8 dashes', value: { quantity: 8, unit: 'dash' } },
     { label: '10 dashes', value: { quantity: 10, unit: 'dash' } },
+    { label: '6 oz', value: { quantity: 6, unit: 'oz' } },
+    { label: '5 oz', value: { quantity: 5, unit: 'oz' } },
     { label: '4 oz', value: { quantity: 4, unit: 'oz' } },
     { label: '3 oz', value: { quantity: 3, unit: 'oz' } },
     { label: '2 1/2 oz', value: { quantity: 2.5, unit: 'oz' } },
@@ -102,6 +104,8 @@ const kindAmountDict: Partial<
     { label: '2 1/2 oz', value: { quantity: 2.5, unit: 'oz' } },
     { label: '3 oz', value: { quantity: 3, unit: 'oz' } },
     { label: '4 oz', value: { quantity: 4, unit: 'oz' } },
+    { label: '5 oz', value: { quantity: 5, unit: 'oz' } },
+    { label: '6 oz', value: { quantity: 6, unit: 'oz' } },
     { label: '1/3 oz', value: { quantity: 0.333, unit: 'oz' } },
     { label: '2/3 oz', value: { quantity: 0.667, unit: 'oz' } },
   ],
@@ -230,6 +234,7 @@ kindAmountDict.garnish = [
   ...kindAmountDict.grated!,
   ...kindAmountDict.muddled!,
 ]
+kindAmountDict.muddled = [...kindAmountDict.muddled!, ...kindAmountDict.juice!]
 
 const getKey = (amt: Amount): string =>
   `${amt.usage ?? 'na'}_${amt.unit ?? 'na'}_${amt.quantity ?? 'na'}`

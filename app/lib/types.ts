@@ -48,6 +48,8 @@ export interface UserEntity {
   username: string
   imageUrl?: string
   actedAt?: string
+  specCount?: number
+  followingCount?: number
   ingredients?: Record<string, Partial<Ingredient>>
 }
 

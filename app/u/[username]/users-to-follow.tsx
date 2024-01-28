@@ -1,8 +1,9 @@
 import { FC, PropsWithChildren } from 'react'
 
-import { UserAvatarFollow } from '@/app/components/user/user-avatar-follow'
 import { Stack } from '@/app/components/layout/stack'
+import { H2 } from '@/app/components/ui/h2'
 import { HorizontalScroller } from '@/app/components/ui/horizontal-scroller'
+import { UserAvatarFollow } from '@/app/components/user/user-avatar-follow'
 import { getAllFollowing } from '@/app/lib/model/follow'
 import { getCurrentUser, getMostRecentActedUsers } from '@/app/lib/model/user'
 import { CompProps } from '@/app/lib/types'
@@ -42,7 +43,7 @@ export async function UsersToFollow({
   )
 }
 
-export function MdHorizontalScroller({ children, className }: CompProps) {
+export function MobileHorizontalScroller({ children, className }: CompProps) {
   return (
     <div className={cn('!col-span-full lg:hidden', className)}>
       <HorizontalScroller
@@ -56,5 +57,10 @@ export function MdHorizontalScroller({ children, className }: CompProps) {
 }
 
 function DefaultStack({ children }: PropsWithChildren) {
-  return <Stack gap={4}>{children}</Stack>
+  return (
+    <div className="hidden lg:flex flex-col gap-2 ps-2 pe-6 mt-14 w-64">
+      <H2 className="text-muted-foreground">Users to Follow</H2>
+      <Stack gap={4}>{children}</Stack>
+    </div>
+  )
 }
