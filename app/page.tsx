@@ -18,7 +18,7 @@ export default async function Page() {
   return (
     <Layout.Root>
       <Layout.Header title={<UserAvatar user={currentUser} />} />
-      <Container className="relative py-4 sm:py-6">
+      <Container className="relative pt-4 pb-8 sm:py-6">
         <h1 className="text-[2.5rem] leading-[2.5rem] font-bold">
           Manage your
           <br />

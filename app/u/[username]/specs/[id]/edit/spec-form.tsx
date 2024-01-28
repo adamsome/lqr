@@ -99,7 +99,7 @@ export function SpecForm({
           </Layout.Header>
 
           <FullWidthContainer>
-            <div className="flex flex-col gap-6 py-4 md:py-6">
+            <div className="flex flex-col gap-6 pt-4 pb-20 md:py-6">
               <FormField
                 control={form.control}
                 name="name"

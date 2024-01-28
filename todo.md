@@ -3,7 +3,9 @@
 FTUE
 ----
 
+- Fix: Users to follow 'test_01' no username
 - Responsive landing page
+- Filter users to follow to spec count > 3?
 - Onboarding bar inventory
 - Follow classics on signup
 
@@ -12,6 +14,7 @@ Bar
 
 ### Inventory
 
+- Bar drawer add 90 snap point (?)
 - Bar grid more items badge
 - Responsive `lg`/`xl` handling
   - Left sidebar w/ category tree
@@ -78,6 +81,8 @@ Home
 Redesign
 --------
 
+- Bricolage font (?)
+- Landing page color (?)
 - Spec bigger text on desktop
 - Colors! BG! Look & feel!
 - Add specs loading page
@@ -110,9 +115,13 @@ QoL
 Content
 -------
 
+- Add ingredient:
+  - Hot Water
+
 - Implicit ingredients:
   - Ginger
   - Salt
+  - Hot Water
   - Check other garnishes (not in in-stock calc)
 
 - Consolidate ingredients:
