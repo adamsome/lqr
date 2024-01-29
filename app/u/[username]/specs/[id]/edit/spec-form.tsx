@@ -292,7 +292,7 @@ export function SpecForm({
           </AppFullWidthContent>
 
           <AppFooter>
-            <IconButton onClick={onClose}>
+            <IconButton type="button" onClick={onClose}>
               <Cross2Icon className="w-6 h-6" />
             </IconButton>
             <Button
