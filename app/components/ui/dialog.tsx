@@ -10,12 +10,17 @@ const Dialog = DialogPrimitive.Root
 
 const DialogTrigger = DialogPrimitive.Trigger
 
+type DialogPortalProps = {
+  className?: string
+  bottom?: boolean
+}
+
 const DialogPortal = ({
   className,
   children,
   bottom,
   ...props
-}: DialogPrimitive.DialogPortalProps & { bottom?: boolean }) => (
+}: DialogPrimitive.DialogPortalProps & DialogPortalProps) => (
   <DialogPrimitive.Portal {...props}>
     <div
       className={cn(
