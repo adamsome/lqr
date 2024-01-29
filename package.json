@@ -36,7 +36,7 @@
     "immer": "^10.0.3",
     "lucide-react": "^0.316.0",
     "micromark": "^4.0.0",
-    "mongodb": "^5.7.0",
+    "mongodb": "^6.3.0",
     "next": "14.1.0",
     "next-themes": "^0.2.1",
     "ramda": "^0.29.1",
