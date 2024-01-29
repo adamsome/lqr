@@ -1,6 +1,6 @@
 import './globals.css'
 
-import { Metadata } from 'next'
+import { Metadata, Viewport } from 'next'
 
 import { AppCommand } from '@/app/components/app-command'
 import { AuthProvider } from '@/app/components/auth-provider'
@@ -15,6 +15,9 @@ export const metadata: Metadata = {
   description: 'lqr',
   authors: [{ name: 'adamsome', url: 'https://adamso.me' }],
   creator: 'adamsome',
+}
+
+export const viewport: Viewport = {
   themeColor: 'transparent',
 }
 
