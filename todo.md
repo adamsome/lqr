@@ -3,7 +3,6 @@
 FTUE
 ----
 
-- Filter users to follow to spec count > 3?
 - Responsive landing page
 - Onboarding bar inventory
 - Follow classics on signup

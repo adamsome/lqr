@@ -13,20 +13,9 @@ import { cn } from '@/app/lib/utils'
 export const metadata: Metadata = {
   title: 'lqr',
   description: 'lqr',
-  authors: [
-    {
-      name: 'adamsome',
-      url: 'https://adamso.me',
-    },
-  ],
+  authors: [{ name: 'adamsome', url: 'https://adamso.me' }],
   creator: 'adamsome',
   themeColor: 'transparent',
-  icons: {
-    icon: '/favicon.ico',
-    shortcut: '/icon.png',
-    apple: '/apple-touch-icon.png',
-  },
-  manifest: '/manifest.webmanifest',
 }
 
 type Props = {
