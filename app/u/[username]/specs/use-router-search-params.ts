@@ -1,4 +1,4 @@
-import { NavigateOptions } from 'next/dist/shared/lib/app-router-context'
+import { NavigateOptions } from 'next/dist/shared/lib/app-router-context.shared-runtime'
 import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 import { useCallback } from 'react'
 
