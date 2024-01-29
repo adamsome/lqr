@@ -1,5 +1,6 @@
 import { complement } from 'ramda'
 
+import { Stack } from '@/app/components/layout/stack'
 import { getIngredientView } from '@/app/lib/ingredient/get-ingredient-view'
 import { isSpecIngredientStockIgnorable } from '@/app/lib/ingredient/spec-ingredient-stock'
 import {
@@ -29,13 +30,15 @@ export function Ingredient({ data, ingredient, stock, showStock }: Props) {
     notInStock && complement(isSpecIngredientStockIgnorable)(stock)
   const ignorable = notInStock && isSpecIngredientStockIgnorable(stock)
   return (
-    <div
+    <Stack
       className={cn(
-        '-ms-2 flex flex-col items-start border-l-2 border-transparent ps-1.5 leading-snug',
-        { 'border-red-400 opacity-60': showStock && missing },
-        { 'border-sky-300 opacity-80': showStock && categoryMatch },
-        { 'border-muted-foreground/60 opacity-80': showStock && ignorable },
+        '-ms-2 border-l-2 border-transparent ps-1.5 leading-snug',
+        showStock && missing && 'border-red-400 opacity-60',
+        showStock && categoryMatch && 'border-sky-300 opacity-80',
+        showStock && ignorable && 'border-muted-foreground/60 opacity-80',
       )}
+      items="start"
+      gap={0}
     >
       {category && (
         <div className="text-xs leading-none text-muted-foreground">
@@ -50,6 +53,6 @@ export function Ingredient({ data, ingredient, stock, showStock }: Props) {
         <span>{name}</span>
         {amount[1] && <span>{` ${amount[1]}`}</span>}
       </div>
-    </div>
+    </Stack>
   )
 }

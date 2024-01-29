@@ -43,16 +43,17 @@ export function UserAvatar({
     <div
       className={cn(
         variants({ size }),
-        { 'gap-0': hideName || !user },
+        (hideName || !user) && 'gap-0',
         className,
       )}
     >
       <UserAvatarImage user={user} size={size} />
       <span
-        className={cn('flex flex-col w-full overflow-hidden transition-all', {
-          'w-0 opacity-0': hideName || !user,
-          'leading-none': children,
-        })}
+        className={cn(
+          'flex flex-col w-full overflow-hidden transition-all',
+          (hideName || !user) && 'w-0 opacity-0',
+          children && 'leading-none',
+        )}
       >
         <span className="tracking-tight overflow-hidden text-ellipsis whitespace-nowrap">
           {name}

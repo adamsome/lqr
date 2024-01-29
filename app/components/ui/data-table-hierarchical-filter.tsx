@@ -42,9 +42,10 @@ export function DataTableHierarchicalFilter<TData>({
   return (
     <Popover modal={true}>
       <PopoverTrigger
-        className={cn('m-[calc(-1*theme(spacing.1))] p-1', {
-          'text-accent-foreground': value,
-        })}
+        className={cn(
+          'm-[calc(-1*theme(spacing.1))] p-1',
+          value && 'text-accent-foreground',
+        )}
       >
         <GearIcon />
       </PopoverTrigger>
@@ -95,11 +96,11 @@ function Item({
   return (
     <>
       <div
-        className={cn({
-          'ml-6': level === 1,
-          'ml-12': level === 2,
-          'ml-18': level >= 3,
-        })}
+        className={cn(
+          level === 1 && 'ml-6',
+          level === 2 && 'ml-12',
+          level >= 3 && 'ml-18',
+        )}
       >
         <CheckboxWithLabel
           id={id}

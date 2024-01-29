@@ -1,9 +1,15 @@
 import Link from 'next/link'
 import { ReactNode } from 'react'
 
-import * as Layout from '@/app/components/layout/responsive-layout'
-import { Button } from '@/app/components/ui/button'
+import {
+  AppActions,
+  AppContent,
+  AppFooter,
+  AppHeader,
+  AppLayout,
+} from '@/app/components/layout/app-layout'
 import { Container } from '@/app/components/layout/container'
+import { Button } from '@/app/components/ui/button'
 import { toSpecEdit } from '@/app/lib/routes'
 import { Spec } from '@/app/lib/types'
 
@@ -19,21 +25,21 @@ export function SpecLayout({ children, back, spec, status, showEdit }: Props) {
   const { id, name, username, updatedAt } = spec
   const editUrl = toSpecEdit(username, id)
   return (
-    <Layout.Root>
-      <Layout.Header title={name}>
+    <AppLayout>
+      <AppHeader title={name}>
         {back}
-        <Layout.Actions>
+        <AppActions>
           {showEdit && (
             <Link href={editUrl}>
               <Button size="sm">Edit</Button>
             </Link>
           )}
-        </Layout.Actions>
-      </Layout.Header>
-      <Container className="py-8 [--container-w-max:800px]">
+        </AppActions>
+      </AppHeader>
+      <AppContent className="pt-8 md:pt-8 [--container-w-max:800px]">
         {children}
-      </Container>
-      <Layout.Footer status={status}>
+      </AppContent>
+      <AppFooter status={status}>
         <span />
         {showEdit && (
           <Link href={editUrl}>
@@ -42,7 +48,7 @@ export function SpecLayout({ children, back, spec, status, showEdit }: Props) {
             </Button>
           </Link>
         )}
-      </Layout.Footer>
-    </Layout.Root>
+      </AppFooter>
+    </AppLayout>
   )
 }

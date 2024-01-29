@@ -14,36 +14,38 @@ export function StockIcon({ stock = 'none', header, disabled }: Props) {
 
   return (
     <div
-      className={cn('h-5 w-3.5 rounded-sm border p-0.5 transition', {
-        'border-primary/50': header,
-        'border-primary/30': none,
-        'border-primary': !none,
-        'group-hover:border-primary/50': !header,
-      })}
+      className={cn(
+        'h-5 w-3.5 rounded-sm border p-0.5 transition',
+        header ? 'border-primary/50' : 'group-hover:border-primary/50',
+        none ? 'border-primary/30' : 'border-primary',
+      )}
     >
       <div className="flex h-full flex-col space-y-px">
         <div
-          className={cn('flex-1 transition-colors duration-700', {
-            'bg-primary': full,
-            'group-hover:bg-primary/0': !disabled && full,
-            'group-hover:bg-primary/30': !disabled && (none || low),
-            'bg-primary/30': header,
-          })}
+          className={cn(
+            'flex-1 transition-colors duration-700',
+            full && 'bg-primary',
+            !disabled && full && 'group-hover:bg-primary/0',
+            !disabled && (none || low) && 'group-hover:bg-primary/30',
+            header && 'bg-primary/30',
+          )}
         ></div>
         <div
-          className={cn('flex-1 transition-colors duration-500', {
-            'bg-primary': full,
-            'group-hover:bg-primary/0': !disabled && full,
-            'group-hover:bg-primary/30': !disabled && (none || low),
-            'bg-primary/30': header,
-          })}
+          className={cn(
+            'flex-1 transition-colors duration-500',
+            full && 'bg-primary',
+            !disabled && full && 'group-hover:bg-primary/0',
+            !disabled && (none || low) && 'group-hover:bg-primary/30',
+            header && 'bg-primary/30',
+          )}
         ></div>
         <div
-          className={cn('flex-1 transition-colors', {
-            'bg-primary': low || full,
-            'group-hover:bg-primary/30': !disabled,
-            'bg-primary/30': header,
-          })}
+          className={cn(
+            'flex-1 transition-colors',
+            (low || full) && 'bg-primary',
+            !disabled && 'group-hover:bg-primary/30',
+            header && 'bg-primary/30',
+          )}
         ></div>
       </div>
     </div>

@@ -4,10 +4,11 @@ import { MagnifyingGlassIcon } from '@radix-ui/react-icons'
 import { useEffect, useState } from 'react'
 import { useDebounce } from 'react-use'
 
-import { SEARCH_KEY } from '@/app/u/[username]/specs/_criteria/consts'
+import { Level } from '@/app/components/layout/level'
 import { Input } from '@/app/components/ui/input'
-import { useRouterSearchParams } from '@/app/u/[username]/specs/use-router-search-params'
 import { cn } from '@/app/lib/utils'
+import { SEARCH_KEY } from '@/app/u/[username]/specs/_criteria/consts'
+import { useRouterSearchParams } from '@/app/u/[username]/specs/use-router-search-params'
 
 type Props = {
   className?: string
@@ -40,13 +41,14 @@ export function Search({ className, search: searchProp }: Props) {
         placeholder="Filter specs by name..."
         onChange={(e) => setSearch(e.target.value)}
       />
-      <div
-        className={cn('absolute bottom-0 left-3 top-0 flex items-center', {
-          'animate-pulse': searchProp !== search,
-        })}
+      <Level
+        className={cn(
+          'absolute bottom-0 left-3 top-0',
+          searchProp !== search && 'animate-pulse',
+        )}
       >
         <MagnifyingGlassIcon />
-      </div>
+      </Level>
     </div>
   )
 }

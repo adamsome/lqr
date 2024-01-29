@@ -14,6 +14,7 @@ import { KeyboardEvent, ReactNode, useEffect, useState } from 'react'
 
 import { AppCommandTheme } from '@/app/components/app-command-theme'
 import { GithubIcon } from '@/app/components/github-icon'
+import { Level } from '@/app/components/layout/level'
 import Logo from '@/app/components/logo'
 import { Button } from '@/app/components/ui/button'
 import {
@@ -29,8 +30,6 @@ import { UserAvatar } from '@/app/components/user/user-avatar'
 import { UserAvatarImage } from '@/app/components/user/user-avatar-image'
 import { useUser } from '@/app/lib/model/use-user'
 import { SIGN_IN, SIGN_UP, toBar, toHome, toSpecs } from '@/app/lib/routes'
-import { cn } from '@/app/lib/utils'
-import { Level } from '@/app/components/layout/level'
 
 export function AppCommand() {
   const router = useRouter()
@@ -110,11 +109,7 @@ export function AppCommand() {
       <Dialog open={profileOpen} onOpenChange={setProfileOpen}>
         <DialogPortal className="z-50">
           <DialogOverlay />
-          <DialogContent
-            className={cn(
-              'fixed z-50 grid h-[calc(100vh-200px)] gap-4 rounded-2xl overflow-hidden animate-in data-[state=open]:fade-in-90 data-[state=open]:slide-in-from-bottom-10 sm:zoom-in-90 data-[state=open]:sm:slide-in-from-bottom-0',
-            )}
-          >
+          <DialogContent className="fixed z-50 grid h-[calc(100vh-200px)] gap-4 rounded-2xl overflow-hidden animate-in data-[state=open]:fade-in-90 data-[state=open]:slide-in-from-bottom-10 sm:zoom-in-90 data-[state=open]:sm:slide-in-from-bottom-0">
             <div className="overflow-auto w-full h-full [&_.cl-card]:mx-0">
               <UserProfile />
             </div>
@@ -131,9 +126,7 @@ export function AppCommand() {
         onKeyDown={handleDialogKey}
       >
         <CommandInput placeholder="Type a command or search..." shortcut="⌘K" />
-        <CommandList
-          className={cn('h-[404px] max-h-screen overscroll-contain')}
-        >
+        <CommandList className="h-[404px] max-h-screen overscroll-contain">
           <CommandEmpty>No items found.</CommandEmpty>
 
           <CommandGroup heading="Links">

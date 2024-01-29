@@ -2,6 +2,7 @@ import { CheckIcon } from '@radix-ui/react-icons'
 import { Column } from '@tanstack/react-table'
 import { ReactNode } from 'react'
 
+import { Level } from '@/app/components/layout/level'
 import { Badge } from '@/app/components/ui/badge'
 import { Button } from '@/app/components/ui/button'
 import {
@@ -149,16 +150,19 @@ function Item({ item, column, selected, facets }: ItemProps) {
         column?.setFilterValue(filterValues.length ? filterValues : undefined)
       }}
     >
-      <div
+      <Level
         className={cn(
-          'mr-2 flex h-4 w-4 items-center justify-center rounded-sm border border-primary',
+          'mr-2 h-4 w-4 rounded-sm border border-primary',
           isSelected
             ? 'bg-primary text-primary-foreground'
             : 'opacity-50 [&_svg]:invisible',
         )}
+        gap={0}
+        items="center"
+        justify="center"
       >
         <CheckIcon />
-      </div>
+      </Level>
       {item.icon}
       <span>{item.label}</span>
       {count && (

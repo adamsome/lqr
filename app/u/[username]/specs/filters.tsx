@@ -2,6 +2,14 @@
 
 import { PlusIcon } from '@radix-ui/react-icons'
 
+import { Stack } from '@/app/components/layout/stack'
+import { SpecIngredientCommandDialogButton } from '@/app/components/spec-ingredient-command/command-dialog-button'
+import { Button } from '@/app/components/ui/button'
+import { CheckboxWithLabel } from '@/app/components/ui/checkbox-label'
+import { UserAvatarImage } from '@/app/components/user/user-avatar-image'
+import { getIngredientName as makeGetIngredientName } from '@/app/lib/ingredient/get-ingredient-name'
+import { getSpecCategoryItems } from '@/app/lib/spec-category'
+import { IngredientData, SpecIngredient, User } from '@/app/lib/types'
 import {
   CATEGORY_KEY,
   INGREDIENT_KEY,
@@ -11,15 +19,7 @@ import { buildIngredientCriterion } from '@/app/u/[username]/specs/_criteria/ing
 import { Criteria } from '@/app/u/[username]/specs/_criteria/types'
 import { FilterSection } from '@/app/u/[username]/specs/filter-section'
 import { IngredientFilter } from '@/app/u/[username]/specs/ingredient-filter'
-import { SpecIngredientCommandDialogButton } from '@/app/components/spec-ingredient-command/command-dialog-button'
-import { Button } from '@/app/components/ui/button'
-import { CheckboxWithLabel } from '@/app/components/ui/checkbox-label'
-import { UserAvatarImage } from '@/app/components/user/user-avatar-image'
 import { useRouterSearchParams } from '@/app/u/[username]/specs/use-router-search-params'
-import { getIngredientName as makeGetIngredientName } from '@/app/lib/ingredient/get-ingredient-name'
-import { getSpecCategoryItems } from '@/app/lib/spec-category'
-import { IngredientData, SpecIngredient, User } from '@/app/lib/types'
-import { cn } from '@/app/lib/utils'
 
 const SPEC_CATEGORY_ITEMS = getSpecCategoryItems()
 
@@ -49,8 +49,8 @@ export function Filters({ className, data, criteria, users }: Props) {
   }
 
   return (
-    <div className={cn('flex flex-col gap-4', className)}>
-      <div className="flex-initial flex flex-col gap-6 max-h-screen overflow-y-auto">
+    <Stack className={className} gap={4}>
+      <Stack className="flex-initial max-h-screen overflow-y-auto" gap={6}>
         <FilterSection name="Category">
           {SPEC_CATEGORY_ITEMS.map(({ value, label }) => (
             <CheckboxWithLabel
@@ -96,7 +96,7 @@ export function Filters({ className, data, criteria, users }: Props) {
         )}
 
         <FilterSection name="Ingredients">
-          <div className="flex flex-col gap-1 empty:hidden">
+          <Stack className="empty:hidden" gap={1}>
             {ingredients.map((it) => {
               const { id = '' } = it
               const { ordinal, name } = dict[id] ?? {}
@@ -111,7 +111,7 @@ export function Filters({ className, data, criteria, users }: Props) {
                 />
               )
             })}
-          </div>
+          </Stack>
           <SpecIngredientCommandDialogButton
             className="flex gap-1 self-start"
             variant="secondary"
@@ -124,9 +124,9 @@ export function Filters({ className, data, criteria, users }: Props) {
             Add Filter
           </SpecIngredientCommandDialogButton>
         </FilterSection>
-      </div>
+      </Stack>
 
-      <div className="flex-grow flex-shrink-0 flex flex-col justify-end">
+      <Stack className="flex-grow flex-shrink-0" justify="end">
         <Button
           className="sticky bottom-4"
           variant="secondary"
@@ -135,7 +135,7 @@ export function Filters({ className, data, criteria, users }: Props) {
         >
           Clear
         </Button>
-      </div>
-    </div>
+      </Stack>
+    </Stack>
   )
 }

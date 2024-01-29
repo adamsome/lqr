@@ -1,15 +1,20 @@
 'use client'
 
 import { zodResolver } from '@hookform/resolvers/zod'
-import { CheckIcon, Cross2Icon } from '@radix-ui/react-icons'
+import { Cross2Icon } from '@radix-ui/react-icons'
 import { useEffect } from 'react'
 import { FieldErrors, useForm } from 'react-hook-form'
 import * as z from 'zod'
 
-import { IngredientsForm } from '@/app/u/[username]/specs/[id]/edit/ingredients-form'
-import * as Layout from '@/app/components/layout/responsive-layout'
+import {
+  AppActions,
+  AppFooter,
+  AppFullWidthContent,
+  AppHeader,
+  AppLayout,
+} from '@/app/components/layout/app-layout'
+import { Stack } from '@/app/components/layout/stack'
 import { Button, IconButton } from '@/app/components/ui/button'
-import { FullWidthContainer } from '@/app/components/layout/container'
 import {
   Form,
   FormControl,
@@ -34,6 +39,7 @@ import { specSchema } from '@/app/lib/schema/spec'
 import { getSpecCategoryItems } from '@/app/lib/spec-category'
 import { Spec } from '@/app/lib/types'
 import { cn } from '@/app/lib/utils'
+import { IngredientsForm } from '@/app/u/[username]/specs/[id]/edit/ingredients-form'
 
 type Schema = z.infer<typeof specSchema>
 
@@ -80,8 +86,8 @@ export function SpecForm({
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit, handleInvalid)}>
-        <Layout.Root>
-          <Layout.Header>
+        <AppLayout>
+          <AppHeader>
             <Button
               type="button"
               className="hidden sm:block ms-4"
@@ -91,15 +97,15 @@ export function SpecForm({
             >
               <span>Cancel</span>
             </Button>
-            <Layout.Actions>
+            <AppActions>
               <Button type="submit" size="sm" disabled={mutating}>
                 Save
               </Button>
-            </Layout.Actions>
-          </Layout.Header>
+            </AppActions>
+          </AppHeader>
 
-          <FullWidthContainer>
-            <div className="flex flex-col gap-6 pt-4 pb-20 md:py-6">
+          <AppFullWidthContent>
+            <Stack gap={6}>
               <FormField
                 control={form.control}
                 name="name"
@@ -282,10 +288,10 @@ export function SpecForm({
                   control={form.control}
                 />
               </div>
-            </div>
-          </FullWidthContainer>
+            </Stack>
+          </AppFullWidthContent>
 
-          <Layout.Footer>
+          <AppFooter>
             <IconButton onClick={onClose}>
               <Cross2Icon className="w-6 h-6" />
             </IconButton>
@@ -298,8 +304,8 @@ export function SpecForm({
             >
               Save
             </Button>
-          </Layout.Footer>
-        </Layout.Root>
+          </AppFooter>
+        </AppLayout>
       </form>
     </Form>
   )

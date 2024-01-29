@@ -19,9 +19,7 @@ export function StockIconButton({ stock = -1, fetching, onClick }: Props) {
   return (
     <Button
       variant="ghost"
-      className={cn('group h-8 w-8 p-0', {
-        'animate-pulse': fetching,
-      })}
+      className={cn('group h-8 w-8 p-0', fetching && 'animate-pulse')}
       onClick={handleClick}
     >
       <span className="sr-only">Change stock</span>

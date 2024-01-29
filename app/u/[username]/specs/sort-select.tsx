@@ -7,13 +7,6 @@ import {
 } from '@radix-ui/react-icons'
 import { useEffect, useState } from 'react'
 
-import {
-  SORT_DESC_KEY,
-  SORT_KEY,
-  SpecSort,
-  getSpecSortItems,
-  isSpecSortDefaultDesc,
-} from '@/app/u/[username]/specs/_criteria/consts'
 import { Button } from '@/app/components/ui/button'
 import {
   DropdownMenu,
@@ -21,8 +14,15 @@ import {
   DropdownMenuContent,
   DropdownMenuTrigger,
 } from '@/app/components/ui/dropdown-menu'
-import { useRouterSearchParams } from '@/app/u/[username]/specs/use-router-search-params'
 import { cn } from '@/app/lib/utils'
+import {
+  SORT_DESC_KEY,
+  SORT_KEY,
+  SpecSort,
+  getSpecSortItems,
+  isSpecSortDefaultDesc,
+} from '@/app/u/[username]/specs/_criteria/consts'
+import { useRouterSearchParams } from '@/app/u/[username]/specs/use-router-search-params'
 
 const ITEMS = getSpecSortItems()
 
@@ -79,7 +79,7 @@ export function SortSelect({
           variant="outline"
           className={cn(
             'flex items-center justify-start gap-2 px-3 w-32 font-normal overflow-hidden',
-            { 'animate-pulse': changed },
+            changed && 'animate-pulse',
             className,
           )}
         >

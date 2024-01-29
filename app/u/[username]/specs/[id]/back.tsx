@@ -1,12 +1,12 @@
 'use client'
 
 import { useSearchParams } from 'next/navigation'
+import { useEffect, useState } from 'react'
 
-import { USER_KEY } from '@/app/u/[username]/specs/_criteria/consts'
-import * as Layout from '@/app/components/layout/responsive-layout'
+import { AppBack } from '@/app/components/layout/app-layout'
 import { API_USERS, toSpecs } from '@/app/lib/routes'
 import { User } from '@/app/lib/types'
-import { useEffect, useState } from 'react'
+import { USER_KEY } from '@/app/u/[username]/specs/_criteria/consts'
 
 type Props = {
   user: User
@@ -41,7 +41,7 @@ export function Back({ user: userProp }: Props) {
   }, [username])
 
   return (
-    <Layout.Back
+    <AppBack
       href={toSpecs(user.username)}
       user={username && !fetched ? null : user}
     />

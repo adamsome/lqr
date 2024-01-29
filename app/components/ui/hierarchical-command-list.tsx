@@ -183,28 +183,28 @@ function ItemContent<T extends HasIDAndName>({
   return (
     <>
       <CommandItem
-        className={cn({ 'mt-2.5 !py-0.5': muteItems })}
+        className={cn(muteItems && 'mt-2.5 !py-0.5')}
         value={getIngredientPathName(path)}
         disabled={disabledIDs?.has(id)}
         onSelect={() => onSelect({ path, checked })}
       >
         {showCheckbox && (
           <Checkbox
-            className={cn('mr-2', {
-              'ml-6': !hasSearch && level === 1,
-              'ml-12': !hasSearch && level === 2,
-              'ml-18': !hasSearch && level >= 3,
-            })}
+            className={cn(
+              !hasSearch && level === 1 && 'ml-6',
+              !hasSearch && level === 2 && 'ml-12',
+              !hasSearch && level >= 3 && 'ml-18',
+            )}
             checked={checked}
           />
         )}
         <span
-          className={cn({
-            'text-muted-foreground font-semibold': muteItems,
-            'ml-6': !showCheckbox && !hasSearch && level === 1,
-            'ml-12': !showCheckbox && !hasSearch && level === 2,
-            'ml-18': !showCheckbox && !hasSearch && level >= 3,
-          })}
+          className={cn(
+            muteItems && 'text-muted-foreground font-semibold',
+            !showCheckbox && !hasSearch && level === 1 && 'ml-6',
+            !showCheckbox && !hasSearch && level === 2 && 'ml-12',
+            !showCheckbox && !hasSearch && level >= 3 && 'ml-18',
+          )}
         >
           {hasSearch ? renderName({ path }) : renderName({ id })}
         </span>
@@ -216,12 +216,13 @@ function ItemContent<T extends HasIDAndName>({
       </CommandItem>
       {showSeparator && (
         <CommandSeparator
-          className={cn('mr-2 bg-border/60', {
-            'ml-2': !hasSearch && level === 0,
-            'ml-8': !hasSearch && level === 1,
-            'ml-14': !hasSearch && level === 2,
-            'ml-20': !hasSearch && level >= 3,
-          })}
+          className={cn(
+            'mr-2 bg-border/60',
+            !hasSearch && level === 0 && 'ml-2',
+            !hasSearch && level === 1 && 'ml-8',
+            !hasSearch && level === 2 && 'ml-14',
+            !hasSearch && level >= 3 && 'ml-20',
+          )}
         />
       )}
     </>
@@ -254,11 +255,12 @@ function Bottle<T extends HasIDAndName>({
       onSelect={() => onSelect({ path, id: bottleID })}
     >
       <span
-        className={cn('flex items-baseline gap-2', {
-          'ml-6': !showCheckbox && !hasSearch && level === 1,
-          'ml-12': !showCheckbox && !hasSearch && level === 2,
-          'ml-18': !showCheckbox && !hasSearch && level >= 3,
-        })}
+        className={cn(
+          'flex items-baseline gap-2',
+          !showCheckbox && !hasSearch && level === 1 && 'ml-6',
+          !showCheckbox && !hasSearch && level === 2 && 'ml-12',
+          !showCheckbox && !hasSearch && level >= 3 && 'ml-18',
+        )}
       >
         {hasSearch && (
           <span className="opacity-40">{renderName({ path })}</span>

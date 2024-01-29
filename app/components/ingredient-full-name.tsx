@@ -58,10 +58,11 @@ export function IngredienFullName({ id, path }: Props) {
   return (
     <span>
       <span
-        className={cn({
-          'text-muted-foreground':
-            hasChildren && (onlyIndex >= 0 || DIM[category]),
-        })}
+        className={cn(
+          hasChildren &&
+            (onlyIndex >= 0 || DIM[category]) &&
+            'text-muted-foreground',
+        )}
       >
         {CATEGORY_DICT[category as Category]?.name ?? ''}
       </span>
@@ -69,11 +70,11 @@ export function IngredienFullName({ id, path }: Props) {
       {ancestors.map((id, i) => (
         <Fragment key={id}>
           <span
-            className={cn({
-              'text-muted-foreground':
-                (onlyIndex >= 0 && i !== onlyIndex) ||
-                (DIM_LAST[ancestors[i - 1]] && i !== onlyIndex),
-            })}
+            className={cn(
+              ((onlyIndex >= 0 && i !== onlyIndex) ||
+                (DIM_LAST[ancestors[i - 1]] && i !== onlyIndex)) &&
+                'text-muted-foreground',
+            )}
           >
             {dict[id]?.name ?? ''}
           </span>

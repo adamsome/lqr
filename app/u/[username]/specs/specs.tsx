@@ -2,8 +2,15 @@ import { Pencil2Icon } from '@radix-ui/react-icons'
 import Link from 'next/link'
 import { ReactNode } from 'react'
 
+import {
+  AppActions,
+  AppBack,
+  AppContent,
+  AppFooter,
+  AppHeader,
+  AppLayout,
+} from '@/app/components/layout/app-layout'
 import { Container } from '@/app/components/layout/container'
-import * as Layout from '@/app/components/layout/responsive-layout'
 import { Button, IconButton } from '@/app/components/ui/button'
 import { UserAvatar } from '@/app/components/user/user-avatar'
 import { getCurrentUser } from '@/app/lib/model/user'
@@ -32,17 +39,14 @@ export async function Specs({
   const { user, currentUser, isCurrentUser } = await getCurrentUser(username)
   const addUrl = toCreateSpec(user?.username)
   return (
-    <Layout.Root>
-      <Layout.Header title={<UserAvatar user={user} />}>
+    <AppLayout>
+      <AppHeader title={<UserAvatar user={user} />}>
         {!isCurrentUser ? (
-          <Layout.Back
-            href={toHome(currentUser?.username)}
-            user={currentUser}
-          />
+          <AppBack href={toHome(currentUser?.username)} user={currentUser} />
         ) : (
           <div />
         )}
-        <Layout.Actions>
+        <AppActions>
           {isCurrentUser && (
             <Link href={addUrl}>
               <Button size="sm">
@@ -51,11 +55,11 @@ export async function Specs({
               </Button>
             </Link>
           )}
-        </Layout.Actions>
-      </Layout.Header>
+        </AppActions>
+      </AppHeader>
 
       <div className="flex">
-        <Container className="flex-1 w-full my-4 sm:my-6 gap-y-5 sm:gap-y-6">
+        <AppContent className="flex-1 w-full gap-y-5 sm:gap-y-6">
           {header}
           <div className="flex flex-col gap-4 sm:gap-5">
             {toolbar}
@@ -66,11 +70,11 @@ export async function Specs({
               </div>
             </div>
           </div>
-        </Container>
+        </AppContent>
         {sidebar}
       </div>
 
-      <Layout.Footer status={status}>
+      <AppFooter status={status}>
         <FooterFilterDrawerButton>
           <div className="flex w-full">{filters}</div>
         </FooterFilterDrawerButton>
@@ -81,7 +85,7 @@ export async function Specs({
             </IconButton>
           </Link>
         )}
-      </Layout.Footer>
-    </Layout.Root>
+      </AppFooter>
+    </AppLayout>
   )
 }

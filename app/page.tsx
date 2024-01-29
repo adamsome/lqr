@@ -1,8 +1,12 @@
 import Link from 'next/link'
 
+import {
+  AppContent,
+  AppHeader,
+  AppLayout,
+} from '@/app/components/layout/app-layout'
 import { Container } from '@/app/components/layout/container'
 import { Level } from '@/app/components/layout/level'
-import * as Layout from '@/app/components/layout/responsive-layout'
 import { Stack } from '@/app/components/layout/stack'
 import { Button } from '@/app/components/ui/button'
 import { UserAvatar } from '@/app/components/user/user-avatar'
@@ -16,9 +20,9 @@ export const revalidate = 0
 export default async function Page() {
   const { currentUser } = await getCurrentUser()
   return (
-    <Layout.Root>
-      <Layout.Header title={<UserAvatar user={currentUser} />} />
-      <Container className="relative pt-4 pb-8 sm:py-6">
+    <AppLayout>
+      <AppHeader title={<UserAvatar user={currentUser} />} />
+      <AppContent className="relative pb-8">
         <h1 className="text-[2.5rem] leading-[2.5rem] font-bold">
           Manage your
           <br />
@@ -53,7 +57,7 @@ export default async function Page() {
           </h2>
           <SampleSpecs />
         </Stack>
-      </Container>
-    </Layout.Root>
+      </AppContent>
+    </AppLayout>
   )
 }

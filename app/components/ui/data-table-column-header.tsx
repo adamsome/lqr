@@ -2,6 +2,7 @@ import { ArrowDownIcon, ArrowUpIcon } from '@radix-ui/react-icons'
 import { Column } from '@tanstack/react-table'
 import { HTMLAttributes, ReactNode } from 'react'
 
+import { Level } from '@/app/components/layout/level'
 import {
   TooltipContent,
   Tooltip as TooltipRoot,
@@ -41,8 +42,9 @@ export function DataTableColumnHeader<TData, TValue>({
   return (
     <Wrapper right={right}>
       <Tooltip tooltip={tooltip}>
-        <div
-          className="flex items-center gap-1"
+        <Level
+          items="center"
+          gap={1}
           onClick={() => column.toggleSorting(column.getIsSorted() === 'asc')}
         >
           {children}
@@ -51,7 +53,7 @@ export function DataTableColumnHeader<TData, TValue>({
           ) : column.getIsSorted() === 'asc' ? (
             <ArrowUpIcon />
           ) : null}
-        </div>
+        </Level>
       </Tooltip>
       {filter}
     </Wrapper>
@@ -60,13 +62,12 @@ export function DataTableColumnHeader<TData, TValue>({
 
 function Wrapper({ children, right }: WrapperProps) {
   return (
-    <div
-      className={cn('flex cursor-pointer items-center gap-2', {
-        'justify-end': right,
-      })}
+    <Level
+      className={cn('cursor-pointer', right && 'justify-end')}
+      items="center"
     >
       {children}
-    </div>
+    </Level>
   )
 }
 

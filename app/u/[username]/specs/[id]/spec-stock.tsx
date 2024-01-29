@@ -1,3 +1,4 @@
+import { Level } from '@/app/components/layout/level'
 import { CircleProgress } from '@/app/components/ui/circle-progress'
 import {
   Tooltip,
@@ -35,18 +36,16 @@ export function SpecStock({ className, stock }: Props) {
 export function SpecStockText({ className, stock }: Props) {
   const { count = 0, total = 0 } = stock ?? {}
   return (
-    <div
-      className={cn(
-        'flex items-center gap-1 text-muted-foreground/60 font-medium',
-        className,
-      )}
+    <Level
+      className={cn('text-muted-foreground/60 font-medium', className)}
+      gap={1}
     >
-      <div className="flex items-center gap-px">
+      <Level className="gap-px">
         <span className="text-muted-foreground font-bold">{count}</span>
         <span>/</span>
         <span>{total}</span>
-      </div>
+      </Level>
       <span className="whitespace-nowrap">in stock</span>
-    </div>
+    </Level>
   )
 }

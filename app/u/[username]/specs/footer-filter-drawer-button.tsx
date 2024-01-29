@@ -4,6 +4,7 @@ import { ListFilter } from 'lucide-react'
 import { ReactNode, useState } from 'react'
 import { Drawer } from 'vaul'
 
+import { Level } from '@/app/components/layout/level'
 import { Button, IconButton } from '@/app/components/ui/button'
 import { cn } from '@/app/lib/utils'
 
@@ -31,9 +32,9 @@ export function FooterFilterDrawerButton({ children }: Props) {
             'bg-popover/50 backdrop-blur border-t border-border/50 rounded-t-xl',
           )}
         >
-          <div className="flex flex-shrink-0 items-end justify-center h-9">
+          <Level className="flex-shrink-0 h-9" items="end" justify="center">
             <Drawer.Title className="font-semibold">Filters</Drawer.Title>
-          </div>
+          </Level>
           <div className="flex flex-1 overflow-auto">{children}</div>
           <div className="flex flex-shrink-0 pb-4 mt-2">
             <Button className="flex-1" size="sm" onClick={() => setOpen(false)}>

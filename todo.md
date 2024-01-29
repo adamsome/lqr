@@ -1,6 +1,7 @@
 # TODO
 
 - Fix spec update/create submit on cancel
+- Fix zoom on mobile safari input focus
 
 FTUE
 ----

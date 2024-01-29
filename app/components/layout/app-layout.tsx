@@ -11,7 +11,11 @@ import {
   useState,
 } from 'react'
 
-import { FullWidthContainer } from '@/app/components/layout/container'
+import {
+  Container,
+  FullWidthContainer,
+} from '@/app/components/layout/container'
+import { Level } from '@/app/components/layout/level'
 import { Button } from '@/app/components/ui/button'
 import { H2 } from '@/app/components/ui/h2'
 import { UserAvatar } from '@/app/components/user/user-avatar'
@@ -59,7 +63,7 @@ export function AppHeader({ children, className, title }: HeaderProps) {
         'z-30 sticky top-0 grid w-full place-content-center',
         'grid-cols-[var(--px)_1fr_var(--px)] grid-rows-1 [&>*]:row-[1]',
         'h-[var(--h-sticky)] border-b border-transparent transition-colors',
-        { 'border-border/40': scrolled },
+        scrolled && 'border-border/40',
         className,
       )}
     >
@@ -78,7 +82,7 @@ export function AppHeader({ children, className, title }: HeaderProps) {
             'relative flex items-center justify-center justify-self-center',
             'max-w-[calc(100%-theme(spacing.28))] col-[2]',
             'opacity-0 transition-opacity',
-            { 'opacity-100': scrolled },
+            scrolled && 'opacity-100',
           )}
         >
           <H2 className="overflow-hidden whitespace-nowrap text-ellipsis">
@@ -87,7 +91,9 @@ export function AppHeader({ children, className, title }: HeaderProps) {
         </div>
       )}
       {children && (
-        <Level className="relative justify-between col-[2]">{children}</Level>
+        <Level className="relative justify-between w-full col-[2]" gap={4}>
+          {children}
+        </Level>
       )}
     </header>
   )
@@ -115,11 +121,7 @@ export function AppActions({ children, className }: CompProps) {
   const { isSignedIn } = useAuth()
   return (
     <div
-      className={cn(
-        'me-16 hidden sm:block',
-        { 'me-48': !isSignedIn },
-        className,
-      )}
+      className={cn('me-16 hidden sm:block', !isSignedIn && 'me-48', className)}
     >
       {children}
     </div>
@@ -128,7 +130,15 @@ export function AppActions({ children, className }: CompProps) {
 
 export function AppContent({ children, className }: CompProps) {
   return (
-    <FullWidthContainer className={cn('h-full', className)}>
+    <Container className={cn('pt-4 pb-20 md:py-6', className)}>
+      {children}
+    </Container>
+  )
+}
+
+export function AppFullWidthContent({ children, className }: CompProps) {
+  return (
+    <FullWidthContainer className={cn('py-4 pb-20 md:py-6', className)}>
       {children}
     </FullWidthContainer>
   )
@@ -159,26 +169,22 @@ export function AppFooter({ children, className, status }: FooterProps) {
         )}
       />
       {status && (
-        <div
+        <Level
           className={cn(
-            'relative flex items-center justify-center justify-self-center col-[2]',
+            'relative justify-self-center col-[2]',
             'text-sm text-muted-foreground',
           )}
+          items="center"
+          justify="center"
         >
           {status}
-        </div>
+        </Level>
       )}
       {children && (
-        <Level className="relative col-[2] justify-between">{children}</Level>
+        <Level className="relative justify-between w-full col-[2]" gap={4}>
+          {children}
+        </Level>
       )}
     </footer>
-  )
-}
-
-function Level({ children, className }: CompProps) {
-  return (
-    <div className={cn('flex items-center w-full gap-4', className)}>
-      {children}
-    </div>
   )
 }

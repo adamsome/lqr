@@ -2,7 +2,11 @@ import { auth } from '@clerk/nextjs'
 import { ReactNode } from 'react'
 
 import { IngredientDataProvider } from '@/app/components/data-provider'
-import * as ResponsiveLayout from '@/app/components/layout/responsive-layout'
+import {
+  AppBack,
+  AppHeader,
+  AppLayout,
+} from '@/app/components/layout/app-layout'
 import { Container } from '@/app/components/layout/container'
 import { H1 } from '@/app/components/ui/h1'
 import { getIngredientData } from '@/app/lib/model/ingredient-data'
@@ -21,15 +25,15 @@ export default async function Layout({ children }: Props) {
   const data = await getIngredientData()
   return (
     <IngredientDataProvider {...data}>
-      <ResponsiveLayout.Root>
-        <ResponsiveLayout.Header title="Research">
-          <ResponsiveLayout.Back href={toHome(user?.username)} user={user} />
-        </ResponsiveLayout.Header>
+      <AppLayout>
+        <AppHeader title="Research">
+          <AppBack href={toHome(user?.username)} user={user} />
+        </AppHeader>
         <Container className="py-4 sm:py-6 gap-y-4 sm:gap-y-4">
           <H1>Research</H1>
           {children}
         </Container>
-      </ResponsiveLayout.Root>
+      </AppLayout>
     </IngredientDataProvider>
   )
 }
