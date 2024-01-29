@@ -167,4 +167,6 @@ Content
 Chores
 ------
 
+- Use server actions
+  - Bar move state up to use optimistic rendering
 - Put hard-coded system users in Clerk

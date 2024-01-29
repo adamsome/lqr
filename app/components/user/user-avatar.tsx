@@ -13,7 +13,7 @@ export type Props = {
 } & VariantProps<typeof variants>
 
 const variants = cva(
-  ['flex', 'items-center', 'gap-1.5', 'transition-all', 'font-bold'],
+  ['flex', 'items-center', 'gap-1.5', 'transition-all', 'font-semibold'],
   {
     variants: {
       size: {
