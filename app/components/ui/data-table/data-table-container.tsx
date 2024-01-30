@@ -16,7 +16,7 @@ import {
 } from '@tanstack/react-table'
 import { useState } from 'react'
 
-import { DataTable } from '@/app/components/ui/data-table'
+import { DataTable } from '@/app/components/ui/data-table/data-table'
 
 export type DataTableToolbarProps<TData> = {
   table: TableType<TData>

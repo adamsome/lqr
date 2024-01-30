@@ -14,14 +14,14 @@ import {
   CommandList,
   CommandSeparator,
 } from '@/app/components/ui/command'
-import { DataTableFacetedFilterItem } from '@/app/components/ui/data-table-facet-filter-button'
+import { DataTableFacetedFilterItem } from '@/app/components/ui/data-table/data-table-facet-filter-button'
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
 } from '@/app/components/ui/popover'
 import { Separator } from '@/app/components/ui/separator'
-import { useDataTableMultiFacets } from '@/app/components/ui/use-data-table-facets'
+import { useDataTableMultiFacets } from '@/app/components/ui/data-table/use-data-table-facets'
 import { cn } from '@/app/lib/utils'
 
 type Props = {

@@ -4,7 +4,7 @@ import { DropdownMenuTrigger } from '@radix-ui/react-dropdown-menu'
 import { DotsHorizontalIcon } from '@radix-ui/react-icons'
 
 import { Button } from '@/app/components/ui/button'
-import { DataTableToolbarProps } from '@/app/components/ui/data-table-container'
+import { DataTableToolbarProps } from '@/app/components/ui/data-table/data-table-container'
 import {
   DropdownMenu,
   DropdownMenuCheckboxItem,

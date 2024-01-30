@@ -1,7 +1,7 @@
 import { Column, FilterFn } from '@tanstack/react-table'
 import { useMemo } from 'react'
 
-import { DataTableHierarchicalFilter } from '@/app/components/ui/data-table-hierarchical-filter'
+import { DataTableHierarchicalFilter } from '@/app/components/ui/data-table/data-table-hierarchical-filter'
 import {
   HierarchicalFilter,
   hierarchicalFilterFn,

@@ -20,7 +20,7 @@ import {
   PopoverTrigger,
 } from '@/app/components/ui/popover'
 import { Separator } from '@/app/components/ui/separator'
-import { useDataTableFacets } from '@/app/components/ui/use-data-table-facets'
+import { useDataTableFacets } from '@/app/components/ui/data-table/use-data-table-facets'
 import { cn } from '@/app/lib/utils'
 
 export type DataTableFacetedFilterItem = {
