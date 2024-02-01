@@ -235,6 +235,7 @@ kindAmountDict.garnish = [
   ...kindAmountDict.muddled!,
 ]
 kindAmountDict.muddled = [...kindAmountDict.muddled!, ...kindAmountDict.juice!]
+kindAmountDict.juice = [...kindAmountDict.juice!, ...kindAmountDict.bitters!]
 
 const getKey = (amt: Amount): string =>
   `${amt.usage ?? 'na'}_${amt.unit ?? 'na'}_${amt.quantity ?? 'na'}`
