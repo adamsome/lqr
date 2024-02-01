@@ -44,7 +44,7 @@ export function Search({ className, search: searchProp }: Props) {
       <Level
         className={cn(
           'absolute bottom-0 left-3 top-0',
-          searchProp !== search && 'animate-pulse',
+          searchProp !== search && 'text-brand animate-pulse',
         )}
       >
         <MagnifyingGlassIcon />

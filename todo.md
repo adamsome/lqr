@@ -1,7 +1,7 @@
 # TODO
 
-- Fix spec update/create submit on cancel
 - Fix zoom on mobile safari input focus
+- Add animated tab bar
 
 FTUE
 ----
@@ -17,6 +17,8 @@ Bar
 
 - Bar drawer add 90 snap point (?)
 - Bar grid more items badge
+- Search field on `/bar/`
+  - Mobile search icon shows list
 - Responsive `lg`/`xl` handling
   - Left sidebar w/ category tree
   - Larger text size
@@ -105,6 +107,8 @@ Redesign
 QoL
 ---
 
+- Add ingredient recipes
+  - E.g. Improved Gardenia Mix has ingredients & notes
 - Empty states
 - Add theme changer when signed out
 - User avatar popover to follow

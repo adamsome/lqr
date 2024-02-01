@@ -79,7 +79,7 @@ export function SortSelect({
           variant="outline"
           className={cn(
             'flex items-center justify-start gap-2 px-3 w-32 font-normal overflow-hidden',
-            changed && 'animate-pulse',
+            changed && 'text-brand animate-pulse',
             className,
           )}
         >
