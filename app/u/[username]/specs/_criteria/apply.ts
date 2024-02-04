@@ -23,7 +23,7 @@ export function applyCriteria(
     })
   }
   if (categories.length) {
-    result = result.filter((s) => categories.includes(s.category))
+    result = result.filter((s) => categories.includes(s.category ?? '__na'))
   }
   if (users.length) {
     result = result.filter((u) => users.includes(u.username))

@@ -28,7 +28,7 @@ export function sortSpecs(
     case 'category': {
       return sortWith(
         [
-          order((s) => s.category),
+          order((s) => s.category ?? 'zzz'),
           descend((s) => (s.stock?.count ?? 0) / (s.stock?.total ?? 0)),
           descend((s) => s.updatedAt),
         ],

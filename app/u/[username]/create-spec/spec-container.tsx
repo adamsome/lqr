@@ -2,10 +2,10 @@
 
 import { useParams, useRouter } from 'next/navigation'
 
-import { SpecForm } from '@/app/u/[username]/specs/[id]/edit/spec-form'
 import { useMutate } from '@/app/api/use-mutate'
 import { API_SPECS, toSpecItem, toSpecs } from '@/app/lib/routes'
 import { Spec } from '@/app/lib/types'
+import { SpecForm } from '@/app/u/[username]/specs/[id]/edit/spec-form'
 
 export function SpecContainer() {
   const params = useParams()
@@ -21,14 +21,12 @@ export function SpecContainer() {
 
   async function handleSubmit(values: Spec) {
     const now = new Date().toISOString()
-    const spec: Spec = { ...values, updatedAt: now, createdAt: now }
+    const spec: Spec = { ...values, updatedAt: now, createdAt: now, username }
     const { data } = await mutate({
       method: 'POST',
       body: JSON.stringify({ spec }),
     })
-    if (data) {
-      handleClose(data.id)
-    }
+    if (data) handleClose(data.id)
   }
 
   return (

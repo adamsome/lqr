@@ -34,10 +34,9 @@ export function SpecContainer({ spec }: Props) {
 
   async function handleSubmit(values: Spec) {
     const updatedAt = new Date().toISOString()
-    const change: Spec = { ...spec, ...values, updatedAt }
     const { data } = await mutate({
       method: 'PUT',
-      body: JSON.stringify({ spec: change }),
+      body: JSON.stringify({ spec: { ...spec, ...values, updatedAt } }),
     })
     if (data) handleClose()
   }

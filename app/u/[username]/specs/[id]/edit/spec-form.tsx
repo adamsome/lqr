@@ -35,13 +35,13 @@ import { Textarea } from '@/app/components/ui/textarea'
 import { useToast } from '@/app/components/ui/use-toast'
 import { getGlassTypeItems } from '@/app/lib/glass-type'
 import { getMixTypeItems } from '@/app/lib/mix-type'
-import { specSchema } from '@/app/lib/schema/spec'
+import { SpecEditSchema } from '@/app/lib/schema/spec'
 import { getSpecCategoryItems } from '@/app/lib/spec-category'
 import { Spec } from '@/app/lib/types'
 import { cn } from '@/app/lib/utils'
 import { IngredientsForm } from '@/app/u/[username]/specs/[id]/edit/ingredients-form'
 
-type Schema = z.infer<typeof specSchema>
+type Schema = z.infer<typeof SpecEditSchema>
 
 type Props = {
   spec?: Partial<Spec>
@@ -66,7 +66,7 @@ export function SpecForm({
 }: Props) {
   const { toast } = useToast()
   const form = useForm<Schema>({
-    resolver: zodResolver(specSchema),
+    resolver: zodResolver(SpecEditSchema),
     defaultValues: spec ?? {
       ingredients: [],
       name: '',

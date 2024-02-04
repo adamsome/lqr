@@ -8,7 +8,7 @@ import { User } from '@/app/lib/types'
 import { addUser } from '@/app/lib/model/user'
 import { toUser } from '@/app/lib/model/to-user'
 
-const schema = z.object({
+const Schema = z.object({
   ingredientIDs: z.string().array(),
   stock: z.number(),
 })
@@ -22,7 +22,7 @@ export async function PUT(req: NextRequest) {
     )
   }
 
-  const body = schema.safeParse(await req.json())
+  const body = Schema.safeParse(await req.json())
   if (!body.success) {
     const { errors } = body.error
     return NextResponse.json(

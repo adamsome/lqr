@@ -4,6 +4,11 @@ export const specIngredientSchema = z.object({
   id: z.string().optional(),
   bottleID: z.string().optional(),
   name: z.string().optional(),
+  productionMethod: z.enum(['column', 'pot', 'blended', 'coffey']).optional(),
+  aging: z.enum(['none', 'medium', 'light', 'long']).array().optional(),
+  black: z.boolean().optional(),
+  overproof: z.boolean().optional(),
+  infusion: z.string().optional(),
   quantity: z.number().optional(),
   unit: z.enum(['oz', 'tsp', 'dash', 'cube']).optional(),
   usage: z
@@ -20,9 +25,4 @@ export const specIngredientSchema = z.object({
       'muddled',
     ])
     .optional(),
-  productionMethod: z.string().optional(),
-  aging: z.string().array().optional(),
-  black: z.boolean().optional(),
-  overproof: z.boolean().optional(),
-  infusion: z.string().optional(),
 })

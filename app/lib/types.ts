@@ -116,8 +116,8 @@ export interface Spec {
   userDisplayName?: string
   updatedAt: string
   createdAt: string
-  year: number
-  category: SpecCategory
+  year?: number
+  category?: SpecCategory
   ingredients: SpecIngredient[]
   glass?: GlassType
   mix?: MixType

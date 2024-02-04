@@ -16,6 +16,7 @@ import { UserAvatar } from '@/app/components/user/user-avatar'
 import { getCurrentUser } from '@/app/lib/model/user'
 import { toCreateSpec, toHome } from '@/app/lib/routes'
 import { FooterFilterDrawerButton } from '@/app/u/[username]/specs/footer-filter-drawer-button'
+import { isAdmin } from '@/app/lib/model/admin'
 
 type Props = {
   children?: ReactNode
@@ -37,6 +38,7 @@ export async function Specs({
   username,
 }: Props) {
   const { user, currentUser, isCurrentUser } = await getCurrentUser(username)
+  const showCreate = isCurrentUser || isAdmin(currentUser?.id)
   const addUrl = toCreateSpec(user?.username)
   return (
     <AppLayout>
@@ -47,7 +49,7 @@ export async function Specs({
           <div />
         )}
         <AppActions>
-          {isCurrentUser && (
+          {showCreate && (
             <Link href={addUrl}>
               <Button size="sm">
                 <Pencil2Icon />
@@ -78,7 +80,7 @@ export async function Specs({
         <FooterFilterDrawerButton>
           <div className="flex w-full">{filters}</div>
         </FooterFilterDrawerButton>
-        {isCurrentUser && (
+        {showCreate && (
           <Link href={addUrl}>
             <IconButton>
               <Pencil2Icon className="w-6 h-6" />
