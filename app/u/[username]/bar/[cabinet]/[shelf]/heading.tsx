@@ -35,6 +35,7 @@ export function Heading({
   return (
     <Stack
       className={cn(!collapse && 'border-b-2 border-b-primary/5', className)}
+      gap={3}
     >
       <Container
         className="gap-y-1 sm:gap-y-1 mt-[41px] md:mt-0"
@@ -43,6 +44,7 @@ export function Heading({
         {backButton}
         {asLink ? (
           <HeadingLink
+            buttonClassName="text-foreground"
             to={keys}
             size="lg"
             collapse={collapse}

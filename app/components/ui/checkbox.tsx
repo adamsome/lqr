@@ -20,15 +20,16 @@ const Checkbox = forwardRef<
     ref={ref}
     className={cn(
       '[--checkbox-bg]',
-      'peer h-4 w-4 shrink-0 rounded-sm border border-primary',
+      'peer h-4 w-4 shrink-0 rounded-sm border border-foreground',
       'ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2',
       'disabled:cursor-not-allowed disabled:opacity-30',
       'data-[state=checked]:text-primary-foreground',
+      'data-[state=checked]:border-primary',
       'data-[state=indeterminate]:text-primary-foreground',
       !circle && 'data-[state=checked]:bg-primary',
       !circle && 'data-[state=indeterminate]:bg-primary',
       circle && 'p-px w-4.5 h-4.5 rounded-full',
-      circle && !props.checked && 'border-primary/30',
+      circle && !props.checked && 'border-muted-foreground/50',
       className,
     )}
     {...props}

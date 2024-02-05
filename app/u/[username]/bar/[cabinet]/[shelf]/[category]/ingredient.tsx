@@ -60,7 +60,8 @@ export function Ingredient({
     >
       <Checkbox
         className={cn(
-          (!ingredient || stock < 0 || disabled) && 'border-dotted',
+          (!ingredient || stock < 0 || disabled) &&
+            'border-dotted border-muted-foreground/40',
         )}
         circle
         id={id}
@@ -87,11 +88,11 @@ export function Ingredient({
           </span>
         )}
         {stock === 0 && !disabled && !disableDestock && isCurrentUser && (
-          <div className="flex-1 me-4">
+          <div className="flex-1 me-2.5 text-end">
             <Button
-              className="px-[5px] py-0.5 -my-0.5 h-auto text-xs text-muted-foreground/80 hover:text-muted-foreground rounded-sm"
+              className="px-[5px] py-0.5 -my-0.5 h-auto text-xs text-accent-muted"
               size="sm"
-              variant="secondary"
+              variant="ghost"
               disabled={mutating}
               onClick={() => handleChange(-1)}
             >

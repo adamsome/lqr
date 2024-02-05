@@ -20,6 +20,7 @@ import { cn } from '@/app/lib/utils'
 import { CategoryKeys } from '@/app/u/[username]/bar/lib/types'
 
 type Props = CompProps & {
+  buttonClassName?: string
   to: CategoryKeys & { username?: string }
   collapse?: boolean
   size?: 'md' | 'lg'
@@ -29,6 +30,7 @@ type Props = CompProps & {
 export function HeadingLink({
   children,
   className,
+  buttonClassName,
   to,
   collapse,
   size = 'md',
@@ -44,7 +46,7 @@ export function HeadingLink({
         className="z-10 text-start overflow-hidden"
         href={toBarCategory(to)}
       >
-        <Button className="p-0 h-auto hover:text-foreground/80" variant="link">
+        <Button className={cn('p-0 h-auto', buttonClassName)} variant="link">
           <Heading>
             <Level gap={0}>
               {children}

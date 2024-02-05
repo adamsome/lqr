@@ -37,7 +37,9 @@ module.exports = {
         },
         accent: {
           DEFAULT: 'hsl(var(--accent))',
+          muted: 'hsl(var(--accent-muted))',
           foreground: 'hsl(var(--accent-foreground))',
+          strong: 'hsl(var(--accent-strong))',
         },
         popover: {
           DEFAULT: 'hsl(var(--popover))',
@@ -47,7 +49,9 @@ module.exports = {
           DEFAULT: 'hsl(var(--card))',
           foreground: 'hsl(var(--card-foreground))',
         },
-        brand: 'hsl(var(--brand))',
+        lit: {
+          DEFAULT: 'hsl(var(--lit))',
+        },
       },
       borderRadius: {
         lg: 'var(--radius)',

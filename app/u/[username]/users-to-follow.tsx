@@ -58,8 +58,10 @@ export function MobileHorizontalScroller({ children, className }: CompProps) {
 
 function DefaultStack({ children }: PropsWithChildren) {
   return (
-    <Stack className="hidden lg:flex ps-2 pe-6 mt-14 w-64">
-      <H2 className="text-muted-foreground">Users to Follow</H2>
+    <Stack className="hidden lg:flex ps-6 pe-6 mt-[87px] w-[272px]">
+      <div className="text-muted-foreground font-medium tracking-wide [font-stretch:condensed]">
+        Users to Follow
+      </div>
       <Stack gap={4}>{children}</Stack>
     </Stack>
   )

@@ -1,16 +1,14 @@
-import Link from 'next/link'
-
+import { Empty } from '@/app/components/empty'
+import { UserAvatar } from '@/app/components/user/user-avatar'
+import { UserAvatarLink } from '@/app/components/user/user-avatar-link'
+import { getIngredientData } from '@/app/lib/model/ingredient-data'
+import { toHome, toSpecItem } from '@/app/lib/routes'
+import { Spec, User } from '@/app/lib/types'
+import { cn } from '@/app/lib/utils'
 import { SpecStockText } from '@/app/u/[username]/specs/[id]/spec-stock'
 import { Criteria } from '@/app/u/[username]/specs/_criteria/types'
 import { Card, CardDescription } from '@/app/u/[username]/specs/card'
 import { LoadMoreButton } from '@/app/u/[username]/specs/load-more-button'
-import { UserAvatar } from '@/app/components/user/user-avatar'
-import { toHome, toSpecItem } from '@/app/lib/routes'
-import { IngredientData, Spec, User } from '@/app/lib/types'
-import { cn } from '@/app/lib/utils'
-import { getIngredientData } from '@/app/lib/model/ingredient-data'
-import { Stack } from '@/app/components/layout/stack'
-import { Empty } from '@/app/components/empty'
 
 type Props = {
   specs: Spec[]
@@ -54,13 +52,13 @@ export async function Grid({
             href={toSpecItem(spec, criteria.username)}
             description={
               <CardDescription>
-                <Link className="relative" href={toHome(spec.username)}>
+                <UserAvatarLink className="z-10" href={toHome(spec.username)}>
                   <UserAvatar
                     className="overflow-hidden"
                     size="sm"
                     user={userDict[spec.username]}
                   />
-                </Link>
+                </UserAvatarLink>
                 {showStock && spec.stock && (
                   <SpecStockText className="text-xs" stock={spec.stock} />
                 )}

@@ -61,7 +61,7 @@ export function CardDescription({ children, className }: CompProps) {
   return (
     <div
       className={cn(
-        'inline-flex items-center gap-4 py-px w-full text-muted-foreground overflow-hidden',
+        'flex items-center gap-4 py-px w-full text-muted-foreground overflow-hidden',
         className,
       )}
     >

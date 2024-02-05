@@ -18,7 +18,7 @@ export const UserAvatarRow = forwardRef<
   return (
     <Level ref={ref} items="center" className={className} {...props}>
       <Link
-        className="flex-1 flex items-center gap-2 -ms-1 overflow-hidden"
+        className="flex-1 flex items-center gap-2 sm:ms-0.5 overflow-hidden"
         href={toHome(username)}
       >
         <UserAvatarImage className="text-3xl" user={user} size="xl" />

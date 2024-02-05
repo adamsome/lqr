@@ -5,7 +5,6 @@ import {
   AppHeader,
   AppLayout,
 } from '@/app/components/layout/app-layout'
-import { Container } from '@/app/components/layout/container'
 import { Level } from '@/app/components/layout/level'
 import { Stack } from '@/app/components/layout/stack'
 import { Button } from '@/app/components/ui/button'

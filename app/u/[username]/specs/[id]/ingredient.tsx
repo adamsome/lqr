@@ -33,9 +33,9 @@ export function Ingredient({ data, ingredient, stock, showStock }: Props) {
     <Stack
       className={cn(
         '-ms-2 border-l-2 border-transparent ps-1.5 leading-snug',
-        showStock && missing && 'border-red-400 opacity-60',
-        showStock && categoryMatch && 'border-sky-300 opacity-80',
-        showStock && ignorable && 'border-muted-foreground/60 opacity-80',
+        showStock && missing && 'border-destructive opacity-60',
+        showStock && categoryMatch && 'border-accent-foreground opacity-80',
+        showStock && ignorable && 'border-accent-muted/50 opacity-80',
       )}
       items="start"
       gap={0}

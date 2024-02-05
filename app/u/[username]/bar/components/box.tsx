@@ -34,11 +34,11 @@ export async function BoxLink({
   return (
     <LitBox
       className={cn(
-        'flex flex-col text-foreground font-bold border border-primary/5 shadow transition-colors',
+        'flex flex-col text-muted-foreground font-bold border border-primary/5 shadow transition-colors',
         path.length === 1 &&
-          'gap-2 px-[7px] pt-1.5 pb-[7px] bg-muted/25 rounded-[11px]',
+          'gap-2 px-[7px] pt-1.5 pb-[7px] text-muted-foreground/75 text-xs [font-stretch:condensed] font-medium uppercase tracking-wider bg-muted/25 rounded-[11px]',
         path.length === 2 &&
-          'z-10 gap-1 px-[7px] pt-1.5 pb-[3px] text-sm bg-muted/50 rounded-md',
+          'z-10 gap-1 px-[7px] pt-1.5 pb-[3px] text-sm [font-stretch:normal] normal-case tracking-tight bg-muted/50 rounded-md',
         hideHeading && 'pt-1',
         className,
       )}
@@ -54,13 +54,16 @@ export async function BoxLink({
           scroll={false}
         >
           <Level justify="between">
-            <Level gap={0}>
+            <Level
+              className={cn(path.length === 2 && 'group-hover:underline')}
+              gap={0}
+            >
               <span>{name}</span>
               <CaretRightIcon className="w-5 h-5" />
             </Level>
             {current && (
               <Button
-                className="px-2.5 py-px h-auto text-muted-foreground group-hover:text-foreground/80 group-hover:bg-accent"
+                className="px-2.5 py-px h-auto text-accent-muted group-hover:text-accent-foreground group-hover:bg-accent-foreground/15"
                 variant="ghost"
               >
                 Edit

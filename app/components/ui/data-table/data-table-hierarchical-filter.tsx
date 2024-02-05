@@ -44,7 +44,7 @@ export function DataTableHierarchicalFilter<TData>({
       <PopoverTrigger
         className={cn(
           'm-[calc(-1*theme(spacing.1))] p-1',
-          value && 'text-accent-foreground',
+          value && 'text-secondary-foreground',
         )}
       >
         <GearIcon />

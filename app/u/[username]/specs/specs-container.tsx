@@ -66,7 +66,7 @@ export async function SpecsContainer({
       username={username}
       header={
         <>
-          <UserAvatarHeader username={username} />
+          <UserAvatarHeader selected="specs" username={username} />
           <UsersToFollow
             username={username}
             Wrapper={MobileHorizontalScroller}

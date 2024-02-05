@@ -27,11 +27,19 @@ export function BackButton({ className, to, backSteps = 1 }: Props) {
   const name = getName(backKeys)
   return (
     <Link
-      className={cn('-ms-2.5 md:-ms-4.5 my-1.5 md:-my-2 w-max', className)}
+      className={cn('-ms-2.5 md:-ms-4.5 mb-1.5 md:-my-2 w-max', className)}
       href={toBarCategory(backKeys)}
     >
       <Button
-        className="justify-start p-[5px] h-auto md:w-full md:h-auto text-muted-foreground/60 md:text-muted-foreground hover:text-foreground/80 font-bold bg-muted/60 hover:bg-muted/80 md:bg-transparent md:hover:bg-transparent backdrop-blur-md md:backdrop-blur-none rounded-full md:rounded-none transition-colors"
+        className={cn(
+          'justify-start p-[5px] h-auto md:h-auto md:w-full',
+          'text-accent-muted dark:md:text-secondary-foreground',
+          'hover:text-secondary-foreground md:hover:text-secondary-foreground font-bold',
+          'bg-secondary md:bg-transparent',
+          'hover:bg-secondary/80 md:hover:bg-transparent',
+          'backdrop-blur-md md:backdrop-blur-none',
+          'rounded-full md:rounded-none transition-colors',
+        )}
         variant="link"
       >
         <Level className="justify-center md:justify-start" gap={0.5}>

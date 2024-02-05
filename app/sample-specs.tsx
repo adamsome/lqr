@@ -4,6 +4,7 @@ import { HorizontalScroller } from '@/app/components/ui/horizontal-scroller'
 import { UserAvatar } from '@/app/components/user/user-avatar'
 import { getIngredientData } from '@/app/lib/model/ingredient-data'
 import { Spec, User } from '@/app/lib/types'
+import { cn } from '@/app/lib/utils'
 import { SpecStockText } from '@/app/u/[username]/specs/[id]/spec-stock'
 import { Card, CardDescription } from '@/app/u/[username]/specs/card'
 
@@ -143,11 +144,16 @@ export async function SampleSpecs() {
       <div className="-mx-4">
         <HorizontalScroller className="px-4" countInView={[1, 1, 2]}>
           {specCols.map((col, i) => (
-            <Stack key={i}>
-              {col.map((spec) => (
+            <Stack key={i} gap={4}>
+              {col.map((spec, j) => (
                 <Card
                   key={spec.id}
-                  className="bg-primary/[0.15] border border-primary/7.5 shadow"
+                  className={cn(
+                    'bg-muted/50 border border-primary/5 shadow',
+                    (i % 2) + (((j - 1) % 2) % 2)
+                      ? 'h-[5.75rem]'
+                      : 'h-[4.75rem]',
+                  )}
                   data={data}
                   spec={spec}
                   description={

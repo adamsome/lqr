@@ -41,11 +41,11 @@ export function BoxButton({
       style={{ gridRow: `span ${rowSpan} / span ${rowSpan}` }}
       className={cn(
         'z-10 flex flex-col px-1.5 py-[3px] my-1 w-full overflow-hidden',
-        'text-primary text-xs text-start tracking-tighter',
-        'rounded shadow transition-colors',
-        'bg-primary/10 border border-primary/7.5',
+        'text-xs text-start tracking-tighter',
+        'rounded shadow transition-all',
+        'bg-accent border border-primary/7.5',
         !stocked && 'bg-background/25 border-primary/10',
-        selected && 'bg-blue-500/25',
+        selected && 'brightness-125 border-accent-muted',
         disabled && 'bg-primary/5',
         colSpan === 2 && 'col-span-2',
         colSpan === 3 && 'col-span-3',

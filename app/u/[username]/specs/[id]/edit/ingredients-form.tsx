@@ -39,7 +39,7 @@ export function IngredientsForm({ className, control }: Props) {
         </div>
       )}
       <SpecIngredientCommandDialogButton
-        className="self-start max-w-full text-sm text-muted-foreground"
+        className="self-start gap-2 max-w-full text-sm text-muted-foreground"
         variant="secondary"
         openOnKey={(e) => (e.metaKey || e.ctrlKey) && e.key === 'j'}
         onSelect={append}

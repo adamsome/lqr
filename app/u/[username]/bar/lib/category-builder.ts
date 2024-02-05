@@ -12,7 +12,8 @@ import {
   KIND_INGREDIENT_DICT,
   KIND_MORE_INGREDIENT_TYPES,
 } from '@/app/lib/ingredient/kind-ingredients'
-import { getUserIngredientData } from '@/app/lib/model/ingredient-data'
+import { getIngredientData } from '@/app/lib/model/ingredient-data'
+import { getUser } from '@/app/lib/model/user'
 import { IngredientData } from '@/app/lib/types'
 import { rejectNil } from '@/app/lib/utils'
 import {
@@ -121,7 +122,8 @@ export const createCategoryBuilder = (
 }
 
 export const buildCategories = cache(async (username?: string) => {
-  const { data } = await getUserIngredientData(username)
+  const user = await getUser(username)
+  const data = await getIngredientData(user?.id)
   const { build } = createCategoryBuilder(data)
   return new Map(
     CABINETS.flatMap((cabinet) =>

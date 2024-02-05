@@ -3,10 +3,10 @@
 import { UserProfile, useClerk } from '@clerk/nextjs'
 import { Content as DialogContent } from '@radix-ui/react-dialog'
 import {
+  AvatarIcon,
   CardStackIcon,
   CubeIcon,
   ExitIcon,
-  HomeIcon,
 } from '@radix-ui/react-icons'
 import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
@@ -29,7 +29,14 @@ import { Dialog, DialogOverlay, DialogPortal } from '@/app/components/ui/dialog'
 import { UserAvatar } from '@/app/components/user/user-avatar'
 import { UserAvatarImage } from '@/app/components/user/user-avatar-image'
 import { useUser } from '@/app/lib/model/use-user'
-import { SIGN_IN, SIGN_UP, toBar, toHome, toSpecs } from '@/app/lib/routes'
+import {
+  SIGN_IN,
+  SIGN_UP,
+  toBar,
+  toFollowing,
+  toHome,
+  toSpecs,
+} from '@/app/lib/routes'
 
 export function AppCommand() {
   const router = useRouter()
@@ -131,12 +138,6 @@ export function AppCommand() {
 
           <CommandGroup heading="Links">
             <CommandIconItem
-              name="Home"
-              value={toHome(username)}
-              icon={<HomeIcon />}
-              onSelect={handleLink}
-            />
-            <CommandIconItem
               name="Specs"
               desc="Cocktail Recipes"
               value={toSpecs(username)}
@@ -148,6 +149,13 @@ export function AppCommand() {
               desc="Bottles & Ingredients"
               value={toBar(username)}
               icon={<CubeIcon />}
+              onSelect={handleLink}
+            />
+            <CommandIconItem
+              name="Following"
+              desc="Other Bar Managers"
+              value={toFollowing(username)}
+              icon={<AvatarIcon />}
               onSelect={handleLink}
             />
           </CommandGroup>
@@ -192,8 +200,12 @@ export function AppCommand() {
         </CommandList>
 
         <div className="flex items-center justify-between h-10 px-3 border-t">
-          <div className="flex items-center gap-2 font-semibold text-muted-foreground">
-            <Logo className="w-7 h-7 -m-1.5" body="text-muted-foreground" />
+          <div className="flex items-center gap-2 font-semibold text-accent-muted">
+            <Logo
+              className="w-7 h-7 -m-1.5"
+              body="text-accent-muted"
+              line="text-primary"
+            />
             Lqr
           </div>
           <div className="flex items-center gap-2">

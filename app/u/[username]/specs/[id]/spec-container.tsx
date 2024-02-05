@@ -1,10 +1,10 @@
 import { auth } from '@clerk/nextjs'
 import { intlFormatDistance, parseISO } from 'date-fns/fp'
 import { micromark } from 'micromark'
-import Link from 'next/link'
 import invariant from 'tiny-invariant'
 
 import { UserAvatar } from '@/app/components/user/user-avatar'
+import { UserAvatarLink } from '@/app/components/user/user-avatar-link'
 import { getSpecStock } from '@/app/lib/ingredient/get-spec-stock'
 import { getIngredientData } from '@/app/lib/model/ingredient-data'
 import { getSpec } from '@/app/lib/model/spec'
@@ -57,9 +57,9 @@ export async function SpecContainer({ specID, user, showEdit }: Props) {
         spec={enhancedSpec}
         data={data}
         userAvatar={
-          <Link href={toHome(user.username)}>
+          <UserAvatarLink href={toHome(user.username)} accent>
             <UserAvatar user={user} size="lg" />
-          </Link>
+          </UserAvatarLink>
         }
         updated={updated}
         showStock={Boolean(currentUserID)}

@@ -1,12 +1,16 @@
 'use client'
 
 import { DialogProps } from '@radix-ui/react-dialog'
-import { Cross1Icon } from '@radix-ui/react-icons'
 import { useRouter } from 'next/navigation'
 import { ReactNode, useEffect, useState } from 'react'
-import { Drawer } from 'vaul'
 
-import { FullWidthContainer } from '@/app/components/layout/container'
+import {
+  Drawer,
+  DrawerClose,
+  DrawerContent,
+  DrawerHandle,
+  DrawerScroller,
+} from '@/app/components/ui/drawer'
 import { useAboveBreakpoint } from '@/app/components/ui/use-above-breakpoint'
 import { useIsMounted } from '@/app/components/ui/use-is-mounted'
 import { CompProps } from '@/app/lib/types'
@@ -33,16 +37,8 @@ export function SidebarLayout({
           className,
         )}
       >
-        <Column className="pt-[var(--h-sticky)]">
-          <FullWidthContainer className={cn('pe-3 sm:pe-3')}>
-            {sidebar}
-          </FullWidthContainer>
-        </Column>
-        <Column className="md:pt-[var(--h-sticky)]">
-          <FullWidthContainer className="ps-2 sm:ps-3 h-full">
-            {children}
-          </FullWidthContainer>
-        </Column>
+        <Column className="pt-[var(--h-sticky)]">{sidebar}</Column>
+        <Column className="md:pt-[var(--h-sticky)]">{children}</Column>
       </div>
     </div>
   )
@@ -85,7 +81,7 @@ export function SidebarLayoutMobileDrawer({
   return (
     <>
       <div className="hidden md:block">{children}</div>
-      <Drawer.Root
+      <Drawer
         open={open && mounted && !isAboveMd}
         onOpenChange={(open) => {
           if (open) return
@@ -94,30 +90,19 @@ export function SidebarLayoutMobileDrawer({
         }}
         {...rest}
       >
-        <Drawer.Portal>
-          <Drawer.Overlay className="z-40 fixed inset-0 bg-background/60 transition-all duration-100" />
-          <Drawer.Content
-            className={cn(
-              'z-50 fixed bottom-0 left-0 right-0 flex flex-col gap-2 -mx-px max-h-[90%] bg-popover/50 backdrop-blur-md border border-b-0 border-border/50 rounded-t-2xl overflow-clip',
-              className,
-            )}
-            onPointerDownOutside={(e) => {
-              if (!open || !backTo || backTo === closeTo) return
-              e.preventDefault()
-              router.push(backTo, { scroll: false })
-            }}
-          >
-            <div className="flex-1 py-1.5 overflow-auto backdrop-blur [mask-image:linear-gradient(to_bottom,transparent,rgb(255_255_255_/_50%)_6px,white_20px,white)]">
-              {children}
-            </div>
-            <div className="z-10 absolute top-0 left-0 right-0 mt-2 mx-auto w-12 h-1 rounded-full bg-muted-foreground/40 backdrop-blur-md" />
-            <Drawer.Close className="z-10 absolute right-1.5 top-1.5 p-[6px] bg-muted/60 hover:bg-muted/80 text-muted-foreground/60 rounded-full backdrop-blur-md shadow transition-colors disabled:pointer-events-none">
-              <Cross1Icon stroke="2px" />
-              <span className="sr-only">Close</span>
-            </Drawer.Close>
-          </Drawer.Content>
-        </Drawer.Portal>
-      </Drawer.Root>
+        <DrawerContent
+          className={className}
+          onPointerDownOutside={(e) => {
+            if (!open || !backTo || backTo === closeTo) return
+            e.preventDefault()
+            router.push(backTo, { scroll: false })
+          }}
+        >
+          <DrawerScroller>{children}</DrawerScroller>
+          <DrawerHandle />
+          <DrawerClose />
+        </DrawerContent>
+      </Drawer>
     </>
   )
 }

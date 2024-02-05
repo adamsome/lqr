@@ -1,7 +1,17 @@
 # TODO
 
+- Fix bar follow placement
+- Bar category selected, fade others
+- Fix spec edit infusion not showing
 - Fix zoom on mobile safari input focus
 - Add animated tab bar
+- Specs dialog w/ '#' permalin
+- Plymouth gin should match all gin
+- Include lemon/lime in stock calc
+- Users to Follow clear all
+  - DB
+- Specs filter as drawer (starting like now) with search/sort
+  - Create moves to top
 
 FTUE
 ----

@@ -4,7 +4,6 @@ import { cache } from 'react'
 
 import { parseIngredients } from '@/app/lib/ingredient/parse-ingredients'
 import { getStaticData } from '@/app/lib/model/static-data'
-import { getUser } from '@/app/lib/model/user'
 import { FIND_NO_ID, connectToDatabase } from '@/app/lib/mongodb'
 import { Ingredient, IngredientData, UserEntity } from '@/app/lib/types'
 
@@ -38,9 +37,3 @@ export const getIngredientData = cache(
     return { dict, tree }
   },
 )
-
-export const getUserIngredientData = cache(async (username?: string) => {
-  const user = await getUser(username)
-  const data = await getIngredientData(user?.id)
-  return { user, data }
-})

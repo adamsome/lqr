@@ -20,7 +20,7 @@ const Command = React.forwardRef<
   <CommandPrimitive
     ref={ref}
     className={cn(
-      'flex h-full w-full flex-col overflow-hidden rounded-md bg-popover/75 backdrop-blur-md text-popover-foreground',
+      'flex h-full w-full flex-col overflow-hidden rounded-md bg-popover/70 backdrop-blur-md text-popover-foreground',
       className,
     )}
     {...props}
@@ -157,7 +157,7 @@ const CommandItem = React.forwardRef<
   <CommandPrimitive.Item
     ref={ref}
     className={cn(
-      'relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none aria-selected:bg-accent aria-selected:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-30',
+      'relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none aria-selected:bg-accent/70 aria-selected:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-30',
       props.disabled && 'opacity-30',
       className,
     )}
@@ -192,7 +192,7 @@ const CommandIconItem = React.forwardRef<
         {icon}
         <span className="flex-1 overflow-hidden text-ellipsis whitespace-nowrap">
           {name}
-          {desc && <span className="text-muted-foreground"> ({desc})</span>}
+          {desc && <span className="opacity-50"> ({desc})</span>}
         </span>
       </>
     )}

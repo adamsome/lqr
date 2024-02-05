@@ -22,7 +22,7 @@ export function Heading({ children, ...keys }: Props) {
     <Stack gap={0}>
       <Stack gap={0}>
         <BackButton to={keys} />
-        <H1 className="flex-1 mb-2 mt-0 md:mt-1 text-start">
+        <H1 className="flex-1 mb-2 mt-0 md:mt-1 [font-stretch:extra-condensed] text-start">
           {name ?? 'Unknown Category'}
         </H1>
       </Stack>

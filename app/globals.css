@@ -3,6 +3,19 @@
 @tailwind utilities;
 
 @layer base {
+  .ghost {
+    --ghost-2: 200 14% 17%;
+    --ghost-3: 188 11% 26%;
+    --ghost-4: 180 10% 36%;
+    --ghost-5: 175 10% 45%;
+    --ghost-6: 171 12% 55%;
+    --ghost-7: 170 19% 64%;
+    --ghost-8: 170 29% 72%;
+    --ghost-9: 169 37% 77%;
+    --ghost-10: 170 48% 81%;
+    --ghost-11: 170 100% 90%;
+  }
+
   :root {
     --background: 0 0% 100%;
     --foreground: 240 10% 3.9%;
@@ -22,16 +35,18 @@
     --primary: 240 5.9% 10%;
     --primary-foreground: 0 0% 98%;
 
-    --secondary: 240 4.8% 95.9%;
+    --secondary: 240 4.8% 91%;
     --secondary-foreground: 240 5.9% 10%;
 
-    --accent: 240 4.8% 95.9%;
-    --accent-foreground: 240 5.9% 10%;
+    /* --accent: 240 4.8% 95%; */
+    --accent: 169.8 35% 93%;
+    --accent-muted: 166 8% 47%;
+    /* --accent-foreground: 169.8 100% 89.6%; */
+    --accent-foreground: 166 44% 38%;
+    --accent-strong: 169 35.9% 24%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-
-    --brand: 128 59% 58%;
 
     --ring: 240 5% 64.9%;
 
@@ -44,12 +59,12 @@
 
   :root.dark {
     --background: 240 10% 3.9%;
-    --foreground: 0 0% 98%;
+    --foreground: 52 50% 97%;
 
     --muted: 240 3.7% 15.9%;
     --muted-foreground: 240 5% 64.9%;
 
-    --popover: 240 10% 10%;
+    --popover: 211 9% 10%;
     --popover-foreground: 0 0% 98%;
 
     --card: 240 10% 3.9%;
@@ -58,14 +73,20 @@
     --border: 240 3.7% 15.9%;
     --input: 240 3.7% 15.9%;
 
-    --primary: 0 0% 98%;
+    --primary: 169.8 100% 89.6%;
     --primary-foreground: 240 5.9% 10%;
 
-    --secondary: 240 3.7% 15.9%;
-    --secondary-foreground: 0 0% 98%;
+    /* --secondary: 191 14% 17%; */
+    --secondary: 203 14% 17%;
+    /* --secondary-foreground: 169.8 100% 89.6%; */
+    --secondary-foreground: 170 30% 72.55%;
 
-    --accent: 240 3.7% 15.9%;
-    --accent-foreground: 0 0% 98%;
+    /* --accent: 191 14% 17%; */
+    --accent: 203 14% 17%;
+    --accent-muted: 171.4 12.2% 54.9%;
+    /* --accent-foreground: 169.8 100% 89.6%; */
+    --accent-foreground: 169.8 100% 89.6%;
+    --accent-strong: 169.8 100% 84.6%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 85.7% 97.3%;
@@ -92,13 +113,13 @@
 }
 
 @layer utilities {
-    /* Chrome, Safari and Opera */
-    .no-scrollbar::-webkit-scrollbar {
-      display: none;
-    }
+  /* Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
 
-    .no-scrollbar {
-      -ms-overflow-style: none; /* IE and Edge */
-      scrollbar-width: none; /* Firefox */
-    }
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
 }

@@ -18,7 +18,7 @@ export function UserAvatarFollow({ className, user }: Props) {
   return (
     <Stack
       className={cn(
-        'p-2 bg-muted/50 text-muted-foreground rounded-md',
+        'p-2 bg-popover text-muted-foreground border border-border rounded-md',
         LINK_BOX_CLASSNAME,
         className,
       )}
@@ -29,7 +29,7 @@ export function UserAvatarFollow({ className, user }: Props) {
           <UserAvatarImage className="text-2xl -ms-0.5" user={user} size="lg" />
         </LinkBoxLink>
         <FollowButton
-          className="z-10 p-0 text-xs w-16 h-6 self-start text-muted-foreground"
+          className="z-10 p-0 text-xs w-16 h-6 self-start"
           variant="secondary"
           size="xs"
           username={user.username}

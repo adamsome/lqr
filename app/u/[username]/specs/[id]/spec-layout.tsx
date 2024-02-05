@@ -43,7 +43,7 @@ export function SpecLayout({ children, back, spec, status, showEdit }: Props) {
         <span />
         {showEdit && (
           <Link href={editUrl}>
-            <Button className="text-base" variant="ghost">
+            <Button className="text-base text-primary" variant="ghost">
               Edit
             </Button>
           </Link>

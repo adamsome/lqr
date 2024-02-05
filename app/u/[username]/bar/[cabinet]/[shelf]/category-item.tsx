@@ -60,7 +60,11 @@ export function CategoryItem({
   return (
     <Stack className={className} gap={0}>
       <HeadingLink
-        className={cn('-me-2', !isStocked && 'text-muted-foreground')}
+        className="-me-2"
+        buttonClassName={cn(
+          'text-foreground [font-stretch:condensed]',
+          !isStocked && 'text-muted-foreground hover:text-muted-foreground',
+        )}
         to={to}
         collapse={collapse}
         onClick={() => setCollapse((value) => !value)}

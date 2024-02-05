@@ -21,7 +21,9 @@ export function LitBox({ children, className, path }: Props) {
     }
   }
   return (
-    <LinkBox className={cn(className, selected && 'bg-blue-500/25')}>
+    <LinkBox
+      className={cn(className, selected && 'bg-accent/80 border-accent-muted')}
+    >
       {children}
     </LinkBox>
   )

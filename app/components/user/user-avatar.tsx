@@ -47,7 +47,7 @@ export function UserAvatar({
         className,
       )}
     >
-      <UserAvatarImage user={user} size={size} />
+      <UserAvatarImage className="self-center" user={user} size={size} />
       <span
         className={cn(
           'flex flex-col w-full overflow-hidden transition-all',

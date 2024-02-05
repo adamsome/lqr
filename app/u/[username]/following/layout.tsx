@@ -31,7 +31,7 @@ export default async function Layout({ children, params = {} }: Props) {
 
       <AppContent className="pb-8 [--container-w-max:800px]">
         <Stack className="gap-5 sm:gap-6">
-          <UserAvatarHeader username={username} />
+          <UserAvatarHeader username={username} selected="following" />
           {children}
         </Stack>
       </AppContent>
