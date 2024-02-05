@@ -1,21 +1,11 @@
 # TODO
 
-- Fix zoom on mobile safari input focus
-- Add animated tab bar
-- Specs dialog w/ '#' permalin
-- Plymouth gin should match all gin
-- Include lemon/lime in stock calc
-- Users to Follow clear all
-  - DB
-- Specs filter as drawer (starting like now) with search/sort
-  - Create moves to top
-
 FTUE
 ----
 
-- Responsive landing page
 - Onboarding bar inventory
 - Follow classics on signup
+- Create modern classics user
 
 Bar
 ---
@@ -56,11 +46,16 @@ Specs
 
 ### Users to Follow
 
+- All clear all
+  - Add clear badge
+  - Store clear in DB and hide in future
 - Add counts
 - Move down in specs results (?)
 
 ### Criteria
 
+- Specs filter as drawer (starting like now) with search/sort
+  - Create moves to top
 - Bar grid as ingredient filter
   - Link to Bar
   - Link to Shopping
@@ -76,6 +71,7 @@ Specs
 Spec
 ----
 
+- Spec dialog w/ '#' permalink from Specs page
 - Spec Edit is when its yours, Clone when not
 
 Following
@@ -143,6 +139,10 @@ Content
 - Add ingredient:
   - Hot Water
 
+- Explitic ingredients:
+  - Lemon
+  - Lime
+
 - Implicit ingredients:
   - Ginger
   - Salt
@@ -154,6 +154,9 @@ Content
 
 - Add ingredient category:
   - Peaty Scotch
+
+- Add similar categories:
+  - Plymouth gin should match all gin
 
 - Fix tree where only blended scotch are in their subtree
 

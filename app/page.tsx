@@ -22,7 +22,7 @@ export default async function Page() {
     <AppLayout>
       <AppHeader title={<UserAvatar user={currentUser} />} />
       <AppContent className="relative pb-8">
-        <h1 className="text-[2.5rem] leading-[2.5rem] font-bold">
+        <h1 className="text-[2.5rem] lg:text-[5rem] leading-[2.5rem] lg:leading-[4.75rem] font-bold">
           Manage your
           <br />
           home bar
@@ -41,21 +41,23 @@ export default async function Page() {
             </Link>
           </Level>
         )}
-        <Stack gap={3}>
-          <h2 className="text-2xl text-muted-foreground/90 font-semibold leading-[1.1]">
-            <span className="text-foreground">Track your inventory</span>{' '}
-            selecting which spirits, liquor categories, or ingredients are in
-            stock.
-          </h2>
-          <SampleBar />
-        </Stack>
-        <Stack gap={3}>
-          <h2 className="text-2xl text-muted-foreground/90 font-semibold leading-[1.1]">
-            <span className="text-foreground">Explore your cocktails</span> and
-            see which you can make with your stocked bottles.
-          </h2>
-          <SampleSpecs />
-        </Stack>
+        <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:gap-y-8 lg:grid-cols-[2fr_3fr]">
+          <Stack className="lg:gap-6" gap={3}>
+            <h2 className="pe-4 text-2xl text-muted-foreground/90 font-semibold leading-[1.1]">
+              <span className="text-foreground">Track your inventory</span>{' '}
+              selecting which spirits, liquor categories, or ingredients are in
+              stock.
+            </h2>
+            <SampleBar />
+          </Stack>
+          <Stack className="lg:gap-6" gap={3}>
+            <h2 className="pe-4 max-w-[26rem] text-2xl text-muted-foreground/90 font-semibold leading-[1.1]">
+              <span className="text-foreground">Explore your cocktails</span>{' '}
+              and see what you can make with your stocked bottles & ingredients.
+            </h2>
+            <SampleSpecs />
+          </Stack>
+        </div>
       </AppContent>
     </AppLayout>
   )
