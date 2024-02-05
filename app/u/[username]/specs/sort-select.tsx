@@ -78,7 +78,7 @@ export function SortSelect({
         <Button
           variant="outline"
           className={cn(
-            'flex items-center justify-start gap-2 px-3 w-32 font-normal overflow-hidden',
+            'flex items-center justify-start gap-2 px-3 text-base w-36 font-normal overflow-hidden',
             changed && 'text-accent-foreground animate-pulse',
             className,
           )}
@@ -92,7 +92,7 @@ export function SortSelect({
           </div>
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="w-32" align="end" loop>
+      <DropdownMenuContent className="w-36" align="end" loop>
         {ITEMS.map(({ value, label }) => (
           <DropdownMenuCheckboxItem
             key={value}

@@ -24,7 +24,7 @@ export const FollowButton = forwardRef<
   return (
     <Button
       ref={ref}
-      className={cn('w-20', className)}
+      className={cn('w-24 text-base', className)}
       variant={follows ? 'outline' : 'default'}
       size="sm"
       disabled={mutating}

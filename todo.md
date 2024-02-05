@@ -1,8 +1,5 @@
 # TODO
 
-- Fix bar follow placement
-- Bar category selected, fade others
-- Fix spec edit infusion not showing
 - Fix zoom on mobile safari input focus
 - Add animated tab bar
 - Specs dialog w/ '#' permalin
@@ -27,6 +24,7 @@ Bar
 
 - Bar drawer add 90 snap point (?)
 - Bar grid more items badge
+- Bar category selected, fade others
 - Search field on `/bar/`
   - Mobile search icon shows list
 - Responsive `lg`/`xl` handling
