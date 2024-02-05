@@ -1,5 +1,6 @@
 import invariant from 'tiny-invariant'
 
+import { FollowButtonContainer } from '@/app/components/user/follow-button-container'
 import { UserAvatarHeader } from '@/app/components/user/user-avatar-header'
 import { getSpecStock } from '@/app/lib/ingredient/get-spec-stock'
 import { getAllFollowing } from '@/app/lib/model/follow'
@@ -28,7 +29,7 @@ export async function SpecsContainer({
   username,
   criteria: criteriaProp,
 }: Props) {
-  const { user, currentUser } = await getCurrentUser(username)
+  const { user, currentUser, isCurrentUser } = await getCurrentUser(username)
 
   invariant(user && username, `User not found.`)
 
@@ -66,7 +67,9 @@ export async function SpecsContainer({
       username={username}
       header={
         <>
-          <UserAvatarHeader selected="specs" username={username} />
+          <UserAvatarHeader selected="specs" username={username}>
+            {!isCurrentUser && <FollowButtonContainer username={username} />}
+          </UserAvatarHeader>
           <UsersToFollow
             username={username}
             Wrapper={MobileHorizontalScroller}

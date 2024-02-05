@@ -2,12 +2,13 @@ import Link from 'next/link'
 import { sortBy } from 'ramda'
 
 import { Button } from '@/app/components/ui/button'
+import { FollowButtonContainer } from '@/app/components/user/follow-button-container'
 import { UserAvatar } from '@/app/components/user/user-avatar'
 import { UserAvatarHeader } from '@/app/components/user/user-avatar-header'
 import { getAllFollowing } from '@/app/lib/model/follow'
 import { getIngredientData } from '@/app/lib/model/ingredient-data'
-import { getAllSpecs, getAllSpecsWithUserIDs } from '@/app/lib/model/spec'
-import { getAllUsers } from '@/app/lib/model/user'
+import { getAllSpecsWithUserIDs } from '@/app/lib/model/spec'
+import { getAllUsers, getCurrentUser } from '@/app/lib/model/user'
 import { toHome, toSpecItem, toSpecs } from '@/app/lib/routes'
 import { Ingredient, Spec, User } from '@/app/lib/types'
 import { sortSpecs } from '@/app/u/[username]/specs/_criteria/sort'
@@ -28,12 +29,14 @@ const sortByRecentSpec = (
   ).reverse()
 
 type Props = {
-  user: User
+  username?: string
 }
 
-export async function UserHome({ user }: Props) {
-  const follows = await getAllFollowing(user.id)
-  const userIDs = [user.id, ...follows.map(({ followee }) => followee)]
+export async function UserHome({ username }: Props) {
+  const { user, isCurrentUser } = await getCurrentUser(username)
+  const follows = await getAllFollowing(user?.id)
+  const followees = follows.map(({ followee }) => followee)
+  const userIDs = user ? [user.id, ...followees] : followees
 
   const [users, data, rawSpecs] = await Promise.all([
     getAllUsers(userIDs),
@@ -54,21 +57,23 @@ export async function UserHome({ user }: Props) {
 
   return (
     <>
-      <UserAvatarHeader username={user.username} />
+      <UserAvatarHeader username={username}>
+        {!isCurrentUser && <FollowButtonContainer username={username} />}
+      </UserAvatarHeader>
       <div>
         <div className="-mx-2">
-          {specsByUsername[user.username]
+          {specsByUsername[username ?? '']
             ?.slice(0, 4)
             .map((spec) => (
               <Card
                 key={spec.id}
                 data={data}
                 spec={spec}
-                href={toSpecItem(spec, user.username)}
+                href={toSpecItem(spec, username)}
               />
             ))}
         </div>
-        <ShowAll href={toSpecs(user.username)} />
+        <ShowAll href={toSpecs(username)} />
       </div>
       {followers.map((follower) => (
         <div key={follower.id}>
@@ -84,7 +89,7 @@ export async function UserHome({ user }: Props) {
                     key={spec.id}
                     data={data}
                     spec={spec}
-                    href={toSpecItem(spec, user.username)}
+                    href={toSpecItem(spec, username)}
                   />
                 ))}
             </div>

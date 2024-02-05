@@ -1,26 +1,25 @@
 import { Level } from '@/app/components/layout/level'
 import { Stack } from '@/app/components/layout/stack'
-import { FollowButtonContainer } from '@/app/components/user/follow-button-container'
 import { UserAvatarImage } from '@/app/components/user/user-avatar-image'
 import { UserCountTabs } from '@/app/components/user/user-count-tabs'
 import { getCounts } from '@/app/lib/model/counts'
-import { getCurrentUser } from '@/app/lib/model/user'
-import { Counts, User } from '@/app/lib/types'
+import { getUser } from '@/app/lib/model/user'
+import { Counts, User, type CompProps } from '@/app/lib/types'
 
 type CountType = keyof Counts
 
-type Props = {
-  className?: string
+type Props = CompProps & {
   username?: string
   selected?: CountType
 }
 
 export async function UserAvatarHeader({
+  children,
   className,
   username,
   selected,
 }: Props) {
-  const { user, isCurrentUser } = await getCurrentUser(username)
+  const user = await getUser(username)
   const counts = await getCounts(user?.id)
   const tabs = (
     <UserCountTabs username={username} counts={counts} selected={selected} />
@@ -37,7 +36,7 @@ export async function UserAvatarHeader({
           <Name user={user} />
           {tabs}
         </div>
-        {!isCurrentUser && <FollowButtonContainer username={username} />}
+        {children}
       </Level>
       <Stack className="sm:hidden flex-1 leading-none overflow-hidden" gap={0}>
         <Name user={user} />

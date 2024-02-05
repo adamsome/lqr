@@ -61,7 +61,10 @@ export function HeadingLink({
         </Button>
       </Link>
       <IconButton
-        className={cn('px-1 h-6 w-6', LINK_BOX_LINK_CLASSNAME)}
+        className={cn(
+          'px-1 h-6 w-6 text-accent-muted',
+          LINK_BOX_LINK_CLASSNAME,
+        )}
         onClick={onClick}
       >
         {collapse ? <ChevronUpIcon /> : <ChevronDownIcon />}

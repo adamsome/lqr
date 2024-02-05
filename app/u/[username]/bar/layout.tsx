@@ -5,8 +5,10 @@ import {
   AppHeader,
   AppLayout,
 } from '@/app/components/layout/app-layout'
+import { Level } from '@/app/components/layout/level'
 import { SidebarLayout } from '@/app/components/layout/sidebar-layout'
 import { Stack } from '@/app/components/layout/stack'
+import { FollowButtonContainer } from '@/app/components/user/follow-button-container'
 import { UserAvatarHeader } from '@/app/components/user/user-avatar-header'
 import { getIngredientData } from '@/app/lib/model/ingredient-data'
 import { getCurrentUser } from '@/app/lib/model/user'
@@ -37,7 +39,14 @@ export default async function Layout({ children, params }: Props) {
           sidebar={
             <AppFullWidthContent>
               <Stack gap={6}>
-                <UserAvatarHeader username={username} selected="bottles" />
+                <UserAvatarHeader username={username} selected="bottles">
+                  {!isCurrentUser && (
+                    <FollowButtonContainer
+                      className="md:hidden"
+                      username={username}
+                    />
+                  )}
+                </UserAvatarHeader>
                 <div className="-mx-2 sm:-ms-4">
                   <Bar username={username} />
                 </div>
@@ -45,7 +54,10 @@ export default async function Layout({ children, params }: Props) {
             </AppFullWidthContent>
           }
         >
-          <AppFullWidthContent className="hidden md:block md:pt-32 md:ps-2">
+          <AppFullWidthContent className="hidden md:block md:ps-2">
+            <Level className="mb-6 h-18 w-full" justify="end">
+              {!isCurrentUser && <FollowButtonContainer username={username} />}
+            </Level>
             {children}
           </AppFullWidthContent>
         </SidebarLayout>

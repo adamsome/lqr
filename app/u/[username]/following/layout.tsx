@@ -6,6 +6,7 @@ import {
 } from '@/app/components/layout/app-layout'
 import { Container } from '@/app/components/layout/container'
 import { Stack } from '@/app/components/layout/stack'
+import { FollowButtonContainer } from '@/app/components/user/follow-button-container'
 import { UserAvatar } from '@/app/components/user/user-avatar'
 import { UserAvatarHeader } from '@/app/components/user/user-avatar-header'
 import { getCurrentUser } from '@/app/lib/model/user'
@@ -31,7 +32,9 @@ export default async function Layout({ children, params = {} }: Props) {
 
       <AppContent className="pb-8 [--container-w-max:800px]">
         <Stack className="gap-5 sm:gap-6">
-          <UserAvatarHeader username={username} selected="following" />
+          <UserAvatarHeader username={username} selected="following">
+            {!isCurrentUser && <FollowButtonContainer username={username} />}
+          </UserAvatarHeader>
           {children}
         </Stack>
       </AppContent>
