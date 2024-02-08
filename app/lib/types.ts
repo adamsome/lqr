@@ -50,8 +50,11 @@ export interface UserEntity {
   actedAt?: string
   specCount?: number
   followingCount?: number
+  ftue?: string
   ingredients?: Record<string, Partial<Ingredient>>
 }
+
+export type UserWithEntity = User & UserEntity
 
 export interface Follow {
   follower: string

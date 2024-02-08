@@ -6,7 +6,7 @@ import invariant from 'tiny-invariant'
 
 import { toUser } from '@/app/lib/model/to-user'
 import { FIND_NO_ID, connectToDatabase } from '@/app/lib/mongodb'
-import { User, UserEntity } from '@/app/lib/types'
+import { User, UserEntity, type UserWithEntity } from '@/app/lib/types'
 import { toDict } from '@/app/lib/utils'
 
 import 'server-only'
@@ -71,9 +71,17 @@ export const getUser = cache(
   },
 )
 
+export const getUserEntity = cache(
+  async (userID?: string | null): Promise<UserEntity | null> => {
+    if (!userID) return null
+    const cn = await connect()
+    return cn.findOne({ id: userID }, FIND_NO_ID)
+  },
+)
+
 type CurrentUserWithUser = {
   user: User | null
-  currentUser: User | null
+  currentUser: UserWithEntity | null
   isSignedIn: boolean
   isCurrentUser: boolean
 }
@@ -89,10 +97,14 @@ async function _getCurrentUser(
   username?: string,
 ): Promise<CurrentUserWithUser | CurrentUserOnly> {
   const { userId: currentUserID } = auth()
-  const [user, currentUser] = await Promise.all([
+  const [user, currentAuth, currentEntity] = await Promise.all([
     getUser(username),
     getUserByID(currentUserID),
+    getUserEntity(currentUserID),
   ])
+  const currentUser: UserWithEntity | null = currentAuth
+    ? { ...(currentEntity ?? {}), ...currentAuth }
+    : null
   const isSignedIn = currentUser != null
   if (username === undefined) return { currentUser, isSignedIn }
   const isCurrentUser = isSignedIn && user?.id === currentUser.id
@@ -105,12 +117,6 @@ export const isCurrentUser = cache(async (username: string | undefined) => {
   const { userId: currentUserID } = auth()
   const user = await getUser(username)
   return currentUserID != null && user?.id === currentUserID
-})
-
-export const getUserEntity = cache(async (userID?: string) => {
-  if (!userID) return null
-  const cn = await connect()
-  return cn.findOne({ id: userID }, FIND_NO_ID)
 })
 
 export async function getMostRecentActedUsers({
@@ -130,6 +136,11 @@ export async function getMostRecentActedUsers({
     .limit(limit)
     .toArray()
   return getAllUsers(users.map(({ id }) => id))
+}
+
+export async function updateUserFtue(userID: string, ftue: string) {
+  const cn = await connect()
+  return cn.updateOne({ id: userID }, { $set: { ftue } })
 }
 
 export async function updateUserActedAt(userID: string) {

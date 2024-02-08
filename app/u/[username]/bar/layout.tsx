@@ -11,7 +11,7 @@ import { Stack } from '@/app/components/layout/stack'
 import { FollowButtonContainer } from '@/app/components/user/follow-button-container'
 import { UserAvatarHeader } from '@/app/components/user/user-avatar-header'
 import { getIngredientData } from '@/app/lib/model/ingredient-data'
-import { getCurrentUser } from '@/app/lib/model/user'
+import { getCurrentUser, updateUserFtue } from '@/app/lib/model/user'
 import { toHome } from '@/app/lib/routes'
 import { LayoutProps } from '@/app/lib/types'
 import { Bar } from '@/app/u/[username]/bar/bar'
@@ -26,6 +26,11 @@ export default async function Layout({ children, params }: Props) {
   const { username } = params ?? {}
   const { user, currentUser, isCurrentUser } = await getCurrentUser(username)
   const data = await getIngredientData(user?.id)
+
+  if (isCurrentUser && currentUser?.id && !currentUser?.ftue) {
+    // TODO: Add FTUE bar walkthrough
+    await updateUserFtue(currentUser.id, 'spec')
+  }
 
   return (
     <IngredientDataProvider {...data}>
