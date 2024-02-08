@@ -2,7 +2,9 @@ import { Level } from '@/app/components/layout/level'
 import { Stack } from '@/app/components/layout/stack'
 import { LINK_BOX_CLASSNAME, LinkBoxLink } from '@/app/components/ui/link-box'
 import { FollowButton } from '@/app/components/user/follow-button'
+import { UserAvatarFollowDismiss } from '@/app/components/user/user-avatar-follow-dismiss'
 import { UserAvatarImage } from '@/app/components/user/user-avatar-image'
+import { getCurrentUser } from '@/app/lib/model/user'
 import { toHome } from '@/app/lib/routes'
 import { User } from '@/app/lib/types'
 import { cn } from '@/app/lib/utils'
@@ -12,13 +14,14 @@ type Props = {
   user: User
 }
 
-export function UserAvatarFollow({ className, user }: Props) {
+export async function UserAvatarFollow({ className, user }: Props) {
+  const { currentUser } = await getCurrentUser()
   const { displayName, username } = user
   const name = user ? displayName ?? username ?? '?' : ''
   return (
     <Stack
       className={cn(
-        'p-2 bg-popover text-muted-foreground border border-border rounded-md',
+        'relative p-2 bg-popover text-muted-foreground border border-border rounded-md',
         LINK_BOX_CLASSNAME,
         className,
       )}
@@ -38,6 +41,9 @@ export function UserAvatarFollow({ className, user }: Props) {
       <div className="text-sm font-bold tracking-tight overflow-hidden text-ellipsis whitespace-nowrap">
         {name}
       </div>
+      {currentUser && (
+        <UserAvatarFollowDismiss username={currentUser.username} user={user} />
+      )}
     </Stack>
   )
 }

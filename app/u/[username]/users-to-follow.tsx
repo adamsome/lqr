@@ -27,7 +27,8 @@ export async function UsersToFollow({
     .filter(({ follows }) => follows)
     .map(({ followee }) => followee)
 
-  const exclude = [currentUser.id, ...followees]
+  const { excludeFollowees = [] } = currentUser
+  const exclude = [currentUser.id, ...followees, ...excludeFollowees]
   if (user) exclude.push(user.id)
 
   const usersToFollow = await getMostRecentActedUsers({ exclude })
@@ -47,7 +48,7 @@ export function MobileHorizontalScroller({ children, className }: CompProps) {
   return (
     <div className={cn('!col-span-full lg:hidden', className)}>
       <HorizontalScroller
-        className="px-4 sm:px-6 lg:hidden [&:empty]:hidden"
+        className="-my-2.5 py-2.5 px-4 sm:px-6 lg:hidden [&:empty]:hidden"
         countInView={[2, 3, 4]}
       >
         {children}

@@ -51,6 +51,7 @@ export interface UserEntity {
   specCount?: number
   followingCount?: number
   ftue?: string
+  excludeFollowees?: string[]
   ingredients?: Record<string, Partial<Ingredient>>
 }
 

@@ -143,6 +143,14 @@ export async function updateUserFtue(userID: string, ftue: string) {
   return cn.updateOne({ id: userID }, { $set: { ftue } })
 }
 
+export async function addUserExcludeFollowee(userID: string, followee: string) {
+  const cn = await connect()
+  return cn.updateOne(
+    { id: userID },
+    { $addToSet: { excludeFollowees: followee } },
+  )
+}
+
 export async function updateUserActedAt(userID: string) {
   const cn = await connect()
   return cn.updateOne(
