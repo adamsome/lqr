@@ -9,7 +9,7 @@ type Props = CompProps & {
 export function Empty({ children, className, title }: Props) {
   return (
     <Stack
-      className="px-4 py-6 w-full h-full text-muted-foreground/80 text-center font-medium leading-tight border-2 border-dashed rounded-lg"
+      className="px-4 py-6 w-full min-h-52 text-muted-foreground/80 text-center font-medium leading-tight border-2 border-dashed rounded-lg"
       justify="center"
       items="center"
     >

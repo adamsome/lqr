@@ -1,13 +1,13 @@
 import invariant from 'tiny-invariant'
 
-import { FollowButtonContainer } from '@/app/components/user/follow-button-container'
-import { EmptyList } from '@/app/u/[username]/following/empty-list'
-import { EnsureFollows } from '@/app/u/[username]/following/ensure-follows'
-import { UserAvatarRow } from '@/app/components/user/user-avatar-row'
+import { Empty } from '@/app/components/empty'
 import { Stack } from '@/app/components/layout/stack'
+import { FollowButtonContainer } from '@/app/components/user/follow-button-container'
+import { UserAvatarRow } from '@/app/components/user/user-avatar-row'
 import { getAllFollowing } from '@/app/lib/model/follow'
-import { getCurrentUser, getAllUsers } from '@/app/lib/model/user'
+import { getAllUsers, getCurrentUser } from '@/app/lib/model/user'
 import { cn, toDict } from '@/app/lib/utils'
+import { EnsureFollows } from '@/app/u/[username]/following/ensure-follows'
 
 type Props = {
   className?: string
@@ -35,7 +35,13 @@ export async function List({ className, username }: Props) {
           </UserAvatarRow>
         </EnsureFollows>
       ))}
-      {followingUsers.length === 0 && <EmptyList />}
+      {followingUsers.length === 0 && (
+        <Empty title="Not following any other bar managers">
+          Follow some more managers to have
+          <br />
+          more specs to explore!
+        </Empty>
+      )}
     </Stack>
   )
 }
