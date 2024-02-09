@@ -41,9 +41,7 @@ export async function UserAvatarFollow({ className, user }: Props) {
       <div className="text-sm font-bold tracking-tight overflow-hidden text-ellipsis whitespace-nowrap">
         {name}
       </div>
-      {currentUser && (
-        <UserAvatarFollowDismiss username={currentUser.username} user={user} />
-      )}
+      <UserAvatarFollowDismiss username={currentUser?.username} user={user} />
     </Stack>
   )
 }

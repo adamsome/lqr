@@ -1,5 +1,7 @@
 # TODO
 
+- Following empty state
+
 FTUE
 ----
 

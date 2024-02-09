@@ -151,6 +151,14 @@ export async function addUserExcludeFollowee(userID: string, followee: string) {
   )
 }
 
+export async function setUserExcludedAllFolloweesAt(userID: string) {
+  const cn = await connect()
+  return cn.updateOne(
+    { id: userID },
+    { $set: { excludedAllFolloweesAt: new Date().toISOString() } },
+  )
+}
+
 export async function updateUserActedAt(userID: string) {
   const cn = await connect()
   return cn.updateOne(

@@ -2,15 +2,17 @@ import { auth } from '@clerk/nextjs'
 import { NextRequest, NextResponse } from 'next/server'
 import { z } from 'zod'
 
-import { addUserExcludeFollowee, getUser } from '@/app/lib/model/user'
-
-const Schema = z.object({ followee: z.string() })
+import {
+  addUserExcludeFollowee,
+  getUser,
+  getUserByID,
+} from '@/app/lib/model/user'
 
 export async function PATCH(
   req: NextRequest,
-  { params = {} }: { params?: { username?: string } },
+  { params = {} }: { params?: { username?: string; followee?: string } },
 ) {
-  const { username } = params
+  const { username, followee } = params
   const user = await getUser(username)
   const { id: userID } = user ?? {}
   if (!userID) {
@@ -23,28 +25,27 @@ export async function PATCH(
   const { userId: currentUserID } = auth()
   if (!currentUserID) {
     return NextResponse.json(
-      { error: `Must be signed in to follow a user.` },
+      { error: `Must be signed in to exclude a followee.` },
       { status: 401 },
     )
   }
 
   if (currentUserID !== userID) {
     return NextResponse.json(
-      { error: `Can exclude followees for yourself.` },
+      { error: `Can only exclude followees for yourself.` },
       { status: 403 },
     )
   }
 
-  const body = Schema.safeParse(await req.json())
-  if (!body.success) {
-    const { errors } = body.error
+  const followeeUser = await getUserByID(followee)
+  if (!followeeUser) {
     return NextResponse.json(
-      { error: `Invalid request`, errors },
-      { status: 500 },
+      { error: `Followee (ID: '${username}') not found to exclude.` },
+      { status: 400 },
     )
   }
 
-  const { followee } = body.data
-
-  return NextResponse.json(await addUserExcludeFollowee(userID, followee))
+  return NextResponse.json(
+    await addUserExcludeFollowee(userID, followeeUser.id),
+  )
 }

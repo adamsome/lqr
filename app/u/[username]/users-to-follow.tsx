@@ -1,12 +1,13 @@
+import { isBefore, parseISO, subDays } from 'date-fns/fp'
 import { FC, PropsWithChildren } from 'react'
 
 import { Stack } from '@/app/components/layout/stack'
-import { H2 } from '@/app/components/ui/h2'
 import { HorizontalScroller } from '@/app/components/ui/horizontal-scroller'
 import { UserAvatarFollow } from '@/app/components/user/user-avatar-follow'
+import { UserAvatarFollowDismissAll } from '@/app/components/user/user-avatar-follow-dismiss-all'
 import { getAllFollowing } from '@/app/lib/model/follow'
 import { getCurrentUser, getMostRecentActedUsers } from '@/app/lib/model/user'
-import { CompProps } from '@/app/lib/types'
+import { CompProps, type UserEntity } from '@/app/lib/types'
 import { cn } from '@/app/lib/utils'
 
 type Props = {
@@ -14,13 +15,19 @@ type Props = {
   Wrapper?: FC<PropsWithChildren>
 }
 
+const isOlderThan30Days = (now: Date, at: string) =>
+  isBefore(subDays(30, now), parseISO(at))
+
+const shouldExcludeAll = (now: Date, { excludedAllFolloweesAt }: UserEntity) =>
+  excludedAllFolloweesAt && !isOlderThan30Days(now, excludedAllFolloweesAt)
+
 export async function UsersToFollow({
   username,
   Wrapper = DefaultStack,
 }: Props) {
   const { user, currentUser } = await getCurrentUser(username)
 
-  if (!currentUser) return null
+  if (!currentUser || shouldExcludeAll(new Date(), currentUser)) return null
 
   const follows = await getAllFollowing(currentUser.id)
   const followees = follows
@@ -31,7 +38,7 @@ export async function UsersToFollow({
   const exclude = [currentUser.id, ...followees, ...excludeFollowees]
   if (user) exclude.push(user.id)
 
-  const usersToFollow = await getMostRecentActedUsers({ exclude })
+  const usersToFollow = await getMostRecentActedUsers({ exclude, limit: 7 })
 
   if (!usersToFollow.length) return null
 
@@ -40,6 +47,7 @@ export async function UsersToFollow({
       {usersToFollow.map((u) => (
         <UserAvatarFollow key={u.id} user={u} />
       ))}
+      <UserAvatarFollowDismissAll username={username} />
     </Wrapper>
   )
 }

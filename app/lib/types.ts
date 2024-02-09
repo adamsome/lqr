@@ -52,6 +52,7 @@ export interface UserEntity {
   followingCount?: number
   ftue?: string
   excludeFollowees?: string[]
+  excludedAllFolloweesAt?: string
   ingredients?: Record<string, Partial<Ingredient>>
 }
 
