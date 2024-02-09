@@ -47,7 +47,9 @@ export async function UsersToFollow({
       {usersToFollow.map((u) => (
         <UserAvatarFollow key={u.id} user={u} />
       ))}
-      <UserAvatarFollowDismissAll username={username} />
+      {usersToFollow.length > 2 && (
+        <UserAvatarFollowDismissAll username={username} />
+      )}
     </Wrapper>
   )
 }

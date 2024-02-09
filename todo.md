@@ -1,13 +1,16 @@
 # TODO
 
-- Following empty state
+- Which bottles/ingredients should I get to add the most specs
+  - Shopping Suggestions
+  - "If you bought Gin you could make 13 more specs"
+  - "If you bought Sweet Vermouth and Campari, you could make..."
 
 FTUE
 ----
 
+- Create modern classics user
 - Onboarding bar inventory
 - Follow classics on signup
-- Create modern classics user
 
 Bar
 ---
@@ -95,6 +98,7 @@ Home
 ----
 
 - Bring back home(?)
+  - Add feed (movies app for inspiration)
 - Include favorites section on home
 - Specs has no users to follow
 - Include bar on home
