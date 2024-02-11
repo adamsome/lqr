@@ -1,4 +1,3 @@
-import { auth } from '@clerk/nextjs'
 import { intlFormatDistance, parseISO } from 'date-fns/fp'
 import { micromark } from 'micromark'
 import invariant from 'tiny-invariant'
@@ -6,22 +5,29 @@ import invariant from 'tiny-invariant'
 import { UserAvatar } from '@/app/components/user/user-avatar'
 import { UserAvatarLink } from '@/app/components/user/user-avatar-link'
 import { getSpecStock } from '@/app/lib/ingredient/get-spec-stock'
+import { isAdmin } from '@/app/lib/model/admin'
 import { getIngredientData } from '@/app/lib/model/ingredient-data'
 import { getSpec } from '@/app/lib/model/spec'
+import { getCurrentUser } from '@/app/lib/model/user'
 import { toHome } from '@/app/lib/routes'
-import { User } from '@/app/lib/types'
 import { Back } from '@/app/u/[username]/specs/[id]/back'
 import { Spec } from '@/app/u/[username]/specs/[id]/spec'
 import { SpecLayout } from '@/app/u/[username]/specs/[id]/spec-layout'
 
 type Props = {
-  specID: string
-  user: User
-  showEdit: boolean
+  username?: string
+  specID?: string
 }
 
-export async function SpecContainer({ specID, user, showEdit }: Props) {
-  const { userId: currentUserID } = auth()
+export async function SpecContainer({ username, specID }: Props) {
+  invariant(specID, `ID needed to show spec.`)
+
+  const { user, currentUser } = await getCurrentUser(username)
+
+  invariant(user, `User not found.`)
+
+  const showEdit = isAdmin(currentUser?.id) || user.id === currentUser?.id
+
   const [data, spec] = await Promise.all([
     getIngredientData(),
     getSpec(specID, user.id),
@@ -62,7 +68,7 @@ export async function SpecContainer({ specID, user, showEdit }: Props) {
           </UserAvatarLink>
         }
         updated={updated}
-        showStock={Boolean(currentUserID)}
+        showStock={Boolean(currentUser?.id)}
       />
     </SpecLayout>
   )

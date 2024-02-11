@@ -1,5 +1,7 @@
 # TODO
 
+- Put at `adamso.me/lqr`
+
 - Which bottles/ingredients should I get to add the most specs
   - Shopping Suggestions
   - "If you bought Gin you could make 13 more specs"
