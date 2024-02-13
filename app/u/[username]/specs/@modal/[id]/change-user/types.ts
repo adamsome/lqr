@@ -11,3 +11,5 @@ export const SpecChangeUserSchema = SpecSchema.pick({
 })
 
 export const specUserIDParam = 'spec-user-id'
+
+export const localStorageKey = 'spec.changeUser'

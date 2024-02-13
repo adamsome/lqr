@@ -63,10 +63,13 @@ Specs
 
 - Specs filter as drawer (starting like now) with search/sort
   - Create moves to top
+- Facet counts
+- User limit, show more
 - Bar grid as ingredient filter
   - Link to Bar
   - Link to Shopping
 - Category as grid
+  - Combine sours
   - Category/Glass/Mix type icons
 - Specs sort drives drives description
 - Specs grouping by sort

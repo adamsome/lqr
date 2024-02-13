@@ -60,7 +60,6 @@ export async function updateSpecUser(id: string, userID: string, user: User) {
   const cn = await connect()
   const $set: Partial<Spec> = { userID: user.id, username: user.username }
   if (user.displayName) $set.userDisplayName = user.displayName
-  console.log('update', { id, userID }, $set)
   return cn.updateOne({ id, userID }, { $set })
 }
 
