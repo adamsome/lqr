@@ -1,13 +1,13 @@
 import { Filter, OptionalId, OptionalUnlessRequiredId } from 'mongodb'
+import { cache } from 'react'
 import invariant from 'tiny-invariant'
 
 import { updateUserSpecCount } from '@/app/lib/model/user'
 import { FIND_NO_ID, connectToDatabase } from '@/app/lib/mongodb'
-import { Spec } from '@/app/lib/types'
+import { Spec, type User } from '@/app/lib/types'
 import { asArray } from '@/app/lib/utils'
 
 import 'server-only'
-import { cache } from 'react'
 
 const connect = async () =>
   connectToDatabase().then(({ db }) =>
@@ -54,6 +54,14 @@ export async function getAllSpecsWithUserIDs(
 export async function updateSpec(spec: Spec) {
   const cn = await connect()
   return cn.updateOne({ id: spec.id }, { $set: spec })
+}
+
+export async function updateSpecUser(id: string, userID: string, user: User) {
+  const cn = await connect()
+  const $set: Partial<Spec> = { userID: user.id, username: user.username }
+  if (user.displayName) $set.userDisplayName = user.displayName
+  console.log('update', { id, userID }, $set)
+  return cn.updateOne({ id, userID }, { $set })
 }
 
 async function updateSpecCount(userID: string | null, delta: number) {

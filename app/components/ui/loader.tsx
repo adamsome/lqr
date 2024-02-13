@@ -6,9 +6,10 @@ type Props = {
   className?: string
   loading: boolean
   size?: string
+  invert?: boolean
 }
 
-export function Loader({ className, loading, size = '20px' }: Props) {
+export function Loader({ className, loading, size = '20px', invert }: Props) {
   if (!loading) return null
   return (
     <div
@@ -16,6 +17,7 @@ export function Loader({ className, loading, size = '20px' }: Props) {
         'relative flex items-center justify-center',
         'w-[var(--size)] h-[var(--size)]',
         'data-[state=on]:animate-fade-in',
+        invert ? '[&>div]:bg-background' : '[&>div]:bg-accent-foreground',
         className,
       )}
       style={{ '--size': size } as CSSProperties}
@@ -38,7 +40,7 @@ function Line({ index }: LineProps) {
       className={cn(
         'absolute top-0 left-[calc(var(--size))]',
         'w-[calc(var(--size)/20)] h-[var(--size)]',
-        'bg-accent-foreground animate-loader',
+        'bg- animate-loader',
       )}
       style={{
         left: `calc(${index} * (var(--size) / 5 + var(--size) / 25) - var(--size) / 12)`,

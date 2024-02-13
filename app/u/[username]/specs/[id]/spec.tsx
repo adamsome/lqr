@@ -6,6 +6,7 @@ import { getGlassTypeLabel } from '@/app/lib/glass-type'
 import { getMixTypeLabel } from '@/app/lib/mix-type'
 import { getSpecCategoryLabel } from '@/app/lib/spec-category'
 import { IngredientData, Spec } from '@/app/lib/types'
+import { Title } from '@/app/u/[username]/specs/[id]/title'
 
 type Props = {
   spec: Spec
@@ -30,12 +31,7 @@ export function Spec({ spec, data, userAvatar, updated, showStock }: Props) {
   return (
     <>
       <div className="flex flex-col gap-y-1">
-        <div className="mb-3 text-4xl font-bold leading-none tracking-tight">
-          {name}
-          {year && (
-            <span className="text-muted-foreground font-medium"> ({year})</span>
-          )}
-        </div>
+        <Title className="mb-3 text-4xl whitespace-normal" spec={spec} />
         <div className="flex items-center gap-4">
           {userAvatar && <div>{userAvatar}</div>}
           {updated && (

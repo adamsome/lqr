@@ -4,6 +4,7 @@ import { partition } from 'ramda'
 import { cache } from 'react'
 import invariant from 'tiny-invariant'
 
+import { isAdmin as isUserAdmin } from '@/app/lib/model/admin'
 import { toUser } from '@/app/lib/model/to-user'
 import { FIND_NO_ID, connectToDatabase } from '@/app/lib/mongodb'
 import { User, UserEntity, type UserWithEntity } from '@/app/lib/types'
@@ -11,12 +12,18 @@ import { toDict } from '@/app/lib/utils'
 
 import 'server-only'
 
-const SYSTEM_USERS = [
+export const SYSTEM_USERS: User[] = [
   {
     id: 'user_classics',
     username: 'classics',
     displayName: 'Classics',
     imageUrl: '/avatars/classic.jpg',
+  },
+  {
+    id: 'user_modern_classics',
+    username: 'modern_classics',
+    displayName: 'Modern Classics',
+    imageUrl: '/avatars/modern-classics.jpg',
   },
   {
     id: 'user_smugglerscove',
@@ -84,6 +91,7 @@ type CurrentUserWithUser = {
   currentUser: UserWithEntity | null
   isSignedIn: boolean
   isCurrentUser: boolean
+  isAdmin: boolean
 }
 
 type CurrentUserOnly = Omit<CurrentUserWithUser, 'user' | 'isCurrentUser'>
@@ -106,9 +114,16 @@ async function _getCurrentUser(
     ? { ...(currentEntity ?? {}), ...currentAuth }
     : null
   const isSignedIn = currentUser != null
-  if (username === undefined) return { currentUser, isSignedIn }
+  const isAdmin = isUserAdmin(currentUser?.id)
+  if (username === undefined) return { currentUser, isSignedIn, isAdmin }
   const isCurrentUser = isSignedIn && user?.id === currentUser.id
-  return { user, currentUser, isSignedIn, isCurrentUser }
+  return {
+    user,
+    currentUser,
+    isSignedIn,
+    isCurrentUser,
+    isAdmin,
+  }
 }
 
 export const getCurrentUser = cache(_getCurrentUser)

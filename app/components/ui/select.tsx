@@ -35,30 +35,42 @@ SelectTrigger.displayName = SelectPrimitive.Trigger.displayName
 const SelectContent = forwardRef<
   ElementRef<typeof SelectPrimitive.Content>,
   ComponentPropsWithoutRef<typeof SelectPrimitive.Content>
->(({ className, children, position = 'popper', ...props }, ref) => (
-  <SelectPrimitive.Portal>
-    <SelectPrimitive.Content
-      ref={ref}
-      className={cn(
-        'relative z-50 min-w-[8rem] overflow-hidden rounded-md border bg-popover text-popover-foreground shadow-md animate-in fade-in-80',
-        position === 'popper' && 'translate-y-1',
-        className,
-      )}
-      position={position}
-      {...props}
-    >
-      <SelectPrimitive.Viewport
+>(
+  (
+    {
+      className,
+      children,
+      position = 'item-aligned',
+      sideOffset = 4,
+      ...props
+    },
+    ref,
+  ) => (
+    <SelectPrimitive.Portal>
+      <SelectPrimitive.Content
+        ref={ref}
         className={cn(
-          'p-1',
-          position === 'popper' &&
-            'h-[var(--radix-select-trigger-height)] w-full min-w-[var(--radix-select-trigger-width)]',
+          'relative z-50 min-w-[8rem] overflow-hidden rounded-md border bg-popover text-popover-foreground shadow-md animate-in fade-in-80',
+          position === 'popper' && 'translate-y-1',
+          className,
         )}
+        position={position}
+        sideOffset={sideOffset}
+        {...props}
       >
-        {children}
-      </SelectPrimitive.Viewport>
-    </SelectPrimitive.Content>
-  </SelectPrimitive.Portal>
-))
+        <SelectPrimitive.Viewport
+          className={cn(
+            'p-1',
+            position === 'popper' &&
+              'h-[var(--radix-select-trigger-height)] w-full min-w-[var(--radix-select-trigger-width)]',
+          )}
+        >
+          {children}
+        </SelectPrimitive.Viewport>
+      </SelectPrimitive.Content>
+    </SelectPrimitive.Portal>
+  ),
+)
 SelectContent.displayName = SelectPrimitive.Content.displayName
 
 const SelectLabel = forwardRef<

@@ -63,7 +63,7 @@ const DrawerContent = React.forwardRef<
         'flex flex-col -mx-px max-h-[90%] overflow-clip',
         'bg-popover/70 backdrop-blur-md',
         'border border-b-0 border-border/50 rounded-t-2xl',
-        'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring/50 focus-visible:ring-offset-2',
+        'ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring/50 focus-visible:ring-offset-2',
         className,
       )}
       {...props}

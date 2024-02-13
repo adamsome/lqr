@@ -12,6 +12,7 @@ import {
 
 import { Label } from '@/app/components/ui/label'
 import { cn } from '@/app/lib/utils'
+import { Stack } from '@/app/components/layout/stack'
 
 const Form = FormProvider
 
@@ -78,7 +79,7 @@ const FormItem = React.forwardRef<
 
   return (
     <FormItemContext.Provider value={{ id }}>
-      <div ref={ref} className={cn('gap-2', className)} {...props} />
+      <Stack ref={ref} className={className} {...props} />
     </FormItemContext.Provider>
   )
 })

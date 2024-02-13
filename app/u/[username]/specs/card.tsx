@@ -1,15 +1,13 @@
 import { ReactNode } from 'react'
 
-import { CardContent, CardHeader, CardTitle } from '@/app/components/ui/card'
-import {
-  LINK_BOX_CLASSNAME,
-  LinkBox,
-  LinkBoxLink,
-} from '@/app/components/ui/link-box'
+import { Level } from '@/app/components/layout/level'
+import { Stack } from '@/app/components/layout/stack'
+import { CardContent, CardHeader } from '@/app/components/ui/card'
+import { LINK_BOX_CLASSNAME, LinkBoxLink } from '@/app/components/ui/link-box'
 import { getIngredientView as makeGetIngredientView } from '@/app/lib/ingredient/get-ingredient-view'
 import { CompProps, IngredientData, Spec } from '@/app/lib/types'
 import { capitalize, cn, rejectNil } from '@/app/lib/utils'
-import { Stack } from '@/app/components/layout/stack'
+import { Title } from '@/app/u/[username]/specs/[id]/title'
 
 type Props = {
   className?: string
@@ -17,19 +15,20 @@ type Props = {
   spec: Spec
   href?: string
   description?: ReactNode
+  actions?: ReactNode
 }
 
-export function Card({ className, data, spec, href, description }: Props) {
-  const { name, year, ingredients } = spec
+export function Card({
+  className,
+  data,
+  spec,
+  href,
+  description,
+  actions,
+}: Props) {
+  const { ingredients } = spec
   const getIngredientView = makeGetIngredientView(data.dict)
-  const title = (
-    <CardTitle className="text-base font-bold whitespace-nowrap text-ellipsis overflow-hidden">
-      {name}
-      {year && (
-        <span className="text-muted-foreground font-medium"> ({year})</span>
-      )}
-    </CardTitle>
-  )
+  const title = <Title className="text-base" spec={spec} />
   return (
     <Stack
       className={cn(
@@ -42,7 +41,19 @@ export function Card({ className, data, spec, href, description }: Props) {
       gap={0.5}
     >
       <CardHeader className="px-2 py-0 w-full">
-        {href ? <LinkBoxLink href={href}>{title}</LinkBoxLink> : title}
+        <Level gap={0.5}>
+          {href ? (
+            <LinkBoxLink
+              className="flex-1 whitespace-nowrap text-ellipsis overflow-hidden"
+              href={href}
+            >
+              {title}
+            </LinkBoxLink>
+          ) : (
+            title
+          )}
+          {actions && <div className="z-10 -me-1 flex-shrink-0">{actions}</div>}
+        </Level>
         {description}
       </CardHeader>
       <CardContent className="px-2 py-0 text-xs text-muted-foreground font-medium line-clamp-2">

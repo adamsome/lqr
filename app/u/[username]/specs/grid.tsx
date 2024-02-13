@@ -5,6 +5,8 @@ import { getIngredientData } from '@/app/lib/model/ingredient-data'
 import { toHome, toSpecItem } from '@/app/lib/routes'
 import { Spec, User } from '@/app/lib/types'
 import { cn } from '@/app/lib/utils'
+import { MoreMenu } from '@/app/u/[username]/specs/[id]/more-menu'
+import { MoreMenuContent } from '@/app/u/[username]/specs/[id]/more-menu-content'
 import { SpecStockText } from '@/app/u/[username]/specs/[id]/spec-stock'
 import { Criteria } from '@/app/u/[username]/specs/_criteria/types'
 import { Card, CardDescription } from '@/app/u/[username]/specs/card'
@@ -35,7 +37,7 @@ export async function Grid({
     )
   }
   const data = await getIngredientData()
-  const { limit } = criteria
+  const { username = '', limit } = criteria
   return (
     <>
       <div
@@ -44,12 +46,12 @@ export async function Grid({
           'gap-2 sm:gap-3 lg:gap-4 -mx-2',
         )}
       >
-        {specs.slice(0, criteria.limit).map((spec) => (
+        {specs.slice(0, limit).map((spec) => (
           <Card
             key={spec.id}
             data={data}
             spec={spec}
-            href={toSpecItem(spec, criteria.username)}
+            href={toSpecItem(spec, username)}
             description={
               <CardDescription>
                 <UserAvatarLink className="z-10" href={toHome(spec.username)}>
@@ -63,6 +65,11 @@ export async function Grid({
                   <SpecStockText className="text-xs" stock={spec.stock} />
                 )}
               </CardDescription>
+            }
+            actions={
+              <MoreMenu>
+                <MoreMenuContent username={username} spec={spec} />
+              </MoreMenu>
             }
           />
         ))}
