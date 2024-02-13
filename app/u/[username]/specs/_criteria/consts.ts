@@ -11,10 +11,11 @@ export const DEFAULT_LIMIT = 50
 export const SORT_VALUES = [
   'stock',
   'name',
+  'updated',
+  'created',
+  'year',
   'category',
   'user',
-  'created',
-  'updated',
 ] as const
 
 export type SpecSort = (typeof SORT_VALUES)[number]
@@ -22,19 +23,21 @@ export type SpecSort = (typeof SORT_VALUES)[number]
 const SORT_DICT: Record<SpecSort, string> = {
   stock: 'In Stock',
   name: 'Name',
+  updated: 'Updated',
+  created: 'Added',
+  year: 'Year',
   category: 'Category',
   user: 'User',
-  created: 'Added',
-  updated: 'Updated',
 }
 
 const IS_SORT_DESC_BY_VALUE: Record<SpecSort, boolean> = {
   stock: true,
   name: false,
+  updated: true,
+  created: true,
+  year: true,
   category: false,
   user: false,
-  created: true,
-  updated: true,
 }
 
 export function getSpecSortLabel(value?: SpecSort): string {

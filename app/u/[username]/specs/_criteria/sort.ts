@@ -25,6 +25,29 @@ export function sortSpecs(
     case 'name': {
       return sortWith([order((s) => s.name)], specs)
     }
+    case 'updated': {
+      return sortWith(
+        [
+          order((s) => s.updatedAt),
+          order((s) => s.createdAt),
+          descend((s) => (s.stock?.count ?? 0) / (s.stock?.total ?? 0)),
+        ],
+        specs,
+      )
+    }
+    case 'created': {
+      return sortWith(
+        [
+          order((s) => s.createdAt),
+          order((s) => s.updatedAt),
+          descend((s) => (s.stock?.count ?? 0) / (s.stock?.total ?? 0)),
+        ],
+        specs,
+      )
+    }
+    case 'year': {
+      return sortWith([order((s) => s.year ?? 0), order((s) => s.name)], specs)
+    }
     case 'category': {
       return sortWith(
         [
@@ -41,26 +64,6 @@ export function sortSpecs(
           order((s) => s.username),
           descend((s) => (s.stock?.count ?? 0) / (s.stock?.total ?? 0)),
           descend((s) => s.updatedAt),
-        ],
-        specs,
-      )
-    }
-    case 'created': {
-      return sortWith(
-        [
-          order((s) => s.createdAt),
-          order((s) => s.updatedAt),
-          descend((s) => (s.stock?.count ?? 0) / (s.stock?.total ?? 0)),
-        ],
-        specs,
-      )
-    }
-    case 'updated': {
-      return sortWith(
-        [
-          order((s) => s.updatedAt),
-          order((s) => s.createdAt),
-          descend((s) => (s.stock?.count ?? 0) / (s.stock?.total ?? 0)),
         ],
         specs,
       )
