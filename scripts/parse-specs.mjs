@@ -670,7 +670,7 @@ export function parseSpecs() {
         skipPreSplit.some(
           (c) =>
             categoryStr === c.toLowerCase() ||
-            ingName.toLowerCase() === c.toLowerCase()
+            ingName.toLowerCase() === c.toLowerCase(),
         )
       )
         return specs[id].ingredients.push({ name: ingName })
@@ -684,7 +684,7 @@ export function parseSpecs() {
         if (fullMatch) {
           fullMatch = Array.isArray(fullMatch) ? fullMatch : [fullMatch]
           return fullMatch.forEach((fm) =>
-            specs[id].ingredients.push({ ...fm })
+            specs[id].ingredients.push({ ...fm }),
           )
         }
 
@@ -748,7 +748,7 @@ export function parseSpecs() {
               ingredientID.length > 7 &&
               (it.id.startsWith(ingredientID) ||
                 ingredientID.endsWith(it.id) ||
-                it.id.endsWith(ingredientID)))
+                it.id.endsWith(ingredientID))),
         )
         if (ingMatch) {
           ing.bottleID = ingMatch.id
@@ -816,7 +816,7 @@ export function parseSpecs() {
   writeFileSync(
     join(dir, '../json/specs.json'),
     JSON.stringify(specs, null, 2),
-    { encoding: 'utf8' }
+    { encoding: 'utf8' },
   )
 
   function validateSpirit(item, match, name, cat, c1, c2, c3, c4) {

@@ -38,7 +38,7 @@ export function Search({ className, search: searchProp }: Props) {
         type="search"
         autoComplete="off"
         value={search}
-        placeholder="Filter specs by name..."
+        placeholder="Filter specs..."
         onChange={(e) => setSearch(e.target.value)}
       />
       <Level

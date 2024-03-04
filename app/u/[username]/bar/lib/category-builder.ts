@@ -23,8 +23,9 @@ import {
 } from '@/app/u/[username]/bar/lib/defs'
 import {
   BarCategory,
-  BarCategoryDef,
+  BarListCategoryDef,
   CABINETS,
+  CategoryKeys,
 } from '@/app/u/[username]/bar/lib/types'
 
 function createTree(
@@ -68,7 +69,7 @@ export const createCategoryBuilder = (
   )
   const used = new Set<string>()
 
-  const build = (def: BarCategoryDef): BarCategory => {
+  const build = (def: BarListCategoryDef): BarCategory => {
     const { include: incl, exclude, ids = [], kind, excludeIDs } = def
     const include = incl ?? []
     const exclIDs = new Set(excludeIDs ?? [])
@@ -88,9 +89,8 @@ export const createCategoryBuilder = (
 
     const allItems = getItems({ include, exclude }) ?? []
     const items = allItems.filter((it) => !exclIDs.has(it.id))
-    const stockedIDs = topIDs
-      .concat(items.map(({ id }) => id))
-      .filter((id) => (dict[id]?.stock ?? -1) >= 0)
+    const allIDs = topIDs.concat(items.map(({ id }) => id))
+    const stockedIDs = allIDs.filter((id) => (dict[id]?.stock ?? -1) >= 0)
 
     const excludeSet = new Set(stockedIDs)
     const root = createTree(items, excludeSet)
@@ -115,26 +115,53 @@ export const createCategoryBuilder = (
     name =
       name ?? def.name ?? getName(include?.[0] ?? {}, { inclCategory: true })
 
-    return { ...def, stocked, root, topItems, name }
+    return { ...def, stocked, root, topItems, name, allIDs }
   }
 
   return { build, unused, used }
 }
 
-export const buildCategories = cache(async (username?: string) => {
+type BarCategoryData = {
+  categories: Map<string, BarCategory>
+  keysByIngredientID: Map<string, CategoryKeys>
+}
+
+export const buildCategoryData = async (data: IngredientData) => {
+  const { build } = createCategoryBuilder(data)
+  const initialState: BarCategoryData = {
+    categories: new Map(),
+    keysByIngredientID: new Map(),
+  }
+  return CABINETS.reduce((cabinetAcc, cabinet) => {
+    const cabinetDef = getCabinetDef({ cabinet })
+    const shelves = Object.keys(cabinetDef.children)
+    return shelves.reduce((shelfAcc, shelf) => {
+      const shelfDef = getShelfDef({ cabinet, shelf })
+      const categories = Object.keys(shelfDef.children)
+      return categories.reduce((categoryAcc, category) => {
+        const keys = { cabinet, shelf, category }
+        const value = build(getCategoryDef(keys))
+        categoryAcc.categories.set(category, value)
+        value.allIDs.reduce((acc, id) => {
+          if (acc.keysByIngredientID.has(id)) {
+            const prevCategory = acc.keysByIngredientID.get(id)?.category
+            if (prevCategory !== category) {
+              console.warn(
+                `Ingredient ${id} already has category '${prevCategory}'; setting to '${category}'`,
+              )
+            }
+          }
+          acc.keysByIngredientID.set(id, keys)
+          return acc
+        }, categoryAcc)
+        return categoryAcc
+      }, shelfAcc)
+    }, cabinetAcc)
+  }, initialState)
+}
+
+export const buildUserCategoryData = cache(async (username?: string) => {
   const user = await getUser(username)
   const data = await getIngredientData(user?.id)
-  const { build } = createCategoryBuilder(data)
-  return new Map(
-    CABINETS.flatMap((cabinet) =>
-      getCabinetDef({ cabinet }).gridIDs.flatMap((shelf) =>
-        getShelfDef({ cabinet, shelf }).gridIDs.map((category) => {
-          return [
-            category,
-            build(getCategoryDef({ cabinet, shelf, category })),
-          ] as const
-        }),
-      ),
-    ),
-  )
+  return buildCategoryData(data)
 })

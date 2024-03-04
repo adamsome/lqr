@@ -318,18 +318,18 @@ Image,ID,Name,Type,Material,Style,Substyle,Method,Aging,Origin,Stock,Want,Refere
 ,3440,Monkey Shoulder Blended Malt,Whiskey,Barley & grains,Scotch whisky,Blended,Pot Still,Aged,Scotland,,5,D+C: WH
 ,3450,Great King St. Glasgow Blend,Whiskey,Barley & grains,Scotch whisky,Blended,Pot Still,Aged,Scotland,,5,D+C: WH
 ,3460,Redbreast 12-year,Whiskey,Barley & grains,Irish whisky,Single malt,Pot Still,Aged,Ireland,,5,D+C: WH
-,3470,Bunnahabhain,Whiskey,Barley & grains,Scotch whisky,Single malt,Pot Still,Aged,Scotland,1,7,
-,3480,Springbank 10-year,Whiskey,Barley & grains,Scotch whisky,Single malt,Pot Still,Aged,Scotland,,4,D+C: WH
-,3485,Macallan 15-year,Whiskey,Barley & grains,Scotch whisky,Single malt,Pot Still,Aged,Scotland,,4,D+C: WH
-,3490,Kilkerran 12-year,Whiskey,Barley & grains,Scotch whisky,Single malt,Pot Still,Aged,Scotland,,4,D+C: WH
-,3500,Highland Park 12-year,Whiskey,Barley & grains,Scotch whisky,Single malt,Pot Still,Aged,Scotland,,4,"D+C: WH, D+C: Codex"
-,3505,Glen Grant 10-year,Whiskey,Barley & grains,Scotch whisky,Single malt,Pot Still,Aged,Scotland,,4,"D+C: WH, D+C: Codex"
-,3506,Caol Ila 12-year,Whiskey,Barley & grains,Scotch whisky,Single malt,Pot Still,Aged,Scotland,,4,"D+C: WH, D+C: Codex"
+,3470,Bunnahabhain,Whiskey,Barley & grains,Scotch whisky,Islay,Pot Still,Aged,Scotland,1,7,
+,3480,Springbank 10-year,Whiskey,Barley & grains,Scotch whisky,Campbeltown,Pot Still,Aged,Scotland,,4,D+C: WH
+,3485,Macallan 15-year,Whiskey,Barley & grains,Scotch whisky,Speyside,Pot Still,Aged,Scotland,,4,D+C: WH
+,3490,Kilkerran 12-year,Whiskey,Barley & grains,Scotch whisky,Campbeltown,Pot Still,Aged,Scotland,,4,D+C: WH
+,3500,Highland Park 12-year,Whiskey,Barley & grains,Scotch whisky,Highlands,Pot Still,Aged,Scotland,,4,"D+C: WH, D+C: Codex"
+,3505,Glen Grant 10-year,Whiskey,Barley & grains,Scotch whisky,Speyside,Pot Still,Aged,Scotland,,4,"D+C: WH, D+C: Codex"
+,3506,Caol Ila 12-year,Whiskey,Barley & grains,Scotch whisky,Islay,Pot Still,Aged,Scotland,,4,"D+C: WH, D+C: Codex"
 ,3510,Connemara Peated,Whiskey,Barley & grains,Irish whisky,Single malt,Pot Still,Aged,Ireland,,4,D+C: WH
 ,3515,Knappogue Castle 12-year,Whiskey,Barley & grains,Irish whisky,Single malt,Pot Still,Aged,Ireland,,4,D+C: WH
-,3520,Bowmore 12-year,Whiskey,Barley & grains,Scotch whisky,Single malt,Pot Still,Aged,Scotland,,4,"D+C: WH, D+C: Codex"
-,3529,Kilchoman Machir Bay,Whiskey,Barley & grains,Scotch whisky,Single malt,Pot Still,Aged,Scotland,,4,"D+C: WH, D+C: Codex"
-,3530,Laphroaig 10-year,Whiskey,Barley & grains,Scotch whisky,Single malt,Pot Still,Aged,Scotland,,4,"D+C: WH, D+C: Codex"
+,3520,Bowmore 12-year,Whiskey,Barley & grains,Scotch whisky,Islay,Pot Still,Aged,Scotland,,4,"D+C: WH, D+C: Codex"
+,3529,Kilchoman Machir Bay,Whiskey,Barley & grains,Scotch whisky,Islay,Pot Still,Aged,Scotland,,4,"D+C: WH, D+C: Codex"
+,3530,Laphroaig 10-year,Whiskey,Barley & grains,Scotch whisky,Islay,Pot Still,Aged,Scotland,,4,"D+C: WH, D+C: Codex"
 ,3532,Hibiki Japanese Harmony,Whiskey,Barley & grains,Japanese whisky,Single malt,Pot Still,Aged,Japan,,6,D+C: WH
 ,3533,Suntory Toki,Whiskey,Barley & grains,Japanese whisky,Single malt,Pot Still,Aged,Japan,,6,D+C: WH
 ,3534,Nikka Coffey Grain,Whiskey,Barley & grains,Japanese whisky,Single malt,Pot Still,Aged,Japan,,6,D+C: WH

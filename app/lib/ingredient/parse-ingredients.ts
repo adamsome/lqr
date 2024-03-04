@@ -13,12 +13,14 @@ export function createIngredientParser(
     },
     {},
   )
+
   function parseIngredient(def: Ingredient) {
     const { id } = def
     const userIngredient = userIngredientDict[id] ?? {}
     const ingredient: Ingredient = { ...def, ...userIngredient }
     return ingredient
   }
+
   return [baseIngredientDict, parseIngredient] as const
 }
 

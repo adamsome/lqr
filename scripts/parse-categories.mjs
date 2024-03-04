@@ -108,30 +108,30 @@ export function parseCategories() {
 
   const categoryList = Object.keys(categoryDict).map((id) => categoryDict[id])
   const ingredientList = Object.keys(ingredientDict).map(
-    (id) => ingredientDict[id]
+    (id) => ingredientDict[id],
   )
 
   writeFileSync(
     join(dir, '../json/categories.json'),
     JSON.stringify(categoryList, null, 2),
-    { encoding: 'utf8' }
+    { encoding: 'utf8' },
   )
   writeFileSync(
     join(dir, '../json/base-ingredients.json'),
     JSON.stringify(ingredientList, null, 2),
-    { encoding: 'utf8' }
+    { encoding: 'utf8' },
   )
   writeFileSync(
     join(dir, '../json/category-filter.json'),
     JSON.stringify(tree, null, 2),
-    { encoding: 'utf8' }
+    { encoding: 'utf8' },
   )
 
   const ingredientCategories = categoryList.map((c) => `  | '${c.id}'`)
   const ingredientCategoryDefs = categoryList.map((c) =>
     c.type
       ? `  ${c.id}: { id: '${c.id}', name: '${c.name}', type: '${c.type}' },`
-      : `  ${c.id}: { id: '${c.id}', name: '${c.name}' },`
+      : `  ${c.id}: { id: '${c.id}', name: '${c.name}' },`,
   )
   let consts = []
   consts.push(`// Auto-generated: Do not modify.`)
@@ -152,7 +152,11 @@ export function parseCategories() {
   consts.push(...ingredientCategoryDefs)
   consts.push(`}`)
   consts.push(``)
-  writeFileSync(join(dir, '../lib/generated-consts.ts'), consts.join('\n'), {
-    encoding: 'utf8',
-  })
+  writeFileSync(
+    join(dir, '../app/lib/generated-consts.ts'),
+    consts.join('\n'),
+    {
+      encoding: 'utf8',
+    },
+  )
 }

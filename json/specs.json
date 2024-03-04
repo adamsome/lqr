@@ -66,9 +66,7 @@
       {
         "id": "cane_rum",
         "productionMethod": "blended",
-        "aging": [
-          "light"
-        ]
+        "aging": ["light"]
       }
     ],
     "bar": "Smuggler's Cove",
@@ -105,10 +103,7 @@
       {
         "id": "cane_rum",
         "productionMethod": "column",
-        "aging": [
-          "medium",
-          "long"
-        ]
+        "aging": ["medium", "long"]
       },
       {
         "bottleID": "angostura",
@@ -146,17 +141,12 @@
       {
         "id": "cane_rum",
         "productionMethod": "blended",
-        "aging": [
-          "medium",
-          "long"
-        ]
+        "aging": ["medium", "long"]
       },
       {
         "id": "cane_rum",
         "productionMethod": "blended",
-        "aging": [
-          "light"
-        ]
+        "aging": ["light"]
       },
       {
         "id": "cane_rum",
@@ -202,10 +192,7 @@
       {
         "id": "cane_rum_agricole",
         "productionMethod": "coffey",
-        "aging": [
-          "medium",
-          "long"
-        ]
+        "aging": ["medium", "long"]
       },
       {
         "bottleID": "angostura",
@@ -246,18 +233,12 @@
       },
       {
         "id": "cane_rum_agricole",
-        "aging": [
-          "medium",
-          "long"
-        ]
+        "aging": ["medium", "long"]
       },
       {
         "id": "cane_rum",
         "productionMethod": "blended",
-        "aging": [
-          "medium",
-          "long"
-        ]
+        "aging": ["medium", "long"]
       },
       {
         "bottleID": "angostura",
@@ -366,10 +347,7 @@
       {
         "id": "cane_rum",
         "productionMethod": "blended",
-        "aging": [
-          "medium",
-          "long"
-        ]
+        "aging": ["medium", "long"]
       }
     ],
     "bar": "Smuggler's Cove",
@@ -408,10 +386,7 @@
       {
         "id": "cane_rum",
         "productionMethod": "blended",
-        "aging": [
-          "medium",
-          "long"
-        ]
+        "aging": ["medium", "long"]
       },
       {
         "id": "cane_rum",
@@ -494,10 +469,7 @@
       {
         "id": "cane_rum",
         "productionMethod": "blended",
-        "aging": [
-          "medium",
-          "long"
-        ]
+        "aging": ["medium", "long"]
       },
       {
         "id": "cane_rum",
@@ -585,17 +557,12 @@
       {
         "id": "cane_rum",
         "productionMethod": "blended",
-        "aging": [
-          "light"
-        ]
+        "aging": ["light"]
       },
       {
         "id": "cane_rum",
         "productionMethod": "blended",
-        "aging": [
-          "medium",
-          "long"
-        ]
+        "aging": ["medium", "long"]
       }
     ],
     "bar": "Smuggler's Cove",
@@ -669,9 +636,7 @@
       {
         "id": "cane_rum",
         "productionMethod": "blended",
-        "aging": [
-          "light"
-        ]
+        "aging": ["light"]
       }
     ],
     "bar": "Smuggler's Cove",
@@ -744,10 +709,7 @@
       {
         "id": "cane_rum",
         "productionMethod": "column",
-        "aging": [
-          "medium",
-          "long"
-        ]
+        "aging": ["medium", "long"]
       },
       {
         "id": "bitters_herbstura"
@@ -848,10 +810,7 @@
       {
         "id": "cane_rum",
         "productionMethod": "blended",
-        "aging": [
-          "medium",
-          "long"
-        ]
+        "aging": ["medium", "long"]
       },
       {
         "id": "cane_rum",
@@ -862,9 +821,7 @@
         "id": "cane_rum_jamaican",
         "bottleID": "smith_cross_navy_strength",
         "productionMethod": "pot",
-        "aging": [
-          "light"
-        ],
+        "aging": ["light"],
         "overproof": true
       },
       {
@@ -901,10 +858,7 @@
       {
         "id": "cane_rum",
         "productionMethod": "blended",
-        "aging": [
-          "medium",
-          "long"
-        ]
+        "aging": ["medium", "long"]
       }
     ],
     "bar": "Smuggler's Cove",
@@ -940,9 +894,7 @@
       {
         "id": "cane_rum",
         "productionMethod": "blended",
-        "aging": [
-          "light"
-        ]
+        "aging": ["light"]
       },
       {
         "bottleID": "cimarron_reposado",
@@ -1041,9 +993,7 @@
       {
         "id": "cane_rum",
         "productionMethod": "blended",
-        "aging": [
-          "light"
-        ]
+        "aging": ["light"]
       },
       {
         "id": "soda_club"
@@ -1114,17 +1064,12 @@
       {
         "id": "cane_rum",
         "productionMethod": "blended",
-        "aging": [
-          "medium",
-          "long"
-        ]
+        "aging": ["medium", "long"]
       },
       {
         "id": "cane_rum",
         "productionMethod": "blended",
-        "aging": [
-          "light"
-        ]
+        "aging": ["light"]
       },
       {
         "bottleID": "angostura",
@@ -1168,9 +1113,7 @@
       {
         "id": "cane_rum",
         "productionMethod": "blended",
-        "aging": [
-          "light"
-        ]
+        "aging": ["light"]
       }
     ],
     "bar": "Smuggler's Cove",
@@ -1278,10 +1221,7 @@
       {
         "id": "cane_rum",
         "productionMethod": "blended",
-        "aging": [
-          "medium",
-          "long"
-        ]
+        "aging": ["medium", "long"]
       },
       {
         "id": "spice_cinnamon"
@@ -1318,10 +1258,7 @@
       {
         "id": "cane_rum",
         "productionMethod": "column",
-        "aging": [
-          "medium",
-          "long"
-        ]
+        "aging": ["medium", "long"]
       },
       {
         "id": "cane_rum",
@@ -1371,10 +1308,7 @@
       {
         "id": "cane_rum",
         "productionMethod": "column",
-        "aging": [
-          "medium",
-          "long"
-        ]
+        "aging": ["medium", "long"]
       },
       {
         "bottleID": "peychauds",
@@ -1413,10 +1347,7 @@
       {
         "id": "cane_rum",
         "productionMethod": "blended",
-        "aging": [
-          "medium",
-          "long"
-        ]
+        "aging": ["medium", "long"]
       },
       {
         "bottleID": "bittermens_elemakule_tiki_bitters",
@@ -1556,10 +1487,7 @@
       {
         "id": "cane_rum",
         "productionMethod": "column",
-        "aging": [
-          "medium",
-          "long"
-        ]
+        "aging": ["medium", "long"]
       },
       {
         "bottleID": "peychauds",
@@ -1597,10 +1525,7 @@
       {
         "id": "cane_rum",
         "productionMethod": "blended",
-        "aging": [
-          "medium",
-          "long"
-        ]
+        "aging": ["medium", "long"]
       },
       {
         "id": "spice_cinnamon"
@@ -1637,9 +1562,7 @@
       {
         "id": "cane_rum",
         "productionMethod": "blended",
-        "aging": [
-          "light"
-        ]
+        "aging": ["light"]
       },
       {
         "bottleID": "angostura",
@@ -1680,17 +1603,12 @@
       {
         "id": "cane_rum",
         "productionMethod": "blended",
-        "aging": [
-          "light"
-        ]
+        "aging": ["light"]
       },
       {
         "id": "cane_rum",
         "productionMethod": "blended",
-        "aging": [
-          "medium",
-          "long"
-        ]
+        "aging": ["medium", "long"]
       }
     ],
     "bar": "Smuggler's Cove",
@@ -1727,9 +1645,7 @@
         "id": "cane_rum_jamaican",
         "bottleID": "smith_cross_navy_strength",
         "productionMethod": "pot",
-        "aging": [
-          "light"
-        ],
+        "aging": ["light"],
         "overproof": true
       },
       {
@@ -1764,10 +1680,7 @@
       },
       {
         "id": "cane_rum_agricole",
-        "aging": [
-          "medium",
-          "long"
-        ]
+        "aging": ["medium", "long"]
       },
       {
         "id": "spice_nutmeg"
@@ -1807,10 +1720,7 @@
       {
         "id": "cane_rum",
         "productionMethod": "blended",
-        "aging": [
-          "medium",
-          "long"
-        ]
+        "aging": ["medium", "long"]
       },
       {
         "id": "wine_sparkling"
@@ -1920,9 +1830,7 @@
       {
         "id": "cane_rum",
         "productionMethod": "pot",
-        "aging": [
-          "none"
-        ]
+        "aging": ["none"]
       }
     ],
     "bar": "Smuggler's Cove",
@@ -1953,10 +1861,7 @@
       {
         "id": "cane_rum",
         "productionMethod": "blended",
-        "aging": [
-          "medium",
-          "long"
-        ]
+        "aging": ["medium", "long"]
       },
       {
         "bottleID": "angostura",
@@ -2046,10 +1951,7 @@
       {
         "id": "cane_rum",
         "productionMethod": "blended",
-        "aging": [
-          "medium",
-          "long"
-        ]
+        "aging": ["medium", "long"]
       },
       {
         "bottleID": "angostura",
@@ -2092,10 +1994,7 @@
       {
         "id": "cane_rum",
         "productionMethod": "blended",
-        "aging": [
-          "medium",
-          "long"
-        ]
+        "aging": ["medium", "long"]
       },
       {
         "bottleID": "angostura",
@@ -2133,10 +2032,7 @@
       {
         "id": "cane_rum",
         "productionMethod": "column",
-        "aging": [
-          "medium",
-          "long"
-        ]
+        "aging": ["medium", "long"]
       },
       {
         "bottleID": "angostura_orange_bitters",
@@ -2202,10 +2098,7 @@
       {
         "id": "cane_rum",
         "productionMethod": "blended",
-        "aging": [
-          "medium",
-          "long"
-        ]
+        "aging": ["medium", "long"]
       },
       {
         "bottleID": "peychauds",
@@ -2246,9 +2139,7 @@
       {
         "id": "cane_rum",
         "productionMethod": "blended",
-        "aging": [
-          "light"
-        ]
+        "aging": ["light"]
       },
       {
         "id": "cane_rum",
@@ -2329,9 +2220,7 @@
         "id": "cane_rum_jamaican",
         "bottleID": "smith_cross_navy_strength",
         "productionMethod": "pot",
-        "aging": [
-          "light"
-        ],
+        "aging": ["light"],
         "overproof": true
       },
       {
@@ -2415,10 +2304,7 @@
       {
         "id": "cane_rum",
         "productionMethod": "blended",
-        "aging": [
-          "medium",
-          "long"
-        ]
+        "aging": ["medium", "long"]
       }
     ],
     "bar": "Smuggler's Cove",
@@ -2442,10 +2328,7 @@
       {
         "id": "cane_rum",
         "productionMethod": "blended",
-        "aging": [
-          "medium",
-          "long"
-        ]
+        "aging": ["medium", "long"]
       }
     ],
     "bar": "Smuggler's Cove",
@@ -2482,10 +2365,7 @@
       {
         "id": "cane_rum",
         "productionMethod": "blended",
-        "aging": [
-          "medium",
-          "long"
-        ]
+        "aging": ["medium", "long"]
       }
     ],
     "bar": "Smuggler's Cove",
@@ -2516,9 +2396,7 @@
       {
         "id": "cane_rum",
         "productionMethod": "blended",
-        "aging": [
-          "light"
-        ]
+        "aging": ["light"]
       }
     ],
     "bar": "Smuggler's Cove",
@@ -2545,9 +2423,7 @@
       {
         "id": "cane_rum",
         "productionMethod": "blended",
-        "aging": [
-          "light"
-        ]
+        "aging": ["light"]
       }
     ],
     "bar": "Smuggler's Cove",
@@ -2581,9 +2457,7 @@
       {
         "id": "cane_rum",
         "productionMethod": "blended",
-        "aging": [
-          "light"
-        ]
+        "aging": ["light"]
       }
     ],
     "bar": "Smuggler's Cove",
@@ -2617,9 +2491,7 @@
       {
         "id": "cane_rum",
         "productionMethod": "blended",
-        "aging": [
-          "light"
-        ]
+        "aging": ["light"]
       }
     ],
     "bar": "Smuggler's Cove",
@@ -2650,9 +2522,7 @@
       {
         "id": "cane_rum",
         "productionMethod": "blended",
-        "aging": [
-          "light"
-        ]
+        "aging": ["light"]
       }
     ],
     "bar": "Smuggler's Cove",
@@ -2679,9 +2549,7 @@
       {
         "id": "cane_rum",
         "productionMethod": "blended",
-        "aging": [
-          "light"
-        ]
+        "aging": ["light"]
       },
       {
         "id": "grain_whiskey_rye"
@@ -2712,10 +2580,7 @@
       {
         "id": "cane_rum",
         "productionMethod": "blended",
-        "aging": [
-          "medium",
-          "long"
-        ]
+        "aging": ["medium", "long"]
       },
       {
         "id": "cream_sweet"
@@ -2742,10 +2607,7 @@
       {
         "id": "cane_rum",
         "productionMethod": "blended",
-        "aging": [
-          "medium",
-          "long"
-        ]
+        "aging": ["medium", "long"]
       },
       {
         "id": "juice_lime"
@@ -2790,10 +2652,7 @@
       {
         "id": "cane_rum",
         "productionMethod": "blended",
-        "aging": [
-          "medium",
-          "long"
-        ]
+        "aging": ["medium", "long"]
       },
       {
         "id": "grain_gin_sloe"
@@ -2846,9 +2705,7 @@
         "bottleID": "wray_nephew_overproof",
         "id": "cane_rum_jamaican",
         "productionMethod": "pot",
-        "aging": [
-          "none"
-        ],
+        "aging": ["none"],
         "overproof": true
       },
       {
@@ -2885,11 +2742,7 @@
       {
         "id": "cane_rum_jamaican",
         "productionMethod": "blended",
-        "aging": [
-          "light",
-          "medium",
-          "long"
-        ]
+        "aging": ["light", "medium", "long"]
       }
     ],
     "bar": "Smuggler's Cove",
@@ -2912,16 +2765,11 @@
       },
       {
         "id": "cane_rum_agricole",
-        "aging": [
-          "none"
-        ]
+        "aging": ["none"]
       },
       {
         "id": "cane_rum_agricole",
-        "aging": [
-          "medium",
-          "long"
-        ]
+        "aging": ["medium", "long"]
       },
       {
         "id": "fruit_lime"
@@ -2951,10 +2799,7 @@
       {
         "id": "cane_rum",
         "productionMethod": "blended",
-        "aging": [
-          "medium",
-          "long"
-        ]
+        "aging": ["medium", "long"]
       },
       {
         "bottleID": "angostura",
@@ -3020,10 +2865,7 @@
       {
         "id": "cane_rum",
         "productionMethod": "blended",
-        "aging": [
-          "medium",
-          "long"
-        ]
+        "aging": ["medium", "long"]
       },
       {
         "bottleID": "angostura",
@@ -3082,10 +2924,7 @@
       {
         "id": "cane_rum",
         "productionMethod": "blended",
-        "aging": [
-          "medium",
-          "long"
-        ]
+        "aging": ["medium", "long"]
       },
       {
         "id": "spice_vanillabean"
@@ -3140,10 +2979,7 @@
       {
         "id": "cane_rum",
         "productionMethod": "blended",
-        "aging": [
-          "medium",
-          "long"
-        ]
+        "aging": ["medium", "long"]
       },
       {
         "id": "bitters_mole"
@@ -3178,9 +3014,7 @@
         "id": "cane_rum_jamaican",
         "bottleID": "smith_cross_navy_strength",
         "productionMethod": "pot",
-        "aging": [
-          "light"
-        ],
+        "aging": ["light"],
         "overproof": true
       },
       {
@@ -3213,10 +3047,7 @@
       {
         "id": "cane_rum",
         "productionMethod": "blended",
-        "aging": [
-          "medium",
-          "long"
-        ]
+        "aging": ["medium", "long"]
       },
       {
         "name": "Water Hot"
@@ -3289,10 +3120,7 @@
       },
       {
         "id": "cane_rum_agricole",
-        "aging": [
-          "medium",
-          "long"
-        ]
+        "aging": ["medium", "long"]
       },
       {
         "bottleID": "angostura",
@@ -3324,10 +3152,7 @@
       {
         "id": "cane_rum",
         "productionMethod": "blended",
-        "aging": [
-          "medium",
-          "long"
-        ]
+        "aging": ["medium", "long"]
       },
       {
         "bottleID": "angostura",
@@ -3358,17 +3183,13 @@
       {
         "id": "cane_rum",
         "productionMethod": "blended",
-        "aging": [
-          "light"
-        ]
+        "aging": ["light"]
       },
       {
         "bottleID": "wray_nephew_overproof",
         "id": "cane_rum_jamaican",
         "productionMethod": "pot",
-        "aging": [
-          "none"
-        ],
+        "aging": ["none"],
         "overproof": true
       },
       {
@@ -3403,11 +3224,7 @@
       {
         "id": "cane_rum_jamaican",
         "productionMethod": "blended",
-        "aging": [
-          "light",
-          "medium",
-          "long"
-        ]
+        "aging": ["light", "medium", "long"]
       }
     ],
     "bar": "Smuggler's Cove",
@@ -3436,9 +3253,7 @@
       },
       {
         "id": "cane_rum_agricole",
-        "aging": [
-          "none"
-        ]
+        "aging": ["none"]
       }
     ],
     "bar": "Smuggler's Cove",
@@ -3466,9 +3281,7 @@
       },
       {
         "id": "cane_rum_agricole",
-        "aging": [
-          "none"
-        ]
+        "aging": ["none"]
       }
     ],
     "bar": "Smuggler's Cove",
@@ -3498,9 +3311,7 @@
       },
       {
         "id": "cane_rum_agricole",
-        "aging": [
-          "none"
-        ]
+        "aging": ["none"]
       },
       {
         "bottleID": "angostura",
@@ -3567,9 +3378,7 @@
       {
         "id": "cane_rum",
         "productionMethod": "blended",
-        "aging": [
-          "light"
-        ]
+        "aging": ["light"]
       },
       {
         "bottleID": "angostura",
@@ -3610,9 +3419,7 @@
         "id": "cane_rum_jamaican",
         "bottleID": "smith_cross_navy_strength",
         "productionMethod": "pot",
-        "aging": [
-          "light"
-        ],
+        "aging": ["light"],
         "overproof": true
       },
       {
@@ -3649,18 +3456,12 @@
       {
         "id": "cane_rum",
         "productionMethod": "blended",
-        "aging": [
-          "medium",
-          "long"
-        ]
+        "aging": ["medium", "long"]
       },
       {
         "id": "cane_rum",
         "productionMethod": "column",
-        "aging": [
-          "medium",
-          "long"
-        ]
+        "aging": ["medium", "long"]
       },
       {
         "id": "cane_rum",
@@ -3701,9 +3502,7 @@
       {
         "id": "cane_rum",
         "productionMethod": "column",
-        "aging": [
-          "light"
-        ]
+        "aging": ["light"]
       },
       {
         "id": "grain_gin_londondry"
@@ -3784,10 +3583,7 @@
       {
         "id": "cane_rum",
         "productionMethod": "blended",
-        "aging": [
-          "medium",
-          "long"
-        ]
+        "aging": ["medium", "long"]
       },
       {
         "id": "grain_whiskey_bourbon"
@@ -3836,9 +3632,7 @@
       {
         "id": "cane_rum",
         "productionMethod": "blended",
-        "aging": [
-          "light"
-        ]
+        "aging": ["light"]
       }
     ],
     "bar": "Smuggler's Cove",
@@ -3871,9 +3665,7 @@
       {
         "id": "cane_rum",
         "productionMethod": "blended",
-        "aging": [
-          "light"
-        ]
+        "aging": ["light"]
       },
       {
         "id": "extract_almond"
@@ -3917,11 +3709,7 @@
       {
         "id": "cane_rum_jamaican",
         "productionMethod": "blended",
-        "aging": [
-          "light",
-          "medium",
-          "long"
-        ]
+        "aging": ["light", "medium", "long"]
       },
       {
         "bottleID": "angostura",
@@ -3959,10 +3747,7 @@
       {
         "id": "cane_rum",
         "productionMethod": "blended",
-        "aging": [
-          "medium",
-          "long"
-        ]
+        "aging": ["medium", "long"]
       }
     ],
     "bar": "Smuggler's Cove",
@@ -3999,9 +3784,7 @@
       {
         "id": "cane_rum",
         "productionMethod": "pot",
-        "aging": [
-          "none"
-        ],
+        "aging": ["none"],
         "black": true
       },
       {
@@ -4042,18 +3825,12 @@
       {
         "id": "cane_rum",
         "productionMethod": "blended",
-        "aging": [
-          "medium",
-          "long"
-        ]
+        "aging": ["medium", "long"]
       },
       {
         "id": "cane_rum",
         "productionMethod": "column",
-        "aging": [
-          "medium",
-          "long"
-        ]
+        "aging": ["medium", "long"]
       },
       {
         "id": "cane_rum",
@@ -4097,25 +3874,18 @@
         "id": "cane_rum_jamaican",
         "bottleID": "smith_cross_navy_strength",
         "productionMethod": "pot",
-        "aging": [
-          "light"
-        ],
+        "aging": ["light"],
         "overproof": true
       },
       {
         "id": "cane_rum",
         "productionMethod": "blended",
-        "aging": [
-          "light"
-        ]
+        "aging": ["light"]
       },
       {
         "id": "cane_rum",
         "productionMethod": "column",
-        "aging": [
-          "medium",
-          "long"
-        ]
+        "aging": ["medium", "long"]
       }
     ],
     "bar": "Smuggler's Cove",
@@ -4154,9 +3924,7 @@
       {
         "id": "cane_rum",
         "productionMethod": "blended",
-        "aging": [
-          "light"
-        ]
+        "aging": ["light"]
       }
     ],
     "bar": "Smuggler's Cove",
@@ -4192,9 +3960,7 @@
       {
         "id": "cane_rum",
         "productionMethod": "blended",
-        "aging": [
-          "light"
-        ]
+        "aging": ["light"]
       },
       {
         "id": "fortifiedwine_sherry_oloroso"
@@ -4282,10 +4048,7 @@
       {
         "id": "cane_rum",
         "productionMethod": "blended",
-        "aging": [
-          "medium",
-          "long"
-        ]
+        "aging": ["medium", "long"]
       },
       {
         "bottleID": "angostura",
@@ -4322,9 +4085,7 @@
       {
         "id": "cane_rum",
         "productionMethod": "pot",
-        "aging": [
-          "none"
-        ]
+        "aging": ["none"]
       },
       {
         "bottleID": "bittermens_elemakule_tiki_bitters",
@@ -4359,9 +4120,7 @@
       {
         "id": "cane_rum",
         "productionMethod": "pot",
-        "aging": [
-          "none"
-        ]
+        "aging": ["none"]
       },
       {
         "bottleID": "angostura",
@@ -4399,10 +4158,7 @@
       {
         "id": "cane_rum",
         "productionMethod": "column",
-        "aging": [
-          "medium",
-          "long"
-        ]
+        "aging": ["medium", "long"]
       },
       {
         "bottleID": "angostura",
@@ -4454,10 +4210,7 @@
       {
         "id": "cane_rum",
         "productionMethod": "column",
-        "aging": [
-          "medium",
-          "long"
-        ]
+        "aging": ["medium", "long"]
       }
     ],
     "bar": "Smuggler's Cove",
@@ -4487,17 +4240,12 @@
       {
         "id": "cane_rum",
         "productionMethod": "blended",
-        "aging": [
-          "medium",
-          "long"
-        ]
+        "aging": ["medium", "long"]
       },
       {
         "id": "cane_rum",
         "productionMethod": "blended",
-        "aging": [
-          "light"
-        ]
+        "aging": ["light"]
       },
       {
         "id": "bitters_herbstura"
@@ -4540,17 +4288,12 @@
       {
         "id": "cane_rum",
         "productionMethod": "blended",
-        "aging": [
-          "medium",
-          "long"
-        ]
+        "aging": ["medium", "long"]
       },
       {
         "id": "cane_rum",
         "productionMethod": "blended",
-        "aging": [
-          "light"
-        ]
+        "aging": ["light"]
       },
       {
         "id": "cane_rum",
@@ -5039,9 +4782,7 @@
       {
         "bottleID": "la_favorite_blanc",
         "id": "cane_rum_agricole",
-        "aging": [
-          "none"
-        ]
+        "aging": ["none"]
       },
       {
         "id": "juice_lime"
@@ -5758,9 +5499,7 @@
       {
         "bottleID": "rhum_jm_white_100_proof",
         "id": "cane_rum_agricole",
-        "aging": [
-          "none"
-        ]
+        "aging": ["none"]
       },
       {
         "id": "syrup_pineapple"
@@ -5861,9 +5600,7 @@
         "bottleID": "wray_nephew_overproof",
         "id": "cane_rum_jamaican",
         "productionMethod": "pot",
-        "aging": [
-          "none"
-        ],
+        "aging": ["none"],
         "overproof": true
       },
       {
@@ -5983,9 +5720,7 @@
         "bottleID": "wray_nephew_overproof",
         "id": "cane_rum_jamaican",
         "productionMethod": "pot",
-        "aging": [
-          "none"
-        ],
+        "aging": ["none"],
         "overproof": true
       },
       {
@@ -6074,10 +5809,7 @@
       {
         "bottleID": "linie_aquavit",
         "id": "grain_aquavit",
-        "aging": [
-          "medium",
-          "long"
-        ]
+        "aging": ["medium", "long"]
       },
       {
         "bottleID": "lairds_bonded",
@@ -6129,9 +5861,7 @@
         "bottleID": "cruzan_blackstrap",
         "id": "cane_rum",
         "productionMethod": "blended",
-        "aging": [
-          "light"
-        ],
+        "aging": ["light"],
         "black": true
       },
       {
@@ -6203,9 +5933,7 @@
       {
         "bottleID": "la_favorite_blanc",
         "id": "cane_rum_agricole",
-        "aging": [
-          "none"
-        ]
+        "aging": ["none"]
       },
       {
         "infusion": "jalapeño",
@@ -6431,10 +6159,7 @@
       {
         "bottleID": "st_george_dry_rye",
         "id": "grain_gin_contemporary",
-        "aging": [
-          "medium",
-          "long"
-        ]
+        "aging": ["medium", "long"]
       },
       {
         "id": "juice_pineapple"
@@ -6595,10 +6320,7 @@
       {
         "infusion": "olive",
         "id": "cane_cachaca",
-        "aging": [
-          "medium",
-          "long"
-        ]
+        "aging": ["medium", "long"]
       },
       {
         "id": "syrup_strawberry"
@@ -6763,9 +6485,7 @@
         "id": "cane_rum_jamaican",
         "bottleID": "smith_cross_navy_strength",
         "productionMethod": "pot",
-        "aging": [
-          "light"
-        ],
+        "aging": ["light"],
         "overproof": true
       },
       {
@@ -6807,9 +6527,7 @@
         "bottleID": "cruzan_blackstrap",
         "id": "cane_rum",
         "productionMethod": "blended",
-        "aging": [
-          "light"
-        ],
+        "aging": ["light"],
         "black": true
       },
       {
@@ -6961,10 +6679,7 @@
       {
         "bottleID": "avua_amburana",
         "id": "cane_cachaca",
-        "aging": [
-          "medium",
-          "long"
-        ]
+        "aging": ["medium", "long"]
       },
       {
         "bottleID": "tapatio_anejo",
@@ -7380,9 +7095,7 @@
         "bottleID": "wray_nephew_overproof",
         "id": "cane_rum_jamaican",
         "productionMethod": "pot",
-        "aging": [
-          "none"
-        ],
+        "aging": ["none"],
         "overproof": true
       },
       {
@@ -7428,17 +7141,13 @@
         "bottleID": "diplomatico_planas",
         "id": "cane_rum",
         "productionMethod": "blended",
-        "aging": [
-          "light"
-        ]
+        "aging": ["light"]
       },
       {
         "bottleID": "la_favorite_blanc",
         "infusion": "nori",
         "id": "cane_rum_agricole",
-        "aging": [
-          "none"
-        ]
+        "aging": ["none"]
       },
       {
         "bottleID": "umenoyado_yuzu_shu_liqueur",
@@ -7603,9 +7312,7 @@
         "bottleID": "wray_nephew_overproof",
         "id": "cane_rum_jamaican",
         "productionMethod": "pot",
-        "aging": [
-          "none"
-        ],
+        "aging": ["none"],
         "overproof": true
       }
     ],
@@ -7630,10 +7337,7 @@
       {
         "bottleID": "yaguara_ouro",
         "id": "cane_cachaca",
-        "aging": [
-          "medium",
-          "long"
-        ]
+        "aging": ["medium", "long"]
       },
       {
         "id": "juice_lemon"
@@ -7998,17 +7702,12 @@
       {
         "bottleID": "rhum_jm_white_100_proof",
         "id": "cane_rum_agricole",
-        "aging": [
-          "none"
-        ]
+        "aging": ["none"]
       },
       {
         "bottleID": "avua_amburana",
         "id": "cane_cachaca",
-        "aging": [
-          "medium",
-          "long"
-        ]
+        "aging": ["medium", "long"]
       },
       {
         "id": "juice_lime"
@@ -8629,10 +8328,7 @@
         "bottleID": "banks_7_island",
         "id": "cane_rum",
         "productionMethod": "blended",
-        "aging": [
-          "medium",
-          "long"
-        ]
+        "aging": ["medium", "long"]
       },
       {
         "id": "juice_lime"
@@ -8776,10 +8472,7 @@
       {
         "bottleID": "plantation_3_stars",
         "id": "cane_rum",
-        "aging": [
-          "light",
-          "medium"
-        ]
+        "aging": ["light", "medium"]
       },
       {
         "id": "juice_lemon"
@@ -8977,9 +8670,7 @@
       {
         "bottleID": "rhum_jm_white_100_proof",
         "id": "cane_rum_agricole",
-        "aging": [
-          "none"
-        ]
+        "aging": ["none"]
       },
       {
         "id": "cream_coconut"
@@ -9076,9 +8767,7 @@
         "bottleID": "cruzan_blackstrap",
         "id": "cane_rum",
         "productionMethod": "blended",
-        "aging": [
-          "light"
-        ],
+        "aging": ["light"],
         "black": true
       }
     ],
@@ -9099,10 +8788,7 @@
       {
         "bottleID": "linie_aquavit",
         "id": "grain_aquavit",
-        "aging": [
-          "medium",
-          "long"
-        ]
+        "aging": ["medium", "long"]
       },
       {
         "bottleID": "goslings_black_seal",
@@ -9345,10 +9031,7 @@
       {
         "infusion": "eucalyptus",
         "id": "cane_cachaca",
-        "aging": [
-          "medium",
-          "long"
-        ]
+        "aging": ["medium", "long"]
       },
       {
         "id": "juice_lime"
@@ -9382,10 +9065,7 @@
         "bottleID": "probitas_white",
         "id": "cane_rum",
         "productionMethod": "blended",
-        "aging": [
-          "medium",
-          "long"
-        ]
+        "aging": ["medium", "long"]
       },
       {
         "bottleID": "clairin_sajous",
@@ -9424,9 +9104,7 @@
       {
         "bottleID": "la_favorite_blanc",
         "id": "cane_rum_agricole",
-        "aging": [
-          "none"
-        ]
+        "aging": ["none"]
       },
       {
         "bottleID": "dolin_dry",
@@ -9531,10 +9209,7 @@
       {
         "bottleID": "linie_aquavit",
         "id": "grain_aquavit",
-        "aging": [
-          "medium",
-          "long"
-        ]
+        "aging": ["medium", "long"]
       },
       {
         "bottleID": "reisetbauer_carrot_eaudevie",
@@ -9582,9 +9257,7 @@
         "bottleID": "wray_nephew_overproof",
         "id": "cane_rum_jamaican",
         "productionMethod": "pot",
-        "aging": [
-          "none"
-        ],
+        "aging": ["none"],
         "overproof": true
       },
       {
@@ -9618,17 +9291,12 @@
       {
         "bottleID": "plantation_3_stars",
         "id": "cane_rum",
-        "aging": [
-          "light",
-          "medium"
-        ]
+        "aging": ["light", "medium"]
       },
       {
         "bottleID": "la_favorite_blanc",
         "id": "cane_rum_agricole",
-        "aging": [
-          "none"
-        ]
+        "aging": ["none"]
       },
       {
         "id": "cordial_pineapple"
@@ -10160,9 +9828,7 @@
         "id": "cane_rum_jamaican",
         "bottleID": "smith_cross_navy_strength",
         "productionMethod": "pot",
-        "aging": [
-          "light"
-        ],
+        "aging": ["light"],
         "overproof": true
       },
       {
@@ -10582,9 +10248,7 @@
         "bottleID": "wray_nephew_overproof",
         "id": "cane_rum_jamaican",
         "productionMethod": "pot",
-        "aging": [
-          "none"
-        ],
+        "aging": ["none"],
         "overproof": true
       },
       {
@@ -11034,17 +10698,12 @@
       {
         "bottleID": "rhum_jm_white_100_proof",
         "id": "cane_rum_agricole",
-        "aging": [
-          "none"
-        ]
+        "aging": ["none"]
       },
       {
         "bottleID": "avua_amburana",
         "id": "cane_cachaca",
-        "aging": [
-          "medium",
-          "long"
-        ]
+        "aging": ["medium", "long"]
       },
       {
         "bottleID": "giffard_creme_de_peche_de_vigne",
@@ -11082,17 +10741,13 @@
         "bottleID": "wray_nephew_overproof",
         "id": "cane_rum_jamaican",
         "productionMethod": "pot",
-        "aging": [
-          "none"
-        ],
+        "aging": ["none"],
         "overproof": true
       },
       {
         "bottleID": "damoiseau_110proof",
         "id": "cane_rum_agricole",
-        "aging": [
-          "none"
-        ]
+        "aging": ["none"]
       },
       {
         "bottleID": "dolin_blanc",
@@ -11598,17 +11253,12 @@
       {
         "bottleID": "plantation_3_stars",
         "id": "cane_rum",
-        "aging": [
-          "light",
-          "medium"
-        ]
+        "aging": ["light", "medium"]
       },
       {
         "bottleID": "neisson_blanc",
         "id": "cane_rum_agricole",
-        "aging": [
-          "none"
-        ]
+        "aging": ["none"]
       },
       {
         "bottleID": "luxardo_maraschino_liqueur",
@@ -11804,10 +11454,7 @@
       {
         "bottleID": "st_george_dry_rye",
         "id": "grain_gin_contemporary",
-        "aging": [
-          "medium",
-          "long"
-        ]
+        "aging": ["medium", "long"]
       },
       {
         "bottleID": "perrys_tot_navy_strength",
@@ -11860,18 +11507,13 @@
         "bottleID": "rhum_barbancourt_5_star",
         "id": "cane_rum_agricole",
         "productionMethod": "coffey",
-        "aging": [
-          "medium",
-          "long"
-        ]
+        "aging": ["medium", "long"]
       },
       {
         "bottleID": "wray_nephew_overproof",
         "id": "cane_rum_jamaican",
         "productionMethod": "pot",
-        "aging": [
-          "none"
-        ],
+        "aging": ["none"],
         "overproof": true
       },
       {
@@ -11946,9 +11588,7 @@
         "bottleID": "flor_de_cana_extra_dry_4_year",
         "id": "cane_rum",
         "productionMethod": "blended",
-        "aging": [
-          "light"
-        ]
+        "aging": ["light"]
       },
       {
         "id": "juice_lime"
@@ -12020,9 +11660,7 @@
         "bottleID": "wray_nephew_overproof",
         "id": "cane_rum_jamaican",
         "productionMethod": "pot",
-        "aging": [
-          "none"
-        ],
+        "aging": ["none"],
         "overproof": true
       },
       {
@@ -12180,9 +11818,7 @@
       {
         "bottleID": "rhum_jm_white_100_proof",
         "id": "cane_rum_agricole",
-        "aging": [
-          "none"
-        ]
+        "aging": ["none"]
       },
       {
         "bottleID": "amaro_di_angostura",
@@ -12195,10 +11831,7 @@
       {
         "bottleID": "avua_amburana",
         "id": "cane_cachaca",
-        "aging": [
-          "medium",
-          "long"
-        ]
+        "aging": ["medium", "long"]
       },
       {
         "id": "juice_lime"
@@ -12233,7 +11866,7 @@
       },
       {
         "bottleID": "lustau_palo_cortado_peninsula",
-        "id": "fortifiedwine_sherry_palocortado"
+        "id": "fortifiedwine_sherry_amontillado"
       },
       {
         "bottleID": "old_forester_signature",
@@ -12445,9 +12078,7 @@
         "id": "cane_rum_jamaican",
         "bottleID": "smith_cross_navy_strength",
         "productionMethod": "pot",
-        "aging": [
-          "light"
-        ],
+        "aging": ["light"],
         "overproof": true
       },
       {
@@ -12458,9 +12089,7 @@
         "bottleID": "cruzan_blackstrap",
         "id": "cane_rum",
         "productionMethod": "blended",
-        "aging": [
-          "light"
-        ],
+        "aging": ["light"],
         "black": true
       },
       {
@@ -12529,9 +12158,7 @@
       {
         "bottleID": "rhum_jm_white_100_proof",
         "id": "cane_rum_agricole",
-        "aging": [
-          "none"
-        ]
+        "aging": ["none"]
       },
       {
         "name": "St. George green chile vodka"
@@ -12572,9 +12199,7 @@
         "bottleID": "bacardi_heritage_1909",
         "id": "cane_rum",
         "productionMethod": "blended",
-        "aging": [
-          "light"
-        ]
+        "aging": ["light"]
       },
       {
         "bottleID": "john_d_taylors_velvet_falernum",
@@ -12584,9 +12209,7 @@
         "bottleID": "wray_nephew_overproof",
         "id": "cane_rum_jamaican",
         "productionMethod": "pot",
-        "aging": [
-          "none"
-        ],
+        "aging": ["none"],
         "overproof": true
       },
       {
@@ -13303,9 +12926,7 @@
         "bottleID": "diplomatico_reserva",
         "id": "cane_rum",
         "productionMethod": "blended",
-        "aging": [
-          "light"
-        ]
+        "aging": ["light"]
       },
       {
         "bottleID": "naked_grouse",
@@ -13736,9 +13357,7 @@
         "bottleID": "cruzan_blackstrap",
         "id": "cane_rum",
         "productionMethod": "blended",
-        "aging": [
-          "light"
-        ],
+        "aging": ["light"],
         "black": true
       },
       {
@@ -13849,10 +13468,7 @@
       {
         "bottleID": "avua_amburana",
         "id": "cane_cachaca",
-        "aging": [
-          "medium",
-          "long"
-        ]
+        "aging": ["medium", "long"]
       },
       {
         "bottleID": "galliano_ristretto",
@@ -14011,9 +13627,7 @@
         "bottleID": "ron_zacapa_23",
         "id": "cane_rum",
         "productionMethod": "blended",
-        "aging": [
-          "light"
-        ]
+        "aging": ["light"]
       },
       {
         "bottleID": "lemon_hart_151",
@@ -14239,9 +13853,7 @@
       {
         "bottleID": "rhum_jm_white_100_proof",
         "id": "cane_rum_agricole",
-        "aging": [
-          "none"
-        ]
+        "aging": ["none"]
       },
       {
         "bottleID": "chareau_aloe_liqueur",
@@ -14403,9 +14015,7 @@
         "id": "cane_rum_jamaican",
         "bottleID": "smith_cross_navy_strength",
         "productionMethod": "pot",
-        "aging": [
-          "light"
-        ],
+        "aging": ["light"],
         "overproof": true
       },
       {
@@ -14441,9 +14051,7 @@
         "bottleID": "cruzan_blackstrap",
         "id": "cane_rum",
         "productionMethod": "blended",
-        "aging": [
-          "light"
-        ],
+        "aging": ["light"],
         "black": true
       },
       {
@@ -14604,9 +14212,7 @@
       {
         "bottleID": "rhum_jm_white_100_proof",
         "id": "cane_rum_agricole",
-        "aging": [
-          "none"
-        ]
+        "aging": ["none"]
       },
       {
         "bottleID": "reisetbauer_carrot_eaudevie",
@@ -14647,10 +14253,7 @@
       {
         "bottleID": "linie_aquavit",
         "id": "grain_aquavit",
-        "aging": [
-          "medium",
-          "long"
-        ]
+        "aging": ["medium", "long"]
       },
       {
         "bottleID": "reisetbauer_carrot_eaudevie",
@@ -14728,9 +14331,7 @@
         "bottleID": "ron_del_barrilito_3_star",
         "id": "cane_rum",
         "productionMethod": "blended",
-        "aging": [
-          "light"
-        ]
+        "aging": ["light"]
       },
       {
         "bottleID": "amaro_nonino_quintessentia",
@@ -14817,9 +14418,7 @@
         "id": "cane_rum_jamaican",
         "bottleID": "smith_cross_navy_strength",
         "productionMethod": "pot",
-        "aging": [
-          "light"
-        ],
+        "aging": ["light"],
         "overproof": true
       },
       {
@@ -15326,9 +14925,7 @@
         "id": "cane_rum_jamaican",
         "bottleID": "smith_cross_navy_strength",
         "productionMethod": "pot",
-        "aging": [
-          "light"
-        ],
+        "aging": ["light"],
         "overproof": true
       },
       {
@@ -15528,9 +15125,7 @@
         "bottleID": "cruzan_singlebarrel",
         "id": "cane_rum",
         "productionMethod": "blended",
-        "aging": [
-          "light"
-        ]
+        "aging": ["light"]
       },
       {
         "id": "syrup_pineapple"
@@ -15678,10 +15273,7 @@
       {
         "bottleID": "avua_amburana",
         "id": "cane_cachaca",
-        "aging": [
-          "medium",
-          "long"
-        ]
+        "aging": ["medium", "long"]
       },
       {
         "bottleID": "caffo_amaretto",
@@ -15752,10 +15344,7 @@
         "bottleID": "rhum_barbancourt_5_star",
         "id": "cane_rum_agricole",
         "productionMethod": "coffey",
-        "aging": [
-          "medium",
-          "long"
-        ]
+        "aging": ["medium", "long"]
       },
       {
         "bottleID": "scarlet_ibis",
@@ -16074,17 +15663,13 @@
         "bottleID": "ron_del_barrilito_3_star",
         "id": "cane_rum",
         "productionMethod": "blended",
-        "aging": [
-          "light"
-        ]
+        "aging": ["light"]
       },
       {
         "id": "cane_rum_jamaican",
         "bottleID": "smith_cross_navy_strength",
         "productionMethod": "pot",
-        "aging": [
-          "light"
-        ],
+        "aging": ["light"],
         "overproof": true
       },
       {
@@ -16123,10 +15708,7 @@
       {
         "bottleID": "st_george_dry_rye",
         "id": "grain_gin_contemporary",
-        "aging": [
-          "medium",
-          "long"
-        ]
+        "aging": ["medium", "long"]
       },
       {
         "bottleID": "ocho_reposado",
@@ -16177,9 +15759,7 @@
         "bottleID": "brugal_1888",
         "id": "cane_rum",
         "productionMethod": "blended",
-        "aging": [
-          "light"
-        ]
+        "aging": ["light"]
       },
       {
         "bottleID": "drambuie",
@@ -16379,9 +15959,7 @@
         "bottleID": "rum_fire_jamaican_overproof",
         "id": "cane_rum_jamaican",
         "productionMethod": "pot",
-        "aging": [
-          "none"
-        ],
+        "aging": ["none"],
         "overproof": true
       },
       {
@@ -16841,10 +16419,7 @@
       {
         "bottleID": "st_george_dry_rye",
         "id": "grain_gin_contemporary",
-        "aging": [
-          "medium",
-          "long"
-        ]
+        "aging": ["medium", "long"]
       },
       {
         "name": "Hangar One Buddha’s Hand vodka"
@@ -17055,9 +16630,7 @@
         "id": "cane_rum_jamaican",
         "bottleID": "smith_cross_navy_strength",
         "productionMethod": "pot",
-        "aging": [
-          "light"
-        ],
+        "aging": ["light"],
         "overproof": true
       },
       {
@@ -17126,10 +16699,7 @@
       {
         "bottleID": "linie_aquavit",
         "id": "grain_aquavit",
-        "aging": [
-          "medium",
-          "long"
-        ]
+        "aging": ["medium", "long"]
       },
       {
         "bottleID": "giffard_abricot_du_roussillon",
@@ -17163,10 +16733,7 @@
       {
         "bottleID": "linie_aquavit",
         "id": "grain_aquavit",
-        "aging": [
-          "medium",
-          "long"
-        ]
+        "aging": ["medium", "long"]
       },
       {
         "bottleID": "cocchi_americano_bianco",
@@ -17347,9 +16914,7 @@
         "bottleID": "ron_zacapa_23",
         "id": "cane_rum",
         "productionMethod": "blended",
-        "aging": [
-          "light"
-        ]
+        "aging": ["light"]
       },
       {
         "bottleID": "barbadillo_principe_de_barbadillo",
@@ -17678,10 +17243,7 @@
       {
         "bottleID": "linie_aquavit",
         "id": "grain_aquavit",
-        "aging": [
-          "medium",
-          "long"
-        ]
+        "aging": ["medium", "long"]
       },
       {
         "bottleID": "cocchi_vermouth_di_torino",
@@ -17831,9 +17393,7 @@
         "bottleID": "cruzan_blackstrap",
         "id": "cane_rum",
         "productionMethod": "blended",
-        "aging": [
-          "light"
-        ],
+        "aging": ["light"],
         "black": true
       },
       {
@@ -17848,9 +17408,7 @@
         "id": "cane_rum_jamaican",
         "bottleID": "smith_cross_navy_strength",
         "productionMethod": "pot",
-        "aging": [
-          "light"
-        ],
+        "aging": ["light"],
         "overproof": true
       },
       {
@@ -18609,9 +18167,7 @@
       {
         "bottleID": "rhum_jm_white_100_proof",
         "id": "cane_rum_agricole",
-        "aging": [
-          "none"
-        ]
+        "aging": ["none"]
       },
       {
         "bottleID": "don_ciccio_figli_finocchietto_fennel_liqueur",
@@ -18955,9 +18511,7 @@
         "bottleID": "ron_zacapa_23",
         "id": "cane_rum",
         "productionMethod": "blended",
-        "aging": [
-          "light"
-        ]
+        "aging": ["light"]
       },
       {
         "bottleID": "lustau_don_nuno_oloroso",
@@ -19029,10 +18583,7 @@
       {
         "bottleID": "avua_amburana",
         "id": "cane_cachaca",
-        "aging": [
-          "medium",
-          "long"
-        ]
+        "aging": ["medium", "long"]
       },
       {
         "bottleID": "reisetbauer_hazelnut_eaudevie",
@@ -19191,11 +18742,7 @@
       {
         "bottleID": "ransom_old_tom",
         "id": "grain_gin_oldtom",
-        "aging": [
-          "light",
-          "medium",
-          "long"
-        ]
+        "aging": ["light", "medium", "long"]
       },
       {
         "bottleID": "leopold_bros_michigan_tart_cherry_liqueur",
@@ -19313,9 +18860,7 @@
         "bottleID": "wray_nephew_overproof",
         "id": "cane_rum_jamaican",
         "productionMethod": "pot",
-        "aging": [
-          "none"
-        ],
+        "aging": ["none"],
         "overproof": true
       },
       {
@@ -19748,9 +19293,7 @@
         "id": "cane_rum_jamaican",
         "bottleID": "smith_cross_navy_strength",
         "productionMethod": "pot",
-        "aging": [
-          "light"
-        ],
+        "aging": ["light"],
         "overproof": true
       },
       {
@@ -20007,10 +19550,7 @@
       {
         "bottleID": "st_george_dry_rye",
         "id": "grain_gin_contemporary",
-        "aging": [
-          "medium",
-          "long"
-        ]
+        "aging": ["medium", "long"]
       },
       {
         "bottleID": "domaine_du_manoir_de_montreuil_reserve",
@@ -20217,9 +19757,7 @@
         "bottleID": "rhum_barbancourt_3_star",
         "id": "cane_rum_agricole",
         "productionMethod": "coffey",
-        "aging": [
-          "none"
-        ]
+        "aging": ["none"]
       },
       {
         "id": "brandy_grape_armagnac",
@@ -20577,10 +20115,7 @@
       {
         "bottleID": "linie_aquavit",
         "id": "grain_aquavit",
-        "aging": [
-          "medium",
-          "long"
-        ]
+        "aging": ["medium", "long"]
       },
       {
         "bottleID": "morenita_cream",
@@ -20657,10 +20192,7 @@
       {
         "bottleID": "linie_aquavit",
         "id": "grain_aquavit",
-        "aging": [
-          "medium",
-          "long"
-        ]
+        "aging": ["medium", "long"]
       },
       {
         "bottleID": "carpano_antica_formula",
@@ -20782,10 +20314,7 @@
       {
         "bottleID": "linie_aquavit",
         "id": "grain_aquavit",
-        "aging": [
-          "medium",
-          "long"
-        ]
+        "aging": ["medium", "long"]
       },
       {
         "bottleID": "carpano_antica_formula",
@@ -21094,9 +20623,7 @@
         "id": "cane_rum_jamaican",
         "bottleID": "smith_cross_navy_strength",
         "productionMethod": "pot",
-        "aging": [
-          "light"
-        ],
+        "aging": ["light"],
         "overproof": true
       },
       {
@@ -21384,18 +20911,13 @@
       {
         "bottleID": "avua_amburana",
         "id": "cane_cachaca",
-        "aging": [
-          "medium",
-          "long"
-        ]
+        "aging": ["medium", "long"]
       },
       {
         "id": "cane_rum_jamaican",
         "bottleID": "smith_cross_navy_strength",
         "productionMethod": "pot",
-        "aging": [
-          "light"
-        ],
+        "aging": ["light"],
         "overproof": true
       },
       {
@@ -21517,9 +21039,7 @@
         "bottleID": "brugal_1888",
         "id": "cane_rum",
         "productionMethod": "blended",
-        "aging": [
-          "light"
-        ]
+        "aging": ["light"]
       },
       {
         "id": "syrup_vanilla"
@@ -21560,10 +21080,7 @@
       {
         "bottleID": "linie_aquavit",
         "id": "grain_aquavit",
-        "aging": [
-          "medium",
-          "long"
-        ]
+        "aging": ["medium", "long"]
       },
       {
         "infusion": "peanut",
@@ -21682,9 +21199,7 @@
         "bottleID": "banks_5_island",
         "id": "cane_rum",
         "productionMethod": "blended",
-        "aging": [
-          "light"
-        ]
+        "aging": ["light"]
       },
       {
         "id": "syrup_vanilla"
@@ -21727,9 +21242,7 @@
         "bottleID": "wray_nephew_overproof",
         "id": "cane_rum_jamaican",
         "productionMethod": "pot",
-        "aging": [
-          "none"
-        ],
+        "aging": ["none"],
         "overproof": true
       },
       {
@@ -21778,9 +21291,7 @@
         "id": "cane_rum_jamaican",
         "bottleID": "smith_cross_navy_strength",
         "productionMethod": "pot",
-        "aging": [
-          "light"
-        ],
+        "aging": ["light"],
         "overproof": true
       },
       {

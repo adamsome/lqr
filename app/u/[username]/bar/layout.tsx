@@ -43,7 +43,7 @@ export default async function Layout({ children, params }: Props) {
         <SidebarLayout
           sidebar={
             <AppFullWidthContent>
-              <Stack gap={6}>
+              <Stack gap={4}>
                 <UserAvatarHeader username={username} selected="bottles">
                   {!isCurrentUser && (
                     <FollowButtonContainer
@@ -52,9 +52,7 @@ export default async function Layout({ children, params }: Props) {
                     />
                   )}
                 </UserAvatarHeader>
-                <div className="-mx-2 sm:-ms-4">
-                  <Bar username={username} />
-                </div>
+                <Bar username={username} />
               </Stack>
             </AppFullWidthContent>
           }

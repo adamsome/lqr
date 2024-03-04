@@ -2,6 +2,7 @@ import { complement, curry, sortBy } from 'ramda'
 
 import { HierarchicalFilter } from '@/app/lib/hierarchical-filter'
 import { filterIngredientItems } from '@/app/lib/ingredient/filter-ingredient-items'
+import { isSpecIngredientStockIgnorable } from '@/app/lib/ingredient/spec-ingredient-stock'
 import {
   Ingredient,
   Spec,
@@ -9,46 +10,32 @@ import {
   SpecIngredientStock,
   SpecStock,
 } from '@/app/lib/types'
-import { Category } from '@/app/lib/generated-consts'
 import { toTruthMap } from '@/app/lib/utils'
-import { isSpecIngredientStockIgnorable } from '@/app/lib/ingredient/spec-ingredient-stock'
 
-const decorIngredientIDPrefixes: string[] = [
+const ignoreIngredientIDPrefixes: string[] = [
   'chocolate',
-  'coffee',
   'flower',
   'leaf',
   'nut',
   'spice',
   'vegetable',
 ]
-const commonIngredientIDs = toTruthMap([
-  'coffee_coldbrew',
-  'coffee_hot',
-  'cream_heavy',
-  'egg_white',
-  'egg_yolk',
-  'egg_whole',
+const ignoreIngredientIDs = toTruthMap([
+  'coffee_bean',
   'extract_vanilla',
+  'fruit_cucumber',
   'fruit_lemon',
   'fruit_lime',
   'fruit_olive',
   'fruit_orange',
-  'juice_lemon',
-  'juice_lime',
-  'juice_orange',
-  'milk_whole',
+  'fruit_grapefruit',
+  'fruit_pineapple',
   'oil_olive',
-  'soda_club',
-  'sugar_white',
-  'syrup_honey',
-  'syrup_maple',
-  'syrup_simple',
   'tea_black',
   'water_flat',
 ])
 
-const ignoreBottleIDs = [
+export const forceOnlyBottleIDs = [
   'liqueur_amaro_aperitivo',
   'liqueur_amaro_light',
   'liqueur_amaro_medium',
@@ -56,40 +43,34 @@ const ignoreBottleIDs = [
   'fortifiedwine_aperitif',
 ]
 
-const altBottleGroups: Record<string, string[][]> = {
+export const altBottleGroups: Record<string, string[][]> = {
   liqueur_amaro_aperitivo: [
-    ['gran_classico_bitter', 'campari'],
-    ['suze', 'salers_gentien_aperitif'],
+    ['campari', 'gran_classico_bitter'],
+    ['suze', 'salers_gentien_aperitif', 'lofi_gentian_amaro'],
   ],
   liqueur_amaro_medium: [
     ['amaro_ciociaro', 'bigallet_chinachina_amer'],
     ['cappelletti_pasubio_vino_amaro', 'cappelletti_pasubio_vino_amaro'],
   ],
   fortifiedwine_aperitif: [
-    ['cocchi_americano_bianco', 'lillet_blanc', 'cap_corse_blanc_quinquina'],
+    ['lillet_blanc', 'cocchi_americano_bianco', 'cap_corse_blanc_quinquina'],
   ],
 }
 
 const similar = [
   ['grain_gin_londondry', 'grain_gin_plymouth', 'grain_gin_contemporary'],
-  ['brandy_grape_pommeau', 'brandy_grape_pineaudescharentes'],
-  ['brandy_grape_american', 'brandy_grape_cognac', 'brandy_grape_armagnac'],
-  [
-    'sugar_brown',
-    'sugar_demerara',
-    'sugar_white',
-    'syrup_cane',
-    'syrup_demerara',
-    'syrup_demeraragum',
-    'syrup_maple',
-    'syrup_molasses',
-    'syrup_simple',
-  ],
-  ['syrup_raspberrygum', 'syrup_raspberry'],
-  ['syrup_pineapplegum', 'syrup_pineapple'],
+  ['brandy_grape_pineaudescharentes', 'brandy_grape_pommeau'],
+  ['brandy_grape_cognac', 'brandy_grape_american', 'brandy_grape_armagnac'],
+  ['coffee_hot', 'coffee_coldbrew'],
+  ['egg_whole', 'egg_white', 'egg_yolk', 'egg_aquafaba'],
+  ['cream_heavy', 'milk_whole'],
+  ['syrup_simple', 'sugar_brown', 'sugar_white', 'syrup_cane'],
+  ['syrup_demerara', 'sugar_demerara', 'syrup_demeraragum', 'syrup_molasses'],
+  ['syrup_raspberry', 'syrup_raspberrygum'],
+  ['syrup_pineapple', 'syrup_pineapplegum'],
 ]
 
-const similarSet = similar.reduce((acc, group) => {
+export const similarSet = similar.reduce((acc, group) => {
   group.forEach((item) => {
     const others = group.filter((it) => it !== item)
     acc.set(item, others)
@@ -124,9 +105,16 @@ function getSpecIngredientStock(
   const _getStock = getStock(dict)
   if (bottleID) {
     const stock = _getStock(bottleID)
-    if (stock > 0 || (id && ignoreBottleIDs.includes(id))) {
+    if (stock > 0) {
+      return {
+        type: 'bottle',
+        stock,
+        bottles: [{ id: bottleID, stock }],
+      }
+    }
+    if (id && forceOnlyBottleIDs.includes(id)) {
       // Handle checking for alt bottles that can be substituted
-      if (stock <= 0 && id && altBottleGroups[id]) {
+      if (altBottleGroups[id]) {
         const group = altBottleGroups[id].find((bottles) =>
           bottles.includes(bottleID),
         )
@@ -173,16 +161,16 @@ function getSpecIngredientStock(
     bottles: sortedItems,
   }
 
-  if (
-    result.stock <= 0 &&
-    (commonIngredientIDs[id] ||
-      decorIngredientIDPrefixes.some((prefix) => id.startsWith(prefix)))
-  ) {
+  if (result.stock <= 0 && shouldIgnoreIngredient(id)) {
     return { type: 'ignore', stock: 0 }
   }
 
   return result
 }
+
+export const shouldIgnoreIngredient = (id: string) =>
+  ignoreIngredientIDs[id] ||
+  ignoreIngredientIDPrefixes.some((prefix) => id.startsWith(prefix))
 
 const getStock = curry(
   (dict: Record<string, Ingredient>, id: string): number =>

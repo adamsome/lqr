@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation'
 
 import { BoxButton } from '@/app/u/[username]/bar/[cabinet]/[shelf]/[category]/box-button'
 import { BoxLine } from '@/app/u/[username]/bar/[cabinet]/[shelf]/[category]/box-line'
-import { BarCategory, GridCategoryDef } from '@/app/u/[username]/bar/lib/types'
+import { BarCategory, BarCategoryDef } from '@/app/u/[username]/bar/lib/types'
 import { Level } from '@/app/components/layout/level'
 import { useGetIngredientName } from '@/app/lib/ingredient/use-get-ingredient-name'
 import { useMutateStock } from '@/app/api/stock/use-mutate-stock'
@@ -15,7 +15,7 @@ import { sortByStocked } from '@/app/lib/stock'
 type Props = {
   className?: string
   username?: string
-  def: GridCategoryDef
+  def: BarCategoryDef
   category: BarCategory
   isCurrentUser?: boolean
   readonly?: boolean
@@ -49,11 +49,7 @@ export function Box({
 
   const handleClick = async () => {
     if (mutating || readonly) return
-    if (
-      !isCurrentUser ||
-      (!isStocked && !hideItems) ||
-      def.disableOneClickEmpty
-    ) {
+    if (!isCurrentUser || (!isStocked && !hideItems) || def.miscellaneous) {
       router.push(toBarCategory({ ...keys, username }), { scroll: false })
     } else if (!isStocked) {
       const id = def.ids?.[0] ?? def.include?.[0]?.id
@@ -65,7 +61,7 @@ export function Box({
   }
 
   let name = category.name ?? 'Unknown Category'
-  if (def.disableOneClickEmpty) name += '...'
+  if (def.miscellaneous) name += '...'
   return (
     <BoxButton
       className={className}
@@ -90,11 +86,11 @@ export function Box({
       ))}
       {displayItems.length === 0 && !hideItems && items > 0 && (
         <Level
-          className="flex-1 self-end text-muted-foreground/30 font-normal tracking-tighter whitespace-nowrap"
+          className="text-muted-foreground/30 flex-1 self-end whitespace-nowrap font-normal tracking-tighter"
           items="end"
           gap={0}
         >
-          <DotsHorizontalIcon className="w-3 h-3" />
+          <DotsHorizontalIcon className="h-3 w-3" />
         </Level>
       )}
     </BoxButton>

@@ -38,20 +38,35 @@ export function getStockLabel(state: StockState): string {
   }
 }
 
-const STOCKED_CATEGORY_TYPES: Array<CategoryDef['type']> = [
+const LIQUOR_CATEGORY_TYPES: Array<CategoryDef['type']> = [
   'beerWine',
   'bitters',
   'spirit',
 ]
 
-export const isStockedBottle =
-  (dict: Record<string, Ingredient>) =>
-  (id: string): boolean => {
+export const isSpirit = (dict: Record<string, Ingredient>) => (id?: string) => {
+  if (!id) return false
+  const it = dict[id]
+  if (!it) return false
+  return CATEGORY_DICT[it.category].type === 'spirit'
+}
+
+export const isLiquor = (dict: Record<string, Ingredient>) => (id?: string) => {
+  if (!id) return false
+  const it = dict[id]
+  if (!it) return false
+  if (it.ordinal != null) return true
+  return LIQUOR_CATEGORY_TYPES.includes(CATEGORY_DICT[it.category].type)
+}
+
+export const isStockedBottle = (dict: Record<string, Ingredient>) => {
+  const _isLiquor = isLiquor(dict)
+  return (id: string): boolean => {
     const it = dict[id]
     if ((it?.stock ?? -1) <= 0) return false
-    if (it.ordinal != null) return true
-    return STOCKED_CATEGORY_TYPES.includes(CATEGORY_DICT[it.category].type)
+    return _isLiquor(id)
   }
+}
 
 export const getStockedBottleCount = (dict: Record<string, Ingredient>) =>
   Object.keys(dict).filter(isStockedBottle(dict)).length

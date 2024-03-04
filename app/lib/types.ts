@@ -5,6 +5,7 @@ import { GlassType } from '@/app/lib/glass-type'
 import { HierarchicalFilter } from '@/app/lib/hierarchical-filter'
 import { MixType } from '@/app/lib/mix-type'
 import { SpecCategory } from '@/app/lib/spec-category'
+import { CategoryKeys } from '@/app/u/[username]/bar/lib/types'
 
 export interface StaticData {
   baseIngredients: Ingredient[]
@@ -30,6 +31,7 @@ export interface Ingredient {
   origin?: string
   originTerritory?: string
   stock?: number
+  categoryKeys: CategoryKeys
   buyPriority?: number
   references?: string[]
 }

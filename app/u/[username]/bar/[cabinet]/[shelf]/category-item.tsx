@@ -5,7 +5,7 @@ import { useState } from 'react'
 import { AddIngredientLink } from '@/app/u/[username]/bar/[cabinet]/[shelf]/[category]/add-ingredient-link'
 import { Ingredient } from '@/app/u/[username]/bar/[cabinet]/[shelf]/[category]/ingredient'
 import { HeadingLink } from '@/app/u/[username]/bar/components/heading-link'
-import { BarCategory, GridCategoryDef } from '@/app/u/[username]/bar/lib/types'
+import { BarCategory, BarCategoryDef } from '@/app/u/[username]/bar/lib/types'
 import { Stack } from '@/app/components/layout/stack'
 import { sortByStocked } from '@/app/lib/stock'
 import { cn } from '@/app/lib/utils'
@@ -13,7 +13,7 @@ import { cn } from '@/app/lib/utils'
 type Props = {
   className?: string
   username?: string
-  def: GridCategoryDef
+  def: BarCategoryDef
   category?: BarCategory
   flatList?: boolean
   isCurrentUser?: boolean
@@ -82,7 +82,7 @@ export function CategoryItem({
           ))}
           {isCurrentUser && <AddIngredientLink {...to} name={name} />}
           {!isCurrentUser && stocked.length === 0 && (
-            <div className="pt-0.5 pb-2 text-muted-foreground/40 italic">
+            <div className="text-muted-foreground/40 pb-2 pt-0.5 italic">
               {`No ${nameStr}`}
             </div>
           )}

@@ -28,6 +28,10 @@ const ingredientIDMap = {
   grain_bourbonwhiskey: 'grain_whiskey_bourbon',
   grain_ryewhiskey: 'grain_whiskey_rye',
   whiskey_scotchwhisky_blended: 'grain_whiskey_scotch_blended',
+  whiskey_scotchwhisky_campbeltown: 'grain_whiskey_scotch_campbeltown',
+  whiskey_scotchwhisky_highlands: 'grain_whiskey_scotch_highlands',
+  whiskey_scotchwhisky_islay: 'grain_whiskey_scotch_islay',
+  whiskey_scotchwhisky_speyside: 'grain_whiskey_scotch_speyside',
   grain_indianwhisky: 'grain_whiskey_indian',
   grain_irishwhisky: 'grain_whiskey_irish',
   grain_scotchwhisky: 'grain_whiskey_scotch',
@@ -55,7 +59,6 @@ const ingredientIDMap = {
   liqueur_herballiqueur: 'liqueur_herbal',
   liqueur_maraschinoliqueur: 'liqueur_maraschino',
   liqueur_orangeliqueur: 'liqueur_orange',
-  liqueur_richliqueur: 'liqueur_rich',
   liqueur_orangeliqueur_bluecuracao: 'liqueur_orange_bluecuracao',
   fortifiedwine_apertifwine: 'fortifiedwine_aperitif',
   fortifiedwine_mistelle: 'fortifiedwine_mistelle',
@@ -174,11 +177,11 @@ export function parseBottles() {
       if (!parent) {
         if (substyle)
           console.log(
-            `No parent for '${id}\n\t${typeStyleSubstyleKey}\n\t${typeSubstyleKey}\n\t${categorySubstyleKey}\n\t${typeStyleKey}\n\t${categoryStyleKey}`
+            `No parent for '${id}\n\t${typeStyleSubstyleKey}\n\t${typeSubstyleKey}\n\t${categorySubstyleKey}\n\t${typeStyleKey}\n\t${categoryStyleKey}`,
           )
         else
           console.log(
-            `No parent for '${id}\n\t${typeStyleKey}\n\t${categoryStyleKey}`
+            `No parent for '${id}\n\t${typeStyleKey}\n\t${categoryStyleKey}`,
           )
       }
 
@@ -228,38 +231,38 @@ export function parseBottles() {
   writeFileSync(
     join(dir, '../json/user-ingredients.json'),
     JSON.stringify(userIngredients, null, 2),
-    { encoding: 'utf8' }
+    { encoding: 'utf8' },
   )
   writeFileSync(
     join(dir, '../json/ingredients.json'),
     JSON.stringify(bottles, null, 2),
-    { encoding: 'utf8' }
+    { encoding: 'utf8' },
   )
   writeFileSync(
     join(dir, '../json/category-filter.json'),
     JSON.stringify(tree, null, 2),
-    { encoding: 'utf8' }
+    { encoding: 'utf8' },
   )
 
   let consts = []
   consts.push(``)
 
   const productionMethodList = Object.keys(productionMethodDict).map(
-    (type) => productionMethodDict[type]
+    (type) => productionMethodDict[type],
   )
   const productionMethodDefs = productionMethodList.map(
-    (p) => `  ${p.type}: { name: '${p.name}' },`
+    (p) => `  ${p.type}: { name: '${p.name}' },`,
   )
 
   consts.push(
     `export type ProductionMethod = ${productionMethodList
       .map((p) => `'${p.type}'`)
-      .join(' | ')}`
+      .join(' | ')}`,
   )
   // consts.push(...productionMethodList.map((p) => `  | '${p.type}'`))
   consts.push(``)
   consts.push(
-    `export const PRODUCTION_METHOD_DICT: Record<ProductionMethod, HasName> = {`
+    `export const PRODUCTION_METHOD_DICT: Record<ProductionMethod, HasName> = {`,
   )
   consts.push(...productionMethodDefs)
   consts.push(`}`)
@@ -269,7 +272,7 @@ export function parseBottles() {
   const agingDefs = agingList.map((p) => `  ${p.type}: { name: '${p.name}' },`)
 
   consts.push(
-    `export type Aging = ${agingList.map((a) => `'${a.type}'`).join(' | ')}`
+    `export type Aging = ${agingList.map((a) => `'${a.type}'`).join(' | ')}`,
   )
   // consts.push(...agingList.map((a) => `  | '${a.type}'`))
   consts.push(``)
@@ -278,7 +281,11 @@ export function parseBottles() {
   consts.push(`}`)
   consts.push(``)
 
-  appendFileSync(join(dir, '../lib/generated-consts.ts'), consts.join('\n'), {
-    encoding: 'utf8',
-  })
+  appendFileSync(
+    join(dir, '../app/lib/generated-consts.ts'),
+    consts.join('\n'),
+    {
+      encoding: 'utf8',
+    },
+  )
 }

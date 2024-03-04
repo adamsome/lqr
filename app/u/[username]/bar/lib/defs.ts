@@ -4,7 +4,7 @@ import {
   CabinetDef,
   CabinetID,
   CategoryKeys,
-  GridCategoryDef,
+  BarCategoryDef,
   ShelfDef,
 } from '@/app/u/[username]/bar/lib/types'
 
@@ -25,7 +25,7 @@ export function getShelfDef(keys: CategoryKeys): ShelfDef {
   return { ...shelfDef, keys }
 }
 
-export function getCategoryDef(keys: CategoryKeys): GridCategoryDef {
+export function getCategoryDef(keys: CategoryKeys): BarCategoryDef {
   const { category } = keys
   invariant(category, 'Category ID required to get category def')
   const shelfDef = getShelfDef(keys)
@@ -269,7 +269,7 @@ export const DEFS: Record<CabinetID, Omit<CabinetDef, 'keys'>> = {
             include: [{ id: 'bitters' }],
             exclude: [{ id: 'bitters_orange' }],
             excludeIDs: ['angostura', 'peychauds'],
-            disableOneClickEmpty: true,
+            miscellaneous: true,
           },
           benedictine: {
             name: 'Bénédictine',
@@ -343,6 +343,7 @@ export const DEFS: Record<CabinetID, Omit<CabinetDef, 'keys'>> = {
           cynar: {
             name: 'Cynar',
             items: 1,
+            include: [{ id: 'liqueur_amaro_carciofo' }],
             ids: ['cynar'],
             hideItems: true,
           },
@@ -630,6 +631,12 @@ export const DEFS: Record<CabinetID, Omit<CabinetDef, 'keys'>> = {
             name: 'Black Rum',
             items: 1,
             include: [{ id: 'cane_rum', black: true, overproof: false }],
+            excludeIDs: [
+              'cane_rum',
+              'cane_rum_agricole',
+              'cane_rum_demerara',
+              'cane_rum_jamaican',
+            ],
             bottlesOnly: true,
           },
           'demerara-rum': {
@@ -643,6 +650,12 @@ export const DEFS: Record<CabinetID, Omit<CabinetDef, 'keys'>> = {
             name: 'Overproof Rum',
             items: 1,
             include: [{ id: 'cane_rum', black: true, overproof: true }],
+            excludeIDs: [
+              'cane_rum',
+              'cane_rum_agricole',
+              'cane_rum_demerara',
+              'cane_rum_jamaican',
+            ],
             bottlesOnly: true,
           },
           cachaca: {
@@ -673,7 +686,7 @@ export const DEFS: Record<CabinetID, Omit<CabinetDef, 'keys'>> = {
               { id: 'cane_rum_demerara', overproof: false, black: false },
               { id: 'cane_rum_agricole' },
             ],
-            disableOneClickEmpty: true,
+            miscellaneous: true,
           },
           'batavia-arrack': {
             name: 'Batavia Arrack',
@@ -696,12 +709,14 @@ export const DEFS: Record<CabinetID, Omit<CabinetDef, 'keys'>> = {
           falernum: {
             name: 'Falernum',
             items: 1,
+            include: [{ id: 'liqueur_falernum' }],
             ids: ['john_d_taylors_velvet_falernum'],
             hideItems: true,
           },
           'allspice-dram': {
             name: 'Allspice Dram',
             items: 1,
+            include: [{ id: 'liqueur_allspice' }],
             ids: ['st_elizabeth_allspice_dram'],
             hideItems: true,
           },
@@ -822,7 +837,7 @@ export const DEFS: Record<CabinetID, Omit<CabinetDef, 'keys'>> = {
               { id: 'grain_whiskey_scotch_speyside' },
               { id: 'grain_whiskey_scotch_highlands' },
             ],
-            disableOneClickEmpty: true,
+            miscellaneous: true,
           },
           'islay-scotch': {
             name: 'Islay Scotch',
@@ -945,7 +960,7 @@ export const DEFS: Record<CabinetID, Omit<CabinetDef, 'keys'>> = {
               { id: 'brandy_grape_singani' },
               { id: 'brandy_grape_spanish' },
             ],
-            disableOneClickEmpty: true,
+            miscellaneous: true,
           },
           singani: {
             name: 'Singani',
@@ -1039,10 +1054,11 @@ export const DEFS: Record<CabinetID, Omit<CabinetDef, 'keys'>> = {
               'amaro_nardini',
             ],
             bottlesOnly: true,
-            disableOneClickEmpty: true,
+            miscellaneous: true,
           },
           braulio: {
             name: 'Braulio',
+            include: [{ id: 'liqueur_amaro_alpine' }],
             ids: ['amaro_braulio'],
             hideItems: true,
           },
@@ -1155,13 +1171,14 @@ export const DEFS: Record<CabinetID, Omit<CabinetDef, 'keys'>> = {
               { id: 'liqueur_cremedecacao' },
               { id: 'liqueur_cremedementhe' },
               { id: 'liqueur_cremedeviolette' },
+              { id: 'liqueur_peach' },
+              { id: 'liqueur_pear' },
               { id: 'liqueur_pine' },
               { id: 'liqueur_falernum' },
               { id: 'liqueur_fir' },
               { id: 'liqueur_coconut' },
               { id: 'liqueur_passionfruit' },
               { id: 'liqueur_pimms' },
-              { id: 'liqueur_rich' },
             ],
             excludeIDs: [
               'benedictine',
@@ -1175,7 +1192,7 @@ export const DEFS: Record<CabinetID, Omit<CabinetDef, 'keys'>> = {
               'galliano_lautentico',
               'drambuie',
             ],
-            disableOneClickEmpty: true,
+            miscellaneous: true,
           },
           banana: {
             name: 'Banana',
@@ -1281,7 +1298,10 @@ export const DEFS: Record<CabinetID, Omit<CabinetDef, 'keys'>> = {
           'cream-sherry': {
             name: 'Cream Sherry',
             items: 1,
-            include: [{ id: 'fortifiedwine_sherry_cream' }],
+            include: [
+              { id: 'fortifiedwine_sherry_cream' },
+              { id: 'fortifiedwine_sherry_palecream' },
+            ],
           },
           port: {
             name: 'Port',
@@ -1305,7 +1325,124 @@ export const DEFS: Record<CabinetID, Omit<CabinetDef, 'keys'>> = {
               'cocchi_americano_bianco',
               'cap_corse_blanc_quinquina',
             ],
-            disableOneClickEmpty: true,
+            miscellaneous: true,
+          },
+        },
+      },
+    },
+  },
+  other: {
+    name: 'Other Stuff',
+    gridIDs: ['beer-wine', 'pantry'],
+    listIDs: ['beer-wine', 'pantry'],
+    children: {
+      'beer-wine': {
+        name: 'Beer, Wine, Cider, & Sake',
+        gridCols: 2,
+        gridIDs: ['beer', 'wine', 'sake', 'cider'],
+        listIDs: ['beer', 'wine', 'sake', 'cider'],
+        flatList: true,
+        children: {
+          beer: {
+            name: 'Beer',
+            include: [{ id: 'beer' }],
+            items: 2,
+            miscellaneous: true,
+          },
+          wine: {
+            name: 'Wine',
+            include: [{ id: 'wine' }],
+            exclude: [{ id: 'wine_sake' }, { id: 'wine_sparkling' }],
+            items: 2,
+            miscellaneous: true,
+          },
+          cider: {
+            name: 'Cider',
+            include: [{ id: 'cider' }],
+            items: 2,
+            miscellaneous: true,
+          },
+          sake: {
+            name: 'Sake',
+            include: [{ id: 'wine_sake' }],
+            items: 2,
+            miscellaneous: true,
+          },
+        },
+      },
+      pantry: {
+        name: 'Pantry',
+        gridCols: 3,
+        gridIDs: ['juices', 'syrup', 'miscellaneous'],
+        listIDs: ['juices', 'syrup', 'miscellaneous'],
+        flatList: true,
+        children: {
+          juices: {
+            name: 'Juices',
+            include: [{ id: 'juice' }, { id: 'fruit' }, { id: 'puree' }],
+            exclude: [
+              { id: 'juice_lemon' },
+              { id: 'juice_lime' },
+              { id: 'juice_grapefruit' },
+              { id: 'juice_orange' },
+              { id: 'juice_pineapple' },
+              { id: 'fruit_lemon' },
+              { id: 'fruit_lime' },
+              { id: 'fruit_grapefruit' },
+              { id: 'fruit_orange' },
+              { id: 'fruit_pineapple' },
+            ],
+            items: 3,
+            miscellaneous: true,
+          },
+          syrup: {
+            name: 'Syrups',
+            include: [{ id: 'syrup' }, { id: 'shrub' }, { id: 'cordial' }],
+            exclude: [
+              { id: 'syrup_simple' },
+              { id: 'sugar_brown' },
+              { id: 'sugar_white' },
+              { id: 'syrup_cane' },
+              { id: 'syrup_demerara' },
+              { id: 'sugar_demerara' },
+              { id: 'syrup_demeraragum' },
+              { id: 'syrup_molasses' },
+              { id: 'syrup_honey' },
+              { id: 'syrup_maple' },
+              { id: 'syrup_grenadine' },
+              { id: 'syrup_agave' },
+              { id: 'syrup_orgeat' },
+              { id: 'syrup_cinnamon' },
+              { id: 'syrup_passionfruit' },
+            ],
+            items: 3,
+            miscellaneous: true,
+          },
+          miscellaneous: {
+            name: 'Miscellaneous',
+            include: [
+              { id: 'acid' },
+              { id: 'brine' },
+              { id: 'cheese' },
+              { id: 'cream' },
+              { id: 'extract' },
+              { id: 'jelly' },
+              { id: 'milk' },
+              { id: 'soda' },
+              { id: 'tea' },
+              { id: 'water' },
+            ],
+            exclude: [
+              { id: 'cream_heavy' },
+              { id: 'cream_coconut' },
+              { id: 'soda_club' },
+              { id: 'soda_tonic' },
+              { id: 'soda_gingerbeer' },
+              { id: 'soda_grapefruit' },
+              { id: 'soda_guava' },
+            ],
+            items: 3,
+            miscellaneous: true,
           },
         },
       },

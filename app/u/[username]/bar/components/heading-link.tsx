@@ -43,17 +43,17 @@ export function HeadingLink({
       justify="between"
     >
       <Link
-        className="z-10 text-start overflow-hidden"
+        className="z-10 overflow-hidden text-start"
         href={toBarCategory(to)}
       >
-        <Button className={cn('p-0 h-auto', buttonClassName)} variant="link">
+        <Button className={cn('h-auto p-0', buttonClassName)} variant="link">
           <Heading>
             <Level gap={0}>
               {children}
               <CaretRightIcon
                 className={cn(
-                  'relative top-px w-7 h-7',
-                  size === 'lg' && 'w-8 h-8',
+                  'relative top-px h-7 w-7',
+                  size === 'lg' && 'h-8 w-8',
                 )}
               />
             </Level>
@@ -62,7 +62,7 @@ export function HeadingLink({
       </Link>
       <IconButton
         className={cn(
-          'px-1 h-6 w-6 text-accent-muted',
+          'text-accent-muted h-6 w-6 px-1',
           LINK_BOX_LINK_CLASSNAME,
         )}
         onClick={onClick}
@@ -74,5 +74,5 @@ export function HeadingLink({
 }
 
 function HeadingLg(props: { children: ReactNode }) {
-  return <H1 className="text-xl sm:text-2xl md:text-2xl" {...props} />
+  return <H1 className="text-muted-foreground text-xl sm:text-xl" {...props} />
 }

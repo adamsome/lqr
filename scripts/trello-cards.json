@@ -87,12 +87,7 @@
     "id": "brain_duster",
     "name": "Brain Duster",
     "year": 1895,
-    "lines": [
-      "1 rye",
-      "1 absinthe",
-      "1 sweet vermouth",
-      "1 dash Angostura"
-    ],
+    "lines": ["1 rye", "1 absinthe", "1 sweet vermouth", "1 dash Angostura"],
     "reference": "Kappeler, George J. (1895). *Modern American Drinks.*",
     "modifiedAt": "2017-06-11T02:04:10.544Z",
     "list": "Spirited – Whiskey"
@@ -199,12 +194,7 @@
   {
     "id": "new_friend",
     "name": "New Friend",
-    "lines": [
-      "1 rye",
-      "1 Aperol",
-      "1 Cocchi Americano",
-      "Orange twist"
-    ],
+    "lines": ["1 rye", "1 Aperol", "1 Cocchi Americano", "Orange twist"],
     "basis": "boulevardier",
     "modifiedAt": "2023-01-08T03:38:11.282Z",
     "list": "Spirited – Whiskey",
@@ -314,11 +304,7 @@
     "id": "frisco",
     "name": "Frisco",
     "year": 1908,
-    "lines": [
-      "2 rye",
-      "1/2 Bénédictine",
-      "Lemon twist"
-    ],
+    "lines": ["2 rye", "1/2 Bénédictine", "Lemon twist"],
     "reference": "Boothby, William. (1908). *Boothby's World's Drinks.*",
     "modifiedAt": "2016-02-03T00:51:44.752Z",
     "list": "Spirited – Whiskey"
@@ -370,11 +356,7 @@
     "id": "brown_derby",
     "name": "Brown Derby",
     "year": 1930,
-    "lines": [
-      "2 bourbon",
-      "1 grapefruit juice",
-      "3/4 honey syrup"
-    ],
+    "lines": ["2 bourbon", "1 grapefruit juice", "3/4 honey syrup"],
     "reference": "Buzza, & Cardozo. (1930s). *Hollywood Cocktails.*",
     "basis": "blinker",
     "modifiedAt": "2016-02-05T00:01:21.706Z",
@@ -383,11 +365,7 @@
   {
     "id": "blushing_betty",
     "name": "Blushing Betty",
-    "lines": [
-      "1 1/2 bourbon",
-      "1 grapefruit juice",
-      "1/2 simple syrup"
-    ],
+    "lines": ["1 1/2 bourbon", "1 grapefruit juice", "1/2 simple syrup"],
     "reference": "Unknown. (n.d.)",
     "basis": "blinker",
     "modifiedAt": "2016-02-05T00:01:21.706Z",
@@ -872,7 +850,7 @@
       "Lemon twist",
       "orange twist"
     ],
-    "reference":"Miller, Brian. (2008). Death & Co. New York.",
+    "reference": "Miller, Brian. (2008). Death & Co. New York.",
     "modifiedAt": "2018-10-03T14:13:41.340Z",
     "list": "Spirited – Manhattans"
   },
@@ -1043,10 +1021,7 @@
     "id": "alaska",
     "name": "Alaska",
     "year": 1930,
-    "lines": [
-      "2 gin (Plymouth)",
-      "1 yellow Chartreuse"
-    ],
+    "lines": ["2 gin (Plymouth)", "1 yellow Chartreuse"],
     "reference": "Craddock, Harry. (1930). _Savoy Cocktail Book, The._",
     "basis": "martini",
     "modifiedAt": "2023-04-08T02:39:02.502Z",
@@ -1071,10 +1046,7 @@
   {
     "id": "sherry_martini",
     "name": "Sherry Martini",
-    "lines": [
-      "2 gin",
-      "1 sherry, fino"
-    ],
+    "lines": ["2 gin", "1 sherry, fino"],
     "basis": "martini",
     "modifiedAt": "2023-04-08T02:39:02.502Z",
     "list": "Spirited – Gin"
@@ -1188,11 +1160,7 @@
     "id": "dorflinger",
     "name": "Dorflinger",
     "year": 1935,
-    "lines": [
-      "2 gin (Plymouth)",
-      "1 absinthe",
-      "1 dash bitters, orange"
-    ],
+    "lines": ["2 gin (Plymouth)", "1 absinthe", "1 dash bitters, orange"],
     "reference": "Crockett, A. S. (1935). *Old Waldorf-Astoria Bar Book, The.*",
     "modifiedAt": "2017-06-11T02:28:20.016Z",
     "list": "Spirited – Gin"
@@ -1352,11 +1320,7 @@
     "id": "obituary",
     "name": "Obituary",
     "year": null,
-    "lines": [
-      "2 gin",
-      "1/4 vermouth, dry",
-      "1/4 absinthe"
-    ],
+    "lines": ["2 gin", "1/4 vermouth, dry", "1/4 absinthe"],
     "reference": "Anonymous. (n.d.). Lafitte's Blacksmith Shop Bar, New Orleans.",
     "modifiedAt": "2023-04-21T05:44:19.591Z",
     "list": "Spirited – Gin"
@@ -1525,11 +1489,7 @@
     "id": "stinger",
     "name": "Stinger",
     "year": 1917,
-    "lines": [
-      "2 1/4 oz brandy, cognac",
-      "3/4 oz creme de menthe",
-      "Shaken"
-    ],
+    "lines": ["2 1/4 oz brandy, cognac", "3/4 oz creme de menthe", "Shaken"],
     "reference": " Bullock, Tom. (1917). *The Ideal Bartender*.",
     "modifiedAt": "2017-06-11T03:36:09.928Z",
     "list": "Spirited – Others"
@@ -1579,11 +1539,7 @@
     "id": "french_connection",
     "name": "French Connection",
     "year": 1950,
-    "lines": [
-      "2 brandy, cognac",
-      "1 amaretto",
-      "Build in-glass"
-    ],
+    "lines": ["2 brandy, cognac", "1 amaretto", "Build in-glass"],
     "modifiedAt": "2017-06-11T03:34:54.605Z",
     "list": "Spirited – Others"
   },
@@ -1749,12 +1705,7 @@
     "id": "clover_club",
     "name": "Clover Club",
     "year": 1909,
-    "lines": [
-      "2 gin",
-      "3/4 lemon juice",
-      "2 tsp grenadine",
-      "1 egg white"
-    ],
+    "lines": ["2 gin", "3/4 lemon juice", "2 tsp grenadine", "1 egg white"],
     "modifiedAt": "2017-06-11T03:28:49.628Z",
     "list": "Sours – Gin"
   },
@@ -1818,11 +1769,7 @@
     "id": "bees_knees",
     "name": "Bee's Knees",
     "year": 1937,
-    "lines": [
-      "2 gin (Plymouth)",
-      "3/4 lemon juice",
-      "3/4 honey syrup"
-    ],
+    "lines": ["2 gin (Plymouth)", "3/4 lemon juice", "3/4 honey syrup"],
     "reference": "Meier, Frank. (1937). *Artistry of Mixing Drinks.*",
     "basis": "gin_sour",
     "modifiedAt": "2017-11-26T08:21:16.175Z",
@@ -2140,11 +2087,7 @@
   {
     "id": "green_ghost",
     "name": "Green Ghost",
-    "lines": [
-      "2 gin",
-      "1/2 green chartreuse",
-      "3/4 lime juice"
-    ],
+    "lines": ["2 gin", "1/2 green chartreuse", "3/4 lime juice"],
     "basis": "the_last_word",
     "modifiedAt": "2017-06-11T02:02:45.612Z",
     "list": "Sours – Gin"
@@ -2262,12 +2205,7 @@
   {
     "id": "whiskey_sour",
     "name": "Whiskey Sour",
-    "lines": [
-      "2 oz whiskey",
-      "1 oz lemon juice",
-      "1 tsp sugar",
-      "1 egg white"
-    ],
+    "lines": ["2 oz whiskey", "1 oz lemon juice", "1 tsp sugar", "1 egg white"],
     "modifiedAt": "2017-06-11T23:10:58.407Z",
     "list": "Sours – Others"
   },
@@ -2427,11 +2365,7 @@
     "id": "frisco_sour",
     "name": "Frisco Sour",
     "year": 1930,
-    "lines": [
-      "2 rye",
-      "1/2 Bénédictine",
-      "1/2 lime juice"
-    ],
+    "lines": ["2 rye", "1/2 Bénédictine", "1/2 lime juice"],
     "reference": "Boothby, William. (1930). *Boothby's World Drinks.*",
     "modifiedAt": "2018-03-01T02:11:52.265Z",
     "list": "Sours – Others"
@@ -3316,21 +3250,14 @@
   {
     "id": "cynar_flip",
     "name": "Cynar Flip",
-    "lines": [
-      "2 1/2 oz Cynar",
-      "1 egg"
-    ],
+    "lines": ["2 1/2 oz Cynar", "1 egg"],
     "modifiedAt": "2013-08-28T00:55:00.182Z",
     "list": "Flips & Nogs"
   },
   {
     "id": "grasshopper",
     "name": "Grasshopper",
-    "lines": [
-      "1 crème de menthe",
-      "1 crème de cacao",
-      "1 heavy cream"
-    ],
+    "lines": ["1 crème de menthe", "1 crème de cacao", "1 heavy cream"],
     "modifiedAt": "2013-08-28T01:21:08.646Z",
     "list": "Flips & Nogs"
   },

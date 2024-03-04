@@ -2,12 +2,8 @@ import invariant from 'tiny-invariant'
 
 import { FollowButtonContainer } from '@/app/components/user/follow-button-container'
 import { UserAvatarHeader } from '@/app/components/user/user-avatar-header'
-import { getSpecStock } from '@/app/lib/ingredient/get-spec-stock'
-import { getAllFollowing } from '@/app/lib/model/follow'
-import { getIngredientData } from '@/app/lib/model/ingredient-data'
-import { getAllSpecsWithUserIDs } from '@/app/lib/model/spec'
-import { getAllUsers, getCurrentUser } from '@/app/lib/model/user'
-import { toDict } from '@/app/lib/utils'
+import { getCurrentUser } from '@/app/lib/model/user'
+import { getUserSpecs } from '@/app/lib/model/user-specs'
 import { applyCriteria } from '@/app/u/[username]/specs/_criteria/apply'
 import { Criteria } from '@/app/u/[username]/specs/_criteria/types'
 import { Count } from '@/app/u/[username]/specs/count'
@@ -33,33 +29,18 @@ export async function SpecsContainer({
 
   invariant(user && username, `User not found.`)
 
-  const { id: userID } = user
-
-  const [follows, data] = await Promise.all([
-    getAllFollowing(userID),
-    getIngredientData(),
-  ])
-
-  const userIDs = [
-    userID,
-    ...follows.filter(({ follows }) => follows).map(({ followee }) => followee),
-  ]
-
-  const [users, rawSpecs] = await Promise.all([
-    getAllUsers(userIDs),
-    getAllSpecsWithUserIDs(userIDs),
-  ])
-
-  const getStock = getSpecStock(data.dict, data.tree)
-  const allSpecs = rawSpecs.map((spec) => ({ ...spec, stock: getStock(spec) }))
+  const { data, specs, userDict } = await getUserSpecs(user.id, {
+    ingredientsStockUserID: currentUser?.id,
+  })
 
   const criteria = currentUser
     ? criteriaProp
     : { ...criteriaProp, sort: criteriaProp.sort ?? 'updated' }
 
-  const specs = applyCriteria(data, allSpecs, criteria)
+  const filteredSpecs = applyCriteria(data, specs, criteria)
 
-  const userDict = toDict(users, (u) => u.username)
+  // const suggestions = getSpecIngredientSuggestions(data.dict, filteredSpecs)
+
   const filters = <FiltersContainer userDict={userDict} criteria={criteria} />
 
   return (
@@ -79,13 +60,13 @@ export async function SpecsContainer({
       toolbar={<Toolbar {...criteria} />}
       filters={filters}
       sidebar={<UsersToFollow username={username} />}
-      status={<Count count={specs.length} total={allSpecs.length} />}
+      status={<Count count={filteredSpecs.length} total={specs.length} />}
     >
       <Grid
-        specs={specs}
+        specs={filteredSpecs}
         userDict={userDict}
         criteria={criteria}
-        count={specs.length}
+        count={filteredSpecs.length}
         showStock={Boolean(currentUser)}
       />
     </Specs>

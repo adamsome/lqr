@@ -1,11 +1,8 @@
 # TODO
 
+- Add IngredientDef (w/o stock, categoryKeys, etc.)
+- isCurrentUser Back show "Specs", etc.
 - Put at `adamso.me/lqr`
-
-- Which bottles/ingredients should I get to add the most specs
-  - Shopping Suggestions
-  - "If you bought Gin you could make 13 more specs"
-  - "If you bought Sweet Vermouth and Campari, you could make..."
 
 FTUE
 ----
@@ -13,6 +10,16 @@ FTUE
 - Create modern classics user
 - Onboarding bar inventory
 - Follow classics on signup
+
+Suggestions
+-----------
+
+- Add to Specs page reflecting current filters
+- Add combos
+- Which bottles/ingredients should I get to add the most specs
+  - Shopping Suggestions
+  - "If you bought Gin you could make 13 more specs"
+  - "If you bought Sweet Vermouth and Campari, you could make..."
 
 Bar
 ---
@@ -173,7 +180,6 @@ Content
 
 - Hamilton Guyana 86 incorrectly listed as Black
 - Blackberry Liquery incorrectly listed as Black
-- Singani, fix category type
 - `chareau_california_aloe_liqueur` category: `aloe`
 - `bigallet_thyme_liqueur` category: `thyme`
 - `fernetvallet` category: `fernet`

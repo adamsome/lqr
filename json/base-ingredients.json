@@ -994,11 +994,6 @@
     "category": "bitters"
   },
   {
-    "id": "bitters_lemon",
-    "name": "Lemon",
-    "category": "bitters"
-  },
-  {
     "id": "bitters_mole",
     "name": "Mole",
     "category": "bitters"
@@ -1294,12 +1289,6 @@
     "parent": "fortifiedwine_sherry"
   },
   {
-    "id": "fortifiedwine_sherry_eastindia",
-    "name": "East India",
-    "category": "fortifiedwine",
-    "parent": "fortifiedwine_sherry"
-  },
-  {
     "id": "fortifiedwine_sherry_fino",
     "name": "Fino",
     "category": "fortifiedwine",
@@ -1320,12 +1309,6 @@
   {
     "id": "fortifiedwine_sherry_palecream",
     "name": "Pale Cream",
-    "category": "fortifiedwine",
-    "parent": "fortifiedwine_sherry"
-  },
-  {
-    "id": "fortifiedwine_sherry_palocortado",
-    "name": "Palo Cortado",
     "category": "fortifiedwine",
     "parent": "fortifiedwine_sherry"
   },
@@ -1744,11 +1727,6 @@
   {
     "id": "liqueur_rhubarb",
     "name": "Rhubarb",
-    "category": "liqueur"
-  },
-  {
-    "id": "liqueur_rich",
-    "name": "Rich",
     "category": "liqueur"
   },
   {

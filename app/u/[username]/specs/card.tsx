@@ -58,7 +58,12 @@ export function Card({
       </CardHeader>
       <CardContent className="px-2 py-0 text-xs text-muted-foreground font-medium line-clamp-2">
         {ingredients
-          .map((it) => getIngredientView(it))
+          .map((it) => {
+            const view = getIngredientView(it)
+            if (view.error)
+              console.warn(`Ingredient parsing issue with spec '${spec.name}'`)
+            return view
+          })
           .map(({ name, infusion }) =>
             rejectNil([infusion, capitalize(name)]).join(' '),
           )
