@@ -1,8 +1,6 @@
+import { asArray, head, rejectNil } from '@/app/lib/utils'
 import {
-  Criteria,
-  SearchParams,
-} from '@/app/u/[username]/specs/_criteria/types'
-import {
+  BAR_CATEGORY_KEY,
   CATEGORY_KEY,
   DEFAULT_LIMIT,
   INGREDIENT_KEY,
@@ -12,9 +10,10 @@ import {
   SORT_KEY,
   SpecSort,
   USER_KEY,
-} from '@/app/u/[username]/specs/_criteria/consts'
-import { parseIngredientCriterion } from '@/app/u/[username]/specs/_criteria/ingredient-criterion'
-import { asArray, head, rejectNil } from '@/app/lib/utils'
+} from './consts'
+import { parseWithExclude } from './exclude'
+import { parseIngredientCriterion } from './ingredient-criterion'
+import { Criteria, SearchParams } from './types'
 
 export function parseCriteria(
   searchParams: SearchParams,
@@ -26,6 +25,9 @@ export function parseCriteria(
     users: asArray(searchParams[USER_KEY] ?? []),
     ingredients: rejectNil(
       asArray(searchParams[INGREDIENT_KEY] ?? []).map(parseIngredientCriterion),
+    ),
+    barCategories: asArray(searchParams[BAR_CATEGORY_KEY] ?? []).map(
+      parseWithExclude,
     ),
     sort: head(searchParams[SORT_KEY] as SpecSort | SpecSort[] | undefined),
     desc: Boolean(searchParams[SORT_DESC_KEY]),

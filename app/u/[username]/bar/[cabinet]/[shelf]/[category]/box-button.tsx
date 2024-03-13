@@ -3,15 +3,16 @@
 import { useSelectedLayoutSegments } from 'next/navigation'
 import { FormEventHandler } from 'react'
 
-import { useGetIngredientName } from '@/app/lib/ingredient/use-get-ingredient-name'
 import { CompProps } from '@/app/lib/types'
 import { cn } from '@/app/lib/utils'
 import { CategoryKeys } from '@/app/u/[username]/bar/lib/types'
+import { ExcludeState } from '@/app/u/[username]/specs/_criteria/types'
 
 type Props = CompProps & {
   keys: CategoryKeys
   items?: number
   colSpan?: number
+  filterState?: ExcludeState
   stocked?: boolean
   disabled?: boolean
   readonly?: boolean
@@ -24,12 +25,12 @@ export function BoxButton({
   keys,
   items = 0,
   colSpan,
+  filterState,
   stocked,
   disabled,
   readonly,
   onClick,
 }: Props) {
-  const getIngredientName = useGetIngredientName()
   const selectedPath = useSelectedLayoutSegments()
   const path = [keys.cabinet, keys.shelf, keys.category].filter(Boolean)
   const selected = path.every((key, i) => key === selectedPath[i])
@@ -40,12 +41,15 @@ export function BoxButton({
       type="button"
       style={{ gridRow: `span ${rowSpan} / span ${rowSpan}` }}
       className={cn(
-        'z-10 flex flex-col px-1.5 py-[3px] my-1 w-full overflow-hidden',
-        'text-xs text-start tracking-tighter',
+        'z-10 my-1 flex w-full flex-col overflow-hidden px-1.5 py-[3px]',
+        'text-start text-xs tracking-tighter',
         'rounded shadow transition-all',
-        'bg-accent border border-primary/7.5',
+        'bg-accent border-primary/7.5 border',
         !stocked && 'bg-background/25 border-primary/10',
-        selected && 'brightness-125 border-accent-muted',
+        selected && 'border-accent-muted brightness-125',
+        filterState == 'include' && 'bg-accent-muted',
+        filterState == 'exclude' && 'bg-destructive',
+        filterState == 'none' && 'bg-muted',
         disabled && 'bg-primary/5',
         colSpan === 2 && 'col-span-2',
         colSpan === 3 && 'col-span-3',

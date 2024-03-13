@@ -16,6 +16,7 @@ type Props = CompProps &
     name: string
     hideLink?: boolean
     hideHeading?: boolean
+    readonly?: boolean
   }
 
 export async function BoxLink({
@@ -25,6 +26,7 @@ export async function BoxLink({
   name,
   hideLink,
   hideHeading,
+  readonly,
   ...keys
 }: Props) {
   const current = await isCurrentUser(username)
@@ -34,11 +36,12 @@ export async function BoxLink({
   return (
     <LitBox
       className={cn(
-        'flex flex-col text-muted-foreground font-bold border border-primary/5 shadow transition-colors',
+        'text-muted-foreground border-primary/5 flex flex-col border font-bold shadow transition-colors',
         path.length === 1 &&
-          'gap-2 px-[7px] pt-1.5 pb-[7px] text-muted-foreground/75 text-xs [font-stretch:condensed] font-medium uppercase tracking-wider bg-muted/25 rounded-[11px]',
+          'text-muted-foreground/75 bg-muted/25 gap-2 rounded-[11px] px-[7px] pb-[7px] pt-1.5 text-xs font-medium uppercase tracking-wider [font-stretch:condensed]',
         path.length === 2 &&
-          'z-10 gap-1 px-[7px] pt-1.5 pb-[3px] text-sm [font-stretch:normal] normal-case tracking-tight bg-muted/50 rounded-md',
+          'bg-muted/50 z-10 gap-1 rounded-md px-[7px] pb-[3px] pt-1.5 text-sm normal-case tracking-tight [font-stretch:normal]',
+        readonly && 'text-xs',
         hideHeading && 'pt-1',
         className,
       )}
@@ -47,7 +50,7 @@ export async function BoxLink({
       {!hideHeading && !hideLink && (
         <Link
           className={cn(
-            'group p-3 -m-3 tracking-tight',
+            'group -m-3 p-3 tracking-tight',
             path.length === 1 && 'font-semibold',
           )}
           href={url}
@@ -59,11 +62,11 @@ export async function BoxLink({
               gap={0}
             >
               <span>{name}</span>
-              <CaretRightIcon className="w-5 h-5" />
+              <CaretRightIcon className="h-5 w-5" />
             </Level>
             {current && (
               <Button
-                className="px-2.5 py-px h-auto text-accent-muted group-hover:text-accent-foreground group-hover:bg-accent-foreground/15"
+                className="text-accent-muted group-hover:text-accent-foreground group-hover:bg-accent-foreground/15 h-auto px-2.5 py-px"
                 variant="ghost"
               >
                 Edit

@@ -11,6 +11,8 @@ import { useGetIngredientName } from '@/app/lib/ingredient/use-get-ingredient-na
 import { useMutateStock } from '@/app/api/stock/use-mutate-stock'
 import { toBarCategory } from '@/app/lib/routes'
 import { sortByStocked } from '@/app/lib/stock'
+import { ExcludeState } from '@/app/u/[username]/specs/_criteria/types'
+import { cn } from '@/app/lib/utils'
 
 type Props = {
   className?: string
@@ -18,7 +20,9 @@ type Props = {
   def: BarCategoryDef
   category: BarCategory
   isCurrentUser?: boolean
+  filterState?: ExcludeState
   readonly?: boolean
+  onCategoryClick?: (def: BarCategoryDef) => void
 }
 
 export function Box({
@@ -27,7 +31,9 @@ export function Box({
   def,
   category,
   isCurrentUser,
+  filterState,
   readonly,
+  onCategoryClick,
 }: Props) {
   const { keys, items = 0 } = def
   const allStocked = sortByStocked(category.stocked)
@@ -48,6 +54,7 @@ export function Box({
   })
 
   const handleClick = async () => {
+    if (onCategoryClick) return onCategoryClick(def)
     if (mutating || readonly) return
     if (!isCurrentUser || (!isStocked && !hideItems) || def.miscellaneous) {
       router.push(toBarCategory({ ...keys, username }), { scroll: false })
@@ -67,6 +74,7 @@ export function Box({
       className={className}
       {...def}
       stocked={isStocked}
+      filterState={filterState}
       disabled={mutating}
       readonly={readonly}
       onClick={handleClick}
@@ -75,18 +83,26 @@ export function Box({
         className="font-semibold"
         stocked={isStocked}
         wrap={hideItems && items > 0}
+        filterState={filterState}
         title
       >
         {name}
       </BoxLine>
       {displayItems.map((it) => (
-        <BoxLine key={it.id} stocked={(it.stock ?? -1) > 0}>
+        <BoxLine
+          key={it.id}
+          stocked={(it.stock ?? -1) > 0}
+          filterState={filterState}
+        >
           {it.name}
         </BoxLine>
       ))}
       {displayItems.length === 0 && !hideItems && items > 0 && (
         <Level
-          className="text-muted-foreground/30 flex-1 self-end whitespace-nowrap font-normal tracking-tighter"
+          className={cn(
+            'text-muted-foreground/30 flex-1 self-end whitespace-nowrap font-normal tracking-tighter',
+            filterState && filterState !== 'none' && 'text-background',
+          )}
           items="end"
           gap={0}
         >

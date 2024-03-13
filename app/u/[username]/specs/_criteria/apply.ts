@@ -1,19 +1,21 @@
-import { Criteria } from '@/app/u/[username]/specs/_criteria/types'
-import { sortSpecs } from '@/app/u/[username]/specs/_criteria/sort'
 import {
   filterIngredientItems,
   testIngredientMethods,
 } from '@/app/lib/ingredient/filter-ingredient-items'
 import { IngredientData, Spec } from '@/app/lib/types'
+import { sortSpecs } from './sort'
+import { Criteria, SpecApplied } from './types'
+import { partitionExclude } from './exclude'
+import { rejectNil } from '@/app/lib/utils'
 
 export function applyCriteria(
   data: IngredientData,
   specs: Spec[],
   criteria: Criteria,
-): Spec[] {
+): SpecApplied[] {
   let result = specs
 
-  const { search, categories, users, ingredients } = criteria
+  const { search, categories, users, ingredients, barCategories } = criteria
 
   if (search) {
     const words = search.toLowerCase().split(' ')
@@ -50,6 +52,30 @@ export function applyCriteria(
           ),
         ),
       ),
+    )
+  }
+
+  if (barCategories.length) {
+    const { include, exclude } = partitionExclude(barCategories)
+    result = rejectNil(
+      result.map((s): SpecApplied | null => {
+        let barCategoryCount = 0
+        for (const it of s.ingredients) {
+          const defID = it.bottleID ?? it.id
+          if (!defID) continue
+          const keys = data.dict[defID]?.categoryKeys
+          if (!keys?.category) {
+            console.warn(`No filter category for '${defID}' in ${s.id}`)
+            continue
+          }
+          if (exclude.has(keys.category)) return null
+          if (include.has(keys.category)) barCategoryCount++
+        }
+        if (barCategoryCount > 0) {
+          return { ...s, barCategoryCount }
+        }
+        return include.size === 0 ? s : null
+      }),
     )
   }
 

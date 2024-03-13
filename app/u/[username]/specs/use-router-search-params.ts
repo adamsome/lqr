@@ -1,6 +1,10 @@
+import { asArray } from '@/app/lib/utils'
 import { NavigateOptions } from 'next/dist/shared/lib/app-router-context.shared-runtime'
 import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 import { useCallback } from 'react'
+
+const negateStr = (value: string) =>
+  value[0] === '-' ? value.substring(1) : `-${value}`
 
 export function useRouterSearchParams() {
   const router = useRouter()
@@ -27,16 +31,38 @@ export function useRouterSearchParams() {
     [searchParams],
   )
 
-  const clearQueryString = useCallback(
-    (name?: string, value?: string) => {
-      if (!name) return ''
+  const negateQueryString = useCallback(
+    (name: string, value: string) => {
       const params = new URLSearchParams(searchParams)
       const values = params.getAll(name)
-      params.delete(name)
+      if (values.includes(value)) {
+        params.delete(name, value)
+        params.append(name, negateStr(value))
+      } else {
+        if (values.includes(negateStr(value))) {
+          params.delete(name, negateStr(value))
+        }
+        params.append(name, value)
+      }
+
+      return params.toString()
+    },
+    [searchParams],
+  )
+
+  const clearQueryString = useCallback(
+    (name?: string | string[], value?: string) => {
+      if (!name) return ''
+      const params = new URLSearchParams(searchParams)
+      const names = asArray(name)
+      const valuesPerName = names.map((n) => params.getAll(n))
+      names.forEach((n) => params.delete(n))
       if (value) {
-        values
-          .filter((val) => val !== value)
-          .forEach((v) => params.append(name, v))
+        names.forEach((n, i) =>
+          valuesPerName[i]
+            .filter((val) => val !== value)
+            .forEach((v) => params.append(n, v)),
+        )
       }
       return params.toString()
     },
@@ -50,7 +76,7 @@ export function useRouterSearchParams() {
   )
 
   const clear = useCallback(
-    (name?: string, value?: string, options?: NavigateOptions) =>
+    (name?: string | string[], value?: string, options?: NavigateOptions) =>
       pushQueryString(clearQueryString(name, value), options),
     [pushQueryString, clearQueryString],
   )
@@ -70,5 +96,13 @@ export function useRouterSearchParams() {
     [pushQueryString, appendQueryString],
   )
 
-  return { set, append, clear, searchParams }
+  const negate = useCallback(
+    (name?: string, value?: string, options?: NavigateOptions) => {
+      if (name && value)
+        pushQueryString(negateQueryString(name, value), options)
+    },
+    [pushQueryString, negateQueryString],
+  )
+
+  return { set, append, negate, clear, searchParams }
 }

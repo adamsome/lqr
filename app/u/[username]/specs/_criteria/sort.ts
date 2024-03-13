@@ -1,13 +1,12 @@
 import { ascend, descend, sortWith } from 'ramda'
 
 import { isSpecSortDefaultDesc } from '@/app/u/[username]/specs/_criteria/consts'
-import { Criteria } from '@/app/u/[username]/specs/_criteria/types'
-import { Spec } from '@/app/lib/types'
+import { Criteria, SpecApplied } from '@/app/u/[username]/specs/_criteria/types'
 
 export function sortSpecs(
-  specs: Spec[],
+  specs: SpecApplied[],
   { sort = 'stock', desc }: Partial<Criteria> = {},
-): Spec[] {
+): SpecApplied[] {
   const actualDesc = isSpecSortDefaultDesc(sort) ? !desc : desc
   const order = actualDesc ? descend : ascend
   switch (sort) {
@@ -16,6 +15,7 @@ export function sortSpecs(
       return sortWith(
         [
           order((s) => (s.stock?.count ?? 0) / (s.stock?.total ?? 0)),
+          descend((s) => s.barCategoryCount ?? 0),
           descend((s) => s.updatedAt),
           order((s) => s.createdAt),
         ],
