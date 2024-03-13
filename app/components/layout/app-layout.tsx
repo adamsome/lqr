@@ -41,7 +41,7 @@ export function AppLayout({ children, className, scrolledPx = 50 }: Props) {
     <Context.Provider value={{ scrolled }}>
       <div
         className={cn(
-          'isolate [--h-sticky:3.25rem] sm:[--h-sticky:3.75rem] [--px:theme(spacing.2)]',
+          'isolate [--h-sticky:3.25rem] [--px:theme(spacing.2)] sm:[--h-sticky:3.75rem]',
           className,
         )}
       >
@@ -60,7 +60,7 @@ export function AppHeader({ children, className, title }: HeaderProps) {
   return (
     <header
       className={cn(
-        'z-30 sticky top-0 grid w-full place-content-center',
+        'sticky top-0 z-30 grid w-full place-content-center',
         'grid-cols-[var(--px)_1fr_var(--px)] grid-rows-1 [&>*]:row-[1]',
         'h-[var(--h-sticky)] border-b border-transparent transition-colors',
         scrolled && 'border-border/40',
@@ -69,8 +69,8 @@ export function AppHeader({ children, className, title }: HeaderProps) {
     >
       <div
         className={cn(
-          'absolute inset-0 col-span-full pointer-events-none',
-          '[--extend:theme(spacing.32)] bottom-[calc(-1*var(--extend))]',
+          'pointer-events-none absolute inset-0 col-span-full',
+          'bottom-[calc(-1*var(--extend))] [--extend:theme(spacing.32)]',
           '[--cutoff:calc(100%-var(--extend))]',
           '[-webkit-mask-image:linear-gradient(to_bottom,black_0,black_var(--cutoff),transparent_var(--cutoff))]',
           'backdrop-blur-lg',
@@ -80,18 +80,18 @@ export function AppHeader({ children, className, title }: HeaderProps) {
         <div
           className={cn(
             'relative flex items-center justify-center justify-self-center',
-            'max-w-[calc(100%-theme(spacing.28))] col-[2]',
+            'col-[2] max-w-[calc(100%-theme(spacing.28))]',
             'opacity-0 transition-opacity',
             scrolled && 'opacity-100',
           )}
         >
-          <H2 className="overflow-hidden whitespace-nowrap text-ellipsis">
+          <H2 className="overflow-hidden text-ellipsis whitespace-nowrap">
             {title}
           </H2>
         </div>
       )}
       {children && (
-        <Level className="relative justify-between w-full col-[2]" gap={4}>
+        <Level className="relative col-[2] w-full justify-between" gap={4}>
           {children}
         </Level>
       )}
@@ -109,7 +109,7 @@ export function AppBack({ children, className, href, user }: BackProps) {
   return (
     <Link className={className} href={href}>
       <Button className="px-1" variant="ghost" size="sm">
-        <CaretLeftIcon className="w-6 h-6 -me-0.5" />
+        <CaretLeftIcon className="-me-0.5 h-6 w-6" />
         <UserAvatar className="pr-2.5" user={user} hideName={scrolled} />
         {children}
       </Button>
@@ -130,7 +130,7 @@ export function AppActions({ children, className }: CompProps) {
 
 export function AppContent({ children, className }: CompProps) {
   return (
-    <Container className={cn('pt-4 pb-20 md:py-6', className)}>
+    <Container className={cn('pb-20 pt-4 md:py-6', className)}>
       {children}
     </Container>
   )
@@ -154,15 +154,15 @@ export function AppFooter({ children, className, status }: FooterProps) {
       className={cn(
         'fixed bottom-0 grid w-full place-content-center',
         'grid-cols-[var(--px)_1fr_var(--px)] grid-rows-1 [&>*]:row-[1]',
-        'h-14 pb-0 z-30 sm:hidden',
-        'border-t border-border/40',
+        'z-30 h-14 pb-0 sm:hidden',
+        'border-border/40 border-t',
         className,
       )}
     >
       <div
         className={cn(
-          'absolute inset-0 col-span-full pointer-events-none',
-          '[--extend:theme(spacing.32)] top-[calc(-1*var(--extend))]',
+          'pointer-events-none absolute inset-0 col-span-full',
+          'top-[calc(-1*var(--extend))] [--extend:theme(spacing.32)]',
           '[--cutoff:calc(100%-var(--extend))]',
           '[-webkit-mask-image:linear-gradient(to_top,black_0,black_var(--cutoff),transparent_var(--cutoff))]',
           'backdrop-blur-lg',
@@ -171,8 +171,8 @@ export function AppFooter({ children, className, status }: FooterProps) {
       {status && (
         <Level
           className={cn(
-            'relative justify-self-center col-[2]',
-            'text-sm text-muted-foreground',
+            'relative col-[2] justify-self-center',
+            'text-muted-foreground text-sm',
           )}
           items="center"
           justify="center"
@@ -181,7 +181,7 @@ export function AppFooter({ children, className, status }: FooterProps) {
         </Level>
       )}
       {children && (
-        <Level className="relative justify-between w-full col-[2]" gap={4}>
+        <Level className="relative col-[2] w-full justify-between" gap={4}>
           {children}
         </Level>
       )}

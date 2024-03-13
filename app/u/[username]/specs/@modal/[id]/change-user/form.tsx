@@ -169,7 +169,7 @@ function Content({
                     <Item user={specUser} />
                   </SelectContent>
                 </Select>
-                <ArrowRightIcon className="flex-shrink-0 text-accent-foreground" />
+                <ArrowRightIcon className="text-accent-foreground flex-shrink-0" />
                 <Select
                   onValueChange={(value) => {
                     localStorage.setItem(localStorageKey, value)

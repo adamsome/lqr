@@ -1,8 +1,13 @@
 # TODO
 
+- Add landing Try button
+- Landing categories, go to Try
+- Landing specs, go to spec
+
 - Add IngredientDef (w/o stock, categoryKeys, etc.)
 - isCurrentUser Back show "Specs", etc.
 - Put at `adamso.me/lqr`
+- Color bar representing booze, citrus, lengtheners, etc.
 
 FTUE
 ----

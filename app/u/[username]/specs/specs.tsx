@@ -5,12 +5,11 @@ import { ReactNode } from 'react'
 import {
   AppActions,
   AppBack,
-  AppContent,
+  AppFullWidthContent,
   AppFooter,
   AppHeader,
   AppLayout,
 } from '@/app/components/layout/app-layout'
-import { Container } from '@/app/components/layout/container'
 import { Button, IconButton } from '@/app/components/ui/button'
 import { UserAvatar } from '@/app/components/user/user-avatar'
 import { getCurrentUser } from '@/app/lib/model/user'
@@ -21,6 +20,7 @@ import { isAdmin } from '@/app/lib/model/admin'
 type Props = {
   children?: ReactNode
   header: ReactNode
+  title?: ReactNode
   toolbar: ReactNode
   filters?: ReactNode
   sidebar?: ReactNode
@@ -31,6 +31,7 @@ type Props = {
 export async function Specs({
   children,
   header,
+  title,
   toolbar,
   filters,
   sidebar,
@@ -38,11 +39,11 @@ export async function Specs({
   username,
 }: Props) {
   const { user, currentUser, isCurrentUser } = await getCurrentUser(username)
-  const showCreate = isCurrentUser || isAdmin(currentUser?.id)
+  const showCreate = username && (isCurrentUser || isAdmin(currentUser?.id))
   const addUrl = toCreateSpec(user?.username)
   return (
     <AppLayout>
-      <AppHeader title={<UserAvatar user={user} />}>
+      <AppHeader title={title ?? <UserAvatar user={user} />}>
         {!isCurrentUser ? (
           <AppBack href={toHome(currentUser?.username)} user={currentUser} />
         ) : (
@@ -53,7 +54,7 @@ export async function Specs({
             <Link href={addUrl}>
               <Button size="sm">
                 <Pencil2Icon />
-                <span className="ps-1.5 pe-1">Create</span>
+                <span className="pe-1 ps-1.5">Create</span>
               </Button>
             </Link>
           )}
@@ -61,18 +62,18 @@ export async function Specs({
       </AppHeader>
 
       <div className="flex">
-        <AppContent className="flex-1 w-full gap-y-5 sm:gap-y-6">
+        <AppFullWidthContent className="flex w-full flex-1 flex-col gap-y-5 sm:gap-y-6">
           {header}
           <div className="flex flex-col gap-4 sm:gap-5">
             {toolbar}
             <div className="flex gap-6">
               <div className="hidden sm:flex">{filters}</div>
-              <div className="flex flex-1 flex-col gap-4 w-full">
+              <div className="flex w-full flex-1 flex-col gap-4">
                 {children}
               </div>
             </div>
           </div>
-        </AppContent>
+        </AppFullWidthContent>
         {sidebar}
       </div>
 
@@ -83,7 +84,7 @@ export async function Specs({
         {showCreate && (
           <Link href={addUrl}>
             <IconButton>
-              <Pencil2Icon className="w-6 h-6" />
+              <Pencil2Icon className="h-6 w-6" />
             </IconButton>
           </Link>
         )}
