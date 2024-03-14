@@ -5,6 +5,7 @@ export default authMiddleware({
     '/',
     '/api/staticdata',
     '/research',
+    '/specs',
     '/u/([^/]*)',
     '/u/([^/]*/bar)',
     '/u/([^/]*/bar/.*)',

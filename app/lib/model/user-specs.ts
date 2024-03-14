@@ -31,3 +31,28 @@ export async function getUserSpecs(
 
   return { data, specs, userDict }
 }
+
+// TODO: Control from DB
+const globalUserIDs = [
+  'user_2QaSdLhpL7dMcmD999SKB2teEIM', // adamsome
+  'user_classics',
+  'user_modern_classics',
+  'user_deathcowelcomehome',
+  'user_smugglerscove',
+]
+
+export async function getGlobalSpecs() {
+  const data = await getIngredientData()
+
+  const [users, rawSpecs] = await Promise.all([
+    getAllUsers(globalUserIDs),
+    getAllSpecsWithUserIDs(globalUserIDs),
+  ])
+
+  const userDict = toDict(users, (u) => u.username)
+
+  const getStock = getSpecStock(data.dict, data.tree)
+  const specs = rawSpecs.map((spec) => ({ ...spec, stock: getStock(spec) }))
+
+  return { data, specs, userDict }
+}

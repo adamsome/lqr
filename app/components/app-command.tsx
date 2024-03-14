@@ -59,18 +59,20 @@ export function AppCommand() {
 
   if (!isLoaded) return null
 
-  if (pathname !== '/' && (!user || !username)) {
+  if (!user || !username) {
     return (
       <Sticky>
-        <Level className="[&>*]:pt-[0.22rem] sm:gap-4" gap={3}>
+        <Level className="sm:gap-4 [&>*]:pt-[0.22rem]" gap={3}>
           <Link href={SIGN_IN}>
             <Button variant="outline" size="sm">
               Sign In
             </Button>
           </Link>
-          <Link href={SIGN_UP}>
-            <Button size="sm">Sign Up</Button>
-          </Link>
+          {pathname !== '/' && (!user || !username) && (
+            <Link href={SIGN_UP}>
+              <Button size="sm">Sign Up</Button>
+            </Link>
+          )}
         </Level>
       </Sticky>
     )
@@ -106,7 +108,7 @@ export function AppCommand() {
       <Sticky>
         <button
           type="button"
-          className="rounded-full shadow-md overflow-hidden w-9 h-9 sm:w-11 sm:h-11"
+          className="h-9 w-9 overflow-hidden rounded-full shadow-md sm:h-11 sm:w-11"
           onClick={() => setOpen(true)}
         >
           <UserAvatarImage user={user} size="xl" />
@@ -116,8 +118,8 @@ export function AppCommand() {
       <Dialog open={profileOpen} onOpenChange={setProfileOpen}>
         <DialogPortal className="z-50">
           <DialogOverlay />
-          <DialogContent className="fixed z-50 grid h-[calc(100vh-200px)] gap-4 rounded-2xl overflow-hidden animate-in data-[state=open]:fade-in-90 data-[state=open]:slide-in-from-bottom-10 sm:zoom-in-90 data-[state=open]:sm:slide-in-from-bottom-0">
-            <div className="overflow-auto w-full h-full [&_.cl-card]:mx-0">
+          <DialogContent className="animate-in data-[state=open]:fade-in-90 data-[state=open]:slide-in-from-bottom-10 sm:zoom-in-90 data-[state=open]:sm:slide-in-from-bottom-0 fixed z-50 grid h-[calc(100vh-200px)] gap-4 overflow-hidden rounded-2xl">
+            <div className="h-full w-full overflow-auto [&_.cl-card]:mx-0">
               <UserProfile />
             </div>
           </DialogContent>
@@ -180,7 +182,7 @@ export function AppCommand() {
               name="adamsome"
               desc="Author Homepage"
               value="https://adamso.me"
-              icon={<Logo className="w-6 h-6 -m-1" />}
+              icon={<Logo className="-m-1 h-6 w-6" />}
               onSelect={(href) => {
                 window?.open(href)
                 setOpen(false)
@@ -190,7 +192,7 @@ export function AppCommand() {
               name="Github"
               desc="Source Code"
               value="https://www.github.com/adamsome/lqr"
-              icon={<GithubIcon className="w-4 h-4" />}
+              icon={<GithubIcon className="h-4 w-4" />}
               onSelect={(href) => {
                 window?.open(href)
                 setOpen(false)
@@ -199,10 +201,10 @@ export function AppCommand() {
           </CommandGroup>
         </CommandList>
 
-        <div className="flex items-center justify-between h-10 px-3 border-t">
-          <div className="flex items-center gap-2 font-semibold text-accent-muted">
+        <div className="flex h-10 items-center justify-between border-t px-3">
+          <div className="text-accent-muted flex items-center gap-2 font-semibold">
             <Logo
-              className="w-7 h-7 -m-1.5"
+              className="-m-1.5 h-7 w-7"
               body="text-accent-muted"
               line="text-primary"
             />
@@ -226,7 +228,7 @@ export function AppCommand() {
 
 function Sticky({ children }: { children: ReactNode }) {
   return (
-    <div className="sticky top-0 w-full z-40 [&>*]:absolute [&>*]:top-2 [&>*]:right-2">
+    <div className="sticky top-0 z-40 w-full [&>*]:absolute [&>*]:right-2 [&>*]:top-2">
       {children}
     </div>
   )

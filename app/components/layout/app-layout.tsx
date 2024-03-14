@@ -1,6 +1,6 @@
 'use client'
 
-import { useAuth } from '@clerk/nextjs'
+import { useAuth, useUser } from '@clerk/nextjs'
 import { CaretLeftIcon } from '@radix-ui/react-icons'
 import Link from 'next/link'
 import {
@@ -22,13 +22,16 @@ import { UserAvatar } from '@/app/components/user/user-avatar'
 import { CompProps, User } from '@/app/lib/types'
 import { cn } from '@/app/lib/utils'
 
-const Context = createContext({ scrolled: false })
+const Context = createContext({ scrolled: false, signedOut: false })
 
 type Props = CompProps & {
   scrolledPx?: number
 }
 
 export function AppLayout({ children, className, scrolledPx = 50 }: Props) {
+  const { user, isLoaded } = useUser()
+  const signedOut = isLoaded && !user
+
   const [scrolled, setScrolled] = useState(false)
   useEffect(() => {
     window.addEventListener('scroll', () =>
@@ -38,10 +41,11 @@ export function AppLayout({ children, className, scrolledPx = 50 }: Props) {
   }, [scrolledPx])
 
   return (
-    <Context.Provider value={{ scrolled }}>
+    <Context.Provider value={{ scrolled, signedOut }}>
       <div
         className={cn(
           'isolate [--h-sticky:3.25rem] [--px:theme(spacing.2)] sm:[--h-sticky:3.75rem]',
+          signedOut && '[--h-sticky:3.75rem]',
           className,
         )}
       >
@@ -56,7 +60,7 @@ type HeaderProps = CompProps & {
 }
 
 export function AppHeader({ children, className, title }: HeaderProps) {
-  const { scrolled } = useContext(Context)
+  const { scrolled, signedOut } = useContext(Context)
   return (
     <header
       className={cn(
@@ -76,7 +80,7 @@ export function AppHeader({ children, className, title }: HeaderProps) {
           'backdrop-blur-lg',
         )}
       />
-      {title && (
+      {title && !signedOut && (
         <div
           className={cn(
             'relative flex items-center justify-center justify-self-center',
@@ -110,8 +114,11 @@ export function AppBack({ children, className, href, user }: BackProps) {
     <Link className={className} href={href}>
       <Button className="px-1" variant="ghost" size="sm">
         <CaretLeftIcon className="-me-0.5 h-6 w-6" />
-        <UserAvatar className="pr-2.5" user={user} hideName={scrolled} />
-        {children}
+        {children ? (
+          <span className="pe-2">{children}</span>
+        ) : (
+          <UserAvatar className="pr-2.5" user={user} hideName={scrolled} />
+        )}
       </Button>
     </Link>
   )

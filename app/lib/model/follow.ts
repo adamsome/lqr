@@ -41,7 +41,6 @@ export async function upsertFollow(follow: Follow) {
   const cn = await connect()
   const count = await getFollowingCount(follow.follower)
   const delta = follow.follows ? 1 : -1
-  console.log('count', count, follow, delta)
   await updateUserFollowingCount(follow.follower, count + delta)
   return cn.updateOne(
     { followee: follow.followee, follower: follow.follower },

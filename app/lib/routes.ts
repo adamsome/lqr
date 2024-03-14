@@ -7,6 +7,7 @@ export const API_USERS = '/api/users'
 
 export const SIGN_IN = '/sign-in'
 export const SIGN_UP = '/sign-up'
+export const SPECS = '/specs'
 
 const prefixUserHome =
   (url: string = '') =>

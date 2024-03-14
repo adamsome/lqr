@@ -60,7 +60,7 @@ export function Filters({ className, data, criteria, users, bar }: Props) {
         gap={6}
       >
         <FilterSection name="Category" actions={<Clear name={CATEGORY_KEY} />}>
-          <Level className="flex-wrap">
+          <Level className="flex-wrap gap-y-2" gap={4}>
             {SPEC_CATEGORY_ITEMS.map(({ value, label }) => (
               <CheckboxWithLabel
                 key={value}
@@ -80,7 +80,7 @@ export function Filters({ className, data, criteria, users, bar }: Props) {
 
         {showUsers && (
           <FilterSection name="Users" actions={<Clear name={USER_KEY} />}>
-            <Level className="flex-wrap">
+            <Level className="flex-wrap gap-y-2" gap={4}>
               {users.map((user) => {
                 const { username, displayName, checked } = user
                 return (

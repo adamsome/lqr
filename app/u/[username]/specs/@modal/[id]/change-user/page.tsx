@@ -6,7 +6,6 @@ import { head } from '@/app/lib/utils'
 import { Form } from '@/app/u/[username]/specs/@modal/[id]/change-user/form'
 import { specUserIDParam } from '@/app/u/[username]/specs/@modal/[id]/change-user/types'
 import { Title } from '@/app/u/[username]/specs/[id]/title'
-import { useRouter } from 'next/navigation'
 
 type Props = PageProps<{
   username?: string

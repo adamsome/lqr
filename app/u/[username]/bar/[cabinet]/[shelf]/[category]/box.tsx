@@ -22,6 +22,7 @@ type Props = {
   isCurrentUser?: boolean
   filterState?: ExcludeState
   readonly?: boolean
+  href?: string
   onCategoryClick?: (def: BarCategoryDef) => void
 }
 
@@ -33,6 +34,7 @@ export function Box({
   isCurrentUser,
   filterState,
   readonly,
+  href,
   onCategoryClick,
 }: Props) {
   const { keys, items = 0 } = def
@@ -54,6 +56,7 @@ export function Box({
   })
 
   const handleClick = async () => {
+    if (href) return router.push(href)
     if (onCategoryClick) return onCategoryClick(def)
     if (mutating || readonly) return
     if (!isCurrentUser || (!isStocked && !hideItems) || def.miscellaneous) {

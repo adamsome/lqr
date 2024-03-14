@@ -7,6 +7,7 @@ import { Spec, User } from '@/app/lib/types'
 import { cn } from '@/app/lib/utils'
 import { SpecStockText } from '@/app/u/[username]/specs/[id]/spec-stock'
 import { Card, CardDescription } from '@/app/u/[username]/specs/card'
+import { toSpecItem } from './lib/routes'
 
 const specs = [
   {
@@ -143,7 +144,7 @@ export async function SampleSpecs() {
     <IngredientDataProvider {...data}>
       <div className="-mx-4 lg:mx-0">
         <HorizontalScroller
-          className="px-4 lg:p-2 lg:bg-popover/75 lg:border lg:rounded-md"
+          className="lg:bg-popover/75 px-4 lg:rounded-md lg:border lg:p-2"
           countInView={[1, 2, 2]}
         >
           {specCols.map((col, i) => (
@@ -152,13 +153,14 @@ export async function SampleSpecs() {
                 <Card
                   key={spec.id}
                   className={cn(
-                    'bg-muted/50 border border-primary/5 shadow',
+                    'bg-muted/50 border-primary/5 border shadow',
                     (i % 2) + (((j - 1) % 2) % 2)
                       ? 'h-[4.75rem] lg:h-[5.75rem]'
                       : 'h-[5.75rem]',
                   )}
                   data={data}
                   spec={spec}
+                  href={toSpecItem(spec)}
                   description={
                     <CardDescription>
                       <UserAvatar

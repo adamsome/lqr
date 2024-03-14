@@ -23,6 +23,7 @@ const ignoreIngredientIDPrefixes: string[] = [
 const ignoreIngredientIDs = toTruthMap([
   'coffee_bean',
   'extract_vanilla',
+  'fruit_cherry',
   'fruit_cucumber',
   'fruit_lemon',
   'fruit_lime',

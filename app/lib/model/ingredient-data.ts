@@ -12,6 +12,7 @@ import { FIND_NO_ID, connectToDatabase } from '@/app/lib/mongodb'
 import { Ingredient, IngredientData, UserEntity } from '@/app/lib/types'
 import { rejectNil } from '@/app/lib/utils'
 import { buildCategoryData } from '@/app/u/[username]/bar/lib/category-builder'
+import { SAMPLE_INGREDIENT_DATA } from '../ingredient/samples'
 
 import 'server-only'
 
@@ -21,7 +22,7 @@ const getUserIngredients = cache(
 
     const id = userID ?? currentUserID
 
-    if (!id) return {}
+    if (!id) return SAMPLE_INGREDIENT_DATA
 
     const { db } = await connectToDatabase()
     const user = await db

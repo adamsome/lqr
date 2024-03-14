@@ -9,12 +9,12 @@ import {
   CabinetDef,
   ShelfDef,
 } from '@/app/u/[username]/bar/lib/types'
+import { SAMPLE_SPECS_PATH } from './lib/ingredient/samples'
 
 export async function SampleBar() {
   const { dict, tree } = await getIngredientData()
   const inStock: Record<string, string[]> = {
     'rye-whiskey': ['rittenhouse', 'pikesville'],
-    // 'dry-gin': ['beefeater'],
     'dry-vermouth': ['dolin_dry'],
     maraschino: ['liqueur_maraschino'],
     angostura: ['angostura'],
@@ -45,7 +45,7 @@ export async function SampleBar() {
               key={category}
               def={def}
               category={barCategory}
-              readonly
+              href={SAMPLE_SPECS_PATH}
             />
           )
         })}

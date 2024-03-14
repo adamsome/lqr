@@ -21,6 +21,7 @@ type Props = {
   children?: ReactNode
   header: ReactNode
   title?: ReactNode
+  backButton?: ReactNode
   toolbar: ReactNode
   filters?: ReactNode
   sidebar?: ReactNode
@@ -32,6 +33,7 @@ export async function Specs({
   children,
   header,
   title,
+  backButton,
   toolbar,
   filters,
   sidebar,
@@ -44,11 +46,12 @@ export async function Specs({
   return (
     <AppLayout>
       <AppHeader title={title ?? <UserAvatar user={user} />}>
-        {!isCurrentUser ? (
-          <AppBack href={toHome(currentUser?.username)} user={currentUser} />
-        ) : (
-          <div />
-        )}
+        {backButton ??
+          (!isCurrentUser ? (
+            <AppBack href={toHome(currentUser?.username)} user={currentUser} />
+          ) : (
+            <div />
+          ))}
         <AppActions>
           {showCreate && (
             <Link href={addUrl}>
