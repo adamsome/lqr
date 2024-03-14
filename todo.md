@@ -1,23 +1,15 @@
 # TODO
 
-- Add landing Try button
-- Landing categories, go to Try
-- Landing specs, go to spec
-
-- Add IngredientDef (w/o stock, categoryKeys, etc.)
 - isCurrentUser Back show "Specs", etc.
 - Put at `adamso.me/lqr`
-- Color bar representing booze, citrus, lengtheners, etc.
 
-FTUE
-----
+## FTUE
 
 - Create modern classics user
 - Onboarding bar inventory
 - Follow classics on signup
 
-Suggestions
------------
+## Suggestions
 
 - Add to Specs page reflecting current filters
 - Add combos
@@ -26,8 +18,7 @@ Suggestions
   - "If you bought Gin you could make 13 more specs"
   - "If you bought Sweet Vermouth and Campari, you could make..."
 
-Bar
----
+## Bar
 
 ### Inventory
 
@@ -55,8 +46,7 @@ Bar
 - Move actions down to page header (not app header)
 - Explore Drawer bar/shopping list
 
-Specs
------
+## Specs
 
 ### Favorites
 
@@ -90,29 +80,26 @@ Specs
   - If empty params, redirect to saved; else set local storage
   - Clear clears local storage
 
-Spec
-----
+## Spec
 
+- Color bar representing booze, citrus, lengtheners, etc.
 - Spec dialog w/ '#' permalink from Specs page
 - Spec Edit is when its yours, Clone when not
 
-Following
----------
+## Following
 
 - Add counts
 - Add users to follow
 - Add back button
 
-Ingredients
------------
+## Ingredients
 
 - Add ingredient drawer (for spec edit/add & bar global add)
   - Use custom Command inside Vaul
   - Use bar grid + full search
   - Should not open keyboard by default
 
-Home
-----
+## Home
 
 - Bring back home(?)
   - Add feed (movies app for inspiration)
@@ -120,8 +107,7 @@ Home
 - Specs has no users to follow
 - Include bar on home
 
-Redesign
---------
+## Redesign
 
 - Bricolage font (?)
 - Landing page color (?)
@@ -131,8 +117,7 @@ Redesign
 - Add kbd tooltips, command input hints
 - Combine Bar & Research
 
-QoL
----
+## QoL
 
 - Add ingredient recipes
   - E.g. Improved Gardenia Mix has ingredients & notes
@@ -156,29 +141,34 @@ QoL
 - Show similar specs
 - Specs card ingredients, show simple ingredient names
 
-Content
--------
+## Content
 
 - Add ingredient:
+
   - Hot Water
 
 - Explitic ingredients:
+
   - Lemon
   - Lime
 
 - Implicit ingredients:
+
   - Ginger
   - Salt
   - Hot Water
   - Check other garnishes (not in in-stock calc)
 
 - Consolidate ingredients:
+
   - Coffee, Cold Brew
 
 - Add ingredient category:
+
   - Peaty Scotch
 
 - Add similar categories:
+
   - Plymouth gin should match all gin
 
 - Fix tree where only blended scotch are in their subtree
@@ -194,6 +184,7 @@ Content
 - Make `lofi_gentian_amaro` custom or add w/ Salers/Suze
 - Move `fortifiedwine_mistelle` to `brandy_grape_vindeliqeur`
 - Combine `liqueur_{fir,pine}` & `sapins`
+
   - Alpine liqueur category for `Genepy` & `Alpes`
 
 - Fix `popeye_doyle` `liqueur_cherry` -> `liqueur_cherryheering`
@@ -204,9 +195,9 @@ Content
   - Outrigger
   - Lust for Life
 
-Chores
-------
+## Chores
 
+- Add IngredientDef (w/o stock, categoryKeys, etc.)
 - Use server actions
   - Bar move state up to use optimistic rendering
 - Put hard-coded system users in Clerk

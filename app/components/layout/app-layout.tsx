@@ -57,9 +57,15 @@ export function AppLayout({ children, className, scrolledPx = 50 }: Props) {
 
 type HeaderProps = CompProps & {
   title?: ReactNode
+  forceTitle?: boolean
 }
 
-export function AppHeader({ children, className, title }: HeaderProps) {
+export function AppHeader({
+  children,
+  className,
+  title,
+  forceTitle,
+}: HeaderProps) {
   const { scrolled, signedOut } = useContext(Context)
   return (
     <header
@@ -80,7 +86,7 @@ export function AppHeader({ children, className, title }: HeaderProps) {
           'backdrop-blur-lg',
         )}
       />
-      {title && !signedOut && (
+      {title && (!signedOut || forceTitle) && (
         <div
           className={cn(
             'relative flex items-center justify-center justify-self-center',

@@ -8,7 +8,6 @@ import {
 import { Level } from '@/app/components/layout/level'
 import { Stack } from '@/app/components/layout/stack'
 import { Button } from '@/app/components/ui/button'
-import { UserAvatar } from '@/app/components/user/user-avatar'
 import { getCurrentUser } from '@/app/lib/model/user'
 import { SIGN_UP, toHome } from '@/app/lib/routes'
 import { SampleBar } from '@/app/sample-bar'
@@ -21,9 +20,9 @@ export const revalidate = 0
 export default async function Page() {
   const { currentUser } = await getCurrentUser()
   return (
-    <AppLayout>
-      <AppHeader title={<UserAvatar user={currentUser} />} />
-      <AppContent className="relative pb-8 lg:gap-12">
+    <AppLayout scrolledPx={100}>
+      <AppHeader title="Home Bar Manager" forceTitle />
+      <AppContent className="relative mx-auto flex max-w-[1200px] flex-col px-6 pb-8 lg:gap-12 lg:px-12">
         <h1 className="text-[2.5rem] font-bold leading-[2.5rem] lg:text-[5rem] lg:leading-[4.75rem]">
           Manage your
           <br />
