@@ -15,11 +15,11 @@ export async function IngredientSuggestion({ items, exactCount }: Props) {
     return getIngredientName(dict, it, { inclBottle: Boolean(it.bottleID) })
   })
   return (
-    <Level className="bg-muted/50 text-foreground border-primary/5 whitespace-nowrap rounded border px-1 py-0.5 text-xs font-medium tracking-tighter shadow">
+    <Level className="whitespace-nowrap rounded border border-primary/5 bg-muted/50 px-1 py-0.5 text-xs font-medium tracking-tighter text-foreground shadow">
       {names.map((name, i) => (
         <div key={`${i}_${name}`}>{name}</div>
       ))}
-      <Level className="text-muted-foreground font-bold" gap={0}>
+      <Level className="font-bold text-muted-foreground" gap={0}>
         <div>+</div>
         <div>{exactCount}</div>
       </Level>

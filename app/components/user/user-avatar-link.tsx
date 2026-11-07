@@ -13,9 +13,9 @@ export function UserAvatarLink({ children, className, href, accent }: Props) {
     <Link className={cn('flex items-baseline', className)} href={href}>
       <Button
         className={cn(
-          'p-0 h-auto text-muted-foreground hover:text-secondary-foreground hover:bg-transparent',
+          'h-auto p-0 text-muted-foreground hover:bg-transparent hover:text-secondary-foreground',
           accent &&
-            'text-accent-strong dark:text-secondary-foreground hover:text-accent-foreground',
+            'text-accent-strong hover:text-accent-foreground dark:text-secondary-foreground',
         )}
         variant="ghost"
         size="xs"

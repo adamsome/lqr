@@ -29,7 +29,7 @@ export async function FiltersContainer({ userDict, criteria }: Props) {
     <Filters
       className={cn(
         'max-h-[calc(100vh-148px)] w-full [&>*]:self-stretch',
-        'sm:top-18 sm:sticky sm:pt-1',
+        'sm:sticky sm:top-18 sm:pt-1',
         'sm:w-[theme(spacing.88)]',
         'md:w-[clamp(theme(spacing.88),45vw,theme(spacing.112))]',
         'sm:[&>*:last-child]:min-h-[132px]',

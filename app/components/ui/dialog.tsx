@@ -24,7 +24,7 @@ const DialogPortal = ({
   <DialogPrimitive.Portal {...props}>
     <div
       className={cn(
-        'fixed inset-0 flex items-start justify-center z-50 sm:items-center',
+        'fixed inset-0 z-50 flex items-start justify-center sm:items-center',
         bottom && 'items-end',
         className,
       )}
@@ -72,7 +72,7 @@ const DialogContent = React.forwardRef<
         ref={ref}
         className={cn(
           'fixed z-50 grid w-full gap-4 rounded-b-lg border bg-background p-6 shadow-lg animate-in data-[state=open]:fade-in-90 data-[state=open]:slide-in-from-bottom-10 sm:max-w-lg sm:rounded-lg sm:zoom-in-90 data-[state=open]:sm:slide-in-from-bottom-0',
-          bottom && 'rounded-t-lg rounded-b-none',
+          bottom && 'rounded-b-none rounded-t-lg',
           className,
         )}
         {...props}
@@ -80,7 +80,7 @@ const DialogContent = React.forwardRef<
         {children}
         <DialogPrimitive.Close
           className={cn(
-            'absolute right-4 top-4 -m-4 p-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground',
+            'absolute right-4 top-4 -m-4 rounded-sm p-4 opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground',
             !showClose && 'sm:hidden',
           )}
         >

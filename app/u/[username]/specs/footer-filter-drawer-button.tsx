@@ -23,15 +23,15 @@ export function FooterFilterDrawerButton({ children }: Props) {
     <Drawer open={open} onOpenChange={setOpen}>
       <DrawerTrigger asChild>
         <IconButton>
-          <ListFilter className="w-6 h-6" />
+          <ListFilter className="h-6 w-6" />
         </IconButton>
       </DrawerTrigger>
       <DrawerContent className="grid grid-rows-[max-content_1fr_max-content] gap-2 px-4">
-        <Level className="flex-shrink-0 h-9" items="end" justify="center">
+        <Level className="h-9 flex-shrink-0" items="end" justify="center">
           <DrawerTitle className="text-base font-semibold">Filters</DrawerTitle>
         </Level>
         <div className="flex overflow-auto">{children}</div>
-        <div className="flex flex-shrink-0 pb-4 mt-2">
+        <div className="mt-2 flex flex-shrink-0 pb-4">
           <Button className="flex-1" size="sm" onClick={() => setOpen(false)}>
             Done
           </Button>

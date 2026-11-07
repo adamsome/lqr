@@ -12,18 +12,18 @@ export interface HierarchicalFilter {
 
 export const getHierarchicalFilterItem = (
   root: HierarchicalFilter,
-  path: string[]
+  path: string[],
 ): HierarchicalFilter | undefined =>
   path.reduce<HierarchicalFilter | undefined>(
     (acc, id) => acc?.children[id],
-    root
+    root,
   )
 
 export const updateHierarchicalFilter = curry(
   (path: string[], checked: CheckedState, root: HierarchicalFilter) => {
     setChecked(checked, getHierarchicalFilterItem(root, path))
     updateAncestors(root, path)
-  }
+  },
 )
 
 export const hierarchicalFilterFn =
@@ -43,7 +43,7 @@ export function invertCheckedState(state: CheckedState) {
 export function getHierarchicalSelectedPaths(
   root: HierarchicalFilter,
   { limit = 2, facets }: { limit?: number; facets?: Map<any, number> } = {},
-  path: string[] = []
+  path: string[] = [],
 ): string[][] {
   const { childIDs, children } = root
   return childIDs.reduce<string[][]>((acc, id) => {
@@ -54,7 +54,7 @@ export function getHierarchicalSelectedPaths(
     if (!checked) return acc
     if (checked === true && (!facets || facets.get(id))) acc.push(childPath)
     return acc.concat(
-      getHierarchicalSelectedPaths(child, { limit, facets }, childPath)
+      getHierarchicalSelectedPaths(child, { limit, facets }, childPath),
     )
   }, [])
 }

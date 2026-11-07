@@ -62,16 +62,14 @@ export async function UserHome({ username }: Props) {
       </UserAvatarHeader>
       <div>
         <div className="-mx-2">
-          {specsByUsername[username ?? '']
-            ?.slice(0, 4)
-            .map((spec) => (
-              <Card
-                key={spec.id}
-                data={data}
-                spec={spec}
-                href={toSpecItem(spec, username)}
-              />
-            ))}
+          {specsByUsername[username ?? '']?.slice(0, 4).map((spec) => (
+            <Card
+              key={spec.id}
+              data={data}
+              spec={spec}
+              href={toSpecItem(spec, username)}
+            />
+          ))}
         </div>
         <ShowAll href={toSpecs(username)} />
       </div>
@@ -82,16 +80,14 @@ export async function UserHome({ username }: Props) {
               <UserAvatar user={follower} size="md" />
             </Link>
             <div className="-mx-2">
-              {specsByUsername[follower.username]
-                ?.slice(0, 2)
-                .map((spec) => (
-                  <Card
-                    key={spec.id}
-                    data={data}
-                    spec={spec}
-                    href={toSpecItem(spec, username)}
-                  />
-                ))}
+              {specsByUsername[follower.username]?.slice(0, 2).map((spec) => (
+                <Card
+                  key={spec.id}
+                  data={data}
+                  spec={spec}
+                  href={toSpecItem(spec, username)}
+                />
+              ))}
             </div>
           </div>
           <ShowAll href={toSpecs(follower.username)} />

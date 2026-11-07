@@ -90,7 +90,7 @@ export function SpecForm({
           <AppHeader>
             <Button
               type="button"
-              className="hidden sm:block ms-4"
+              className="ms-4 hidden sm:block"
               variant="secondary"
               size="sm"
               onClick={onClose}
@@ -124,7 +124,7 @@ export function SpecForm({
               />
               <div
                 className={cn(
-                  'grid gap-6 w-full',
+                  'grid w-full gap-6',
                   'grid-cols-1',
                   "[grid-template-areas:'meta'_'list'_'notes']",
                   "md:[grid-template-areas:'list_meta'_'list_notes']",
@@ -293,11 +293,11 @@ export function SpecForm({
 
           <AppFooter>
             <IconButton type="button" onClick={onClose}>
-              <Cross2Icon className="w-6 h-6" />
+              <Cross2Icon className="h-6 w-6" />
             </IconButton>
             <Button
               type="submit"
-              className="h-8 gap-1.5 me-2 px-3"
+              className="me-2 h-8 gap-1.5 px-3"
               variant="default"
               size="xs"
               disabled={mutating}

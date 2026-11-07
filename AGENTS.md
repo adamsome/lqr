@@ -25,6 +25,7 @@ Home bar manager: users track which bottles/ingredients they have in stock and b
 - `npm run dev`: dev server on port 3000
 - `npm run build`: production build (also type-checks)
 - `npm run lint`: ESLint 9 flat config (`eslint.config.mjs`)
+- `npm run format`: Prettier on `app/`, `proxy.ts`, `eslint.config.mjs`
 - `npx tsc --noEmit`: type-check only
 - No test suite; verify changes with build, lint, and the running app.
 
@@ -52,7 +53,7 @@ If `node` reports "Bad CPU type", an old Intel Node is first on `PATH`; use the 
 
 ## Conventions
 
-- Prettier (`.prettierrc`): no semicolons, single quotes; 2-space indent per `.editorconfig`. `prettier-plugin-tailwindcss` is installed but not enabled in `.prettierrc`.
+- Prettier (`.prettierrc`): no semicolons, single quotes, Tailwind class sorting via `prettier-plugin-tailwindcss`; 2-space indent per `.editorconfig`. Run `npm run format`.
 - Server code: `import { auth, currentUser, clerkClient } from '@clerk/nextjs/server'`; `await auth()` and `await clerkClient()`. Client hooks and components come from `@clerk/nextjs`.
 - Always `await props.params` / `props.searchParams` in pages, layouts, and route handlers.
 - Use type-only imports (`import type`) when a type name collides with a local value.

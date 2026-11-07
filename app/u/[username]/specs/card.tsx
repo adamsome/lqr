@@ -32,7 +32,7 @@ export function Card({
   return (
     <Stack
       className={cn(
-        'pt-1 pb-1.5 w-full rounded transition-colors',
+        'w-full rounded pb-1.5 pt-1 transition-colors',
         href &&
           'transition-colors hover:bg-muted/50 focus:bg-muted active:bg-muted',
         LINK_BOX_CLASSNAME,
@@ -40,11 +40,11 @@ export function Card({
       )}
       gap={0.5}
     >
-      <CardHeader className="px-2 py-0 w-full">
+      <CardHeader className="w-full px-2 py-0">
         <Level gap={0.5}>
           {href ? (
             <LinkBoxLink
-              className="flex-1 whitespace-nowrap text-ellipsis overflow-hidden"
+              className="flex-1 overflow-hidden text-ellipsis whitespace-nowrap"
               href={href}
             >
               {title}
@@ -56,7 +56,7 @@ export function Card({
         </Level>
         {description}
       </CardHeader>
-      <CardContent className="px-2 py-0 text-xs text-muted-foreground font-medium line-clamp-2">
+      <CardContent className="line-clamp-2 px-2 py-0 text-xs font-medium text-muted-foreground">
         {ingredients
           .map((it) => {
             const view = getIngredientView(it)
@@ -77,7 +77,7 @@ export function CardDescription({ children, className }: CompProps) {
   return (
     <div
       className={cn(
-        'flex items-center gap-4 py-px w-full text-muted-foreground overflow-hidden',
+        'flex w-full items-center gap-4 overflow-hidden py-px text-muted-foreground',
         className,
       )}
     >

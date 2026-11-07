@@ -82,7 +82,7 @@ export function CategoryItem({
           ))}
           {isCurrentUser && <AddIngredientLink {...to} name={name} />}
           {!isCurrentUser && stocked.length === 0 && (
-            <div className="text-muted-foreground/40 pb-2 pt-0.5 italic">
+            <div className="pb-2 pt-0.5 italic text-muted-foreground/40">
               {`No ${nameStr}`}
             </div>
           )}

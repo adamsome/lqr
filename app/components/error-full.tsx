@@ -11,13 +11,13 @@ export function ErrorFull({ children, className, error }: Props) {
   return (
     <Stack
       className={cn(
-        'absolute inset=0 w-full h-full text-muted-foreground',
+        'inset=0 absolute h-full w-full text-muted-foreground',
         className,
       )}
       items="center"
       justify="center"
     >
-      <div className="text-foreground font-semibold">
+      <div className="font-semibold text-foreground">
         {children ?? 'Something Went Wrong!'}
       </div>
       <div className="text-sm">{message}</div>

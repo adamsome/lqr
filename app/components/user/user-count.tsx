@@ -20,7 +20,7 @@ export function UserCount({ children, className, type, href, counts }: Props) {
       <div>
         <span
           className={cn(
-            'text-foreground/75 font-bold group-hover:text-foreground transition-colors',
+            'font-bold text-foreground/75 transition-colors group-hover:text-foreground',
             className,
           )}
         >

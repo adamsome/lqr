@@ -30,7 +30,7 @@ export default function Layout({ children }: Props) {
     <AuthProvider>
       <html
         lang="en"
-        className={cn(`antialiased font-sans`)}
+        className={cn(`font-sans antialiased`)}
         suppressHydrationWarning={true}
       >
         <head>
@@ -48,7 +48,7 @@ export default function Layout({ children }: Props) {
           <TooltipProvider>
             <div className="relative flex min-h-screen flex-col">
               <AppCommand />
-              <div className="flex-1 min-w-0 overflow-clip">{children}</div>
+              <div className="min-w-0 flex-1 overflow-clip">{children}</div>
             </div>
             <Toaster />
           </TooltipProvider>

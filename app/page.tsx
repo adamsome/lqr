@@ -59,7 +59,7 @@ export default async function Page() {
         </Level>
         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:gap-y-8 lg:grid-cols-[2fr_3fr]">
           <Stack className="lg:gap-6" gap={3}>
-            <h2 className="text-muted-foreground/90 pe-4 text-2xl font-semibold leading-[1.1]">
+            <h2 className="pe-4 text-2xl font-semibold leading-[1.1] text-muted-foreground/90">
               <span className="text-foreground">Track your inventory</span>{' '}
               selecting which spirits, liquor categories, or ingredients are in
               stock.
@@ -67,7 +67,7 @@ export default async function Page() {
             <SampleBar />
           </Stack>
           <Stack className="lg:gap-6" gap={3}>
-            <h2 className="text-muted-foreground/90 max-w-[26rem] pe-4 text-2xl font-semibold leading-[1.1]">
+            <h2 className="max-w-[26rem] pe-4 text-2xl font-semibold leading-[1.1] text-muted-foreground/90">
               <span className="text-foreground">Explore your cocktails</span>{' '}
               and see what you can make with your stocked bottles & ingredients.
             </h2>

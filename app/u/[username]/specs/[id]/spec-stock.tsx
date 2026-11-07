@@ -20,7 +20,7 @@ export function SpecStock({ className, stock }: Props) {
       <TooltipTrigger asChild>
         <div>
           <CircleProgress
-            className={cn('text-muted-foreground w-4', className)}
+            className={cn('w-4 text-muted-foreground', className)}
             value={count}
             total={total}
           />
@@ -48,7 +48,7 @@ export function SpecStockText({ className, stock }: Props) {
       <Level className="gap-px">
         <span
           className={cn(
-            'text-muted-foreground font-bold',
+            'font-bold text-muted-foreground',
             completed && 'text-accent-foreground',
           )}
         >

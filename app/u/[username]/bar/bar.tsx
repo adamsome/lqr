@@ -15,7 +15,7 @@ export async function Bar({ username }: Props) {
           <Level className="font-medium" justify="between">
             <h2>Shopping suggestions</h2>
           </Level>
-          <p className="text-muted-foreground text-sm">
+          <p className="text-sm text-muted-foreground">
             Ingredients most increasing the specs you can make
           </p>
         </Stack>
@@ -25,15 +25,15 @@ export async function Bar({ username }: Props) {
         <Level className="ms-2 font-medium" justify="between">
           <h2>Bar inventory</h2>
           <Level
-            className="text-muted-foreground bg-muted/50 border-primary/5 whitespace-nowrap rounded-sm border px-1.5 py-1 text-xs"
+            className="whitespace-nowrap rounded-sm border border-primary/5 bg-muted/50 px-1.5 py-1 text-xs text-muted-foreground"
             gap={3}
           >
             <Level gap={1}>
-              <div className="bg-accent-foreground/20 border-primary/7.5 h-3 w-3 rounded-[2px] border" />
+              <div className="h-3 w-3 rounded-[2px] border border-primary/7.5 bg-accent-foreground/20" />
               <span>In Stock</span>
             </Level>
             <Level gap={1}>
-              <div className="bg-background/75 border-primary/20 h-3 w-3 rounded-[2px] border" />
+              <div className="h-3 w-3 rounded-[2px] border border-primary/20 bg-background/75" />
               <span>Out of Stock</span>
             </Level>
           </Level>

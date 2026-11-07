@@ -79,7 +79,7 @@ export function Toolbar({ table, showStock }: Props) {
   const getIngredientPathName = useGetIngredientPathName()
 
   return (
-    <div className="flex items-center justify-between -mx-4 px-4 col-[1/-1] overflow-x-auto no-scrollbar">
+    <div className="no-scrollbar col-[1/-1] -mx-4 flex items-center justify-between overflow-x-auto px-4">
       <div className="flex flex-1 items-center gap-2">
         <DataTableColumnFilterInput
           id="name"

@@ -5,7 +5,7 @@ export const parseWithExclude = (value: string): WithExclude<string> =>
     ? { value, exclude: false }
     : { value: value.substring(1), exclude: true }
 
-export const partitionExclude = <T,>(values: WithExclude<T>[]) => {
+export const partitionExclude = <T>(values: WithExclude<T>[]) => {
   return values.reduce(
     (acc, { value, exclude }) => {
       if (exclude) acc.exclude.add(value)

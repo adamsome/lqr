@@ -31,8 +31,7 @@ type Props = {
   icon?: ReactNode
   itemsPerColumn: DataTableFacetedFilterItem[][]
   transformFacetsFnPerColumn?: (
-    | ((facets: Map<any, number>) => Map<any, number>)
-    | undefined
+    ((facets: Map<any, number>) => Map<any, number>) | undefined
   )[]
 }
 

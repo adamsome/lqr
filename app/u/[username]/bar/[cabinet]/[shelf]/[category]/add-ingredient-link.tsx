@@ -11,7 +11,7 @@ type Props = CategoryKeys & {
 export function AddIngredientLink({ name, ...keys }: Props) {
   return (
     <Link
-      className="text-muted-foreground/40 hover:text-muted-foreground/60 transition-colors"
+      className="text-muted-foreground/40 transition-colors hover:text-muted-foreground/60"
       href={toBarCategory(keys)}
     >
       <Ingredient

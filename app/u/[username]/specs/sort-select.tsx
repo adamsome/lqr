@@ -78,13 +78,13 @@ export function SortSelect({
         <Button
           variant="outline"
           className={cn(
-            'flex items-center justify-start gap-2 px-3 text-base w-36 font-normal overflow-hidden',
-            changed && 'text-accent-foreground animate-pulse',
+            'flex w-36 items-center justify-start gap-2 overflow-hidden px-3 text-base font-normal',
+            changed && 'animate-pulse text-accent-foreground',
             className,
           )}
         >
           <CaretSortIcon />
-          <span className="flex-1 text-left overflow-hidden whitespace-nowrap text-ellipsis">
+          <span className="flex-1 overflow-hidden text-ellipsis whitespace-nowrap text-left">
             {curr.label}
           </span>
           <div className="flex-none">

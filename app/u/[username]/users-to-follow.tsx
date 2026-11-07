@@ -58,7 +58,7 @@ export function MobileHorizontalScroller({ children, className }: CompProps) {
   return (
     <div className={cn('!col-span-full lg:hidden', className)}>
       <HorizontalScroller
-        className="-my-2.5 py-2.5 px-4 sm:px-6 lg:hidden [&:empty]:hidden"
+        className="-my-2.5 px-4 py-2.5 sm:px-6 lg:hidden [&:empty]:hidden"
         countInView={[2, 3, 4]}
       >
         {children}
@@ -69,8 +69,8 @@ export function MobileHorizontalScroller({ children, className }: CompProps) {
 
 function DefaultStack({ children }: PropsWithChildren) {
   return (
-    <Stack className="hidden lg:flex ps-6 pe-6 mt-[87px] w-[272px]">
-      <div className="text-muted-foreground font-medium tracking-wide [font-stretch:condensed]">
+    <Stack className="mt-[87px] hidden w-[272px] pe-6 ps-6 lg:flex">
+      <div className="font-medium tracking-wide text-muted-foreground [font-stretch:condensed]">
         Users to Follow
       </div>
       <Stack gap={4}>{children}</Stack>

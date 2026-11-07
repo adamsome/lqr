@@ -27,7 +27,7 @@ const variants = cva([], {
 export function UserAvatarImage({ className, user, size }: Props) {
   const { displayName, username, imageUrl } = user ?? {}
 
-  const name = user ? displayName ?? username ?? '?' : ''
+  const name = user ? (displayName ?? username ?? '?') : ''
 
   const initials = name
     .split(' ')

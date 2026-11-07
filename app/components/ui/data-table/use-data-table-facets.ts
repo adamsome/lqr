@@ -25,8 +25,7 @@ export function useDataTableFacets(
 export function useDataTableMultiFacets(
   columns?: (Column<any, unknown> | undefined)[],
   transformFacetsFnPerColumn?: (
-    | ((facets: Map<any, number>) => Map<any, number>)
-    | undefined
+    ((facets: Map<any, number>) => Map<any, number>) | undefined
   )[],
 ) {
   const mounted = useIsMounted()
@@ -37,8 +36,8 @@ export function useDataTableMultiFacets(
     [mounted, columns],
   )
 
-  const rawPerColumn = (columns ?? []).map(
-    (_, i) => getFacetedUniqueValuesPerColumn?.[i]?.(),
+  const rawPerColumn = (columns ?? []).map((_, i) =>
+    getFacetedUniqueValuesPerColumn?.[i]?.(),
   )
 
   const facetsPerColumn = useMemo(() => {

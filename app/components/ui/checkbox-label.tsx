@@ -26,7 +26,7 @@ export const CheckboxLabel = forwardRef<
   <label
     ref={ref}
     className={cn(
-      'overflow-hidden whitespace-nowrap text-ellipsis cursor-pointer peer-disabled:cursor-not-allowed peer-disabled:opacity-70',
+      'cursor-pointer overflow-hidden text-ellipsis whitespace-nowrap peer-disabled:cursor-not-allowed peer-disabled:opacity-70',
       className,
     )}
     {...props}

@@ -36,7 +36,7 @@ export function SpecLayout({ children, back, spec, status, showEdit }: Props) {
           )}
         </AppActions>
       </AppHeader>
-      <AppContent className="pt-8 md:pt-8 [--container-w-max:800px]">
+      <AppContent className="pt-8 [--container-w-max:800px] md:pt-8">
         {children}
       </AppContent>
       <AppFooter status={status}>

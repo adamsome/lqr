@@ -17,11 +17,11 @@ type Props = {
 export async function UserAvatarFollow({ className, user }: Props) {
   const { currentUser } = await getCurrentUser()
   const { displayName, username } = user
-  const name = user ? displayName ?? username ?? '?' : ''
+  const name = user ? (displayName ?? username ?? '?') : ''
   return (
     <Stack
       className={cn(
-        'relative p-2 bg-popover text-muted-foreground border border-border rounded-md',
+        'relative rounded-md border border-border bg-popover p-2 text-muted-foreground',
         LINK_BOX_CLASSNAME,
         className,
       )}
@@ -29,16 +29,16 @@ export async function UserAvatarFollow({ className, user }: Props) {
     >
       <Level justify="between" gap={3}>
         <LinkBoxLink href={toHome(user.username)}>
-          <UserAvatarImage className="text-2xl -ms-0.5" user={user} size="lg" />
+          <UserAvatarImage className="-ms-0.5 text-2xl" user={user} size="lg" />
         </LinkBoxLink>
         <FollowButton
-          className="z-10 p-0 text-xs w-16 h-6 self-start"
+          className="z-10 h-6 w-16 self-start p-0 text-xs"
           variant="secondary"
           size="xs"
           username={user.username}
         />
       </Level>
-      <div className="text-sm font-bold tracking-tight overflow-hidden text-ellipsis whitespace-nowrap">
+      <div className="overflow-hidden text-ellipsis whitespace-nowrap text-sm font-bold tracking-tight">
         {name}
       </div>
       <UserAvatarFollowDismiss username={currentUser?.username} user={user} />

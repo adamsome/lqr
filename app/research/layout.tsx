@@ -29,7 +29,7 @@ export default async function Layout({ children }: Props) {
         <AppHeader title="Research">
           <AppBack href={toHome(user?.username)} user={user} />
         </AppHeader>
-        <Container className="py-4 sm:py-6 gap-y-4 sm:gap-y-4">
+        <Container className="gap-y-4 py-4 sm:gap-y-4 sm:py-6">
           <H1>Research</H1>
           {children}
         </Container>

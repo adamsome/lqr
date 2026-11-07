@@ -60,7 +60,7 @@ export function ThemeToggle() {
             size: 'sm',
             variant: 'ghost',
           }),
-          '[&_.sun-icon]:hidden dark:[&_.moon-icon]:hidden dark:[&_.sun-icon]:inline',
+          'dark:[&_.moon-icon]:hidden [&_.sun-icon]:hidden dark:[&_.sun-icon]:inline',
         )}
         onClick={(ev) => {
           ev.preventDefault()

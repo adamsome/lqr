@@ -20,11 +20,11 @@ export function IngredientsForm({ className, control }: Props) {
   const { fields: ingredients, append, remove, update, move } = field
   const error = control.getFieldState('ingredients')?.error?.message
   return (
-    <div className={cn('flex flex-col gap-4 w-full', className)}>
+    <div className={cn('flex w-full flex-col gap-4', className)}>
       <Label>Ingredients</Label>
-      {error && <div className="text-destructive text-sm">{error}</div>}
+      {error && <div className="text-sm text-destructive">{error}</div>}
       {ingredients.length > 0 && (
-        <div className="flex flex-col gap-3 w-full">
+        <div className="flex w-full flex-col gap-3">
           {ingredients.map((ingredient, i) => (
             <Ingredient
               key={`${i}_${ingredient.name ?? ingredient.id}`}
@@ -39,7 +39,7 @@ export function IngredientsForm({ className, control }: Props) {
         </div>
       )}
       <SpecIngredientCommandDialogButton
-        className="self-start gap-2 max-w-full text-sm text-muted-foreground"
+        className="max-w-full gap-2 self-start text-sm text-muted-foreground"
         variant="secondary"
         openOnKey={(e) => (e.metaKey || e.ctrlKey) && e.key === 'j'}
         onSelect={append}

@@ -12,7 +12,7 @@ export function Heading({ children, cabinet }: Props) {
   return (
     <Stack gap={0.5}>
       <Container pad="unresponsive">
-        <span className="text-muted-foreground/75 text-sm [font-stretch:condensed] font-medium uppercase tracking-wider">
+        <span className="text-sm font-medium uppercase tracking-wider text-muted-foreground/75 [font-stretch:condensed]">
           {name}
         </span>
       </Container>

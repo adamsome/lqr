@@ -9,7 +9,7 @@ export function Container({ children, className, pad = 'responsive' }: Props) {
   return (
     <div
       className={cn(
-        'grid grid-cols-[1fr_var(--container-width)_1fr] gap-y-6 sm:gap-y-8 [--container-w-max:1200px] [--container-width:min(var(--container-w-max),calc(100%-2*var(--container-padding,0px)))] [&>*]:col-[2/auto]',
+        'grid grid-cols-[1fr_var(--container-width)_1fr] gap-y-6 [--container-w-max:1200px] [--container-width:min(var(--container-w-max),calc(100%-2*var(--container-padding,0px)))] sm:gap-y-8 [&>*]:col-[2/auto]',
         pad === 'unresponsive' && '[--container-padding:theme(spacing.4)]',
         pad === 'responsive' &&
           '[--container-padding:theme(spacing.4)] sm:[--container-padding:theme(spacing.6)]',

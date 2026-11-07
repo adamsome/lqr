@@ -61,7 +61,7 @@ export async function List({ className, username }: Props) {
       )}
       {usersToFollow.length > 0 && (
         <Stack gap={3}>
-          <div className="text-xl text-muted-foreground font-medium tracking-wide [font-stretch:condensed]">
+          <div className="text-xl font-medium tracking-wide text-muted-foreground [font-stretch:condensed]">
             Users to Follow
           </div>
           <Stack gap={4}>

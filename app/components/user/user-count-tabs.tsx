@@ -44,7 +44,7 @@ function Tab({ href, type, counts }: TabProps) {
   if (label.endsWith('s') && count === 1) label = label.substring(0, -1)
   return (
     <TabsTrigger
-      className="-my-1 pt-2 pb-3 px-0 data-[state=active]:text-muted-foreground [&[data-state=active]>div>span]:text-foreground"
+      className="-my-1 px-0 pb-3 pt-2 data-[state=active]:text-muted-foreground [&[data-state=active]>div>span]:text-foreground"
       value={type}
       asChild
     >

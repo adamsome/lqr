@@ -15,7 +15,7 @@ export function Loader({ className, loading, size = '20px', invert }: Props) {
     <div
       className={cn(
         'relative flex items-center justify-center',
-        'w-[var(--size)] h-[var(--size)]',
+        'h-[var(--size)] w-[var(--size)]',
         'data-[state=on]:animate-fade-in',
         invert ? '[&>div]:bg-background' : '[&>div]:bg-accent-foreground',
         className,
@@ -38,8 +38,8 @@ function Line({ index }: LineProps) {
   return (
     <div
       className={cn(
-        'absolute top-0 left-[calc(var(--size))]',
-        'w-[calc(var(--size)/20)] h-[var(--size)]',
+        'absolute left-[calc(var(--size))] top-0',
+        'h-[var(--size)] w-[calc(var(--size)/20)]',
         'bg- animate-loader',
       )}
       style={{

@@ -28,7 +28,7 @@ const Checkbox = forwardRef<
       'data-[state=indeterminate]:text-primary-foreground',
       !circle && 'data-[state=checked]:bg-primary',
       !circle && 'data-[state=indeterminate]:bg-primary',
-      circle && 'p-px w-4.5 h-4.5 rounded-full',
+      circle && 'h-4.5 w-4.5 rounded-full p-px',
       circle && !props.checked && 'border-muted-foreground/50',
       className,
     )}
@@ -38,7 +38,7 @@ const Checkbox = forwardRef<
       className={cn(
         'flex items-center justify-center text-current',
         circle &&
-          'w-full h-full rounded-full data-[state=checked]:bg-primary data-[state=indeterminate]:bg-primary/60',
+          'h-full w-full rounded-full data-[state=checked]:bg-primary data-[state=indeterminate]:bg-primary/60',
       )}
     >
       {props.checked === 'indeterminate' && <MinusIcon className="h-3 w-4" />}

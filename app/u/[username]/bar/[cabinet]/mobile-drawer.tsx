@@ -19,7 +19,7 @@ export function MobileDrawer({ children, username, cabinet }: Props) {
     : undefined
   return (
     <SidebarLayoutMobileDrawer
-      className="min-h-[40%] max-h-[66.6%]"
+      className="max-h-[66.6%] min-h-[40%]"
       backTo={backKeys && toBarCategory(backKeys)}
       closeTo={toBar(username)}
       route={[cabinet, shelf, category].filter(Boolean).join('_')}

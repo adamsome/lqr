@@ -23,7 +23,7 @@ export function UserAvatarFollowDismissAll({ className, username }: Props) {
   return (
     <Button
       className={cn(
-        'max-w-[50%] h-full text-muted-foreground/50 text-xs border border-border border-dashed rounded-md',
+        'h-full max-w-[50%] rounded-md border border-dashed border-border text-xs text-muted-foreground/50',
         mutating && 'animate-pulse',
         className,
       )}

@@ -38,7 +38,7 @@ export function UserAvatar({
   hideName,
 }: Props) {
   const { displayName, username } = user ?? {}
-  const name = user ? displayName ?? username ?? '?' : ''
+  const name = user ? (displayName ?? username ?? '?') : ''
   return (
     <div
       className={cn(
@@ -50,12 +50,12 @@ export function UserAvatar({
       <UserAvatarImage className="self-center" user={user} size={size} />
       <span
         className={cn(
-          'flex flex-col w-full overflow-hidden transition-all',
+          'flex w-full flex-col overflow-hidden transition-all',
           (hideName || !user) && 'w-0 opacity-0',
           children && 'leading-none',
         )}
       >
-        <span className="tracking-tight overflow-hidden text-ellipsis whitespace-nowrap">
+        <span className="overflow-hidden text-ellipsis whitespace-nowrap tracking-tight">
           {name}
         </span>
         {children && <span>{children}</span>}

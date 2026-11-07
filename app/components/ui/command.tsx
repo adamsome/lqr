@@ -20,7 +20,7 @@ const Command = React.forwardRef<
   <CommandPrimitive
     ref={ref}
     className={cn(
-      'flex h-full w-full flex-col overflow-hidden rounded-md bg-popover/70 backdrop-blur-md text-popover-foreground',
+      'flex h-full w-full flex-col overflow-hidden rounded-md bg-popover/70 text-popover-foreground backdrop-blur-md',
       className,
     )}
     {...props}
@@ -48,7 +48,7 @@ const CommandDialog = ({
   return (
     <Dialog {...props}>
       <DialogContent
-        className="p-0 bg-transparent shadow-xl overflow-hidden"
+        className="overflow-hidden bg-transparent p-0 shadow-xl"
         showClose={showClose}
         overlay={{ className: 'bg-transparent backdrop-blur-0' }}
       >
@@ -87,7 +87,7 @@ const CommandInput = React.forwardRef<
     />
     {shortcut && (
       <KbdShortcut
-        className="relative -top-px shrink-0 hidden sm:block"
+        className="relative -top-px hidden shrink-0 sm:block"
         shortcut={shortcut}
       />
     )}

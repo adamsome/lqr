@@ -35,11 +35,11 @@ export function Ingredient({
   )
   const label = [amount[0], infusion, name, amount[1]].filter(Boolean).join(' ')
   return (
-    <div className="flex items-end gap-1 w-full">
+    <div className="flex w-full items-end gap-1">
       <div className="flex gap-px">
         <Button
           type="button"
-          className="rounded-ee-none rounded-se-none text-muted-foreground font-normal"
+          className="rounded-ee-none rounded-se-none font-normal text-muted-foreground"
           variant="secondary"
           size="xs"
           disabled={index === 0}
@@ -49,7 +49,7 @@ export function Ingredient({
         </Button>
         <Button
           type="button"
-          className="rounded-es-none rounded-ss-none text-muted-foreground font-normal"
+          className="rounded-es-none rounded-ss-none font-normal text-muted-foreground"
           variant="secondary"
           size="xs"
           disabled={index === total - 1}
@@ -58,13 +58,13 @@ export function Ingredient({
           <ArrowDownIcon />
         </Button>
       </div>
-      <div className="flex flex-col flex-1 items-start gap-1 w-[calc(100%-55px)] leading-snug">
+      <div className="flex w-[calc(100%-55px)] flex-1 flex-col items-start gap-1 leading-snug">
         {category && (
-          <div className="w-full ml-1.5 text-xs leading-none text-muted-foreground">
+          <div className="ml-1.5 w-full text-xs leading-none text-muted-foreground">
             {category}
           </div>
         )}
-        <div className="flex-1 flex items-center gap-1 w-full">
+        <div className="flex w-full flex-1 items-center gap-1">
           <SpecIngredientCommandDialogButton
             className="block justify-start overflow-hidden text-ellipsis whitespace-nowrap"
             variant="secondary"

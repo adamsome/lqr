@@ -33,12 +33,12 @@ export function HorizontalScroller({
 }: Props) {
   const children = Children.toArray(childrenProp)
   return (
-    <div className="relative w-full hover:[&>*]:visible focus-within:[&>*]:visible">
+    <div className="relative w-full focus-within:[&>*]:visible hover:[&>*]:visible">
       <Content {...props} count={children.length}>
         {Children.map(children, (child, i) => (
           <div
             key={i}
-            className="snap-start min-w-[var(--width)] max-w-[var(--width)] [&:empty]:hidden"
+            className="min-w-[var(--width)] max-w-[var(--width)] snap-start [&:empty]:hidden"
           >
             {child}
           </div>
@@ -76,8 +76,8 @@ function Content({
     <div
       style={style as CSSProperties}
       className={cn(
-        '[--mask:theme(spacing.10)] [--gap:theme(spacing.2)] sm:[--gap:theme(spacing.4)]',
-        'flex gap-[var(--gap)] scroll-px-4 sm:scroll-px-6 snap-x overflow-auto no-scrollbar',
+        '[--gap:theme(spacing.2)] [--mask:theme(spacing.10)] sm:[--gap:theme(spacing.4)]',
+        'no-scrollbar flex snap-x scroll-px-4 gap-[var(--gap)] overflow-auto sm:scroll-px-6',
         '[--width:calc(100%-var(--hang-xs))]',
         countInView[0] != null &&
           '[--width:calc(((100%-var(--hang-xs))-var(--gap)*(var(--count-xs)-1))/var(--count-xs))]',

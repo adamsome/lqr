@@ -43,7 +43,7 @@ export async function Grid({
       <div
         className={cn(
           'grid grid-cols-[repeat(auto-fill,minmax(min(theme(spacing.64),calc(100vw-1rem)),1fr))]',
-          'gap-2 sm:gap-3 lg:gap-4 -mx-2',
+          '-mx-2 gap-2 sm:gap-3 lg:gap-4',
         )}
       >
         {specs.slice(0, limit).map((spec) => (

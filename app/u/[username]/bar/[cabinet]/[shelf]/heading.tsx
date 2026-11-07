@@ -38,7 +38,7 @@ export function Heading({
       gap={3}
     >
       <Container
-        className="gap-y-1 sm:gap-y-1 mt-[41px] md:mt-0"
+        className="mt-[41px] gap-y-1 sm:gap-y-1 md:mt-0"
         pad="unresponsive"
       >
         {backButton}

@@ -120,7 +120,7 @@ export function Form({ spec, username, currentUser, specUser, users }: Props) {
           specUser={specUser}
           userOptions={userOptions}
           lastUpdated={
-            <p className="text-muted-foreground/60 text-sm">{lastUpdated}</p>
+            <p className="text-sm text-muted-foreground/60">{lastUpdated}</p>
           }
         />
       </form>
@@ -169,7 +169,7 @@ function Content({
                     <Item user={specUser} />
                   </SelectContent>
                 </Select>
-                <ArrowRightIcon className="text-accent-foreground flex-shrink-0" />
+                <ArrowRightIcon className="flex-shrink-0 text-accent-foreground" />
                 <Select
                   onValueChange={(value) => {
                     localStorage.setItem(localStorageKey, value)

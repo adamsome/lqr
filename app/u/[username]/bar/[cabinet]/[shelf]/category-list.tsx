@@ -17,7 +17,7 @@ export async function CategoryList({ username, ...keys }: Props) {
   const { categories } = await buildUserCategoryData(username)
 
   return (
-    <Stack className="divide-primary/5 divide-y-2 [&>*]:pt-1" gap={0}>
+    <Stack className="divide-y-2 divide-primary/5 [&>*]:pt-1" gap={0}>
       {listIDs.map((category) => (
         <Container pad="unresponsive" key={category}>
           <CategoryItem

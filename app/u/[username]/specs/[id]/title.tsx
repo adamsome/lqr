@@ -12,13 +12,13 @@ export function Title({ className, spec }: Props) {
   return (
     <CardTitle
       className={cn(
-        'font-bold leading-tight tracking-tight whitespace-nowrap text-ellipsis overflow-hidden',
+        'overflow-hidden text-ellipsis whitespace-nowrap font-bold leading-tight tracking-tight',
         className,
       )}
     >
       {name}
       {year && (
-        <span className="text-muted-foreground font-medium"> ({year})</span>
+        <span className="font-medium text-muted-foreground"> ({year})</span>
       )}
     </CardTitle>
   )

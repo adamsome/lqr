@@ -72,31 +72,31 @@ export function Ingredient({
       <CheckboxLabel
         htmlFor={id}
         className={cn(
-          'flex-1 inline-flex items-center gap-2 py-2 text-sm whitespace-normal leading-tight',
+          'inline-flex flex-1 items-center gap-2 whitespace-normal py-2 text-sm leading-tight',
           border && 'border-b-primary/5',
-          generic && 'text-muted-foreground/80 font-bold',
+          generic && 'font-bold text-muted-foreground/80',
           (disabled || mutating) && 'text-muted-foreground/60',
           labelClassName,
         )}
       >
-        <span className="line-clamp-2 text-ellipsis overflow-hidden">
+        <span className="line-clamp-2 overflow-hidden text-ellipsis">
           {name}
         </span>
         {generic && (
-          <span className="text-muted-foreground/40 text-xs font-bold tracking-wide uppercase whitespace-nowrap text-ellipsis overflow-hidden">
+          <span className="overflow-hidden text-ellipsis whitespace-nowrap text-xs font-bold uppercase tracking-wide text-muted-foreground/40">
             (any bottle)
           </span>
         )}
         {stock === 0 && !disabled && !disableDestock && isCurrentUser && (
-          <div className="flex-1 me-2.5 text-end">
+          <div className="me-2.5 flex-1 text-end">
             <Button
-              className="px-[5px] py-0.5 -my-0.5 h-auto text-xs text-accent-muted"
+              className="-my-0.5 h-auto px-[5px] py-0.5 text-xs text-accent-muted"
               size="sm"
               variant="ghost"
               disabled={mutating}
               onClick={() => handleChange(-1)}
             >
-              <ArrowDownIcon className="w-3 h-3 -ms-0.5 me-0.5" />
+              <ArrowDownIcon className="-ms-0.5 me-0.5 h-3 w-3" />
               Remove
             </Button>
           </div>

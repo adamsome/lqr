@@ -36,11 +36,11 @@ export async function BoxLink({
   return (
     <LitBox
       className={cn(
-        'text-muted-foreground border-primary/5 flex flex-col border font-bold shadow transition-colors',
+        'flex flex-col border border-primary/5 font-bold text-muted-foreground shadow transition-colors',
         path.length === 1 &&
-          'text-muted-foreground/75 bg-muted/25 gap-2 rounded-[11px] px-[7px] pb-[7px] pt-1.5 text-xs font-medium uppercase tracking-wider [font-stretch:condensed]',
+          'gap-2 rounded-[11px] bg-muted/25 px-[7px] pb-[7px] pt-1.5 text-xs font-medium uppercase tracking-wider text-muted-foreground/75 [font-stretch:condensed]',
         path.length === 2 &&
-          'bg-muted/50 z-10 gap-1 rounded-md px-[7px] pb-[3px] pt-1.5 text-sm normal-case tracking-tight [font-stretch:normal]',
+          'z-10 gap-1 rounded-md bg-muted/50 px-[7px] pb-[3px] pt-1.5 text-sm normal-case tracking-tight [font-stretch:normal]',
         readonly && 'text-xs',
         hideHeading && 'pt-1',
         className,
@@ -66,7 +66,7 @@ export async function BoxLink({
             </Level>
             {current && (
               <Button
-                className="text-accent-muted group-hover:text-accent-foreground group-hover:bg-accent-foreground/15 h-auto px-2.5 py-px"
+                className="h-auto px-2.5 py-px text-accent-muted group-hover:bg-accent-foreground/15 group-hover:text-accent-foreground"
                 variant="ghost"
               >
                 Edit

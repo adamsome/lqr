@@ -62,7 +62,7 @@ export function HeadingLink({
       </Link>
       <IconButton
         className={cn(
-          'text-accent-muted h-6 w-6 px-1',
+          'h-6 w-6 px-1 text-accent-muted',
           LINK_BOX_LINK_CLASSNAME,
         )}
         onClick={onClick}
@@ -74,5 +74,5 @@ export function HeadingLink({
 }
 
 function HeadingLg(props: { children: ReactNode }) {
-  return <H1 className="text-muted-foreground text-xl sm:text-xl" {...props} />
+  return <H1 className="text-xl text-muted-foreground sm:text-xl" {...props} />
 }

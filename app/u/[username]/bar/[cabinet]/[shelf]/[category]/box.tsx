@@ -103,7 +103,7 @@ export function Box({
       {displayItems.length === 0 && !hideItems && items > 0 && (
         <Level
           className={cn(
-            'text-muted-foreground/30 flex-1 self-end whitespace-nowrap font-normal tracking-tighter',
+            'flex-1 self-end whitespace-nowrap font-normal tracking-tighter text-muted-foreground/30',
             filterState && filterState !== 'none' && 'text-background',
           )}
           items="end"

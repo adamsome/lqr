@@ -13,7 +13,7 @@ export function MoreButton({ className, onClick }: Props) {
   return (
     <IconButton
       className={cn(
-        'h-6 w-6 rounded-full text-muted-foreground bg-foreground/5 hover:bg-foreground/10',
+        'h-6 w-6 rounded-full bg-foreground/5 text-muted-foreground hover:bg-foreground/10',
         className,
       )}
       variant="secondary"

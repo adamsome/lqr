@@ -28,17 +28,17 @@ export async function UserAvatarHeader({
     <Stack className={className} gap={1}>
       <Level className="sm:justify-normal" justify="between" gap={3}>
         <UserAvatarImage
-          className="text-4xl sm:text-5xl -ms-1"
+          className="-ms-1 text-4xl sm:text-5xl"
           user={user}
           size="2xl"
         />
-        <div className="hidden sm:flex flex-col flex-1 leading-none overflow-hidden">
+        <div className="hidden flex-1 flex-col overflow-hidden leading-none sm:flex">
           <Name user={user} />
           {tabs}
         </div>
         {children}
       </Level>
-      <Stack className="sm:hidden flex-1 leading-none overflow-hidden" gap={0}>
+      <Stack className="flex-1 overflow-hidden leading-none sm:hidden" gap={0}>
         <Name user={user} />
         {tabs}
       </Stack>
@@ -48,9 +48,9 @@ export async function UserAvatarHeader({
 
 function Name({ user }: { user: User | null }) {
   const { displayName, username } = user ?? {}
-  const name = user ? displayName ?? username ?? '?' : ''
+  const name = user ? (displayName ?? username ?? '?') : ''
   return (
-    <div className="text-2xl sm:text-4xl font-bold tracking-tight overflow-hidden text-ellipsis whitespace-nowrap">
+    <div className="overflow-hidden text-ellipsis whitespace-nowrap text-2xl font-bold tracking-tight sm:text-4xl">
       {name}
     </div>
   )

@@ -9,7 +9,7 @@ export function H2({ children, className }: Props) {
   return (
     <h2
       className={cn(
-        'scroll-m-16 text-lg sm:text-xl font-semibold tracking-tight overflow-hidden whitespace-nowrap text-ellipsis',
+        'scroll-m-16 overflow-hidden text-ellipsis whitespace-nowrap text-lg font-semibold tracking-tight sm:text-xl',
         className,
       )}
     >

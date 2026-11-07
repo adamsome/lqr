@@ -11,7 +11,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "format": "prettier --write app proxy.ts eslint.config.mjs"
   },
   "dependencies": {
     "@clerk/nextjs": "^7.9.25",
@@ -61,6 +62,7 @@
     "eslint-config-next": "^16.4.5",
     "eslint-config-prettier": "^9.1.2",
     "postcss": "^8.5.32",
+    "prettier": "^3.9.10",
     "prettier-plugin-tailwindcss": "^0.5.14",
     "tailwind-merge": "^2.6.1",
     "tailwindcss": "^3.4.19",

@@ -88,7 +88,7 @@ const TabsAnimatedUnderline = ({
     <div
       style={style}
       className={cn(
-        'bg-accent-foreground dark:bg-primary absolute bottom-0 left-0 -z-10 h-0.5 will-change-[transform,width]',
+        'absolute bottom-0 left-0 -z-10 h-0.5 bg-accent-foreground will-change-[transform,width] dark:bg-primary',
         animate && 'transition-[transform_150ms,width_100ms]',
         className,
       )}
@@ -108,7 +108,7 @@ const TabsList = React.forwardRef<
     <TabsPrimitive.List
       ref={listRef}
       className={cn(
-        'text-muted-foreground/75 inline-flex items-center gap-1',
+        'inline-flex items-center gap-1 text-muted-foreground/75',
         className,
       )}
       {...props}
@@ -126,7 +126,7 @@ const TabsTrigger = React.forwardRef<
     className={cn(
       'inline-flex items-center justify-center px-3 pb-1',
       'whitespace-nowrap text-sm font-medium transition-colors',
-      'ring-offset-background focus-visible:ring-ring focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2',
+      'ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2',
       'disabled:pointer-events-none disabled:opacity-50',
       'data-[state=active]:text-accent-foreground',
       'data-[state=inactive]:hover:text-muted-foreground',
@@ -144,7 +144,7 @@ const TabsContent = React.forwardRef<
   <TabsPrimitive.Content
     ref={ref}
     className={cn(
-      'ring-offset-background focus-visible:ring-ring mt-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2',
+      'mt-2 ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2',
       className,
     )}
     {...props}

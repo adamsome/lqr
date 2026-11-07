@@ -20,10 +20,10 @@ const DrawerClose = React.forwardRef<
   <DrawerPrimitive.Close
     ref={ref}
     className={cn(
-      'z-10 absolute right-1.5 top-1.5 p-[6px]',
+      'absolute right-1.5 top-1.5 z-10 p-[6px]',
       'text-accent-muted hover:text-secondary-foreground',
       'bg-secondary hover:bg-secondary/80',
-      'rounded-full backdrop-blur-md shadow transition-colors',
+      'rounded-full shadow backdrop-blur-md transition-colors',
       'disabled:pointer-events-none',
       className,
     )}
@@ -59,10 +59,10 @@ const DrawerContent = React.forwardRef<
     <DrawerPrimitive.Content
       ref={ref}
       className={cn(
-        'z-50 fixed inset-x-0 bottom-0',
-        'flex flex-col -mx-px max-h-[90%] overflow-clip',
+        'fixed inset-x-0 bottom-0 z-50',
+        '-mx-px flex max-h-[90%] flex-col overflow-clip',
         'bg-popover/70 backdrop-blur-md',
-        'border border-b-0 border-border/50 rounded-t-2xl',
+        'rounded-t-2xl border border-b-0 border-border/50',
         'ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring/50 focus-visible:ring-offset-2',
         className,
       )}
@@ -75,13 +75,13 @@ const DrawerContent = React.forwardRef<
 DrawerContent.displayName = 'DrawerContent'
 
 export const DrawerHandle = ({ className }: { className?: string }) => (
-  <div className="z-10 absolute top-0 left-0 right-0 mt-2 mx-auto w-12 h-1 rounded-full bg-muted-foreground/40 backdrop-blur-md" />
+  <div className="absolute left-0 right-0 top-0 z-10 mx-auto mt-2 h-1 w-12 rounded-full bg-muted-foreground/40 backdrop-blur-md" />
 )
 
 export const DrawerScroller = ({ className, ...props }: CompProps) => (
   <div
     className={cn(
-      'flex-1 py-1.5 overflow-auto backdrop-blur',
+      'flex-1 overflow-auto py-1.5 backdrop-blur',
       'dark:[mask-image:linear-gradient(to_bottom,transparent,rgb(255_255_255_/_50%)_6px,white_20px,white)]',
       className,
     )}

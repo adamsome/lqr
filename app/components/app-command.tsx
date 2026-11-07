@@ -118,7 +118,7 @@ export function AppCommand() {
       <Dialog open={profileOpen} onOpenChange={setProfileOpen}>
         <DialogPortal className="z-50">
           <DialogOverlay />
-          <DialogContent className="animate-in data-[state=open]:fade-in-90 data-[state=open]:slide-in-from-bottom-10 sm:zoom-in-90 data-[state=open]:sm:slide-in-from-bottom-0 fixed z-50 grid h-[calc(100vh-200px)] gap-4 overflow-hidden rounded-2xl">
+          <DialogContent className="fixed z-50 grid h-[calc(100vh-200px)] gap-4 overflow-hidden rounded-2xl animate-in data-[state=open]:fade-in-90 data-[state=open]:slide-in-from-bottom-10 sm:zoom-in-90 data-[state=open]:sm:slide-in-from-bottom-0">
             <div className="h-full w-full overflow-auto [&_.cl-card]:mx-0">
               <UserProfile />
             </div>
@@ -202,7 +202,7 @@ export function AppCommand() {
         </CommandList>
 
         <div className="flex h-10 items-center justify-between border-t px-3">
-          <div className="text-accent-muted flex items-center gap-2 font-semibold">
+          <div className="flex items-center gap-2 font-semibold text-accent-muted">
             <Logo
               className="-m-1.5 h-7 w-7"
               body="text-accent-muted"

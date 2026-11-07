@@ -168,7 +168,7 @@ export function AppFooter({ children, className, status }: FooterProps) {
         'fixed bottom-0 grid w-full place-content-center',
         'grid-cols-[var(--px)_1fr_var(--px)] grid-rows-1 [&>*]:row-[1]',
         'z-30 h-14 pb-0 sm:hidden',
-        'border-border/40 border-t',
+        'border-t border-border/40',
         className,
       )}
     >
@@ -185,7 +185,7 @@ export function AppFooter({ children, className, status }: FooterProps) {
         <Level
           className={cn(
             'relative col-[2] justify-self-center',
-            'text-muted-foreground text-sm',
+            'text-sm text-muted-foreground',
           )}
           items="center"
           justify="center"

@@ -31,11 +31,11 @@ export function Spec({ spec, data, userAvatar, updated, showStock }: Props) {
   return (
     <>
       <div className="flex flex-col gap-y-1">
-        <Title className="mb-3 text-4xl whitespace-normal" spec={spec} />
+        <Title className="mb-3 whitespace-normal text-4xl" spec={spec} />
         <div className="flex items-center gap-4">
           {userAvatar && <div>{userAvatar}</div>}
           {updated && (
-            <div className="text-muted-foreground/60 hidden sm:inline-block">
+            <div className="hidden text-muted-foreground/60 sm:inline-block">
               {updated}
             </div>
           )}
@@ -67,7 +67,7 @@ export function Spec({ spec, data, userAvatar, updated, showStock }: Props) {
       )}
       {referenceHtml && (
         <div
-          className="text-muted-foreground/50 text-xs font-medium"
+          className="text-xs font-medium text-muted-foreground/50"
           dangerouslySetInnerHTML={{ __html: referenceHtml }}
         />
       )}

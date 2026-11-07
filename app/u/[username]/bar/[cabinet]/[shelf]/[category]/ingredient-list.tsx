@@ -91,7 +91,7 @@ export function IngredientList({ category, isCurrentUser }: Props) {
           />
         ))}
         {stockedItems.length === 0 && (
-          <div className="pt-0.5 pb-2 text-muted-foreground/40 italic">
+          <div className="pb-2 pt-0.5 italic text-muted-foreground/40">
             {`No ${name ?? 'Unknown Ingredient'}`}
           </div>
         )}

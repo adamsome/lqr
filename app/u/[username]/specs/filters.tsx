@@ -56,7 +56,7 @@ export function Filters({ className, data, criteria, users, bar }: Props) {
   return (
     <Stack className={className} gap={4}>
       <Stack
-        className="-ml-4 max-h-screen w-auto flex-initial overflow-y-auto ps-4 pe-2 sm:-mb-[76px] sm:pb-[13px]"
+        className="-ml-4 max-h-screen w-auto flex-initial overflow-y-auto pe-2 ps-4 sm:-mb-[76px] sm:pb-[13px]"
         gap={6}
       >
         <FilterSection name="Category" actions={<Clear name={CATEGORY_KEY} />}>
@@ -112,7 +112,7 @@ export function Filters({ className, data, criteria, users, bar }: Props) {
           actions={
             <>
               <SpecIngredientCommandDialogButton
-                className="text-accent-muted hover:text-accent-foreground hover:bg-accent-foreground/15 flex h-6 gap-1 px-2 py-px"
+                className="flex h-6 gap-1 px-2 py-px text-accent-muted hover:bg-accent-foreground/15 hover:text-accent-foreground"
                 variant="ghost"
                 size="sm"
                 submit="ingredient"
@@ -159,7 +159,7 @@ function Clear({ name }: ClearProps) {
   if (names.flatMap((n) => searchParams.getAll(n)).length === 0) return null
   return (
     <Button
-      className="text-accent-muted hover:text-accent-foreground hover:bg-accent-foreground/15 flex h-auto gap-1 px-2 py-px"
+      className="flex h-auto gap-1 px-2 py-px text-accent-muted hover:bg-accent-foreground/15 hover:text-accent-foreground"
       variant="secondary"
       size="sm"
       onClick={() => clear(names)}

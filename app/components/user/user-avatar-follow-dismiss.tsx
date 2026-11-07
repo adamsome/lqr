@@ -23,10 +23,10 @@ export function UserAvatarFollowDismiss({ className, username, user }: Props) {
   return (
     <IconButton
       className={cn(
-        'z-20 absolute -top-[12px] -left-[12px]',
-        'p-[3px] w-6 h-6',
+        'absolute -left-[12px] -top-[12px] z-20',
+        'h-6 w-6 p-[3px]',
         'text-muted-foreground/75 hover:text-muted-foreground',
-        mutating && 'text-accent-foreground animate-pulse',
+        mutating && 'animate-pulse text-accent-foreground',
         'shadow',
         className,
       )}
@@ -39,8 +39,8 @@ export function UserAvatarFollowDismiss({ className, username, user }: Props) {
     >
       <Level
         className={cn(
-          'p-[3px] w-full h-full',
-          'bg-muted/60 border border-border rounded-full',
+          'h-full w-full p-[3px]',
+          'rounded-full border border-border bg-muted/60',
           mutating && 'bg-secondary',
         )}
         justify="center"

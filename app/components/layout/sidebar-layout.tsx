@@ -28,10 +28,10 @@ export function SidebarLayout({
   sidebar,
 }: ContentWithSidebarProps) {
   return (
-    <div className="isolate relative -top-[var(--h-sticky)] -mb-[var(--h-sticky)] min-h-screen">
+    <div className="relative -top-[var(--h-sticky)] isolate -mb-[var(--h-sticky)] min-h-screen">
       <div
         className={cn(
-          'md:grid md:flex-1 md:h-screen md:overflow-auto',
+          'md:grid md:h-screen md:flex-1 md:overflow-auto',
           'md:grid-cols-[min(theme(spacing.112),50%)_1fr]',
           'lg:grid-cols-[theme(spacing.112)_1fr]',
           className,

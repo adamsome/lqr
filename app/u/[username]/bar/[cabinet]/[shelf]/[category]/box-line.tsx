@@ -23,7 +23,7 @@ export function BoxLine({
   return (
     <div
       className={cn(
-        'text-accent-muted w-full overflow-x-hidden text-ellipsis whitespace-nowrap font-normal tracking-wide [font-stretch:semi-condensed]',
+        'w-full overflow-x-hidden text-ellipsis whitespace-nowrap font-normal tracking-wide text-accent-muted [font-stretch:semi-condensed]',
         title && 'font-semibold [font-stretch:condensed]',
         title &&
           (stocked

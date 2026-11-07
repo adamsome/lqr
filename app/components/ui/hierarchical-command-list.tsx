@@ -200,7 +200,7 @@ function ItemContent<T extends HasIDAndName>({
         )}
         <span
           className={cn(
-            muteItems && 'text-muted-foreground font-semibold',
+            muteItems && 'font-semibold text-muted-foreground',
             !showCheckbox && !hasSearch && level === 1 && 'ml-6',
             !showCheckbox && !hasSearch && level === 2 && 'ml-12',
             !showCheckbox && !hasSearch && level >= 3 && 'ml-18',

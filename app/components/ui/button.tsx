@@ -63,7 +63,7 @@ export const IconButton = forwardRef<
       variant="link"
       size="xs"
       {...props}
-      className={cn('w-11 h-11 hover:text-accent-strong', className)}
+      className={cn('h-11 w-11 hover:text-accent-strong', className)}
     />
   )
 })
