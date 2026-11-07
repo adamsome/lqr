@@ -3,13 +3,9 @@
 - isCurrentUser Back show "Specs", etc.
 - Put at `adamso.me/lqr`
 - Increase selected bar item contrast
-- Add timestamp on hover of relative times
 - Click indication on bar item click
 
 ## Bugs
-
-- Spec edit page 500s for non-owners (invariant throws); show a "not allowed" page instead
-- Profile header shows "0 following" while Following page lists followed users
 
 ## FTUE
 
