@@ -46,6 +46,13 @@ export async function PUT(req: NextRequest) {
     updateUserActedAt(spec.userID),
   ])
 
+  if (res.matchedCount === 0) {
+    return NextResponse.json(
+      { error: `No spec '${spec.id}' found for user '${spec.username}'` },
+      { status: 404 },
+    )
+  }
+
   return NextResponse.json(res)
 }
 

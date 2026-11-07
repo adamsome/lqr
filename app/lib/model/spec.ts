@@ -53,7 +53,9 @@ export async function getAllSpecsWithUserIDs(
 
 export async function updateSpec(spec: Spec) {
   const cn = await connect()
-  return cn.updateOne({ id: spec.id }, { $set: spec })
+  // Match on owner too so a spec can't be updated (or taken over) via another
+  // user's spec ID; callers must verify spec.userID is allowed.
+  return cn.updateOne({ id: spec.id, userID: spec.userID }, { $set: spec })
 }
 
 export async function updateSpecUser(id: string, userID: string, user: User) {
