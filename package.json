@@ -75,5 +75,8 @@
   },
   "engines": {
     "node": "24.x"
+  },
+  "allowScripts": {
+    "fsevents@2.3.3": true
   }
 }
