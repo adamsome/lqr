@@ -204,6 +204,8 @@
 
 ## Chores
 
+- Replace deprecated Clerk `createRouteMatcher` in `proxy.ts` with per-page/route auth checks
+- Fill out `AGENTS.md` (Next 16 generated it) with project notes & commit it
 - Fix `react-hooks/set-state-in-effect` lint warnings (9 spots), then make it an error again
 - Add IngredientDef (w/o stock, categoryKeys, etc.)
 - Use server actions
