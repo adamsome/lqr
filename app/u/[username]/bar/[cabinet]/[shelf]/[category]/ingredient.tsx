@@ -8,7 +8,7 @@ import { Checkbox } from '@/app/components/ui/checkbox'
 import { CheckboxLabel } from '@/app/components/ui/checkbox-label'
 import { useGetIngredientName } from '@/app/lib/ingredient/use-get-ingredient-name'
 import { useMutateStock } from '@/app/api/stock/use-mutate-stock'
-import { Ingredient } from '@/app/lib/types'
+import type { Ingredient } from '@/app/lib/types'
 import { cn } from '@/app/lib/utils'
 
 type Props = {

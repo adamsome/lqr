@@ -52,8 +52,8 @@ export function useFormAction<
   TResponse,
   TFieldValues extends FieldValues = FieldValues,
   TContext = any,
-  TTransformedValues extends FieldValues | undefined = undefined,
->(props?: UseFormProps<TFieldValues, TContext>) {
+  TTransformedValues = TFieldValues,
+>(props?: UseFormProps<TFieldValues, TContext, TTransformedValues>) {
   const form = useForm<TFieldValues, TContext, TTransformedValues>(props)
 
   const handleAction = async (onAction: SubmitHandler<TFieldValues>) => {

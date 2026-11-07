@@ -5,7 +5,7 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from '@/app/components/ui/tooltip'
-import { SpecStock } from '@/app/lib/types'
+import type { SpecStock } from '@/app/lib/types'
 import { cn } from '@/app/lib/utils'
 
 type Props = {
