@@ -21,7 +21,7 @@ export function StockIconButton({ stock = -1, fetching, onClick }: Props) {
       variant="ghost"
       className={cn(
         'group h-8 w-8 p-0',
-        fetching && ' animate-pulse text-accent-foreground',
+        fetching && 'animate-pulse text-accent-foreground',
       )}
       onClick={handleClick}
     >
