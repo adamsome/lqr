@@ -31,22 +31,24 @@ export const getAllFollowing = cache(
   },
 )
 
-export const getFollowingCount = cache(async (userID: string) =>
-  getAllFollowing(userID).then(
-    (follows) => follows.filter(({ follows }) => follows).length,
-  ),
-)
+// Uncached so it reflects writes made earlier in the same request
+async function countFollowing(userID: string) {
+  const cn = await connect()
+  return cn.countDocuments({ follower: userID, follows: true })
+}
+
+export const getFollowingCount = cache(countFollowing)
 
 export async function upsertFollow(follow: Follow) {
   const cn = await connect()
-  const count = await getFollowingCount(follow.follower)
-  const delta = follow.follows ? 1 : -1
-  await updateUserFollowingCount(follow.follower, count + delta)
-  return cn.updateOne(
+  const result = await cn.updateOne(
     { followee: follow.followee, follower: follow.follower },
     { $set: follow },
     { upsert: true },
   )
+  const count = await countFollowing(follow.follower)
+  await updateUserFollowingCount(follow.follower, count)
+  return result
 }
 
 export async function deleteFollow(follow: FollowKeys) {
