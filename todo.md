@@ -200,6 +200,9 @@
 
 ## Chores
 
+- Upgrade `@tanstack/react-table` 8 -> 9 (new features type param; ~94 type errors across the shadcn data-table components & research columns)
+- Upgrade ESLint 9 -> 10 once eslint-config-next's bundled plugins (react, import, jsx-a11y) support it
+- Upgrade `tailwind-merge` 2 -> 3 together with Tailwind 4 (v3 only supports Tailwind 4)
 - Fix `react-hooks/set-state-in-effect` lint warnings (9 spots), then make it an error again
 - Add IngredientDef (w/o stock, categoryKeys, etc.)
 - Use server actions
