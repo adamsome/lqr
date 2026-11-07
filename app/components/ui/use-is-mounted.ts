@@ -1,9 +1,12 @@
-import { useEffect, useState } from 'react'
+import { useSyncExternalStore } from 'react'
 
+const subscribe = () => () => {}
+
+// `false` during SSR & hydration, `true` once rendering on the client
 export function useIsMounted() {
-  const [isMounted, setIsMounted] = useState(false)
-  useEffect(() => {
-    setIsMounted(true)
-  }, [])
-  return isMounted
+  return useSyncExternalStore(
+    subscribe,
+    () => true,
+    () => false,
+  )
 }

@@ -59,7 +59,7 @@ If `node` reports "Bad CPU type", an old Intel Node is first on `PATH`; use the 
 - Access control lives in each page and route handler: pages that need sign-in call `await auth.protect()`; route handlers return 401 when signed out and 403/404 for other users' data. Never trust user IDs from the request body; filter writes by the signed-in user.
 - Always `await props.params` / `props.searchParams` in pages, layouts, and route handlers.
 - Use type-only imports (`import type`) when a type name collides with a local value.
-- `react-hooks/set-state-in-effect` is a warning for now (see Chores in `todo.md`); avoid adding new cases.
+- Don't call setState synchronously in effects (`react-hooks/set-state-in-effect` is an error). To reset state when a prop changes, compare with the previous value during render (see `app/api/use-mutate.ts`).
 
 ## Environment
 

@@ -2,7 +2,7 @@
 
 import { DialogProps } from '@radix-ui/react-dialog'
 import { useRouter } from 'next/navigation'
-import { ReactNode, useEffect, useState } from 'react'
+import { ReactNode, useState } from 'react'
 
 import {
   Drawer,
@@ -72,11 +72,14 @@ export function SidebarLayoutMobileDrawer({
   const isAboveMd = useAboveBreakpoint('md', true)
   const router = useRouter()
   const [open, setOpen] = useState(true)
+  const [prevRoute, setPrevRoute] = useState(route)
   const mounted = useIsMounted()
 
-  useEffect(() => {
+  // Reopen when navigating to a new route
+  if (route !== prevRoute) {
+    setPrevRoute(route)
     if (route) setOpen(true)
-  }, [route])
+  }
 
   return (
     <>

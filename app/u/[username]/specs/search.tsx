@@ -1,7 +1,7 @@
 'use client'
 
 import { MagnifyingGlassIcon } from '@radix-ui/react-icons'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { useDebounce } from 'react-use'
 
 import { Level } from '@/app/components/layout/level'
@@ -18,6 +18,13 @@ type Props = {
 export function Search({ className, search: searchProp }: Props) {
   const { set, clear } = useRouterSearchParams()
   const [search, setSearch] = useState(searchProp)
+  const [prevSearchProp, setPrevSearchProp] = useState(searchProp)
+
+  // Clear the input when the search param is cleared elsewhere
+  if (searchProp !== prevSearchProp) {
+    setPrevSearchProp(searchProp)
+    if (!searchProp) setSearch('')
+  }
 
   const handleSearch = () => {
     if (searchProp !== search)
@@ -25,10 +32,6 @@ export function Search({ className, search: searchProp }: Props) {
   }
 
   useDebounce(handleSearch, 1200, [search])
-
-  useEffect(() => {
-    if (!searchProp) setSearch('')
-  }, [searchProp])
 
   return (
     <div className={cn('relative inline-block', className)}>

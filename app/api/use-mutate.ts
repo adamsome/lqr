@@ -1,6 +1,5 @@
 import { useRouter } from 'next/navigation'
-import { useCallback, useEffect, useState } from 'react'
-import { usePrevious } from 'react-use'
+import { useCallback, useState } from 'react'
 
 import { useToast } from '@/app/components/ui/use-toast'
 
@@ -14,15 +13,16 @@ export function useMutate<T = unknown>(
 ) {
   const [mutating, setMutating] = useState(false)
   const [error, setError] = useState('')
-  const prev = usePrevious(watchData)
+  const [prevWatchData, setPrevWatchData] = useState(watchData)
   const router = useRouter()
   const { toast } = useToast()
 
-  useEffect(() => {
-    if (watchData !== undefined && watchData !== prev) {
-      setMutating(false)
-    }
-  }, [watchData, prev])
+  // When the watched server data changes the mutation has landed. Adjust state
+  // during render (not in an effect); watchData must be a primitive.
+  if (watchData !== prevWatchData) {
+    setPrevWatchData(watchData)
+    if (watchData !== undefined) setMutating(false)
+  }
 
   const refresh = useCallback(() => {
     router.refresh()

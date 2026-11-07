@@ -5,7 +5,7 @@ import {
   ArrowUpIcon,
   CaretSortIcon,
 } from '@radix-ui/react-icons'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
 import { Button } from '@/app/components/ui/button'
 import {
@@ -38,8 +38,16 @@ export function SortSelect({
   desc: descProp,
 }: Props) {
   const { set, clear } = useRouterSearchParams()
-  const [sort, setSort] = useState(sortProp)
-  const [desc, setDesc] = useState(descProp)
+  const [sort, setSort] = useState(sortProp ?? ITEMS[0].value)
+  const [desc, setDesc] = useState(descProp ?? false)
+  const [prevProps, setPrevProps] = useState({ sortProp, descProp })
+
+  // Reset local state when the sort params are cleared elsewhere
+  if (sortProp !== prevProps.sortProp || descProp !== prevProps.descProp) {
+    setPrevProps({ sortProp, descProp })
+    if (!sortProp) setSort(ITEMS[0].value)
+    if (descProp === undefined) setDesc(false)
+  }
   const changed =
     (sort ?? 'stock') !== (sortProp ?? 'stock') ||
     (desc ?? false) !== (descProp ?? false)
@@ -59,14 +67,6 @@ export function SortSelect({
       set(SORT_KEY, value)
     }
   }
-
-  useEffect(() => {
-    if (!sortProp) setSort(ITEMS[0].value)
-  }, [sortProp])
-
-  useEffect(() => {
-    if (descProp === undefined) setDesc(false)
-  }, [descProp])
 
   if (!curr) return null
 
