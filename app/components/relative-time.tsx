@@ -1,6 +1,6 @@
 'use client'
 
-import { intlFormatDistance, parseISO } from 'date-fns'
+import { intlFormatDistance, isValid, parseISO } from 'date-fns'
 
 type Props = {
   className?: string
@@ -11,6 +11,7 @@ type Props = {
 // Relative time (e.g. "3 years ago") with the full local date on hover
 export function RelativeTime({ className, date, prefix }: Props) {
   const parsed = parseISO(date)
+  if (!isValid(parsed)) return null
   const relative = intlFormatDistance(parsed, new Date())
   const full = parsed.toLocaleString(undefined, {
     dateStyle: 'medium',
