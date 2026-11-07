@@ -2,10 +2,12 @@
 
 - isCurrentUser Back show "Specs", etc.
 - Put at `adamso.me/lqr`
+- Increase selected bar item contrast
+- Add timestamp on hover of relative times
+- Click indication on bar item click
 
 ## FTUE
 
-- Create modern classics user
 - Onboarding bar inventory
 - Follow classics on signup
 

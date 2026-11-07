@@ -56,7 +56,7 @@ export function Filters({ className, data, criteria, users, bar }: Props) {
   return (
     <Stack className={className} gap={4}>
       <Stack
-        className="-ml-4 max-h-screen w-auto flex-initial overflow-y-auto pl-4 sm:-mb-[76px] sm:pb-[13px]"
+        className="-ml-4 max-h-screen w-auto flex-initial overflow-y-auto ps-4 pe-2 sm:-mb-[76px] sm:pb-[13px]"
         gap={6}
       >
         <FilterSection name="Category" actions={<Clear name={CATEGORY_KEY} />}>
