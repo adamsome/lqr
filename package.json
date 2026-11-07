@@ -12,7 +12,10 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
-    "format": "prettier --write app proxy.ts eslint.config.mjs"
+    "format": "prettier --write app e2e proxy.ts eslint.config.mjs playwright.config.ts",
+    "typecheck": "tsc --noEmit",
+    "format:check": "prettier --check app e2e proxy.ts eslint.config.mjs playwright.config.ts",
+    "test:e2e": "playwright test"
   },
   "dependencies": {
     "@clerk/nextjs": "^7.9.25",
@@ -52,6 +55,7 @@
     "zod": "^3.25.76"
   },
   "devDependencies": {
+    "@playwright/test": "^1.65.0",
     "@types/node": "^20.19.43",
     "@types/ramda": "^0.29.12",
     "@types/react": "^19.3.0",

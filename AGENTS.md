@@ -25,9 +25,10 @@ Home bar manager: users track which bottles/ingredients they have in stock and b
 - `npm run dev`: dev server on port 3000
 - `npm run build`: production build (also type-checks)
 - `npm run lint`: ESLint 9 flat config (`eslint.config.mjs`)
-- `npm run format`: Prettier on `app/`, `proxy.ts`, `eslint.config.mjs`
-- `npx tsc --noEmit`: type-check only
-- No test suite; verify changes with build, lint, and the running app.
+- `npm run format` / `npm run format:check`: Prettier
+- `npm run typecheck`: `tsc --noEmit`
+- `npm run test:e2e`: Playwright smoke tests (`e2e/`), read-only, against `BASE_URL` (default `http://localhost:3000`, so start the dev server first)
+- CI (`.github/workflows/`): `ci.yml` runs typecheck, lint, format check and build on pushes and PRs; `smoke.yml` runs the smoke tests against each successful Vercel deployment.
 
 If `node` reports "Bad CPU type", an old Intel Node is first on `PATH`; use the nvm Node 24 (`nvm use`). Delete `.next` if Turbopack cached a bad state.
 
