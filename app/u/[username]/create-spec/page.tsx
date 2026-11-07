@@ -1,3 +1,4 @@
+import { auth } from '@clerk/nextjs/server'
 import { Suspense } from 'react'
 import invariant from 'tiny-invariant'
 
@@ -11,6 +12,7 @@ type Props = PageProps<{
 }>
 
 export default async function Page(props: Props) {
+  await auth.protect()
   const params = (await props.params) ?? {}
   const { user, currentUser } = await getCurrentUser(params.username)
   invariant(user, `User not found.`)

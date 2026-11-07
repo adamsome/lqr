@@ -23,7 +23,7 @@ export default async function Page(props: Props) {
   const params = (await props.params) ?? {}
   const { username, id } = params
 
-  const { userId: currentUserID } = await auth()
+  const { userId: currentUserID } = await auth.protect()
 
   const user = await getUser(username)
   const spec = await getSpec(id, user?.id)

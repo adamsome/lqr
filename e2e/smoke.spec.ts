@@ -28,12 +28,32 @@ test('user bar page renders inventory', async ({ page }) => {
   await expect(page.getByText('Core Spirits').first()).toBeVisible()
 })
 
-test('protected page redirects to sign-in', async ({ page }) => {
-  await page.goto('/u/test_01/create-spec')
-  await expect(page).toHaveURL(/\/sign-in\?redirect_url=/)
-})
+for (const path of [
+  '/u',
+  '/u/test_01/create-spec',
+  '/u/classics/specs/old_pal/edit',
+  '/u/classics/specs/old_pal/change-user',
+]) {
+  test(`${path} redirects signed-out users to sign-in`, async ({ page }) => {
+    await page.goto(path)
+    await expect(page).toHaveURL(/\/sign-in\?redirect_url=/)
+  })
+}
 
 test('static data API responds', async ({ request }) => {
   const res = await request.get('/api/staticdata')
   expect(res.ok()).toBeTruthy()
+})
+
+test('user API returns only public profile fields', async ({ request }) => {
+  const res = await request.get('/api/users/test_01')
+  expect(res.ok()).toBeTruthy()
+  const { user } = await res.json()
+  expect(user.username).toBe('test_01')
+  expect(Object.keys(user).sort()).toEqual(['id', 'imageUrl', 'username'])
+})
+
+test('mutating APIs reject signed-out requests', async ({ request }) => {
+  const res = await request.put('/api/stock', { data: {} })
+  expect(res.status()).toBe(401)
 })

@@ -1,3 +1,5 @@
+import { auth } from '@clerk/nextjs/server'
+
 import { Stack } from '@/app/components/layout/stack'
 import { getSpec } from '@/app/lib/model/spec'
 import { SYSTEM_USERS, getCurrentUser, getUserByID } from '@/app/lib/model/user'
@@ -13,6 +15,7 @@ type Props = PageProps<{
 }>
 
 export default async function Page(props: Props) {
+  await auth.protect()
   const searchParams = (await props.searchParams) ?? {}
   const params = (await props.params) ?? {}
   const { username, id } = params
