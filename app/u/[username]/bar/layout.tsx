@@ -11,10 +11,12 @@ import { Stack } from '@/app/components/layout/stack'
 import { FollowButtonContainer } from '@/app/components/user/follow-button-container'
 import { UserAvatarHeader } from '@/app/components/user/user-avatar-header'
 import { getIngredientData } from '@/app/lib/model/ingredient-data'
-import { getCurrentUser, updateUserFtue } from '@/app/lib/model/user'
+import { isOnboarding, startFtue } from '@/app/lib/model/ftue'
+import { getCurrentUser } from '@/app/lib/model/user'
 import { toHome } from '@/app/lib/routes'
 import { LayoutProps } from '@/app/lib/types'
 import { Bar } from '@/app/u/[username]/bar/bar'
+import { Onboarding } from '@/app/u/[username]/bar/onboarding'
 
 export const revalidate = 0
 
@@ -31,10 +33,14 @@ export default async function Layout(props: Props) {
   const { user, currentUser, isCurrentUser } = await getCurrentUser(username)
   const data = await getIngredientData(user?.id)
 
-  if (isCurrentUser && currentUser?.id && !currentUser?.ftue) {
-    // TODO: Add FTUE bar walkthrough
-    await updateUserFtue(currentUser.id, 'spec')
+  // Covers users who reach their bar without passing through `/u`
+  if (isCurrentUser && currentUser && !currentUser.ftue) {
+    await startFtue(currentUser)
   }
+  const onboarding =
+    isCurrentUser && currentUser && isOnboarding(currentUser.ftue) ? (
+      <Onboarding userID={currentUser.id} username={currentUser.username} />
+    ) : null
 
   return (
     <IngredientDataProvider {...data}>
@@ -56,7 +62,7 @@ export default async function Layout(props: Props) {
                     />
                   )}
                 </UserAvatarHeader>
-                <Bar username={username} />
+                <Bar username={username} onboarding={onboarding} />
               </Stack>
             </AppFullWidthContent>
           }

@@ -186,6 +186,16 @@ export async function updateUserActedAt(userID: string) {
   )
 }
 
+// Create the user's record if missing (no-op when it exists)
+export async function ensureUserEntity({ id, username }: User) {
+  const cn = await connect()
+  return cn.updateOne(
+    { id },
+    { $setOnInsert: { id, username } },
+    { upsert: true },
+  )
+}
+
 export async function addUser(user: User) {
   const cn = await connect()
   return cn.insertOne(user)

@@ -1,3 +1,5 @@
+import type { ReactNode } from 'react'
+
 import { Level } from '@/app/components/layout/level'
 import { Stack } from '@/app/components/layout/stack'
 import { BarGrid } from '@/app/u/[username]/bar/bar-grid'
@@ -5,11 +7,13 @@ import { Suggestions } from '@/app/u/[username]/bar/suggestions'
 
 type Props = {
   username?: string
+  onboarding?: ReactNode
 }
 
-export async function Bar({ username }: Props) {
+export async function Bar({ username, onboarding }: Props) {
   return (
     <Stack gap={6}>
+      {onboarding}
       <Stack gap={2}>
         <Stack gap={0}>
           <Level className="font-medium" justify="between">
