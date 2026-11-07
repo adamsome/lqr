@@ -23,7 +23,7 @@ export async function changeUser(data: Schema): Promise<Response> {
 
   const body = SpecChangeUserSchema.safeParse(data)
   if (!body.success) {
-    const { errors } = body.error
+    const { issues: errors } = body.error
     return {
       ok: false,
       error: `Invalid request: ${errors.map((e) => e.message).join('. ')}`,

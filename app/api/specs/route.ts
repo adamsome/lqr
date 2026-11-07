@@ -27,7 +27,7 @@ export async function POST(req: NextRequest) {
 
   const body = Schema.safeParse(await req.json())
   if (!body.success) {
-    const { errors } = body.error
+    const { issues: errors } = body.error
     return NextResponse.json(
       { error: `Invalid request`, errors },
       { status: 500 },
