@@ -2,7 +2,6 @@
 
 import { zodResolver } from '@hookform/resolvers/zod'
 import { ArrowRightIcon } from '@radix-ui/react-icons'
-import { intlFormatDistance, parseISO } from 'date-fns/fp'
 import { useRouter } from 'next/navigation'
 import { useEffect, type ReactNode } from 'react'
 import { useFormStatus } from 'react-dom'
@@ -17,6 +16,7 @@ import type { z } from 'zod'
 
 import { Level } from '@/app/components/layout/level'
 import { Stack } from '@/app/components/layout/stack'
+import { RelativeTime } from '@/app/components/relative-time'
 import { Button } from '@/app/components/ui/button'
 import {
   FormControl,
@@ -98,8 +98,7 @@ export function Form({ spec, username, currentUser, specUser, users }: Props) {
   useEffect(() => form.setFocus('userID'), [form])
 
   const { updatedAt } = spec
-  const updatedDistance = intlFormatDistance(new Date(), parseISO(updatedAt))
-  const lastUpdated = `Last updated ${updatedDistance}`
+  const lastUpdated = <RelativeTime date={updatedAt} prefix="Last updated" />
 
   return (
     <FormRoot {...form}>

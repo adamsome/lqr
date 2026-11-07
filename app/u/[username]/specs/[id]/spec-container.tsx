@@ -1,7 +1,7 @@
-import { intlFormatDistance, parseISO } from 'date-fns/fp'
 import { micromark } from 'micromark'
 import invariant from 'tiny-invariant'
 
+import { RelativeTime } from '@/app/components/relative-time'
 import { UserAvatar } from '@/app/components/user/user-avatar'
 import { UserAvatarLink } from '@/app/components/user/user-avatar-link'
 import { getSpecStock } from '@/app/lib/ingredient/get-spec-stock'
@@ -46,11 +46,7 @@ export async function SpecContainer({ username, specID }: Props) {
     enhancedSpec.referenceHtml = micromark(`—${spec.reference}`)
   }
 
-  const updatedDistance = intlFormatDistance(
-    new Date(),
-    parseISO(spec.updatedAt),
-  )
-  const updated = `Updated ${updatedDistance}`
+  const updated = <RelativeTime date={spec.updatedAt} prefix="Updated" />
 
   return (
     <SpecLayout
