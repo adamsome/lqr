@@ -10,7 +10,8 @@ type Props = PageProps<{
   username?: string
 }>
 
-export default async function Page({ params = {} }: Props) {
+export default async function Page(props: Props) {
+  const params = (await props.params) ?? {}
   const { username } = params
   return (
     <Stack gap={8}>

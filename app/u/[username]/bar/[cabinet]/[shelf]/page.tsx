@@ -12,7 +12,8 @@ type Props = PageProps<
   }
 >
 
-export default async function Page({ params = {} }: Props) {
+export default async function Page(props: Props) {
+  const params = (await props.params) ?? {}
   return (
     <Heading
       {...params}

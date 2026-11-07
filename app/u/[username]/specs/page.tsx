@@ -6,7 +6,9 @@ type Props = PageProps<{
   username?: string
 }>
 
-export default async function Page({ params = {}, searchParams = {} }: Props) {
+export default async function Page(props: Props) {
+  const searchParams = (await props.searchParams) ?? {}
+  const params = (await props.params) ?? {}
   const { username } = params
 
   const criteria = parseCriteria(searchParams ?? {}, username)

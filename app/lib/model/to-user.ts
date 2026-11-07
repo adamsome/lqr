@@ -1,5 +1,5 @@
-import type { User as AuthUser } from '@clerk/nextjs/dist/types/server'
-import type { UserResource } from '@clerk/types'
+import type { User as AuthUser } from '@clerk/nextjs/server'
+import type { UserResource } from '@clerk/nextjs/types'
 
 import { User } from '@/app/lib/types'
 

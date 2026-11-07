@@ -15,7 +15,8 @@ type Props = PageProps<
   }
 >
 
-export default async function Page({ params = {} }: Props) {
+export default async function Page(props: Props) {
+  const params = (await props.params) ?? {}
   const { username } = params
   const { categories } = await buildUserCategoryData(username)
   const current = await isCurrentUser(username)

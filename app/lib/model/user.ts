@@ -1,4 +1,4 @@
-import { auth, clerkClient } from '@clerk/nextjs'
+import { auth, clerkClient } from '@clerk/nextjs/server'
 import { OptionalUnlessRequiredId } from 'mongodb'
 import { partition } from 'ramda'
 import { cache } from 'react'
@@ -52,7 +52,9 @@ export async function getAllUsers(userIDs: string[]): Promise<User[]> {
   const systemUsers = systemIDs.map((id) => byID[id])
 
   const rawUsers =
-    ids.length > 0 ? await clerkClient.users.getUserList({ userId: ids }) : []
+    ids.length > 0
+      ? (await (await clerkClient()).users.getUserList({ userId: ids })).data
+      : []
   const users = rawUsers.map(toUser)
 
   return [...users, ...systemUsers]
@@ -62,7 +64,7 @@ export const getUserByID = cache(
   async (userID?: string | null): Promise<User | null> => {
     if (!userID) return null
     if (byID[userID]) return byID[userID]
-    const rawUser = await clerkClient.users.getUser(userID)
+    const rawUser = await (await clerkClient()).users.getUser(userID)
     invariant(rawUser, `No user found with ID '${userID}'`)
     return toUser(rawUser)
   },
@@ -72,7 +74,9 @@ export const getUser = cache(
   async (username?: string): Promise<User | null> => {
     if (!username) return null
     if (byUsername[username]) return byUsername[username]
-    const users = await clerkClient.users.getUserList({ username: [username] })
+    const { data: users } = await (
+      await clerkClient()
+    ).users.getUserList({ username: [username] })
     if (!users[0]) return null
     return toUser(users[0])
   },
@@ -104,7 +108,7 @@ async function _getCurrentUser(
 async function _getCurrentUser(
   username?: string,
 ): Promise<CurrentUserWithUser | CurrentUserOnly> {
-  const { userId: currentUserID } = auth()
+  const { userId: currentUserID } = await auth()
   const [user, currentAuth, currentEntity] = await Promise.all([
     getUser(username),
     getUserByID(currentUserID),
@@ -129,7 +133,7 @@ async function _getCurrentUser(
 export const getCurrentUser = cache(_getCurrentUser)
 
 export const isCurrentUser = cache(async (username: string | undefined) => {
-  const { userId: currentUserID } = auth()
+  const { userId: currentUserID } = await auth()
   const user = await getUser(username)
   return currentUserID != null && user?.id === currentUserID
 })

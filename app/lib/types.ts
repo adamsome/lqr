@@ -147,14 +147,16 @@ export type IngredientSpecifier<T extends HasIDAndName = HasIDAndName> = {
 
 export type CompProps = PropsWithChildren<{ className?: string }>
 type SearchParam = string | string[] | undefined
-type PropsWithSearchParams = { searchParams?: { [key: string]: SearchParam } }
+type PropsWithSearchParams = {
+  searchParams?: Promise<{ [key: string]: SearchParam }>
+}
 export type LayoutProps<T = undefined> = T extends undefined
   ? PropsWithChildren
-  : PropsWithChildren & { params?: T }
+  : PropsWithChildren & { params?: Promise<T> }
 export type PageProps<T extends undefined | object = undefined> =
   T extends undefined
     ? PropsWithSearchParams
-    : PropsWithSearchParams & { params?: Partial<T> }
+    : PropsWithSearchParams & { params?: Promise<Partial<T>> }
 
 export type HasIDAndName = { id: string; name: string }
 export type Option<T> = { label: string; value: T }

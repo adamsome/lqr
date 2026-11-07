@@ -1,4 +1,4 @@
-import { auth, clerkClient } from '@clerk/nextjs'
+import { auth, clerkClient } from '@clerk/nextjs/server'
 import { OptionalUnlessRequiredId } from 'mongodb'
 import { NextRequest, NextResponse } from 'next/server'
 import { z } from 'zod'
@@ -14,7 +14,7 @@ const Schema = z.object({
 })
 
 export async function PUT(req: NextRequest) {
-  const { userId: userID } = auth()
+  const { userId: userID } = await auth()
   if (!userID) {
     return NextResponse.json(
       { error: `Must be signed in to get user data.` },
@@ -51,7 +51,7 @@ export async function PUT(req: NextRequest) {
   let res = await update()
 
   if (!res.matchedCount) {
-    const user = await clerkClient.users.getUser(userID).then(toUser)
+    const user = await (await clerkClient()).users.getUser(userID).then(toUser)
     await addUser({ id: user.id, username: user.username })
     res = await update()
 

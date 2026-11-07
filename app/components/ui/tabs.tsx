@@ -7,7 +7,7 @@ import { cn } from '@/app/lib/utils'
 import { useWindowSize } from 'react-use'
 
 type TabsContextValue = {
-  listRef: React.RefObject<HTMLDivElement>
+  listRef: React.RefObject<HTMLDivElement | null>
   style: React.CSSProperties
   animate: boolean
 }

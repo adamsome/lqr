@@ -19,7 +19,11 @@ type Props = LayoutProps<{
   username?: string
 }>
 
-export default async function Layout({ children, params = {} }: Props) {
+export default async function Layout(props: Props) {
+  const params = (await props.params) ?? {}
+
+  const { children } = props
+
   const { username } = params
   const { user, currentUser, isCurrentUser } = await getCurrentUser(username)
   return (

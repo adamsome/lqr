@@ -1,4 +1,4 @@
-import { auth } from '@clerk/nextjs'
+import { auth } from '@clerk/nextjs/server'
 import { NextRequest, NextResponse } from 'next/server'
 import { z } from 'zod'
 
@@ -10,8 +10,9 @@ import {
 
 export async function PATCH(
   req: NextRequest,
-  { params = {} }: { params?: { username?: string; followee?: string } },
+  props: { params?: Promise<{ username?: string; followee?: string }> },
 ) {
+  const params = (await props.params) ?? {}
   const { username, followee } = params
   const user = await getUser(username)
   const { id: userID } = user ?? {}
@@ -22,7 +23,7 @@ export async function PATCH(
     )
   }
 
-  const { userId: currentUserID } = auth()
+  const { userId: currentUserID } = await auth()
   if (!currentUserID) {
     return NextResponse.json(
       { error: `Must be signed in to exclude a followee.` },

@@ -1,6 +1,6 @@
 'use server'
 
-import { auth } from '@clerk/nextjs'
+import { auth } from '@clerk/nextjs/server'
 import { z } from 'zod'
 
 import { isAdmin } from '@/app/lib/model/admin'
@@ -13,11 +13,10 @@ import { revalidatePath } from 'next/cache'
 type Schema = z.infer<typeof SpecChangeUserSchema>
 
 export type Response =
-  | { ok: false; error: string }
-  | { ok: true; message: string }
+  { ok: false; error: string } | { ok: true; message: string }
 
 export async function changeUser(data: Schema): Promise<Response> {
-  const { userId: currentUserID } = auth()
+  const { userId: currentUserID } = await auth()
   if (!isAdmin(currentUserID)) {
     return { ok: false, error: `Only admins can change spec user` }
   }

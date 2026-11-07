@@ -8,6 +8,10 @@ type Props = LayoutProps<
   }
 >
 
-export default async function Layout({ children, params = {} }: Props) {
+export default async function Layout(props: Props) {
+  const params = (await props.params) ?? {}
+
+  const { children } = props
+
   return <MobileDrawer {...params}>{children}</MobileDrawer>
 }

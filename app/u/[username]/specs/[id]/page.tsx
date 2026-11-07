@@ -6,7 +6,8 @@ type Props = PageProps<{
   id?: string
 }>
 
-export default async function Page({ params = {} }: Props) {
+export default async function Page(props: Props) {
+  const params = (await props.params) ?? {}
   const { username, id } = params
   return <SpecContainer username={username} specID={id} />
 }

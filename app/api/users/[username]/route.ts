@@ -1,11 +1,14 @@
-import { clerkClient } from '@clerk/nextjs'
+import { clerkClient } from '@clerk/nextjs/server'
 import { NextResponse, type NextRequest } from 'next/server'
 
 export async function GET(
   _req: NextRequest,
-  { params }: { params: { username: string } },
+  props: { params: Promise<{ username: string }> },
 ) {
+  const params = await props.params
   const { username } = params
-  const [user] = await clerkClient.users.getUserList({ username: [username] })
+  const {
+    data: [user],
+  } = await (await clerkClient()).users.getUserList({ username: [username] })
   return NextResponse.json({ user })
 }

@@ -1,4 +1,4 @@
-import { auth } from '@clerk/nextjs'
+import { auth } from '@clerk/nextjs/server'
 import { NextRequest, NextResponse } from 'next/server'
 
 import { upsertFollow } from '@/app/lib/model/follow'
@@ -6,8 +6,9 @@ import { getUser } from '@/app/lib/model/user'
 
 export async function PUT(
   _req: NextRequest,
-  { params = {} }: { params?: { username?: string } },
+  props: { params?: Promise<{ username?: string }> },
 ) {
+  const params = (await props.params) ?? {}
   const { username } = params
   const followeeUser = await getUser(username)
   const { id: followee } = followeeUser ?? {}
@@ -18,7 +19,7 @@ export async function PUT(
     )
   }
 
-  const { userId: follower } = auth()
+  const { userId: follower } = await auth()
   if (!follower) {
     return NextResponse.json(
       { error: `Must be signed in to follow a user.` },
@@ -38,8 +39,9 @@ export async function PUT(
 
 export async function DELETE(
   _req: NextRequest,
-  { params = {} }: { params?: { username?: string } },
+  props: { params?: Promise<{ username?: string }> },
 ) {
+  const params = (await props.params) ?? {}
   const { username } = params
   const followeeUser = await getUser(username)
   const { id: followee } = followeeUser ?? {}
@@ -50,7 +52,7 @@ export async function DELETE(
     )
   }
 
-  const { userId: follower } = auth()
+  const { userId: follower } = await auth()
   if (!follower) {
     return NextResponse.json(
       { error: `Must be signed in to unfollow a user.` },

@@ -1,4 +1,4 @@
-import { auth } from '@clerk/nextjs'
+import { auth } from '@clerk/nextjs/server'
 import { Suspense } from 'react'
 import invariant from 'tiny-invariant'
 
@@ -15,10 +15,11 @@ type Props = PageProps<{
   id: string
 }>
 
-export default async function Page({ params = {} }: Props) {
+export default async function Page(props: Props) {
+  const params = (await props.params) ?? {}
   const { username, id } = params
 
-  const { userId: currentUserID } = auth()
+  const { userId: currentUserID } = await auth()
 
   const user = await getUser(username)
   const spec = await getSpec(id, user?.id)

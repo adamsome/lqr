@@ -12,7 +12,9 @@ type Props = PageProps<{
   id?: string
 }>
 
-export default async function Page({ params = {}, searchParams = {} }: Props) {
+export default async function Page(props: Props) {
+  const searchParams = (await props.searchParams) ?? {}
+  const params = (await props.params) ?? {}
   const { username, id } = params
   const userID = head(searchParams[specUserIDParam])
   const [{ currentUser }, specUser] = await Promise.all([

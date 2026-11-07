@@ -204,6 +204,7 @@
 
 ## Chores
 
+- Fix `react-hooks/set-state-in-effect` lint warnings (9 spots), then make it an error again
 - Add IngredientDef (w/o stock, categoryKeys, etc.)
 - Use server actions
   - Bar move state up to use optimistic rendering

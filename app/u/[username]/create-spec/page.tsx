@@ -10,7 +10,8 @@ type Props = PageProps<{
   username: string
 }>
 
-export default async function Page({ params = {} }: Props) {
+export default async function Page(props: Props) {
+  const params = (await props.params) ?? {}
   const { user, currentUser } = await getCurrentUser(params.username)
   invariant(user, `User not found.`)
   invariant(

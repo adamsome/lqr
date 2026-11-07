@@ -14,7 +14,7 @@ import {
   getSortedRowModel,
   useReactTable,
 } from '@tanstack/react-table'
-import { useState } from 'react'
+import { useState, type JSX } from 'react'
 
 import { DataTable } from '@/app/components/ui/data-table/data-table'
 

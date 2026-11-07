@@ -1,4 +1,4 @@
-import { auth } from '@clerk/nextjs'
+import { auth } from '@clerk/nextjs/server'
 import { ReactNode } from 'react'
 
 import { IngredientDataProvider } from '@/app/components/data-provider'
@@ -20,7 +20,7 @@ type Props = {
 }
 
 export default async function Layout({ children }: Props) {
-  const { userId } = auth()
+  const { userId } = await auth()
   const user = await getUserByID(userId)
   const data = await getIngredientData()
   return (

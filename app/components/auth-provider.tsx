@@ -9,21 +9,20 @@ export function AuthProvider({ children }: Props) {
   return (
     <ClerkProvider
       appearance={{
-        layout: {
+        options: {
           logoImageUrl: `${process.env.NEXT_PUBLIC_BASE_URL}/icon-invert.png`,
           showOptionalFields: false,
           socialButtonsPlacement: 'bottom',
         },
         variables: {
           colorBackground: 'hsl(222.2 47.4% 11.2%)',
-          colorInputBackground: 'hsl(216 34% 17%)',
-          colorAlphaShade: 'hsl(213 31% 91%)',
-          colorText: 'hsl(213 31% 91%)',
-          colorInputText: 'hsl(213 31% 91%)',
+          colorInput: 'hsl(216 34% 17%)',
+          colorNeutral: 'hsl(213 31% 91%)',
+          colorForeground: 'hsl(213 31% 91%)',
+          colorInputForeground: 'hsl(213 31% 91%)',
           colorShimmer: 'rgba(255,255,255,0.36)',
-          shadowShimmer: '1px 1px 2px rgba(0,0,0,0.36)',
           colorPrimary: 'hsl(216deg 24% 36%)',
-          colorTextOnPrimaryBackground: 'hsl(216deg 24% 26%)',
+          colorPrimaryForeground: 'hsl(216deg 24% 26%)',
         },
         elements: {
           formButtonPrimary:
