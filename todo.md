@@ -7,11 +7,6 @@
 
 ## Bugs
 
-## FTUE
-
-- Onboarding bar inventory
-- Follow classics on signup
-
 ## Suggestions
 
 - Add to Specs page reflecting current filters

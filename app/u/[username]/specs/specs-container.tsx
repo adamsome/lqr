@@ -67,6 +67,8 @@ export async function SpecsContainer({
         userDict={userDict}
         criteria={criteria}
         count={filteredSpecs.length}
+        total={specs.length}
+        isCurrentUser={isCurrentUser}
         showStock={Boolean(currentUser)}
       />
     </Specs>

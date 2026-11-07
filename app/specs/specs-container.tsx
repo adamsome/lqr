@@ -43,6 +43,7 @@ export async function SpecsContainer({ criteria }: Props) {
         userDict={userDict}
         criteria={criteria}
         count={filteredSpecs.length}
+        total={specs.length}
         showStock
       />
     </Specs>
