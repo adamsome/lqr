@@ -88,6 +88,11 @@ export default async function Page() {
             </Link>
           </Level>
         </Level>
+        <footer className="mt-4 flex justify-center gap-4 text-sm text-muted-foreground lg:justify-end">
+          <Link className="hover:text-foreground" href="/privacy">
+            Privacy Policy
+          </Link>
+        </footer>
       </AppContent>
     </AppLayout>
   )
