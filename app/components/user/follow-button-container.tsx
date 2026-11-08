@@ -2,7 +2,7 @@ import { FollowButton } from '@/app/components/user/follow-button'
 import { getAllFollowing } from '@/app/lib/model/follow'
 import { getUser } from '@/app/lib/model/user'
 import { toDict } from '@/app/lib/utils'
-import { auth } from '@clerk/nextjs/server'
+import { getSessionUserID } from '@/app/lib/session'
 
 type Props = {
   className?: string
@@ -10,7 +10,7 @@ type Props = {
 }
 
 export async function FollowButtonContainer({ className, username }: Props) {
-  const { userId: currentUserID } = await auth()
+  const currentUserID = await getSessionUserID()
   const user = await getUser(username)
   if (!currentUserID || !user || !username) return null
   const following = await getAllFollowing(currentUserID)

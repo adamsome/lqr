@@ -1,7 +1,5 @@
 'use client'
 
-import { useAuth } from '@clerk/nextjs'
-
 import { createColumns } from '@/app/research/columns'
 import { Toolbar } from '@/app/research/toolbar'
 import { useIngredientData } from '@/app/components/data-provider'
@@ -10,9 +8,10 @@ import { DataTableContainer } from '@/app/components/ui/data-table/data-table-co
 import { DataTablePagination } from '@/app/components/ui/data-table/data-table-pagination'
 import { getIngredientPath } from '@/app/lib/ingredient/get-ingredient-path'
 import { Ingredient, WithPath } from '@/app/lib/types'
+import { useUser } from '@/app/lib/model/use-user'
 
 export function Table() {
-  const { isLoaded, isSignedIn } = useAuth()
+  const { isLoaded, isSignedIn } = useUser()
   const showStock = !isLoaded || isSignedIn
 
   const { dict } = useIngredientData()

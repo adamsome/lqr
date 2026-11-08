@@ -1,43 +1,17 @@
-import { auth, clerkClient } from '@clerk/nextjs/server'
 import { OptionalUnlessRequiredId } from 'mongodb'
 import { partition } from 'ramda'
 import { cache } from 'react'
-import invariant from 'tiny-invariant'
 
 import { isAdmin as isUserAdmin } from '@/app/lib/model/admin'
-import { toUser } from '@/app/lib/model/to-user'
+import { SYSTEM_USERS } from '@/app/lib/model/system-users'
 import { FIND_NO_ID, connectToDatabase } from '@/app/lib/mongodb'
+import { getSessionUserID } from '@/app/lib/session'
 import { User, UserEntity, type UserWithEntity } from '@/app/lib/types'
 import { toDict } from '@/app/lib/utils'
 
 import 'server-only'
 
-export const SYSTEM_USERS: User[] = [
-  {
-    id: 'user_classics',
-    username: 'classics',
-    displayName: 'Classics',
-    imageUrl: '/avatars/classic.jpg',
-  },
-  {
-    id: 'user_modern_classics',
-    username: 'modern_classics',
-    displayName: 'Modern Classics',
-    imageUrl: '/avatars/modern-classics.jpg',
-  },
-  {
-    id: 'user_smugglerscove',
-    username: 'smugglers_cove',
-    displayName: 'smugglers_cove',
-    imageUrl: '/avatars/smugglers-cove.jpg',
-  },
-  {
-    id: 'user_deathcowelcomehome',
-    username: 'deathco_welcome_home',
-    displayName: 'deathco',
-    imageUrl: '/avatars/deathco-welcome-home.jpg',
-  },
-]
+export { SYSTEM_USERS }
 
 const byID = toDict(SYSTEM_USERS, ({ id }) => id)
 const byUsername = toDict(SYSTEM_USERS, ({ username }) => username)
@@ -47,15 +21,21 @@ const connect = async () =>
     db.collection<OptionalUnlessRequiredId<UserEntity>>('user'),
   )
 
+const toUser = ({ id, username, imageUrl }: UserEntity): User => ({
+  id,
+  username,
+  imageUrl,
+})
+
 export async function getAllUsers(userIDs: string[]): Promise<User[]> {
   const [systemIDs, ids] = partition((id) => byID[id] !== undefined, userIDs)
   const systemUsers = systemIDs.map((id) => byID[id])
 
-  const rawUsers =
+  const entities =
     ids.length > 0
-      ? (await (await clerkClient()).users.getUserList({ userId: ids })).data
+      ? await (await connect()).find({ id: { $in: ids } }, FIND_NO_ID).toArray()
       : []
-  const users = rawUsers.map(toUser)
+  const users = entities.map(toUser)
 
   return [...users, ...systemUsers]
 }
@@ -64,9 +44,8 @@ export const getUserByID = cache(
   async (userID?: string | null): Promise<User | null> => {
     if (!userID) return null
     if (byID[userID]) return byID[userID]
-    const rawUser = await (await clerkClient()).users.getUser(userID)
-    invariant(rawUser, `No user found with ID '${userID}'`)
-    return toUser(rawUser)
+    const entity = await (await connect()).findOne({ id: userID }, FIND_NO_ID)
+    return entity ? toUser(entity) : null
   },
 )
 
@@ -74,11 +53,8 @@ export const getUser = cache(
   async (username?: string): Promise<User | null> => {
     if (!username) return null
     if (byUsername[username]) return byUsername[username]
-    const { data: users } = await (
-      await clerkClient()
-    ).users.getUserList({ username: [username] })
-    if (!users[0]) return null
-    return toUser(users[0])
+    const entity = await (await connect()).findOne({ username }, FIND_NO_ID)
+    return entity ? toUser(entity) : null
   },
 )
 
@@ -108,7 +84,7 @@ async function _getCurrentUser(
 async function _getCurrentUser(
   username?: string,
 ): Promise<CurrentUserWithUser | CurrentUserOnly> {
-  const { userId: currentUserID } = await auth()
+  const currentUserID = await getSessionUserID()
   const [user, currentAuth, currentEntity] = await Promise.all([
     getUser(username),
     getUserByID(currentUserID),
@@ -133,7 +109,7 @@ async function _getCurrentUser(
 export const getCurrentUser = cache(_getCurrentUser)
 
 export const isCurrentUser = cache(async (username: string | undefined) => {
-  const { userId: currentUserID } = await auth()
+  const currentUserID = await getSessionUserID()
   const user = await getUser(username)
   return currentUserID != null && user?.id === currentUserID
 })

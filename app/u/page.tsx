@@ -1,4 +1,4 @@
-import { auth } from '@clerk/nextjs/server'
+import { requireSessionUserID } from '@/app/lib/session'
 import { redirect } from 'next/navigation'
 
 import { isOnboarding, startFtue } from '@/app/lib/model/ftue'
@@ -7,7 +7,7 @@ import { toBar, toHome } from '@/app/lib/routes'
 
 // Landing route after sign-in/sign-up
 export default async function Page() {
-  await auth.protect()
+  await requireSessionUserID()
   const { currentUser } = await getCurrentUser()
   if (!currentUser) {
     redirect('/')

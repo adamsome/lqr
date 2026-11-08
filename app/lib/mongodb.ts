@@ -19,39 +19,23 @@ interface MongoClientDb {
   db: Db
 }
 
-interface MongoCache {
-  conn: MongoClientDb | null
-  promise: Promise<MongoClientDb> | null
-}
-
 /**
- * Global is used here to maintain a cached connection across hot reloads
- * in development. This prevents connections growing exponentially
- * during API Route usage.
+ * Global is used here to maintain a single client across hot reloads in
+ * development. This prevents connections growing exponentially during API
+ * Route usage. The driver connects lazily on the first operation, so the
+ * client can be created synchronously (Better Auth needs it at import time).
  */
-let cached: MongoCache = (global as unknown as any)?.mongo
+const globalForMongo = global as unknown as { mongo?: MongoClientDb }
 
-if (!cached) {
-  cached = (global as any).mongo = { conn: null, promise: null }
-}
+const cached: MongoClientDb = (globalForMongo.mongo ??= (() => {
+  const client = new MongoClient(MONGODB_URI)
+  return { client, db: client.db(MONGODB_DB) }
+})())
+
+export const mongo = cached
 
 export async function connectToDatabase(): Promise<MongoClientDb> {
-  if (cached.conn) {
-    return cached.conn
-  }
-
-  if (!cached.promise) {
-    cached.promise = MongoClient.connect(MONGODB_URI!).then(
-      (client): MongoClientDb => {
-        return {
-          client,
-          db: client.db(MONGODB_DB),
-        }
-      },
-    )
-  }
-  cached.conn = await cached.promise
-  return cached.conn
+  return cached
 }
 
 export const FIND_NO_ID = { projection: { _id: false } }

@@ -1,6 +1,6 @@
 'use server'
 
-import { auth } from '@clerk/nextjs/server'
+import { getSessionUserID } from '@/app/lib/session'
 import { z } from 'zod'
 
 import { isAdmin } from '@/app/lib/model/admin'
@@ -16,7 +16,7 @@ export type Response =
   { ok: false; error: string } | { ok: true; message: string }
 
 export async function changeUser(data: Schema): Promise<Response> {
-  const { userId: currentUserID } = await auth()
+  const currentUserID = await getSessionUserID()
   if (!isAdmin(currentUserID)) {
     return { ok: false, error: `Only admins can change spec user` }
   }

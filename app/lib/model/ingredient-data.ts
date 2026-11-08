@@ -1,4 +1,4 @@
-import { auth } from '@clerk/nextjs/server'
+import { getSessionUserID } from '@/app/lib/session'
 import { OptionalUnlessRequiredId } from 'mongodb'
 import { cache } from 'react'
 
@@ -18,7 +18,7 @@ import 'server-only'
 
 const getUserIngredients = cache(
   async (userID?: string): Promise<Record<string, Partial<Ingredient>>> => {
-    const { userId: currentUserID } = await auth()
+    const currentUserID = await getSessionUserID()
 
     const id = userID ?? currentUserID
 

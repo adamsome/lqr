@@ -1,4 +1,4 @@
-import { auth } from '@clerk/nextjs/server'
+import { getSessionUserID } from '@/app/lib/session'
 import { NextRequest, NextResponse } from 'next/server'
 import { z } from 'zod'
 
@@ -12,7 +12,7 @@ const PutSchema = z.object({
 })
 
 export async function PUT(req: NextRequest) {
-  const { userId: id } = await auth()
+  const id = await getSessionUserID()
   if (!id) {
     return NextResponse.json(
       { error: `Must be signed in to update a spec.` },
@@ -61,7 +61,7 @@ const DeleteSchema = z.object({
 })
 
 export async function DELETE(req: NextRequest) {
-  const { userId: userID } = await auth()
+  const userID = await getSessionUserID()
   if (!userID) {
     return NextResponse.json(
       { error: `Must be signed in to delete a spec.` },

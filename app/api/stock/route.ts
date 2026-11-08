@@ -1,12 +1,10 @@
-import { auth, clerkClient } from '@clerk/nextjs/server'
 import { OptionalUnlessRequiredId } from 'mongodb'
 import { NextRequest, NextResponse } from 'next/server'
 import { z } from 'zod'
 
 import { connectToDatabase } from '@/app/lib/mongodb'
+import { getSessionUserID } from '@/app/lib/session'
 import { User } from '@/app/lib/types'
-import { addUser } from '@/app/lib/model/user'
-import { toUser } from '@/app/lib/model/to-user'
 
 const Schema = z.object({
   ingredientIDs: z.string().array(),
@@ -14,7 +12,7 @@ const Schema = z.object({
 })
 
 export async function PUT(req: NextRequest) {
-  const { userId: userID } = await auth()
+  const userID = await getSessionUserID()
   if (!userID) {
     return NextResponse.json(
       { error: `Must be signed in to get user data.` },
@@ -48,18 +46,12 @@ export async function PUT(req: NextRequest) {
       .collection<OptionalUnlessRequiredId<User>>('user')
       .updateOne({ id: userID }, { $set })
 
-  let res = await update()
-
+  // The user's record is created at sign-up (see `syncUserEntity`)
+  const res = await update()
   if (!res.matchedCount) {
-    const user = await (await clerkClient()).users.getUser(userID).then(toUser)
-    await addUser({ id: user.id, username: user.username })
-    res = await update()
-
-    if (!res.matchedCount) {
-      const ids = ingredientIDs.map((iid) => `'${iid}`).join(', ')
-      const error = `User '${userID}' not found while attempting to stock ${ids}`
-      return NextResponse.json({ error }, { status: 400 })
-    }
+    const ids = ingredientIDs.map((iid) => `'${iid}'`).join(', ')
+    const error = `User '${userID}' not found while attempting to stock ${ids}`
+    return NextResponse.json({ error }, { status: 400 })
   }
 
   return NextResponse.json(res)

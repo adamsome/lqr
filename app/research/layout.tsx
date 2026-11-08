@@ -1,4 +1,4 @@
-import { auth } from '@clerk/nextjs/server'
+import { getSessionUserID } from '@/app/lib/session'
 import { ReactNode } from 'react'
 
 import { IngredientDataProvider } from '@/app/components/data-provider'
@@ -20,7 +20,7 @@ type Props = {
 }
 
 export default async function Layout({ children }: Props) {
-  const { userId } = await auth()
+  const userId = await getSessionUserID()
   const user = await getUserByID(userId)
   const data = await getIngredientData()
   return (

@@ -1,4 +1,4 @@
-import { auth } from '@clerk/nextjs/server'
+import { getSessionUserID } from '@/app/lib/session'
 import { NextRequest, NextResponse } from 'next/server'
 import { z } from 'zod'
 
@@ -23,7 +23,7 @@ export async function PATCH(
     )
   }
 
-  const { userId: currentUserID } = await auth()
+  const currentUserID = await getSessionUserID()
   if (!currentUserID) {
     return NextResponse.json(
       { error: `Must be signed in to exclude a followee.` },

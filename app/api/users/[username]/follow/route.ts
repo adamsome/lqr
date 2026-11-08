@@ -1,4 +1,4 @@
-import { auth } from '@clerk/nextjs/server'
+import { getSessionUserID } from '@/app/lib/session'
 import { NextRequest, NextResponse } from 'next/server'
 
 import { upsertFollow } from '@/app/lib/model/follow'
@@ -19,7 +19,7 @@ export async function PUT(
     )
   }
 
-  const { userId: follower } = await auth()
+  const follower = await getSessionUserID()
   if (!follower) {
     return NextResponse.json(
       { error: `Must be signed in to follow a user.` },
@@ -52,7 +52,7 @@ export async function DELETE(
     )
   }
 
-  const { userId: follower } = await auth()
+  const follower = await getSessionUserID()
   if (!follower) {
     return NextResponse.json(
       { error: `Must be signed in to unfollow a user.` },

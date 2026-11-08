@@ -1,12 +1,11 @@
-import { currentUser } from '@clerk/nextjs/server'
 import { NextRequest, NextResponse } from 'next/server'
 import { z } from 'zod'
 
 import { isAdmin } from '@/app/lib/model/admin'
 import { addSpec, getSpec } from '@/app/lib/model/spec'
-import { toUser } from '@/app/lib/model/to-user'
-import { getUser, updateUserActedAt } from '@/app/lib/model/user'
+import { getUser, getUserByID, updateUserActedAt } from '@/app/lib/model/user'
 import { SpecSchema } from '@/app/lib/schema/spec'
+import { getSessionUserID } from '@/app/lib/session'
 import { Spec, User } from '@/app/lib/types'
 import { slugify } from '@/app/lib/utils'
 
@@ -17,7 +16,7 @@ const Schema = z.object({
 })
 
 export async function POST(req: NextRequest) {
-  const currentAuthUser = await currentUser()
+  const currentAuthUser = await getUserByID(await getSessionUserID())
   if (!currentAuthUser) {
     return NextResponse.json(
       { error: `Must be signed in to add a spec.` },
@@ -34,7 +33,7 @@ export async function POST(req: NextRequest) {
     )
   }
 
-  let user = toUser(currentAuthUser)
+  let user: User = currentAuthUser
 
   const { username, name: specName } = body.data.spec
 

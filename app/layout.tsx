@@ -3,7 +3,6 @@ import './globals.css'
 import { Metadata, Viewport } from 'next'
 
 import { AppCommand } from '@/app/components/app-command'
-import { AuthProvider } from '@/app/components/auth-provider'
 import { TailwindIndicator } from '@/app/components/tailwind-indicator'
 import { themeEffect } from '@/app/components/theme-effect'
 import { Toaster } from '@/app/components/ui/toaster'
@@ -27,34 +26,32 @@ type Props = {
 
 export default function Layout({ children }: Props) {
   return (
-    <AuthProvider>
-      <html
-        lang="en"
-        className={cn(`font-sans antialiased`)}
-        suppressHydrationWarning={true}
-      >
-        <head>
-          <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1, maximum-scale=1"
-          />
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `(${themeEffect.toString()})();`,
-            }}
-          />
-        </head>
-        <body>
-          <TooltipProvider>
-            <div className="relative flex min-h-screen flex-col">
-              <AppCommand />
-              <div className="min-w-0 flex-1 overflow-clip">{children}</div>
-            </div>
-            <Toaster />
-          </TooltipProvider>
-          <TailwindIndicator />
-        </body>
-      </html>
-    </AuthProvider>
+    <html
+      lang="en"
+      className={cn(`font-sans antialiased`)}
+      suppressHydrationWarning={true}
+    >
+      <head>
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1"
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(${themeEffect.toString()})();`,
+          }}
+        />
+      </head>
+      <body>
+        <TooltipProvider>
+          <div className="relative flex min-h-screen flex-col">
+            <AppCommand />
+            <div className="min-w-0 flex-1 overflow-clip">{children}</div>
+          </div>
+          <Toaster />
+        </TooltipProvider>
+        <TailwindIndicator />
+      </body>
+    </html>
   )
 }

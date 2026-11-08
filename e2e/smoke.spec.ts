@@ -36,7 +36,7 @@ for (const path of [
 ]) {
   test(`${path} redirects signed-out users to sign-in`, async ({ page }) => {
     await page.goto(path)
-    await expect(page).toHaveURL(/\/sign-in\?redirect_url=/)
+    await expect(page).toHaveURL(/\/sign-in$/)
   })
 }
 

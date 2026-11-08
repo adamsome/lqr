@@ -1,6 +1,5 @@
 'use client'
 
-import { useAuth, useUser } from '@clerk/nextjs'
 import { CaretLeftIcon } from '@radix-ui/react-icons'
 import Link from 'next/link'
 import {
@@ -19,6 +18,7 @@ import { Level } from '@/app/components/layout/level'
 import { Button } from '@/app/components/ui/button'
 import { H2 } from '@/app/components/ui/h2'
 import { UserAvatar } from '@/app/components/user/user-avatar'
+import { useUser } from '@/app/lib/model/use-user'
 import { CompProps, User } from '@/app/lib/types'
 import { cn } from '@/app/lib/utils'
 
@@ -131,7 +131,7 @@ export function AppBack({ children, className, href, user }: BackProps) {
 }
 
 export function AppActions({ children, className }: CompProps) {
-  const { isSignedIn } = useAuth()
+  const { isSignedIn } = useUser()
   return (
     <div
       className={cn('me-16 hidden sm:block', !isSignedIn && 'me-48', className)}

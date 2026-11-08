@@ -1,7 +1,5 @@
 'use client'
 
-import { UserProfile, useClerk } from '@clerk/nextjs'
-import { Content as DialogContent } from '@radix-ui/react-dialog'
 import {
   AvatarIcon,
   CardStackIcon,
@@ -25,9 +23,10 @@ import {
   CommandInput,
   CommandList,
 } from '@/app/components/ui/command'
-import { Dialog, DialogOverlay, DialogPortal } from '@/app/components/ui/dialog'
 import { UserAvatar } from '@/app/components/user/user-avatar'
+import { ProfileDialog } from '@/app/components/user/profile-dialog'
 import { UserAvatarImage } from '@/app/components/user/user-avatar-image'
+import { authClient } from '@/app/lib/auth-client'
 import { useUser } from '@/app/lib/model/use-user'
 import {
   SIGN_IN,
@@ -41,7 +40,6 @@ import {
 export function AppCommand() {
   const router = useRouter()
   const pathname = usePathname()
-  const { signOut } = useClerk()
   const { user, isLoaded } = useUser()
   const username = user?.username
 
@@ -98,6 +96,14 @@ export function AppCommand() {
 
   const handleLink = handleSelect((href) => router.push(href))
 
+  async function handleSignOut() {
+    setOpen(false)
+    setProfileOpen(false)
+    await authClient.signOut()
+    router.push('/')
+    router.refresh()
+  }
+
   function handleOpenProfile() {
     setOpen(false)
     setProfileOpen(true)
@@ -115,16 +121,11 @@ export function AppCommand() {
         </button>
       </Sticky>
 
-      <Dialog open={profileOpen} onOpenChange={setProfileOpen}>
-        <DialogPortal className="z-50">
-          <DialogOverlay />
-          <DialogContent className="fixed z-50 grid h-[calc(100vh-200px)] gap-4 overflow-hidden rounded-2xl animate-in data-[state=open]:fade-in-90 data-[state=open]:slide-in-from-bottom-10 sm:zoom-in-90 data-[state=open]:sm:slide-in-from-bottom-0">
-            <div className="h-full w-full overflow-auto [&_.cl-card]:mx-0">
-              <UserProfile />
-            </div>
-          </DialogContent>
-        </DialogPortal>
-      </Dialog>
+      <ProfileDialog
+        open={profileOpen}
+        onOpenChange={setProfileOpen}
+        onSignOut={handleSignOut}
+      />
 
       <CommandDialog
         open={open}
@@ -173,7 +174,7 @@ export function AppCommand() {
             <CommandIconItem
               name="Sign Out"
               icon={<ExitIcon />}
-              onSelect={() => signOut()}
+              onSelect={handleSignOut}
             />
           </CommandGroup>
 

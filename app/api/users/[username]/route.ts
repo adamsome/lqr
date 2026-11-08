@@ -2,7 +2,7 @@ import { NextResponse, type NextRequest } from 'next/server'
 
 import { getUser } from '@/app/lib/model/user'
 
-// Public profile only (id, username, imageUrl); never the raw Clerk user,
+// Public profile only (id, username, imageUrl); never the raw auth user,
 // which includes email addresses.
 export async function GET(
   _req: NextRequest,

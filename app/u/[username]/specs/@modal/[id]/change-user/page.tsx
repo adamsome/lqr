@@ -1,4 +1,4 @@
-import { auth } from '@clerk/nextjs/server'
+import { requireSessionUserID } from '@/app/lib/session'
 
 import { Stack } from '@/app/components/layout/stack'
 import { getSpec } from '@/app/lib/model/spec'
@@ -15,7 +15,7 @@ type Props = PageProps<{
 }>
 
 export default async function Page(props: Props) {
-  await auth.protect()
+  await requireSessionUserID()
   const searchParams = (await props.searchParams) ?? {}
   const params = (await props.params) ?? {}
   const { username, id } = params

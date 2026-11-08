@@ -1,4 +1,4 @@
-import { auth } from '@clerk/nextjs/server'
+import { getSessionUserID } from '@/app/lib/session'
 import { NextRequest, NextResponse } from 'next/server'
 
 import { getUser, setUserExcludedAllFolloweesAt } from '@/app/lib/model/user'
@@ -20,7 +20,7 @@ export async function PUT(
     )
   }
 
-  const { userId: currentUserID } = await auth()
+  const currentUserID = await getSessionUserID()
   if (!currentUserID) {
     return NextResponse.json(
       { error: `Must be signed in to exclude all followees.` },
