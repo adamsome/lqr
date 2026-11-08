@@ -1,17 +1,7 @@
-import { promises as fs } from 'fs'
 import { NextResponse } from 'next/server'
-import path from 'path'
+
+import { getStaticData } from '@/app/lib/model/static-data'
 
 export async function GET() {
-  const dir = path.join(process.cwd(), 'json')
-  const data = await Promise.all([
-    await fs.readFile(`${dir}/base-ingredients.json`, 'utf8'),
-    await fs.readFile(`${dir}/ingredients.json`, 'utf8'),
-    await fs.readFile(`${dir}/category-filter.json`, 'utf8'),
-  ])
-  return NextResponse.json(`{
-    "baseIngredients": ${data[0].toString()},
-    "ingredients": ${data[1].toString()},
-    "tree": ${data[2].toString()}
-  }`)
+  return NextResponse.json(await getStaticData())
 }

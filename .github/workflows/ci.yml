@@ -13,7 +13,6 @@ jobs:
       # connects to Mongo or sends email.
       MONGODB_URI: mongodb://localhost:27017
       MONGODB_DB: ci
-      NEXT_PUBLIC_BASE_URL: http://localhost:3000
       BETTER_AUTH_SECRET: ci-placeholder-secret-not-used-at-runtime
       NEXT_TELEMETRY_DISABLED: 1
     steps:
