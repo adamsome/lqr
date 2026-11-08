@@ -26,7 +26,7 @@ export const auth = betterAuth({
     'https://lqr.adamso.me',
     'https://lqr.vercel.app',
     // Vercel preview deployments
-    'https://lqr-*-adamsome.vercel.app',
+    'https://lqr-*-adamsomes-projects.vercel.app',
   ],
   user: { modelName: AUTH_MODELS.user },
   session: {
