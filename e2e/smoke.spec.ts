@@ -50,7 +50,9 @@ test('user API returns only public profile fields', async ({ request }) => {
   expect(res.ok()).toBeTruthy()
   const { user } = await res.json()
   expect(user.username).toBe('test_01')
-  expect(Object.keys(user).sort()).toEqual(['id', 'imageUrl', 'username'])
+  // imageUrl is omitted for users without an avatar
+  const keys = Object.keys(user).filter((key) => key !== 'imageUrl')
+  expect(keys.sort()).toEqual(['id', 'username'])
 })
 
 test('mutating APIs reject signed-out requests', async ({ request }) => {
