@@ -1,7 +1,7 @@
 import { cache } from 'react'
 
 const ADMIN_BY_USER_ID: Record<string, boolean> = {
-  user_2QaSdLhpL7dMcmD999SKB2teEIM: true,
+  '6af08db3151f21e2576317a3': true,
 }
 
 export const isAdmin = cache((userID?: string | null) => {

@@ -626,7 +626,7 @@ export function parseSpecs() {
         let year
         let bar
         let username = 'adamsome'
-        let userID = 'user_2QaSdLhpL7dMcmD999SKB2teEIM'
+        let userID = '6af08db3151f21e2576317a3'
         let userDisplayName = undefined
         if (source === "Smuggler's Cove") {
           year = 2016

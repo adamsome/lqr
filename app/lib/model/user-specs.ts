@@ -34,7 +34,7 @@ export async function getUserSpecs(
 
 // TODO: Control from DB
 const globalUserIDs = [
-  'user_2QaSdLhpL7dMcmD999SKB2teEIM', // adamsome
+  '6af08db3151f21e2576317a3', // adamsome
   'user_classics',
   'user_modern_classics',
   'user_deathcowelcomehome',
